@@ -123,25 +123,27 @@ function PlanCardItem({
           {/* Price Frequency */}
           <div className="flex flex-row items-end gap-[6px] sm:gap-[8px] min-h-[36px] sm:min-h-[44px]">
             {price === "Custom" ? (
-              <div className="flex items-end">
+              <div className="flex items-center h-full">
                 <span className="font-['DM_Sans',sans-serif] font-bold text-[28px] sm:text-[38px] leading-[32px] sm:leading-[44px] text-[#100F09]">Custom</span>
               </div>
             ) : (
-              <div className="flex items-start">
-                <span className="font-['DM_Mono',monospace] font-medium text-[16px] sm:text-[20px] leading-[18px] sm:leading-[22px] text-[#100F09] pt-[2px] sm:pt-[4px] pr-[2px]">$</span>
-                <span className="font-['DM_Sans',sans-serif] font-medium text-[28px] sm:text-[40px] leading-[32px] sm:leading-[44px] text-[#100F09]">{price}</span>
-              </div>
+              <>
+                <div className="flex items-start">
+                  <span className="font-['DM_Mono',monospace] font-medium text-[16px] sm:text-[20px] leading-[18px] sm:leading-[22px] text-[#100F09] pt-[2px] sm:pt-[4px] pr-[2px]">$</span>
+                  <span className="font-['DM_Sans',sans-serif] font-medium text-[28px] sm:text-[40px] leading-[32px] sm:leading-[44px] text-[#100F09]">{price}</span>
+                </div>
+                <div className="flex flex-row flex-wrap items-baseline justify-start gap-x-[6px] gap-y-0 -translate-y-[3px] pb-[2px] sm:pb-[4px] flex-1">
+                  {originalPrice && (
+                    <span className="font-['DM_Sans',sans-serif] font-normal text-[12px] sm:text-[14px] leading-[13px] sm:leading-[15px] text-[#7C7C79] line-through whitespace-nowrap">
+                      {originalPrice}
+                    </span>
+                  )}
+                  <span className="font-['DM_Sans',sans-serif] font-normal text-[12px] sm:text-[14px] leading-[13px] sm:leading-[15px] text-[#7C7C79] whitespace-nowrap">
+                    {period}
+                  </span>
+                </div>
+              </>
             )}
-            <div className="flex flex-row flex-wrap items-baseline justify-start gap-x-[6px] gap-y-0 -translate-y-[3px] pb-[2px] sm:pb-[4px] flex-1">
-              {originalPrice && (
-                <span className="font-['DM_Sans',sans-serif] font-normal text-[12px] sm:text-[14px] leading-[13px] sm:leading-[15px] text-[#7C7C79] line-through whitespace-nowrap">
-                  {originalPrice}
-                </span>
-              )}
-              <span className="font-['DM_Sans',sans-serif] font-normal text-[12px] sm:text-[14px] leading-[13px] sm:leading-[15px] text-[#7C7C79] whitespace-nowrap">
-                {period}
-              </span>
-            </div>
           </div>
         </div>
 
