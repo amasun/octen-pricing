@@ -91,11 +91,11 @@ export default function DitherBackgroundCanvas({
 
   if (hasError && fallbackSrc) {
     return (
-      <div className="absolute inset-0 size-full pointer-events-none bg-[#080B12]">
+      <div className="absolute inset-0 size-full pointer-events-none">
         <img alt="" className="absolute inset-0 object-cover size-full" src={fallbackSrc} />
       </div>
     );
   }
 
-  return <canvas ref={canvasRef} className={`block bg-[#080B12] ${className}`} />;
+  return <canvas ref={canvasRef} className={`block ${className}`} />;
 }
