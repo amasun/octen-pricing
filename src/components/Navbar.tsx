@@ -34,13 +34,53 @@ function LogoWhite() {
   );
 }
 
+function ChevronDownIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
+      <path d="M4 6L8 10L12 6" stroke="#FFFFFF" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  );
+}
+
 function Navigation() {
   return (
-    <div className="hidden md:flex flex-1 items-center justify-center gap-8 text-[15px] font-medium text-white/80">
-      <a href="#qps-plans" className="hover:text-white transition-colors">Products</a>
-      <a href="#api-pricing" className="hover:text-white transition-colors">Developers</a>
-      <a href="#api-pricing" className="hover:text-white transition-colors">Pricing</a>
-      <a href="https://docs.octen.ai" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Docs</a>
+    <div className="hidden md:flex flex-row items-center justify-center px-[20px] gap-[60px] mx-auto h-[32px] max-w-[1167px]">
+      <a 
+        href="#qps-plans" 
+        className="flex flex-row items-center justify-center px-[6px] py-[4px] gap-[2px] h-[32px] rounded-[8px] hover:bg-white/10 transition-colors"
+      >
+        <span className="font-['DM_Sans',sans-serif] font-semibold text-[16px] leading-[24px] text-white">
+          Products
+        </span>
+        <ChevronDownIcon />
+      </a>
+      <a 
+        href="#api-pricing" 
+        className="flex flex-row items-center justify-center px-[6px] py-[4px] gap-[2px] h-[32px] rounded-[8px] hover:bg-white/10 transition-colors"
+      >
+        <span className="font-['DM_Sans',sans-serif] font-semibold text-[16px] leading-[24px] text-white">
+          Developers
+        </span>
+        <ChevronDownIcon />
+      </a>
+      <a 
+        href="#api-pricing" 
+        className="flex flex-row items-center justify-center px-[6px] py-[4px] gap-[2px] h-[32px] rounded-[8px] hover:bg-white/10 transition-colors"
+      >
+        <span className="font-['DM_Sans',sans-serif] font-semibold text-[16px] leading-[24px] text-white">
+          Pricing
+        </span>
+      </a>
+      <a 
+        href="https://docs.octen.ai" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="flex flex-row items-center justify-center px-[6px] py-[4px] gap-[2px] h-[32px] rounded-[8px] hover:bg-white/10 transition-colors"
+      >
+        <span className="font-['DM_Sans',sans-serif] font-semibold text-[16px] leading-[24px] text-white">
+          Docs
+        </span>
+      </a>
     </div>
   );
 }
