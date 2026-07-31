@@ -568,8 +568,8 @@ float snoise(vec2 v) {
 }
 
 vec2 getIntegerCellPx() {
-  float rawPx = max(floor((uL2_Amount + 0.005) * 0.083 * uResolution.y + 0.5), 8.0);
-  return vec2(rawPx, rawPx);
+  // Exact 24px x 24px integer display pixels (3x3 major grid = 72px)
+  return vec2(24.0, 24.0);
 }
 
 vec2 distortUV_L2(vec2 uv) {
