@@ -542,7 +542,7 @@ export default function HeroSection() {
     >
       {/* Dynamic WebGL Dither Shader Background Layer (Silver Grey Grid & Neon Green/Yellow Blobs) */}
       <div className="absolute inset-0 size-full pointer-events-none z-0 overflow-hidden">
-        <DitherBackgroundCanvas fallbackSrc={imgDither1} />
+        <DitherBackgroundCanvas fallbackSrc={imgDither1} params={{ rippleFrequency: 2.60 }} />
       </div>
 
       {/* Hero Interactive Content Layer */}

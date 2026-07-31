@@ -387,7 +387,7 @@ export class DitherShaderEngine {
       useTurbulence: 1,
       patternMode: 2,
       aspectScale: 1.00,
-      rippleFrequency: 1.55,
+      rippleFrequency: 2.60, // Blob Threshold = 2.60
       rippleWidth: 1.40,
       hollowRadius: 0.21,
       hollowFeather: 0.32,
