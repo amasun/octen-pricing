@@ -12,8 +12,8 @@ export default function OctenAiInfrastructurePricing() {
       <main className="w-full flex flex-col items-center">
         <HeroSection />
         <div className="w-full bg-white flex flex-col items-center text-[#100f09]">
-          <QpsPricingGrid />
           <ApiExplorer />
+          <QpsPricingGrid />
           <FaqSection />
         </div>
       </main>

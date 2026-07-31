@@ -26,7 +26,7 @@ function HeroHeader() {
         Plan and Pricing
       </h1>
       <p className="font-['DM_Sans',sans-serif] font-normal leading-[1.2] relative shrink-0 text-[15px] sm:text-[18px] text-center text-white whitespace-normal sm:whitespace-nowrap px-0">
-        To use Octen, you need both a monthly QPS Plan and pay-as-you-go API credits
+        To use Octen, you need both pay-as-you-go API credits and a monthly QPS Plan
       </p>
     </div>
   );
@@ -566,9 +566,9 @@ export default function HeroSection() {
         <HeroHeader />
         <div className="content-stretch flex flex-col items-center pb-[20px] sm:pb-[30px] pt-[16px] sm:pt-[40px] relative rounded-[20px] shrink-0 w-full max-w-[1280px]">
           <div className="content-stretch flex flex-col md:flex-row gap-[10px] md:gap-[34px] items-center justify-center relative shrink-0 w-full md:w-[960px] max-w-full">
-            <QpsPlanCard />
-            <PlusSeparator />
             <PayAsYouGoCard />
+            <PlusSeparator />
+            <QpsPlanCard />
           </div>
         </div>
         <ClaimBalanceBanner />

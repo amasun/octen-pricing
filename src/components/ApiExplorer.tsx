@@ -72,7 +72,7 @@ export default function ApiExplorer() {
   ];
 
   return (
-    <div className="bg-white content-stretch flex flex-col items-center pb-[60px] sm:pb-[120px] pt-[24px] sm:pt-[40px] relative shrink-0 w-full max-w-[1320px] px-4 box-border" id="api-pricing">
+    <div className="bg-white content-stretch flex flex-col items-center pb-[40px] sm:pb-[60px] pt-[50px] sm:pt-[110px] relative shrink-0 w-full max-w-[1320px] px-4 box-border" id="api-pricing">
       {/* Title Header */}
       <div className="text-center flex flex-col items-center gap-2 sm:gap-3 shrink-0 px-4 mb-[24px] sm:mb-[36px]">
         <h2 className="font-['Fraunces',serif] font-bold text-[28px] sm:text-[44px] leading-[1.15] sm:leading-[48px] text-[#09090b]">
