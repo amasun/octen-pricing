@@ -35,6 +35,7 @@ function VideoIcon() {
 
 export default function ApiExplorer() {
   const [activeTab, setActiveTab] = useState(0);
+  const [showFullModelTable, setShowFullModelTable] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
   const pendingTab = useRef(0);
 
@@ -217,80 +218,173 @@ export default function ApiExplorer() {
 
         {/* TAB 2: Model Gateway */}
         {activeTab === 1 && (
-          <div className="w-full overflow-x-auto [webkit-overflow-scrolling:touch] rounded-[12px]">
-            <div className="min-w-[1240px] w-full bg-gradient-to-l from-[#b9f8a3] to-[#51f174] border-2 border-[#46db98] relative rounded-[12px] shrink-0 flex flex-col overflow-hidden" data-name="Table">
-              {/* Top-Right Shimmer Accent Overlay */}
-              <img
-                src={imgBackgroundRectangle}
-                alt=""
-                className="absolute h-[64.2px] right-[-50px] top-0 w-[754px] pointer-events-none object-cover mix-blend-multiply"
-                data-name="Background Rectangle"
-              />
-              {/* Header Container */}
-              <div className="flex items-center px-[20px] py-[14px] font-['DM_Sans',sans-serif] font-bold text-[14px] text-[#09090b] uppercase tracking-wider relative z-10 w-full" data-name="Header Container">
-                <div className="w-[300px] shrink-0 whitespace-nowrap">Model Identifier</div>
-                <div className="w-[220px] shrink-0 whitespace-nowrap">Input (USD / 1M)</div>
-                <div className="w-[220px] shrink-0 whitespace-nowrap">Output (USD / 1M)</div>
-                <div className="w-[220px] shrink-0 whitespace-nowrap">Cache Read / IMG In</div>
-                <div className="w-[240px] shrink-0 whitespace-nowrap">Cache Write / IMG Out</div>
-              </div>
-
-              {/* Content Container (White rounded box) */}
-              <div className="bg-white rounded-[10px] overflow-hidden flex flex-col relative z-10 w-full min-w-full" data-name="Content Container">
-                {/* Section: LLM */}
-                <div className="bg-[#f0f4f6] min-h-[42px] px-[20px] py-[10px] flex items-center justify-between font-['DM_Sans',sans-serif] font-bold text-[14px] text-[#131212] border-b border-[#e8e8e8] tracking-[0.28px] w-full" data-name="section-title">
-                  <span className="whitespace-nowrap">LLM Gateway Token Rates</span>
-                  <span className="flex items-center gap-[4px] shrink-0"><TextIcon /></span>
-                </div>
-                {[
-                  { m: "anthropic/claude-opus-4.8",     inp: "$5.00",                          out: "$25.00",                         cr: "$0.50",         cw: "$6.25 (5m) / $10 (1h)" },
-                  { m: "anthropic/claude-opus-4.6",     inp: "$5.00",                          out: "$25.00",                         cr: "$0.50",         cw: "$6.25 (5m) / $10 (1h)" },
-                  { m: "anthropic/claude-sonnet-4.6",   inp: "$3.00",                          out: "$15.00",                         cr: "$0.30",         cw: "$3.75 (5m) / $6 (1h)"  },
-                  { m: "anthropic/claude-haiku-4.5",    inp: "$1.00",                          out: "$5.00",                          cr: "$0.10",         cw: "$1.25 (5m) / $2 (1h)"  },
-                  { m: "google/gemini-3.5-flash",       inp: "$1.50",                          out: "$9.00",                          cr: "$0.15",         cw: "-"                      },
-                  { m: "google/gemini-3.1-pro-preview", inp: "$2 (≤200k) / $4 (>200k)",       out: "$12 (≤200k) / $18 (>200k)",      cr: "$0.20 / $0.40", cw: "-"                      },
-                  { m: "google/gemini-3.1-flash-lite",  inp: "$0.25",                          out: "$1.50",                          cr: "$0.025",        cw: "-"                      },
-                  { m: "google/gemini-3-flash-preview", inp: "$0.50",                          out: "$3.00",                          cr: "$0.05",         cw: "-"                      },
-                  { m: "openai/gpt-5.5-pro",            inp: "$30.00",                         out: "$180.00",                        cr: "-",             cw: "-"                      },
-                  { m: "openai/gpt-5.5",                inp: "$5.00",                          out: "$30.00",                         cr: "$0.50",         cw: "-"                      },
-                  { m: "openai/gpt-5.4",                inp: "$2.50",                          out: "$15.00",                         cr: "$0.25",         cw: "-"                      },
-                  { m: "moonshotai/kimi-k2.6",          inp: "$0.95",                          out: "$4.00",                          cr: "$0.16",         cw: "-"                      },
-                  { m: "moonshotai/kimi-k2.5",          inp: "$0.60",                          out: "$3.00",                          cr: "$0.10",         cw: "-"                      },
-                  { m: "minimax/minimax-m2.5",          inp: "$0.30",                          out: "$1.20",                          cr: "-",             cw: "-"                      },
-                  { m: "qwen/qwen3.6-plus",             inp: "$0.5 (≤256k) / $2 (>256k)",     out: "$3 (≤256k) / $6 (>256k)",        cr: "$0.05",         cw: "$0.625 (5m)"            },
-                  { m: "deepseek/deepseek-v4-pro",      inp: "$1.74",                          out: "$3.48",                          cr: "$0.145",        cw: "-"                      },
-                  { m: "deepseek/deepseek-v4-flash",    inp: "$0.14",                          out: "$0.28",                          cr: "$0.028",        cw: "-"                      },
-                ].map((row, i) => (
-                  <div key={i} className="flex items-center px-[20px] py-[12px] border-b border-[#e8e8e8] hover:bg-[#f4f4f5] transition-colors duration-150 ease-in-out text-[14px] w-full">
-                    <div className="w-[300px] shrink-0 whitespace-nowrap font-bold text-[#515151] font-['JetBrains_Mono',monospace] text-[14px]">{row.m}</div>
-                    <div className="w-[220px] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] text-[#131212] text-[14px]">{row.inp}</div>
-                    <div className="w-[220px] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] text-[#131212] text-[14px]">{row.out}</div>
-                    <div className="w-[220px] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] text-[#131212] text-[14px]">{row.cr}</div>
-                    <div className="w-[240px] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] text-[#131212] text-[14px]">{row.cw}</div>
+          <div className="w-full flex flex-col gap-6">
+            {/* Top Ecosystem Statement Banner */}
+            <div className="bg-[#080b12] border border-[#222736] rounded-[16px] p-6 sm:p-8 relative overflow-hidden shadow-[0_16px_40px_rgba(0,0,0,0.35)]">
+              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative z-10">
+                <div className="flex items-start sm:items-center gap-4">
+                  <div className="size-[48px] rounded-[12px] bg-[#039855]/20 border border-[#70FE7E]/40 flex items-center justify-center shrink-0">
+                    <svg className="size-[26px]" fill="none" viewBox="0 0 24 24" stroke="#70FE7E" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
                   </div>
-                ))}
-
-                {/* Section: Image Generation */}
-                <div className="bg-[#f0f4f6] min-h-[42px] px-[20px] py-[10px] flex items-center justify-between font-['DM_Sans',sans-serif] font-bold text-[14px] text-[#131212] border-b border-[#e8e8e8] tracking-[0.28px] w-full" data-name="section-title">
-                  <span className="whitespace-nowrap">Image Generation Token Rates</span>
-                  <span className="flex items-center gap-[4px] shrink-0"><TextIcon /><ImageIcon /></span>
-                </div>
-                {[
-                  { m: "openai/gpt-image-2",            inp: "$5.00 (Text In)",  out: "-",                cr: "$8.00",  cw: "$30.00"  },
-                  { m: "openai/gpt-image-1-mini",       inp: "$2.00 (Text In)",  out: "-",                cr: "$2.50",  cw: "$8.00"   },
-                  { m: "google/gemini-3-pro-image",     inp: "$2.00 (Text In)",  out: "$12.00 (Text Out)",cr: "$2.00",  cw: "$120.00" },
-                  { m: "google/gemini-3.1-flash-image", inp: "$0.50 (Text In)",  out: "$3.00 (Text Out)", cr: "$0.50",  cw: "$60.00"  },
-                ].map((row, i) => (
-                  <div key={i} className="flex items-center px-[20px] py-[12px] border-b border-[#e8e8e8] last:border-b-0 hover:bg-[#f4f4f5] transition-colors duration-150 ease-in-out text-[14px] w-full">
-                    <div className="w-[300px] shrink-0 whitespace-nowrap font-bold text-[#515151] font-['JetBrains_Mono',monospace] text-[14px]">{row.m}</div>
-                    <div className="w-[220px] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] text-[#131212] text-[14px]">{row.inp}</div>
-                    <div className="w-[220px] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] text-[#131212] text-[14px]">{row.out}</div>
-                    <div className="w-[220px] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] text-[#131212] text-[14px]">{row.cr}</div>
-                    <div className="w-[240px] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] text-[#131212] text-[14px]">{row.cw}</div>
+                  <div>
+                    <h3 className="font-['Fraunces',serif] font-bold text-[20px] sm:text-[22px] text-white flex items-center gap-3 flex-wrap">
+                      Unified LLM Model Gateway
+                      <span className="font-['DM_Sans',sans-serif] font-medium text-[12px] px-2.5 py-0.5 rounded-full bg-[#039855]/25 text-[#70FE7E] border border-[#039855]/40">
+                        原厂计费 零溢价透传
+                      </span>
+                    </h3>
+                    <p className="font-['DM_Sans',sans-serif] text-[14px] sm:text-[15px] text-[#a0a5b1] mt-1.5 leading-relaxed max-w-[850px]">
+                      Octen 提供统一的大模型 Gateway 转发，方便在一个 Dashboard 中统筹搜索 API 与大模型 Token 账单，原厂计费，零溢价透传。
+                    </p>
                   </div>
-                ))}
+                </div>
+                <div className="shrink-0 bg-[#70FE7E]/10 border border-[#70FE7E]/40 px-4 py-2.5 rounded-[10px] text-right">
+                  <span className="block font-['DM_Sans',sans-serif] text-[11px] text-[#a0a5b1] uppercase tracking-wider">Gateway 算力</span>
+                  <span className="font-['JetBrains_Mono',monospace] font-bold text-[15px] text-[#70FE7E] whitespace-nowrap">
+                    起价 $0.14 / 1M tokens
+                  </span>
+                </div>
               </div>
             </div>
+
+            {/* Brand Logo Grid Wall */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { name: "DeepSeek", tagline: "DeepSeek-V4 & R1 系列", price: "起价 $0.14 / 1M", badge: "极速推理" },
+                { name: "OpenAI", tagline: "GPT-4o / GPT-5.5 / DALL-E", price: "支持 Prompt Cache", badge: "全系兼容" },
+                { name: "Anthropic", tagline: "Claude 3.5 Sonnet & Haiku", price: "起价 $1.00 / 1M", badge: "5m 缓存折扣" },
+                { name: "Google Gemini", tagline: "Gemini 3.5 Flash & Pro", price: "起价 $0.25 / 1M", badge: "多模态算力" },
+                { name: "Moonshot Kimi", tagline: "Kimi k2.5 & k2.6", price: "起价 $0.60 / 1M", badge: "超长上下文" },
+                { name: "Qwen (通义千问)", tagline: "Qwen 3.6 Plus & Max", price: "起价 $0.50 / 1M", badge: "中文强力模型" },
+                { name: "MiniMax", tagline: "MiniMax m2.5", price: "起价 $0.30 / 1M", badge: "高并发响应" },
+                { name: "Meta Llama", tagline: "Llama 3.3 70B & 405B", price: "开源算力矩阵", badge: "自建高吞吐" },
+              ].map((brand, idx) => (
+                <div 
+                  key={idx}
+                  className="bg-[#080b12] hover:bg-[#101420] border border-[#222736] hover:border-[#70FE7E]/60 rounded-[14px] p-5 transition-all duration-200 group flex flex-col justify-between shadow-sm hover:shadow-[0_8px_24px_rgba(112,254,126,0.12)] cursor-pointer"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="font-['Fraunces',serif] font-bold text-[18px] text-white group-hover:text-[#70FE7E] transition-colors">
+                        {brand.name}
+                      </span>
+                      <span className="text-[11px] font-['DM_Sans',sans-serif] px-2 py-0.5 rounded-[4px] bg-[#039855]/20 text-[#70FE7E] border border-[#039855]/30">
+                        {brand.badge}
+                      </span>
+                    </div>
+                    <p className="font-['JetBrains_Mono',monospace] text-[13px] text-[#8e95a5] mb-4">
+                      {brand.tagline}
+                    </p>
+                  </div>
+                  <div className="pt-3 border-t border-[#1a2030] flex items-center justify-between">
+                    <span className="font-['DM_Sans',sans-serif] text-[12px] text-[#6c7280]">网格价格</span>
+                    <span className="font-['JetBrains_Mono',monospace] font-semibold text-[13px] text-[#70FE7E]">
+                      {brand.price}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Toggle Table Link / Button */}
+            <div className="flex flex-col items-center pt-2">
+              <button
+                onClick={() => setShowFullModelTable(!showFullModelTable)}
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-[9999px] bg-[#f4f4f5] hover:bg-[#e4e4e6] text-[#09090b] font-['DM_Sans',sans-serif] font-semibold text-[14px] transition-all duration-200 cursor-pointer border border-[#e4e4e7]"
+              >
+                <span>{showFullModelTable ? "收起 50+ 模型完整费率表" : "查看全部 50+ 模型完整计费清单 (Full Model Table)"}</span>
+                <svg
+                  className={`size-4 transition-transform duration-200 ${showFullModelTable ? "rotate-180" : ""}`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Full Model Pricing Table (Collapsible) */}
+            {showFullModelTable && (
+              <div className="w-full overflow-x-auto [webkit-overflow-scrolling:touch] rounded-[12px] mt-2 transition-all duration-300">
+                <div className="min-w-[1240px] w-full bg-gradient-to-l from-[#b9f8a3] to-[#51f174] border-2 border-[#46db98] relative rounded-[12px] shrink-0 flex flex-col overflow-hidden" data-name="Table">
+                  {/* Top-Right Shimmer Accent Overlay */}
+                  <img
+                    src={imgBackgroundRectangle}
+                    alt=""
+                    className="absolute h-[64.2px] right-[-50px] top-0 w-[754px] pointer-events-none object-cover mix-blend-multiply"
+                    data-name="Background Rectangle"
+                  />
+                  {/* Header Container */}
+                  <div className="flex items-center px-[20px] py-[14px] font-['DM_Sans',sans-serif] font-bold text-[14px] text-[#09090b] uppercase tracking-wider relative z-10 w-full" data-name="Header Container">
+                    <div className="w-[300px] shrink-0 whitespace-nowrap">Model Identifier</div>
+                    <div className="w-[220px] shrink-0 whitespace-nowrap">Input (USD / 1M)</div>
+                    <div className="w-[220px] shrink-0 whitespace-nowrap">Output (USD / 1M)</div>
+                    <div className="w-[220px] shrink-0 whitespace-nowrap">Cache Read / IMG In</div>
+                    <div className="w-[240px] shrink-0 whitespace-nowrap">Cache Write / IMG Out</div>
+                  </div>
+
+                  {/* Content Container (White rounded box) */}
+                  <div className="bg-white rounded-[10px] overflow-hidden flex flex-col relative z-10 w-full min-w-full" data-name="Content Container">
+                    {/* Section: LLM */}
+                    <div className="bg-[#f0f4f6] min-h-[42px] px-[20px] py-[10px] flex items-center justify-between font-['DM_Sans',sans-serif] font-bold text-[14px] text-[#131212] border-b border-[#e8e8e8] tracking-[0.28px] w-full" data-name="section-title">
+                      <span className="whitespace-nowrap">LLM Gateway Token Rates</span>
+                      <span className="flex items-center gap-[4px] shrink-0"><TextIcon /></span>
+                    </div>
+                    {[
+                      { m: "anthropic/claude-opus-4.8",     inp: "$5.00",                          out: "$25.00",                         cr: "$0.50",         cw: "$6.25 (5m) / $10 (1h)" },
+                      { m: "anthropic/claude-opus-4.6",     inp: "$5.00",                          out: "$25.00",                         cr: "$0.50",         cw: "$6.25 (5m) / $10 (1h)" },
+                      { m: "anthropic/claude-sonnet-4.6",   inp: "$3.00",                          out: "$15.00",                         cr: "$0.30",         cw: "$3.75 (5m) / $6 (1h)"  },
+                      { m: "anthropic/claude-haiku-4.5",    inp: "$1.00",                          out: "$5.00",                          cr: "$0.10",         cw: "$1.25 (5m) / $2 (1h)"  },
+                      { m: "google/gemini-3.5-flash",       inp: "$1.50",                          out: "$9.00",                          cr: "$0.15",         cw: "-"                      },
+                      { m: "google/gemini-3.1-pro-preview", inp: "$2 (≤200k) / $4 (>200k)",       out: "$12 (≤200k) / $18 (>200k)",      cr: "$0.20 / $0.40", cw: "-"                      },
+                      { m: "google/gemini-3.1-flash-lite",  inp: "$0.25",                          out: "$1.50",                          cr: "$0.025",        cw: "-"                      },
+                      { m: "google/gemini-3-flash-preview", inp: "$0.50",                          out: "$3.00",                          cr: "$0.05",         cw: "-"                      },
+                      { m: "openai/gpt-5.5-pro",            inp: "$30.00",                         out: "$180.00",                        cr: "-",             cw: "-"                      },
+                      { m: "openai/gpt-5.5",                inp: "$5.00",                          out: "$30.00",                         cr: "$0.50",         cw: "-"                      },
+                      { m: "openai/gpt-5.4",                inp: "$2.50",                          out: "$15.00",                         cr: "$0.25",         cw: "-"                      },
+                      { m: "moonshotai/kimi-k2.6",          inp: "$0.95",                          out: "$4.00",                          cr: "$0.16",         cw: "-"                      },
+                      { m: "moonshotai/kimi-k2.5",          inp: "$0.60",                          out: "$3.00",                          cr: "$0.10",         cw: "-"                      },
+                      { m: "minimax/minimax-m2.5",          inp: "$0.30",                          out: "$1.20",                          cr: "-",             cw: "-"                      },
+                      { m: "qwen/qwen3.6-plus",             inp: "$0.5 (≤256k) / $2 (>256k)",     out: "$3 (≤256k) / $6 (>256k)",        cr: "$0.05",         cw: "$0.625 (5m)"            },
+                      { m: "deepseek/deepseek-v4-pro",      inp: "$1.74",                          out: "$3.48",                          cr: "$0.145",        cw: "-"                      },
+                      { m: "deepseek/deepseek-v4-flash",    inp: "$0.14",                          out: "$0.28",                          cr: "$0.028",        cw: "-"                      },
+                    ].map((row, i) => (
+                      <div key={i} className="flex items-center px-[20px] py-[12px] border-b border-[#e8e8e8] hover:bg-[#f4f4f5] transition-colors duration-150 ease-in-out text-[14px] w-full">
+                        <div className="w-[300px] shrink-0 whitespace-nowrap font-bold text-[#515151] font-['JetBrains_Mono',monospace] text-[14px]">{row.m}</div>
+                        <div className="w-[220px] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] text-[#131212] text-[14px]">{row.inp}</div>
+                        <div className="w-[220px] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] text-[#131212] text-[14px]">{row.out}</div>
+                        <div className="w-[220px] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] text-[#131212] text-[14px]">{row.cr}</div>
+                        <div className="w-[240px] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] text-[#131212] text-[14px]">{row.cw}</div>
+                      </div>
+                    ))}
+
+                    {/* Section: Image Generation */}
+                    <div className="bg-[#f0f4f6] min-h-[42px] px-[20px] py-[10px] flex items-center justify-between font-['DM_Sans',sans-serif] font-bold text-[14px] text-[#131212] border-b border-[#e8e8e8] tracking-[0.28px] w-full" data-name="section-title">
+                      <span className="whitespace-nowrap">Image Generation Token Rates</span>
+                      <span className="flex items-center gap-[4px] shrink-0"><TextIcon /><ImageIcon /></span>
+                    </div>
+                    {[
+                      { m: "openai/gpt-image-2",            inp: "$5.00 (Text In)",  out: "-",                cr: "$8.00",  cw: "$30.00"  },
+                      { m: "openai/gpt-image-1-mini",       inp: "$2.00 (Text In)",  out: "-",                cr: "$2.50",  cw: "$8.00"   },
+                      { m: "google/gemini-3-pro-image",     inp: "$2.00 (Text In)",  out: "$12.00 (Text Out)",cr: "$2.00",  cw: "$120.00" },
+                      { m: "google/gemini-3.1-flash-image", inp: "$0.50 (Text In)",  out: "$3.00 (Text Out)", cr: "$0.50",  cw: "$60.00"  },
+                    ].map((row, i) => (
+                      <div key={i} className="flex items-center px-[20px] py-[12px] border-b border-[#e8e8e8] last:border-b-0 hover:bg-[#f4f4f5] transition-colors duration-150 ease-in-out text-[14px] w-full">
+                        <div className="w-[300px] shrink-0 whitespace-nowrap font-bold text-[#515151] font-['JetBrains_Mono',monospace] text-[14px]">{row.m}</div>
+                        <div className="w-[220px] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] text-[#131212] text-[14px]">{row.inp}</div>
+                        <div className="w-[220px] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] text-[#131212] text-[14px]">{row.out}</div>
+                        <div className="w-[220px] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] text-[#131212] text-[14px]">{row.cr}</div>
+                        <div className="w-[240px] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] text-[#131212] text-[14px]">{row.cw}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         )}
 
