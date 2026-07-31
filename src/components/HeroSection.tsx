@@ -537,7 +537,7 @@ function ClaimBalanceBanner() {
 export default function HeroSection() {
   return (
     <div 
-      className="content-stretch flex flex-col items-center pb-[40px] sm:pb-[80px] pt-[24px] sm:pt-[40px] px-4 sm:px-[320px] relative size-full w-full overflow-hidden"
+      className="content-stretch flex flex-col items-center pb-[40px] sm:pb-[80px] pt-[70px] sm:pt-[90px] px-4 sm:px-[320px] relative size-full w-full overflow-hidden"
       data-name="hero"
     >
       {/* Dynamic WebGL Dither Shader Background Layer (Silver Grey Grid & Neon Green/Yellow Blobs) */}
