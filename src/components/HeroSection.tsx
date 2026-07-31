@@ -406,7 +406,15 @@ function QpsPlanCard() {
       <div className="flex flex-col items-center justify-center size-full p-[6px] relative z-10">
         <QpsCardGraphic isHovered={isHovered} />
         <div className="content-stretch flex flex-col gap-[8px] items-center pb-[12px] pt-[20px] relative shrink-0 text-center w-full">
-          <p className="font-['Fraunces',serif] font-semibold text-[20px] text-[#09090b] leading-[1.3] py-[4px] w-full text-center relative shrink-0">
+          <p 
+            className="font-['Fraunces',serif] font-semibold text-[20px] leading-[100%] text-center w-full relative shrink-0"
+            style={{
+              background: 'linear-gradient(90deg, #535353 28.33%, #000000 56.07%, rgba(0, 0, 0, 0.67) 70.75%), linear-gradient(90deg, rgba(255, 255, 255, 0.71) 28.52%, #FFFFFF 54.77%, rgba(255, 255, 255, 0.6) 72.55%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}
+          >
             Subscribe QPS Plan
           </p>
           <p className="font-['DM_Sans',sans-serif] font-normal text-black/70 relative shrink-0 text-[14px] whitespace-nowrap">
@@ -436,7 +444,15 @@ function PayAsYouGoCard() {
       <div className="flex flex-col items-center justify-center size-full p-[6px] relative z-10">
         <PayAsYouGoGraphic isHovered={isHovered} />
         <div className="content-stretch flex flex-col gap-0 items-center pb-[12px] pt-[20px] relative shrink-0 text-center w-full">
-          <p className="font-['Fraunces',serif] font-semibold text-[20px] text-[#09090b] leading-[1.3] py-[4px] w-full text-center relative shrink-0">
+          <p 
+            className="font-['Fraunces',serif] font-semibold text-[20px] leading-[100%] text-center w-full relative shrink-0"
+            style={{
+              background: 'linear-gradient(90deg, #535353 28.33%, #000000 56.07%, rgba(0, 0, 0, 0.67) 70.75%), linear-gradient(90deg, rgba(255, 255, 255, 0.71) 28.52%, #FFFFFF 54.77%, rgba(255, 255, 255, 0.6) 72.55%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+            }}
+          >
             Pay as you go
           </p>
           <p className="font-['DM_Sans',sans-serif] font-normal text-black/70 relative shrink-0 text-[14px] whitespace-nowrap">
