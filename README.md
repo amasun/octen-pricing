@@ -75,18 +75,12 @@
 - 移除了底部容器的分割线，将背景 Dither 图片上移 30px。
 - 将 `SOC 2 Certified` 认证徽章重构为独立块级元素，置于 Privacy & Terms 链接上方，整体高度收紧 50px。
 
-### 3.5 Unified LLM Model Gateway 品牌卡片与交互式无缝跑马灯
-- **模型网关标题与透传 Badge**：
-  - 拥有 `Zero-Margin Pass-Through` 零溢价透传绿色 Badge（基线微调 `translate-y-[2px]` 对齐），以及精简的纯英文描述（`Access 20+ leading AI models through a unified gateway with zero-margin pass-through billing.`）。
-- **QPS 卡片风格与文字规范**：
-  - **7 大品牌卡片**（Anthropic, OpenAI, Google Gemini, DeepSeek, Moonshot Kimi, Qwen, MiniMax），各标注代表性最新型号（如 `Claude 3.5 Sonnet / Opus 4.8`）。
-  - **卡片视觉与 Hover 沉稳防护**：继承 QPS 卡片纯白底色 (`bg-white`)、`rounded-[16px]` 圆角与 `border-[rgba(26,26,25,0.12)]` 灰色边框；移除浮起位移与阴影，仅保留纯色灰白 Hover 过度 (`hover:bg-[#f4f4f5]`)；卡片上方光标保持默认标准箭头，真正的 HTML 超链接保持 `cursor-pointer`。
-  - **字号与颜色**：价格采用 `JetBrains Mono` 400 字重 `#131212` 纯黑，卡片内部所有文本字号严格控制在 **最小 14px** 以上（`text-[14px]`）。
-- **缓速帧驱动与双向手势/鼠标拖拽引擎 (`ModelGatewayMarquee`)**：
+### 3.5 Unified LLM Model Gateway 动态交互与响应式适配 (`ModelGatewayMarquee`)
+- **缓速帧驱动与双向手势/鼠标拖拽引擎**：
   - **帧驱动慢速平移**：基于 `requestAnimationFrame` 渲染步进化，以 **`0.45px/帧`** 的极缓速度平滑滚屏。
-  - **双向手势与鼠标拖拽 Scrubbing**：支持鼠标 `cursor-grab / cursor-grabbing` 左右随意拖拽 hold 住查看，以及移动端单指触控滑动 (`onTouchStart/Move/End`)。松手后在当前位置自然接续平滑滚屏。
+  - **双向手势与鼠标拖拽 Scrubbing**：支持桌面端 `cursor-grab / cursor-grabbing` 鼠标按住左右随意拖拽 hold 住前后查看，以及移动端单指触控滑动 (`onTouchStart/Move/End`)。松手或离开后在当前位置自然接续滚屏。
   - **四倍数组无缝闭环**：采用 4 倍品牌数组组合结合 `scrollWidth / 2` 模运算回弹逻辑，实现左右双向无缝无限循环，拖拽无边界断层。
-- **全屏突破与移动端响应式蒙版**：
+- **全屏突破与移动端响应式适配**：
   - **桌面端（`≥ 640px`）**：采用全视口突破算法（`sm:w-[calc(100vw-40px)] sm:relative sm:left-1/2 sm:-translate-x-1/2`），两侧向内收缩 20px 安全边距，配备 `68px` 左右两端渐隐蒙版 (`sm:[mask-image:linear-gradient(...)]`)；
   - **移动端（`< 640px`）**：突破父级 16px 内边距（`w-screen relative left-1/2 -translate-x-1/2`），实现左右 0 边距全屏平铺全宽显示，同时完全移除渐隐遮罩 (`[mask-image:none]`)，确保小屏毫无视线遮挡。
 
