@@ -34,7 +34,14 @@ export default function FaqSection() {
           Frequently Asked Questions
         </h2>
         <p className="font-['DM_Sans',sans-serif] text-[15px] sm:text-[16px] text-[#64748b]">
-          Everything you need to know about Pay-As-You-Go rates, QPS plans, and account billing.
+          If you have any questions about using Octen, feel free to email us at{" "}
+          <a
+            href="mailto:support@octen.ai"
+            className="text-[#039855] font-medium underline hover:text-[#027a44] transition-colors"
+          >
+            support@octen.ai
+          </a>
+          .
         </p>
       </div>
 
