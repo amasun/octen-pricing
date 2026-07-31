@@ -117,7 +117,7 @@ function Soc2CertifiedBadge() {
 export default function FooterSection() {
   return (
     <footer
-      className="w-full relative overflow-hidden text-white pt-[50px] lg:pt-[70px] pb-[25px] px-6 lg:px-12 flex flex-col items-center border-t border-white/10"
+      className="w-full relative overflow-hidden text-white pt-[36px] sm:pt-[70px] pb-[20px] sm:pb-[25px] px-6 lg:px-12 flex flex-col items-center border-t border-white/10"
       style={{
         backgroundImage:
           "linear-gradient(rgba(8, 11, 18, 0.8) 0%, rgba(21, 51, 30, 0.8) 100%), linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%)",

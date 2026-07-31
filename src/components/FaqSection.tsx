@@ -24,7 +24,7 @@ export default function FaqSection() {
   ];
 
   return (
-    <div className="bg-[#f3f3f2] content-stretch flex flex-col gap-[20px] items-center py-[60px] sm:py-[100px] relative shrink-0 w-full" id="faq-section">
+    <div className="bg-[#f3f3f2] content-stretch flex flex-col gap-[20px] items-center py-[36px] sm:py-[100px] relative shrink-0 w-full" id="faq-section">
       <div className="text-center flex flex-col gap-3 px-4 max-w-[800px]">
         <h2 className="font-['Fraunces',serif] font-bold text-[32px] sm:text-[40px] text-[#0f172a] leading-tight">
           Frequently Asked Questions
