@@ -26,7 +26,9 @@
   --radius-lg: 12px;
 }
 
-html {
+html, body {
+  background-color: #080B12 !important;
+  color: #ffffff !important;
   height: auto;
   overflow-x: hidden;
   overflow-y: auto;
