@@ -642,8 +642,10 @@ float getBottomFade(vec2 st) {
 float getHollowMask(vec2 st) {
   if (uHollowRadius <= 0.0005) return 1.0;
   vec2 centerUv = st - vec2(0.5);
-  centerUv.x *= uResolution.x / max(uResolution.y, 1.0);
-  return smoothstep(uHollowRadius, uHollowRadius + uHollowFeather, length(centerUv));
+  float aspect = uResolution.x / max(uResolution.y, 1.0);
+  centerUv.x *= aspect;
+  float effectiveRadius = uHollowRadius * clamp(aspect, 0.45, 1.0);
+  return smoothstep(effectiveRadius, effectiveRadius + uHollowFeather, length(centerUv));
 }
 
 vec3 getLeveledColor(vec2 rawUv) {
