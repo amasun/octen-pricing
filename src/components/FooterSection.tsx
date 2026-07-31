@@ -226,7 +226,7 @@ export default function FooterSection() {
         </div>
 
         {/* Bottom Section: Copyright, Legal Links, & SOC 2 Badge */}
-        <div className="w-full flex flex-col md:flex-row items-center justify-between gap-[24px] pt-[30px] relative">
+        <div className="w-full flex flex-col md:flex-row items-center justify-between gap-[24px] pt-[50px] relative">
           <p className="font-['DM_Sans',sans-serif] text-[16px] text-white/80 text-center md:text-left">
             © 2026 APITECH AI PTE. LTD. All rights reserved.
           </p>
