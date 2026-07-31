@@ -86,7 +86,7 @@ function PlanCardItem({
       {/* Inner White Card Body */}
       <div className="bg-white rounded-[12px] h-auto sm:h-[410px] flex flex-col justify-between p-0 m-0 overflow-hidden box-border">
         {/* Title Block */}
-        <div className="h-auto sm:h-[150px] p-[16px_16px] sm:p-[30px_24px] flex flex-col justify-between gap-[10px] sm:gap-[20px] border-b border-[rgba(26,26,25,0.12)] box-border shrink-0">
+        <div className="h-auto sm:h-[150px] p-[16px_16px] sm:p-[30px_20px] flex flex-col justify-between gap-[10px] sm:gap-[20px] border-b border-[rgba(26,26,25,0.12)] box-border shrink-0">
           <div className="flex items-center justify-between w-full h-[24px]">
             <h3 className="font-['Fraunces',serif] font-semibold text-[20px] sm:text-[24px] leading-[24px] text-[#100F09]">
               {title}
@@ -99,18 +99,18 @@ function PlanCardItem({
           </div>
 
           {/* Price Frequency */}
-          <div className="flex flex-row items-end gap-[6px] sm:gap-[8px] min-h-[36px] sm:min-h-[44px]">
+          <div className="h-[36px] sm:h-[44px] flex flex-row items-center gap-[6px] sm:gap-[8px]">
             {price === "Custom" ? (
-              <div className="flex items-end">
+              <div className="flex items-center h-full">
                 <span className="font-['DM_Sans',sans-serif] font-bold text-[28px] sm:text-[38px] leading-[32px] sm:leading-[44px] text-[#100F09]">Custom</span>
               </div>
             ) : (
               <div className="flex items-start">
-                <span className="font-['DM_Mono',monospace] font-medium text-[16px] sm:text-[20px] leading-[18px] sm:leading-[22px] text-[#100F09] pt-[2px] sm:pt-[4px] pr-[2px]">$</span>
-                <span className="font-['DM_Sans',sans-serif] font-medium text-[28px] sm:text-[40px] leading-[32px] sm:leading-[44px] text-[#100F09]">{price}</span>
+                <span className="font-['DM_Mono',monospace] font-medium text-[16px] sm:text-[20px] leading-[18px] sm:leading-[22px] text-[#100F09] pt-[2px] sm:pt-[4px] pr-[3px]">$</span>
+                <span className="font-['DM_Sans',sans-serif] font-bold text-[28px] sm:text-[38px] leading-[32px] sm:leading-[44px] text-[#100F09]">{price}</span>
               </div>
             )}
-            <div className="flex flex-row flex-wrap items-baseline justify-start gap-x-[6px] gap-y-0 -translate-y-[3px] pb-[2px] sm:pb-[4px] flex-1">
+            <div className="flex flex-row flex-wrap items-baseline justify-start gap-x-[6px] gap-y-0 pt-[16px] sm:pt-[24px] flex-1">
               {originalPrice && (
                 <span className="font-['DM_Sans',sans-serif] font-normal text-[12px] sm:text-[14px] leading-[13px] sm:leading-[15px] text-[#7C7C79] line-through whitespace-nowrap">
                   {originalPrice}
@@ -124,11 +124,11 @@ function PlanCardItem({
         </div>
 
         {/* Button Text Block */}
-        <div className="h-auto sm:h-[260px] p-[16px_16px] sm:p-[30px_24px] flex flex-col justify-between gap-[16px] sm:gap-[30px] box-border shrink-0">
+        <div className="h-auto sm:h-[260px] p-[16px_16px] sm:p-[30px_20px] flex flex-col justify-between gap-[16px] sm:gap-[30px] box-border shrink-0">
           {/* List */}
           <ul className="h-auto sm:h-[132px] flex flex-col gap-[10px] sm:gap-[16px] list-none p-0 m-0 w-full">
             {features.map((feat, i) => (
-              <li key={i} className="flex items-start gap-[6px] text-[13px] sm:text-[14px] font-['DM_Sans',sans-serif] font-normal leading-[130%] sm:leading-[140%] text-[#100F09]">
+              <li key={i} className="flex items-start gap-[4px] text-[13px] sm:text-[14px] font-['DM_Sans',sans-serif] font-normal leading-[20px] text-[#100F09]">
                 <FeatureIcon type={feat.icon} />
                 <span className="flex-1">{feat.text}</span>
               </li>
