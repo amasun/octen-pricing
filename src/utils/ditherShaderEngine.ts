@@ -1,6 +1,6 @@
 /**
  * ditherShaderEngine.ts
- * Standalone WebGL2 Bottom-Fade Dither Shader Engine with Pixel Grid Line Overlay
+ * Standalone WebGL2 Bottom-Fade Dither Shader Engine with Interactive Mouse Hover & Trail Dither Effect.
  * Converted for Octen AI Pricing Hero Background.
  */
 
@@ -238,6 +238,16 @@ vec3 getLeveledColor(vec2 rawUv) {
   float hollowMask = getHollowMask(sampleSt);
   float maskFactor = hollowMask * bottomFade;
 
+  // Dynamic Mouse Hover & Cursor Trail Dither Effect
+  vec2 mouseOffset = sampleSt - uMousePos;
+  mouseOffset.x *= (uResolution.x / max(uResolution.y, 1.0));
+  float distToMouse = length(mouseOffset);
+
+  // Mouse interactive dither aura around cursor (radius ~0.25)
+  float mouseGlow = smoothstep(0.26, 0.01, distToMouse) * uHover;
+  float mouseSparkle = snoise(sampleSt * 16.0 + vec2(uTime * 1.8, uTime * 2.2)) * 0.5 + 0.5;
+  float mouseDitherIntensity = mouseGlow * (0.55 + 0.45 * mouseSparkle);
+
   if (uUseTurbulence > 0) {
     vec2 aspectUv = sampleSt;
     aspectUv.x *= (uResolution.x / max(uResolution.y, 1.0)) * max(uAspectScale, 0.05);
@@ -260,7 +270,8 @@ vec3 getLeveledColor(vec2 rawUv) {
 
     float patternVal = pow(sparseBlob, max(uRippleWidth * 0.7, 0.1));
 
-    float intensity = patternVal * maskFactor;
+    // Combine procedural constellation pattern with mouse hover trail dither intensity
+    float intensity = clamp(patternVal * maskFactor + mouseDitherIntensity * 0.85, 0.0, 1.0);
     sampled = vec3(intensity);
   }
 
@@ -350,6 +361,14 @@ export class DitherShaderEngine {
   curGridRgb: [number, number, number];
   curWhiteRgb: [number, number, number];
 
+  // Mouse Physics & Trailing Physics
+  targetMouseX: number = 0.5;
+  targetMouseY: number = 0.5;
+  curMouseX: number = 0.5;
+  curMouseY: number = 0.5;
+  hoverVal: number = 0.0;
+  targetHoverVal: number = 0.0;
+
   constructor(canvas: HTMLCanvasElement, initialParams?: DitherShaderParams) {
     this.canvas = canvas;
     const gl = canvas.getContext('webgl2', { preserveDrawingBuffer: true, alpha: true });
@@ -387,7 +406,7 @@ export class DitherShaderEngine {
       useTurbulence: 1,
       patternMode: 2,
       aspectScale: 1.00,
-      rippleFrequency: 2.60, // Blob Threshold = 2.60
+      rippleFrequency: 2.60,      // Blob Threshold = 2.60
       rippleWidth: 1.40,
       hollowRadius: 0.21,
       hollowFeather: 0.32,
@@ -472,7 +491,22 @@ export class DitherShaderEngine {
       uBottomFadeFeather: gl.getUniformLocation(prog, 'uBottomFadeFeather')
     };
 
+    // Attach Mouse Events
+    this._onMouseMove = this._onMouseMove.bind(this);
+    window.addEventListener('mousemove', this._onMouseMove);
+
     this._renderFrame = this._renderFrame.bind(this);
+  }
+
+  private _onMouseMove(e: MouseEvent) {
+    const rect = this.canvas.getBoundingClientRect();
+    if (rect.width > 0 && rect.height > 0) {
+      const x = (e.clientX - rect.left) / rect.width;
+      const y = 1.0 - (e.clientY - rect.top) / rect.height;
+      this.targetMouseX = Math.max(0.0, Math.min(1.0, x));
+      this.targetMouseY = Math.max(0.0, Math.min(1.0, y));
+      this.targetHoverVal = 1.0;
+    }
   }
 
   private _compileShader(type: number, source: string): WebGLShader {
@@ -513,6 +547,11 @@ export class DitherShaderEngine {
     if (!this.isRunning) return;
 
     this.totalTime += 0.016;
+
+    // Smooth Spring Physics for Mouse Trailing & Hover Intensity
+    this.curMouseX += (this.targetMouseX - this.curMouseX) * 0.12;
+    this.curMouseY += (this.targetMouseY - this.curMouseY) * 0.12;
+    this.hoverVal += (this.targetHoverVal - this.hoverVal) * 0.06;
 
     const p = this.params;
     const gl = this.gl;
@@ -561,7 +600,7 @@ export class DitherShaderEngine {
 
     const u = this.uniforms;
     gl.uniform2f(u.uResolution, canvas.width, canvas.height);
-    gl.uniform2f(u.uMousePos, 0.5, 0.5);
+    gl.uniform2f(u.uMousePos, this.curMouseX, this.curMouseY);
     gl.uniform1i(u.uEngineMode, 3);
     gl.uniform1f(u.uL2_Amount, p.pixelate);
     gl.uniform1f(u.uL3_Dither, 1.0 / Math.max(p.ditherLevels, 1.0));
@@ -569,7 +608,7 @@ export class DitherShaderEngine {
     gl.uniform1f(u.uExposure, p.exposure);
     gl.uniform1f(u.uWhiteCutoff, p.whiteCutoff);
     gl.uniform1f(u.uWhiteSpacing, p.whiteSpacing);
-    gl.uniform1f(u.uHover, 0.0);
+    gl.uniform1f(u.uHover, this.hoverVal);
     gl.uniform1f(u.uInBlack, p.inBlack);
     gl.uniform1f(u.uInMid, p.inMid);
     gl.uniform1f(u.uInWhite, p.inWhite);
@@ -615,6 +654,7 @@ export class DitherShaderEngine {
 
   destroy() {
     this.stop();
+    window.removeEventListener('mousemove', this._onMouseMove);
     if (this.gl) {
       const gl = this.gl;
       if (this.vertexBuffer) gl.deleteBuffer(this.vertexBuffer);
