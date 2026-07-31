@@ -102,7 +102,7 @@ function NavigationActions() {
 
 export default function Navbar() {
   return (
-    <div className="absolute bg-transparent h-[70px] left-0 top-0 w-full z-50 flex items-center justify-center px-4 md:px-[40px] border-b border-white/10" data-name="Header Navigation">
+    <div className="absolute bg-transparent h-[70px] left-0 top-0 w-full z-50 flex items-center justify-center px-4 md:px-[40px]" data-name="Header Navigation">
       <div className="content-stretch flex items-center justify-between w-full max-w-[1440px]">
         <LogoWhite />
         <Navigation />
