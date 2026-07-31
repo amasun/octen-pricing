@@ -169,7 +169,7 @@ export default function QpsPricingGrid() {
   }> = [
     {
       title: "Free",
-      subtitle: "For evaluation & trial agents",
+      subtitle: "Evaluation & developer testing",
       price: "0",
       features: [
         { text: <>Up to <strong className="font-bold">10 QPS</strong> Limit</>, icon: "branch" },
@@ -180,7 +180,7 @@ export default function QpsPricingGrid() {
     },
     {
       title: "Base",
-      subtitle: "Unlocked on first top-up",
+      subtitle: "Personal projects & light API use",
       price: "0",
       features: [
         { text: <>Up to <strong className="font-bold">20 QPS</strong> Limit</>, icon: "branch" },
@@ -191,7 +191,7 @@ export default function QpsPricingGrid() {
     },
     {
       title: "Startup",
-      subtitle: "Early-stage teams going to prod",
+      subtitle: "Early-stage teams in production",
       price: "2,099",
       originalPrice: "$2,999",
       discountBadge: "30% Off",
@@ -205,7 +205,7 @@ export default function QpsPricingGrid() {
     },
     {
       title: "Pro",
-      subtitle: "Growing production workloads",
+      subtitle: "Scaling production AI applications",
       price: "13,999",
       features: [
         { text: <>Up to <strong className="font-bold">200 QPS</strong> Limit</>, icon: "branch" },
@@ -216,7 +216,7 @@ export default function QpsPricingGrid() {
     },
     {
       title: "Scale",
-      subtitle: "High-volume enterprise scale",
+      subtitle: "High-throughput & mission-critical",
       price: "33,999",
       features: [
         { text: <>Up to <strong className="font-bold">500 QPS</strong> Limit</>, icon: "branch" },
@@ -227,7 +227,7 @@ export default function QpsPricingGrid() {
     },
     {
       title: "Enterprise",
-      subtitle: "Custom scale & higher rate limits",
+      subtitle: "Custom scale & enterprise SLA",
       price: "Custom",
       period: "Tailored Plan",
       features: [
