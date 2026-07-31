@@ -197,3 +197,24 @@ body, #root, #root > div, [data-name="Octen AI | Infrastructure Pricing"] {
 .btn-light-hover:hover::before {
   opacity: 1 !important;
 }
+
+/* Seamless Model Gateway Marquee Animation */
+@keyframes modelMarquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-model-marquee {
+  display: flex !important;
+  width: max-content !important;
+  animation: modelMarquee 28s linear infinite !important;
+}
+
+.animate-model-marquee:hover {
+  animation-play-state: paused !important;
+}
+
