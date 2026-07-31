@@ -443,7 +443,7 @@ function PayAsYouGoCard() {
       </div>
       <div className="flex flex-col items-center justify-center size-full p-[6px] relative z-10">
         <PayAsYouGoGraphic isHovered={isHovered} />
-        <div className="content-stretch flex flex-col gap-0 items-center pb-[12px] pt-[20px] relative shrink-0 text-center w-full">
+        <div className="content-stretch flex flex-col gap-[8px] items-center pb-[12px] pt-[20px] relative shrink-0 text-center w-full">
           <p 
             className="font-['Fraunces',serif] font-semibold text-[20px] leading-[1.15] py-[2px] -my-[2px] text-center w-full relative shrink-0 block overflow-visible"
             style={{
