@@ -24,14 +24,14 @@
 
 ## 💫 2. 动画与平滑滚动体系 (GSAP, Lenis & Shader Architecture)
 
-### 2.1 Hero WebGL2 Shader 弧形光轨引擎 (`CurvedLightTrailsCanvas`)
-- **GLSL Shader 原理**：基于 WebGL2 (`#version 300 es`) 编写高精 Fragment Shader，渲染具有二次贝塞尔弧形弯曲的速线（Speed Line）与空间扭曲场。
-- **视觉控制参数**：
-  - **弯曲与波浪**：支持 `warpStrength` (扭曲强度 3.78) 与 `getHoldWave` 平滑周期律动函数，营造富有科技感的光轨穿梭效果。
-  - **色彩与色散**：支持色差色散（`chromatic: 2.0`）、紫色基础色 (`#b892dd`) 与绿发光微光 (`#00b32d`) 的混色叠加。
-- **性能与优雅降级**：
-  - **视口感知 (IntersectionObserver)**：自动监听 Canvas 视口可见性，当滚动至屏外时自动挂起 WebGL `requestAnimationFrame` 渲染帧，极大地释放 GPU 与 CPU 资源。
-  - **WebGL 失败降级**：若低端设备或古老浏览器无法初始化 WebGL2 上下文，组件会自动无缝降级展示高清静态 PNG 光效（`fallbackSrc`），确保 100% 可用。
+### 2.1 Hero WebGL2 Shader 背景与光轨引擎 (`DitherBackgroundCanvas` & `CurvedLightTrailsCanvas`)
+- **Bottom-Fade Dither 着色器背景 (`DitherBackgroundCanvas` & `ditherShaderEngine.ts`)**：
+  - 源自 `bottom-dither-demo.html` 的 WebGL2 GLSL Fragment Shader。在 Hero 背景层渲染具有 2-Tone 调色（霓虹绿 `#38ef7d` 与黄绿 `#d4f952`）的稀疏斑块点阵及银灰像素网格线框（`#a8a8a8`）。
+  - 支持湍流流速 (`noiseSpeed: 0.135`)、Bayer 矩阵 Dither 采样 (`ditherScale: 0.31`)、中心空出羽化掩码 (`hollowRadius: 0.21`) 与底部向上的平滑渐变掩码。
+- **卡片 Speed Line 弧形速线 (`CurvedLightTrailsCanvas`)**：
+  - 渲染二次贝塞尔弯曲光轨与波浪动效，在 hover 时动态穿梭变幻。
+- **视口性能感知 (IntersectionObserver)**：
+  - 自动监听 Canvas 视口，屏外自动挂起 WebGL `requestAnimationFrame` 渲染帧，极大节省 GPU 资源。不支持 WebGL2 时无缝降级展示高清静态 PNG 图。
 
 ### 2.2 Hero SVG 矢量动效与鼠标聚光灯 (SVG Animations & Mouse Spotlight)
 - **矢量 Icon 微交互**：Hero 区域内的同类 Label 标签（Text, Image, Video, Code）全部替换为高分辨率 Lucide 矢量 SVG 路径，支持高分屏无损显示。

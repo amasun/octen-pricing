@@ -1,7 +1,9 @@
 import { useState } from "react";
 import svgPaths from "./svgPaths";
 import CurvedLightTrailsCanvas from "./CurvedLightTrailsCanvas";
+import DitherBackgroundCanvas from "./DitherBackgroundCanvas";
 import imgShader2 from "../../imports/4dd5750c60a3ca94cca35fcd8f4b9c20eccd90e1.png";
+import imgDither1 from "../../imports/64635f1bb002f492bde3cdcba5e5dadaf111f260.png";
 
 function AccessTag() {
   return (
@@ -535,19 +537,26 @@ function ClaimBalanceBanner() {
 export default function HeroSection() {
   return (
     <div 
-      className="content-stretch flex flex-col items-center pb-[40px] sm:pb-[80px] pt-[24px] sm:pt-[40px] px-4 sm:px-[320px] relative size-full w-full"
-      style={{ backgroundImage: "linear-gradient(-2.23687e-09deg, rgba(0, 136, 13, 0.6) 22.707%, rgba(0, 136, 13, 0) 45.505%), linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%), linear-gradient(90deg, rgb(6, 6, 6) 0%, rgb(6, 6, 6) 100%)" }}
+      className="content-stretch flex flex-col items-center pb-[40px] sm:pb-[80px] pt-[24px] sm:pt-[40px] px-4 sm:px-[320px] relative size-full w-full overflow-hidden"
       data-name="hero"
     >
-      <HeroHeader />
-      <div className="content-stretch flex flex-col items-center pb-[20px] sm:pb-[30px] pt-[16px] sm:pt-[40px] relative rounded-[20px] shrink-0 w-full max-w-[1280px]">
-        <div className="content-stretch flex flex-col md:flex-row gap-[10px] md:gap-[34px] items-center justify-center relative shrink-0 w-full md:w-[960px] max-w-full">
-          <QpsPlanCard />
-          <PlusSeparator />
-          <PayAsYouGoCard />
-        </div>
+      {/* Dynamic WebGL Dither Shader Background Layer (Silver Grey Grid & Neon Green/Yellow Blobs) */}
+      <div className="absolute inset-0 size-full pointer-events-none z-0 overflow-hidden">
+        <DitherBackgroundCanvas fallbackSrc={imgDither1} />
       </div>
-      <ClaimBalanceBanner />
+
+      {/* Hero Interactive Content Layer */}
+      <div className="relative z-10 w-full flex flex-col items-center">
+        <HeroHeader />
+        <div className="content-stretch flex flex-col items-center pb-[20px] sm:pb-[30px] pt-[16px] sm:pt-[40px] relative rounded-[20px] shrink-0 w-full max-w-[1280px]">
+          <div className="content-stretch flex flex-col md:flex-row gap-[10px] md:gap-[34px] items-center justify-center relative shrink-0 w-full md:w-[960px] max-w-full">
+            <QpsPlanCard />
+            <PlusSeparator />
+            <PayAsYouGoCard />
+          </div>
+        </div>
+        <ClaimBalanceBanner />
+      </div>
     </div>
   );
 }
