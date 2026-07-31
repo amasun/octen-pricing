@@ -919,19 +919,60 @@ export class DitherShaderEngine {
 
     // Attach Mouse Events
     this._onMouseMove = this._onMouseMove.bind(this);
+    this._onMouseLeave = this._onMouseLeave.bind(this);
     window.addEventListener('mousemove', this._onMouseMove);
+    window.addEventListener('mouseleave', this._onMouseLeave);
 
     this._renderFrame = this._renderFrame.bind(this);
   }
 
+  private isMouseActive: boolean = false;
+
   private _onMouseMove(e: MouseEvent) {
     const rect = this.canvas.getBoundingClientRect();
     if (rect.width > 0 && rect.height > 0) {
-      const x = (e.clientX - rect.left) / rect.width;
-      const y = 1.0 - (e.clientY - rect.top) / rect.height;
-      this.targetMouseX = Math.max(0.0, Math.min(1.0, x));
-      this.targetMouseY = Math.max(0.0, Math.min(1.0, y));
+      const isInside = (
+        e.clientX >= rect.left &&
+        e.clientX <= rect.right &&
+        e.clientY >= rect.top &&
+        e.clientY <= rect.bottom
+      );
+
+      if (isInside) {
+        if (!this.isMouseActive) {
+          this.isMouseActive = true;
+          const x = (e.clientX - rect.left) / rect.width;
+          const y = 1.0 - (e.clientY - rect.top) / rect.height;
+          this.targetMouseX = x;
+          this.targetMouseY = y;
+          this.curMouseX = x;
+          this.curMouseY = y;
+          this.prevMouseX = x;
+          this.prevMouseY = y;
+        } else {
+          const x = (e.clientX - rect.left) / rect.width;
+          const y = 1.0 - (e.clientY - rect.top) / rect.height;
+          this.targetMouseX = x;
+          this.targetMouseY = y;
+        }
+      } else {
+        this._deactivateMouse();
+      }
     }
+  }
+
+  private _onMouseLeave() {
+    this._deactivateMouse();
+  }
+
+  private _deactivateMouse() {
+    this.isMouseActive = false;
+    this.targetMouseX = -9999;
+    this.targetMouseY = -9999;
+    this.curMouseX = -9999;
+    this.curMouseY = -9999;
+    this.prevMouseX = -9999;
+    this.prevMouseY = -9999;
   }
 
   private _compileShader(type: number, source: string): WebGLShader {
@@ -1093,6 +1134,7 @@ export class DitherShaderEngine {
   destroy() {
     this.stop();
     window.removeEventListener('mousemove', this._onMouseMove);
+    window.removeEventListener('mouseleave', this._onMouseLeave);
     if (this.pass4) this.pass4.destroy();
     if (this.gl) {
       const gl = this.gl;
