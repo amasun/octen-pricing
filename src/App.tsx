@@ -35,7 +35,7 @@ export default function App() {
 
       // Hero content entrance: y:40, duration:1.0, stagger:0.15, ease:'power3.out'
       gsap.fromTo(
-        '[data-name="hero"] > *',
+        '[data-name="hero-content"] > *',
         { opacity: 0, y: 40 },
         {
           opacity: 1,

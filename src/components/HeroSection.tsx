@@ -584,7 +584,7 @@ export default function HeroSection() {
       <HeroLightGlow />
 
       {/* Hero Interactive Content Layer */}
-      <div className="relative z-10 w-full flex flex-col items-center">
+      <div className="relative z-10 w-full flex flex-col items-center" data-name="hero-content">
         <HeroHeader />
         <div className="content-stretch flex flex-col items-center pb-[20px] sm:pb-[30px] pt-[16px] sm:pt-[40px] relative rounded-[20px] shrink-0 w-full max-w-[1280px]">
           <div className="content-stretch flex flex-col md:flex-row gap-[10px] md:gap-[34px] items-center justify-center relative shrink-0 w-full md:w-[960px] max-w-full">
