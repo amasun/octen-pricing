@@ -75,7 +75,7 @@
 - 移除了底部容器的分割线，将背景 Dither 图片上移 30px。
 - 将 `SOC 2 Certified` 认证徽章重构为独立块级元素，置于 Privacy & Terms 链接上方，整体高度收紧 50px。
 
-### 3.5 Unified LLM Model Gateway 动态交互与响应式适配 (`ModelGatewayMarquee`)
+### 3.5 Unified LLM Model Gateway 动态交互、响应式适配与样式调整 (`ModelGatewayMarquee`)
 - **缓速帧驱动与双向手势/鼠标拖拽引擎**：
   - **帧驱动慢速平移**：基于 `requestAnimationFrame` 渲染步进化，以 **`0.45px/帧`** 的极缓速度平滑滚屏。
   - **双向手势与鼠标拖拽 Scrubbing**：支持桌面端 `cursor-grab / cursor-grabbing` 鼠标按住左右随意拖拽 hold 住前后查看，以及移动端单指触控滑动 (`onTouchStart/Move/End`)。松手或离开后在当前位置自然接续滚屏。
@@ -83,18 +83,33 @@
 - **全屏突破与移动端响应式适配**：
   - **桌面端（`≥ 640px`）**：采用全视口突破算法（`sm:w-[calc(100vw-40px)] sm:relative sm:left-1/2 sm:-translate-x-1/2`），两侧向内收缩 20px 安全边距，配备 `68px` 左右两端渐隐蒙版 (`sm:[mask-image:linear-gradient(...)]`)；
   - **移动端（`< 640px`）**：突破父级 16px 内边距（`w-screen relative left-1/2 -translate-x-1/2`），实现左右 0 边距全屏平铺全宽显示，同时完全移除渐隐遮罩 (`[mask-image:none]`)，确保小屏毫无视线遮挡。
+- **标题区样式调整（最新）**：
+  - Icon 与标题改为 `items-start` 顶部对齐，Icon 添加 `mt-[4px] sm:mt-[7px]` 做光学对齐补偿，解决移动端 icon 悬浮在文字中央的问题。
+  - 标题后的 `Zero-Margin Pass-Through` Badge 采用响应式布局：移动端（`flex-col`）Badge 换行在标题下方左对齐；PC 端（`sm:flex-row`）Badge 内联在标题右侧，垂直居中对齐。
 
 ---
 
 ## 📱 4. 移动端适配原则 (Mobile Adaptation Principles)
 
-### 4.1 Pay-As-You-Go Tab 2×2 网格与标题描述
-- **2×2 网格布局**：移动端采用 2×2 网格（Pill 胶囊风格按钮），取消原本易被忽略的横向滚屏，使 4 个分类一目了然。
-- **描述单行防护**：桌面端描述文字设为 `sm:whitespace-nowrap` 单行不换行，移动端使用 `whitespace-normal text-center` 自动折行，彻底消除 360px 小屏下的白边溢出问题。
+### 4.1 Pay-As-You-Go 表格平铺布局（最新）
+- **平铺表格架构**：取消原 2×2 Tab 切换布局，改为四个独立区块垂直堆叠平铺展示：
+  1. **Search & Extract APIs** — 搜索调用、全文提取、图片/视频搜索、网页结构化提取
+  2. **Embedding & VL Embedding** — 文本密集向量嵌入、跨模态视觉语言嵌入
+  3. **Applications & Deep Research** — 深度研究智能体（Lite/Standard/Pro）、图文视频生成、Answer & Multimodal Chat
+  4. **Unified LLM Model Gateway** — 统一 LLM 接入、20+ 主流模型、零利润直通计费
+- **区块标题交互**：每个 Section 标题行（Icon + `<h3>` 组合）使用 Tailwind `group` 实现：
+  - **SVG Icon 弹出放大**：`group-hover:scale-125 transition-transform duration-200`
+  - **文字灰→黑金属擦过**：`@keyframes metallicWipe`，`background-position: 100% → 0%`，灰色从左到右擦为黑色，单次 0.55s 完成
+- **表格内 Section 分隔标题**：内部子 Section 标题行（如 Broad Search / Text Embedding 等）取消 `justify-between` 两端对齐，改为 `gap-[16px]` 自动布局，Icon 标签紧贴标题右侧 16px 间距。
 
 ### 4.2 表格横向滚动与容器留白 (Table Overflow Safety)
 - **整体卡片滚动**：最外层包裹 `w-full overflow-x-auto [webkit-overflow-scrolling:touch]`，内部的绿边渐变顶栏与白色内容块 (`Content Container`) 作为统一整体同步滚动，防止露底。
-- **右侧截断防护**：为各 Tab 表格定义充足的最小宽度 (`min-w-[1005px ~ 1240px]`)，且最后一列分配足够列宽与 `20px` 侧边内边距，确保滑动到最右侧时保留视觉余量。
+- **右侧截断防护**：为各表格定义充足的最小宽度 (`min-w-[1005px ~ 1240px]`)，且最后一列分配足够列宽与 `20px` 侧边内边距，确保滑动到最右侧时保留视觉余量。
+
+### 4.3 Section 标题 Hover 交互规范
+- **触发范围**：整个 Icon + 标题文字所在行容器（`group` 类）
+- **Icon 弹出动画**：`scale-125`，持续 200ms ease，以图标中心为 `origin-center` 弹出，`items-start` + `mt-[4px] sm:mt-[7px]` 光学顶部对齐
+- **文字金属擦过动画**：仅作用于 `<h3>` 内的文字 span（`.title-metallic-hover`），不影响同级 Badge 标签；`background-clip: text` + `metallicWipe` 关键帧，灰 `#888` → 黑 `#100F09` 从左向右线性扫过
 
 ---
 
