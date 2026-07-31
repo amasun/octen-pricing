@@ -541,7 +541,7 @@ export default function HeroSection() {
       data-name="hero"
     >
       {/* Dynamic WebGL Dither Shader Background Layer (Silver Grey Grid & Neon Green/Yellow Blobs) */}
-      <div className="absolute -top-[30px] left-0 right-0 h-[calc(100%+30px)] pointer-events-none z-0 overflow-hidden">
+      <div className="absolute inset-0 size-full pointer-events-none z-0 overflow-hidden">
         <DitherBackgroundCanvas fallbackSrc={imgDither1} />
       </div>
 

@@ -124,8 +124,8 @@ export default function FooterSection() {
       }}
       data-name="footer"
     >
-      {/* Bottom background dither image */}
-      <div className="-translate-x-1/2 absolute bottom-[-18.87px] h-[241.343px] left-1/2 opacity-40 w-full max-w-[1966px] pointer-events-none" data-name="dither 1">
+      {/* Bottom background dither image (shifted up by 30px) */}
+      <div className="-translate-x-1/2 absolute bottom-[11.13px] h-[241.343px] left-1/2 opacity-40 w-full max-w-[1966px] pointer-events-none" data-name="dither 1">
         <img alt="" className="absolute inset-0 max-w-none object-cover size-full" src={imgDither1} />
       </div>
 
