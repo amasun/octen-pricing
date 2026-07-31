@@ -226,16 +226,21 @@ export default function FooterSection() {
         </div>
 
         {/* Bottom Section: Copyright, Legal Links, & SOC 2 Badge */}
-        <div className="w-full flex flex-col md:flex-row items-center justify-between gap-[24px] pt-[50px] relative">
-          <p className="font-['DM_Sans',sans-serif] text-[16px] text-white/80 text-center md:text-left">
+        <div className="w-full flex flex-col md:flex-row items-center md:items-end justify-between gap-[24px] pt-[50px] relative">
+          <p className="font-['DM_Sans',sans-serif] text-[16px] text-white/80 text-center md:text-left self-center md:self-end">
             © 2026 APITECH AI PTE. LTD. All rights reserved.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-[24px] sm:gap-[30px] font-['DM_Sans',sans-serif] text-[16px] text-white/80">
-            <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
-            {/* SOC 2 Type 2 Badge */}
+          {/* Right Independent Column: SOC 2 Badge on top, Legal links below */}
+          <div className="flex flex-col items-center md:items-end gap-[16px] shrink-0">
+            {/* SOC 2 Type 2 Badge (Independent Layout) */}
             <Soc2CertifiedBadge />
+
+            {/* Legal Links */}
+            <div className="flex flex-wrap items-center justify-center md:justify-end gap-[24px] sm:gap-[30px] font-['DM_Sans',sans-serif] text-[16px] text-white/80">
+              <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
+            </div>
           </div>
         </div>
       </div>
