@@ -567,14 +567,15 @@ float snoise(vec2 v) {
   return 130.0 * dot(m, g);
 }
 
+vec2 getIntegerCellPx() {
+  float rawPx = max(floor((uL2_Amount + 0.005) * 0.083 * uResolution.y + 0.5), 8.0);
+  return vec2(rawPx, rawPx);
+}
+
 vec2 distortUV_L2(vec2 uv) {
+  vec2 cellPx = getIntegerCellPx();
+  vec2 cellSize = cellPx / uResolution;
   vec2 pos = vec2(0.5, 0.5);
-  float aspectRatio = uResolution.x / max(uResolution.y, 1.0);
-  float gridSize = (uL2_Amount + 0.005) * 0.083;
-  float baseGrid = 1.0 / gridSize;
-  vec2 cellSize = vec2(1.0 / (baseGrid * aspectRatio), 1.0 / baseGrid) * mix(aspectRatio, 1.0 / aspectRatio, 0.5);
-  float skew = (0.5000 - 0.5) * 4.0;
-  cellSize *= vec2(1.0 + max(skew, 0.0), 1.0 + max(-skew, 0.0));
   vec2 offsetUv = uv - pos;
   vec2 cell = floor(offsetUv / cellSize);
   vec2 cellCenter = (cell + 0.5) * cellSize;
@@ -587,31 +588,32 @@ vec2 distortUV_L2(vec2 uv) {
 
 float getGridLineMask(vec2 uv) {
   if (uShowGrid <= 0 || uGridOpacity <= 0.001) return 0.0;
-  vec2 pos = vec2(0.5, 0.5);
-  float aspectRatio = uResolution.x / max(uResolution.y, 1.0);
-  float gridSize = (uL2_Amount + 0.005) * 0.083;
-  float baseGrid = 1.0 / gridSize;
-  vec2 cellSize = vec2(1.0 / (baseGrid * aspectRatio), 1.0 / baseGrid) * mix(aspectRatio, 1.0 / aspectRatio, 0.5);
-  float skew = (0.5000 - 0.5) * 4.0;
-  cellSize *= vec2(1.0 + max(skew, 0.0), 1.0 + max(-skew, 0.0));
+  
+  vec2 cellPx = getIntegerCellPx();
 
-  vec2 offsetUv = uv - pos;
-  vec2 cellUnits = offsetUv / cellSize;
-  vec2 gridCoord = fract(cellUnits);
+  // Pixel-Perfect screen integer coordinates aligned to screen center
+  vec2 screenPx = floor(gl_FragCoord.xy);
+  vec2 centerPx = floor(uResolution * 0.5);
+  vec2 offsetPx = screenPx - centerPx;
 
-  vec2 cellPx = cellSize * uResolution;
-  vec2 distFromBorder = min(gridCoord * cellPx, (1.0 - gridCoord) * cellPx);
-  float minEdgeDist = min(distFromBorder.x, distFromBorder.y);
+  // Compute exact integer pixel distances inside each cell
+  vec2 cellIndex = floor(offsetPx / cellPx);
+  vec2 distInCell = mod(offsetPx, cellPx);
+  distInCell = mix(distInCell, distInCell + cellPx, step(distInCell, vec2(0.0)));
 
-  float halfWidth = max(uGridLineWidth * 0.5, 0.5);
-  float lineMask = 1.0 - smoothstep(halfWidth - 0.5, halfWidth + 0.5, minEdgeDist);
+  vec2 distFromBorderPx = min(distInCell, cellPx - distInCell);
+  float minEdgeDistPx = min(distFromBorderPx.x, distFromBorderPx.y);
+
+  // Razor-sharp 1.0 integer pixel line width
+  float targetLineWidth = max(floor(uGridLineWidth + 0.5), 1.0);
+  float halfWidth = targetLineWidth * 0.5;
+  float lineMask = 1.0 - smoothstep(halfWidth - 0.5, halfWidth + 0.5, minEdgeDistPx);
 
   if (lineMask <= 0.0) return 0.0;
 
-  // 3x3 Major Grid Line Hierarchy: Major lines = 100% opacity, Inner lines = 50% opacity
-  vec2 nearestLineIndex = floor(cellUnits + 0.5);
-  bool isNearVertLine = distFromBorder.x < distFromBorder.y;
-  float lineIdx = isNearVertLine ? nearestLineIndex.x : nearestLineIndex.y;
+  // 3x3 Major Grid Line Hierarchy: Major lines = 100% opacity, Inner lines = 70% opacity
+  bool isNearVertLine = distFromBorderPx.x < distFromBorderPx.y;
+  float lineIdx = isNearVertLine ? cellIndex.x : cellIndex.y;
 
   float mod3 = abs(mod(lineIdx, 3.0));
   bool isMajorGrid = (mod3 < 0.1 || mod3 > 2.9);
