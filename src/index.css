@@ -139,21 +139,48 @@ body, #root, #root > div, [data-name="Octen AI | Infrastructure Pricing"] {
 .svg-node-pulse-d5 { animation-delay: 1.6s; }
 .svg-node-pulse-d6 { animation-delay: 2.0s; }
 
-/* Dark Button Hover Style (Startup, Pro, Scale, Subscribe) */
-.btn-dark-hover:hover,
-a.btn-dark-hover:hover,
-button.btn-dark-hover:hover {
-  border-radius: 16777200px !important;
-  background: radial-gradient(33.01% 73.58% at 50% 100%, rgba(155, 155, 155, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), #100F09 !important;
-  color: #ffffff !important;
+/* Smooth Dark Button Hover Style (Startup, Pro, Scale, Subscribe) */
+.btn-dark-hover {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-/* Light Button Hover Style (Free, Base) */
-.btn-light-hover:hover,
-a.btn-light-hover:hover,
-button.btn-light-hover:hover {
-  border-radius: 16777200px !important;
-  border: 1px solid rgba(26, 26, 25, 0.12) !important;
-  background: radial-gradient(53.6% 100% at 62.2% 100%, rgba(255, 226, 110, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), radial-gradient(44.95% 100% at 41.43% 100%, rgba(202, 255, 207, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), #FFF !important;
-  color: #0F172A !important;
+.btn-dark-hover::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  border-radius: 9999px !important;
+  background: radial-gradient(33.01% 73.58% at 50% 100%, rgba(155, 155, 155, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), #100F09 !important;
+  opacity: 0 !important;
+  transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  z-index: -1 !important;
+}
+
+.btn-dark-hover:hover::before {
+  opacity: 1 !important;
+}
+
+/* Smooth Light Button Hover Style (Free, Base) */
+.btn-light-hover {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.btn-light-hover::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  border-radius: 9999px !important;
+  background: radial-gradient(53.6% 100% at 62.2% 100%, rgba(255, 226, 110, 0.25) 0%, rgba(255, 255, 255, 0.20) 100%), radial-gradient(44.95% 100% at 41.43% 100%, rgba(202, 255, 207, 0.55) 0%, rgba(255, 255, 255, 0.50) 100%), #FFFFFF !important;
+  opacity: 0 !important;
+  transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  z-index: -1 !important;
+}
+
+.btn-light-hover:hover::before {
+  opacity: 1 !important;
 }
