@@ -616,7 +616,7 @@ float getGridLineMask(vec2 uv) {
   float mod3 = abs(mod(lineIdx, 3.0));
   bool isMajorGrid = (mod3 < 0.1 || mod3 > 2.9);
 
-  float opacityScale = isMajorGrid ? 1.0 : 0.5; // Inner grid lines opacity halved
+  float opacityScale = isMajorGrid ? 1.0 : 0.7; // Inner grid lines opacity set to 0.7 (70%)
   return lineMask * opacityScale;
 }
 
