@@ -7,19 +7,19 @@ export default function FaqSection() {
   const faqData = [
     {
       q: "How is Octen billing calculated?",
-      a: "Octen combines a monthly QPS subscription plan (guaranteeing search throughput and priority SLAs) with pay-as-you-go API and token deductions. Charges are deducted in real-time from your account balance."
+      a: "Octen combines real-time Pay-As-You-Go API credit deductions with monthly QPS subscription plans for guaranteed search throughput and priority SLAs."
     },
     {
       q: "How do I claim my $5 free credit?",
-      a: "All new developer accounts automatically receive $5 in free balance upon registration. You can start making search requests immediately without adding a credit card."
+      a: "New developer accounts automatically receive $5 in free balance upon registration—no credit card required to start testing API requests."
     },
     {
       q: "How do Prompt Cache Read and Write discounts work?",
-      a: "For supported models (such as Claude 4.8 / Sonnet 4.6 and Qwen 3.6 Plus), system prompt tokens cached in memory receive up to 90% discount on cache reads, significantly lowering long-context chat and search synthesis costs."
+      a: "Cached system prompt tokens receive up to 90% discount on cache reads for supported models, significantly lowering long-context search synthesis costs."
     },
     {
       q: "Can I upgrade or scale my QPS plan at any time?",
-      a: "Yes! You can instantly upgrade from Base to Startup, Pro, or Scale via the Platform Billing dashboard. Pro-rated adjustments take effect immediately on your QPS quota."
+      a: "Yes! You can upgrade between Base, Startup, Pro, and Scale instantly via Platform Billing. For custom Enterprise limits, ZDR, or dedicated support, contact support@octen.ai."
     }
   ];
 
@@ -30,7 +30,7 @@ export default function FaqSection() {
           Frequently Asked Questions
         </h2>
         <p className="font-['DM_Sans',sans-serif] text-[15px] sm:text-[16px] text-[#64748b]">
-          Everything you need to know about QPS plans, balance top-ups, and model token deductions.
+          Everything you need to know about Pay-As-You-Go rates, QPS plans, and account billing.
         </p>
       </div>
 
