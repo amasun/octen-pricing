@@ -550,16 +550,38 @@ function ClaimBalanceBanner() {
   );
 }
 
+function HeroLightGlow() {
+  return (
+    <div 
+      className="absolute w-[2002px] h-[323px] left-[calc(50%-1001px)] top-[-220px] opacity-60 pointer-events-none z-[5] overflow-visible"
+      data-name="light"
+    >
+      <div className="absolute w-[2001px] h-[323px] left-[0.46px] top-0 pointer-events-none">
+        {/* Ellipse 3696: Deep Green Blur */}
+        <div className="absolute left-[0.02%] right-[0.03%] top-0 bottom-0 bg-[#2D985E] blur-[200px] rounded-full pointer-events-none" />
+        {/* Ellipse 3697: Bright Yellow Accent Blur */}
+        <div className="absolute left-[22.61%] right-[22.62%] top-[22.6%] bottom-[22.6%] bg-[#F4FE38] blur-[100px] rounded-full pointer-events-none" />
+      </div>
+    </div>
+  );
+}
+
 export default function HeroSection() {
   return (
     <div 
-      className="content-stretch flex flex-col items-center pb-[24px] sm:pb-[80px] pt-[60px] sm:pt-[90px] px-4 sm:px-[320px] relative size-full w-full overflow-hidden"
+      className="content-stretch flex flex-col items-center pb-[24px] sm:pb-[80px] pt-[60px] sm:pt-[90px] px-4 sm:px-[320px] relative size-full w-full overflow-hidden isolate"
       data-name="hero"
+      style={{
+        background: "linear-gradient(180deg, rgba(17, 70, 43, 0.75) 0%, rgba(17, 70, 43, 0.25) 50%, rgba(8, 11, 18, 0) 100%), #080B12"
+      }}
     >
       {/* Dynamic WebGL Dither Shader Background Layer (Silver Grey Grid & Neon Green/Yellow Blobs) */}
       <div className="absolute inset-0 size-full pointer-events-none z-0 overflow-hidden">
-        <DitherBackgroundCanvas fallbackSrc={imgDither1} params={{ rippleFrequency: 2.50, edgeColorWidth: 0.98, hollowRadius: 0.26 }} />
+        <DitherBackgroundCanvas fallbackSrc={imgDither1} params={{ rippleFrequency: 2.50, edgeColorWidth: 0.98, hollowRadius: 0.26, transparentDark: 1, gridOpacity: 0.34 }} />
       </div>
+
+      {/* Hero Light Glow Effect Layer (z-5, under Navbar and over Shader) */}
+      <HeroLightGlow />
 
       {/* Hero Interactive Content Layer */}
       <div className="relative z-10 w-full flex flex-col items-center">

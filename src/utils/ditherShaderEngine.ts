@@ -765,6 +765,9 @@ void main() {
   float gridMask = getGridLineMask(uv);
   if (gridMask > 0.0) {
     finalColor = mix(finalColor, uGridColor, gridMask * clamp(uGridOpacity, 0.0, 1.0));
+    if (uTransparentDark > 0) {
+      pixelAlpha = max(pixelAlpha, gridMask * clamp(uGridOpacity, 0.0, 1.0));
+    }
   }
 
   fragColor = vec4(finalColor, pixelAlpha);
@@ -1059,7 +1062,11 @@ export class DitherShaderEngine {
     gl.bindFramebuffer(gl.FRAMEBUFFER, null);
     gl.viewport(0, 0, canvas.width, canvas.height);
 
-    gl.clearColor(0.0, 0.0, 0.0, 1.0);
+    if (p.transparentDark) {
+      gl.clearColor(0.0, 0.0, 0.0, 0.0);
+    } else {
+      gl.clearColor(0.0, 0.0, 0.0, 1.0);
+    }
     gl.clear(gl.COLOR_BUFFER_BIT);
 
     gl.useProgram(this.program);
