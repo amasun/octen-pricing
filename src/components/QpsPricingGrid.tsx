@@ -110,13 +110,13 @@ function PlanCardItem({
                 <span className="font-['DM_Sans',sans-serif] font-medium text-[28px] sm:text-[40px] leading-[32px] sm:leading-[44px] text-[#100F09]">{price}</span>
               </div>
             )}
-            <div className="flex flex-col justify-end h-full pt-[4px] sm:pt-[10px] pb-[2px] sm:pb-[4px] flex-1">
+            <div className="flex flex-row flex-wrap sm:flex-nowrap items-baseline sm:items-end justify-start gap-x-[6px] gap-y-0 h-full pt-[4px] sm:pt-[10px] pb-[2px] sm:pb-[4px] flex-1">
               {originalPrice && (
-                <span className="font-['DM_Sans',sans-serif] font-normal text-[12px] sm:text-[14px] leading-[13px] sm:leading-[15px] text-[#7C7C79] line-through">
+                <span className="font-['DM_Sans',sans-serif] font-normal text-[12px] sm:text-[14px] leading-[13px] sm:leading-[15px] text-[#7C7C79] line-through whitespace-nowrap">
                   {originalPrice}
                 </span>
               )}
-              <span className="font-['DM_Sans',sans-serif] font-normal text-[12px] sm:text-[14px] leading-[13px] sm:leading-[15px] text-[#7C7C79]">
+              <span className="font-['DM_Sans',sans-serif] font-normal text-[12px] sm:text-[14px] leading-[13px] sm:leading-[15px] text-[#7C7C79] whitespace-nowrap">
                 {period}
               </span>
             </div>
