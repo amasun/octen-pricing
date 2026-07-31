@@ -19,7 +19,11 @@ export default function FaqSection() {
     },
     {
       q: "Can I upgrade or scale my QPS plan at any time?",
-      a: "Yes! You can upgrade between Base, Startup, Pro, and Scale instantly via Platform Billing. For custom Enterprise limits, ZDR, or dedicated support, contact support@octen.ai."
+      a: "Yes! You can instantly upgrade from Base to Startup, Pro, or Scale via the Platform Billing dashboard. Pro-rated adjustments take effect immediately on your QPS quota."
+    },
+    {
+      q: "How do I request an Enterprise plan with ZDR or custom SLAs?",
+      a: "For custom QPS capacity (500+ QPS), Zero Data Retention (ZDR), or dedicated Slack channel support, please contact support@octen.ai for a tailored Enterprise contract."
     }
   ];
 
