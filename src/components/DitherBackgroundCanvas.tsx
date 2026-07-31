@@ -46,7 +46,7 @@ export default function DitherBackgroundCanvas({
         darkColor: '#000000',
         primaryColor: '#38ef7d',  // 核心主体第一色彩 (霓虹绿)
         secondaryColor: '#d4f952',// 边缘羽化第二色彩 (黄绿)
-        edgeColorWidth: 1.00,    // 边缘第二色彩宽度占比 (1.00)
+        edgeColorWidth: 0.98,    // 边缘第二色彩宽度占比 (0.98 Edge Color Width)
         whiteColor: '#ffffff',
         showGrid: 1,
         gridOpacity: 0.24,       // 网格透明度 0.24

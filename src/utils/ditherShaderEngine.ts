@@ -809,7 +809,7 @@ export class DitherShaderEngine {
       darkColor: '#000000',
       primaryColor: '#38ef7d',   // Neon Green
       secondaryColor: '#d4f952', // Yellow Green
-      edgeColorWidth: 1.00,
+      edgeColorWidth: 0.98,      // Edge Color Width = 0.98
       whiteColor: '#ffffff',
       showGrid: 1,
       gridOpacity: 0.24,
