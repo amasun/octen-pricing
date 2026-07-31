@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Fraunces', serif;
+  --font-mono: 'JetBrains Mono', 'DM Mono', monospace;
+}
+
+:root {
+  --design-width: 1440;
+  --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Fraunces', serif;
+}
+
+html {
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: var(--font-sans);
+  letter-spacing: 0px;
+}
+
+/* Enforce 0px letter spacing globally */
+*, *::before, *::after {
+  letter-spacing: 0px !important;
+}
+
+body, #root, #root > div, [data-name="Octen AI | Infrastructure Pricing"] {
+  height: auto !important;
+  min-height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  overflow-x: visible !important;
+  overflow-y: visible !important;
+}
+
+/* Map Figma-exported font class names to valid loaded Google Fonts */
+[class*="Fraunces"] {
+  font-family: 'Fraunces', serif !important;
+}
+
+[class*="DM_Sans"] {
+  font-family: 'DM Sans', sans-serif !important;
+}
+
+[class*="JetBrains_Mono"] {
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+[class*="DM_Mono"] {
+  font-family: 'DM Mono', monospace !important;
+}
+
+/* Mix Blend Mode Custom Utilities */
+.mix-blend-multiply {
+  mix-blend-mode: multiply !important;
+}
+
+/* SVG Flow Animation for Card 2 */
+@keyframes svgTrailFlowLeft {
+  0% {
+    stroke-dashoffset: 144px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes svgTrailFlowRight {
+  0% {
+    stroke-dashoffset: 144px;
+  }
+  100% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes svgGlowPulse {
+  0%, 100% {
+    opacity: 0.5;
+    filter: drop-shadow(0 0 2px rgba(112, 254, 126, 0.4));
+  }
+  50% {
+    opacity: 1.0;
+    filter: drop-shadow(0 0 8px rgba(112, 254, 126, 0.9));
+  }
+}
+
+.svg-flow-left {
+  animation: svgTrailFlowLeft 3.5s linear infinite;
+}
+
+.svg-flow-right {
+  animation: svgTrailFlowRight 3.5s linear infinite;
+}
+
+.svg-flow-fast-left {
+  animation: svgTrailFlowLeft 1.2s linear infinite;
+}
+
+.svg-flow-fast-right {
+  animation: svgTrailFlowRight 1.2s linear infinite;
+}
+
+.svg-pulse-glow {
+  animation: svgGlowPulse 2.5s ease-in-out infinite;
+}
+
+.svg-dot-glow {
+  filter: drop-shadow(0 0 3px #70FE7E) drop-shadow(0 0 7px rgba(112, 254, 126, 0.55));
+}
+
+.svg-dot-glow-bright {
+  filter: drop-shadow(0 0 5px #9CFFA6) drop-shadow(0 0 10px rgba(156, 255, 166, 0.8));
+}
+
+/* SVG Icon Node Pulse Animation */
+@keyframes svgNodePulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+.svg-node-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: svgNodePulse 2.4s ease-in-out infinite;
+}
+.svg-node-pulse-d1 { animation-delay: 0s; }
+.svg-node-pulse-d2 { animation-delay: 0.4s; }
+.svg-node-pulse-d3 { animation-delay: 0.8s; }
+.svg-node-pulse-d4 { animation-delay: 1.2s; }
+.svg-node-pulse-d5 { animation-delay: 1.6s; }
+.svg-node-pulse-d6 { animation-delay: 2.0s; }
+
+/* Dark Button Hover Style (Startup, Pro, Scale, Subscribe) */
+.btn-dark-hover:hover,
+a.btn-dark-hover:hover,
+button.btn-dark-hover:hover {
+  border-radius: 16777200px !important;
+  background: radial-gradient(33.01% 73.58% at 50% 100%, rgba(155, 155, 155, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), #100F09 !important;
+  color: #ffffff !important;
+}
+
+/* Light Button Hover Style (Free, Base) */
+.btn-light-hover:hover,
+a.btn-light-hover:hover,
+button.btn-light-hover:hover {
+  border-radius: 16777200px !important;
+  border: 1px solid rgba(26, 26, 25, 0.12) !important;
+  background: radial-gradient(53.6% 100% at 62.2% 100%, rgba(255, 226, 110, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), radial-gradient(44.95% 100% at 41.43% 100%, rgba(202, 255, 207, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), #FFF !important;
+  color: #0F172A !important;
+}
