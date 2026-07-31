@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Type, Image as LucideImageIcon, Video as LucideVideoIcon } from "lucide-react";
 import imgBackgroundRectangle from "../../imports/Background Rectangle.png";
 
@@ -322,56 +322,8 @@ export default function ApiExplorer() {
           </p>
         </div>
 
-        {/* Single-Row Seamless Infinite Marquee Ticker */}
-        <div className="w-full overflow-hidden relative py-2 [mask-image:linear-gradient(to_right,transparent,black_32px,black_calc(100%-32px),transparent)]">
-          <div className="animate-model-marquee gap-4">
-            {[
-              { name: "Anthropic", models: "Claude 3.5 Sonnet / Opus 4.8", inPrice: "From $1.00 / 1M", outPrice: "From $5.00 / 1M" },
-              { name: "OpenAI", models: "GPT-4o / GPT-5.5 / DALL-E", inPrice: "From $2.50 / 1M", outPrice: "From $15.00 / 1M" },
-              { name: "Google Gemini", models: "Gemini 3.5 Flash / 3.1 Pro", inPrice: "From $0.25 / 1M", outPrice: "From $1.50 / 1M" },
-              { name: "DeepSeek", models: "DeepSeek-V4 / R1 Series", inPrice: "From $0.14 / 1M", outPrice: "From $0.28 / 1M" },
-              { name: "Moonshot Kimi", models: "Kimi k2.5 / Kimi k2.6", inPrice: "From $0.60 / 1M", outPrice: "From $3.00 / 1M" },
-              { name: "Qwen", models: "Qwen 3.6 Plus / Max", inPrice: "From $0.50 / 1M", outPrice: "From $3.00 / 1M" },
-              { name: "MiniMax", models: "MiniMax m2.5", inPrice: "From $0.30 / 1M", outPrice: "From $1.20 / 1M" },
-              { name: "Anthropic", models: "Claude 3.5 Sonnet / Opus 4.8", inPrice: "From $1.00 / 1M", outPrice: "From $5.00 / 1M" },
-              { name: "OpenAI", models: "GPT-4o / GPT-5.5 / DALL-E", inPrice: "From $2.50 / 1M", outPrice: "From $15.00 / 1M" },
-              { name: "Google Gemini", models: "Gemini 3.5 Flash / 3.1 Pro", inPrice: "From $0.25 / 1M", outPrice: "From $1.50 / 1M" },
-              { name: "DeepSeek", models: "DeepSeek-V4 / R1 Series", inPrice: "From $0.14 / 1M", outPrice: "From $0.28 / 1M" },
-              { name: "Moonshot Kimi", models: "Kimi k2.5 / Kimi k2.6", inPrice: "From $0.60 / 1M", outPrice: "From $3.00 / 1M" },
-              { name: "Qwen", models: "Qwen 3.6 Plus / Max", inPrice: "From $0.50 / 1M", outPrice: "From $3.00 / 1M" },
-              { name: "MiniMax", models: "MiniMax m2.5", inPrice: "From $0.30 / 1M", outPrice: "From $1.20 / 1M" },
-            ].map((brand, idx) => (
-              <div 
-                key={idx}
-                className="w-[285px] shrink-0 bg-white hover:bg-[#f4f4f5] rounded-[16px] border border-[rgba(26,26,25,0.12)] transition-colors duration-200 p-5 flex flex-col justify-between box-border"
-              >
-                <div className="flex flex-col mb-3">
-                  <span className="font-['Fraunces',serif] font-bold text-[18px] text-[#100F09]">
-                    {brand.name}
-                  </span>
-                  <span className="font-['DM_Sans',sans-serif] text-[13px] text-[#7C7C79] mt-0.5 truncate">
-                    {brand.models}
-                  </span>
-                </div>
-                <div className="pt-3 border-t border-[rgba(26,26,25,0.12)] flex flex-col gap-1.5">
-                  <div className="flex items-center justify-between">
-                    <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#7C7C79]">Input Rate</span>
-                    <span className="font-['JetBrains_Mono',monospace] font-normal text-[14px] leading-[23px] text-[#131212]">
-                      {brand.inPrice}
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#7C7C79]">Output Rate</span>
-                    <span className="font-['JetBrains_Mono',monospace] font-normal text-[14px] leading-[23px] text-[#131212]">
-                      {brand.outPrice}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
+        {/* Single-Row Interactive Infinite Marquee Ticker with Touch/Mouse Drag Support */}
+        <ModelGatewayMarquee />
       </div>
 
       {/* Footer Doc Link */}
@@ -388,6 +340,152 @@ export default function ApiExplorer() {
           </a>
           .
         </p>
+      </div>
+    </div>
+  );
+}
+
+function ModelGatewayMarquee() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const startScrollLeft = useRef(0);
+  const [isGrabbed, setIsGrabbed] = useState(false);
+  const isHovered = useRef(false);
+
+  const brands = [
+    { name: "Anthropic", models: "Claude 3.5 Sonnet / Opus 4.8", inPrice: "From $1.00 / 1M", outPrice: "From $5.00 / 1M" },
+    { name: "OpenAI", models: "GPT-4o / GPT-5.5 / DALL-E", inPrice: "From $2.50 / 1M", outPrice: "From $15.00 / 1M" },
+    { name: "Google Gemini", models: "Gemini 3.5 Flash / 3.1 Pro", inPrice: "From $0.25 / 1M", outPrice: "From $1.50 / 1M" },
+    { name: "DeepSeek", models: "DeepSeek-V4 / R1 Series", inPrice: "From $0.14 / 1M", outPrice: "From $0.28 / 1M" },
+    { name: "Moonshot Kimi", models: "Kimi k2.5 / Kimi k2.6", inPrice: "From $0.60 / 1M", outPrice: "From $3.00 / 1M" },
+    { name: "Qwen", models: "Qwen 3.6 Plus / Max", inPrice: "From $0.50 / 1M", outPrice: "From $3.00 / 1M" },
+    { name: "MiniMax", models: "MiniMax m2.5", inPrice: "From $0.30 / 1M", outPrice: "From $1.20 / 1M" },
+  ];
+
+  // Quadruple brands array for seamless infinite drag & wrap
+  const displayBrands = [...brands, ...brands, ...brands, ...brands];
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    let animId: number;
+    const speed = 0.45; // Slower elegant scrolling speed
+
+    const step = () => {
+      if (!isDragging.current && !isHovered.current && el) {
+        el.scrollLeft += speed;
+        const halfWidth = el.scrollWidth / 2;
+        if (el.scrollLeft >= halfWidth) {
+          el.scrollLeft -= halfWidth;
+        }
+      }
+      animId = requestAnimationFrame(step);
+    };
+
+    animId = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(animId);
+  }, []);
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!containerRef.current) return;
+    isDragging.current = true;
+    setIsGrabbed(true);
+    startX.current = e.pageX - containerRef.current.offsetLeft;
+    startScrollLeft.current = containerRef.current.scrollLeft;
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging.current || !containerRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - containerRef.current.offsetLeft;
+    const walk = (x - startX.current) * 1.2;
+    let newScrollLeft = startScrollLeft.current - walk;
+    const halfWidth = containerRef.current.scrollWidth / 2;
+
+    if (newScrollLeft >= halfWidth) newScrollLeft -= halfWidth;
+    if (newScrollLeft <= 0) newScrollLeft += halfWidth;
+
+    containerRef.current.scrollLeft = newScrollLeft;
+  };
+
+  const handleMouseUpOrLeave = () => {
+    isDragging.current = false;
+    setIsGrabbed(false);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (!containerRef.current) return;
+    isDragging.current = true;
+    startX.current = e.touches[0].pageX - containerRef.current.offsetLeft;
+    startScrollLeft.current = containerRef.current.scrollLeft;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isDragging.current || !containerRef.current) return;
+    const x = e.touches[0].pageX - containerRef.current.offsetLeft;
+    const walk = (x - startX.current) * 1.2;
+    let newScrollLeft = startScrollLeft.current - walk;
+    const halfWidth = containerRef.current.scrollWidth / 2;
+
+    if (newScrollLeft >= halfWidth) newScrollLeft -= halfWidth;
+    if (newScrollLeft <= 0) newScrollLeft += halfWidth;
+
+    containerRef.current.scrollLeft = newScrollLeft;
+  };
+
+  return (
+    <div
+      ref={containerRef}
+      onMouseDown={handleMouseDown}
+      onMouseMove={handleMouseMove}
+      onMouseUp={handleMouseUpOrLeave}
+      onMouseLeave={() => {
+        handleMouseUpOrLeave();
+        isHovered.current = false;
+      }}
+      onMouseEnter={() => {
+        isHovered.current = true;
+      }}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleMouseUpOrLeave}
+      className={`w-screen relative left-1/2 -translate-x-1/2 sm:w-[calc(100vw-40px)] overflow-x-auto no-scrollbar py-2 select-none [mask-image:none] sm:[mask-image:linear-gradient(to_right,transparent_0%,black_68px,black_calc(100%-68px),transparent_100%)] ${
+        isGrabbed ? "cursor-grabbing" : "cursor-grab"
+      }`}
+      style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+    >
+      <div className="flex flex-row gap-4 w-max">
+        {displayBrands.map((brand, idx) => (
+          <div
+            key={idx}
+            className="w-[285px] shrink-0 bg-white hover:bg-[#f4f4f5] rounded-[16px] border border-[rgba(26,26,25,0.12)] transition-colors duration-200 p-5 flex flex-col justify-between box-border pointer-events-auto"
+          >
+            <div className="flex flex-col mb-3">
+              <span className="font-['Fraunces',serif] font-bold text-[18px] text-[#100F09]">
+                {brand.name}
+              </span>
+              <span className="font-['DM_Sans',sans-serif] text-[13px] text-[#7C7C79] mt-0.5 truncate">
+                {brand.models}
+              </span>
+            </div>
+            <div className="pt-3 border-t border-[rgba(26,26,25,0.12)] flex flex-col gap-1.5">
+              <div className="flex items-center justify-between">
+                <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#7C7C79]">Input Rate</span>
+                <span className="font-['JetBrains_Mono',monospace] font-normal text-[14px] leading-[23px] text-[#131212]">
+                  {brand.inPrice}
+                </span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#7C7C79]">Output Rate</span>
+                <span className="font-['JetBrains_Mono',monospace] font-normal text-[14px] leading-[23px] text-[#131212]">
+                  {brand.outPrice}
+                </span>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
