@@ -596,14 +596,28 @@ float getGridLineMask(vec2 uv) {
   cellSize *= vec2(1.0 + max(skew, 0.0), 1.0 + max(-skew, 0.0));
 
   vec2 offsetUv = uv - pos;
-  vec2 gridCoord = fract(offsetUv / cellSize);
+  vec2 cellUnits = offsetUv / cellSize;
+  vec2 gridCoord = fract(cellUnits);
 
   vec2 cellPx = cellSize * uResolution;
   vec2 distFromBorder = min(gridCoord * cellPx, (1.0 - gridCoord) * cellPx);
   float minEdgeDist = min(distFromBorder.x, distFromBorder.y);
 
   float halfWidth = max(uGridLineWidth * 0.5, 0.5);
-  return 1.0 - smoothstep(halfWidth - 0.5, halfWidth + 0.5, minEdgeDist);
+  float lineMask = 1.0 - smoothstep(halfWidth - 0.5, halfWidth + 0.5, minEdgeDist);
+
+  if (lineMask <= 0.0) return 0.0;
+
+  // 3x3 Major Grid Line Hierarchy: Major lines = 100% opacity, Inner lines = 50% opacity
+  vec2 nearestLineIndex = floor(cellUnits + 0.5);
+  bool isNearVertLine = distFromBorder.x < distFromBorder.y;
+  float lineIdx = isNearVertLine ? nearestLineIndex.x : nearestLineIndex.y;
+
+  float mod3 = abs(mod(lineIdx, 3.0));
+  bool isMajorGrid = (mod3 < 0.1 || mod3 > 2.9);
+
+  float opacityScale = isMajorGrid ? 1.0 : 0.5; // Inner grid lines opacity halved
+  return lineMask * opacityScale;
 }
 
 float getBayerFromCoordLevelScaled_L3(vec2 pixelpos, float scale) {
