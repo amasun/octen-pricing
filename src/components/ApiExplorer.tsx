@@ -1,13 +1,5 @@
-import { useState, useRef, useEffect } from "react";
 import { Type, Image as LucideImageIcon, Video as LucideVideoIcon } from "lucide-react";
 import imgBackgroundRectangle from "../../imports/Background Rectangle.png";
-import svgAnthropic from "../../imports/anthropic.svg";
-import svgOpenAI from "../../imports/open-a-i.svg";
-import svgGemini from "../../imports/gemini.svg";
-import svgDeepSeek from "../../imports/deepseek.svg";
-import svgMoonshot from "../../imports/moonshot.svg";
-import svgQwen from "../../imports/qwen.svg";
-import imgMiniMax from "../../imports/minimax.png";
 
 // Content-type pill icons for section headers — per Figma spec
 const PILL_CLS = "inline-flex items-center gap-[4px] px-[6px] py-[4px] h-[22px] rounded-[4px] bg-white border border-[#C5CCD2]";
@@ -326,7 +318,7 @@ export default function ApiExplorer() {
                   <span className="flex items-center gap-[4px] shrink-0"><TextIcon /><ImageIcon /><VideoIcon /></span>
                 </div>
                 {[
-                  { tier: "Answer & Multimodal Chat", unit: "Search + Token Usage", rate: "Search + LLM rates", desc: "Standard Search API fees + selected LLM gateway token usage fees" },
+                  { tier: "Answer & Multimodal Chat", unit: "Search + Token Usage", rate: "Search + Model rates", desc: "Standard Search API fees + selected model gateway token usage fees" },
                 ].map((row, i) => (
                   <div key={i} className="flex items-center px-[20px] py-[12px] border-b border-[#e8e8e8] last:border-b-0 hover:bg-[#f4f4f5] transition-colors duration-150 ease-in-out w-full">
                     <div className="w-[280px] shrink-0 whitespace-nowrap font-bold text-[#515151] font-['DM_Sans',sans-serif] text-[14px]">{row.tier}</div>
@@ -338,216 +330,23 @@ export default function ApiExplorer() {
               </div>
             </div>
           </div>
+
+          {/* Note regarding LLM generation & Gateway pricing */}
+          <div className="w-full pt-1 text-right">
+            <p className="font-['DM_Sans',sans-serif] text-[14px] sm:text-[15px] text-[#515151] text-right">
+              Access 20+ leading AI models through a unified gateway, click to view{" "}
+              <a
+                href="https://docs.octen.ai/overview/pricing#model-gateway"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#039855] font-bold underline hover:text-[#027a44] transition-colors cursor-pointer"
+              >
+                the price of Model Gateway
+              </a>
+            </p>
+          </div>
         </div>
 
-      </div>
-
-      {/* Model Gateway Standalone Section (Arranged below Pay-As-You-Go Categories) */}
-      <div className="w-full mt-10 sm:mt-14 flex flex-col gap-6" id="model-gateway">
-        {/* Model Gateway Title & Description Header */}
-        <div className="flex flex-col gap-1 items-start">
-          <div className="flex flex-row items-start gap-[12px] group cursor-default">
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0 w-[24px] h-[24px] sm:w-[28px] sm:h-[28px] mt-[4px] sm:mt-[7px] transition-transform duration-200 group-hover:scale-125 origin-center">
-              <path d="M24.5 14V9.32171C24.4993 8.91462 24.391 8.51495 24.1861 8.16318C23.9813 7.81141 23.6871 7.52002 23.3333 7.31854L15.1667 2.64254C14.8112 2.44 14.4091 2.3335 14 2.3335C13.5909 2.3335 13.1888 2.44 12.8333 2.64254L4.66667 7.31854C3.9445 7.7327 3.5 8.49687 3.5 9.32287V18.6772C3.5 19.5044 3.9445 20.2674 4.66667 20.6804L12.8333 25.3564C13.5567 25.7694 14.4433 25.7694 15.1667 25.3564M14 25.6667V14M14 14L24.185 8.12004M14 14L3.815 8.12004" stroke="#100F09" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M21.5714 17.2109C23.8401 16.9073 25.9254 18.4999 26.2296 20.7686C26.3578 21.7255 26.1466 22.6491 25.6915 23.4209L26.8419 24.9131C27.2628 25.4598 27.1608 26.2447 26.6144 26.666C26.0676 27.0874 25.2819 26.9853 24.8605 26.4385L23.8263 25.0967C23.4681 25.2581 23.0813 25.3719 22.672 25.4268C20.4032 25.7308 18.3171 24.1389 18.0128 21.8701C17.7088 19.6011 19.3024 17.515 21.5714 17.2109ZM21.9034 19.6885C21.0029 19.8091 20.3697 20.6375 20.4904 21.5381C20.6113 22.4384 21.4396 23.0698 22.34 22.9492C23.2402 22.8284 23.8715 22.0009 23.7511 21.1006C23.6303 20.2005 22.8036 19.5683 21.9034 19.6885Z" fill="#100F09"/>
-            </svg>
-            <div className="flex flex-col sm:flex-row sm:items-center gap-[6px] sm:gap-[12px]">
-              <h3 className="font-['Fraunces',serif] font-bold text-[22px] sm:text-[28px] leading-[32px] sm:leading-[42px] text-[#100F09]">
-                <span className="title-metallic-hover">Unified LLM Model Gateway</span>
-              </h3>
-              <span className="font-['DM_Sans',sans-serif] font-semibold text-[12px] px-2.5 py-0.5 rounded-full bg-[#70FE7E] text-[#100F09] self-start sm:self-auto sm:translate-y-[2px] shrink-0">
-                Zero-Margin Pass-Through
-              </span>
-            </div>
-          </div>
-          <p className="font-['DM_Sans',sans-serif] text-[14px] sm:text-[15px] text-[#5d605b] leading-relaxed">
-            For scenarios requiring LLM generation, access 20+ leading AI models through a unified gateway with zero-margin pass-through billing.
-          </p>
-        </div>
-
-        {/* Single-Row Interactive Infinite Marquee Ticker with Touch/Mouse Drag Support */}
-        <ModelGatewayMarquee />
-      </div>
-
-      {/* Footer Doc Link */}
-      <div className="content-stretch flex flex-col items-center justify-center relative shrink-0 w-full pt-8">
-        <p className="font-['DM_Sans',sans-serif] text-[14px] sm:text-[16px] text-[#515151] text-center">
-          For more information, visit our{" "}
-          <a
-            href="https://docs.octen.ai/overview/pricing#api-pricing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#039855] font-bold underline hover:text-[#027a44] transition-colors cursor-pointer"
-          >
-            API Pricing Documentation
-          </a>
-          .
-        </p>
-      </div>
-    </div>
-  );
-}
-
-function ModelGatewayMarquee() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const isDragging = useRef(false);
-  const startX = useRef(0);
-  const startScrollLeft = useRef(0);
-  const [isGrabbed, setIsGrabbed] = useState(false);
-  const isHovered = useRef(false);
-
-  const brands = [
-    { name: "Anthropic", models: "Claude 3.5 Sonnet / Opus 4.8", inPrice: "From $1.00 / 1M", outPrice: "From $5.00 / 1M" },
-    { name: "OpenAI", models: "GPT-4o / GPT-5.5 / DALL-E", inPrice: "From $2.50 / 1M", outPrice: "From $15.00 / 1M" },
-    { name: "Google Gemini", models: "Gemini 3.5 Flash / 3.1 Pro", inPrice: "From $0.25 / 1M", outPrice: "From $1.50 / 1M" },
-    { name: "DeepSeek", models: "DeepSeek-V4 / R1 Series", inPrice: "From $0.14 / 1M", outPrice: "From $0.28 / 1M" },
-    { name: "Moonshot Kimi", models: "Kimi k2.5 / Kimi k2.6", inPrice: "From $0.60 / 1M", outPrice: "From $3.00 / 1M" },
-    { name: "Qwen", models: "Qwen 3.6 Plus / Max", inPrice: "From $0.50 / 1M", outPrice: "From $3.00 / 1M" },
-    { name: "MiniMax", models: "MiniMax m2.5", inPrice: "From $0.30 / 1M", outPrice: "From $1.20 / 1M" },
-  ];
-
-  // Quadruple brands array for seamless infinite drag & wrap
-  const displayBrands = [...brands, ...brands, ...brands, ...brands];
-
-  useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
-
-    let animId: number;
-    const speed = 0.45; // Slower elegant scrolling speed
-
-    const step = () => {
-      if (!isDragging.current && !isHovered.current && el) {
-        el.scrollLeft += speed;
-        const halfWidth = el.scrollWidth / 2;
-        if (el.scrollLeft >= halfWidth) {
-          el.scrollLeft -= halfWidth;
-        }
-      }
-      animId = requestAnimationFrame(step);
-    };
-
-    animId = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(animId);
-  }, []);
-
-  const handleMouseDown = (e: React.MouseEvent) => {
-    if (!containerRef.current) return;
-    isDragging.current = true;
-    setIsGrabbed(true);
-    startX.current = e.pageX - containerRef.current.offsetLeft;
-    startScrollLeft.current = containerRef.current.scrollLeft;
-  };
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging.current || !containerRef.current) return;
-    e.preventDefault();
-    const x = e.pageX - containerRef.current.offsetLeft;
-    const walk = (x - startX.current) * 1.2;
-    let newScrollLeft = startScrollLeft.current - walk;
-    const halfWidth = containerRef.current.scrollWidth / 2;
-
-    if (newScrollLeft >= halfWidth) newScrollLeft -= halfWidth;
-    if (newScrollLeft <= 0) newScrollLeft += halfWidth;
-
-    containerRef.current.scrollLeft = newScrollLeft;
-  };
-
-  const handleMouseUpOrLeave = () => {
-    isDragging.current = false;
-    setIsGrabbed(false);
-  };
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    if (!containerRef.current) return;
-    isDragging.current = true;
-    startX.current = e.touches[0].pageX - containerRef.current.offsetLeft;
-    startScrollLeft.current = containerRef.current.scrollLeft;
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (!isDragging.current || !containerRef.current) return;
-    const x = e.touches[0].pageX - containerRef.current.offsetLeft;
-    const walk = (x - startX.current) * 1.2;
-    let newScrollLeft = startScrollLeft.current - walk;
-    const halfWidth = containerRef.current.scrollWidth / 2;
-
-    if (newScrollLeft >= halfWidth) newScrollLeft -= halfWidth;
-    if (newScrollLeft <= 0) newScrollLeft += halfWidth;
-
-    containerRef.current.scrollLeft = newScrollLeft;
-  };
-
-  const brandLogos: Record<string, string> = {
-    "Anthropic": svgAnthropic,
-    "OpenAI": svgOpenAI,
-    "Google Gemini": svgGemini,
-    "DeepSeek": svgDeepSeek,
-    "Moonshot Kimi": svgMoonshot,
-    "Qwen": svgQwen,
-    "MiniMax": imgMiniMax,
-  };
-
-  return (
-    <div
-      ref={containerRef}
-      onMouseDown={handleMouseDown}
-      onMouseMove={handleMouseMove}
-      onMouseUp={handleMouseUpOrLeave}
-      onMouseLeave={() => {
-        handleMouseUpOrLeave();
-        isHovered.current = false;
-      }}
-      onMouseEnter={() => {
-        isHovered.current = true;
-      }}
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleMouseUpOrLeave}
-      className={`w-screen relative left-1/2 -translate-x-1/2 sm:w-[calc(100vw-40px)] overflow-x-auto no-scrollbar py-2 select-none [mask-image:none] sm:[mask-image:linear-gradient(to_right,transparent_0%,black_68px,black_calc(100%-68px),transparent_100%)] ${
-        isGrabbed ? "cursor-grabbing" : "cursor-grab"
-      }`}
-      style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-    >
-      <div className="flex flex-row gap-4 w-max">
-        {displayBrands.map((brand, idx) => (
-          <div
-            key={idx}
-            className="w-[285px] shrink-0 bg-white hover:bg-[#f4f4f5] rounded-[16px] border border-[rgba(26,26,25,0.12)] transition-colors duration-200 p-5 flex flex-col justify-between box-border pointer-events-auto"
-          >
-            <div className="flex items-start justify-between mb-3 gap-2">
-              <div className="flex flex-col min-w-0">
-                <span className="font-['Fraunces',serif] font-bold text-[18px] text-[#100F09] truncate">
-                  {brand.name}
-                </span>
-                <span className="font-['DM_Sans',sans-serif] text-[13px] text-[#7C7C79] mt-0.5 truncate">
-                  {brand.models}
-                </span>
-              </div>
-              <div className="shrink-0 mt-0.5 flex items-center justify-center">
-                <img
-                  src={brandLogos[brand.name]}
-                  alt={brand.name}
-                  className="w-[20px] h-[20px] object-contain shrink-0"
-                />
-              </div>
-            </div>
-            <div className="pt-3 border-t border-[rgba(26,26,25,0.12)] flex flex-col gap-1.5">
-              <div className="flex items-center justify-between">
-                <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#7C7C79]">Input Rate</span>
-                <span className="font-['JetBrains_Mono',monospace] font-normal text-[14px] leading-[23px] text-[#131212]">
-                  {brand.inPrice}
-                </span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#7C7C79]">Output Rate</span>
-                <span className="font-['JetBrains_Mono',monospace] font-normal text-[14px] leading-[23px] text-[#131212]">
-                  {brand.outPrice}
-                </span>
-              </div>
-            </div>
-          </div>
-        ))}
       </div>
     </div>
   );

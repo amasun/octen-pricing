@@ -55,7 +55,9 @@
 3. **Pay-As-You-Go 2×2 网格与表格截断修复**
    - **Tab 导航**：移动端改为 2×2 Pill 网格布局，取消横向滚屏。
    - **防折行**：所有关键单元格（模型 ID、价格、QPS、缓存读写率）显式设置 `shrink-0 whitespace-nowrap`。
-   - **防漏底与截断**：最外层包裹 `overflow-x-auto` 实现统一横向滚动，`Content Container` 采用 `w-full min-w-full`，最后一列分配充足列宽与 `20px` 侧边内边距，滚动到最右侧时文字完全显示且有舒适留白。
+4. **Unified LLM Model Gateway 模块移除与引导跳转**
+   - 移除了独立的 `Unified LLM Model Gateway` 模块与跑马灯。
+   - 在 `Applications & Deep Research` 表格下方新增了带跳转链接的文本提示：“For Applications requiring LLM generation, access 20+ leading AI models through a unified gateway, [click to see the model gateway price](https://docs.octen.ai/overview/pricing#model-gateway)”。
 
 ---
 
