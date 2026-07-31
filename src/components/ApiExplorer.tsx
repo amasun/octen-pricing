@@ -395,8 +395,23 @@ export default function ApiExplorer() {
                   <span className="flex items-center gap-[4px] shrink-0"><ImageIcon /><VideoIcon /></span>
                 </div>
                 {[
-                  { tier: "Image Generation", unit: "Per Output Image", rate: "$0.02", desc: "Search-grounded image generation with source attribution" },
-                  { tier: "Video Generation", unit: "Per Output Video", rate: "$0.25", desc: "Search-grounded video generation with source attribution" },
+                  { tier: "Image Generation", unit: "Per Output Image", rate: "$0.25", desc: "Search-backed image generation grounded in real-time web context" },
+                  { tier: "Video Generation", unit: "Per Output Video", rate: "$1.00", desc: "Search-backed video generation grounded in real-time web context" },
+                ].map((row, i) => (
+                  <div key={i} className="flex items-center px-[20px] py-[12px] border-b border-[#e8e8e8] hover:bg-[#f4f4f5] transition-colors duration-150 ease-in-out w-full">
+                    <div className="w-[280px] shrink-0 whitespace-nowrap font-bold text-[#515151] font-['DM_Sans',sans-serif] text-[14px]">{row.tier}</div>
+                    <div className="w-[200px] shrink-0 whitespace-nowrap font-['DM_Sans',sans-serif] font-normal text-[#515151] text-[14px]">{row.unit}</div>
+                    <div className="w-[200px] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] text-[#131212] text-[14px]">{row.rate}</div>
+                    <div className="w-[400px] shrink-0 whitespace-nowrap font-['DM_Sans',sans-serif] font-normal text-[#515151] text-[14px]">{row.desc}</div>
+                  </div>
+                ))}
+
+                <div className="bg-[#f0f4f6] min-h-[42px] px-[20px] py-[10px] flex items-center justify-between font-['DM_Sans',sans-serif] font-bold text-[14px] text-[#131212] border-b border-[#e8e8e8] w-full" data-name="section-title">
+                  <span className="whitespace-nowrap">Answer & Multimodal Chat</span>
+                  <span className="flex items-center gap-[4px] shrink-0"><TextIcon /><ImageIcon /><VideoIcon /></span>
+                </div>
+                {[
+                  { tier: "Answer & Multimodal Chat", unit: "Search + Token Usage", rate: "Search + LLM rates", desc: "Standard Search API fees + selected LLM gateway token usage fees" },
                 ].map((row, i) => (
                   <div key={i} className="flex items-center px-[20px] py-[12px] border-b border-[#e8e8e8] last:border-b-0 hover:bg-[#f4f4f5] transition-colors duration-150 ease-in-out w-full">
                     <div className="w-[280px] shrink-0 whitespace-nowrap font-bold text-[#515151] font-['DM_Sans',sans-serif] text-[14px]">{row.tier}</div>
