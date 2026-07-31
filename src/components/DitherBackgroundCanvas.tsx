@@ -25,7 +25,7 @@ export default function DitherBackgroundCanvas({
         useTurbulence: 1,
         patternMode: 2,          // 模式三: 稀疏离散不规则斑块点阵
         aspectScale: 1.00,       // 1.00x
-        rippleFrequency: 2.60,   // 2.60 (斑块数量/密度 Blob Threshold)
+        rippleFrequency: 2.50,   // 2.50 (斑块数量/密度 Blob Threshold)
         rippleWidth: 1.40,       // 1.40 (边缘软硬度)
         hollowRadius: 0.21,      // 0.21 (中心空出半径)
         hollowFeather: 0.32,     // 0.32 (过渡羽化)
