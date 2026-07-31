@@ -117,7 +117,7 @@ function Soc2CertifiedBadge() {
 export default function FooterSection() {
   return (
     <footer
-      className="w-full relative overflow-hidden text-white pt-[80px] lg:pt-[100px] pb-[40px] px-6 lg:px-12 flex flex-col items-center border-t border-white/10"
+      className="w-full relative overflow-hidden text-white pt-[50px] lg:pt-[70px] pb-[25px] px-6 lg:px-12 flex flex-col items-center border-t border-white/10"
       style={{
         backgroundImage:
           "linear-gradient(rgba(8, 11, 18, 0.8) 0%, rgba(21, 51, 30, 0.8) 100%), linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
@@ -129,7 +129,7 @@ export default function FooterSection() {
         <img alt="" className="absolute inset-0 max-w-none object-cover size-full" src={imgDither1} />
       </div>
 
-      <div className="w-full max-w-[1280px] flex flex-col gap-[60px] lg:gap-[80px] relative z-10">
+      <div className="w-full max-w-[1280px] flex flex-col gap-[40px] lg:gap-[50px] relative z-10">
         {/* Main Content Area */}
         <div className="w-full flex flex-col lg:flex-row justify-between items-start gap-[48px] lg:gap-[60px]">
           {/* Left Column: Brand, Tagline, & Contacts */}
@@ -226,7 +226,7 @@ export default function FooterSection() {
         </div>
 
         {/* Bottom Section: Copyright, Legal Links, & SOC 2 Badge */}
-        <div className="w-full flex flex-col md:flex-row items-center md:items-end justify-between gap-[24px] pt-[50px] relative">
+        <div className="w-full flex flex-col md:flex-row items-center md:items-end justify-between gap-[24px] pt-[30px] relative">
           <p className="font-['DM_Sans',sans-serif] text-[16px] text-white/80 text-center md:text-left self-center md:self-end">
             © 2026 APITECH AI PTE. LTD. All rights reserved.
           </p>
