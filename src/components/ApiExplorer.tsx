@@ -204,7 +204,7 @@ export default function ApiExplorer() {
                 <div className="w-[260px] shrink-0 whitespace-nowrap">Model Name</div>
                 <div className="w-[220px] shrink-0 whitespace-nowrap">Text Input (USD / 1M)</div>
                 <div className="w-[260px] shrink-0 whitespace-nowrap">Image / Video Input (USD / 1M)</div>
-                <div className="w-[340px] shrink-0 whitespace-nowrap">Best Architectural Fit</div>
+                <div className="w-[340px] shrink-0 whitespace-nowrap">Description</div>
               </div>
 
               {/* Content Container (White rounded box) */}
