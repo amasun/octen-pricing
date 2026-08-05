@@ -1,5 +1,5 @@
 import Navbar from "../src/components/Navbar";
-import HeroSection from "../src/components/HeroSection";
+import HeroSection, { HeroCards } from "../src/components/HeroSection";
 import QpsPricingGrid from "../src/components/QpsPricingGrid";
 import ApiExplorer from "../src/components/ApiExplorer";
 import FaqSection from "../src/components/FaqSection";
@@ -12,6 +12,7 @@ export default function OctenAiInfrastructurePricing() {
       <main className="w-full flex flex-col items-center bg-[#080B12]">
         <HeroSection />
         <div className="w-full bg-white flex flex-col items-center text-[#100f09]">
+          <HeroCards />
           <ApiExplorer />
           <QpsPricingGrid />
           <FaqSection />

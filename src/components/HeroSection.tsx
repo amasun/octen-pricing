@@ -565,39 +565,40 @@ function HeroLightGlow() {
   );
 }
 
+export function HeroCards() {
+  return (
+    <div className="content-stretch flex flex-col items-center pb-[20px] sm:pb-[40px] pt-[20px] sm:pt-[50px] relative rounded-[20px] shrink-0 w-full max-w-[1280px] px-4 z-10" data-name="hero-cards">
+      <div className="content-stretch flex flex-col md:flex-row gap-[10px] md:gap-[34px] items-center justify-center relative shrink-0 w-full md:w-[960px] max-w-full">
+        <PayAsYouGoCard />
+        <PlusSeparator />
+        <QpsPlanCard />
+      </div>
+    </div>
+  );
+}
+
 export default function HeroSection() {
   return (
-    <>
-      <div 
-        className="content-stretch flex flex-col items-center pb-[24px] sm:pb-[40px] pt-[60px] sm:pt-[90px] px-4 sm:px-[320px] relative size-full w-full overflow-hidden isolate"
-        data-name="hero"
-        style={{
-          background: "linear-gradient(180deg, rgba(17, 70, 43, 0.75) 0%, rgba(17, 70, 43, 0.25) 50%, rgba(8, 11, 18, 0) 100%), #080B12"
-        }}
-      >
-        {/* Dynamic WebGL Dither Shader Background Layer (Silver Grey Grid & Neon Green/Yellow Blobs) */}
-        <div className="absolute inset-0 size-full pointer-events-none z-0 overflow-hidden">
-          <DitherBackgroundCanvas fallbackSrc={imgDither1} params={{ rippleFrequency: 2.50, edgeColorWidth: 0.98, hollowRadius: 0.26, transparentDark: 1, gridOpacity: 0.34 }} />
-        </div>
-
-        {/* Hero Light Glow Effect Layer (z-5, under Navbar and over Shader) */}
-        <HeroLightGlow />
-
-        {/* Hero Interactive Content Layer */}
-        <div className="relative z-10 w-full flex flex-col items-center" data-name="hero-content">
-          <HeroHeader />
-          <ClaimBalanceBanner />
-        </div>
+    <div 
+      className="content-stretch flex flex-col items-center pb-[24px] sm:pb-[40px] pt-[60px] sm:pt-[90px] px-4 sm:px-[320px] relative size-full w-full overflow-hidden isolate"
+      data-name="hero"
+      style={{
+        background: "linear-gradient(180deg, rgba(17, 70, 43, 0.75) 0%, rgba(17, 70, 43, 0.25) 50%, rgba(8, 11, 18, 0) 100%), #080B12"
+      }}
+    >
+      {/* Dynamic WebGL Dither Shader Background Layer (Silver Grey Grid & Neon Green/Yellow Blobs) */}
+      <div className="absolute inset-0 size-full pointer-events-none z-0 overflow-hidden">
+        <DitherBackgroundCanvas fallbackSrc={imgDither1} params={{ rippleFrequency: 2.50, edgeColorWidth: 0.98, hollowRadius: 0.26, transparentDark: 1, gridOpacity: 0.34 }} />
       </div>
 
-      {/* Cards block moved outside hero section container */}
-      <div className="content-stretch flex flex-col items-center pb-[20px] sm:pb-[30px] pt-[16px] sm:pt-[40px] relative rounded-[20px] shrink-0 w-full max-w-[1280px] px-4 z-10" data-name="hero-cards">
-        <div className="content-stretch flex flex-col md:flex-row gap-[10px] md:gap-[34px] items-center justify-center relative shrink-0 w-full md:w-[960px] max-w-full">
-          <PayAsYouGoCard />
-          <PlusSeparator />
-          <QpsPlanCard />
-        </div>
+      {/* Hero Light Glow Effect Layer (z-5, under Navbar and over Shader) */}
+      <HeroLightGlow />
+
+      {/* Hero Interactive Content Layer */}
+      <div className="relative z-10 w-full flex flex-col items-center" data-name="hero-content">
+        <HeroHeader />
+        <ClaimBalanceBanner />
       </div>
-    </>
+    </div>
   );
 }
