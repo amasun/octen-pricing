@@ -510,7 +510,7 @@ export default function HeroSection() {
     >
       {/* Dynamic WebGL Dither Shader Background Layer (Light Mode Neutral Grey Grid & Waves) */}
       <div className="absolute inset-0 size-full pointer-events-none z-0 overflow-hidden opacity-50">
-        <DitherBackgroundCanvas fallbackSrc={imgDither1} params={{ rippleFrequency: 2.50, edgeColorWidth: 0.98, hollowRadius: 0.26, transparentDark: 1, gridOpacity: 0.12, gridColor: "#CBD5E1", primaryColor: "#94A3B8", secondaryColor: "#E2E8F0", darkColor: "#FFFFFF", whiteColor: "#FFFFFF" }} />
+        <DitherBackgroundCanvas fallbackSrc={imgDither1} params={{ rippleFrequency: 2.50, edgeColorWidth: 0.98, hollowRadius: 0.18, transparentDark: 1, gridOpacity: 0.12, gridColor: "#CBD5E1", primaryColor: "#94A3B8", secondaryColor: "#E2E8F0", darkColor: "#FFFFFF", whiteColor: "#FFFFFF" }} />
       </div>
 
       {/* Hero Interactive Content Layer */}

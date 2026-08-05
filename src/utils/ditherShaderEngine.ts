@@ -1032,7 +1032,7 @@ export class DitherShaderEngine {
   private _renderFrame = () => {
     if (!this.isRunning) return;
 
-    this.totalTime = (this.totalTime + 0.016) % 3600.0;
+    this.totalTime = (this.totalTime + 0.016) % 289.0;
 
     this.prevMouseX = this.curMouseX;
     this.prevMouseY = this.curMouseY;

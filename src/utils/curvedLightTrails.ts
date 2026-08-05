@@ -25,12 +25,12 @@ function getHoldWave(time: number, transDuration = 1.5, holdDuration = 2.0): num
     return 1.0;
   } else if (phase < holdDuration + transDuration) {
     const u = (phase - holdDuration) / transDuration;
-    return 0.5 + 0.5 * Math.cos(Math.PI * u);
+    return 0.35 + 0.65 * (0.5 + 0.5 * Math.cos(Math.PI * u));
   } else if (phase < 2 * holdDuration + transDuration) {
-    return 0.0;
+    return 0.35;
   } else {
     const u = (phase - (2 * holdDuration + transDuration)) / transDuration;
-    return 0.5 - 0.5 * Math.cos(Math.PI * u);
+    return 0.35 + 0.65 * (0.5 - 0.5 * Math.cos(Math.PI * u));
   }
 }
 
@@ -453,7 +453,7 @@ export class CurvedLightTrails {
     const tintRgb = normalizeColor(p.tintColor || '#00b32d');
 
     gl.uniform2f(u.uResolution, canvas.width, canvas.height);
-    gl.uniform1f(u.uTime, elapsedTime % 3600.0);
+    gl.uniform1f(u.uTime, elapsedTime % 289.0);
     gl.uniform1f(u.uWarpStrength, p.warpStrength);
     gl.uniform1f(u.uWarpWidth, p.warpWidth);
     let currentHeightScale = p.heightScale;

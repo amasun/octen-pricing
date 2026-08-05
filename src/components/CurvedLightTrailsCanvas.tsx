@@ -91,7 +91,7 @@ export default function CurvedLightTrailsCanvas({
     if (!engine) return;
 
     if (isAnimating) {
-      engine.setParams({ speed: 1.8, lineDensity: 36, intensity: 0.8, heightAnim: true, densityAnim: true });
+      engine.setParams({ speed: 1.8, lineDensity: 36, intensity: 0.8, heightAnim: true, densityAnim: true, heightAnimMin: 0.12, densityAnimMin: 20 });
     } else {
       engine.setParams({ speed: 1.0, heightScale: 0.23, heightAnim: false, lineDensity: 24, densityAnim: false, intensity: 0.5 });
     }
