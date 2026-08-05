@@ -1,5 +1,7 @@
+import { useRef } from "react";
 import { Type, Image as LucideImageIcon, Video as LucideVideoIcon } from "lucide-react";
 import imgBackgroundRectangle from "../../imports/Background Rectangle.png";
+import TableDitherAccent from "./TableDitherAccent";
 
 // Content-type pill icons for section headers — per Figma spec
 const PILL_CLS = "inline-flex items-center gap-[4px] px-[6px] py-[4px] h-[22px] rounded-[4px] bg-white border border-[#C5CCD2]";
@@ -32,6 +34,9 @@ function VideoIcon() {
 }
 
 export default function ApiExplorer() {
+  const table1Ref = useRef<HTMLDivElement | null>(null);
+  const table2Ref = useRef<HTMLDivElement | null>(null);
+  const table3Ref = useRef<HTMLDivElement | null>(null);
 
   return (
     <div className="bg-white content-stretch flex flex-col items-center pb-[40px] sm:pb-[60px] pt-[50px] sm:pt-[110px] relative shrink-0 w-full max-w-[1312px] px-4 box-border" id="api-pricing">
@@ -70,14 +75,9 @@ export default function ApiExplorer() {
           </div>
 
           <div className="w-full overflow-x-auto [webkit-overflow-scrolling:touch] rounded-[12px]">
-            <div className="min-w-[1005px] w-full bg-gradient-to-l from-[#b9f8a3] to-[#51f174] border-2 border-[#46db98] relative rounded-[12px] shrink-0 flex flex-col overflow-hidden" data-name="Table">
-              {/* Top-Right Shimmer Accent Overlay */}
-              <img
-                src={imgBackgroundRectangle}
-                alt=""
-                className="absolute h-[64.2px] right-[-50px] top-0 w-[754px] pointer-events-none object-cover mix-blend-multiply"
-                data-name="Background Rectangle"
-              />
+            <div ref={table1Ref} className="min-w-[1005px] w-full bg-gradient-to-l from-[#b9f8a3] to-[#51f174] border-2 border-[#46db98] relative rounded-[12px] shrink-0 flex flex-col overflow-hidden" data-name="Table">
+              {/* Dynamic WebGL Top-Right Dither Accent Overlay */}
+              <TableDitherAccent tableRef={table1Ref} fallbackImg={imgBackgroundRectangle} />
               {/* Header Container */}
               <div className="flex items-center px-[20px] py-[14px] font-['DM_Sans',sans-serif] font-bold text-[14px] text-[#09090b] uppercase tracking-wider relative z-10 w-full" data-name="Header Container">
                 <div className="w-[280px] shrink-0 whitespace-nowrap">Resource</div>
@@ -191,14 +191,9 @@ export default function ApiExplorer() {
           </div>
 
           <div className="w-full overflow-x-auto [webkit-overflow-scrolling:touch] rounded-[12px]">
-            <div className="min-w-[1120px] w-full bg-gradient-to-l from-[#b9f8a3] to-[#51f174] border-2 border-[#46db98] relative rounded-[12px] shrink-0 flex flex-col overflow-hidden" data-name="Table">
-              {/* Top-Right Shimmer Accent Overlay */}
-              <img
-                src={imgBackgroundRectangle}
-                alt=""
-                className="absolute h-[64.2px] right-[-50px] top-0 w-[754px] pointer-events-none object-cover mix-blend-multiply"
-                data-name="Background Rectangle"
-              />
+            <div ref={table2Ref} className="min-w-[1120px] w-full bg-gradient-to-l from-[#b9f8a3] to-[#51f174] border-2 border-[#46db98] relative rounded-[12px] shrink-0 flex flex-col overflow-hidden" data-name="Table">
+              {/* Dynamic WebGL Top-Right Dither Accent Overlay */}
+              <TableDitherAccent tableRef={table2Ref} fallbackImg={imgBackgroundRectangle} />
               {/* Header Container */}
               <div className="flex items-center px-[20px] py-[14px] font-['DM_Sans',sans-serif] font-bold text-[14px] text-[#09090b] uppercase tracking-wider relative z-10 w-full" data-name="Header Container">
                 <div className="w-[260px] shrink-0 whitespace-nowrap">Model Name</div>
@@ -262,14 +257,9 @@ export default function ApiExplorer() {
           </div>
 
           <div className="w-full overflow-x-auto [webkit-overflow-scrolling:touch] rounded-[12px]">
-            <div className="min-w-[1080px] w-full bg-gradient-to-l from-[#b9f8a3] to-[#51f174] border-2 border-[#46db98] relative rounded-[12px] shrink-0 flex flex-col overflow-hidden" data-name="Table">
-              {/* Top-Right Shimmer Accent Overlay */}
-              <img
-                src={imgBackgroundRectangle}
-                alt=""
-                className="absolute h-[64.2px] right-[-50px] top-0 w-[754px] pointer-events-none object-cover mix-blend-multiply"
-                data-name="Background Rectangle"
-              />
+            <div ref={table3Ref} className="min-w-[1080px] w-full bg-gradient-to-l from-[#b9f8a3] to-[#51f174] border-2 border-[#46db98] relative rounded-[12px] shrink-0 flex flex-col overflow-hidden" data-name="Table">
+              {/* Dynamic WebGL Top-Right Dither Accent Overlay */}
+              <TableDitherAccent tableRef={table3Ref} fallbackImg={imgBackgroundRectangle} />
               {/* Header Container */}
               <div className="flex items-center px-[20px] py-[14px] font-['DM_Sans',sans-serif] font-bold text-[14px] text-[#09090b] uppercase tracking-wider relative z-10 w-full" data-name="Header Container">
                 <div className="w-[280px] shrink-0 whitespace-nowrap">Tier / Application</div>

@@ -4,6 +4,7 @@
 @theme {
   --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
   --font-serif: 'Fraunces', serif;
+  --font-heading: 'Fraunces', serif;
   --font-mono: 'JetBrains Mono', 'DM Mono', monospace;
 }
 
@@ -31,12 +32,6 @@ html {
   overflow-x: hidden;
   overflow-y: auto;
   font-family: var(--font-sans);
-  letter-spacing: 0px;
-}
-
-/* Enforce 0px letter spacing globally */
-*, *::before, *::after {
-  letter-spacing: 0px !important;
 }
 
 body, #root, #root > div, [data-name="Octen AI | Infrastructure Pricing"] {
@@ -48,7 +43,7 @@ body, #root, #root > div, [data-name="Octen AI | Infrastructure Pricing"] {
   overflow-y: visible !important;
 }
 
-/* Map Figma-exported font class names to valid loaded Google Fonts */
+/* Map font classes to valid loaded Google Fonts */
 [class*="Fraunces"] {
   font-family: 'Fraunces', serif !important;
 }

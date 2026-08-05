@@ -54,13 +54,12 @@ function PayAsYouGoGraphic({ isHovered = false }: { isHovered?: boolean }) {
     <div className="h-[180px] relative rounded-[16px] shrink-0 w-full bg-black border border-[#2a2a2a] flex items-center justify-center" style={{overflow: 'clip'}}>
       <svg className="w-full h-auto max-h-[140px] pointer-events-none" overflow="visible" width="451" height="140" viewBox="0 0 451 140" fill="none" xmlns="http://www.w3.org/2000/svg">
         {/* Base Static Circuit Paths */}
-        {/* Base Static Circuit Paths */}
-        <path d="M-2.67245 17.9568H122.631 C138.667 17.9568, 138.667 51.736, 154.702 51.736H220.307" stroke="#38564F"/>
-        <path d="M437.542 17.9568H327.575 C311.539 17.9568, 311.539 51.736, 295.504 51.736H229.899" stroke="#38564F"/>
-        <path d="M-2.67245 71.4863H220.307" stroke="#38564F"/>
-        <path d="M452.291 70.4862H229.899" stroke="#38564F"/>
-        <path d="M13.2791 121.669H122.631 C138.667 121.669, 138.667 87.8903, 154.702 87.8903H220.307" stroke="#38564F"/>
-        <path d="M452.291 121.669H327.575 C311.539 121.669, 311.539 87.8903, 295.504 87.8903H229.899" stroke="#38564F"/>
+        <path d="M-2.67245 17.9568H122.631 C138.667 17.9568, 138.667 51.736, 154.702 51.736H220.307" stroke="#4D7A70"/>
+        <path d="M437.542 17.9568H327.575 C311.539 17.9568, 311.539 51.736, 295.504 51.736H229.899" stroke="#4D7A70"/>
+        <path d="M-2.67245 71.4863H220.307" stroke="#4D7A70"/>
+        <path d="M452.291 70.4862H229.899" stroke="#4D7A70"/>
+        <path d="M13.2791 121.669H122.631 C138.667 121.669, 138.667 87.8903, 154.702 87.8903H220.307" stroke="#4D7A70"/>
+        <path d="M452.291 121.669H327.575 C311.539 121.669, 311.539 87.8903, 295.504 87.8903H229.899" stroke="#4D7A70"/>
 
         {/* SVG Glow Filter Defs */}
         <defs>
