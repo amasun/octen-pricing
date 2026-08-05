@@ -35,7 +35,7 @@ export default function App() {
 
       // Hero content entrance: y:40, duration:1.0, stagger:0.15, ease:'power3.out'
       gsap.fromTo(
-        '[data-name="hero-content"] > *, [data-name="hero-cards"]',
+        '[data-name="hero-content"] > *',
         { opacity: 0, y: 40 },
         {
           opacity: 1,
@@ -170,7 +170,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen bg-[#080B12] text-white overflow-x-hidden">
+    <div className="w-full min-h-screen bg-white text-[#100F09] overflow-x-hidden flex flex-col items-center">
       <OctenAiInfrastructurePricing />
     </div>
   );

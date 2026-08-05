@@ -23,8 +23,8 @@ function CheckIcon({ stroke = "#100F09" }: { stroke?: string }) {
 function FlashIcon({ color = "black" }: { color?: string }) {
   return (
     <div className="size-[20px] shrink-0 flex items-center justify-center">
-      <svg className="size-[14px]" fill="none" viewBox="0 0 12.1 14.6">
-        <path d={svgPaths.p3b4547f0} fill={color} />
+      <svg className="size-[20px]" fill="none" viewBox="0 0 20 20">
+        <path d="M9.4823 2.85915C9.77332 2.75026 10.0913 2.73607 10.3909 2.81859L10.5177 2.85915L15.68 4.795C15.9417 4.89315 16.1702 5.06367 16.3387 5.28667C16.5073 5.50968 16.609 5.776 16.632 6.0546L16.6372 6.17628V10.1313C16.6372 11.3263 16.3145 12.4992 15.7033 13.526C15.092 14.5529 14.2149 15.3957 13.1645 15.9654L12.9683 16.0679L10.4948 17.3047C10.3586 17.3727 10.2099 17.4118 10.0579 17.4197C9.90585 17.4276 9.75384 17.404 9.61135 17.3504L9.50516 17.3047L7.03169 16.0679C5.96282 15.5335 5.05806 14.7203 4.41295 13.7144C3.76783 12.7084 3.40629 11.5469 3.36648 10.3526L3.36279 10.1313V6.17628C3.3628 5.89687 3.44216 5.62322 3.59165 5.38717C3.74114 5.15112 3.95461 4.96238 4.20719 4.84294L4.32003 4.795L9.4823 2.85915ZM10 4.24043L4.83773 6.17628V10.1313C4.83775 11.0568 5.08659 11.9653 5.5582 12.7617C6.02981 13.5581 6.70685 14.213 7.51842 14.6579L7.69173 14.7486L10 15.9027L12.3083 14.7486C13.1362 14.3347 13.8377 13.7058 14.3392 12.9277C14.8406 12.1496 15.1236 11.251 15.1586 10.326L15.1623 10.1313V6.17628L10 4.24043ZM9.36799 7.25224C9.46472 7.09073 9.61957 6.97233 9.80079 6.92131C9.982 6.87028 10.1759 6.89049 10.3427 6.9778C10.5095 7.06512 10.6366 7.21291 10.6979 7.3909C10.7592 7.5689 10.7502 7.76361 10.6726 7.93514L10.632 8.0111L9.82817 9.35329H11.4617C12.0118 9.35329 12.3621 9.92261 12.1401 10.4057L12.1003 10.4809L10.6327 12.9278C10.5369 13.091 10.3819 13.2112 10.1998 13.2633C10.0178 13.3154 9.82275 13.2955 9.655 13.2077C9.48724 13.12 9.35966 12.9711 9.29869 12.7918C9.23771 12.6126 9.248 12.4168 9.32743 12.2449L9.36799 12.1689L10.1718 10.8275H8.53834C8.41377 10.8275 8.29118 10.7963 8.18181 10.7367C8.07243 10.677 7.97975 10.5909 7.91225 10.4862C7.84475 10.3815 7.80458 10.2616 7.79543 10.1374C7.78628 10.0131 7.80844 9.88858 7.85987 9.77512L7.89969 9.69916L9.36799 7.25224Z" fill={color} />
       </svg>
     </div>
   );
@@ -50,17 +50,39 @@ function SlackIcon({ color = "black" }: { color?: string }) {
   );
 }
 
-function FeatureIcon({ type, color }: { type: "branch" | "check" | "flash" | "zdr" | "slack"; color?: string }) {
+function ChartIcon({ color = "black" }: { color?: string }) {
+  return (
+    <div className="size-[20px] shrink-0 flex items-center justify-center">
+      <svg className="size-[16px]" fill="none" viewBox="0 0 24 24" stroke={color} strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+      </svg>
+    </div>
+  );
+}
+
+function ContractIcon({ color = "black" }: { color?: string }) {
+  return (
+    <div className="size-[20px] shrink-0 flex items-center justify-center">
+      <svg className="size-[16px]" fill="none" viewBox="0 0 24 24" stroke={color} strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h4m5 4H6a2 2 0 01-2-2V4a2 2 0 012-2h7.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V20a2 2 0 01-2 2z" />
+      </svg>
+    </div>
+  );
+}
+
+function FeatureIcon({ type, color }: { type: "branch" | "check" | "flash" | "zdr" | "slack" | "chart" | "contract"; color?: string }) {
   if (type === "branch") return <BranchIcon color={color} />;
   if (type === "flash") return <FlashIcon color={color} />;
   if (type === "zdr") return <ZdrIcon color={color} />;
   if (type === "slack") return <SlackIcon color={color} />;
+  if (type === "chart") return <ChartIcon color={color} />;
+  if (type === "contract") return <ContractIcon color={color} />;
   return <CheckIcon stroke={color || "#100F09"} />;
 }
 
 interface FeatureItem {
   text: React.ReactNode;
-  icon: "branch" | "check" | "flash" | "zdr" | "slack";
+  icon: "branch" | "check" | "flash" | "zdr" | "slack" | "chart" | "contract";
 }
 
 function PlanCardItem({
@@ -97,8 +119,8 @@ function PlanCardItem({
       }`}
     >
       {/* Top Subtitle Tag */}
-      <div className="h-[28px] sm:h-[34px] py-[4px] sm:py-[6px] px-0 text-center flex items-center justify-center gap-[10px] shrink-0">
-        <p className={`font-['DM_Sans',sans-serif] font-normal text-[13px] sm:text-[14px] leading-[20px] sm:leading-[22px] whitespace-nowrap ${
+      <div className="h-[28px] sm:h-[34px] py-[4px] sm:py-[6px] px-1.5 text-center flex items-center justify-center gap-[10px] shrink-0 overflow-hidden">
+        <p className={`font-['DM_Sans',sans-serif] font-medium text-[12px] sm:text-[13px] leading-[20px] whitespace-nowrap truncate ${
           isPopular ? "text-[#276533]" : "text-[#4B4B39]"
         }`}>
           {subtitle}
@@ -150,7 +172,7 @@ function PlanCardItem({
         {/* Button Text Block */}
         <div className="h-auto sm:h-[260px] p-[16px_16px] sm:p-[30px_24px] flex flex-col justify-between gap-[16px] sm:gap-[30px] box-border shrink-0">
           {/* List */}
-          <ul className="h-auto sm:h-[132px] flex flex-col gap-[10px] sm:gap-[16px] list-none p-0 m-0 w-full">
+          <ul className="h-auto sm:h-[132px] flex flex-col gap-[12px] list-none p-0 m-0 w-full">
             {features.map((feat, i) => (
               <li key={i} className="flex items-start gap-[6px] text-[13px] sm:text-[14px] font-['DM_Sans',sans-serif] font-normal leading-[130%] sm:leading-[140%] text-[#100F09]">
                 <FeatureIcon type={feat.icon} />
@@ -178,6 +200,62 @@ function PlanCardItem({
   );
 }
 
+function EnterpriseCard({ plan }: { plan: { title: string; subtitle: string; price: string; period?: string; features: FeatureItem[]; buttonText: string; buttonHref?: string; } }) {
+  return (
+    <div className="w-full relative rounded-[16px] overflow-hidden bg-white border border-[#D1D1D1] hover:-translate-y-[4px] hover:shadow-[0_12px_28px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out cursor-pointer box-border p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 isolate">
+      {/* Bottom Ambient Glow Layer per Figma spec (X: -150px, Y: 185.73px) */}
+      <div className="absolute left-[-150px] top-[185.73px] w-[918.47px] h-[78.27px] pointer-events-none z-0 opacity-60 overflow-visible">
+        {/* Vector 10: #70FE7E glow */}
+        <div className="absolute w-[738.01px] h-[68.27px] left-[84.54px] bottom-[19px] bg-[#70FE7E] blur-[50px] pointer-events-none rounded-full" />
+        {/* Vector 11: #DDFE70 glow */}
+        <div className="absolute w-[738.01px] h-[68.27px] left-[164.71px] bottom-[29px] bg-[#DDFE70] blur-[50px] pointer-events-none rounded-full -scale-x-100" />
+      </div>
+
+      {/* Left: Crown Icon + Title & Custom Price (Custom left-aligned with Enterprise text) */}
+      <div className="relative z-10 flex items-start justify-center sm:justify-start gap-2 shrink-0 min-w-[200px]">
+        <svg className="size-[22px] shrink-0 mt-[1px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.42 3C17.7725 3.00011 18.1188 3.09341 18.4236 3.27042C18.7285 3.44744 18.9811 3.70189 19.156 4.008L22.49 9.84C22.7076 10.2209 22.7939 10.6627 22.7358 11.0974C22.6776 11.5322 22.4781 11.9358 22.168 12.246L12.885 21.529C12.7689 21.6451 12.6311 21.7372 12.4794 21.8001C12.3278 21.8629 12.1652 21.8952 12.001 21.8952C11.8368 21.8952 11.6743 21.8629 11.5226 21.8001C11.3709 21.7372 11.2331 21.6451 11.117 21.529L1.834 12.246C1.52392 11.9358 1.32443 11.5322 1.26624 11.0974C1.20806 10.6627 1.29441 10.2209 1.512 9.84L4.845 4.007C5.0199 3.70123 5.27246 3.44707 5.57712 3.27024C5.88174 3.09341 6.22774 3.00019 6.58 3H17.42ZM16.707 9.293C16.5195 9.10553 16.2652 9.00021 16 9.00021C15.7348 9.00021 15.4805 9.10553 15.293 9.293L12 12.586L8.706 9.293C8.61476 9.19749 8.50441 9.12131 8.38241 9.0689C8.2604 9.01649 8.12918 8.9889 7.9964 8.98775C7.86362 8.9866 7.73195 9.0119 7.60905 9.06218C7.48615 9.11246 7.3745 9.18671 7.28061 9.28061C7.18671 9.3745 7.11246 9.48615 7.06218 9.60905C7.0119 9.73194 6.9866 9.86362 6.98775 9.9964C6.98891 10.1292 7.01649 10.2604 7.0689 10.3824C7.12131 10.5044 7.19749 10.6148 7.293 10.707L11.116 14.53C11.2321 14.6461 11.3699 14.7382 11.5216 14.8011C11.6733 14.8639 11.8358 14.8962 12 14.8962C12.1642 14.8962 12.3268 14.8639 12.4784 14.8011C12.6301 14.7382 12.7679 14.6461 12.884 14.53L16.707 10.707C16.8945 10.5195 16.9998 10.2652 16.9998 10C16.9998 9.73484 16.8945 9.48053 16.707 9.293Z" fill="url(#paint0_linear_enterprise_gold)"/>
+          <defs>
+            <linearGradient id="paint0_linear_enterprise_gold" x1="21.8665" y1="3.6622" x2="7.15156" y2="21.2212" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#FFE7B1"/>
+              <stop offset="0.641295" stopColor="#C6A55A"/>
+              <stop offset="1" stopColor="#BB9A4C"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <div className="flex flex-col gap-1.5 text-center sm:text-left">
+          <h3 className="font-['Fraunces',serif] font-semibold text-[24px] leading-none text-[#100F09]">
+            {plan.title}
+          </h3>
+          <div className="flex items-baseline justify-center sm:justify-start gap-2 pt-0.5">
+            <span className="font-['DM_Sans',sans-serif] font-bold text-[32px] leading-none text-[#100F09]">Custom</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Center: Features Grid (Column-first flow: 3 in Col 1, 2 in Col 2) */}
+      <ul className="relative z-10 grid grid-cols-1 sm:grid-flow-col sm:grid-rows-3 sm:grid-cols-2 gap-x-8 gap-y-3 list-none p-0 m-0 flex-1 max-w-[600px]">
+        {plan.features.map((feat, i) => (
+          <li key={i} className="flex items-center gap-2.5 text-[14px] font-['DM_Sans',sans-serif] text-[#100F09]">
+            <FeatureIcon type={feat.icon} color="#039855" />
+            <span>{feat.text}</span>
+          </li>
+        ))}
+      </ul>
+
+      {/* Right: Contact Sales CTA */}
+      <div className="relative z-10 shrink-0 w-full md:w-auto">
+        <a
+          href={plan.buttonHref || "mailto:support@octen.ai?subject=Octen%20Enterprise%20QPS%20Plan%20Inquiry"}
+          className="w-full md:w-auto min-w-[180px] h-[44px] px-6 rounded-full bg-[#100F09] text-white font-['DM_Sans',sans-serif] font-semibold text-[15px] flex items-center justify-center btn-dark-hover hover:-translate-y-[1px] active:scale-[0.96] transition-all duration-200 ease-out select-none focus-visible:ring-2 focus-visible:ring-[#039855] focus-visible:outline-none box-border"
+        >
+          {plan.buttonText}
+        </a>
+      </div>
+    </div>
+  );
+}
+
 export default function QpsPricingGrid() {
   const plans: Array<{
     title: string;
@@ -193,7 +271,7 @@ export default function QpsPricingGrid() {
   }> = [
     {
       title: "Free",
-      subtitle: "Evaluation & developer testing",
+      subtitle: "Evaluation & Testing",
       price: "0",
       features: [
         { text: <>Up to <strong className="font-bold">10 QPS</strong> Limit</>, icon: "branch" },
@@ -204,7 +282,7 @@ export default function QpsPricingGrid() {
     },
     {
       title: "Base",
-      subtitle: "Personal projects & light API use",
+      subtitle: "Personal Projects",
       price: "0",
       features: [
         { text: <>Up to <strong className="font-bold">20 QPS</strong> Limit</>, icon: "branch" },
@@ -215,7 +293,7 @@ export default function QpsPricingGrid() {
     },
     {
       title: "Startup",
-      subtitle: "Early-stage teams in production",
+      subtitle: "Early Production",
       price: "2,099",
       originalPrice: "$2,999",
       discountBadge: "30% Off",
@@ -223,29 +301,32 @@ export default function QpsPricingGrid() {
       features: [
         { text: <>Up to <strong className="font-bold">50 QPS</strong> Limit</>, icon: "branch" },
         { text: "Dedicated priority queue", icon: "check" },
-        { text: "Guaranteed throughput and SLA", icon: "flash" }
+        { text: "Guaranteed throughput and SLA", icon: "flash" },
+        { text: "Standard email support", icon: "check" }
       ],
       buttonText: "Subscribe"
     },
     {
       title: "Pro",
-      subtitle: "Scaling production AI applications",
+      subtitle: "Scaling Production",
       price: "13,999",
       features: [
         { text: <>Up to <strong className="font-bold">200 QPS</strong> Limit</>, icon: "branch" },
         { text: "Dedicated priority queue", icon: "check" },
-        { text: "Guaranteed throughput and SLA", icon: "flash" }
+        { text: "Guaranteed throughput and SLA", icon: "flash" },
+        { text: "Standard email support", icon: "check" }
       ],
       buttonText: "Subscribe"
     },
     {
       title: "Scale",
-      subtitle: "High-throughput & mission-critical",
+      subtitle: "High Throughput",
       price: "33,999",
       features: [
         { text: <>Up to <strong className="font-bold">500 QPS</strong> Limit</>, icon: "branch" },
         { text: "Dedicated priority queue", icon: "check" },
-        { text: "Guaranteed throughput and SLA", icon: "flash" }
+        { text: "Guaranteed throughput and SLA", icon: "flash" },
+        { text: "Standard email support", icon: "check" }
       ],
       buttonText: "Subscribe"
     },
@@ -258,7 +339,9 @@ export default function QpsPricingGrid() {
         { text: <>Higher <strong className="font-bold">500+ QPS</strong> Limits</>, icon: "branch" },
         { text: "Zero Data Retention (ZDR)", icon: "zdr" },
         { text: "Dedicated Slack channel support", icon: "slack" },
-        { text: "Guaranteed throughput and SLA", icon: "flash" }
+        { text: "Guaranteed throughput and SLA", icon: "flash" },
+        { text: "Custom data tracking", icon: "chart" },
+        { text: "Custom MSA and DPA", icon: "contract" }
       ],
       buttonText: "Contact Sales",
       buttonHref: "mailto:support@octen.ai?subject=Octen%20Enterprise%20QPS%20Plan%20Inquiry"
@@ -277,11 +360,19 @@ export default function QpsPricingGrid() {
         </p>
       </div>
 
-      {/* 3x2 Double Row Grid (3 Cards per row on desktop, 6 cards total) */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[16px] xl:gap-[24px] w-full justify-items-center">
-        {plans.map((p, idx) => (
-          <PlanCardItem key={idx} {...p} cardWidthClass="w-full" />
-        ))}
+      {/* Cards Wrapper with 16px vertical gap between Row 1 and Enterprise Card */}
+      <div className="flex flex-col gap-[16px] w-full">
+        {/* Row 1: First 5 cards (Free, Base, Startup, Pro, Scale) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-[12px] xl:gap-[16px] w-full">
+          {plans.slice(0, 5).map((p, idx) => (
+            <PlanCardItem key={idx} {...p} cardWidthClass="w-full" />
+          ))}
+        </div>
+
+        {/* Row 2: 6th Enterprise Custom Card occupying its own row */}
+        <div className="w-full">
+          <EnterpriseCard plan={plans[5]} />
+        </div>
       </div>
     </div>
   );

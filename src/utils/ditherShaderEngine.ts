@@ -938,11 +938,10 @@ export class DitherShaderEngine {
       uLiquifyTrailTexture: gl.getUniformLocation(prog, 'uLiquifyTrailTexture')
     };
 
-    // Attach Mouse Events
+    // Disable Mouse-following Liquify interaction per user request
     this._onMouseMove = this._onMouseMove.bind(this);
     this._onMouseLeave = this._onMouseLeave.bind(this);
-    window.addEventListener('mousemove', this._onMouseMove);
-    window.addEventListener('mouseleave', this._onMouseLeave);
+    this._deactivateMouse();
 
     this._renderFrame = this._renderFrame.bind(this);
   }
@@ -1030,10 +1029,10 @@ export class DitherShaderEngine {
     }
   }
 
-  private _renderFrame() {
+  private _renderFrame = () => {
     if (!this.isRunning) return;
 
-    this.totalTime += 0.016;
+    this.totalTime = (this.totalTime + 0.016) % 3600.0;
 
     this.prevMouseX = this.curMouseX;
     this.prevMouseY = this.curMouseY;

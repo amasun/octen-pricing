@@ -453,7 +453,7 @@ export class CurvedLightTrails {
     const tintRgb = normalizeColor(p.tintColor || '#00b32d');
 
     gl.uniform2f(u.uResolution, canvas.width, canvas.height);
-    gl.uniform1f(u.uTime, elapsedTime);
+    gl.uniform1f(u.uTime, elapsedTime % 3600.0);
     gl.uniform1f(u.uWarpStrength, p.warpStrength);
     gl.uniform1f(u.uWarpWidth, p.warpWidth);
     let currentHeightScale = p.heightScale;
