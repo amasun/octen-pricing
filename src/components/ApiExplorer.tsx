@@ -292,8 +292,8 @@ export default function ApiExplorer() {
                 {/* Header Container */}
                 <div className="flex items-center px-[20px] py-[14px] font-['DM_Sans',sans-serif] font-bold text-[14px] text-[#09090b] uppercase tracking-wider relative z-10 w-full" data-name="Header Container">
                   <div className="w-[280px] shrink-0 whitespace-nowrap">Tier / Application</div>
+                  <div className="w-[200px] shrink-0 whitespace-nowrap">Price(USD)</div>
                   <div className="w-[200px] shrink-0 whitespace-nowrap">Billing Unit</div>
-                  <div className="w-[200px] shrink-0 whitespace-nowrap">Rate (USD)</div>
                   <div className="w-[400px] shrink-0 whitespace-nowrap">Description</div>
                 </div>
 
@@ -304,14 +304,14 @@ export default function ApiExplorer() {
                     <span className="flex items-center gap-[4px] shrink-0"><TextIcon /></span>
                   </div>
                   {[
-                    { tier: "Lite Tier", unit: "Per Request", rate: "$0.20", desc: "Quick multi-source fact aggregation & synthesis" },
-                    { tier: "Standard Tier", unit: "Per Request", rate: "$1.00", desc: "Deep domain topic research & structured reporting" },
-                    { tier: "Pro Tier", unit: "Per Request", rate: "$2.50", desc: "Exhaustive enterprise-grade research with multi-step validation" },
+                    { tier: "Lite Tier", rate: "$0.20", unit: "Per Request", desc: "Quick multi-source fact aggregation & synthesis" },
+                    { tier: "Standard Tier", rate: "$1.00", unit: "Per Request", desc: "Deep domain topic research & structured reporting" },
+                    { tier: "Pro Tier", rate: "$2.50", unit: "Per Request", desc: "Exhaustive enterprise-grade research with multi-step validation" },
                   ].map((row, i) => (
                     <div key={i} className="flex items-center px-[20px] py-[12px] border-b border-[#e8e8e8] text-[14px] hover:bg-[#f4f4f5] transition-colors duration-150 ease-in-out w-full">
                       <div className="w-[280px] shrink-0 whitespace-nowrap font-bold text-[#515151] font-['DM_Sans',sans-serif] text-[14px]">{row.tier}</div>
-                      <div className="w-[200px] shrink-0 whitespace-nowrap font-['DM_Sans',sans-serif] font-normal text-[#515151] text-[14px]">{row.unit}</div>
                       <div className="w-[200px] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] font-bold text-[#131212] text-[14px]">{row.rate}</div>
+                      <div className="w-[200px] shrink-0 whitespace-nowrap font-['DM_Sans',sans-serif] font-normal text-[#515151] text-[14px]">{row.unit}</div>
                       <div className="w-[400px] shrink-0 whitespace-nowrap font-['DM_Sans',sans-serif] font-normal text-[#515151] text-[14px]">{row.desc}</div>
                     </div>
                   ))}
@@ -321,14 +321,14 @@ export default function ApiExplorer() {
                     <span className="flex items-center gap-[4px] shrink-0"><ImageIcon /><VideoIcon /></span>
                   </div>
                   {[
-                    { tier: "Image Generation", unit: "Per Output Image", rate: "$0.25", desc: "Search-backed image generation grounded in real-time web context" },
-                    { tier: "Video Generation", unit: "Per Output Video", rate: "$1.00", desc: "Search-backed video generation grounded in real-time web context" },
+                    { tier: "Image Generation", rate: "$0.25", unit: "Per Output Image", desc: "Search-backed image generation grounded in real-time web context" },
+                    { tier: "Video Generation", rate: "$1.00", unit: "Per Output Video", desc: "Search-backed video generation grounded in real-time web context" },
                   ].map((row, i) => (
                     <div key={i} className="flex items-center px-[20px] py-[12px] border-b border-[#e8e8e8] hover:bg-[#f4f4f5] transition-colors duration-150 ease-in-out w-full">
                       <div className="w-[280px] shrink-0 whitespace-nowrap font-bold text-[#515151] font-['DM_Sans',sans-serif] text-[14px]">{row.tier}</div>
-                      <div className="w-[200px] shrink-0 whitespace-nowrap font-['DM_Sans',sans-serif] font-normal text-[#515151] text-[14px]">{row.unit}</div>
                       <div className="w-[200px] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] font-bold text-[#131212] text-[14px]">{row.rate}</div>
-                      <div className="w-[400px] shrink-0 whitespace-nowrap font-['DM_Sans',sans-serif] font-normal text-[#515151] text-[14px]">{row.desc}</div>
+                      <div className="w-[200px] shrink-0 whitespace-nowrap font-['DM_Sans',sans-serif] font-normal text-[#515151] text-[14px]">{row.unit}</div>
+                      <div className="w-[400px] shrink-0 whitespace-nowrap font-[#515151] text-[#515151] text-[14px]">{row.desc}</div>
                     </div>
                   ))}
 
@@ -337,12 +337,12 @@ export default function ApiExplorer() {
                     <span className="flex items-center gap-[4px] shrink-0"><TextIcon /><ImageIcon /><VideoIcon /></span>
                   </div>
                   {[
-                    { tier: "Answer & Multimodal Chat", unit: "Search + Token Usage", rate: "Search + Model rates", desc: "Standard Search API fees + selected model gateway token usage fees" },
+                    { tier: "Answer & Multimodal Chat", rate: "Search + Model rates", unit: "Search + Token Usage", desc: "Standard Search API fees + selected model gateway token usage fees" },
                   ].map((row, i) => (
                     <div key={i} className="flex items-center px-[20px] py-[12px] border-b border-[#e8e8e8] last:border-b-0 hover:bg-[#f4f4f5] transition-colors duration-150 ease-in-out w-full">
                       <div className="w-[280px] shrink-0 whitespace-nowrap font-bold text-[#515151] font-['DM_Sans',sans-serif] text-[14px]">{row.tier}</div>
-                      <div className="w-[200px] shrink-0 whitespace-nowrap font-['DM_Sans',sans-serif] font-normal text-[#515151] text-[14px]">{row.unit}</div>
                       <div className="w-[200px] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] font-bold text-[#131212] text-[14px]">{row.rate}</div>
+                      <div className="w-[200px] shrink-0 whitespace-nowrap font-['DM_Sans',sans-serif] font-normal text-[#515151] text-[14px]">{row.unit}</div>
                       <div className="w-[400px] shrink-0 whitespace-nowrap font-['DM_Sans',sans-serif] font-normal text-[#515151] text-[14px]">{row.desc}</div>
                     </div>
                   ))}
