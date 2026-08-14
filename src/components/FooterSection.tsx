@@ -117,7 +117,7 @@ function Soc2CertifiedBadge() {
 export default function FooterSection() {
   return (
     <footer
-      className="w-full relative overflow-hidden text-white pt-[36px] sm:pt-[70px] pb-[20px] sm:pb-[25px] px-6 lg:px-12 flex flex-col items-center border-t border-white/10"
+      className="w-full relative overflow-hidden text-white pt-[36px] sm:pt-[70px] pb-[20px] sm:pb-[25px] px-6 lg:px-12 flex flex-col items-center"
       style={{
         backgroundImage:
           "linear-gradient(rgba(8, 11, 18, 0.8) 0%, rgba(21, 51, 30, 0.8) 100%), linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%)",
@@ -181,14 +181,14 @@ export default function FooterSection() {
             <div className="flex flex-col gap-[16px] items-start font-['DM_Sans',sans-serif]">
               <h3 className="text-[#71717a] text-[14px] uppercase tracking-wider font-normal">API</h3>
               <ul className="flex flex-col gap-[18px] text-[16px] text-white/80 font-normal">
-                <li><a href="#api-pricing" className="hover:text-white transition-colors">Broad Search</a></li>
-                <li><a href="#api-pricing" className="hover:text-white transition-colors">Web Search</a></li>
-                <li><a href="#api-pricing" className="hover:text-white transition-colors">Image Search</a></li>
-                <li><a href="#api-pricing" className="hover:text-white transition-colors">Video Search</a></li>
-                <li><a href="#api-pricing" className="hover:text-white transition-colors">Model</a></li>
-                <li><a href="#api-pricing" className="hover:text-white transition-colors">Extract</a></li>
-                <li className="flex items-center"><a href="#api-pricing" className="hover:text-white transition-colors">Embedding</a><EarlyAccessTag /></li>
-                <li className="flex items-center"><a href="#api-pricing" className="hover:text-white transition-colors">VL Embedding</a><EarlyAccessTag /></li>
+                <li><a href="#api-pricing" className="inline-block hover:text-white transition-all duration-200 ease-out hover:translate-x-1">Broad Search</a></li>
+                <li><a href="#api-pricing" className="inline-block hover:text-white transition-all duration-200 ease-out hover:translate-x-1">Web Search</a></li>
+                <li><a href="#api-pricing" className="inline-block hover:text-white transition-all duration-200 ease-out hover:translate-x-1">Image Search</a></li>
+                <li><a href="#api-pricing" className="inline-block hover:text-white transition-all duration-200 ease-out hover:translate-x-1">Video Search</a></li>
+                <li><a href="#api-pricing" className="inline-block hover:text-white transition-all duration-200 ease-out hover:translate-x-1">Model</a></li>
+                <li><a href="#api-pricing" className="inline-block hover:text-white transition-all duration-200 ease-out hover:translate-x-1">Extract</a></li>
+                <li className="flex items-center"><a href="#api-pricing" className="inline-block hover:text-white transition-all duration-200 ease-out hover:translate-x-1">Embedding</a><EarlyAccessTag /></li>
+                <li className="flex items-center"><a href="#api-pricing" className="inline-block hover:text-white transition-all duration-200 ease-out hover:translate-x-1">VL Embedding</a><EarlyAccessTag /></li>
               </ul>
             </div>
 
@@ -196,10 +196,10 @@ export default function FooterSection() {
             <div className="flex flex-col gap-[16px] items-start font-['DM_Sans',sans-serif]">
               <h3 className="text-[#71717a] text-[14px] uppercase tracking-wider font-normal">Application</h3>
               <ul className="flex flex-col gap-[18px] text-[16px] text-white/80 font-normal">
-                <li><a href="#qps-plans" className="hover:text-white transition-colors">Answer</a></li>
-                <li className="flex items-center"><a href="#qps-plans" className="hover:text-white transition-colors">Deep Research</a><EarlyAccessTag /></li>
-                <li><a href="#qps-plans" className="hover:text-white transition-colors">Multimodal Chat</a></li>
-                <li className="flex items-center"><a href="#qps-plans" className="hover:text-white transition-colors">Grounded Generation</a><EarlyAccessTag /></li>
+                <li><a href="#qps-plans" className="inline-block hover:text-white transition-all duration-200 ease-out hover:translate-x-1">Answer</a></li>
+                <li className="flex items-center"><a href="#qps-plans" className="inline-block hover:text-white transition-all duration-200 ease-out hover:translate-x-1">Deep Research</a><EarlyAccessTag /></li>
+                <li><a href="#qps-plans" className="inline-block hover:text-white transition-all duration-200 ease-out hover:translate-x-1">Multimodal Chat</a></li>
+                <li className="flex items-center"><a href="#qps-plans" className="inline-block hover:text-white transition-all duration-200 ease-out hover:translate-x-1">Grounded Generation</a><EarlyAccessTag /></li>
               </ul>
             </div>
 
@@ -207,10 +207,10 @@ export default function FooterSection() {
             <div className="flex flex-col gap-[16px] items-start font-['DM_Sans',sans-serif]">
               <h3 className="text-[#71717a] text-[14px] uppercase tracking-wider font-normal">Developers</h3>
               <ul className="flex flex-col gap-[18px] text-[16px] text-white/80 font-normal">
-                <li><a href="https://status.octen.ai" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Status</a></li>
-                <li><a href="https://github.com/octen-ai" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub</a></li>
-                <li><a href="https://platform.octen.ai" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">API Platform</a></li>
-                <li><a href="https://docs.octen.ai" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Docs</a></li>
+                <li><a href="https://status.octen.ai" target="_blank" rel="noopener noreferrer" className="inline-block hover:text-white transition-all duration-200 ease-out hover:translate-x-1">Status</a></li>
+                <li><a href="https://github.com/octen-ai" target="_blank" rel="noopener noreferrer" className="inline-block hover:text-white transition-all duration-200 ease-out hover:translate-x-1">GitHub</a></li>
+                <li><a href="https://platform.octen.ai" target="_blank" rel="noopener noreferrer" className="inline-block hover:text-white transition-all duration-200 ease-out hover:translate-x-1">API Platform</a></li>
+                <li><a href="https://docs.octen.ai" target="_blank" rel="noopener noreferrer" className="inline-block hover:text-white transition-all duration-200 ease-out hover:translate-x-1">Docs</a></li>
               </ul>
             </div>
 
@@ -218,8 +218,8 @@ export default function FooterSection() {
             <div className="flex flex-col gap-[16px] items-start font-['DM_Sans',sans-serif]">
               <h3 className="text-[#71717a] text-[14px] uppercase tracking-wider font-normal">Company</h3>
               <ul className="flex flex-col gap-[18px] text-[16px] text-white/80 font-normal">
-                <li><a href="/blog" className="hover:text-white transition-colors">Blog</a></li>
-                <li><a href="mailto:support@octen.ai" className="hover:text-white transition-colors">Contact</a></li>
+                <li><a href="/blog" className="inline-block hover:text-white transition-all duration-200 ease-out hover:translate-x-1">Blog</a></li>
+                <li><a href="mailto:support@octen.ai" className="inline-block hover:text-white transition-all duration-200 ease-out hover:translate-x-1">Contact</a></li>
               </ul>
             </div>
           </div>

@@ -52,7 +52,7 @@ function Navigation({ isDarkTheme }: { isDarkTheme: boolean }) {
           <li>
             <a 
               href="#qps-plans"
-              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md font-medium text-[14px] transition-colors ${
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md font-medium text-[14px] transition-all duration-200 ease-out active:scale-[0.97] ${
                 isDarkTheme ? "text-white/90 hover:text-white hover:bg-white/10" : "text-[#0F172B] hover:bg-slate-100"
               }`}
             >
@@ -65,7 +65,7 @@ function Navigation({ isDarkTheme }: { isDarkTheme: boolean }) {
           <li>
             <a 
               href="#api-pricing"
-              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md font-medium text-[14px] transition-colors ${
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md font-medium text-[14px] transition-all duration-200 ease-out active:scale-[0.97] ${
                 isDarkTheme ? "text-white/90 hover:text-white hover:bg-white/10" : "text-[#0F172B] hover:bg-slate-100"
               }`}
             >
@@ -78,7 +78,7 @@ function Navigation({ isDarkTheme }: { isDarkTheme: boolean }) {
           <li>
             <a 
               href="#qps-plans"
-              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md font-medium text-[14px] transition-colors ${
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md font-medium text-[14px] transition-all duration-200 ease-out active:scale-[0.97] ${
                 isDarkTheme ? "text-white/90 hover:text-white hover:bg-white/10" : "text-[#0F172B] hover:bg-slate-100"
               }`}
             >
@@ -90,7 +90,7 @@ function Navigation({ isDarkTheme }: { isDarkTheme: boolean }) {
               href="https://octen.ai/blog"
               target="_blank"
               rel="noopener noreferrer"
-              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md font-medium text-[14px] transition-colors ${
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md font-medium text-[14px] transition-all duration-200 ease-out active:scale-[0.97] ${
                 isDarkTheme ? "text-white/90 hover:text-white hover:bg-white/10" : "text-[#0F172B] hover:bg-slate-100"
               }`}
             >
@@ -110,9 +110,9 @@ function NavigationActions({ isDarkTheme }: { isDarkTheme: boolean }) {
         href="https://octen.ai/platform/billing" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className={`inline-flex flex-row items-center justify-center gap-[6px] whitespace-nowrap transition-all shrink-0 outline-none focus-visible:ring-2 focus-visible:ring-[#039855] box-border select-none ${
+        className={`inline-flex flex-row items-center justify-center gap-[6px] whitespace-nowrap transition-all duration-200 ease-out active:scale-[0.97] shrink-0 outline-none focus-visible:ring-2 focus-visible:ring-[#039855] box-border select-none ${
           isDarkTheme 
-            ? "w-[131px] h-[36px] py-[6px] px-[16px] bg-white/10 hover:bg-white/20 border border-white/50 backdrop-blur-[4px] rounded-[8px] font-['DM_Sans',sans-serif] font-semibold text-[16px] leading-[24px] text-white" 
+            ? "w-[131px] h-[36px] py-[6px] px-[16px] bg-white/10 hover:bg-white/20 hover:border-white/80 border border-white/50 backdrop-blur-[4px] rounded-[8px] font-['DM_Sans',sans-serif] font-semibold text-[16px] leading-[24px] text-white" 
             : "bg-black text-white hover:bg-black/90 px-4 py-1.5 min-w-[84px] h-9 rounded-md shadow-xs font-medium text-[14px]"
         }`}
       >

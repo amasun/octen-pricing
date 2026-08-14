@@ -3,6 +3,7 @@ import HeroSection from "../src/components/HeroSection";
 import QpsPricingGrid from "../src/components/QpsPricingGrid";
 import ApiExplorer from "../src/components/ApiExplorer";
 import FaqSection from "../src/components/FaqSection";
+import CtaSection from "../src/components/CtaSection";
 import FooterSection from "../src/components/FooterSection";
 
 export default function OctenAiInfrastructurePricing() {
@@ -16,6 +17,7 @@ export default function OctenAiInfrastructurePricing() {
           <QpsPricingGrid />
           <FaqSection />
         </div>
+        <CtaSection />
       </main>
       <FooterSection />
     </div>

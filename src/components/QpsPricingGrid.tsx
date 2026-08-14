@@ -115,10 +115,10 @@ function PlanCardItem({
     <div 
       className={`${cardWidthClass} ${
         isPopular ? "h-auto sm:h-[438px] sm:-mt-[28px]" : "h-auto sm:h-[410px]"
-      } relative rounded-[16px] flex flex-col justify-between overflow-hidden box-border border ${
+      } relative rounded-[16px] flex flex-col justify-between overflow-hidden box-border border transition-all duration-200 ${
         isPopular 
-          ? "bg-[rgba(139,239,149,0.5)] border-[#6DCAA0] z-10" 
-          : "bg-white border-[rgba(26,26,25,0.12)]"
+          ? "bg-[rgba(139,239,149,0.5)] border-[#6DCAA0] hover:border-[#4EAF82] hover:shadow-[0_4px_24px_rgba(111,209,165,0.25)] z-10" 
+          : "bg-white border-[rgba(26,26,25,0.12)] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)]"
       }`}
     >
       {/* Top Green Header Tag - Only for Most Popular card (28px height per Figma spec) */}
@@ -187,7 +187,7 @@ function PlanCardItem({
             href={buttonHref || "https://octen.ai/platform/billing"}
             target={buttonHref?.startsWith("mailto:") ? "_self" : "_blank"}
             rel="noopener noreferrer"
-            className={`w-full h-[40px] px-[17px] rounded-[9999px] flex items-center justify-center font-['Inter',sans-serif] font-semibold text-[16px] leading-[24px] hover:-translate-y-[1px] active:scale-[0.96] transition-all duration-200 ease-out select-none focus-visible:ring-2 focus-visible:ring-[#039855] focus-visible:outline-none box-border ${
+            className={`w-full h-[40px] px-[17px] rounded-[9999px] flex items-center justify-center font-['Inter',sans-serif] font-semibold text-[16px] leading-[24px] hover:-translate-y-[2px] hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)] active:translate-y-0 active:scale-[0.97] transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] select-none focus-visible:ring-2 focus-visible:ring-[#039855] focus-visible:outline-none box-border ${
               isPopular || (title !== "Base" && title !== "Free")
                 ? "bg-[#100F09] text-white btn-dark-hover"
                 : "bg-[#000000]/5 text-[#0F172A] border border-[rgba(26,26,25,0.12)] btn-light-hover"
@@ -203,7 +203,7 @@ function PlanCardItem({
 
 function EnterpriseCard({ plan }: { plan: { title: string; subtitle: string; price: string; period?: string; features: FeatureItem[]; buttonText: string; buttonHref?: string; } }) {
   return (
-    <div className="w-full relative rounded-[16px] overflow-hidden bg-white border border-[#D1D1D1] box-border p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 isolate">
+    <div className="w-full relative rounded-[16px] overflow-hidden bg-white border border-[#D1D1D1] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-200 box-border p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 isolate">
       {/* Bottom Ambient Glow Layer per Figma spec (X: -150px, Y: 185.73px) */}
       <div className="absolute left-[-150px] top-[185.73px] w-[918.47px] h-[78.27px] pointer-events-none z-0 opacity-60 overflow-visible">
         {/* Vector 10: #70FE7E glow */}
@@ -248,7 +248,7 @@ function EnterpriseCard({ plan }: { plan: { title: string; subtitle: string; pri
       <div className="relative z-10 shrink-0 w-full md:w-auto">
         <a
           href={plan.buttonHref || "mailto:support@octen.ai?subject=Octen%20Enterprise%20QPS%20Plan%20Inquiry"}
-          className="w-full md:w-auto min-w-[180px] h-[44px] px-6 rounded-full bg-[#100F09] text-white font-['DM_Sans',sans-serif] font-semibold text-[16px] flex items-center justify-center btn-dark-hover hover:-translate-y-[1px] active:scale-[0.96] transition-all duration-200 ease-out select-none focus-visible:ring-2 focus-visible:ring-[#039855] focus-visible:outline-none box-border"
+          className="w-full md:w-auto min-w-[180px] h-[44px] px-6 rounded-full bg-[#100F09] text-white font-['DM_Sans',sans-serif] font-semibold text-[16px] flex items-center justify-center btn-dark-hover hover:-translate-y-[2px] hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)] active:translate-y-0 active:scale-[0.97] transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] select-none focus-visible:ring-2 focus-visible:ring-[#039855] focus-visible:outline-none box-border"
         >
           {plan.buttonText}
         </a>

@@ -57,8 +57,8 @@ export default function FaqSection() {
           return (
             <div 
               key={idx}
-              className={`relative rounded-[12px] w-full transition-colors duration-300 box-border flex flex-col border border-[rgba(26,26,25,0.12)] ${
-                isOpen ? 'bg-white' : 'bg-[#eaebeb] hover:bg-white/80'
+              className={`relative rounded-[12px] w-full transition-all duration-200 ease-out box-border flex flex-col border ${
+                isOpen ? 'bg-white border-[#B5B5B0] shadow-[0_4px_16px_rgba(0,0,0,0.04)]' : 'bg-[#eaebeb] border-[rgba(26,26,25,0.12)] hover:bg-white hover:border-[#B5B5B0] hover:shadow-[0_4px_16px_rgba(0,0,0,0.03)]'
               }`}
             >
               {/* Card Toggle Button Header with Symmetrical Padding */}
