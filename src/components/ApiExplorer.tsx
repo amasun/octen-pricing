@@ -71,10 +71,25 @@ export default function ApiExplorer() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
+  // Initial hash check on page load for deep linking (e.g. /pricing#embeddings)
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.location.hash) {
+      const hashId = window.location.hash.replace("#", "");
+      if (NAV_ITEMS.some((item) => item.id === hashId)) {
+        setTimeout(() => {
+          scrollToSection(hashId, false);
+        }, 150);
+      }
+    }
+  }, []);
+
+  const scrollToSection = (id: string, updateHash = true) => {
     const element = document.getElementById(id);
     if (element) {
       setActiveSection(id);
+      if (updateHash && typeof window !== "undefined" && window.history.replaceState) {
+        window.history.replaceState(null, "", `#${id}`);
+      }
       isClickScrollingRef.current = true;
       if (clickTimerRef.current) clearTimeout(clickTimerRef.current);
 
@@ -272,14 +287,9 @@ export default function ApiExplorer() {
                 <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#57575E]">/ 1M tokens</span>
               </div>
               <div className="border-t border-[#E7E7E3] pt-[16px] flex flex-col gap-[8px] transition-opacity duration-200 ease-out group-hover:opacity-35">
-                <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
-                  <span className="font-semibold text-[#0A0A0A]">octen-embedding-8b</span>
-                  <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">$0.07 / 1M tokens</span>
-                </div>
-                <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
-                  <span className="font-semibold text-[#0A0A0A]">octen-embedding-0.6b</span>
-                  <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">$0.01 / 1M tokens</span>
-                </div>
+                <span className="font-['DM_Sans',sans-serif] text-[14px] leading-[20px] text-[#57575E]">
+                  Smaller models cost less, larger models rank better.
+                </span>
               </div>
             </div>
             {/* Absolute Hover Get Started Container (Figma spec: h 78px, bottom 0, p 30px 28px 16px 0, linear-gradient 180deg) */}

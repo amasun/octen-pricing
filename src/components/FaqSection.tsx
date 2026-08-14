@@ -10,12 +10,12 @@ export default function FaqSection() {
       a: "Octen combines real-time Pay-As-You-Go API credit deductions with monthly QPS subscription plans for guaranteed search throughput and priority SLAs."
     },
     {
-      q: "How do I claim my $5 free credit?",
-      a: "New developer accounts automatically receive $5 in free balance upon registration—no credit card required to start testing API requests."
+      q: "Is the $5 free balance automatic?",
+      a: "Yes, new developer accounts automatically receive $5 in free balance upon registration—no credit card or manual claim required to start testing API requests."
     },
     {
-      q: "How do Prompt Cache Read and Write discounts work?",
-      a: "Cached system prompt tokens receive up to 90% discount on cache reads for supported models, significantly lowering long-context search synthesis costs."
+      q: "What happens when I exceed my QPS limit?",
+      a: "API requests exceeding your reserved QPS receive a 429 status code. Free tier accounts can unlock up to 20 QPS by topping up credits, or subscribe to a QPS Plan for guaranteed throughput."
     },
     {
       q: "Can I upgrade or scale my QPS plan at any time?",

@@ -276,8 +276,7 @@ export default function QpsPricingGrid() {
       price: "0",
       features: [
         { text: <>Up to <strong className="font-bold">20 QPS</strong> Limit</>, icon: "branch" },
-        { text: "Starts at 10 QPS. Auto-unlocks when adding credits", icon: "check" },
-        { text: "Standard community support", icon: "check" }
+        { text: "Starts at 10 QPS. Auto-unlocks when adding credits", icon: "check" }
       ],
       buttonText: "Start Free"
     },
@@ -289,10 +288,7 @@ export default function QpsPricingGrid() {
       discountBadge: "30% Off",
       isPopular: true,
       features: [
-        { text: <>Up to <strong className="font-bold">50 QPS</strong> Limit</>, icon: "branch" },
-        { text: "Dedicated priority queue", icon: "check" },
-        { text: "Guaranteed throughput and SLA", icon: "flash" },
-        { text: "Standard email support", icon: "check" }
+        { text: <>Up to <strong className="font-bold">50 QPS</strong> Limit</>, icon: "branch" }
       ],
       buttonText: "Subscribe"
     },
@@ -301,10 +297,7 @@ export default function QpsPricingGrid() {
       subtitle: "Scaling Production",
       price: "13,999",
       features: [
-        { text: <>Up to <strong className="font-bold">200 QPS</strong> Limit</>, icon: "branch" },
-        { text: "Dedicated priority queue", icon: "check" },
-        { text: "Guaranteed throughput and SLA", icon: "flash" },
-        { text: "Standard email support", icon: "check" }
+        { text: <>Up to <strong className="font-bold">200 QPS</strong> Limit</>, icon: "branch" }
       ],
       buttonText: "Subscribe"
     },
@@ -313,10 +306,7 @@ export default function QpsPricingGrid() {
       subtitle: "High Throughput",
       price: "33,999",
       features: [
-        { text: <>Up to <strong className="font-bold">500 QPS</strong> Limit</>, icon: "branch" },
-        { text: "Dedicated priority queue", icon: "check" },
-        { text: "Guaranteed throughput and SLA", icon: "flash" },
-        { text: "Standard email support", icon: "check" }
+        { text: <>Up to <strong className="font-bold">500 QPS</strong> Limit</>, icon: "branch" }
       ],
       buttonText: "Subscribe"
     },
@@ -326,7 +316,7 @@ export default function QpsPricingGrid() {
       price: "Custom",
       period: "Tailored Plan",
       features: [
-        { text: <>Up to <strong className="font-bold">1M+ QPS</strong></>, icon: "branch" },
+        { text: <><strong className="font-bold">1M+ QPS</strong></>, icon: "branch" },
         { text: "Zero Data Retention (ZDR)", icon: "zdr" },
         { text: "SOC 2 Type 2", icon: "contract" },
         { text: "Dedicated Slack channel support", icon: "slack" },
@@ -346,7 +336,7 @@ export default function QpsPricingGrid() {
           QPS Plan
         </h2>
         <p className="font-['DM_Sans',sans-serif] font-normal text-[16px] leading-[22px] sm:leading-[26px] text-[#5d605b] max-w-[680px]">
-          Reserved QPS for Broad Search and Web Search.
+          Pay as you go for usage. Add QPS when you need reserved search throughput.
         </p>
       </div>
 
