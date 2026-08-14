@@ -1,31 +1,48 @@
 import { useState } from "react";
 import svgPaths from "./svgPaths";
 import CurvedLightTrailsCanvas from "./CurvedLightTrailsCanvas";
+import DitherBackgroundCanvas from "./DitherBackgroundCanvas";
 import imgShader2 from "../../imports/4dd5750c60a3ca94cca35fcd8f4b9c20eccd90e1.png";
-
-function AccessTag() {
-  return (
-    <div 
-      className="backdrop-blur-[10px] bg-[rgba(0,0,0,0.3)] content-stretch flex gap-[4px] h-[30px] items-center px-[20px] py-[6px] relative rounded-[19.462px] shrink-0 select-none pointer-events-none"
-    >
-      <div aria-hidden className="absolute border border-[#cfff55]/30 border-solid inset-0 pointer-events-none rounded-[19.462px]" />
-      <p className="[word-break:break-word] bg-clip-text font-['DM_Sans',sans-serif] font-normal leading-[20px] relative shrink-0 text-[14px] text-[transparent] text-center whitespace-nowrap" style={{ backgroundImage: "linear-gradient(-89.9285deg, rgb(207, 255, 85) 0%, rgb(131, 222, 131) 99.988%)" }}>
-        Get access
-      </p>
-    </div>
-  );
-}
+import imgDither1 from "../../imports/64635f1bb002f492bde3cdcba5e5dadaf111f260.png";
 
 function HeroHeader() {
   return (
-    <div className="content-stretch flex flex-col gap-[16px] sm:gap-[20px] items-center pb-[20px] pt-[32px] sm:pt-[64px] px-4 md:px-[156px] relative shrink-0 w-full max-w-[1000px]">
-      <AccessTag />
+    <div className="content-stretch flex flex-col gap-[14px] sm:gap-[18px] items-center pb-0 pt-[32px] sm:pt-[64px] px-4 md:px-[156px] relative shrink-0 w-full max-w-[1000px]">
       <h1 className="[word-break:break-word] bg-clip-text font-['Fraunces',serif] font-normal leading-none py-[6px] w-full text-center relative shrink-0 text-[32px] sm:text-[48px] md:text-[60px] text-[transparent]" style={{ fontVariationSettings: '"SOFT" 0, "WONK" 1', backgroundImage: "linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%), linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(136, 136, 136) 27.404%, rgb(0, 0, 0) 50.962%)" }}>
         Plan and Pricing
       </h1>
-      <p className="font-['DM_Sans',sans-serif] font-normal leading-[1.2] relative shrink-0 text-[15px] sm:text-[18px] text-center text-white whitespace-normal sm:whitespace-nowrap px-0">
-        To use Octen, you need both a monthly QPS Plan and pay-as-you-go API credits
+      <p className="font-['DM_Sans',sans-serif] font-normal leading-[1.2] relative shrink-0 text-[16px] sm:text-[20px] text-center text-white/90 whitespace-normal sm:whitespace-nowrap px-0">
+        Enhance your AI Engineering with Octen’s Real-Time Search Engine
       </p>
+      <p className="font-['DM_Sans',sans-serif] font-normal text-[16px] leading-[120%] text-white text-center mt-1 select-text">
+        Sign up now and get <span className="font-bold text-[#70FE7E]">$5 free balance</span>.
+      </p>
+      <a 
+        href="https://octen.ai/platform/billing"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group bg-transparent hover:bg-[#60ff70]/10 active:scale-[0.97] border border-[#60ff70] transition-all duration-200 ease-out inline-flex items-center justify-center h-[48px] px-[20px] gap-[8px] rounded-[10px] shrink-0 cursor-pointer select-none box-border mt-1"
+      >
+        <span className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-none text-[#60ff70] whitespace-nowrap">
+          Get Start
+        </span>
+        <svg 
+          className="size-[16px] shrink-0 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" 
+          width="16" 
+          height="16" 
+          viewBox="0 0 16 16" 
+          fill="none" 
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path 
+            d="M3 13L13 3M13 3H5M13 3V11" 
+            stroke="#60ff70" 
+            strokeWidth="2" 
+            strokeLinecap="round" 
+            strokeLinejoin="round"
+          />
+        </svg>
+      </a>
     </div>
   );
 }
@@ -390,29 +407,23 @@ function QpsPlanCard() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <a 
-      href="#qps-plans"
+    <div 
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="drop-shadow-[0px_1px_1px_rgba(0,0,0,0.05)] w-full md:flex-[1_0_0] md:min-w-px relative rounded-[24px] hover:-translate-y-[4px] hover:scale-[1.015] hover:shadow-[0px_16px_36px_rgba(112,254,126,0.3)] transition-all duration-300 ease-out cursor-pointer select-none block group overflow-hidden"
+      className="w-full md:flex-[1_0_0] md:min-w-px relative rounded-[24px] bg-white border border-[#E5E7EB] hover:border-[#D1D5DB] hover:-translate-y-[3px] hover:shadow-[0px_12px_28px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out select-text block overflow-hidden cursor-default"
     >
-      <div aria-hidden className="absolute inset-0 pointer-events-none rounded-[24px]">
-        <div className="absolute inset-0 rounded-[24px]" style={{ backgroundImage: "linear-gradient(0deg, rgba(5, 205, 65, 0.2) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(90deg, rgb(33, 33, 33) 0%, rgb(33, 33, 33) 100%)" }} />
-        <div className="absolute bg-gradient-to-b from-[65.222%] from-[rgba(0,0,0,0)] inset-0 mix-blend-screen rounded-[24px] to-[rgba(67,255,95,0.3)] group-hover:to-[rgba(67,255,95,0.5)] transition-all duration-300" />
-        <div className="absolute bg-gradient-to-b from-[#2fee65] inset-0 rounded-[24px] to-[#c0f9a6]" />
-      </div>
       <div className="flex flex-col items-center justify-center size-full p-[6px] relative z-10">
         <QpsCardGraphic isHovered={isHovered} />
-        <div className="content-stretch flex flex-col gap-[8px] items-center pb-[12px] pt-[20px] relative shrink-0 text-center w-full">
-          <p className="font-['Fraunces',serif] font-semibold text-[20px] text-[#09090b] leading-[1.3] py-[4px] w-full text-center relative shrink-0">
-            Subscribe QPS Plan
+        <div className="content-stretch flex flex-col gap-[6px] items-center pb-[16px] pt-[20px] relative shrink-0 text-center w-full">
+          <p className="font-['Fraunces',serif] font-bold text-[20px] sm:text-[22px] text-[#09090b] leading-[1.2] py-[2px] w-full text-center relative shrink-0 select-text">
+            Subscribe <span className="font-bold">QPS Plan</span>
           </p>
-          <p className="font-['DM_Sans',sans-serif] font-normal text-black/70 relative shrink-0 text-[14px] whitespace-nowrap">
+          <p className="font-['DM_Sans',sans-serif] font-normal text-[#515151] relative shrink-0 text-[14px] whitespace-nowrap select-text">
             Reserves your max search QPS
           </p>
         </div>
       </div>
-    </a>
+    </div>
   );
 }
 
@@ -420,68 +431,59 @@ function PayAsYouGoCard() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <a 
-      href="#api-pricing"
+    <div 
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="drop-shadow-[0px_1px_1px_rgba(0,0,0,0.05)] w-full md:flex-[1_0_0] md:min-w-px relative rounded-[24px] hover:-translate-y-[4px] hover:scale-[1.015] hover:shadow-[0px_16px_36px_rgba(112,254,126,0.3)] transition-all duration-300 ease-out cursor-pointer select-none block group overflow-hidden"
+      className="w-full md:flex-[1_0_0] md:min-w-px relative rounded-[24px] bg-white border border-[#E5E7EB] hover:border-[#D1D5DB] hover:-translate-y-[3px] hover:shadow-[0px_12px_28px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out select-text block overflow-hidden cursor-default"
     >
-      <div aria-hidden className="absolute inset-0 pointer-events-none rounded-[24px]">
-        <div className="absolute inset-0 rounded-[24px]" style={{ backgroundImage: "linear-gradient(0deg, rgba(5, 205, 65, 0.2) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(90deg, rgb(33, 33, 33) 0%, rgb(33, 33, 33) 100%)" }} />
-        <div className="absolute bg-gradient-to-b from-[65.222%] from-[rgba(0,0,0,0)] inset-0 mix-blend-screen rounded-[24px] to-[rgba(67,255,95,0.3)] group-hover:to-[rgba(67,255,95,0.5)] transition-all duration-300" />
-        <div className="absolute bg-gradient-to-b from-[#2fee65] inset-0 rounded-[24px] to-[#c0f9a6]" />
-      </div>
       <div className="flex flex-col items-center justify-center size-full p-[6px] relative z-10">
         <PayAsYouGoGraphic isHovered={isHovered} />
-        <div className="content-stretch flex flex-col gap-0 items-center pb-[12px] pt-[20px] relative shrink-0 text-center w-full">
-          <p className="font-['Fraunces',serif] font-semibold text-[20px] text-[#09090b] leading-[1.3] py-[4px] w-full text-center relative shrink-0">
+        <div className="content-stretch flex flex-col gap-[6px] items-center pb-[16px] pt-[20px] relative shrink-0 text-center w-full">
+          <p className="font-['Fraunces',serif] font-bold text-[20px] sm:text-[22px] text-[#09090b] leading-[1.2] py-[2px] w-full text-center relative shrink-0 select-text">
             Pay as you go
           </p>
-          <p className="font-['DM_Sans',sans-serif] font-normal text-black/70 relative shrink-0 text-[14px] whitespace-nowrap">
+          <p className="font-['DM_Sans',sans-serif] font-normal text-[#515151] relative shrink-0 text-[14px] whitespace-nowrap select-text">
             Covers actual API and token usage
           </p>
         </div>
       </div>
-    </a>
+    </div>
   );
 }
 
 function PlusSeparator() {
   return (
     <div className="relative md:absolute md:-translate-x-1/2 md:-translate-y-1/2 md:left-1/2 md:top-1/2 mx-auto shrink-0 z-20 pointer-events-none flex items-center justify-center h-[20px] w-full md:w-[38px] md:h-[38px] md:size-[38px] my-0 md:my-0">
-      {/* 259px Vertical Green Gradient Line (Desktop) */}
-      <div className="absolute h-[259px] w-[2px] left-[18px] top-[-110px] hidden md:block overflow-visible">
-        <svg className="block w-[2px] h-[259px] overflow-visible" fill="none" viewBox="0 0 2 259">
-          <path d="M1 0V259" stroke="url(#paint0_linear_sep_v)" strokeWidth="1.5" />
-          <defs>
-            <linearGradient id="paint0_linear_sep_v" x1="1" x2="1" y1="0" y2="259" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#70FE7E" stopOpacity="0" />
-              <stop offset="0.5" stopColor="#70FE7E" />
-              <stop offset="1" stopColor="#70FE7E" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-
-      {/* 259px Horizontal Green Gradient Line (Mobile) */}
-      <div className="block md:hidden w-[259px] max-w-[80%] h-[2px] relative overflow-visible">
-        <svg className="block w-full h-[2px] overflow-visible" fill="none" viewBox="0 0 259 2" preserveAspectRatio="none">
-          <path d="M0 1H259" stroke="url(#paint0_linear_sep_h)" strokeWidth="1.5" />
-          <defs>
-            <linearGradient id="paint0_linear_sep_h" x1="0" y1="1" x2="259" y2="1" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#70FE7E" stopOpacity="0" />
-              <stop offset="0.5" stopColor="#70FE7E" />
-              <stop offset="1" stopColor="#70FE7E" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
+      {/* Vector 1: Vertical linear gradient connecting line per Figma spec */}
+      <svg 
+        className="absolute hidden md:block pointer-events-none z-0 overflow-visible" 
+        style={{
+          width: "1px",
+          height: "259.21px",
+          left: "18.75px",
+          top: "-110.54px",
+          opacity: 0.6
+        }}
+        viewBox="0 0 1 260" 
+        fill="none"
+      >
+        <defs>
+          <linearGradient id="vector1_line_gradient" x1="0" y1="0" x2="0" y2="259.21" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#000000" stopOpacity="0"/>
+            <stop offset="0.3" stopColor="#000000" stopOpacity="0.5"/>
+            <stop offset="0.5" stopColor="#000000" stopOpacity="0.9"/>
+            <stop offset="0.7" stopColor="#000000" stopOpacity="0.5"/>
+            <stop offset="1" stopColor="#000000" stopOpacity="0"/>
+          </linearGradient>
+        </defs>
+        <line x1="0.5" y1="0" x2="0.5" y2="259.21" stroke="url(#vector1_line_gradient)" strokeWidth="1" />
+      </svg>
 
       {/* Center Plus Icon Button */}
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 size-[20px] pointer-events-auto">
-        <div className="bg-[#70fe7e] rounded-[55px] size-[20px] border border-[#70fe7e] flex items-center justify-center shadow-[0_0_12px_rgba(112,254,126,0.6)]">
-          <svg className="size-[12px]" viewBox="0 0 12 12" fill="none">
-            <path d={svgPaths.p654ea80} stroke="black" strokeWidth="1.5" strokeLinecap="round" />
+      <div className="size-[20px] pointer-events-auto relative z-10">
+        <div className="bg-black rounded-full size-[20px] border border-black flex items-center justify-center shadow-sm">
+          <svg className="size-[11px]" viewBox="0 0 12 12" fill="none">
+            <path d="M6 1.5v9M1.5 6h9" stroke="#70FE7E" strokeWidth="1.6" strokeLinecap="round" />
           </svg>
         </div>
       </div>
@@ -489,53 +491,11 @@ function PlusSeparator() {
   );
 }
 
-function ClaimBalanceBanner() {
-  return (
-    <div 
-      className="content-stretch flex flex-col sm:flex-row items-center justify-between overflow-clip py-[12px] pr-[16px] pl-[20px] relative rounded-[16px] shrink-0 w-full max-w-[960px] min-h-[72px] gap-[10px] border border-[rgba(3,160,105,0.56)] box-border"
-      style={{
-        background: "linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(90deg, rgba(0, 134, 37, 0.8) 0%, rgba(0, 134, 37, 0.8) 100%)"
-      }}
-    >
-      <p className="font-['DM_Sans',sans-serif] font-normal text-[16px] leading-[120%] text-white text-center sm:text-left my-auto">
-        All new users will receive{" "}
-        <span className="font-bold text-[#70fe7e]">$5 in free balance</span>
-        {" "}upon registration.
-      </p>
-      <a 
-        href="https://octen.ai/platform/billing"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group bg-[#70FE7E] hover:bg-[#85ff91] hover:-translate-y-[1px] active:scale-[0.96] transition-all duration-200 ease-out content-stretch flex items-center justify-center py-[12px] pr-[16px] pl-[20px] gap-[10px] relative rounded-[12px] shrink-0 cursor-pointer select-none h-[48px] box-border"
-      >
-        <span className="font-['DM_Sans',sans-serif] font-semibold text-[16px] leading-none text-black whitespace-nowrap">
-          Claim Free Balance
-        </span>
-        <svg 
-          className="size-[15.57px] shrink-0 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" 
-          width="16" 
-          height="16" 
-          viewBox="0 0 16 16" 
-          fill="none" 
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path 
-            d="M3 13L13 3M13 3H5M13 3V11" 
-            stroke="#000000" 
-            strokeWidth="2" 
-            strokeLinecap="round" 
-            strokeLinejoin="round"
-          />
-        </svg>
-      </a>
-    </div>
-  );
-}
-
 function HeroLightGlow() {
   return (
     <div 
-      className="absolute w-[2002px] h-[323px] left-[calc(50%-1001px)] top-[-219.56px] opacity-60 pointer-events-none z-[2] overflow-visible"
+      className="absolute w-[2002px] h-[323px] left-[calc(50%-1001px)] top-[-219.56px] pointer-events-none z-[2] overflow-visible"
+      style={{ opacity: 0.6 }}
       data-name="light"
     >
       <div className="absolute w-[2001px] h-[323px] left-[0.46px] top-0 pointer-events-none">
@@ -554,23 +514,51 @@ function HeroLightGlow() {
   );
 }
 
+function HowOctenWorksSection() {
+  return (
+    <div className="bg-white content-stretch flex flex-col items-center pt-[60px] sm:pt-[84px] pb-[50px] sm:pb-[80px] px-4 sm:px-6 relative w-full isolate">
+      {/* Title & Subtitle per user screenshot */}
+      <div className="text-center flex flex-col items-center gap-2 sm:gap-3 shrink-0 px-4 mb-[36px] sm:mb-[48px]">
+        <h2 className="font-['Fraunces',serif] font-bold text-[32px] sm:text-[52px] leading-[1.1] text-[#09090b]">
+          How Octen works
+        </h2>
+        <p className="font-['DM_Sans',sans-serif] font-normal text-[14px] sm:text-[16px] leading-[24px] text-[#5d605b] text-center max-w-[800px]">
+          To use Octen, you need both pay-as-you-go API credits and a monthly QPS Plan
+        </p>
+      </div>
+
+      {/* Entry Cards Container (Pay as you go on LEFT, QPS Plan on RIGHT) */}
+      <div className="content-stretch flex flex-col md:flex-row gap-[10px] md:gap-[34px] items-center justify-center relative shrink-0 w-full md:w-[960px] max-w-full">
+        <PayAsYouGoCard />
+        <PlusSeparator />
+        <QpsPlanCard />
+      </div>
+    </div>
+  );
+}
+
 export default function HeroSection() {
   return (
-    <div 
-      className="content-stretch flex flex-col items-center pb-[40px] sm:pb-[80px] pt-[64px] sm:pt-[80px] px-4 sm:px-[320px] relative size-full w-full overflow-hidden isolate"
-      style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 136, 13, 0.65) 0%, rgba(0, 136, 13, 0.2) 45%, rgba(0, 0, 0, 0.95) 80%, #000000 100%), linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%)" }}
-      data-name="hero"
-    >
-      <HeroLightGlow />
-      <HeroHeader />
-      <div className="content-stretch flex flex-col items-center pb-[20px] sm:pb-[30px] pt-[16px] sm:pt-[40px] relative rounded-[20px] shrink-0 w-full max-w-[1280px] z-10">
-        <div className="content-stretch flex flex-col md:flex-row gap-[10px] md:gap-[34px] items-center justify-center relative shrink-0 w-full md:w-[960px] max-w-full">
-          <QpsPlanCard />
-          <PlusSeparator />
-          <PayAsYouGoCard />
+    <>
+      <div 
+        className="content-stretch flex flex-col items-center pt-[76px] sm:pt-[100px] pb-[80px] sm:pb-[110px] px-4 sm:px-[320px] relative size-full w-full overflow-hidden isolate bg-[#080B12]"
+        style={{
+          background: "linear-gradient(180deg, rgba(17, 70, 43, 0.6) 0%, rgba(8, 11, 18, 0) 100%), #080B12"
+        }}
+        data-name="hero"
+      >
+        {/* Dynamic WebGL Dither Shader Background Layer */}
+        <div className="absolute inset-0 size-full pointer-events-none z-0 overflow-hidden opacity-35 mix-blend-screen">
+          <DitherBackgroundCanvas fallbackSrc={imgDither1} />
+        </div>
+
+        <HeroLightGlow />
+        <div className="relative z-10 w-full flex flex-col items-center" data-name="hero-content">
+          <HeroHeader />
         </div>
       </div>
-      <ClaimBalanceBanner />
-    </div>
+
+      <HowOctenWorksSection />
+    </>
   );
 }

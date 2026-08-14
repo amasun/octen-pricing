@@ -76,7 +76,7 @@ export default function FaqSection() {
 
                 <div className="relative rounded-full shrink-0 size-[26px] flex items-center justify-center transition-colors duration-300 bg-[#ebebeb]">
                   <svg 
-                    className={`size-[15px] transition-transform duration-300 ease-in-out ${isOpen ? 'rotate-45' : 'rotate-0'}`}
+                    className={`size-[16px] transition-transform duration-300 ease-in-out ${isOpen ? 'rotate-45' : 'rotate-0'}`}
                     style={{ transformOrigin: 'center center' }}
                     viewBox="0 0 20 20" 
                     fill="none"

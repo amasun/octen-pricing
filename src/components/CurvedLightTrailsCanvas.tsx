@@ -55,7 +55,12 @@ export default function CurvedLightTrailsCanvas({
           ...params
         });
         engineRef.current = engine;
-        engine.start();
+        engine.renderOnce();
+        if (isAnimating) {
+          engine.start();
+        } else {
+          engine.stop();
+        }
       } catch (err) {
         console.warn("WebGL2 initialization failed for CurvedLightTrails, falling back to placeholder image:", err);
         setHasError(true);
@@ -92,10 +97,12 @@ export default function CurvedLightTrailsCanvas({
 
     if (isAnimating) {
       engine.setParams({ speed: 1.8, lineDensity: 36, intensity: 0.8, heightAnim: true, densityAnim: true, heightAnimMin: 0.12, densityAnimMin: 20 });
+      engine.start();
     } else {
-      engine.setParams({ speed: 1.0, heightScale: 0.23, heightAnim: false, lineDensity: 24, densityAnim: false, intensity: 0.5 });
+      engine.setParams({ speed: 0.0, heightScale: 0.23, heightAnim: false, lineDensity: 24, densityAnim: false, intensity: 0.5 });
+      engine.renderOnce();
+      engine.stop();
     }
-    engine.start();
   }, [isAnimating]);
 
   if (hasError && fallbackSrc) {

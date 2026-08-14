@@ -125,7 +125,7 @@ function PlanCardItem({
       {isPopular && (
         <div className="h-[28px] py-0 px-1.5 text-center flex items-center justify-center gap-[10px] shrink-0 overflow-hidden">
           <p className="font-['DM_Sans',sans-serif] font-medium text-[13px] leading-[13px] whitespace-nowrap truncate text-[#276533] uppercase tracking-wider">
-            Most Popular
+            Recommended Plan
           </p>
         </div>
       )}
@@ -159,11 +159,11 @@ function PlanCardItem({
                 </div>
                 <div className="flex flex-row flex-wrap items-baseline justify-start gap-x-[6px] gap-y-0 -translate-y-[3px] pb-[4px] flex-1">
                   {originalPrice && (
-                    <span className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[15px] text-[#7C7C79] line-through whitespace-nowrap">
+                    <span className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[16px] text-[#7C7C79] line-through whitespace-nowrap">
                       {originalPrice}
                     </span>
                   )}
-                  <span className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[15px] text-[#7C7C79] whitespace-nowrap">
+                  <span className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[16px] text-[#7C7C79] whitespace-nowrap">
                     {period}
                   </span>
                 </div>
@@ -341,7 +341,7 @@ export default function QpsPricingGrid() {
   ];
 
   return (
-    <div id="qps-plans" className="content-stretch flex flex-col gap-[24px] sm:gap-[36px] items-center pb-[60px] sm:pb-[120px] pt-[40px] sm:pt-[60px] px-4 relative shrink-0 w-full max-w-[1312px] box-border">
+    <div className="content-stretch flex flex-col items-center gap-[24px] sm:gap-[36px] pb-[60px] sm:pb-[100px] pt-[50px] sm:pt-[80px] relative shrink-0 w-full max-w-[1312px] px-4 box-border" id="qps-plans">
       {/* Title Header */}
       <div className="text-center flex flex-col items-center gap-2 sm:gap-3 shrink-0 px-4">
         <h2 className="font-['Fraunces',serif] font-bold text-[28px] sm:text-[44px] leading-[1.15] sm:leading-[48px] text-[#09090b]">
