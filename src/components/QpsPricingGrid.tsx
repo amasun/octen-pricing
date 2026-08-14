@@ -373,9 +373,7 @@ export default function QpsPricingGrid() {
               <a href="https://docs.octen.ai/resources/rate-limits" target="_blank" rel="noopener noreferrer" className="text-[#039855] font-medium underline hover:text-[#027a44] transition-colors duration-150">
                 rate limits
               </a>
-              . Requests above any limit are rejected with a{" "}
-              <code className="font-['IBM_Plex_Mono',monospace] text-[12px] leading-[20px] bg-[#FFFFFF] px-[6px] py-[1px] rounded-[4px] border border-[#E7E7E3] inline-block">429</code>
-              . Upgrades take effect immediately; downgrades take effect the following month.
+              .
             </p>
           </div>
         </div>
