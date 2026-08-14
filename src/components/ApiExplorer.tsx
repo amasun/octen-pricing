@@ -232,14 +232,14 @@ export default function ApiExplorer() {
               <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] text-[#0A0A0A] tracking-tight">Extract</span>
             </div>
             <p className="font-['DM_Sans',sans-serif] text-[14px] leading-[22px] text-[#57575E] m-0 max-w-[620px]">
-              Turn any URL into clean markdown, with intent-focused highlights and page classification. Only successful parses are billed.
+              Turn any URL into clean markdown, with intent-focused highlights and page classification.
             </p>
           </div>
           <div className="relative flex flex-row items-center shrink-0">
             {/* Price shifts left on hover to make room for Get started button */}
             <div className="flex items-baseline gap-[8px] flex-wrap transition-transform duration-200 ease-out group-hover:-translate-x-[115px]">
               <span className="font-['DM_Sans',sans-serif] font-medium text-[34px] leading-none text-[#0A0A0A] tracking-tight">$1</span>
-              <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#57575E]">/ 1k successful URLs</span>
+              <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#57575E]">/ 1k URLs</span>
             </div>
             {/* Get started button inside card right side (no background gradient) */}
             <a
