@@ -451,12 +451,12 @@ function PayAsYouGoCard() {
 
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    scrollToAnchor("api-pricing");
+    scrollToAnchor("pay-as-you-go");
   };
 
   return (
     <a 
-      href="#api-pricing"
+      href="#pay-as-you-go"
       onClick={handleClick}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
