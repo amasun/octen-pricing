@@ -100,10 +100,10 @@ export default function Navbar() {
       data-name="Header Navigation"
     >
       <div
-        className={`w-full max-w-[1438px] mx-auto flex items-center justify-between transition-all duration-300 box-border ${
+        className={`w-full max-w-[1440px] mx-auto flex items-center justify-between transition-all duration-300 box-border p-2 px-7 h-[52px] ${
           isScrolled
-            ? "bg-white border border-[#E7E7E3] rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.06)] px-6 py-2 h-[56px]"
-            : "bg-transparent border border-transparent rounded-none shadow-none px-7 py-3 h-[52px]"
+            ? "bg-[#FCFCF8]/90 backdrop-blur-md border border-[#E7E7E3] rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.06)]"
+            : "bg-transparent border border-transparent rounded-none shadow-none"
         }`}
       >
         <LogoDark />

@@ -18,6 +18,8 @@
   --primary-lite: #00a63e;
   --primary-dark: #60ff70;
   --bg-dark: #080b12;
+  --background: #fcfcf8;
+  --foreground: #0f172b;
   --yellow: #d8780a;
   --green: #14b8a6;
   --purple: #8b5cf6;
@@ -25,6 +27,13 @@
   --radius-sm: 8px;
   --radius-md: 10px;
   --radius-lg: 12px;
+
+  /* User OKLCh Palette & Tokens */
+  --color-green-500: oklch(72.3% .219 149.579);
+  --color-green-600: oklch(62.7% .194 149.214);
+  --color-emerald-500: oklch(69.6% .17 162.48);
+  --color-slate-500: oklch(55.4% .046 257.417);
+  --color-slate-900: oklch(20.8% .042 265.755);
 }
 
 html {
