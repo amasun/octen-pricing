@@ -8,6 +8,17 @@ import imgDither1 from "../../imports/64635f1bb002f492bde3cdcba5e5dadaf111f260.p
 function HeroHeader() {
   return (
     <div className="content-stretch flex flex-col gap-[14px] sm:gap-[18px] items-center pb-0 pt-[32px] sm:pt-[64px] px-4 md:px-[156px] relative shrink-0 w-full max-w-[1000px]">
+      {/* Launch Pricing Promo Badge */}
+      <div className="inline-flex items-center gap-[8px] px-[14px] py-[6px] rounded-full bg-[#70FE7E]/10 border border-[#70FE7E]/30 backdrop-blur-md shrink-0 mb-1">
+        <span className="flex h-2 w-2 relative">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#70FE7E] opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-[#70FE7E]"></span>
+        </span>
+        <span className="font-['DM_Sans',sans-serif] font-medium text-[13px] sm:text-[14px] text-[#70FE7E] whitespace-nowrap">
+          Launch pricing &mdash; discounted rates, subject to change
+        </span>
+      </div>
+
       <h1 className="[word-break:break-word] bg-clip-text font-['Fraunces',serif] font-normal leading-none py-[6px] w-full text-center relative shrink-0 text-[32px] sm:text-[48px] md:text-[60px] text-[transparent]" style={{ fontVariationSettings: '"SOFT" 0, "WONK" 1', backgroundImage: "linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%), linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(136, 136, 136) 27.404%, rgb(0, 0, 0) 50.962%)" }}>
         Plans and Pricing
       </h1>
