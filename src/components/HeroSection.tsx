@@ -433,13 +433,13 @@ function QpsPlanCard() {
       onMouseLeave={() => setIsHovered(false)}
       className="w-full md:flex-[1_0_0] md:min-w-px relative rounded-[24px] bg-white border border-[#E5E7EB] hover:border-[#D1D5DB] hover:-translate-y-[3px] hover:shadow-[0px_12px_28px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out block overflow-hidden cursor-pointer select-text"
     >
-      <div className="flex flex-col items-center justify-center size-full p-[6px] relative z-10 select-text">
+      <div className="flex flex-col items-center justify-center size-full p-[6px] relative z-10 select-text cursor-pointer">
         <QpsCardGraphic isHovered={isHovered} />
-        <div className="content-stretch flex flex-col gap-[6px] items-center pb-[16px] pt-[20px] relative shrink-0 text-center w-full select-text">
-          <p className="font-['Fraunces',serif] font-bold text-[20px] sm:text-[22px] text-[#09090b] leading-[1.2] py-[2px] w-full text-center relative shrink-0 select-text cursor-text">
-            Subscribe to a <span className="font-bold select-text cursor-text">QPS Plan</span>
+        <div className="content-stretch flex flex-col gap-[6px] items-center pb-[16px] pt-[20px] relative shrink-0 text-center w-full select-text cursor-pointer">
+          <p className="font-['Fraunces',serif] font-bold text-[20px] sm:text-[22px] text-[#09090b] leading-[1.2] py-[2px] w-full text-center relative shrink-0 select-text cursor-pointer">
+            Subscribe to a <span className="font-bold select-text cursor-pointer">QPS Plan</span>
           </p>
-          <p className="font-['DM_Sans',sans-serif] font-normal text-[#515151] relative shrink-0 text-[14px] whitespace-nowrap select-text cursor-text">
+          <p className="font-['DM_Sans',sans-serif] font-normal text-[#515151] relative shrink-0 text-[14px] whitespace-nowrap select-text cursor-pointer">
             Reserves your max search QPS
           </p>
         </div>
@@ -466,13 +466,13 @@ function PayAsYouGoCard() {
       onMouseLeave={() => setIsHovered(false)}
       className="w-full md:flex-[1_0_0] md:min-w-px relative rounded-[24px] bg-white border border-[#E5E7EB] hover:border-[#D1D5DB] hover:-translate-y-[3px] hover:shadow-[0px_12px_28px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out block overflow-hidden cursor-pointer select-text"
     >
-      <div className="flex flex-col items-center justify-center size-full p-[6px] relative z-10 select-text">
+      <div className="flex flex-col items-center justify-center size-full p-[6px] relative z-10 select-text cursor-pointer">
         <PayAsYouGoGraphic isHovered={isHovered} />
-        <div className="content-stretch flex flex-col gap-[6px] items-center pb-[16px] pt-[20px] relative shrink-0 text-center w-full select-text">
-          <p className="font-['Fraunces',serif] font-bold text-[20px] sm:text-[22px] text-[#09090b] leading-[1.2] py-[2px] w-full text-center relative shrink-0 select-text cursor-text">
+        <div className="content-stretch flex flex-col gap-[6px] items-center pb-[16px] pt-[20px] relative shrink-0 text-center w-full select-text cursor-pointer">
+          <p className="font-['Fraunces',serif] font-bold text-[20px] sm:text-[22px] text-[#09090b] leading-[1.2] py-[2px] w-full text-center relative shrink-0 select-text cursor-pointer">
             Pay as you go
           </p>
-          <p className="font-['DM_Sans',sans-serif] font-normal text-[#515151] relative shrink-0 text-[14px] whitespace-nowrap select-text cursor-text">
+          <p className="font-['DM_Sans',sans-serif] font-normal text-[#515151] relative shrink-0 text-[14px] whitespace-nowrap select-text cursor-pointer">
             Covers actual API and token usage
           </p>
         </div>
