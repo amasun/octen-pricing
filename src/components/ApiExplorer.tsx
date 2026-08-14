@@ -482,11 +482,9 @@ export default function ApiExplorer() {
             <div className="flex items-center gap-[10px] flex-wrap">
               <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] text-[#0A0A0A] tracking-tight">Model Gateway</span>
               <span className="h-[24px] px-[8px] bg-[#70FE7E] rounded-[6px] flex items-center justify-center gap-[4px] font-['JetBrains_Mono',monospace] font-medium text-[13px] leading-[13px] text-[#100F09] whitespace-nowrap shrink-0">
-                <svg className="size-[14px] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="3" y="8" width="18" height="4" rx="1"/>
-                  <path d="M12 8v13"/>
-                  <path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/>
-                  <path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 4.8 0 0 1 12 8a4.8 4.8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/>
+                <svg className="w-[15px] h-[15px] shrink-0 text-[#100F09]" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.6984 11.6984C10.5849 12.8119 9.07472 13.4375 7.5 13.4375C5.92528 13.4375 4.41505 12.8119 3.30155 11.6984C2.18806 10.5849 1.5625 9.07472 1.5625 7.5C1.5625 5.92528 2.18806 4.41505 3.30155 3.30155C4.41505 2.18806 5.92528 1.5625 7.5 1.5625C9.07472 1.5625 10.5849 2.18806 11.6984 3.30155C12.8119 4.41505 13.4375 5.92528 13.4375 7.5C13.4375 9.07472 12.8119 10.5849 11.6984 11.6984Z" stroke="currentColor" strokeWidth="1.39286" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M5.625 9.02062C5.66487 9.48059 5.88364 9.90654 6.23426 10.2069C6.58488 10.5073 7.03937 10.6581 7.5 10.6269C9.0125 10.6269 9.375 9.75812 9.375 9.02062C9.375 8.28312 8.75 7.50188 7.5 7.50188C6.25 7.50188 5.625 7.00812 5.625 6.00187C5.63666 5.77038 5.69501 5.54364 5.79656 5.33529C5.89811 5.12693 6.04076 4.94127 6.21591 4.78947C6.39107 4.63766 6.59512 4.52286 6.81579 4.45195C7.03647 4.38105 7.2692 4.35551 7.5 4.37687C7.96095 4.35703 8.41201 4.51432 8.76067 4.81649C9.10932 5.11866 9.32913 5.54279 9.375 6.00187M7.5 11.5625V10.75M7.5 3.4375V4.37438" stroke="currentColor" strokeWidth="1.39286" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
                 <span>15% Rebate Back</span>
               </span>
