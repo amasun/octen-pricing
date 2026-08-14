@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 function Logo({ isDarkTheme }: { isDarkTheme: boolean }) {
   return (
     <a href="#" className="shrink-0 w-[106px] flex items-center" aria-label="Octen AI Home">
