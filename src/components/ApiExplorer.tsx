@@ -486,7 +486,7 @@ export default function ApiExplorer() {
               </a>
               <div className="border-l border-[#039855] pl-[20px] flex items-center">
                 <a
-                  href="https://docs.octen.ai/overview/model-gateway-rebate.md"
+                  href="https://docs.octen.ai/overview/model-gateway-rebate"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-['DM_Sans',sans-serif] font-medium text-[14px] leading-none text-[#039855] hover:text-[#027a44] hover:underline transition-colors whitespace-nowrap"
