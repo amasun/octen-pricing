@@ -145,29 +145,27 @@ function PlanCardItem({
             )}
           </div>
 
-          {/* Price Frequency (DM Mono symbol + DM Sans 40px amount per Figma spec) */}
-          <div className="flex flex-row items-baseline gap-[8px] min-h-[44px]">
+          {/* Price Frequency (Clean items-baseline alignment matching Image 2) */}
+          <div className="flex flex-row items-baseline gap-[6px] min-h-[44px]">
             {price === "Custom" ? (
               <div className="flex items-center h-full">
                 <span className="font-['DM_Sans',sans-serif] font-medium text-[28px] sm:text-[40px] leading-[44px] text-[#100F09]">Custom</span>
               </div>
             ) : (
-              <>
-                <div className="flex items-start">
-                  <span className="font-['DM_Mono',monospace] font-medium text-[20px] leading-[22px] text-[#100F09] pt-[4px] pr-[3px]">$</span>
+              <div className="flex flex-row flex-wrap items-baseline gap-x-[6px] gap-y-0">
+                <div className="flex items-baseline">
+                  <span className="font-['DM_Mono',monospace] font-medium text-[20px] leading-[22px] text-[#100F09] pr-[2px]">$</span>
                   <span className="font-['DM_Sans',sans-serif] font-medium text-[32px] sm:text-[40px] leading-[44px] text-[#100F09]">{price}</span>
                 </div>
-                <div className="flex flex-row flex-wrap items-baseline justify-start gap-x-[6px] gap-y-0 -translate-y-[3px] pb-[4px] flex-1">
-                  {originalPrice && (
-                    <span className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[16px] text-[#7C7C79] line-through whitespace-nowrap">
-                      {originalPrice}
-                    </span>
-                  )}
-                  <span className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[16px] text-[#7C7C79] whitespace-nowrap">
-                    {period}
+                {originalPrice && (
+                  <span className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[20px] text-[#9C9CA4] line-through whitespace-nowrap">
+                    {originalPrice}
                   </span>
-                </div>
-              </>
+                )}
+                <span className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[20px] text-[#57575E] whitespace-nowrap">
+                  {period}
+                </span>
+              </div>
             )}
           </div>
         </div>
