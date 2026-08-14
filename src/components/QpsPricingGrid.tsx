@@ -288,7 +288,10 @@ export default function QpsPricingGrid() {
       discountBadge: "30% Off",
       isPopular: true,
       features: [
-        { text: <>Up to <strong className="font-bold">50 QPS</strong> Limit</>, icon: "branch" }
+        { text: <>Up to <strong className="font-bold">50 QPS</strong> Limit</>, icon: "branch" },
+        { text: "Dedicated priority queue", icon: "check" },
+        { text: "Guaranteed throughput and SLA", icon: "flash" },
+        { text: "Standard email support", icon: "check" }
       ],
       buttonText: "Subscribe"
     },
@@ -297,7 +300,10 @@ export default function QpsPricingGrid() {
       subtitle: "Scaling Production",
       price: "13,999",
       features: [
-        { text: <>Up to <strong className="font-bold">200 QPS</strong> Limit</>, icon: "branch" }
+        { text: <>Up to <strong className="font-bold">200 QPS</strong> Limit</>, icon: "branch" },
+        { text: "Dedicated priority queue", icon: "check" },
+        { text: "Guaranteed throughput and SLA", icon: "flash" },
+        { text: "Standard email support", icon: "check" }
       ],
       buttonText: "Subscribe"
     },
@@ -306,7 +312,10 @@ export default function QpsPricingGrid() {
       subtitle: "High Throughput",
       price: "33,999",
       features: [
-        { text: <>Up to <strong className="font-bold">500 QPS</strong> Limit</>, icon: "branch" }
+        { text: <>Up to <strong className="font-bold">500 QPS</strong> Limit</>, icon: "branch" },
+        { text: "Dedicated priority queue", icon: "check" },
+        { text: "Guaranteed throughput and SLA", icon: "flash" },
+        { text: "Standard email support", icon: "check" }
       ],
       buttonText: "Subscribe"
     },
