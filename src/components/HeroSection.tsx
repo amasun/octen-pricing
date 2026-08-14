@@ -535,14 +535,20 @@ function ClaimBalanceBanner() {
 function HeroLightGlow() {
   return (
     <div 
-      className="absolute w-[2002px] h-[323px] left-[calc(50%-1001px)] top-[-180px] opacity-70 pointer-events-none z-[1] overflow-visible"
+      className="absolute w-[2002px] h-[323px] left-[calc(50%-1001px)] top-[-219.56px] opacity-60 pointer-events-none z-[2] overflow-visible"
       data-name="light"
     >
       <div className="absolute w-[2001px] h-[323px] left-[0.46px] top-0 pointer-events-none">
-        {/* Ellipse 3696: Deep Green Blur */}
-        <div className="absolute left-[0.02%] right-[0.03%] top-0 bottom-0 bg-[#2D985E] blur-[180px] rounded-full pointer-events-none" />
-        {/* Ellipse 3697: Bright Yellow Accent Blur */}
-        <div className="absolute left-[22.61%] right-[22.62%] top-[22.6%] bottom-[22.6%] bg-[#F4FE38] blur-[90px] rounded-full pointer-events-none" />
+        {/* Ellipse 3696: Deep Green Blur (200px) */}
+        <div 
+          className="absolute left-[0.02%] right-[0.03%] top-0 bottom-0 bg-[#2D985E] rounded-full pointer-events-none" 
+          style={{ filter: "blur(200px)" }}
+        />
+        {/* Ellipse 3697: Bright Yellow Accent Blur (100px) */}
+        <div 
+          className="absolute left-[22.61%] right-[22.62%] top-[22.6%] bottom-[22.6%] bg-[#F4FE38] rounded-full pointer-events-none" 
+          style={{ filter: "blur(100px)" }}
+        />
       </div>
     </div>
   );
