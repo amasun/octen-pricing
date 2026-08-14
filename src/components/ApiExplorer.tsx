@@ -475,21 +475,23 @@ export default function ApiExplorer() {
                 <span>15% Rebate Back</span>
               </span>
             </div>
-            <div className="flex items-center gap-[20px] shrink-0">
-              <a
-                href="https://docs.octen.ai/overview/pricing#model-gateway"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-['DM_Sans',sans-serif] font-medium text-[14px] leading-none text-[#039855] hover:text-[#027a44] transition-colors whitespace-nowrap"
-              >
-                View model rates
-              </a>
-              <div className="border-l border-[#039855] pl-[20px] flex items-center">
+            <div className="flex flex-row items-center justify-end gap-[20px] shrink-0">
+              <div className="flex items-center justify-center gap-[10px]">
+                <a
+                  href="https://docs.octen.ai/overview/pricing#model-gateway"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-['DM_Sans',sans-serif] font-medium text-[14px] leading-[100%] text-[#039855] underline hover:text-[#027a44] transition-colors whitespace-nowrap"
+                >
+                  View model rates
+                </a>
+              </div>
+              <div className="border-l border-[#039855] pl-[20px] flex items-center justify-center gap-[10px] box-border">
                 <a
                   href="https://docs.octen.ai/overview/model-gateway-rebate"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-['DM_Sans',sans-serif] font-medium text-[14px] leading-none text-[#039855] hover:text-[#027a44] hover:underline transition-colors whitespace-nowrap"
+                  className="font-['DM_Sans',sans-serif] font-medium text-[14px] leading-[100%] text-[#039855] underline hover:text-[#027a44] transition-colors whitespace-nowrap"
                 >
                   View Rebate
                 </a>
