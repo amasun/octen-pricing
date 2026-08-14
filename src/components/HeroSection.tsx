@@ -9,13 +9,13 @@ function HeroHeader() {
   return (
     <div className="content-stretch flex flex-col gap-[14px] sm:gap-[18px] items-center pb-0 pt-[32px] sm:pt-[64px] px-4 md:px-[156px] relative shrink-0 w-full max-w-[1000px]">
       <h1 className="[word-break:break-word] bg-clip-text font-['Fraunces',serif] font-normal leading-none py-[6px] w-full text-center relative shrink-0 text-[32px] sm:text-[48px] md:text-[60px] text-[transparent]" style={{ fontVariationSettings: '"SOFT" 0, "WONK" 1', backgroundImage: "linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%), linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(136, 136, 136) 27.404%, rgb(0, 0, 0) 50.962%)" }}>
-        Plan and Pricing
+        Plans and Pricing
       </h1>
       <p className="font-['DM_Sans',sans-serif] font-normal leading-[1.2] relative shrink-0 text-[16px] sm:text-[20px] text-center text-white/90 whitespace-normal sm:whitespace-nowrap px-0">
-        Enhance your AI Engineering with Octen’s Real-Time Search Engine
+        Usage-based pricing for the search infrastructure behind your agents.
       </p>
       <p className="font-['DM_Sans',sans-serif] font-normal text-[16px] leading-[120%] text-white text-center mt-1 select-text">
-        Sign up now and get <span className="font-bold text-[#70FE7E]">$5 free balance</span>.
+        Sign up and get <span className="font-bold text-[#70FE7E]">$5 in free balance</span>.
       </p>
       <a 
         href="https://octen.ai/platform/billing"
@@ -24,7 +24,7 @@ function HeroHeader() {
         className="group bg-transparent hover:bg-[#60ff70]/10 active:scale-[0.97] border border-[#60ff70] transition-all duration-200 ease-out inline-flex items-center justify-center h-[48px] px-[20px] gap-[8px] rounded-[10px] shrink-0 cursor-pointer select-none box-border mt-1"
       >
         <span className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-none text-[#60ff70] whitespace-nowrap">
-          Get Start
+          Start Building
         </span>
         <svg 
           className="size-[16px] shrink-0 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" 
