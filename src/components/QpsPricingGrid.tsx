@@ -50,21 +50,22 @@ function SlackIcon({ color = "black" }: { color?: string }) {
   );
 }
 
-function ChartIcon({ color = "black" }: { color?: string }) {
+function ChartIcon({ color = "#039855" }: { color?: string }) {
   return (
     <div className="size-[20px] shrink-0 flex items-center justify-center">
-      <svg className="size-[16px]" fill="none" viewBox="0 0 24 24" stroke={color} strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.63715 3.06392C9.01725 2.73995 9.50034 2.56201 9.99977 2.56201C10.4992 2.56201 10.9823 2.73995 11.3624 3.06392L12.3063 3.86847C12.4186 3.96424 12.5583 4.02208 12.7054 4.03372L13.9413 4.13175C14.4391 4.17145 14.9065 4.38723 15.2597 4.74037C15.6128 5.09351 15.8286 5.56091 15.8683 6.05875L15.9663 7.29534C15.9781 7.44223 16.036 7.58165 16.1316 7.69376L16.9361 8.63766C17.2601 9.01776 17.438 9.50085 17.438 10.0003C17.438 10.4997 17.2601 10.9828 16.9361 11.3629L16.1316 12.3068C16.036 12.4189 15.9781 12.5583 15.9663 12.7052L15.8683 13.9411C15.8286 14.4389 15.6128 14.9064 15.2597 15.2595C14.9065 15.6126 14.4391 15.8284 13.9413 15.8681L12.7047 15.9661C12.5577 15.9781 12.4183 16.0362 12.3063 16.1321L11.3624 16.9359C10.9823 17.2599 10.4992 17.4379 9.99977 17.4379C9.50034 17.4379 9.01725 17.2599 8.63715 16.9359L7.69325 16.1321C7.58114 16.0365 7.44172 15.9786 7.29483 15.9668L6.05894 15.8681C5.5611 15.8284 5.0937 15.6126 4.74056 15.2595C4.38742 14.9064 4.17164 14.4389 4.13194 13.9411L4.03391 12.7052C4.02207 12.558 3.96398 12.4183 3.86796 12.3061L3.06411 11.3622C2.74033 10.9822 2.5625 10.4992 2.5625 9.99993C2.5625 9.50066 2.74033 9.01771 3.06411 8.63766L3.86796 7.69376C3.96373 7.58146 4.02157 7.44177 4.03321 7.29464L4.13194 6.05875C4.1718 5.56104 4.38765 5.0938 4.74077 4.7408C5.0939 4.3878 5.56122 4.17213 6.05894 4.13245L7.29483 4.03442C7.44196 4.02278 7.58165 3.96494 7.69395 3.86917L8.63715 3.06392ZM10.4542 4.12965C10.3275 4.02172 10.1665 3.96245 10.0001 3.96245C9.8337 3.96245 9.67271 4.02172 9.54603 4.12965L8.60214 4.9349C8.26543 5.22144 7.84691 5.39443 7.40616 5.42925L6.17028 5.52799C6.00441 5.54127 5.84869 5.61318 5.73103 5.73084C5.61337 5.8485 5.54146 6.00422 5.52818 6.17009L5.42944 7.40667C5.39428 7.84726 5.22104 8.26552 4.93439 8.60195L4.12914 9.54584C4.02121 9.67252 3.96194 9.83351 3.96194 9.99993C3.96194 10.1664 4.02121 10.3273 4.12914 10.454L4.93439 11.3979C5.22104 11.7343 5.39428 12.1526 5.42944 12.5932L5.52748 13.8298C5.54078 13.9958 5.61279 14.1516 5.7306 14.2692C5.8484 14.3869 6.00428 14.4588 6.17028 14.4719L7.40616 14.5706C7.84699 14.6056 8.26552 14.7789 8.60214 15.0657L9.54603 15.8709C9.67271 15.9788 9.8337 16.0381 10.0001 16.0381C10.1665 16.0381 10.3275 15.9788 10.4542 15.8709L11.3981 15.0657C11.7345 14.779 12.1528 14.6058 12.5934 14.5706L13.8293 14.4726C13.9954 14.4594 14.1513 14.3875 14.2692 14.2697C14.387 14.1519 14.4589 13.9959 14.4721 13.8298L14.5701 12.5932C14.6051 12.1528 14.7788 11.7347 15.0659 11.3979L15.8704 10.454C15.9783 10.3273 16.0376 10.1664 16.0376 9.99993C16.0376 9.83351 15.9783 9.67252 15.8704 9.54584L15.0652 8.60195C14.7788 8.26543 14.6058 7.84717 14.5708 7.40667L14.4721 6.17009C14.4588 6.00411 14.3868 5.8483 14.2689 5.73063C14.1511 5.61295 13.9953 5.54111 13.8293 5.52799L12.5934 5.42995C12.1527 5.39459 11.7344 5.22111 11.3981 4.9342L10.4542 4.12965ZM11.9807 7.02925L12.9708 8.01936L8.01955 12.9713L7.02874 11.9805L11.9807 7.02925ZM8.76179 8.7623C8.6649 8.86261 8.549 8.94263 8.42085 8.99768C8.29271 9.05272 8.15489 9.0817 8.01542 9.08291C7.87596 9.08412 7.73765 9.05755 7.60857 9.00473C7.47949 8.95192 7.36222 8.87393 7.2636 8.77531C7.16498 8.6767 7.08699 8.55942 7.03418 8.43034C6.98137 8.30126 6.9548 8.16296 6.95601 8.02349C6.95722 7.88403 6.98619 7.74621 7.04124 7.61806C7.09629 7.48992 7.1763 7.37402 7.27662 7.27713C7.47472 7.08581 7.74003 6.97994 8.01542 6.98233C8.29082 6.98473 8.55425 7.09519 8.74899 7.28993C8.94373 7.48467 9.05419 7.7481 9.05659 8.02349C9.05898 8.29889 8.95311 8.5642 8.76179 8.7623ZM11.2378 12.7234C11.3346 12.8237 11.4505 12.9038 11.5787 12.9588C11.7068 13.0139 11.8447 13.0428 11.9841 13.044C12.1236 13.0453 12.2619 13.0187 12.391 12.9659C12.5201 12.9131 12.6373 12.8351 12.7359 12.7365C12.8346 12.6378 12.9125 12.5206 12.9654 12.3915C13.0182 12.2624 13.0447 12.1241 13.0435 11.9846C13.0423 11.8452 13.0133 11.7073 12.9583 11.5792C12.9033 11.4511 12.8232 11.3352 12.7229 11.2383C11.065 11.4516 10.9546 11.7128 10.9508 11.9863C10.9469 12.2598 11.0499 12.524 11.2378 12.7227" fill={color || "#039855"}/>
       </svg>
     </div>
   );
 }
 
-function ContractIcon({ color = "black" }: { color?: string }) {
+function ContractIcon({ color = "#039855" }: { color?: string }) {
   return (
     <div className="size-[20px] shrink-0 flex items-center justify-center">
-      <svg className="size-[16px]" fill="none" viewBox="0 0 24 24" stroke={color} strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h4m5 4H6a2 2 0 01-2-2V4a2 2 0 012-2h7.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V20a2 2 0 01-2 2z" />
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 16.3325C13.4974 16.3325 16.3325 13.4974 16.3325 10C16.3325 6.50265 13.4974 3.66748 10 3.66748C6.50265 3.66748 3.66748 6.50265 3.66748 10C3.66748 13.4974 6.50265 16.3325 10 16.3325Z" stroke={color || "#039855"} strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M7.18555 10L9.29639 12.1109L12.347 8.59521" stroke={color || "#039855"} strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     </div>
   );
@@ -112,55 +113,57 @@ function PlanCardItem({
 }) {
   return (
     <div 
-      className={`${cardWidthClass} h-auto sm:h-[446px] relative rounded-[16px] flex flex-col justify-between overflow-hidden hover:-translate-y-[4px] transition-all duration-300 ease-out cursor-pointer box-border border ${
+      className={`${cardWidthClass} ${
+        isPopular ? "h-auto sm:h-[438px] sm:-mt-[28px]" : "h-auto sm:h-[410px]"
+      } relative rounded-[16px] flex flex-col justify-between overflow-hidden box-border border ${
         isPopular 
-          ? "bg-[rgba(139,239,149,0.5)] border-[#6DCAA0] hover:shadow-[0_16px_36px_rgba(112,254,126,0.25)]" 
-          : "bg-[#EAEAEA] border-[rgba(26,26,25,0.12)] hover:shadow-[0_12px_28px_rgba(0,0,0,0.08)]"
+          ? "bg-[rgba(139,239,149,0.5)] border-[#6DCAA0] z-10" 
+          : "bg-white border-[rgba(26,26,25,0.12)]"
       }`}
     >
-      {/* Top Subtitle Tag */}
-      <div className="h-[28px] sm:h-[34px] py-[4px] sm:py-[6px] px-1.5 text-center flex items-center justify-center gap-[10px] shrink-0 overflow-hidden">
-        <p className={`font-['DM_Sans',sans-serif] font-medium text-[12px] sm:text-[13px] leading-[20px] whitespace-nowrap truncate ${
-          isPopular ? "text-[#276533]" : "text-[#4B4B39]"
-        }`}>
-          {subtitle}
-        </p>
-      </div>
+      {/* Top Green Header Tag - Only for Most Popular card (28px height per Figma spec) */}
+      {isPopular && (
+        <div className="h-[28px] py-0 px-1.5 text-center flex items-center justify-center gap-[10px] shrink-0 overflow-hidden">
+          <p className="font-['DM_Sans',sans-serif] font-medium text-[13px] leading-[13px] whitespace-nowrap truncate text-[#276533] uppercase tracking-wider">
+            Most Popular
+          </p>
+        </div>
+      )}
 
-      {/* Inner White Card Body */}
-      <div className="bg-white rounded-[12px] h-auto sm:h-[410px] flex flex-col justify-between p-0 m-0 overflow-hidden box-border">
-        {/* Title Block */}
-        <div className="h-auto sm:h-[150px] p-[16px_16px] sm:p-[30px_24px] flex flex-col justify-between gap-[10px] sm:gap-[20px] border-b border-[rgba(26,26,25,0.12)] box-border shrink-0">
+      {/* Inner White Card Body (306px wide, 410px height, 12px rounded per Figma spec) */}
+      <div className={`bg-white rounded-[12px] h-auto sm:h-[410px] flex flex-col justify-between p-0 m-0 overflow-hidden box-border`}>
+        {/* Title Block (30px 20px padding, 150px height per Figma spec) */}
+        <div className="h-auto sm:h-[150px] p-[20px_16px] sm:p-[30px_20px] flex flex-col justify-between gap-[10px] sm:gap-[20px] border-b border-[rgba(26,26,25,0.12)] box-border shrink-0">
           <div className="flex items-center justify-between w-full h-[24px]">
-            <h3 className="font-['Fraunces',serif] font-semibold text-[20px] sm:text-[24px] leading-[24px] text-[#100F09]">
+            <h3 className="font-['Fraunces',serif] font-semibold text-[24px] leading-[24px] text-[#100F09]">
               {title}
             </h3>
             {discountBadge && (
-              <span className="w-[64px] sm:w-[71px] h-[22px] sm:h-[24px] px-[6px] sm:px-[8px] bg-[#70FE7E] rounded-[6px] flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[12px] sm:text-[13px] leading-[13px] text-[#100F09] shrink-0">
+              <span className="h-[24px] px-[8px] bg-[#70FE7E] rounded-[6px] flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[13px] leading-[13px] text-[#100F09] whitespace-nowrap shrink-0">
                 {discountBadge}
               </span>
             )}
           </div>
 
-          {/* Price Frequency */}
-          <div className="flex flex-row items-end gap-[6px] sm:gap-[8px] min-h-[36px] sm:min-h-[44px]">
+          {/* Price Frequency (DM Mono symbol + DM Sans 40px amount per Figma spec) */}
+          <div className="flex flex-row items-baseline gap-[8px] min-h-[44px]">
             {price === "Custom" ? (
               <div className="flex items-center h-full">
-                <span className="font-['DM_Sans',sans-serif] font-bold text-[28px] sm:text-[38px] leading-[32px] sm:leading-[44px] text-[#100F09]">Custom</span>
+                <span className="font-['DM_Sans',sans-serif] font-medium text-[28px] sm:text-[40px] leading-[44px] text-[#100F09]">Custom</span>
               </div>
             ) : (
               <>
                 <div className="flex items-start">
-                  <span className="font-['DM_Mono',monospace] font-medium text-[16px] sm:text-[20px] leading-[18px] sm:leading-[22px] text-[#100F09] pt-[2px] sm:pt-[4px] pr-[2px]">$</span>
-                  <span className="font-['DM_Sans',sans-serif] font-medium text-[28px] sm:text-[40px] leading-[32px] sm:leading-[44px] text-[#100F09]">{price}</span>
+                  <span className="font-['DM_Mono',monospace] font-medium text-[20px] leading-[22px] text-[#100F09] pt-[4px] pr-[3px]">$</span>
+                  <span className="font-['DM_Sans',sans-serif] font-medium text-[32px] sm:text-[40px] leading-[44px] text-[#100F09]">{price}</span>
                 </div>
-                <div className="flex flex-row flex-wrap items-baseline justify-start gap-x-[6px] gap-y-0 -translate-y-[3px] pb-[2px] sm:pb-[4px] flex-1">
+                <div className="flex flex-row flex-wrap items-baseline justify-start gap-x-[6px] gap-y-0 -translate-y-[3px] pb-[4px] flex-1">
                   {originalPrice && (
-                    <span className="font-['DM_Sans',sans-serif] font-normal text-[12px] sm:text-[14px] leading-[13px] sm:leading-[15px] text-[#7C7C79] line-through whitespace-nowrap">
+                    <span className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[15px] text-[#7C7C79] line-through whitespace-nowrap">
                       {originalPrice}
                     </span>
                   )}
-                  <span className="font-['DM_Sans',sans-serif] font-normal text-[12px] sm:text-[14px] leading-[13px] sm:leading-[15px] text-[#7C7C79] whitespace-nowrap">
+                  <span className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[15px] text-[#7C7C79] whitespace-nowrap">
                     {period}
                   </span>
                 </div>
@@ -169,24 +172,24 @@ function PlanCardItem({
           </div>
         </div>
 
-        {/* Button Text Block */}
-        <div className="h-auto sm:h-[260px] p-[16px_16px] sm:p-[30px_24px] flex flex-col justify-between gap-[16px] sm:gap-[30px] box-border shrink-0">
-          {/* List */}
-          <ul className="h-auto sm:h-[132px] flex flex-col gap-[12px] list-none p-0 m-0 w-full">
+        {/* Button Text Block (30px 20px padding, 260px height per Figma spec) */}
+        <div className="h-auto sm:h-[260px] p-[20px_16px] sm:p-[30px_20px] flex flex-col justify-between gap-[16px] sm:gap-[30px] box-border shrink-0">
+          {/* List (116px height, 12px gap per Figma spec) */}
+          <ul className="h-auto sm:h-[116px] flex flex-col gap-[12px] list-none p-0 m-0 w-full">
             {features.map((feat, i) => (
-              <li key={i} className="flex items-start gap-[6px] text-[13px] sm:text-[14px] font-['DM_Sans',sans-serif] font-normal leading-[130%] sm:leading-[140%] text-[#100F09]">
+              <li key={i} className="flex items-center gap-[4px] text-[14px] font-['DM_Sans',sans-serif] font-normal leading-[140%] text-[#100F09]">
                 <FeatureIcon type={feat.icon} />
-                <span className="flex-1">{feat.text}</span>
+                <span className="flex-1 ml-1">{feat.text}</span>
               </li>
             ))}
           </ul>
 
-          {/* Link / Button */}
+          {/* CTA Link / Button (40px height, 17px px, Inter 600 per Figma spec) */}
           <a
             href={buttonHref || "https://octen.ai/platform/billing"}
             target={buttonHref?.startsWith("mailto:") ? "_self" : "_blank"}
             rel="noopener noreferrer"
-            className={`w-full h-[36px] sm:h-[40px] px-[16px] sm:px-[17px] rounded-[99px] flex items-center justify-center font-['DM_Sans',sans-serif] font-semibold text-[14px] sm:text-[16px] leading-[22px] sm:leading-[24px] hover:-translate-y-[1px] active:scale-[0.96] transition-all duration-200 ease-out select-none focus-visible:ring-2 focus-visible:ring-[#039855] focus-visible:outline-none box-border ${
+            className={`w-full h-[40px] px-[17px] rounded-[9999px] flex items-center justify-center font-['Inter',sans-serif] font-semibold text-[16px] leading-[24px] hover:-translate-y-[1px] active:scale-[0.96] transition-all duration-200 ease-out select-none focus-visible:ring-2 focus-visible:ring-[#039855] focus-visible:outline-none box-border ${
               isPopular || (title !== "Base" && title !== "Free")
                 ? "bg-[#100F09] text-white btn-dark-hover"
                 : "bg-[#000000]/5 text-[#0F172A] border border-[rgba(26,26,25,0.12)] btn-light-hover"
@@ -202,7 +205,7 @@ function PlanCardItem({
 
 function EnterpriseCard({ plan }: { plan: { title: string; subtitle: string; price: string; period?: string; features: FeatureItem[]; buttonText: string; buttonHref?: string; } }) {
   return (
-    <div className="w-full relative rounded-[16px] overflow-hidden bg-white border border-[#D1D1D1] hover:-translate-y-[4px] hover:shadow-[0_12px_28px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out cursor-pointer box-border p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 isolate">
+    <div className="w-full relative rounded-[16px] overflow-hidden bg-white border border-[#D1D1D1] box-border p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 isolate">
       {/* Bottom Ambient Glow Layer per Figma spec (X: -150px, Y: 185.73px) */}
       <div className="absolute left-[-150px] top-[185.73px] w-[918.47px] h-[78.27px] pointer-events-none z-0 opacity-60 overflow-visible">
         {/* Vector 10: #70FE7E glow */}
@@ -247,7 +250,7 @@ function EnterpriseCard({ plan }: { plan: { title: string; subtitle: string; pri
       <div className="relative z-10 shrink-0 w-full md:w-auto">
         <a
           href={plan.buttonHref || "mailto:support@octen.ai?subject=Octen%20Enterprise%20QPS%20Plan%20Inquiry"}
-          className="w-full md:w-auto min-w-[180px] h-[44px] px-6 rounded-full bg-[#100F09] text-white font-['DM_Sans',sans-serif] font-semibold text-[15px] flex items-center justify-center btn-dark-hover hover:-translate-y-[1px] active:scale-[0.96] transition-all duration-200 ease-out select-none focus-visible:ring-2 focus-visible:ring-[#039855] focus-visible:outline-none box-border"
+          className="w-full md:w-auto min-w-[180px] h-[44px] px-6 rounded-full bg-[#100F09] text-white font-['DM_Sans',sans-serif] font-semibold text-[16px] flex items-center justify-center btn-dark-hover hover:-translate-y-[1px] active:scale-[0.96] transition-all duration-200 ease-out select-none focus-visible:ring-2 focus-visible:ring-[#039855] focus-visible:outline-none box-border"
         >
           {plan.buttonText}
         </a>
@@ -271,25 +274,14 @@ export default function QpsPricingGrid() {
   }> = [
     {
       title: "Free",
-      subtitle: "Evaluation & Testing",
-      price: "0",
-      features: [
-        { text: <>Up to <strong className="font-bold">10 QPS</strong> Limit</>, icon: "branch" },
-        { text: "Default tier for new accounts", icon: "check" },
-        { text: "Standard community support", icon: "check" }
-      ],
-      buttonText: "Get Started"
-    },
-    {
-      title: "Base",
-      subtitle: "Personal Projects",
+      subtitle: "Evaluation",
       price: "0",
       features: [
         { text: <>Up to <strong className="font-bold">20 QPS</strong> Limit</>, icon: "branch" },
-        { text: "Auto-unlocks when adding credits", icon: "check" },
+        { text: "Starts at 10 QPS. Auto-unlocks when adding credits", icon: "check" },
         { text: "Standard community support", icon: "check" }
       ],
-      buttonText: "Top Up Balance"
+      buttonText: "Start Free"
     },
     {
       title: "Startup",
@@ -336,12 +328,12 @@ export default function QpsPricingGrid() {
       price: "Custom",
       period: "Tailored Plan",
       features: [
-        { text: <>Higher <strong className="font-bold">500+ QPS</strong> Limits</>, icon: "branch" },
+        { text: <>Up to <strong className="font-bold">1M+ QPS</strong></>, icon: "branch" },
         { text: "Zero Data Retention (ZDR)", icon: "zdr" },
+        { text: "SOC 2 Type 2", icon: "contract" },
         { text: "Dedicated Slack channel support", icon: "slack" },
         { text: "Guaranteed throughput and SLA", icon: "flash" },
-        { text: "Custom data tracking", icon: "chart" },
-        { text: "Custom MSA and DPA", icon: "contract" }
+        { text: "Volume discounts", icon: "chart" }
       ],
       buttonText: "Contact Sales",
       buttonHref: "mailto:support@octen.ai?subject=Octen%20Enterprise%20QPS%20Plan%20Inquiry"
@@ -355,23 +347,49 @@ export default function QpsPricingGrid() {
         <h2 className="font-['Fraunces',serif] font-bold text-[28px] sm:text-[44px] leading-[1.15] sm:leading-[48px] text-[#09090b]">
           QPS Plan
         </h2>
-        <p className="font-['DM_Sans',sans-serif] font-normal text-[15px] sm:text-[16px] leading-[22px] sm:leading-[26px] text-[#5d605b] max-w-[680px]">
-          Guaranteed QPS limit and throughput SLA
+        <p className="font-['DM_Sans',sans-serif] font-normal text-[16px] leading-[22px] sm:leading-[26px] text-[#5d605b] max-w-[680px]">
+          Reserved QPS for Broad Search and Web Search.
         </p>
       </div>
 
-      {/* Cards Wrapper with 16px vertical gap between Row 1 and Enterprise Card */}
+      {/* Unified Parent Container for Row 1, Row 2, and Row 3 with gap=16 */}
       <div className="flex flex-col gap-[16px] w-full">
-        {/* Row 1: First 5 cards (Free, Base, Startup, Pro, Scale) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-[12px] xl:gap-[16px] w-full">
-          {plans.slice(0, 5).map((p, idx) => (
+        {/* Row 1: First 4 merged cards (Free, Startup, Pro, Scale) in a 4-column grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[12px] xl:gap-[16px] w-full pt-0 sm:pt-[28px] items-end">
+          {plans.slice(0, 4).map((p, idx) => (
             <PlanCardItem key={idx} {...p} cardWidthClass="w-full" />
           ))}
         </div>
 
-        {/* Row 2: 6th Enterprise Custom Card occupying its own row */}
+        {/* Row 2: 5th Enterprise Custom Card occupying its own row */}
         <div className="w-full">
-          <EnterpriseCard plan={plans[5]} />
+          <EnterpriseCard plan={plans[4]} />
+        </div>
+
+        {/* Row 3: Merged Single Information Card matching exact Figma spec */}
+        <div className="w-full p-[20px] bg-[#F6F6F3] rounded-[16px] border border-[#E7E7E3] flex flex-col gap-[8px] font-['DM_Sans',sans-serif] box-border">
+          {/* Top Row: Info Icon + Title */}
+          <div className="flex flex-row items-center gap-[4px] w-full">
+            <svg className="size-[16px] shrink-0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.99995 10.6671V8.00039M7.99995 5.33372H8.00661M2.56661 5.74706C2.46931 5.30874 2.48425 4.85295 2.61005 4.42195C2.73585 3.99095 2.96844 3.59869 3.28626 3.28154C3.60407 2.96439 3.99682 2.73262 4.42808 2.60772C4.85935 2.48282 5.31517 2.46883 5.75328 2.56706C5.99442 2.18992 6.32661 1.87956 6.71925 1.66458C7.11188 1.4496 7.55231 1.33691 7.99995 1.33691C8.44758 1.33691 8.88801 1.4496 9.28064 1.66458C9.67328 1.87956 10.0055 2.18992 10.2466 2.56706C10.6854 2.46841 11.142 2.48233 11.5739 2.60753C12.0059 2.73274 12.3992 2.96515 12.7172 3.28316C13.0352 3.60117 13.2676 3.99444 13.3928 4.42639C13.518 4.85834 13.5319 5.31495 13.4333 5.75372C13.8104 5.99486 14.1208 6.32706 14.3358 6.71969C14.5507 7.11232 14.6634 7.55276 14.6634 8.00039C14.6634 8.44803 14.5507 8.88846 14.3358 9.28109C14.1208 9.67372 13.8104 10.0059 13.4333 10.2471C13.5315 10.6852 13.5175 11.141 13.3926 11.5723C13.2677 12.0035 13.0359 12.3963 12.7188 12.7141C12.4016 13.0319 12.0094 13.2645 11.5784 13.3903C11.1474 13.5161 10.6916 13.531 10.2533 13.4337C10.0125 13.8123 9.68 14.124 9.2867 14.3399C8.89339 14.5559 8.45196 14.6691 8.00328 14.6691C7.55459 14.6691 7.11316 14.5559 6.71986 14.3399C6.32656 14.124 5.9941 13.8123 5.75328 13.4337C5.31517 13.5319 4.85935 13.518 4.42808 13.3931C3.99682 13.2682 3.60407 13.0364 3.28626 12.7192C2.96844 12.4021 2.73585 12.0098 2.61005 11.5788C2.48425 11.1478 2.46931 10.692 2.56661 10.2537C2.18658 10.0132 1.87355 9.68051 1.65664 9.28653C1.43973 8.89256 1.32599 8.45013 1.32599 8.00039C1.32599 7.55065 1.43973 7.10822 1.65664 6.71425C1.87355 6.32028 2.18658 5.98756 2.56661 5.74706Z" stroke="#039855" strokeWidth="1.33333" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            <div className="text-[14px] leading-[21px] font-semibold text-[#0A0A0A]">
+              All paid plans include <span className="font-normal text-[#57575E]">a dedicated priority queue for search, guaranteed throughput and SLA, and email support.</span>
+            </div>
+          </div>
+
+          {/* Bottom Row (Frame 427319262 with 20px left padding) */}
+          <div className="pl-[20px] w-full">
+            <p className="text-[14px] leading-[23px] text-[#57575E] m-0">
+              Extract, Embeddings, Model Gateway, and Deep Research have their own rate limits, which a QPS Plan does not change — see{" "}
+              <a href="https://docs.octen.ai/resources/rate-limits" target="_blank" rel="noopener noreferrer" className="text-[#039855] font-medium underline hover:text-[#027a44] transition-colors duration-150">
+                rate limits
+              </a>
+              . Requests above any limit are rejected with a{" "}
+              <code className="font-['IBM_Plex_Mono',monospace] text-[12px] leading-[20px] bg-[#FFFFFF] px-[6px] py-[1px] rounded-[4px] border border-[#E7E7E3] inline-block">429</code>
+              . Upgrades take effect immediately; downgrades take effect the following month.
+            </p>
+          </div>
         </div>
       </div>
     </div>

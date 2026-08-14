@@ -23,17 +23,22 @@ export default function FaqSection() {
     },
     {
       q: "What are the key benefits of the Enterprise plan?",
-      a: "The Enterprise plan provides custom throughput scaling (500+ QPS), Zero Data Retention (ZDR) for data privacy, dedicated Slack channel support, and custom SLAs with an assigned account manager. Contact support@octen.ai to get started."
+      a: "The Enterprise plan provides custom throughput scaling (500+ QPS), Zero Data Retention (ZDR) for data privacy, dedicated Slack channel support, and custom SLAs with an assigned account manager."
+    },
+    {
+      q: "What payment methods are supported?",
+      a: "We support major credit & debit cards (Visa, MasterCard, American Express, JCB), Apple Pay, and Link by Stripe."
     }
   ];
 
   return (
-    <div className="bg-[#f3f3f2] content-stretch flex flex-col gap-[20px] items-center py-[36px] sm:py-[100px] relative shrink-0 w-full" id="faq-section">
+    <div className="bg-[#f3f3f2] content-stretch flex flex-col gap-[28px] sm:gap-[36px] items-center py-[48px] sm:py-[90px] relative shrink-0 w-full" id="faq-section">
+      {/* Section Header */}
       <div className="text-center flex flex-col gap-3 px-4 max-w-[800px]">
         <h2 className="font-['Fraunces',serif] font-bold text-[32px] sm:text-[40px] text-[#0f172a] leading-tight">
           Frequently Asked Questions
         </h2>
-        <p className="font-['DM_Sans',sans-serif] text-[15px] sm:text-[16px] text-[#64748b]">
+        <p className="font-['DM_Sans',sans-serif] text-[16px] text-[#64748b]">
           If you have any questions about using Octen, feel free to email us at{" "}
           <a
             href="mailto:support@octen.ai"
@@ -45,27 +50,33 @@ export default function FaqSection() {
         </p>
       </div>
 
-      <div className="content-stretch flex flex-col gap-[16px] h-auto items-start max-w-[800px] relative shrink-0 w-full px-4 box-border" data-name="Container (FAQ Accordion)">
+      {/* 2 Columns Grid Layout matching exact 1312px container width with 16px uniform gap */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[1312px] w-full px-4 box-border items-start" data-name="Container (FAQ 1312px 2-Col Grid)">
         {faqData.map((item, idx) => {
           const isOpen = openFaqIndex === idx;
           return (
             <div 
               key={idx}
-              className={`relative rounded-[8px] shrink-0 w-full transition-colors duration-300 ${isOpen ? 'bg-white' : 'bg-[#eaebeb]'}`}
+              className={`relative rounded-[12px] w-full transition-colors duration-300 box-border flex flex-col border border-[rgba(26,26,25,0.12)] ${
+                isOpen ? 'bg-white' : 'bg-[#eaebeb] hover:bg-white/80'
+              }`}
             >
-              <div aria-hidden className="absolute border border-[rgba(26,26,25,0.12)] border-solid inset-0 pointer-events-none rounded-[8px]" />
+              {/* Card Toggle Button Header with Symmetrical Padding */}
               <button 
                 onClick={() => setOpenFaqIndex(isOpen ? null : idx)}
                 aria-expanded={isOpen}
                 aria-controls={`faq-answer-${idx}`}
-                className="w-full bg-transparent border-none cursor-pointer flex items-center justify-between pl-[24px] pr-[17px] py-[16px] text-left gap-4 select-none hover:bg-[rgba(26,26,25,0.02)] active:scale-[0.995] transition-all duration-200 ease-out focus-visible:ring-2 focus-visible:ring-[#039855] focus-visible:outline-none rounded-[8px]"
+                className="w-full bg-transparent border-none cursor-pointer flex items-center justify-between p-[14px_20px] sm:p-[16px_20px] text-left gap-3 select-none focus-visible:ring-2 focus-visible:ring-[#039855] focus-visible:outline-none rounded-[12px]"
               >
-                <p className="[word-break:break-word] font-['DM_Sans:Bold',sans-serif] font-bold leading-[1.3] sm:leading-[32px] text-[#0f172a] text-[15px] sm:text-[16px]">
-                  {item.q}
-                </p>
-                <div className="relative rounded-[99px] shrink-0 size-[32px] flex items-center justify-center transition-colors duration-300 bg-[#ebebeb]">
+                <div className="flex-1 min-w-0 flex flex-col justify-center">
+                  <p className="font-['DM_Sans',sans-serif] font-bold text-[#0f172a] text-[16px] leading-[1.35] m-0">
+                    {item.q}
+                  </p>
+                </div>
+
+                <div className="relative rounded-full shrink-0 size-[26px] flex items-center justify-center transition-colors duration-300 bg-[#ebebeb]">
                   <svg 
-                    className={`size-[20px] transition-transform duration-300 ease-in-out will-change-transform ${isOpen ? 'rotate-45' : 'rotate-0'}`}
+                    className={`size-[15px] transition-transform duration-300 ease-in-out ${isOpen ? 'rotate-45' : 'rotate-0'}`}
                     style={{ transformOrigin: 'center center' }}
                     viewBox="0 0 20 20" 
                     fill="none"
@@ -76,17 +87,18 @@ export default function FaqSection() {
                 </div>
               </button>
 
+              {/* Smooth Grid Accordion Expansion */}
               <div 
                 id={`faq-answer-${idx}`}
                 role="region"
                 aria-label={item.q}
-                className={`grid transition-[grid-template-rows,opacity] duration-350 ease-in-out ${
+                className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${
                   isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
                 }`}
               >
                 <div className="overflow-hidden">
-                  <div className="pb-[20px] px-[24px] pt-[0px]">
-                    <p className="[word-break:break-word] font-['DM_Sans',sans-serif] font-normal leading-[1.6] text-[#515151] text-[14px] sm:text-[15px] border-t border-[rgba(26,26,25,0.06)] pt-[14px]">
+                  <div className="px-[20px] pb-[20px] pt-0">
+                    <p className="font-['DM_Sans',sans-serif] font-normal leading-[1.6] text-[#515151] text-[14px] sm:text-[16px] border-t border-[rgba(26,26,25,0.08)] pt-[12px]">
                       {item.a}
                     </p>
                   </div>

@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import svgPaths from "./svgPaths";
 
 function LogoDark() {
@@ -26,7 +27,7 @@ function Navigation() {
   return (
     <nav aria-label="Main" className="relative z-10 hidden md:flex w-full justify-center text-[#0F172B]">
       <div>
-        <ul className="flex items-center gap-[48px] lg:gap-[64px] p-1">
+        <ul className="flex items-center gap-[40px] lg:gap-[56px] p-1">
           <li>
             <a 
               href="#qps-plans"
@@ -51,20 +52,12 @@ function Navigation() {
           </li>
           <li>
             <a 
-              href="#api-pricing"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-[#0F172B] font-medium text-[14px] hover:bg-slate-100 transition-colors"
-            >
-              Pricing
-            </a>
-          </li>
-          <li>
-            <a 
-              href="https://docs.octen.ai"
+              href="https://octen.ai/blog"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-[#0F172B] font-medium text-[14px] hover:bg-slate-100 transition-colors"
             >
-              Docs
+              Blog
             </a>
           </li>
         </ul>
@@ -80,18 +73,39 @@ function NavigationActions() {
         href="https://octen.ai/platform/billing" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className="inline-flex items-center justify-center gap-1.5 whitespace-nowrap font-medium transition-all shrink-0 outline-none focus-visible:ring-2 focus-visible:ring-[#039855] border border-[#0F172B]/20 bg-white hover:bg-slate-50 text-[#0F172B] hover:border-[#0F172B]/40 px-4 py-1.5 min-w-[84px] h-9 text-[14px] rounded-md cursor-pointer shadow-xs"
+        className="inline-flex items-center justify-center gap-1.5 whitespace-nowrap font-medium transition-all shrink-0 outline-none focus-visible:ring-2 focus-visible:ring-[#039855] bg-black text-white hover:bg-black/90 px-4 py-1.5 min-w-[84px] h-9 text-[14px] rounded-md cursor-pointer shadow-xs"
       >
-        Sign in
+        API Platform
       </a>
     </div>
   );
 }
 
 export default function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="absolute top-0 left-0 bg-transparent h-[52px] w-full z-50 flex items-center justify-center" data-name="Header Navigation">
-      <div className="max-w-[1440px] w-full mx-auto flex items-center justify-between p-2 px-7">
+    <header
+      className={`sticky top-0 left-0 w-full z-50 flex items-center justify-center transition-all duration-300 ${
+        isScrolled ? "pt-[12px] px-4" : "pt-0 px-0"
+      }`}
+      data-name="Header Navigation"
+    >
+      <div
+        className={`w-full max-w-[1438px] mx-auto flex items-center justify-between transition-all duration-300 box-border ${
+          isScrolled
+            ? "bg-white border border-[#E7E7E3] rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.06)] px-6 py-2 h-[56px]"
+            : "bg-transparent border border-transparent rounded-none shadow-none px-7 py-3 h-[52px]"
+        }`}
+      >
         <LogoDark />
         <Navigation />
         <NavigationActions />

@@ -15,7 +15,7 @@ function HeroHeader() {
         Plan and Pricing
       </h1>
 
-      <p className="font-['DM_Sans',sans-serif] font-normal text-[15px] sm:text-[17px] leading-[1.4] text-center text-[#5d605b] whitespace-normal sm:whitespace-nowrap px-0 max-w-[700px]">
+      <p className="font-['DM_Sans',sans-serif] font-normal text-[16px] sm:text-[18px] leading-[1.4] text-center text-[#5d605b] whitespace-normal sm:whitespace-nowrap px-0 max-w-[700px]">
         All new users will receive{" "}
         <span className="font-bold text-[#38A169]">$5 in free balance</span>
         {" "}upon registration.
@@ -27,7 +27,7 @@ function HeroHeader() {
         rel="noopener noreferrer"
         className="group bg-[#000000] hover:bg-[#1A1A1A] active:scale-[0.97] transition-all duration-200 ease-out flex items-center justify-center py-[12px] px-[24px] gap-[8px] rounded-[14px] shrink-0 cursor-pointer select-none h-[44px] box-border shadow-sm text-white mt-1"
       >
-        <span className="font-['DM_Sans',sans-serif] font-semibold text-[15px] leading-none whitespace-nowrap">
+        <span className="font-['DM_Sans',sans-serif] font-semibold text-[16px] leading-none whitespace-nowrap">
           Claim Free Balance
         </span>
         <svg 
@@ -414,7 +414,7 @@ function QpsPlanCard() {
       href="#qps-plans"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="drop-shadow-[0px_4px_20px_rgba(0,0,0,0.04)] w-full sm:flex-[1_0_0] sm:min-w-px relative rounded-[24px] bg-white border border-slate-200/90 select-none block group overflow-hidden"
+      className="w-full sm:flex-[1_0_0] sm:min-w-px relative rounded-[24px] bg-white border border-slate-200/90 select-none block group overflow-hidden"
     >
       <div className="flex flex-col items-center justify-center size-full p-[6px] relative z-10">
         <QpsCardGraphic isHovered={isHovered} />
@@ -439,7 +439,7 @@ function PayAsYouGoCard() {
       href="#api-pricing"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="drop-shadow-[0px_4px_20px_rgba(0,0,0,0.04)] w-full sm:flex-[1_0_0] sm:min-w-px relative rounded-[24px] bg-white border border-slate-200/90 select-none block group overflow-hidden"
+      className="w-full sm:flex-[1_0_0] sm:min-w-px relative rounded-[24px] bg-white border border-slate-200/90 select-none block group overflow-hidden"
     >
       <div className="flex flex-col items-center justify-center size-full p-[6px] relative z-10">
         <PayAsYouGoGraphic isHovered={isHovered} />
@@ -520,7 +520,7 @@ export default function HeroSection() {
         {/* Outer Light Grey Card Shell matching exact Figma spec */}
         <div className="content-stretch flex flex-col items-center pt-[30px] pb-[64px] px-4 sm:px-8 gap-[20px] relative rounded-[20px] bg-[rgba(234,234,234,0.4)] shrink-0 w-full max-w-[1280px] mt-6 sm:mt-8 box-border">
           {/* Top Helper Subtitle inside Grey Box */}
-          <p className="font-['DM_Sans',sans-serif] font-normal text-[15px] sm:text-[16px] text-[#5d605b] text-center px-4">
+          <p className="font-['DM_Sans',sans-serif] font-normal text-[16px] text-[#5d605b] text-center px-4">
             To use Octen, you need both pay-as-you-go API credits and a monthly QPS Plan
           </p>
 
