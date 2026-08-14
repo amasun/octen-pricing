@@ -170,7 +170,7 @@ export default function ApiExplorer() {
                 </div>
                 <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
                   <span className="font-semibold text-[#0A0A0A]">Full Content (Add-on)</span>
-                  <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">$1 / 1M tokens</span>
+                  <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">$0.001 / 1k tokens</span>
                 </div>
               </div>
             </div>
