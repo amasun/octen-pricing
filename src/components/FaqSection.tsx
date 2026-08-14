@@ -14,8 +14,8 @@ export default function FaqSection() {
       a: "Yes, new developer accounts automatically receive $5 in free balance upon registration—no credit card or manual claim required to start testing API requests."
     },
     {
-      q: "What happens when I exceed my QPS limit?",
-      a: "API requests exceeding your reserved QPS receive a 429 status code. Free tier accounts can unlock up to 20 QPS by topping up credits, or subscribe to a QPS Plan for guaranteed throughput."
+      q: "How do Prompt Cache discounts work for Model Gateway?",
+      a: "Cached system prompt tokens receive up to 90% discount on cache reads for supported models via Model Gateway, significantly lowering long-context synthesis costs."
     },
     {
       q: "Can I upgrade or scale my QPS plan at any time?",

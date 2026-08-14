@@ -416,7 +416,7 @@ function QpsPlanCard() {
         <QpsCardGraphic isHovered={isHovered} />
         <div className="content-stretch flex flex-col gap-[6px] items-center pb-[16px] pt-[20px] relative shrink-0 text-center w-full">
           <p className="font-['Fraunces',serif] font-bold text-[20px] sm:text-[22px] text-[#09090b] leading-[1.2] py-[2px] w-full text-center relative shrink-0 select-text">
-            Subscribe <span className="font-bold">QPS Plan</span>
+            Subscribe to a <span className="font-bold">QPS Plan</span>
           </p>
           <p className="font-['DM_Sans',sans-serif] font-normal text-[#515151] relative shrink-0 text-[14px] whitespace-nowrap select-text">
             Reserves your max search QPS
@@ -523,7 +523,7 @@ function HowOctenWorksSection() {
           How Octen works
         </h2>
         <p className="font-['DM_Sans',sans-serif] font-normal text-[14px] sm:text-[16px] leading-[24px] text-[#5d605b] text-center max-w-[800px]">
-          To use Octen, you need both pay-as-you-go API credits and a monthly QPS Plan
+          Octen has two layers &mdash; pay-as-you-go API credits, and a QPS Plan that reserves search throughput. Every account starts on the free QPS Plan.
         </p>
       </div>
 
