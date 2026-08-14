@@ -459,15 +459,46 @@ export default function ApiExplorer() {
           </div>
         </div>
 
-        {/* Row 5: Model Gateway Footnote */}
-        <div className="bg-[#F6F6F3] border border-[#E7E7E3] rounded-[16px] py-[20px] px-[24px] flex flex-col md:flex-row items-center justify-between gap-[16px] mt-[4px] w-full box-border">
-          <div className="text-[14px]">
-            <span className="font-semibold text-[#0A0A0A] mr-2">Model Gateway</span>
-            <span className="text-[#57575E]">One API for top-tier LLM &amp; multimodal models, with Octen Search built in. Powers the model reasoning, synthesis, and generation across Answer, Deep Research, and Grounded Generation.</span>
+        {/* Row 5: Model Gateway Footnote & 15% Rebate Program */}
+        <div className="bg-[#F6F6F3] border border-[#E7E7E3] rounded-[16px] p-[20px] sm:p-[24px] flex flex-col gap-[14px] mt-[4px] w-full box-border">
+          {/* Top Row: Title + Rebate Tag + View Rates Link */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-[12px] w-full">
+            <div className="flex items-center gap-[10px] flex-wrap">
+              <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] text-[#0A0A0A] tracking-tight">Model Gateway</span>
+              <span className="h-[24px] px-[8px] bg-[#E3FFE2] border border-[#6FD1A5] rounded-[6px] flex items-center justify-center font-['DM_Sans',sans-serif] font-semibold text-[12px] leading-[12px] text-[#1B9C62] whitespace-nowrap">
+                🎁 15% Rebate Back
+              </span>
+            </div>
+            <a
+              href="https://docs.octen.ai/overview/pricing#model-gateway"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-['DM_Sans',sans-serif] font-medium text-[14px] leading-[21px] text-[#039855] hover:text-[#027a44] transition-colors whitespace-nowrap shrink-0"
+            >
+              View model rates &rarr;
+            </a>
           </div>
-          <a href="https://docs.octen.ai/overview/pricing#model-gateway" target="_blank" rel="noopener noreferrer" className="font-['DM_Sans',sans-serif] font-medium text-[14px] leading-[21px] text-[#039855] hover:text-[#027a44] transition-colors whitespace-nowrap shrink-0">
-            View model rates &rarr;
-          </a>
+
+          {/* Body Copy */}
+          <p className="font-['DM_Sans',sans-serif] text-[14px] leading-[22px] text-[#57575E] m-0">
+            One API for top-tier LLM &amp; multimodal models, with Octen Search built in. Powers the model reasoning, synthesis, and generation across Answer, Deep Research, and Grounded Generation.
+          </p>
+
+          {/* Rebate Details Bar */}
+          <div className="border-t border-[#E7E7E3] pt-[12px] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-[8px] text-[13px] text-[#57575E]">
+            <div className="flex flex-wrap items-center gap-[6px]">
+              <span className="font-semibold text-[#0A0A0A]">Model Gateway Rebate:</span>
+              <span>Get <strong>15% of your Model Gateway spend back</strong>, credited automatically to your balance each month across all models.</span>
+            </div>
+            <a
+              href="https://docs.octen.ai/overview/model-gateway-rebate.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-['DM_Sans',sans-serif] font-medium text-[#039855] hover:text-[#027a44] hover:underline whitespace-nowrap shrink-0"
+            >
+              Learn about rebate &rarr;
+            </a>
+          </div>
         </div>
 
       </div>
