@@ -465,8 +465,8 @@ export default function ApiExplorer() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-[12px] w-full">
             <div className="flex items-center gap-[10px] flex-wrap">
               <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] text-[#0A0A0A] tracking-tight">Model Gateway</span>
-              <span className="h-[24px] px-[8px] bg-[#E3FFE2] border border-[#6FD1A5] rounded-[6px] flex items-center justify-center font-['DM_Sans',sans-serif] font-semibold text-[12px] leading-[12px] text-[#1B9C62] whitespace-nowrap">
-                🎁 15% Rebate Back
+              <span className="h-[24px] px-[8px] bg-[#70FE7E] rounded-[6px] flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[13px] leading-[13px] text-[#100F09] whitespace-nowrap shrink-0">
+                15% Rebate Back
               </span>
             </div>
             <a
