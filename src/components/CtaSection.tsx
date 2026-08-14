@@ -49,11 +49,6 @@ export default function CtaSection() {
             Contact sales
           </a>
         </div>
-
-        {/* Launch Pricing Note */}
-        <p className="font-['DM_Sans',sans-serif] font-normal text-[13px] sm:text-[14px] text-white/50 m-0 pt-2">
-          * Launch pricing &mdash; discounted rates, subject to change
-        </p>
       </div>
     </section>
   );
