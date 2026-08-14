@@ -419,13 +419,17 @@ function QpsPlanCard() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div 
-      onClick={() => scrollToAnchor("qps-plans")}
+    <a 
+      href="#qps-plans"
+      onClick={(e) => {
+        e.preventDefault();
+        scrollToAnchor("qps-plans");
+      }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="w-full md:flex-[1_0_0] md:min-w-px relative rounded-[24px] bg-white border border-[#E5E7EB] hover:border-[#D1D5DB] hover:-translate-y-[3px] hover:shadow-[0px_12px_28px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out select-none block overflow-hidden cursor-pointer"
+      className="w-full md:flex-[1_0_0] md:min-w-px relative rounded-[24px] bg-white border border-[#E5E7EB] hover:border-[#D1D5DB] hover:-translate-y-[3px] hover:shadow-[0px_12px_28px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out select-none block overflow-hidden cursor-pointer no-underline text-inherit"
     >
-      <div className="flex flex-col items-center justify-center size-full p-[6px] relative z-10">
+      <div className="flex flex-col items-center justify-center size-full p-[6px] relative z-10 pointer-events-none">
         <QpsCardGraphic isHovered={isHovered} />
         <div className="content-stretch flex flex-col gap-[6px] items-center pb-[16px] pt-[20px] relative shrink-0 text-center w-full">
           <p className="font-['Fraunces',serif] font-bold text-[20px] sm:text-[22px] text-[#09090b] leading-[1.2] py-[2px] w-full text-center relative shrink-0">
@@ -436,7 +440,7 @@ function QpsPlanCard() {
           </p>
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -444,13 +448,17 @@ function PayAsYouGoCard() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div 
-      onClick={() => scrollToAnchor("api-pricing")}
+    <a 
+      href="#api-pricing"
+      onClick={(e) => {
+        e.preventDefault();
+        scrollToAnchor("api-pricing");
+      }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="w-full md:flex-[1_0_0] md:min-w-px relative rounded-[24px] bg-white border border-[#E5E7EB] hover:border-[#D1D5DB] hover:-translate-y-[3px] hover:shadow-[0px_12px_28px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out select-none block overflow-hidden cursor-pointer"
+      className="w-full md:flex-[1_0_0] md:min-w-px relative rounded-[24px] bg-white border border-[#E5E7EB] hover:border-[#D1D5DB] hover:-translate-y-[3px] hover:shadow-[0px_12px_28px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out select-none block overflow-hidden cursor-pointer no-underline text-inherit"
     >
-      <div className="flex flex-col items-center justify-center size-full p-[6px] relative z-10">
+      <div className="flex flex-col items-center justify-center size-full p-[6px] relative z-10 pointer-events-none">
         <PayAsYouGoGraphic isHovered={isHovered} />
         <div className="content-stretch flex flex-col gap-[6px] items-center pb-[16px] pt-[20px] relative shrink-0 text-center w-full">
           <p className="font-['Fraunces',serif] font-bold text-[20px] sm:text-[22px] text-[#09090b] leading-[1.2] py-[2px] w-full text-center relative shrink-0">
@@ -461,7 +469,7 @@ function PayAsYouGoCard() {
           </p>
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 
