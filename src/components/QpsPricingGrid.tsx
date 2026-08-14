@@ -134,7 +134,7 @@ function PlanCardItem({
       <div className={`bg-white rounded-[12px] h-auto sm:h-[410px] flex flex-col justify-between p-0 m-0 overflow-hidden box-border`}>
         {/* Title Block (30px 20px padding, 150px height per Figma spec) */}
         <div className="h-auto sm:h-[150px] p-[20px_16px] sm:p-[30px_20px] flex flex-col justify-between gap-[10px] sm:gap-[20px] border-b border-[rgba(26,26,25,0.12)] box-border shrink-0">
-          <div className="flex items-center justify-between w-full h-[24px]">
+          <div className="flex items-center gap-[10px] h-[24px]">
             <h3 className="font-['Fraunces',serif] font-semibold text-[24px] leading-[24px] text-[#100F09]">
               {title}
             </h3>
