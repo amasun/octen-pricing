@@ -551,7 +551,7 @@ function HeroLightGlow() {
 export default function HeroSection() {
   return (
     <div 
-      className="content-stretch flex flex-col items-center pb-[40px] sm:pb-[80px] pt-[24px] sm:pt-[40px] px-4 sm:px-[320px] relative size-full w-full overflow-hidden isolate"
+      className="content-stretch flex flex-col items-center pb-[40px] sm:pb-[80px] pt-[64px] sm:pt-[80px] px-4 sm:px-[320px] relative size-full w-full overflow-hidden isolate"
       style={{ backgroundImage: "linear-gradient(180deg, rgba(0, 136, 13, 0.65) 0%, rgba(0, 136, 13, 0.2) 45%, rgba(0, 0, 0, 0.95) 80%, #000000 100%), linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%)" }}
       data-name="hero"
     >
