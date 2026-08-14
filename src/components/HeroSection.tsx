@@ -24,7 +24,7 @@ function HeroHeader() {
         href="https://octen.ai/platform/billing"
         target="_blank"
         rel="noopener noreferrer"
-        className="group bg-transparent hover:bg-[#60ff70]/10 active:scale-[0.97] border border-[#60ff70] transition-all duration-200 ease-out inline-flex items-center justify-center h-[48px] px-[20px] gap-[8px] rounded-[10px] shrink-0 cursor-pointer select-none box-border mt-1"
+        className="group bg-transparent hover:bg-[#60ff70]/10 active:scale-[0.97] border border-[#60ff70] transition-all duration-200 ease-out inline-flex items-center justify-center h-[48px] px-[20px] gap-[8px] rounded-[10px] shrink-0 cursor-pointer select-none box-border mt-[12px]"
       >
         <span className="font-['DM_Sans',sans-serif] font-medium text-[16px] leading-none text-[#60ff70] whitespace-nowrap">
           Start Building
