@@ -369,7 +369,7 @@ export default function QpsPricingGrid() {
           {/* Bottom Row (Frame 427319262 with 20px left padding) */}
           <div className="pl-[20px] w-full">
             <p className="text-[14px] leading-[23px] text-[#57575E] m-0">
-              Extract, Embeddings, Model Gateway, and Deep Research have their own rate limits, which a QPS Plan does not change — see{" "}
+              Extract, Embedding, Model Gateway, and Deep Research have their own rate limits, which a QPS Plan does not change — see{" "}
               <a href="https://docs.octen.ai/resources/rate-limits" target="_blank" rel="noopener noreferrer" className="text-[#039855] font-medium underline hover:text-[#027a44] transition-colors duration-150">
                 rate limits
               </a>

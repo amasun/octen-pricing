@@ -192,7 +192,7 @@ export default function ApiExplorer() {
             {/* Absolute Hover Get Started Container (Figma spec: h 78px, bottom 0, p 30px 28px 16px 0, linear-gradient 180deg) */}
             <div className="absolute left-0 right-0 bottom-0 h-[78px] p-[30px_28px_16px_0px] bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_100%)] rounded-b-[16px] flex flex-col justify-center items-end opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto z-10 box-border">
               <a
-                href="https://octen.ai/platform/billing"
+                href="https://octen.ai/platform/web-search"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-[99px] h-[32px] px-[14px] py-[6px] gap-[4px] bg-[#100F09] hover:bg-[#2A2A28] active:scale-[0.97] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.05)] flex items-center justify-center font-['DM_Sans',sans-serif] font-medium text-[13px] leading-[20px] text-white select-none whitespace-nowrap cursor-pointer transition-all duration-200 box-border"
@@ -229,7 +229,7 @@ export default function ApiExplorer() {
             {/* Absolute Hover Get Started Container (Figma spec: h 78px, bottom 0, p 30px 28px 16px 0, linear-gradient 180deg) */}
             <div className="absolute left-0 right-0 bottom-0 h-[78px] p-[30px_28px_16px_0px] bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_100%)] rounded-b-[16px] flex flex-col justify-center items-end opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto z-10 box-border">
               <a
-                href="https://octen.ai/platform/billing"
+                href="https://octen.ai/platform/image-search"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-[99px] h-[32px] px-[14px] py-[6px] gap-[4px] bg-[#100F09] hover:bg-[#2A2A28] active:scale-[0.97] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.05)] flex items-center justify-center font-['DM_Sans',sans-serif] font-medium text-[13px] leading-[20px] text-white select-none whitespace-nowrap cursor-pointer transition-all duration-200 box-border"
@@ -258,7 +258,7 @@ export default function ApiExplorer() {
             </div>
             {/* Get started button inside card right side (no background gradient) */}
             <a
-              href="https://octen.ai/platform/billing"
+              href="https://octen.ai/platform/extract"
               target="_blank"
               rel="noopener noreferrer"
               className="absolute right-0 w-[99px] h-[32px] px-[14px] py-[6px] gap-[4px] bg-[#100F09] hover:bg-[#2A2A28] active:scale-[0.97] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.05)] flex items-center justify-center font-['DM_Sans',sans-serif] font-medium text-[13px] leading-[20px] text-white select-none whitespace-nowrap cursor-pointer opacity-0 group-hover:opacity-100 transition-all duration-200 ease-out pointer-events-none group-hover:pointer-events-auto box-border"
@@ -295,7 +295,7 @@ export default function ApiExplorer() {
             {/* Absolute Hover Get Started Container (Figma spec: h 78px, bottom 0, p 30px 28px 16px 0, linear-gradient 180deg) */}
             <div className="absolute left-0 right-0 bottom-0 h-[78px] p-[30px_28px_16px_0px] bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_100%)] rounded-b-[16px] flex flex-col justify-center items-end opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto z-10 box-border">
               <a
-                href="https://octen.ai/platform/billing"
+                href="https://octen.ai/platform/embedding"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-[99px] h-[32px] px-[14px] py-[6px] gap-[4px] bg-[#100F09] hover:bg-[#2A2A28] active:scale-[0.97] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.05)] flex items-center justify-center font-['DM_Sans',sans-serif] font-medium text-[13px] leading-[20px] text-white select-none whitespace-nowrap cursor-pointer transition-all duration-200 box-border"
@@ -335,7 +335,7 @@ export default function ApiExplorer() {
             {/* Absolute Hover Get Started Container (Figma spec: h 78px, bottom 0, p 30px 28px 16px 0, linear-gradient 180deg) */}
             <div className="absolute left-0 right-0 bottom-0 h-[78px] p-[30px_28px_16px_0px] bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_100%)] rounded-b-[16px] flex flex-col justify-center items-end opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto z-10 box-border">
               <a
-                href="https://octen.ai/platform/billing"
+                href="https://octen.ai/platform/embedding"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-[99px] h-[32px] px-[14px] py-[6px] gap-[4px] bg-[#100F09] hover:bg-[#2A2A28] active:scale-[0.97] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.05)] flex items-center justify-center font-['DM_Sans',sans-serif] font-medium text-[13px] leading-[20px] text-white select-none whitespace-nowrap cursor-pointer transition-all duration-200 box-border"
@@ -353,6 +353,9 @@ export default function ApiExplorer() {
             <div>
               <div className="flex items-center gap-[10px] flex-wrap mb-[8px]">
                 <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] text-[#0A0A0A] tracking-tight">Answer &amp; Multimodal Chat</span>
+                <span className="h-[24px] px-[8px] bg-[#F6F6F3] border border-[#E7E7E3] rounded-[6px] flex items-center justify-center font-['DM_Sans',sans-serif] font-medium text-[12px] leading-[12px] text-[#57575E] whitespace-nowrap shrink-0">
+                  Early Access
+                </span>
               </div>
               <p className="font-['DM_Sans',sans-serif] text-[14px] leading-[22px] text-[#57575E] mb-[24px]">
                 Grounded answers with citations, assembled from dozens of sub-queries.
@@ -376,7 +379,7 @@ export default function ApiExplorer() {
             {/* Absolute Hover Get Started Container (Figma spec: h 78px, bottom 0, p 30px 28px 16px 0, linear-gradient 180deg) */}
             <div className="absolute left-0 right-0 bottom-0 h-[78px] p-[30px_28px_16px_0px] bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_100%)] rounded-b-[16px] flex flex-col justify-center items-end opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto z-10 box-border">
               <a
-                href="https://octen.ai/platform/billing"
+                href="https://octen.ai/platform/answer"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-[99px] h-[32px] px-[14px] py-[6px] gap-[4px] bg-[#100F09] hover:bg-[#2A2A28] active:scale-[0.97] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.05)] flex items-center justify-center font-['DM_Sans',sans-serif] font-medium text-[13px] leading-[20px] text-white select-none whitespace-nowrap cursor-pointer transition-all duration-200 box-border"
@@ -436,6 +439,9 @@ export default function ApiExplorer() {
             <div>
               <div className="flex items-center gap-[10px] flex-wrap mb-[8px]">
                 <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] text-[#0A0A0A] tracking-tight">Grounded Generation</span>
+                <span className="h-[24px] px-[8px] bg-[#F6F6F3] border border-[#E7E7E3] rounded-[6px] flex items-center justify-center font-['DM_Sans',sans-serif] font-medium text-[12px] leading-[12px] text-[#57575E] whitespace-nowrap shrink-0">
+                  Early Access
+                </span>
               </div>
               <p className="font-['DM_Sans',sans-serif] text-[14px] leading-[22px] text-[#57575E] mb-[24px]">
                 Images and video generated from real-world references found by live web search.
@@ -458,7 +464,7 @@ export default function ApiExplorer() {
             {/* Absolute Hover Get Started Container (Figma spec: h 78px, bottom 0, p 30px 28px 16px 0, linear-gradient 180deg) */}
             <div className="absolute left-0 right-0 bottom-0 h-[78px] p-[30px_28px_16px_0px] bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_100%)] rounded-b-[16px] flex flex-col justify-center items-end opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto z-10 box-border">
               <a
-                href="https://octen.ai/platform/billing"
+                href="https://octen.ai/platform/grounded-generation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-[99px] h-[32px] px-[14px] py-[6px] gap-[4px] bg-[#100F09] hover:bg-[#2A2A28] active:scale-[0.97] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.05)] flex items-center justify-center font-['DM_Sans',sans-serif] font-medium text-[13px] leading-[20px] text-white select-none whitespace-nowrap cursor-pointer transition-all duration-200 box-border"
