@@ -417,31 +417,19 @@ const scrollToAnchor = (id: string) => {
 
 function QpsPlanCard() {
   const [isHovered, setIsHovered] = useState(false);
-  const pointerPosRef = useRef({ x: 0, y: 0 });
-
-  const handleMouseDown = (e: React.MouseEvent) => {
-    pointerPosRef.current = { x: e.clientX, y: e.clientY };
-  };
 
   const handleClick = (e: React.MouseEvent) => {
-    const dx = Math.abs(e.clientX - pointerPosRef.current.x);
-    const dy = Math.abs(e.clientY - pointerPosRef.current.y);
-    // If movement is under 6px, treat as clean click -> 100% scroll to anchor
-    if (dx < 6 && dy < 6) {
-      if (window.getSelection) {
-        window.getSelection()?.removeAllRanges();
-      }
-      scrollToAnchor("qps-plans");
-    }
+    e.preventDefault();
+    scrollToAnchor("qps-plans");
   };
 
   return (
-    <div 
-      onMouseDown={handleMouseDown}
+    <a 
+      href="#qps-plans"
       onClick={handleClick}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="w-full md:flex-[1_0_0] md:min-w-px relative rounded-[24px] bg-white border border-[#E5E7EB] hover:border-[#D1D5DB] hover:-translate-y-[3px] hover:shadow-[0px_12px_28px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out block overflow-hidden cursor-pointer select-text"
+      className="w-full md:flex-[1_0_0] md:min-w-px relative rounded-[24px] bg-white border border-[#E5E7EB] hover:border-[#D1D5DB] hover:-translate-y-[3px] hover:shadow-[0px_12px_28px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out block overflow-hidden cursor-pointer select-text no-underline text-inherit"
     >
       <div className="flex flex-col items-center justify-center size-full p-[6px] relative z-10">
         <QpsCardGraphic isHovered={isHovered} />
@@ -454,37 +442,25 @@ function QpsPlanCard() {
           </p>
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 
 function PayAsYouGoCard() {
   const [isHovered, setIsHovered] = useState(false);
-  const pointerPosRef = useRef({ x: 0, y: 0 });
-
-  const handleMouseDown = (e: React.MouseEvent) => {
-    pointerPosRef.current = { x: e.clientX, y: e.clientY };
-  };
 
   const handleClick = (e: React.MouseEvent) => {
-    const dx = Math.abs(e.clientX - pointerPosRef.current.x);
-    const dy = Math.abs(e.clientY - pointerPosRef.current.y);
-    // If movement is under 6px, treat as clean click -> 100% scroll to anchor
-    if (dx < 6 && dy < 6) {
-      if (window.getSelection) {
-        window.getSelection()?.removeAllRanges();
-      }
-      scrollToAnchor("api-pricing");
-    }
+    e.preventDefault();
+    scrollToAnchor("api-pricing");
   };
 
   return (
-    <div 
-      onMouseDown={handleMouseDown}
+    <a 
+      href="#api-pricing"
       onClick={handleClick}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="w-full md:flex-[1_0_0] md:min-w-px relative rounded-[24px] bg-white border border-[#E5E7EB] hover:border-[#D1D5DB] hover:-translate-y-[3px] hover:shadow-[0px_12px_28px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out block overflow-hidden cursor-pointer select-text"
+      className="w-full md:flex-[1_0_0] md:min-w-px relative rounded-[24px] bg-white border border-[#E5E7EB] hover:border-[#D1D5DB] hover:-translate-y-[3px] hover:shadow-[0px_12px_28px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out block overflow-hidden cursor-pointer select-text no-underline text-inherit"
     >
       <div className="flex flex-col items-center justify-center size-full p-[6px] relative z-10">
         <PayAsYouGoGraphic isHovered={isHovered} />
@@ -497,7 +473,7 @@ function PayAsYouGoCard() {
           </p>
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 
