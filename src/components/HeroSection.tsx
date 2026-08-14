@@ -7,7 +7,7 @@ import imgDither1 from "../../imports/64635f1bb002f492bde3cdcba5e5dadaf111f260.p
 
 function HeroHeader() {
   return (
-    <div className="content-stretch flex flex-col gap-[14px] sm:gap-[18px] items-center pb-0 pt-[2px] sm:pt-[34px] px-4 md:px-[156px] relative shrink-0 w-full max-w-[1000px]">
+    <div className="content-stretch flex flex-col gap-[14px] sm:gap-[18px] items-center py-0 px-4 md:px-[156px] relative shrink-0 w-full max-w-[1000px]">
       <h1 className="[word-break:break-word] bg-clip-text font-['Fraunces',serif] font-normal leading-none py-[6px] w-full text-center relative shrink-0 text-[32px] sm:text-[48px] md:text-[60px] text-[transparent]" style={{ fontVariationSettings: '"SOFT" 0, "WONK" 1', backgroundImage: "linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%), linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(136, 136, 136) 27.404%, rgb(0, 0, 0) 50.962%)" }}>
         Plans and Pricing
       </h1>
@@ -544,7 +544,7 @@ export default function HeroSection() {
   return (
     <>
       <div 
-        className="content-stretch flex flex-col items-center pt-[76px] sm:pt-[100px] pb-[80px] sm:pb-[80px] px-4 sm:px-[320px] relative size-full w-full overflow-hidden isolate bg-[#080B12]"
+        className="content-stretch flex flex-col items-center justify-center h-[460px] min-h-[460px] px-4 sm:px-[320px] relative w-full overflow-hidden isolate bg-[#080B12]"
         style={{
           background: "linear-gradient(180deg, rgba(17, 70, 43, 0.6) 0%, rgba(8, 11, 18, 0) 100%), #080B12"
         }}
