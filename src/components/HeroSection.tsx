@@ -406,22 +406,32 @@ function PayAsYouGoGraphic({ isHovered = false }: { isHovered?: boolean }) {
   );
 }
 
+const scrollToAnchor = (id: string) => {
+  const el = document.getElementById(id);
+  if (el) {
+    const yOffset = -90;
+    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  }
+};
+
 function QpsPlanCard() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div 
+      onClick={() => scrollToAnchor("qps-plans")}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="w-full md:flex-[1_0_0] md:min-w-px relative rounded-[24px] bg-white border border-[#E5E7EB] hover:border-[#D1D5DB] hover:-translate-y-[3px] hover:shadow-[0px_12px_28px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out select-text block overflow-hidden cursor-default"
+      className="w-full md:flex-[1_0_0] md:min-w-px relative rounded-[24px] bg-white border border-[#E5E7EB] hover:border-[#D1D5DB] hover:-translate-y-[3px] hover:shadow-[0px_12px_28px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out select-none block overflow-hidden cursor-pointer"
     >
       <div className="flex flex-col items-center justify-center size-full p-[6px] relative z-10">
         <QpsCardGraphic isHovered={isHovered} />
         <div className="content-stretch flex flex-col gap-[6px] items-center pb-[16px] pt-[20px] relative shrink-0 text-center w-full">
-          <p className="font-['Fraunces',serif] font-bold text-[20px] sm:text-[22px] text-[#09090b] leading-[1.2] py-[2px] w-full text-center relative shrink-0 select-text">
+          <p className="font-['Fraunces',serif] font-bold text-[20px] sm:text-[22px] text-[#09090b] leading-[1.2] py-[2px] w-full text-center relative shrink-0">
             Subscribe to a <span className="font-bold">QPS Plan</span>
           </p>
-          <p className="font-['DM_Sans',sans-serif] font-normal text-[#515151] relative shrink-0 text-[14px] whitespace-nowrap select-text">
+          <p className="font-['DM_Sans',sans-serif] font-normal text-[#515151] relative shrink-0 text-[14px] whitespace-nowrap">
             Reserves your max search QPS
           </p>
         </div>
@@ -435,17 +445,18 @@ function PayAsYouGoCard() {
 
   return (
     <div 
+      onClick={() => scrollToAnchor("api-pricing")}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="w-full md:flex-[1_0_0] md:min-w-px relative rounded-[24px] bg-white border border-[#E5E7EB] hover:border-[#D1D5DB] hover:-translate-y-[3px] hover:shadow-[0px_12px_28px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out select-text block overflow-hidden cursor-default"
+      className="w-full md:flex-[1_0_0] md:min-w-px relative rounded-[24px] bg-white border border-[#E5E7EB] hover:border-[#D1D5DB] hover:-translate-y-[3px] hover:shadow-[0px_12px_28px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out select-none block overflow-hidden cursor-pointer"
     >
       <div className="flex flex-col items-center justify-center size-full p-[6px] relative z-10">
         <PayAsYouGoGraphic isHovered={isHovered} />
         <div className="content-stretch flex flex-col gap-[6px] items-center pb-[16px] pt-[20px] relative shrink-0 text-center w-full">
-          <p className="font-['Fraunces',serif] font-bold text-[20px] sm:text-[22px] text-[#09090b] leading-[1.2] py-[2px] w-full text-center relative shrink-0 select-text">
+          <p className="font-['Fraunces',serif] font-bold text-[20px] sm:text-[22px] text-[#09090b] leading-[1.2] py-[2px] w-full text-center relative shrink-0">
             Pay as you go
           </p>
-          <p className="font-['DM_Sans',sans-serif] font-normal text-[#515151] relative shrink-0 text-[14px] whitespace-nowrap select-text">
+          <p className="font-['DM_Sans',sans-serif] font-normal text-[#515151] relative shrink-0 text-[14px] whitespace-nowrap">
             Covers actual API and token usage
           </p>
         </div>
