@@ -544,7 +544,7 @@ export default function HeroSection() {
   return (
     <>
       <div 
-        className="content-stretch flex flex-col items-center pt-[76px] sm:pt-[100px] pb-[80px] sm:pb-[110px] px-4 sm:px-[320px] relative size-full w-full overflow-hidden isolate bg-[#080B12]"
+        className="content-stretch flex flex-col items-center pt-[76px] sm:pt-[100px] pb-[80px] sm:pb-[80px] px-4 sm:px-[320px] relative size-full w-full overflow-hidden isolate bg-[#080B12]"
         style={{
           background: "linear-gradient(180deg, rgba(17, 70, 43, 0.6) 0%, rgba(8, 11, 18, 0) 100%), #080B12"
         }}
