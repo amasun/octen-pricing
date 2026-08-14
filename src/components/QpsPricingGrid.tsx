@@ -380,8 +380,8 @@ export default function QpsPricingGrid() {
           </div>
         </div>
 
-        {/* Launch Pricing Disclaimer Note at bottom of QPS Plan section */}
-        <p className="font-['DM_Sans',sans-serif] font-normal text-[13px] sm:text-[14px] text-[#57575E] text-center sm:text-right m-0 pt-[8px] w-full">
+        {/* Launch Pricing Disclaimer Note at bottom of QPS Plan section (reduced distance by half) */}
+        <p className="font-['DM_Sans',sans-serif] font-normal text-[13px] sm:text-[14px] text-[#57575E] text-center sm:text-right m-0 -mt-[8px] pt-0 w-full">
           * Launch pricing &mdash; discounted rates, subject to change
         </p>
 
