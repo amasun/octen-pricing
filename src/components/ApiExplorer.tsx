@@ -158,7 +158,7 @@ export default function ApiExplorer() {
         {/* Row 1: Search (2 cards: Web Search + Image & Video Search) */}
         <div id="search" className="scroll-mt-[176px] grid grid-cols-1 md:grid-cols-2 gap-[20px] w-full">
           {/* Card 1: Web Search */}
-          <div className="group relative bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] rounded-[16px] p-[28px] flex flex-col justify-between transition-all duration-200 box-border">
+          <div className="group bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] rounded-[16px] p-[28px] flex flex-col justify-between transition-all duration-200 box-border">
             <div>
               <div className="flex items-center gap-[10px] flex-wrap mb-[8px]">
                 <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] text-[#0A0A0A] tracking-tight">Web Search</span>
@@ -169,12 +169,22 @@ export default function ApiExplorer() {
               <p className="font-['DM_Sans',sans-serif] text-[14px] leading-[22px] text-[#57575E] mb-[24px] min-h-[44px]">
                 LLM-native web search. Ranked results with relevant highlights, and optional full content.
               </p>
-              <div className="flex items-baseline gap-[8px] flex-wrap mb-[24px]">
-                <span className="font-['DM_Sans',sans-serif] font-medium text-[34px] leading-none text-[#0A0A0A] tracking-tight">$1</span>
-                <span className="font-['DM_Sans',sans-serif] font-normal text-[16px] leading-none text-[#9C9CA4] line-through">$5</span>
-                <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#57575E]">/ 1k calls</span>
+              <div className="flex items-center justify-between gap-[12px] mb-[24px]">
+                <div className="flex items-baseline gap-[8px] flex-wrap">
+                  <span className="font-['DM_Sans',sans-serif] font-medium text-[34px] leading-none text-[#0A0A0A] tracking-tight">$1</span>
+                  <span className="font-['DM_Sans',sans-serif] font-normal text-[16px] leading-none text-[#9C9CA4] line-through">$5</span>
+                  <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#57575E]">/ 1k calls</span>
+                </div>
+                <a
+                  href="https://octen.ai/platform/web-search"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-[99px] h-[32px] px-[14px] py-[6px] gap-[4px] bg-[#100F09] hover:bg-[#2A2A28] active:scale-[0.97] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.05)] flex items-center justify-center font-['DM_Sans',sans-serif] font-medium text-[13px] leading-[20px] text-white select-none whitespace-nowrap cursor-pointer opacity-0 group-hover:opacity-100 transition-all duration-200 ease-out pointer-events-none group-hover:pointer-events-auto shrink-0 box-border"
+                >
+                  Get started
+                </a>
               </div>
-              <div className="border-t border-[#E7E7E3] pt-[16px] flex flex-col gap-[8px] transition-opacity duration-200 ease-out group-hover:opacity-35">
+              <div className="border-t border-[#E7E7E3] pt-[16px] flex flex-col gap-[8px]">
                 <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
                   <span className="font-semibold text-[#0A0A0A]">Web Search API</span>
                   <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">1 call / request</span>
@@ -185,25 +195,14 @@ export default function ApiExplorer() {
                 </div>
                 <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
                   <span className="font-semibold text-[#0A0A0A]">Full Content (Add-on)</span>
-                  <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">$0.001 / 1k tokens</span>
+                  <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">$0.5 / 1k results (<span className="text-[#039855] font-medium">10 free / call</span>)</span>
                 </div>
               </div>
-            </div>
-            {/* Absolute Hover Get Started Container (Figma spec: h 78px, bottom 0, p 30px 28px 16px 0, linear-gradient 180deg) */}
-            <div className="absolute left-0 right-0 bottom-0 h-[78px] p-[30px_28px_16px_0px] bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_100%)] rounded-b-[16px] flex flex-col justify-center items-end opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto z-10 box-border">
-              <a
-                href="https://octen.ai/platform/web-search"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-[99px] h-[32px] px-[14px] py-[6px] gap-[4px] bg-[#100F09] hover:bg-[#2A2A28] active:scale-[0.97] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.05)] flex items-center justify-center font-['DM_Sans',sans-serif] font-medium text-[13px] leading-[20px] text-white select-none whitespace-nowrap cursor-pointer transition-all duration-200 box-border"
-              >
-                Get started
-              </a>
             </div>
           </div>
 
           {/* Card 2: Image & Video Search */}
-          <div className="group relative bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] rounded-[16px] p-[28px] flex flex-col justify-between transition-all duration-200 box-border">
+          <div className="group bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] rounded-[16px] p-[28px] flex flex-col justify-between transition-all duration-200 box-border">
             <div>
               <div className="flex items-center gap-[10px] flex-wrap mb-[8px]">
                 <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] text-[#0A0A0A] tracking-tight">Image &amp; Video Search</span>
@@ -211,11 +210,21 @@ export default function ApiExplorer() {
               <p className="font-['DM_Sans',sans-serif] text-[14px] leading-[22px] text-[#57575E] mb-[24px] min-h-[44px]">
                 Beyond text queries &mdash; images and videos retrieved from the live web.
               </p>
-              <div className="flex items-baseline gap-[8px] flex-wrap mb-[24px]">
-                <span className="font-['DM_Sans',sans-serif] font-medium text-[34px] leading-none text-[#0A0A0A] tracking-tight">$5</span>
-                <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#57575E]">/ 1k calls</span>
+              <div className="flex items-center justify-between gap-[12px] mb-[24px]">
+                <div className="flex items-baseline gap-[8px] flex-wrap">
+                  <span className="font-['DM_Sans',sans-serif] font-medium text-[34px] leading-none text-[#0A0A0A] tracking-tight">$5</span>
+                  <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#57575E]">/ 1k calls</span>
+                </div>
+                <a
+                  href="https://octen.ai/platform/image-search"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-[99px] h-[32px] px-[14px] py-[6px] gap-[4px] bg-[#100F09] hover:bg-[#2A2A28] active:scale-[0.97] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.05)] flex items-center justify-center font-['DM_Sans',sans-serif] font-medium text-[13px] leading-[20px] text-white select-none whitespace-nowrap cursor-pointer opacity-0 group-hover:opacity-100 transition-all duration-200 ease-out pointer-events-none group-hover:pointer-events-auto shrink-0 box-border"
+                >
+                  Get started
+                </a>
               </div>
-              <div className="border-t border-[#E7E7E3] pt-[16px] flex flex-col gap-[8px] transition-opacity duration-200 ease-out group-hover:opacity-35">
+              <div className="border-t border-[#E7E7E3] pt-[16px] flex flex-col gap-[8px]">
                 <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
                   <span className="font-semibold text-[#0A0A0A]">Image Search API</span>
                   <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">1 call / request</span>
@@ -225,17 +234,6 @@ export default function ApiExplorer() {
                   <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">1 call / request</span>
                 </div>
               </div>
-            </div>
-            {/* Absolute Hover Get Started Container (Figma spec: h 78px, bottom 0, p 30px 28px 16px 0, linear-gradient 180deg) */}
-            <div className="absolute left-0 right-0 bottom-0 h-[78px] p-[30px_28px_16px_0px] bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_100%)] rounded-b-[16px] flex flex-col justify-center items-end opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto z-10 box-border">
-              <a
-                href="https://octen.ai/platform/image-search"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-[99px] h-[32px] px-[14px] py-[6px] gap-[4px] bg-[#100F09] hover:bg-[#2A2A28] active:scale-[0.97] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.05)] flex items-center justify-center font-['DM_Sans',sans-serif] font-medium text-[13px] leading-[20px] text-white select-none whitespace-nowrap cursor-pointer transition-all duration-200 box-border"
-              >
-                Get started
-              </a>
             </div>
           </div>
         </div>
@@ -256,7 +254,7 @@ export default function ApiExplorer() {
               <span className="font-['DM_Sans',sans-serif] font-medium text-[34px] leading-none text-[#0A0A0A] tracking-tight">$1</span>
               <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#57575E]">/ 1k URLs</span>
             </div>
-            {/* Get started button inside card right side (no background gradient) */}
+            {/* Get started button inside card right side */}
             <a
               href="https://octen.ai/platform/extract"
               target="_blank"
@@ -271,7 +269,7 @@ export default function ApiExplorer() {
         {/* Row 3: Embedding (2 cards: Embedding + VL Embedding) */}
         <div id="embeddings" className="scroll-mt-[176px] grid grid-cols-1 md:grid-cols-2 gap-[20px] w-full">
           {/* Card 1: Embedding */}
-          <div className="group relative bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] rounded-[16px] p-[28px] flex flex-col justify-between transition-all duration-200 box-border">
+          <div className="group bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] rounded-[16px] p-[28px] flex flex-col justify-between transition-all duration-200 box-border">
             <div>
               <div className="flex items-center gap-[10px] flex-wrap mb-[8px]">
                 <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] text-[#0A0A0A] tracking-tight">Embedding</span>
@@ -282,31 +280,39 @@ export default function ApiExplorer() {
               <p className="font-['DM_Sans',sans-serif] text-[14px] leading-[22px] text-[#57575E] mb-[24px]">
                 Turn text into vectors for semantic search, RAG, and recommendations.
               </p>
-              <div className="flex items-baseline gap-[8px] flex-wrap mb-[24px]">
-                <span className="font-['DM_Sans',sans-serif] font-medium text-[24px] leading-none text-[#0A0A0A] tracking-tight">$0.01 &ndash; $0.07</span>
-                <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#57575E]">/ 1M tokens</span>
+              <div className="flex items-center justify-between gap-[12px] mb-[24px]">
+                <div className="flex items-baseline gap-[8px] flex-wrap">
+                  <span className="font-['DM_Sans',sans-serif] font-medium text-[24px] leading-none text-[#0A0A0A] tracking-tight">$0.01 &ndash; $0.07</span>
+                  <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#57575E]">/ 1M tokens</span>
+                </div>
+                <a
+                  href="https://octen.ai/platform/embedding"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-[99px] h-[32px] px-[14px] py-[6px] gap-[4px] bg-[#100F09] hover:bg-[#2A2A28] active:scale-[0.97] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.05)] flex items-center justify-center font-['DM_Sans',sans-serif] font-medium text-[13px] leading-[20px] text-white select-none whitespace-nowrap cursor-pointer opacity-0 group-hover:opacity-100 transition-all duration-200 ease-out pointer-events-none group-hover:pointer-events-auto shrink-0 box-border"
+                >
+                  Get started
+                </a>
               </div>
-              <div className="border-t border-[#E7E7E3] pt-[16px] flex flex-col gap-[8px] transition-opacity duration-200 ease-out group-hover:opacity-35">
-                <span className="font-['DM_Sans',sans-serif] text-[14px] leading-[20px] text-[#57575E]">
-                  Smaller models cost less, larger models rank better.
-                </span>
+              <div className="border-t border-[#E7E7E3] pt-[16px] flex flex-col gap-[8px]">
+                <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
+                  <span className="font-semibold text-[#0A0A0A]">octen-embedding-8b</span>
+                  <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">$0.07 / 1M tokens</span>
+                </div>
+                <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
+                  <span className="font-semibold text-[#0A0A0A]">octen-embedding-4b</span>
+                  <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">$0.04 / 1M tokens</span>
+                </div>
+                <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
+                  <span className="font-semibold text-[#0A0A0A]">octen-embedding-0.6b</span>
+                  <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">$0.01 / 1M tokens</span>
+                </div>
               </div>
-            </div>
-            {/* Absolute Hover Get Started Container (Figma spec: h 78px, bottom 0, p 30px 28px 16px 0, linear-gradient 180deg) */}
-            <div className="absolute left-0 right-0 bottom-0 h-[78px] p-[30px_28px_16px_0px] bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_100%)] rounded-b-[16px] flex flex-col justify-center items-end opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto z-10 box-border">
-              <a
-                href="https://octen.ai/platform/embedding"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-[99px] h-[32px] px-[14px] py-[6px] gap-[4px] bg-[#100F09] hover:bg-[#2A2A28] active:scale-[0.97] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.05)] flex items-center justify-center font-['DM_Sans',sans-serif] font-medium text-[13px] leading-[20px] text-white select-none whitespace-nowrap cursor-pointer transition-all duration-200 box-border"
-              >
-                Get started
-              </a>
             </div>
           </div>
 
           {/* Card 2: VL Embedding */}
-          <div className="group relative bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] rounded-[16px] p-[28px] flex flex-col justify-between transition-all duration-200 box-border">
+          <div className="group bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] rounded-[16px] p-[28px] flex flex-col justify-between transition-all duration-200 box-border">
             <div>
               <div className="flex items-center gap-[10px] flex-wrap mb-[8px]">
                 <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] text-[#0A0A0A] tracking-tight">VL Embedding</span>
@@ -317,11 +323,21 @@ export default function ApiExplorer() {
               <p className="font-['DM_Sans',sans-serif] text-[14px] leading-[22px] text-[#57575E] mb-[24px]">
                 One embedding space across text, images, videos, and visual documents.
               </p>
-              <div className="flex items-baseline gap-[8px] flex-wrap mb-[24px]">
-                <span className="font-['DM_Sans',sans-serif] font-medium text-[24px] leading-none text-[#0A0A0A] tracking-tight">$0.05 &ndash; $0.25</span>
-                <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#57575E]">/ 1M tokens</span>
+              <div className="flex items-center justify-between gap-[12px] mb-[24px]">
+                <div className="flex items-baseline gap-[8px] flex-wrap">
+                  <span className="font-['DM_Sans',sans-serif] font-medium text-[24px] leading-none text-[#0A0A0A] tracking-tight">$0.05 &ndash; $0.25</span>
+                  <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#57575E]">/ 1M tokens</span>
+                </div>
+                <a
+                  href="https://octen.ai/platform/embedding"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-[99px] h-[32px] px-[14px] py-[6px] gap-[4px] bg-[#100F09] hover:bg-[#2A2A28] active:scale-[0.97] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.05)] flex items-center justify-center font-['DM_Sans',sans-serif] font-medium text-[13px] leading-[20px] text-white select-none whitespace-nowrap cursor-pointer opacity-0 group-hover:opacity-100 transition-all duration-200 ease-out pointer-events-none group-hover:pointer-events-auto shrink-0 box-border"
+                >
+                  Get started
+                </a>
               </div>
-              <div className="border-t border-[#E7E7E3] pt-[16px] flex flex-col gap-[8px] transition-opacity duration-200 ease-out group-hover:opacity-35">
+              <div className="border-t border-[#E7E7E3] pt-[16px] flex flex-col gap-[8px]">
                 <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
                   <span className="font-semibold text-[#0A0A0A]">Text tokens</span>
                   <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">$0.05 &ndash; $0.10 / 1M tokens</span>
@@ -332,24 +348,13 @@ export default function ApiExplorer() {
                 </div>
               </div>
             </div>
-            {/* Absolute Hover Get Started Container (Figma spec: h 78px, bottom 0, p 30px 28px 16px 0, linear-gradient 180deg) */}
-            <div className="absolute left-0 right-0 bottom-0 h-[78px] p-[30px_28px_16px_0px] bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_100%)] rounded-b-[16px] flex flex-col justify-center items-end opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto z-10 box-border">
-              <a
-                href="https://octen.ai/platform/embedding"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-[99px] h-[32px] px-[14px] py-[6px] gap-[4px] bg-[#100F09] hover:bg-[#2A2A28] active:scale-[0.97] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.05)] flex items-center justify-center font-['DM_Sans',sans-serif] font-medium text-[13px] leading-[20px] text-white select-none whitespace-nowrap cursor-pointer transition-all duration-200 box-border"
-              >
-                Get started
-              </a>
-            </div>
           </div>
         </div>
 
         {/* Row 4: Applications (3 cards: Answer & Multimodal Chat, Deep Research, Grounded Generation) */}
         <div id="applications" className="scroll-mt-[176px] grid grid-cols-1 md:grid-cols-3 gap-[20px] w-full">
           {/* Card 1: Answer & Multimodal Chat */}
-          <div className="group relative bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] rounded-[16px] p-[28px] flex flex-col justify-between transition-all duration-200 box-border">
+          <div className="group bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] rounded-[16px] p-[28px] flex flex-col justify-between transition-all duration-200 box-border">
             <div>
               <div className="flex items-center gap-[10px] flex-wrap mb-[8px]">
                 <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] text-[#0A0A0A] tracking-tight">Answer &amp; Multimodal Chat</span>
@@ -360,12 +365,20 @@ export default function ApiExplorer() {
               <p className="font-['DM_Sans',sans-serif] text-[14px] leading-[22px] text-[#57575E] mb-[24px]">
                 Grounded answers with citations, assembled from dozens of sub-queries.
               </p>
-              <div className="mb-[24px]">
+              <div className="flex items-center justify-between gap-[12px] mb-[24px]">
                 <span className="font-['DM_Sans',sans-serif] text-[14px] tracking-tight px-[12px] py-[8px] bg-[#F6F6F3] rounded-[8px] text-[#0A0A0A] inline-block">
                   Search calls + model tokens
                 </span>
+                <a
+                  href="https://octen.ai/platform/answer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-[99px] h-[32px] px-[14px] py-[6px] gap-[4px] bg-[#100F09] hover:bg-[#2A2A28] active:scale-[0.97] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.05)] flex items-center justify-center font-['DM_Sans',sans-serif] font-medium text-[13px] leading-[20px] text-white select-none whitespace-nowrap cursor-pointer opacity-0 group-hover:opacity-100 transition-all duration-200 ease-out pointer-events-none group-hover:pointer-events-auto shrink-0 box-border"
+                >
+                  Get started
+                </a>
               </div>
-              <div className="border-t border-[#E7E7E3] pt-[16px] flex flex-col gap-[8px] transition-opacity duration-200 ease-out group-hover:opacity-35">
+              <div className="border-t border-[#E7E7E3] pt-[16px] flex flex-col gap-[8px]">
                 <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
                   <span className="font-semibold text-[#0A0A0A]">Answer</span>
                   <span className="text-[#57575E]">Broad Search + LLM</span>
@@ -376,21 +389,10 @@ export default function ApiExplorer() {
                 </div>
               </div>
             </div>
-            {/* Absolute Hover Get Started Container (Figma spec: h 78px, bottom 0, p 30px 28px 16px 0, linear-gradient 180deg) */}
-            <div className="absolute left-0 right-0 bottom-0 h-[78px] p-[30px_28px_16px_0px] bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_100%)] rounded-b-[16px] flex flex-col justify-center items-end opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto z-10 box-border">
-              <a
-                href="https://octen.ai/platform/answer"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-[99px] h-[32px] px-[14px] py-[6px] gap-[4px] bg-[#100F09] hover:bg-[#2A2A28] active:scale-[0.97] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.05)] flex items-center justify-center font-['DM_Sans',sans-serif] font-medium text-[13px] leading-[20px] text-white select-none whitespace-nowrap cursor-pointer transition-all duration-200 box-border"
-              >
-                Get started
-              </a>
-            </div>
           </div>
 
           {/* Card 2: Deep Research */}
-          <div className="group relative bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] rounded-[16px] p-[28px] flex flex-col justify-between transition-all duration-200 box-border">
+          <div className="group bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] rounded-[16px] p-[28px] flex flex-col justify-between transition-all duration-200 box-border">
             <div>
               <div className="flex items-center gap-[10px] flex-wrap mb-[8px]">
                 <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] text-[#0A0A0A] tracking-tight">Deep Research</span>
@@ -398,11 +400,21 @@ export default function ApiExplorer() {
               <p className="font-['DM_Sans',sans-serif] text-[14px] leading-[22px] text-[#57575E] mb-[24px]">
                 Deep, source-backed research across thousands of web pages and documents.
               </p>
-              <div className="flex items-baseline gap-[8px] flex-wrap mb-[24px]">
-                <span className="font-['DM_Sans',sans-serif] font-medium text-[24px] leading-none text-[#0A0A0A] tracking-tight">$0.20 &ndash; $3.00</span>
-                <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#57575E]">/ request</span>
+              <div className="flex items-center justify-between gap-[12px] mb-[24px]">
+                <div className="flex items-baseline gap-[8px] flex-wrap">
+                  <span className="font-['DM_Sans',sans-serif] font-medium text-[24px] leading-none text-[#0A0A0A] tracking-tight">$0.20 &ndash; $3.00</span>
+                  <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#57575E]">/ request</span>
+                </div>
+                <a
+                  href="https://octen.ai/platform/billing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-[99px] h-[32px] px-[14px] py-[6px] gap-[4px] bg-[#100F09] hover:bg-[#2A2A28] active:scale-[0.97] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.05)] flex items-center justify-center font-['DM_Sans',sans-serif] font-medium text-[13px] leading-[20px] text-white select-none whitespace-nowrap cursor-pointer opacity-0 group-hover:opacity-100 transition-all duration-200 ease-out pointer-events-none group-hover:pointer-events-auto shrink-0 box-border"
+                >
+                  Get started
+                </a>
               </div>
-              <div className="border-t border-[#E7E7E3] pt-[16px] flex flex-col gap-[8px] transition-opacity duration-200 ease-out group-hover:opacity-35">
+              <div className="border-t border-[#E7E7E3] pt-[16px] flex flex-col gap-[8px]">
                 <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
                   <span className="font-semibold text-[#0A0A0A]">Lite</span>
                   <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">$0.20 / request</span>
@@ -421,21 +433,10 @@ export default function ApiExplorer() {
                 </div>
               </div>
             </div>
-            {/* Absolute Hover Get Started Container (Figma spec: h 78px, bottom 0, p 30px 28px 16px 0, linear-gradient 180deg) */}
-            <div className="absolute left-0 right-0 bottom-0 h-[78px] p-[30px_28px_16px_0px] bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_100%)] rounded-b-[16px] flex flex-col justify-center items-end opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto z-10 box-border">
-              <a
-                href="https://octen.ai/platform/billing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-[99px] h-[32px] px-[14px] py-[6px] gap-[4px] bg-[#100F09] hover:bg-[#2A2A28] active:scale-[0.97] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.05)] flex items-center justify-center font-['DM_Sans',sans-serif] font-medium text-[13px] leading-[20px] text-white select-none whitespace-nowrap cursor-pointer transition-all duration-200 box-border"
-              >
-                Get started
-              </a>
-            </div>
           </div>
 
           {/* Card 3: Grounded Generation */}
-          <div className="group relative bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] rounded-[16px] p-[28px] flex flex-col justify-between transition-all duration-200 box-border">
+          <div className="group bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] rounded-[16px] p-[28px] flex flex-col justify-between transition-all duration-200 box-border">
             <div>
               <div className="flex items-center gap-[10px] flex-wrap mb-[8px]">
                 <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] text-[#0A0A0A] tracking-tight">Grounded Generation</span>
@@ -446,11 +447,21 @@ export default function ApiExplorer() {
               <p className="font-['DM_Sans',sans-serif] text-[14px] leading-[22px] text-[#57575E] mb-[24px]">
                 Images and video generated from real-world references found by live web search.
               </p>
-              <div className="flex items-baseline gap-[8px] flex-wrap mb-[24px]">
-                <span className="font-['DM_Sans',sans-serif] font-medium text-[24px] leading-none text-[#0A0A0A] tracking-tight">$0.25 &ndash; $1.00</span>
-                <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#57575E]">/ output</span>
+              <div className="flex items-center justify-between gap-[12px] mb-[24px]">
+                <div className="flex items-baseline gap-[8px] flex-wrap">
+                  <span className="font-['DM_Sans',sans-serif] font-medium text-[24px] leading-none text-[#0A0A0A] tracking-tight">$0.25 &ndash; $1.00</span>
+                  <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#57575E]">/ output</span>
+                </div>
+                <a
+                  href="https://octen.ai/platform/grounded-generation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-[99px] h-[32px] px-[14px] py-[6px] gap-[4px] bg-[#100F09] hover:bg-[#2A2A28] active:scale-[0.97] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.05)] flex items-center justify-center font-['DM_Sans',sans-serif] font-medium text-[13px] leading-[20px] text-white select-none whitespace-nowrap cursor-pointer opacity-0 group-hover:opacity-100 transition-all duration-200 ease-out pointer-events-none group-hover:pointer-events-auto shrink-0 box-border"
+                >
+                  Get started
+                </a>
               </div>
-              <div className="border-t border-[#E7E7E3] pt-[16px] flex flex-col gap-[8px] transition-opacity duration-200 ease-out group-hover:opacity-35">
+              <div className="border-t border-[#E7E7E3] pt-[16px] flex flex-col gap-[8px]">
                 <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
                   <span className="font-semibold text-[#0A0A0A]">Image generation</span>
                   <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">$0.25 / image</span>
@@ -460,17 +471,6 @@ export default function ApiExplorer() {
                   <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">$1.00 / video</span>
                 </div>
               </div>
-            </div>
-            {/* Absolute Hover Get Started Container (Figma spec: h 78px, bottom 0, p 30px 28px 16px 0, linear-gradient 180deg) */}
-            <div className="absolute left-0 right-0 bottom-0 h-[78px] p-[30px_28px_16px_0px] bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,#FFFFFF_100%)] rounded-b-[16px] flex flex-col justify-center items-end opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto z-10 box-border">
-              <a
-                href="https://octen.ai/platform/grounded-generation"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-[99px] h-[32px] px-[14px] py-[6px] gap-[4px] bg-[#100F09] hover:bg-[#2A2A28] active:scale-[0.97] rounded-full shadow-[0_1px_2px_rgba(0,0,0,0.05)] flex items-center justify-center font-['DM_Sans',sans-serif] font-medium text-[13px] leading-[20px] text-white select-none whitespace-nowrap cursor-pointer transition-all duration-200 box-border"
-              >
-                Get started
-              </a>
             </div>
           </div>
         </div>

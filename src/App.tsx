@@ -86,11 +86,11 @@ export default function App() {
 
       // Pay As You Go API Explorer section header entrance: y:30, start:'top 85%', duration:0.8, ease:'power2.out'
       gsap.fromTo(
-        '#api-pricing',
+        '#pay-as-you-go',
         { opacity: 0, y: 30 },
         {
           scrollTrigger: {
-            trigger: '#api-pricing',
+            trigger: '#pay-as-you-go',
             start: 'top 85%',
             once: true,
           },

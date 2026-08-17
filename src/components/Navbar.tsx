@@ -138,15 +138,15 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 flex items-center justify-center transition-all duration-300 ${
-        isScrolled ? "pt-[12px] px-4" : "pt-0 px-0"
+        isScrolled ? "pt-[8px] px-[8px]" : "pt-0 px-0"
       }`}
       data-name="Header Navigation"
     >
       <div
-        className={`w-full max-w-[1440px] mx-auto flex items-center justify-between transition-all duration-300 box-border p-2 px-7 h-[52px] ${
+        className={`w-full max-w-[1440px] mx-auto flex items-center justify-between transition-all duration-300 box-border h-[52px] ${
           isScrolled
-            ? "bg-white/95 backdrop-blur-md border border-[#E7E7E3] rounded-[16px] shadow-[0_4px_24px_rgba(0,0,0,0.06)]"
-            : "bg-transparent border border-transparent rounded-none shadow-none"
+            ? "bg-white/95 backdrop-blur-md border border-[#E7E7E3] rounded-[14px] shadow-[0_4px_24px_rgba(0,0,0,0.06)] p-[8px]"
+            : "bg-transparent border border-transparent rounded-none shadow-none py-2 px-[8px]"
         }`}
       >
         <Logo isDarkTheme={isDarkTheme} />
