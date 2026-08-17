@@ -194,7 +194,7 @@ export default function ApiExplorer() {
                   <span className="text-[#57575E] text-[12px] sm:text-[13px] bg-[#F6F6F3] px-[6px] sm:px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">1 call / sub-query</span>
                 </div>
                 <div className="flex items-center justify-between gap-[8px] text-[14px] min-w-0">
-                  <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Full Content (Add-on)</span>
+                  <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Full Content</span>
                   <span className="text-[#57575E] text-[12px] sm:text-[13px] bg-[#F6F6F3] px-[6px] sm:px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$0.5 / 1k results (<span className="text-[#039855] font-medium">10 free / call</span>)</span>
                 </div>
               </div>
