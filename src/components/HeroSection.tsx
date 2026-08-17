@@ -493,30 +493,30 @@ function PlusSeparator() {
         <line x1="0.5" y1="0" x2="0.5" y2="259.21" stroke="url(#vector1_line_gradient)" strokeWidth="1" />
       </svg>
 
-      {/* Mobile Vertical connecting line passing through plus icon */}
+      {/* Mobile Horizontal connecting line passing through plus icon */}
       <svg 
         className="absolute block md:hidden pointer-events-none z-0 overflow-visible" 
         style={{
-          width: "1px",
-          height: "56px",
+          width: "240px",
+          height: "1px",
           left: "50%",
-          top: "-14px",
-          transform: "translateX(-50%)",
+          top: "50%",
+          transform: "translate(-50%, -50%)",
           opacity: 0.6
         }}
-        viewBox="0 0 1 56" 
+        viewBox="0 0 240 1" 
         fill="none"
       >
         <defs>
-          <linearGradient id="vector1_line_gradient_mobile" x1="0" y1="0" x2="0" y2="56" gradientUnits="userSpaceOnUse">
+          <linearGradient id="vector1_line_gradient_mobile_h" x1="0" y1="0" x2="240" y2="0" gradientUnits="userSpaceOnUse">
             <stop stopColor="#000000" stopOpacity="0"/>
-            <stop offset="0.2" stopColor="#000000" stopOpacity="0.6"/>
+            <stop offset="0.2" stopColor="#000000" stopOpacity="0.5"/>
             <stop offset="0.5" stopColor="#000000" stopOpacity="0.9"/>
-            <stop offset="0.8" stopColor="#000000" stopOpacity="0.6"/>
+            <stop offset="0.8" stopColor="#000000" stopOpacity="0.5"/>
             <stop offset="1" stopColor="#000000" stopOpacity="0"/>
           </linearGradient>
         </defs>
-        <line x1="0.5" y1="0" x2="0.5" y2="56" stroke="url(#vector1_line_gradient_mobile)" strokeWidth="1" />
+        <line x1="0" y1="0.5" x2="240" y2="0.5" stroke="url(#vector1_line_gradient_mobile_h)" strokeWidth="1" />
       </svg>
 
       {/* Center Plus Icon Button */}
