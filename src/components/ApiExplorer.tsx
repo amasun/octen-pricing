@@ -381,8 +381,8 @@ export default function ApiExplorer() {
                   <span className="text-[#57575E] text-[12px] sm:text-[13px] shrink-0 whitespace-nowrap">Broad Search + LLM</span>
                 </div>
                 <div className="flex items-center justify-between gap-[8px] text-[14px] min-w-0">
-                  <div className="flex items-center gap-[6px] min-w-0">
-                    <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Multimodal Chat</span>
+                  <div className="flex items-center gap-[6px] flex-wrap">
+                    <span className="font-semibold text-[#0A0A0A] whitespace-nowrap">Multimodal Chat</span>
                     <span className="h-[20px] px-[6px] bg-[#E3FFE2] border border-[#6FD1A5] rounded-[4px] flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] leading-[11px] text-[#1B9C62] whitespace-nowrap shrink-0">
                       Early Access
                     </span>
