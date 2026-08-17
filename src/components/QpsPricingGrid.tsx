@@ -204,12 +204,12 @@ function PlanCardItem({
 function EnterpriseCard({ plan }: { plan: { title: string; subtitle: string; price: string; period?: string; features: FeatureItem[]; buttonText: string; buttonHref?: string; } }) {
   return (
     <div className="w-full relative rounded-[16px] overflow-hidden bg-white border border-[#D1D1D1] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-200 box-border p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 isolate">
-      {/* Bottom Ambient Glow Layer at card bottom */}
-      <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-full h-[60px] pointer-events-none z-0 opacity-60 overflow-visible">
+      {/* Ambient Glow Layer: Original Figma spec for PC desktop (md:), bottom edge alignment for mobile */}
+      <div className="absolute left-1/2 -translate-x-1/2 md:translate-x-0 bottom-0 md:bottom-auto md:left-[-150px] md:top-[185.73px] w-full md:w-[918.47px] h-[60px] md:h-[78.27px] pointer-events-none z-0 opacity-60 overflow-visible">
         {/* Vector 10: #70FE7E glow */}
-        <div className="absolute w-[80%] h-[50px] left-[10%] bottom-[-20px] bg-[#70FE7E] blur-[45px] pointer-events-none rounded-full" />
+        <div className="absolute w-[80%] md:w-[738.01px] h-[50px] md:h-[68.27px] left-[10%] md:left-[84.54px] bottom-[-20px] md:bottom-[19px] bg-[#70FE7E] blur-[45px] md:blur-[50px] pointer-events-none rounded-full" />
         {/* Vector 11: #DDFE70 glow */}
-        <div className="absolute w-[80%] h-[50px] right-[10%] bottom-[-20px] bg-[#DDFE70] blur-[45px] pointer-events-none rounded-full" />
+        <div className="absolute w-[80%] md:w-[738.01px] h-[50px] md:h-[68.27px] right-[10%] md:right-auto md:left-[164.71px] bottom-[-20px] md:bottom-[29px] bg-[#DDFE70] blur-[45px] md:blur-[50px] pointer-events-none rounded-full md:-scale-x-100" />
       </div>
 
       {/* Left: Crown Icon + Title & Custom Price (Custom left-aligned with Enterprise text) */}
