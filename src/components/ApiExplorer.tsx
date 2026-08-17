@@ -383,7 +383,7 @@ export default function ApiExplorer() {
                 <div className="flex items-center justify-between gap-[4px] sm:gap-[6px] text-[14px] min-w-0">
                   <div className="flex items-center gap-[4px] sm:gap-[6px] shrink-0">
                     <span className="font-semibold text-[#0A0A0A] whitespace-nowrap text-[13px] sm:text-[14px]">Multimodal Chat</span>
-                    <span className="h-[18px] sm:h-[20px] px-[4px] sm:px-[5px] bg-[#E3FFE2] border border-[#6FD1A5] rounded-[4px] flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[10px] sm:text-[11px] leading-none text-[#1B9C62] whitespace-nowrap shrink-0">
+                    <span className="h-[18px] sm:h-[20px] px-[4px] sm:px-[5px] bg-[#E3FFE2] border border-[#6FD1A5] rounded-[4px] flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[10px] sm:text-[11px] leading-none text-[#1B9C62] whitespace-nowrap shrink-0 tracking-tighter">
                       Early Access
                     </span>
                   </div>
@@ -442,7 +442,7 @@ export default function ApiExplorer() {
             <div>
               <div className="flex items-center gap-[10px] flex-wrap mb-[8px]">
                 <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] text-[#0A0A0A] tracking-tight">Grounded Generation</span>
-                <span className="h-[24px] px-[8px] bg-[#E3FFE2] border border-[#6FD1A5] rounded-[6px] flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[12px] leading-[12px] text-[#1B9C62] whitespace-nowrap shrink-0">
+                <span className="h-[24px] px-[8px] bg-[#E3FFE2] border border-[#6FD1A5] rounded-[6px] flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[12px] leading-[12px] text-[#1B9C62] whitespace-nowrap shrink-0 tracking-tighter">
                   Early Access
                 </span>
               </div>
