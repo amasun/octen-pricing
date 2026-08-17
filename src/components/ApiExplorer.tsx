@@ -160,9 +160,9 @@ export default function ApiExplorer() {
           {/* Card 1: Web Search */}
           <div className="group bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] rounded-[16px] p-[28px] flex flex-col justify-between transition-all duration-200 box-border">
             <div>
-              <div className="flex items-center gap-[10px] flex-wrap mb-[8px]">
-                <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] text-[#0A0A0A] tracking-tight">Web Search</span>
-                <span className="h-[24px] px-[8px] bg-[#70FE7E] rounded-[6px] flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[13px] leading-[13px] text-[#100F09] whitespace-nowrap shrink-0">
+              <div className="flex items-center gap-[6px] sm:gap-[10px] flex-nowrap mb-[8px] min-w-0">
+                <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] sm:text-[20px] text-[#0A0A0A] tracking-tight truncate min-w-0">Web Search</span>
+                <span className="h-[22px] sm:h-[24px] px-[6px] sm:px-[8px] bg-[#70FE7E] rounded-[6px] flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[12px] sm:text-[13px] leading-[13px] text-[#100F09] whitespace-nowrap shrink-0 tracking-tight">
                   80% Off
                 </span>
               </div>
@@ -271,9 +271,9 @@ export default function ApiExplorer() {
           {/* Card 1: Embedding */}
           <div className="group bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] rounded-[16px] p-[28px] flex flex-col justify-between transition-all duration-200 box-border">
             <div>
-              <div className="flex items-center gap-[10px] flex-wrap mb-[8px]">
-                <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] text-[#0A0A0A] tracking-tight">Embedding</span>
-                <span className="h-[24px] px-[8px] bg-[#E3FFE2] border border-[#6FD1A5] rounded-[6px] flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[12px] leading-[12px] text-[#1B9C62] whitespace-nowrap shrink-0">
+              <div className="flex items-center gap-[6px] sm:gap-[10px] flex-nowrap mb-[8px] min-w-0">
+                <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] sm:text-[20px] text-[#0A0A0A] tracking-tight truncate min-w-0">Embedding</span>
+                <span className="h-[22px] sm:h-[24px] px-[6px] sm:px-[8px] bg-[#E3FFE2] border border-[#6FD1A5] rounded-[6px] flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] sm:text-[12px] leading-[12px] text-[#1B9C62] whitespace-nowrap shrink-0 tracking-tight">
                   SOTA on RTEB
                 </span>
               </div>
@@ -314,9 +314,9 @@ export default function ApiExplorer() {
           {/* Card 2: VL Embedding */}
           <div className="group bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] rounded-[16px] p-[28px] flex flex-col justify-between transition-all duration-200 box-border">
             <div>
-              <div className="flex items-center gap-[10px] flex-wrap mb-[8px]">
-                <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] text-[#0A0A0A] tracking-tight">VL Embedding</span>
-                <span className="h-[24px] px-[8px] bg-[#E3FFE2] border border-[#6FD1A5] rounded-[6px] flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[12px] leading-[12px] text-[#1B9C62] whitespace-nowrap shrink-0">
+              <div className="flex items-center gap-[6px] sm:gap-[10px] flex-nowrap mb-[8px] min-w-0">
+                <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] sm:text-[20px] text-[#0A0A0A] tracking-tight truncate min-w-0">VL Embedding</span>
+                <span className="h-[22px] sm:h-[24px] px-[6px] sm:px-[8px] bg-[#E3FFE2] border border-[#6FD1A5] rounded-[6px] flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] sm:text-[12px] leading-[12px] text-[#1B9C62] whitespace-nowrap shrink-0 tracking-tight">
                   SOTA on MMEB-v2
                 </span>
               </div>
@@ -356,9 +356,9 @@ export default function ApiExplorer() {
           {/* Card 1: Answer & Multimodal Chat */}
           <div className="group bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] rounded-[16px] p-[28px] flex flex-col justify-between transition-all duration-200 box-border">
             <div>
-              <div className="flex items-center gap-[10px] flex-wrap mb-[8px]">
-                <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] text-[#0A0A0A] tracking-tight">Answer &amp; Multimodal Chat</span>
-                <span className="h-[24px] px-[8px] bg-[#E3FFE2] border border-[#6FD1A5] rounded-[6px] flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[12px] leading-[12px] text-[#1B9C62] whitespace-nowrap shrink-0">
+              <div className="flex items-center justify-between gap-[6px] sm:gap-[8px] flex-nowrap mb-[8px] min-w-0">
+                <span className="font-['DM_Sans',sans-serif] font-bold text-[17px] sm:text-[20px] text-[#0A0A0A] tracking-tight truncate min-w-0">Answer &amp; Multimodal Chat</span>
+                <span className="h-[22px] sm:h-[24px] px-[6px] sm:px-[8px] bg-[#E3FFE2] border border-[#6FD1A5] rounded-[6px] flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] sm:text-[12px] leading-[12px] text-[#1B9C62] whitespace-nowrap shrink-0 tracking-tight">
                   Early Access
                 </span>
               </div>
@@ -438,9 +438,9 @@ export default function ApiExplorer() {
           {/* Card 3: Grounded Generation */}
           <div className="group bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] rounded-[16px] p-[28px] flex flex-col justify-between transition-all duration-200 box-border">
             <div>
-              <div className="flex items-center gap-[10px] flex-wrap mb-[8px]">
-                <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] text-[#0A0A0A] tracking-tight">Grounded Generation</span>
-                <span className="h-[24px] px-[8px] bg-[#E3FFE2] border border-[#6FD1A5] rounded-[6px] flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[12px] leading-[12px] text-[#1B9C62] whitespace-nowrap shrink-0">
+              <div className="flex items-center justify-between gap-[6px] sm:gap-[8px] flex-nowrap mb-[8px] min-w-0">
+                <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] sm:text-[20px] text-[#0A0A0A] tracking-tight truncate min-w-0">Grounded Generation</span>
+                <span className="h-[22px] sm:h-[24px] px-[6px] sm:px-[8px] bg-[#E3FFE2] border border-[#6FD1A5] rounded-[6px] flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] sm:text-[12px] leading-[12px] text-[#1B9C62] whitespace-nowrap shrink-0 tracking-tight">
                   Early Access
                 </span>
               </div>
