@@ -386,7 +386,7 @@ export default function ApiExplorer() {
                 </div>
                 <div className="flex items-center gap-[6px] text-[12px] text-[#039855] pt-[4px] font-medium">
                   <span className="w-[6px] h-[6px] rounded-full bg-[#039855] shrink-0" />
-                  <span className="truncate">Early Access &mdash; Available for testing &amp; evaluation</span>
+                  <span className="truncate">Multimodal Chat is in Early Access &mdash; Available for testing &amp; evaluation</span>
                 </div>
               </div>
             </div>
