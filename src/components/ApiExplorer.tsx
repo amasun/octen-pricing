@@ -206,6 +206,9 @@ export default function ApiExplorer() {
             <div>
               <div className="flex items-center gap-[10px] flex-wrap mb-[8px]">
                 <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] text-[#0A0A0A] tracking-tight">Image &amp; Video Search</span>
+                <span className="h-[24px] px-[8px] bg-[#E3FFE2] border border-[#6FD1A5] rounded-[6px] flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[12px] leading-[12px] text-[#1B9C62] whitespace-nowrap shrink-0 tracking-tighter">
+                  Early Access
+                </span>
               </div>
               <p className="font-['DM_Sans',sans-serif] text-[14px] leading-[22px] text-[#57575E] mb-[24px] min-h-[44px]">
                 Beyond text queries &mdash; images and videos retrieved from the live web.
