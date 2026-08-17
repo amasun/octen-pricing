@@ -125,21 +125,21 @@ export default function ApiExplorer() {
         }`}
       >
         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 w-full max-w-[1288px] mx-auto box-border">
-          {/* Left Filter Pills (single horizontal line on all screens with horizontal scroll if needed) */}
-          <div className="flex items-center gap-[4px] sm:gap-[8px] p-[2px] rounded-full h-[47px] box-border overflow-x-auto scrollbar-none max-w-full flex-nowrap shrink-0">
+          {/* Left Filter Pills (Unified Segmented Capsule Bar on mobile & desktop, no scrollbars) */}
+          <div className="w-full sm:w-auto flex items-center gap-[2px] sm:gap-[6px] p-[3px] bg-[#F6F6F3] border border-[#E7E7E3] rounded-full box-border select-none">
             {NAV_ITEMS.map((item) => {
               const isActive = activeSection === item.id;
               return (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`h-[40px] sm:h-[43px] px-[12px] sm:px-[16px] py-[8px] sm:py-[10px] rounded-full font-['DM_Sans',sans-serif] text-center transition-all duration-200 cursor-pointer select-none flex items-center justify-center shrink-0 min-w-[68px] sm:w-[140px] ${
+                  className={`flex-1 sm:w-[130px] h-[36px] sm:h-[40px] px-[4px] sm:px-[14px] py-[6px] rounded-full font-['DM_Sans',sans-serif] text-center transition-all duration-200 cursor-pointer select-none flex items-center justify-center min-w-0 ${
                     isActive
-                      ? "bg-[#039855] text-white font-bold text-[14px] sm:text-[16px] leading-[22px] shadow-xs scale-[1.02]"
-                      : "bg-[#F6F6F3] text-[#515151] hover:text-[#0A0A0A] hover:bg-[#EAEAE5] font-normal text-[13px] sm:text-[14px] leading-[22px]"
+                      ? "bg-[#039855] text-white font-bold text-[12px] sm:text-[15px] leading-tight shadow-xs scale-[1.01]"
+                      : "bg-transparent text-[#515151] hover:text-[#0A0A0A] hover:bg-[#EAEAE5] font-normal text-[12px] sm:text-[14px] leading-tight"
                   }`}
                 >
-                  <span className="whitespace-nowrap">{item.title}</span>
+                  <span className="truncate whitespace-nowrap">{item.title}</span>
                 </button>
               );
             })}
