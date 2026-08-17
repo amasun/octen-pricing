@@ -378,16 +378,16 @@ export default function ApiExplorer() {
               <div className="border-t border-[#E7E7E3] pt-[16px] flex flex-col gap-[8px]">
                 <div className="flex items-center justify-between gap-[8px] text-[14px] min-w-0">
                   <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Answer</span>
-                  <span className="text-[#57575E] text-[12px] sm:text-[13px] shrink-0 whitespace-nowrap">Broad Search + LLM</span>
+                  <span className="text-[#57575E] text-[11px] sm:text-[12px] shrink-0 whitespace-nowrap text-right">Broad Search + LLM</span>
                 </div>
-                <div className="flex items-center justify-between gap-x-[8px] gap-y-[4px] flex-wrap text-[14px] min-w-0">
-                  <div className="flex items-center gap-[6px] flex-wrap">
-                    <span className="font-semibold text-[#0A0A0A] whitespace-nowrap">Multimodal Chat</span>
-                    <span className="h-[20px] px-[6px] bg-[#E3FFE2] border border-[#6FD1A5] rounded-[4px] flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] leading-[11px] text-[#1B9C62] whitespace-nowrap shrink-0">
+                <div className="flex items-center justify-between gap-[4px] sm:gap-[6px] text-[14px] min-w-0">
+                  <div className="flex items-center gap-[4px] sm:gap-[6px] shrink-0">
+                    <span className="font-semibold text-[#0A0A0A] whitespace-nowrap text-[13px] sm:text-[14px]">Multimodal Chat</span>
+                    <span className="h-[18px] sm:h-[20px] px-[4px] sm:px-[5px] bg-[#E3FFE2] border border-[#6FD1A5] rounded-[4px] flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[10px] sm:text-[11px] leading-none text-[#1B9C62] whitespace-nowrap shrink-0">
                       Early Access
                     </span>
                   </div>
-                  <span className="text-[#57575E] text-[12px] sm:text-[13px] whitespace-nowrap">Multimodal Search + LLM</span>
+                  <span className="text-[#57575E] text-[11px] sm:text-[12px] shrink-0 whitespace-nowrap text-right">Multimodal Search + LLM</span>
                 </div>
               </div>
             </div>
