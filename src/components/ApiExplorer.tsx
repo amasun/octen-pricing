@@ -366,7 +366,7 @@ export default function ApiExplorer() {
                 Grounded answers with citations, assembled from dozens of sub-queries.
               </p>
               <div className="flex items-center justify-between gap-[12px] mb-[24px]">
-                <span className="font-['DM_Sans',sans-serif] text-[14px] tracking-tight px-[12px] py-[8px] bg-[#F6F6F3] rounded-[8px] text-[#0A0A0A] inline-block">
+                <span className="font-['DM_Sans',sans-serif] text-[12px] sm:text-[14px] tracking-tight px-[8px] sm:px-[12px] py-[8px] bg-[#F6F6F3] rounded-[8px] text-[#0A0A0A] inline-block whitespace-nowrap">
                   Search calls + model tokens
                 </span>
                 <a
