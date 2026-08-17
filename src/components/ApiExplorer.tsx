@@ -125,18 +125,18 @@ export default function ApiExplorer() {
         }`}
       >
         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 w-full max-w-[1288px] mx-auto box-border">
-          {/* Left Filter Pills (width: 140px, height: 43px, background: #039855 / #F6F6F3) */}
-          <div className="flex items-center gap-[8px] p-[2px] rounded-full h-[47px] box-border flex-wrap sm:flex-nowrap">
+          {/* Left Filter Pills (single horizontal line on all screens with horizontal scroll if needed) */}
+          <div className="flex items-center gap-[4px] sm:gap-[8px] p-[2px] rounded-full h-[47px] box-border overflow-x-auto scrollbar-none max-w-full flex-nowrap shrink-0">
             {NAV_ITEMS.map((item) => {
               const isActive = activeSection === item.id;
               return (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`w-[140px] h-[43px] px-[16px] py-[10px] gap-[8px] rounded-full font-['DM_Sans',sans-serif] text-center transition-all duration-200 cursor-pointer select-none flex items-center justify-center shrink-0 ${
+                  className={`h-[40px] sm:h-[43px] px-[12px] sm:px-[16px] py-[8px] sm:py-[10px] rounded-full font-['DM_Sans',sans-serif] text-center transition-all duration-200 cursor-pointer select-none flex items-center justify-center shrink-0 min-w-[68px] sm:w-[140px] ${
                     isActive
-                      ? "bg-[#039855] text-white font-bold text-[16px] leading-[22px] shadow-xs scale-[1.02]"
-                      : "bg-[#F6F6F3] text-[#515151] hover:text-[#0A0A0A] hover:bg-[#EAEAE5] font-normal text-[14px] leading-[22px]"
+                      ? "bg-[#039855] text-white font-bold text-[14px] sm:text-[16px] leading-[22px] shadow-xs scale-[1.02]"
+                      : "bg-[#F6F6F3] text-[#515151] hover:text-[#0A0A0A] hover:bg-[#EAEAE5] font-normal text-[13px] sm:text-[14px] leading-[22px]"
                   }`}
                 >
                   <span className="whitespace-nowrap">{item.title}</span>
