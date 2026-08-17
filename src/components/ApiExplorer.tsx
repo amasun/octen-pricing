@@ -170,7 +170,7 @@ export default function ApiExplorer() {
                 LLM-native web search. Ranked results with relevant highlights, and optional full content.
               </p>
               <div className="flex items-center justify-between gap-[12px] mb-[24px]">
-                <div className="flex items-baseline gap-[8px] flex-wrap">
+                <div className="flex items-baseline gap-[6px] sm:gap-[8px] flex-nowrap whitespace-nowrap">
                   <span className="font-['DM_Sans',sans-serif] font-medium text-[34px] leading-none text-[#0A0A0A] tracking-tight">$1</span>
                   <span className="font-['DM_Sans',sans-serif] font-normal text-[16px] leading-none text-[#9C9CA4] line-through">$5</span>
                   <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#57575E]">/ 1k calls</span>
@@ -211,7 +211,7 @@ export default function ApiExplorer() {
                 Beyond text queries &mdash; images and videos retrieved from the live web.
               </p>
               <div className="flex items-center justify-between gap-[12px] mb-[24px]">
-                <div className="flex items-baseline gap-[8px] flex-wrap">
+                <div className="flex items-baseline gap-[6px] sm:gap-[8px] flex-nowrap whitespace-nowrap">
                   <span className="font-['DM_Sans',sans-serif] font-medium text-[34px] leading-none text-[#0A0A0A] tracking-tight">$5</span>
                   <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#57575E]">/ 1k calls</span>
                 </div>
@@ -281,9 +281,9 @@ export default function ApiExplorer() {
                 Turn text into vectors for semantic search, RAG, and recommendations.
               </p>
               <div className="flex items-center justify-between gap-[12px] mb-[24px]">
-                <div className="flex items-baseline gap-[8px] flex-wrap">
-                  <span className="font-['DM_Sans',sans-serif] font-medium text-[24px] leading-none text-[#0A0A0A] tracking-tight">$0.01 &ndash; $0.07</span>
-                  <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#57575E]">/ 1M tokens</span>
+                <div className="flex items-baseline gap-[4px] sm:gap-[8px] flex-nowrap whitespace-nowrap">
+                  <span className="font-['DM_Sans',sans-serif] font-medium text-[20px] sm:text-[24px] leading-none text-[#0A0A0A] tracking-tight">$0.01 &ndash; $0.07</span>
+                  <span className="font-['DM_Sans',sans-serif] text-[12px] sm:text-[14px] text-[#57575E]">/ 1M tokens</span>
                 </div>
                 <a
                   href="https://octen.ai/platform/embedding"
@@ -324,9 +324,9 @@ export default function ApiExplorer() {
                 One embedding space across text, images, videos, and visual documents.
               </p>
               <div className="flex items-center justify-between gap-[12px] mb-[24px]">
-                <div className="flex items-baseline gap-[8px] flex-wrap">
-                  <span className="font-['DM_Sans',sans-serif] font-medium text-[24px] leading-none text-[#0A0A0A] tracking-tight">$0.05 &ndash; $0.25</span>
-                  <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#57575E]">/ 1M tokens</span>
+                <div className="flex items-baseline gap-[4px] sm:gap-[8px] flex-nowrap whitespace-nowrap">
+                  <span className="font-['DM_Sans',sans-serif] font-medium text-[20px] sm:text-[24px] leading-none text-[#0A0A0A] tracking-tight">$0.05 &ndash; $0.25</span>
+                  <span className="font-['DM_Sans',sans-serif] text-[12px] sm:text-[14px] text-[#57575E]">/ 1M tokens</span>
                 </div>
                 <a
                   href="https://octen.ai/platform/embedding"
@@ -401,9 +401,9 @@ export default function ApiExplorer() {
                 Deep, source-backed research across thousands of web pages and documents.
               </p>
               <div className="flex items-center justify-between gap-[12px] mb-[24px]">
-                <div className="flex items-baseline gap-[8px] flex-wrap">
-                  <span className="font-['DM_Sans',sans-serif] font-medium text-[24px] leading-none text-[#0A0A0A] tracking-tight">$0.20 &ndash; $3.00</span>
-                  <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#57575E]">/ request</span>
+                <div className="flex items-baseline gap-[4px] sm:gap-[8px] flex-nowrap whitespace-nowrap">
+                  <span className="font-['DM_Sans',sans-serif] font-medium text-[20px] sm:text-[24px] leading-none text-[#0A0A0A] tracking-tight">$0.20 &ndash; $3.00</span>
+                  <span className="font-['DM_Sans',sans-serif] text-[12px] sm:text-[14px] text-[#57575E]">/ request</span>
                 </div>
                 <a
                   href="https://octen.ai/platform/billing"
@@ -448,9 +448,9 @@ export default function ApiExplorer() {
                 Images and video generated from real-world references found by live web search.
               </p>
               <div className="flex items-center justify-between gap-[12px] mb-[24px]">
-                <div className="flex items-baseline gap-[8px] flex-wrap">
-                  <span className="font-['DM_Sans',sans-serif] font-medium text-[24px] leading-none text-[#0A0A0A] tracking-tight">$0.25 &ndash; $1.00</span>
-                  <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#57575E]">/ output</span>
+                <div className="flex items-baseline gap-[4px] sm:gap-[8px] flex-nowrap whitespace-nowrap">
+                  <span className="font-['DM_Sans',sans-serif] font-medium text-[20px] sm:text-[24px] leading-none text-[#0A0A0A] tracking-tight">$0.25 &ndash; $1.00</span>
+                  <span className="font-['DM_Sans',sans-serif] text-[12px] sm:text-[14px] text-[#57575E]">/ output</span>
                 </div>
                 <a
                   href="https://octen.ai/platform/grounded-generation"
