@@ -360,7 +360,7 @@ export default function ApiExplorer() {
                 <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] text-[#0A0A0A] tracking-tight">Answer &amp; Multimodal Chat</span>
               </div>
               <p className="font-['DM_Sans',sans-serif] text-[14px] leading-[22px] text-[#57575E] mb-[24px]">
-                Grounded answers with citations, assembled from dozens of sub-queries.
+                Grounded answers with citations, assembled from dozens of sub-queries. <span className="text-[#039855] font-medium">(Multimodal Chat is in Early Access)</span>
               </p>
               <div className="flex items-center justify-between gap-[12px] mb-[24px]">
                 <span className="font-['DM_Sans',sans-serif] text-[12px] sm:text-[14px] tracking-tight px-[8px] sm:px-[12px] py-[8px] bg-[#F6F6F3] rounded-[8px] text-[#0A0A0A] inline-block whitespace-nowrap">
@@ -383,10 +383,6 @@ export default function ApiExplorer() {
                 <div className="flex items-center justify-between gap-[8px] text-[14px] min-w-0">
                   <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Multimodal Chat</span>
                   <span className="text-[#57575E] text-[12px] sm:text-[13px] shrink-0 whitespace-nowrap">Multimodal Search + LLM</span>
-                </div>
-                <div className="flex items-center gap-[6px] text-[12px] text-[#039855] pt-[4px] font-medium">
-                  <span className="w-[6px] h-[6px] rounded-full bg-[#039855] shrink-0" />
-                  <span className="truncate">Multimodal Chat is in Early Access</span>
                 </div>
               </div>
             </div>
@@ -443,7 +439,7 @@ export default function ApiExplorer() {
                 <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] text-[#0A0A0A] tracking-tight">Grounded Generation</span>
               </div>
               <p className="font-['DM_Sans',sans-serif] text-[14px] leading-[22px] text-[#57575E] mb-[24px]">
-                Images and video generated from real-world references found by live web search.
+                Images and video generated from real-world references found by live web search. <span className="text-[#039855] font-medium">(Early Access)</span>
               </p>
               <div className="flex items-center justify-between gap-[12px] mb-[24px]">
                 <div className="flex items-baseline gap-[4px] sm:gap-[8px] flex-nowrap whitespace-nowrap">
@@ -467,10 +463,6 @@ export default function ApiExplorer() {
                 <div className="flex items-center justify-between gap-[8px] text-[14px] min-w-0">
                   <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Video generation</span>
                   <span className="text-[#57575E] text-[12px] sm:text-[13px] bg-[#F6F6F3] px-[6px] sm:px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$1.00 / video</span>
-                </div>
-                <div className="flex items-center gap-[6px] text-[12px] text-[#039855] pt-[4px] font-medium">
-                  <span className="w-[6px] h-[6px] rounded-full bg-[#039855] shrink-0" />
-                  <span className="truncate">Early Access</span>
                 </div>
               </div>
             </div>
