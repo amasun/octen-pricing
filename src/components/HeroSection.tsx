@@ -467,8 +467,8 @@ function PayAsYouGoCard() {
 
 function PlusSeparator() {
   return (
-    <div className="relative md:absolute md:-translate-x-1/2 md:-translate-y-1/2 md:left-1/2 md:top-1/2 mx-auto shrink-0 z-20 pointer-events-none flex items-center justify-center h-[20px] w-full md:w-[38px] md:h-[38px] md:size-[38px] my-0 md:my-0">
-      {/* Vector 1: Vertical linear gradient connecting line per Figma spec */}
+    <div className="relative md:absolute md:-translate-x-1/2 md:-translate-y-1/2 md:left-1/2 md:top-1/2 mx-auto shrink-0 z-20 pointer-events-none flex items-center justify-center h-[28px] md:h-[38px] w-full md:w-[38px] md:size-[38px] my-1 md:my-0">
+      {/* Desktop Vertical connecting line per Figma spec */}
       <svg 
         className="absolute hidden md:block pointer-events-none z-0 overflow-visible" 
         style={{
@@ -491,6 +491,32 @@ function PlusSeparator() {
           </linearGradient>
         </defs>
         <line x1="0.5" y1="0" x2="0.5" y2="259.21" stroke="url(#vector1_line_gradient)" strokeWidth="1" />
+      </svg>
+
+      {/* Mobile Vertical connecting line passing through plus icon */}
+      <svg 
+        className="absolute block md:hidden pointer-events-none z-0 overflow-visible" 
+        style={{
+          width: "1px",
+          height: "56px",
+          left: "50%",
+          top: "-14px",
+          transform: "translateX(-50%)",
+          opacity: 0.6
+        }}
+        viewBox="0 0 1 56" 
+        fill="none"
+      >
+        <defs>
+          <linearGradient id="vector1_line_gradient_mobile" x1="0" y1="0" x2="0" y2="56" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#000000" stopOpacity="0"/>
+            <stop offset="0.2" stopColor="#000000" stopOpacity="0.6"/>
+            <stop offset="0.5" stopColor="#000000" stopOpacity="0.9"/>
+            <stop offset="0.8" stopColor="#000000" stopOpacity="0.6"/>
+            <stop offset="1" stopColor="#000000" stopOpacity="0"/>
+          </linearGradient>
+        </defs>
+        <line x1="0.5" y1="0" x2="0.5" y2="56" stroke="url(#vector1_line_gradient_mobile)" strokeWidth="1" />
       </svg>
 
       {/* Center Plus Icon Button */}
