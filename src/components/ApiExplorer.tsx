@@ -356,14 +356,11 @@ export default function ApiExplorer() {
           {/* Card 1: Answer & Multimodal Chat */}
           <div className="group bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] rounded-[16px] p-[28px] flex flex-col justify-between transition-all duration-200 box-border">
             <div>
-              <div className="flex items-baseline gap-[4px] mb-[8px] flex-wrap">
+              <div className="flex items-center gap-[10px] mb-[8px]">
                 <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] text-[#0A0A0A] tracking-tight">Answer &amp; Multimodal Chat</span>
-                <sup className="font-['JetBrains_Mono',monospace] font-medium text-[11px] text-[#039855] relative -top-[0.5em] whitespace-nowrap">
-                  . early access
-                </sup>
               </div>
               <p className="font-['DM_Sans',sans-serif] text-[14px] leading-[22px] text-[#57575E] mb-[24px]">
-                Grounded answers with citations, assembled from dozens of sub-queries.
+                Grounded answers with citations, assembled from dozens of sub-queries. <span className="text-[#039855] font-medium">(Multimodal Chat is in Early Access)</span>
               </p>
               <div className="flex items-center justify-between gap-[12px] mb-[24px]">
                 <span className="font-['DM_Sans',sans-serif] text-[12px] sm:text-[14px] tracking-tight px-[8px] sm:px-[12px] py-[8px] bg-[#F6F6F3] rounded-[8px] text-[#0A0A0A] inline-block whitespace-nowrap">
@@ -438,14 +435,11 @@ export default function ApiExplorer() {
           {/* Card 3: Grounded Generation */}
           <div className="group bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] rounded-[16px] p-[28px] flex flex-col justify-between transition-all duration-200 box-border">
             <div>
-              <div className="flex items-baseline gap-[4px] mb-[8px] flex-wrap">
+              <div className="flex items-center gap-[10px] mb-[8px]">
                 <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] text-[#0A0A0A] tracking-tight">Grounded Generation</span>
-                <sup className="font-['JetBrains_Mono',monospace] font-medium text-[11px] text-[#039855] relative -top-[0.5em] whitespace-nowrap">
-                  . early access
-                </sup>
               </div>
               <p className="font-['DM_Sans',sans-serif] text-[14px] leading-[22px] text-[#57575E] mb-[24px]">
-                Images and video generated from real-world references found by live web search.
+                Images and video generated from real-world references found by live web search. <span className="text-[#039855] font-medium">(Early Access)</span>
               </p>
               <div className="flex items-center justify-between gap-[12px] mb-[24px]">
                 <div className="flex items-baseline gap-[4px] sm:gap-[8px] flex-nowrap whitespace-nowrap">
