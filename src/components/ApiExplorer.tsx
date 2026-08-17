@@ -185,17 +185,17 @@ export default function ApiExplorer() {
                 </a>
               </div>
               <div className="border-t border-[#E7E7E3] pt-[16px] flex flex-col gap-[8px]">
-                <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
-                  <span className="font-semibold text-[#0A0A0A]">Web Search API</span>
-                  <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">1 call / request</span>
+                <div className="flex items-center justify-between gap-[8px] text-[14px] min-w-0">
+                  <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Web Search API</span>
+                  <span className="text-[#57575E] text-[12px] sm:text-[13px] bg-[#F6F6F3] px-[6px] sm:px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">1 call / request</span>
                 </div>
-                <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
-                  <span className="font-semibold text-[#0A0A0A]">Broad Search API</span>
-                  <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">1 call / sub-query</span>
+                <div className="flex items-center justify-between gap-[8px] text-[14px] min-w-0">
+                  <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Broad Search API</span>
+                  <span className="text-[#57575E] text-[12px] sm:text-[13px] bg-[#F6F6F3] px-[6px] sm:px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">1 call / sub-query</span>
                 </div>
-                <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
-                  <span className="font-semibold text-[#0A0A0A]">Full Content (Add-on)</span>
-                  <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">$0.5 / 1k results (<span className="text-[#039855] font-medium">10 free / call</span>)</span>
+                <div className="flex items-center justify-between gap-[8px] text-[14px] min-w-0">
+                  <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Full Content (Add-on)</span>
+                  <span className="text-[#57575E] text-[12px] sm:text-[13px] bg-[#F6F6F3] px-[6px] sm:px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$0.5 / 1k results (<span className="text-[#039855] font-medium">10 free / call</span>)</span>
                 </div>
               </div>
             </div>
@@ -225,13 +225,13 @@ export default function ApiExplorer() {
                 </a>
               </div>
               <div className="border-t border-[#E7E7E3] pt-[16px] flex flex-col gap-[8px]">
-                <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
-                  <span className="font-semibold text-[#0A0A0A]">Image Search API</span>
-                  <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">1 call / request</span>
+                <div className="flex items-center justify-between gap-[8px] text-[14px] min-w-0">
+                  <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Image Search API</span>
+                  <span className="text-[#57575E] text-[12px] sm:text-[13px] bg-[#F6F6F3] px-[6px] sm:px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">1 call / request</span>
                 </div>
-                <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
-                  <span className="font-semibold text-[#0A0A0A]">Video Search API</span>
-                  <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">1 call / request</span>
+                <div className="flex items-center justify-between gap-[8px] text-[14px] min-w-0">
+                  <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Video Search API</span>
+                  <span className="text-[#57575E] text-[12px] sm:text-[13px] bg-[#F6F6F3] px-[6px] sm:px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">1 call / request</span>
                 </div>
               </div>
             </div>
@@ -295,17 +295,17 @@ export default function ApiExplorer() {
                 </a>
               </div>
               <div className="border-t border-[#E7E7E3] pt-[16px] flex flex-col gap-[8px]">
-                <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
-                  <span className="font-semibold text-[#0A0A0A]">octen-embedding-8b</span>
-                  <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">$0.07 / 1M tokens</span>
+                <div className="flex items-center justify-between gap-[8px] text-[14px] min-w-0">
+                  <span className="font-semibold text-[#0A0A0A] truncate min-w-0">octen-embedding-8b</span>
+                  <span className="text-[#57575E] text-[12px] sm:text-[13px] bg-[#F6F6F3] px-[6px] sm:px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$0.07 / 1M tokens</span>
                 </div>
-                <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
-                  <span className="font-semibold text-[#0A0A0A]">octen-embedding-4b</span>
-                  <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">$0.04 / 1M tokens</span>
+                <div className="flex items-center justify-between gap-[8px] text-[14px] min-w-0">
+                  <span className="font-semibold text-[#0A0A0A] truncate min-w-0">octen-embedding-4b</span>
+                  <span className="text-[#57575E] text-[12px] sm:text-[13px] bg-[#F6F6F3] px-[6px] sm:px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$0.04 / 1M tokens</span>
                 </div>
-                <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
-                  <span className="font-semibold text-[#0A0A0A]">octen-embedding-0.6b</span>
-                  <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">$0.01 / 1M tokens</span>
+                <div className="flex items-center justify-between gap-[8px] text-[14px] min-w-0">
+                  <span className="font-semibold text-[#0A0A0A] truncate min-w-0">octen-embedding-0.6b</span>
+                  <span className="text-[#57575E] text-[12px] sm:text-[13px] bg-[#F6F6F3] px-[6px] sm:px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$0.01 / 1M tokens</span>
                 </div>
               </div>
             </div>
@@ -338,13 +338,13 @@ export default function ApiExplorer() {
                 </a>
               </div>
               <div className="border-t border-[#E7E7E3] pt-[16px] flex flex-col gap-[8px]">
-                <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
-                  <span className="font-semibold text-[#0A0A0A]">Text tokens</span>
-                  <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">$0.05 &ndash; $0.10 / 1M tokens</span>
+                <div className="flex items-center justify-between gap-[8px] text-[14px] min-w-0">
+                  <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Text tokens</span>
+                  <span className="text-[#57575E] text-[12px] sm:text-[13px] bg-[#F6F6F3] px-[6px] sm:px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$0.05 &ndash; $0.10 / 1M tokens</span>
                 </div>
-                <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
-                  <span className="font-semibold text-[#0A0A0A]">Visual tokens (image / video)</span>
-                  <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">$0.12 &ndash; $0.25 / 1M tokens</span>
+                <div className="flex items-center justify-between gap-[8px] text-[14px] min-w-0">
+                  <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Visual tokens (image / video)</span>
+                  <span className="text-[#57575E] text-[12px] sm:text-[13px] bg-[#F6F6F3] px-[6px] sm:px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$0.12 &ndash; $0.25 / 1M tokens</span>
                 </div>
               </div>
             </div>
@@ -379,13 +379,13 @@ export default function ApiExplorer() {
                 </a>
               </div>
               <div className="border-t border-[#E7E7E3] pt-[16px] flex flex-col gap-[8px]">
-                <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
-                  <span className="font-semibold text-[#0A0A0A]">Answer</span>
-                  <span className="text-[#57575E]">Broad Search + LLM</span>
+                <div className="flex items-center justify-between gap-[8px] text-[14px] min-w-0">
+                  <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Answer</span>
+                  <span className="text-[#57575E] text-[12px] sm:text-[13px] shrink-0 whitespace-nowrap">Broad Search + LLM</span>
                 </div>
-                <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
-                  <span className="font-semibold text-[#0A0A0A]">Multimodal Chat</span>
-                  <span className="text-[#57575E]">Multimodal Search + LLM</span>
+                <div className="flex items-center justify-between gap-[8px] text-[14px] min-w-0">
+                  <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Multimodal Chat</span>
+                  <span className="text-[#57575E] text-[12px] sm:text-[13px] shrink-0 whitespace-nowrap">Multimodal Search + LLM</span>
                 </div>
               </div>
             </div>
@@ -415,21 +415,21 @@ export default function ApiExplorer() {
                 </a>
               </div>
               <div className="border-t border-[#E7E7E3] pt-[16px] flex flex-col gap-[8px]">
-                <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
-                  <span className="font-semibold text-[#0A0A0A]">Lite</span>
-                  <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">$0.20 / request</span>
+                <div className="flex items-center justify-between gap-[8px] text-[14px] min-w-0">
+                  <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Lite</span>
+                  <span className="text-[#57575E] text-[12px] sm:text-[13px] bg-[#F6F6F3] px-[6px] sm:px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$0.20 / request</span>
                 </div>
-                <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
-                  <span className="font-semibold text-[#0A0A0A]">Standard</span>
-                  <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">$1.00 / request</span>
+                <div className="flex items-center justify-between gap-[8px] text-[14px] min-w-0">
+                  <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Standard</span>
+                  <span className="text-[#57575E] text-[12px] sm:text-[13px] bg-[#F6F6F3] px-[6px] sm:px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$1.00 / request</span>
                 </div>
-                <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
-                  <span className="font-semibold text-[#0A0A0A]">Pro</span>
-                  <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">$2.50 / request</span>
+                <div className="flex items-center justify-between gap-[8px] text-[14px] min-w-0">
+                  <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Pro</span>
+                  <span className="text-[#57575E] text-[12px] sm:text-[13px] bg-[#F6F6F3] px-[6px] sm:px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$2.50 / request</span>
                 </div>
-                <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
-                  <span className="font-semibold text-[#0A0A0A]">Pro-visual</span>
-                  <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">$3.00 / request</span>
+                <div className="flex items-center justify-between gap-[8px] text-[14px] min-w-0">
+                  <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Pro-visual</span>
+                  <span className="text-[#57575E] text-[12px] sm:text-[13px] bg-[#F6F6F3] px-[6px] sm:px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$3.00 / request</span>
                 </div>
               </div>
             </div>
@@ -462,13 +462,13 @@ export default function ApiExplorer() {
                 </a>
               </div>
               <div className="border-t border-[#E7E7E3] pt-[16px] flex flex-col gap-[8px]">
-                <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
-                  <span className="font-semibold text-[#0A0A0A]">Image generation</span>
-                  <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">$0.25 / image</span>
+                <div className="flex items-center justify-between gap-[8px] text-[14px] min-w-0">
+                  <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Image generation</span>
+                  <span className="text-[#57575E] text-[12px] sm:text-[13px] bg-[#F6F6F3] px-[6px] sm:px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$0.25 / image</span>
                 </div>
-                <div className="flex flex-wrap items-center justify-between gap-[8px] text-[14px]">
-                  <span className="font-semibold text-[#0A0A0A]">Video generation</span>
-                  <span className="text-[#57575E] text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3]">$1.00 / video</span>
+                <div className="flex items-center justify-between gap-[8px] text-[14px] min-w-0">
+                  <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Video generation</span>
+                  <span className="text-[#57575E] text-[12px] sm:text-[13px] bg-[#F6F6F3] px-[6px] sm:px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$1.00 / video</span>
                 </div>
               </div>
             </div>
