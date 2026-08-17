@@ -360,7 +360,7 @@ export default function ApiExplorer() {
                 <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] text-[#0A0A0A] tracking-tight">Answer &amp; Multimodal Chat</span>
               </div>
               <p className="font-['DM_Sans',sans-serif] text-[14px] leading-[22px] text-[#57575E] mb-[24px]">
-                Grounded answers with citations, assembled from dozens of sub-queries. <span className="text-[#039855] font-medium">(Multimodal Chat is in Early Access)</span>
+                Grounded answers with citations, assembled from dozens of sub-queries.
               </p>
               <div className="flex items-center justify-between gap-[12px] mb-[24px]">
                 <span className="font-['DM_Sans',sans-serif] text-[12px] sm:text-[14px] tracking-tight px-[8px] sm:px-[12px] py-[8px] bg-[#F6F6F3] rounded-[8px] text-[#0A0A0A] inline-block whitespace-nowrap">
@@ -381,7 +381,12 @@ export default function ApiExplorer() {
                   <span className="text-[#57575E] text-[12px] sm:text-[13px] shrink-0 whitespace-nowrap">Broad Search + LLM</span>
                 </div>
                 <div className="flex items-center justify-between gap-[8px] text-[14px] min-w-0">
-                  <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Multimodal Chat</span>
+                  <div className="flex items-center gap-[6px] min-w-0">
+                    <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Multimodal Chat</span>
+                    <span className="h-[20px] px-[6px] bg-[#E3FFE2] border border-[#6FD1A5] rounded-[4px] flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] leading-[11px] text-[#1B9C62] whitespace-nowrap shrink-0">
+                      Early Access
+                    </span>
+                  </div>
                   <span className="text-[#57575E] text-[12px] sm:text-[13px] shrink-0 whitespace-nowrap">Multimodal Search + LLM</span>
                 </div>
               </div>
@@ -435,11 +440,14 @@ export default function ApiExplorer() {
           {/* Card 3: Grounded Generation */}
           <div className="group bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] rounded-[16px] p-[28px] flex flex-col justify-between transition-all duration-200 box-border">
             <div>
-              <div className="flex items-center gap-[10px] mb-[8px]">
+              <div className="flex items-center gap-[10px] flex-wrap mb-[8px]">
                 <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] text-[#0A0A0A] tracking-tight">Grounded Generation</span>
+                <span className="h-[24px] px-[8px] bg-[#E3FFE2] border border-[#6FD1A5] rounded-[6px] flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[12px] leading-[12px] text-[#1B9C62] whitespace-nowrap shrink-0">
+                  Early Access
+                </span>
               </div>
               <p className="font-['DM_Sans',sans-serif] text-[14px] leading-[22px] text-[#57575E] mb-[24px]">
-                Images and video generated from real-world references found by live web search. <span className="text-[#039855] font-medium">(Early Access)</span>
+                Images and video generated from real-world references found by live web search.
               </p>
               <div className="flex items-center justify-between gap-[12px] mb-[24px]">
                 <div className="flex items-baseline gap-[4px] sm:gap-[8px] flex-nowrap whitespace-nowrap">
