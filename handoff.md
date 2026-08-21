@@ -44,6 +44,8 @@ pnpm build
    - **Plan A**：顶部吸顶分类 Tabs 栏 + 直排 Bento 平铺卡片布局。
    - **Model Tokens 统称拉齐 (Token Naming Unification)**：
      - 在 Plan A 与 Plan B 的 `MultimodalChatCard` 及 `AnswerCard` 中，将原 `Vision tokens` 统一调整为 `Model tokens`，下挂于 `Search calls + model tokens` 总览下，计费说明统一显示为 `Gateway rates`。
+   - **Model Gateway 说明卡片正文文字样式调整 (Model Gateway Box Typography)**：
+     - 将 Model Gateway 介绍卡片中的正文段落（`One API for top-tier LLM and multimodal models, with Octen Search built in — ...`）字号统一调整为 **`14px`**（`text-[14px] leading-[21px]`），颜色调整为 **`#57575E`**（`rgb(87, 87, 94)`）。
    - **Plan B Applications 分类 Search API + Model Gateway 标签背景透明度调整 (Plan B Badge 0.5 Opacity)**：
      - 将 Plan B 中 Applications 外壳标题右侧的 `Search API + Model Gateway` 标签背景色从 `bg-white/90` 调整为 **`bg-white/50`**（0.5 半透明磨砂质感），与外壳的弥散渐变背景更加融合自然。
    - **Plan A / Plan B 卡片辅助文字改为自动高度并收紧下边距 (Card Subtitle Auto Height & Tight Spacing)**：

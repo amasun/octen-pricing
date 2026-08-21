@@ -575,7 +575,7 @@ function ModelGatewayBox() {
         </div>
       </div>
 
-      <div className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] flex flex-col gap-[2px]">
+      <div className="font-['DM_Sans',sans-serif] text-[14px] leading-[21px] text-[#57575E] flex flex-col gap-[2px]">
         <p className="m-0">
           One API for top-tier LLM and multimodal models, with Octen Search built in &mdash; powering Answer, Deep Research, and Grounded Generation.
         </p>
