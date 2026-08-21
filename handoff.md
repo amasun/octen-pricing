@@ -42,6 +42,28 @@ pnpm build
 4. **Pay-As-You-Go 方案对比与三套架构 (Plan A vs Plan B vs Plan C)**：
    - 页面左侧内容区外提供全英文、极简垂直列表悬浮对比控件（Layout: Plan A / Plan B / Plan C）。
    - **Plan A**：顶部吸顶分类 Tabs 栏 + 直排 Bento 平铺卡片布局。
+   - **Model Tokens 统称拉齐 (Token Naming Unification)**：
+     - 在 Plan A 与 Plan B 的 `MultimodalChatCard` 及 `AnswerCard` 中，将原 `Vision tokens` 统一调整为 `Model tokens`，下挂于 `Search calls + model tokens` 总览下，计费说明统一显示为 `Gateway rates`。
+   - **Plan C 辅助文字弱化调色 (#8B8B8B Helper Copy Refinement)**：
+     - 将 Plan C 表格与移动端卡片中的全部次级辅助说明文字（包括端点业务描述、计费单位后缀 `/ 1k calls`、Details & Free Tier 特性描述、表头字段标签等）由原 `#57575E` 统一弱化调优为 **`#8B8B8B`**，提升主次信息层级对比度，整体视觉观感更轻盈通透。
+   - **Plan C 表头置顶滚动修复 (Plan C Sticky Header Overflow Fix)**：
+     - 根本原因分析：父容器存在 `overflow-x-auto` / `overflow-x-hidden` 会在浏览器中建立独立的溢出滚动上下文，导致子元素（`thead` 与分类行 `tr`）的 `position: sticky` 无法跟随浏览器窗口（Window Viewport）吸顶；
+     - 解决方案：
+       1. 将根层级容器及 `html` 的溢出策略统一由 `overflow-x: hidden` 升级为现代安全的 **`overflow-x: clip`**（既彻底杜绝横向溢出白边，又绝不阻断 `sticky` 吸顶机制）；
+       2. 移除 Plan C 桌面表格容器上的 `overflow-x-auto`，表格使用 100% 宽度自适应排版；
+       3. 将 5 个分类行（Search、Extract、Embedding 等）的吸顶偏移量精准设定为 **`top-[106px]`**（顶部 58px Navbar + 48px 表头 thead），滚动时紧贴在 4 列主表头正下方平滑吸顶推进。
+   - **Plan C 表格字号层级规范化 (Plan C 16px / 14px Typography System)**：
+     - **主要标题与价格 (16px / `text-[16px]`)**：分类主标题（Search, Extract 等）、端点/模型名称（Web Search API, octen-embedding-8b 等）以及主要单价数字统一定为 16px 加粗，视觉识别更清晰利落；
+     - **辅助说明与费率详情 (14px / `text-[14px]`)**：业务描述文本、计费单位后缀（`/ 1k calls`, `/ 1M tokens`）、Details & Free Tier 特性描述统一调整为 14px（从原 12px/13px 提升），大幅增强移动端与桌面端的通读性与高级感；
+     - **状态徽章 (11px / `text-[11px]`)**：保留 Mono 紧凑微标规范（`80% Off`, `Early Access`, `Best Accuracy` 等）。
+   - **Plan C 去除冗余 Billing Metric 列与移动端精简 (Plan C Rate Matrix Column Refinement)**：
+     - **桌面端大表**：精简为 4 列核心结构（`Endpoint / Model`、`Unit Price (USD)`、`Details & Free Tier`、`Action`），去除了与 Unit Price 表达重叠的 `Billing Metric` 独立列，表格横向信息流更紧凑高效；
+     - **移动端卡片**：单价与计费单位直接融合成单行气泡（如 `$1 $5 / 1k calls`、`$0.07 / 1M tokens`、`Lite: $0.20 / task`），去除了独立的多余 metric 胶囊。
+   - **Plan C 统一费率矩阵表移动端深度适配 (Plan C Dual-Track Mobile Matrix Adaptation)**：
+     - **移动端极佳体验 (`block md:hidden`)**：在手机视口（<768px）下，不再强制压缩宽表格，而是自动切换为**原生级分类卡片列表（Mobile Rate Matrix Cards）**：
+       - 按 5 大分类（Search、Extract、Embedding、VL Embedding、Applications）结构化分组；
+       - 每张端点/模型卡片清晰呈现：标题 + 状态徽章 + `Get started` 触控胶囊 + 描述 + 专属价格与计费单位浅灰气泡行 + 免费额度/关键特性说明；
+     - **桌面/平板端完整大表 (`hidden md:block`)**：保留 5 列完整吸顶矩阵大表，并配置 `overflow-x-auto min-w-[840px]` 防溢出机制，确保平板与窄屏横向平滑滚动不挤压换行。
    - **Web Search 卡片 `80% Off` 徽章置于标题行 (Web Search 80% Off Badge Alignment)**：
      - 将 **`80% Off`** 绿色高亮折扣药丸从原先的价格行移动至顶部 **`Web Search` 主标题后方**；
      - 与 `Multimodal Chat` 和 `Grounded Gen` 标题后的 `Early Access` 标签规范完全拉齐，同时使价格行（`$1 $5 / 1k calls`）纯粹聚焦于数值呈现与底对齐排版。

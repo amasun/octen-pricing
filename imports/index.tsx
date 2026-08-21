@@ -8,7 +8,7 @@ import FooterSection from "../src/components/FooterSection";
 
 export default function OctenAiInfrastructurePricing() {
   return (
-    <div className="bg-white content-stretch flex flex-col items-center relative size-full min-h-screen overflow-x-hidden" data-name="Octen AI | Infrastructure Pricing">
+    <div className="bg-white content-stretch flex flex-col items-center relative size-full min-h-screen overflow-x-clip" data-name="Octen AI | Infrastructure Pricing">
       <Navbar />
       <main className="w-full flex flex-col items-center bg-white">
         <HeroSection />

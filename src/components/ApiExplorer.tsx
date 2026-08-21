@@ -392,7 +392,7 @@ function MultimodalChatCard() {
             <span className="text-[#57575E] text-[11px] sm:text-[12px] bg-[#F6F6F3] px-[6px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$5 / 1k calls</span>
           </div>
           <div className="flex items-center justify-between gap-[8px] text-[13px] sm:text-[14px] min-w-0">
-            <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Vision tokens</span>
+            <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Model tokens</span>
             <span className="text-[#57575E] text-[11px] sm:text-[12px] bg-[#F6F6F3] px-[6px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">Gateway rates</span>
           </div>
         </div>
@@ -629,13 +629,506 @@ function PlanCTable() {
   }, []);
 
   return (
-    <div className="w-full flex flex-col gap-[12px]">
-      {/* Main Table Container (Without top header banner) */}
-      <div ref={tableContainerRef} className="w-full bg-white rounded-[16px] sm:rounded-[20px] border border-[#E2E2DE] relative">
-        <table className="w-full text-left border-separate border-spacing-0 min-w-full">
+    <div className="w-full flex flex-col gap-[16px]">
+      {/* ========================================================================= */}
+      {/* MOBILE VIEW (block md:hidden): Native-styled responsive rate matrix cards */}
+      {/* ========================================================================= */}
+      <div className="block md:hidden w-full flex flex-col gap-[16px]">
+        {/* Category 1: Search */}
+        <div className="bg-white rounded-[16px] border border-[#E2E2DE] overflow-hidden shadow-xs">
+          <div className="bg-[#F8F9FA] px-[16px] py-[12px] border-b border-[#E2E2DE] flex items-center justify-between">
+            <div className="flex items-center gap-[8px]">
+              <SearchCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
+              <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] text-[#100F09]">Search</span>
+            </div>
+            <span className="text-[14px] text-[#8B8B8B]">Real-time live web</span>
+          </div>
+
+          <div className="divide-y divide-[#EAEAE5] flex flex-col">
+            {/* Item 1: Web Search API */}
+            <div className="p-[16px] flex flex-col gap-[10px]">
+              <div className="flex items-start justify-between gap-[10px]">
+                <div className="flex flex-col gap-[2px]">
+                  <div className="flex items-center gap-[6px] flex-wrap">
+                    <span className="font-bold text-[16px] text-[#0A0A0A]">Web Search API</span>
+                    <span className="h-[18px] px-[5px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-bold text-[11px] bg-[#70FE7E] text-[#100F09] border border-[#70FE7E]">
+                      80% Off
+                    </span>
+                  </div>
+                  <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                    Real-time LLM-ready web search with live crawling
+                  </span>
+                </div>
+                <a
+                  href="https://octen.ai/platform/web-search"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-[12px] py-[6px] bg-[#100F09] active:bg-[#2A2A28] text-white text-[13px] font-medium rounded-full shrink-0 whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                >
+                  Get started
+                </a>
+              </div>
+              <div className="flex items-baseline gap-[6px] flex-wrap bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
+                <span className="font-bold text-[18px] text-[#0A0A0A]">$1</span>
+                <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
+                <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
+              </div>
+              <div className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                Full content: $0.5 / 1k results (<span className="text-[#039855] font-semibold">10 free / call</span>)
+              </div>
+            </div>
+
+            {/* Item 2: Broad Search API */}
+            <div className="p-[16px] flex flex-col gap-[10px]">
+              <div className="flex items-start justify-between gap-[10px]">
+                <div className="flex flex-col gap-[2px]">
+                  <div className="flex items-center gap-[6px] flex-wrap">
+                    <span className="font-bold text-[16px] text-[#0A0A0A]">Broad Search API</span>
+                    <span className="h-[18px] px-[5px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-bold text-[11px] bg-[#70FE7E] text-[#100F09] border border-[#70FE7E]">
+                      80% Off
+                    </span>
+                  </div>
+                  <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                    Multi-query intent planning and high-recall search
+                  </span>
+                </div>
+                <a
+                  href="https://octen.ai/platform/broad-search"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-[12px] py-[6px] bg-[#100F09] active:bg-[#2A2A28] text-white text-[13px] font-medium rounded-full shrink-0 whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                >
+                  Get started
+                </a>
+              </div>
+              <div className="flex items-baseline gap-[6px] flex-wrap bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
+                <span className="font-bold text-[18px] text-[#0A0A0A]">$1</span>
+                <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
+                <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
+              </div>
+              <div className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                Full content: $0.5 / 1k results (<span className="text-[#039855] font-semibold">10 free / call</span>)
+              </div>
+            </div>
+
+            {/* Item 3: Image Search API */}
+            <div className="p-[16px] flex flex-col gap-[10px]">
+              <div className="flex items-start justify-between gap-[10px]">
+                <div className="flex flex-col gap-[2px]">
+                  <div className="flex items-center gap-[6px] flex-wrap">
+                    <span className="font-bold text-[16px] text-[#0A0A0A]">Image Search API</span>
+                    <span className="h-[18px] px-[5px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] bg-[#E3FFE2] border border-[#6FD1A5] text-[#1B9C62]">
+                      Early Access
+                    </span>
+                  </div>
+                  <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                    Structured image search with direct preview URLs
+                  </span>
+                </div>
+                <a
+                  href="https://octen.ai/platform/image-search"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-[12px] py-[6px] bg-[#100F09] active:bg-[#2A2A28] text-white text-[13px] font-medium rounded-full shrink-0 whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                >
+                  Get started
+                </a>
+              </div>
+              <div className="flex items-baseline gap-[6px] bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
+                <span className="font-bold text-[18px] text-[#0A0A0A]">$5</span>
+                <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
+              </div>
+              <div className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                Up to 10 image results included per query
+              </div>
+            </div>
+
+            {/* Item 4: Video Search API */}
+            <div className="p-[16px] flex flex-col gap-[10px]">
+              <div className="flex items-start justify-between gap-[10px]">
+                <div className="flex flex-col gap-[2px]">
+                  <div className="flex items-center gap-[6px] flex-wrap">
+                    <span className="font-bold text-[16px] text-[#0A0A0A]">Video Search API</span>
+                    <span className="h-[18px] px-[5px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] bg-[#E3FFE2] border border-[#6FD1A5] text-[#1B9C62]">
+                      Early Access
+                    </span>
+                  </div>
+                  <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                    Multi-platform video retrieval with timestamps
+                  </span>
+                </div>
+                <a
+                  href="https://octen.ai/platform/video-search"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-[12px] py-[6px] bg-[#100F09] active:bg-[#2A2A28] text-white text-[13px] font-medium rounded-full shrink-0 whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                >
+                  Get started
+                </a>
+              </div>
+              <div className="flex items-baseline gap-[6px] bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
+                <span className="font-bold text-[18px] text-[#0A0A0A]">$5</span>
+                <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
+              </div>
+              <div className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                Up to 10 video results with metadata
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Category 2: Extract */}
+        <div className="bg-white rounded-[16px] border border-[#E2E2DE] overflow-hidden shadow-xs">
+          <div className="bg-[#F8F9FA] px-[16px] py-[12px] border-b border-[#E2E2DE] flex items-center justify-between">
+            <div className="flex items-center gap-[8px]">
+              <ExtractCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
+              <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] text-[#100F09]">Extract</span>
+            </div>
+            <span className="text-[14px] text-[#8B8B8B]">Clean URL markdown</span>
+          </div>
+
+          <div className="p-[16px] flex flex-col gap-[10px]">
+            <div className="flex items-start justify-between gap-[10px]">
+              <div className="flex flex-col gap-[2px]">
+                <span className="font-bold text-[16px] text-[#0A0A0A]">Extract API</span>
+                <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                  LLM-ready Markdown &amp; structured content extraction
+                </span>
+              </div>
+              <a
+                href="https://octen.ai/platform/extract"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-[12px] py-[6px] bg-[#100F09] active:bg-[#2A2A28] text-white text-[13px] font-medium rounded-full shrink-0 whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+              >
+                Get started
+              </a>
+            </div>
+            <div className="flex items-baseline gap-[6px] bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
+              <span className="font-bold text-[18px] text-[#0A0A0A]">$1</span>
+              <span className="text-[14px] text-[#8B8B8B]">/ 1k URLs</span>
+            </div>
+            <div className="text-[14px] text-[#039855] font-semibold leading-[20px]">
+              Failed URLs are always free
+            </div>
+          </div>
+        </div>
+
+        {/* Category 3: Embedding */}
+        <div className="bg-white rounded-[16px] border border-[#E2E2DE] overflow-hidden shadow-xs">
+          <div className="bg-[#F8F9FA] px-[16px] py-[12px] border-b border-[#E2E2DE] flex items-center justify-between">
+            <div className="flex items-center gap-[8px]">
+              <EmbeddingCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
+              <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] text-[#100F09]">Embedding</span>
+            </div>
+            <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] bg-[#FEF3C7] border border-[#FDE68A] text-[#92400E]">
+              SOTA on RTEB
+            </span>
+          </div>
+
+          <div className="divide-y divide-[#EAEAE5] flex flex-col">
+            {/* octen-embedding-8b */}
+            <div className="p-[16px] flex flex-col gap-[10px]">
+              <div className="flex items-start justify-between gap-[10px]">
+                <div className="flex flex-col gap-[2px]">
+                  <div className="flex items-center gap-[6px] flex-wrap">
+                    <span className="font-bold text-[16px] text-[#0A0A0A] font-['JetBrains_Mono',monospace]">octen-embedding-8b</span>
+                    <span className="h-[18px] px-[5px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] bg-[#FFF7ED] border border-[#ffc29f] text-[#C2410C]">
+                      Best Accuracy
+                    </span>
+                  </div>
+                  <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                    SOTA embedding quality for enterprise search and complex RAG
+                  </span>
+                </div>
+                <a
+                  href="https://octen.ai/platform/embedding"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-[12px] py-[6px] bg-[#100F09] active:bg-[#2A2A28] text-white text-[13px] font-medium rounded-full shrink-0 whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                >
+                  Get started
+                </a>
+              </div>
+              <div className="flex items-baseline gap-[6px] bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
+                <span className="font-bold text-[18px] text-[#0A0A0A]">$0.07</span>
+                <span className="text-[14px] text-[#8B8B8B]">/ 1M tokens</span>
+              </div>
+              <div className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                Up to 32k context length &amp; matryoshka dimensions
+              </div>
+            </div>
+
+            {/* octen-embedding-4b */}
+            <div className="p-[16px] flex flex-col gap-[10px]">
+              <div className="flex items-start justify-between gap-[10px]">
+                <div className="flex flex-col gap-[2px]">
+                  <span className="font-bold text-[16px] text-[#0A0A0A] font-['JetBrains_Mono',monospace]">octen-embedding-4b</span>
+                  <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                    Optimal balance of accuracy and high throughput
+                  </span>
+                </div>
+                <a
+                  href="https://octen.ai/platform/embedding"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-[12px] py-[6px] bg-[#100F09] active:bg-[#2A2A28] text-white text-[13px] font-medium rounded-full shrink-0 whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                >
+                  Get started
+                </a>
+              </div>
+              <div className="flex items-baseline gap-[6px] bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
+                <span className="font-bold text-[18px] text-[#0A0A0A]">$0.04</span>
+                <span className="text-[14px] text-[#8B8B8B]">/ 1M tokens</span>
+              </div>
+              <div className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                Balanced performance for production RAG pipelines
+              </div>
+            </div>
+
+            {/* octen-embedding-0.6b */}
+            <div className="p-[16px] flex flex-col gap-[10px]">
+              <div className="flex items-start justify-between gap-[10px]">
+                <div className="flex flex-col gap-[2px]">
+                  <div className="flex items-center gap-[6px] flex-wrap">
+                    <span className="font-bold text-[16px] text-[#0A0A0A] font-['JetBrains_Mono',monospace]">octen-embedding-0.6b</span>
+                    <span className="h-[18px] px-[5px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] bg-[#FAF5FF] border border-[#d9bafb] text-[#6B21A8]">
+                      Ultra Fast
+                    </span>
+                  </div>
+                  <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                    Ultra lightweight and cost-efficient for mass vectorization
+                  </span>
+                </div>
+                <a
+                  href="https://octen.ai/platform/embedding"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-[12px] py-[6px] bg-[#100F09] active:bg-[#2A2A28] text-white text-[13px] font-medium rounded-full shrink-0 whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                >
+                  Get started
+                </a>
+              </div>
+              <div className="flex items-baseline gap-[6px] bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
+                <span className="font-bold text-[18px] text-[#0A0A0A]">$0.01</span>
+                <span className="text-[14px] text-[#8B8B8B]">/ 1M tokens</span>
+              </div>
+              <div className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                Highest indexing speed and lowest unit cost
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Category 4: VL Embedding */}
+        <div className="bg-white rounded-[16px] border border-[#E2E2DE] overflow-hidden shadow-xs">
+          <div className="bg-[#F8F9FA] px-[16px] py-[12px] border-b border-[#E2E2DE] flex items-center justify-between">
+            <div className="flex items-center gap-[8px]">
+              <EmbeddingCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
+              <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] text-[#100F09]">VL Embedding</span>
+            </div>
+            <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] bg-[#FEF3C7] border border-[#FDE68A] text-[#92400E]">
+              SOTA on MMEB-v2
+            </span>
+          </div>
+
+          <div className="divide-y divide-[#EAEAE5] flex flex-col">
+            {/* octen-vl-embedding */}
+            <div className="p-[16px] flex flex-col gap-[10px]">
+              <div className="flex items-start justify-between gap-[10px]">
+                <div className="flex flex-col gap-[2px]">
+                  <span className="font-bold text-[16px] text-[#0A0A0A] font-['JetBrains_Mono',monospace]">octen-vl-embedding</span>
+                  <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                    Cross-modal vector space: images, screenshots, &amp; text
+                  </span>
+                </div>
+                <a
+                  href="https://octen.ai/platform/embedding"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-[12px] py-[6px] bg-[#100F09] active:bg-[#2A2A28] text-white text-[13px] font-medium rounded-full shrink-0 whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                >
+                  Get started
+                </a>
+              </div>
+              <div className="flex items-center gap-[12px] text-[14px] flex-wrap bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
+                <div>Text: <strong className="text-[#0A0A0A]">$0.05</strong> <span className="text-[#8B8B8B]">/ 1M tokens</span></div>
+                <div>Media: <strong className="text-[#0A0A0A]">$0.12</strong> <span className="text-[#8B8B8B]">/ 1M tokens</span></div>
+              </div>
+              <div className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                Single cross-modal vector space for text + vision
+              </div>
+            </div>
+
+            {/* octen-vl-embedding-large */}
+            <div className="p-[16px] flex flex-col gap-[10px]">
+              <div className="flex items-start justify-between gap-[10px]">
+                <div className="flex flex-col gap-[2px]">
+                  <span className="font-bold text-[16px] text-[#0A0A0A] font-['JetBrains_Mono',monospace]">octen-vl-embedding-large</span>
+                  <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                    Maximum precision multimodal visual embedding
+                  </span>
+                </div>
+                <a
+                  href="https://octen.ai/platform/embedding"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-[12px] py-[6px] bg-[#100F09] active:bg-[#2A2A28] text-white text-[13px] font-medium rounded-full shrink-0 whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                >
+                  Get started
+                </a>
+              </div>
+              <div className="flex items-center gap-[12px] text-[14px] flex-wrap bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
+                <div>Text: <strong className="text-[#0A0A0A]">$0.10</strong> <span className="text-[#8B8B8B]">/ 1M tokens</span></div>
+                <div>Media: <strong className="text-[#0A0A0A]">$0.25</strong> <span className="text-[#8B8B8B]">/ 1M tokens</span></div>
+              </div>
+              <div className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                Enhanced fine-grained document &amp; diagram indexing
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Category 5: Applications */}
+        <div className="bg-white rounded-[16px] border border-[#E2E2DE] overflow-hidden shadow-xs">
+          <div className="bg-[#F8F9FA] px-[16px] py-[12px] border-b border-[#E2E2DE] flex items-center justify-between">
+            <div className="flex items-center gap-[8px]">
+              <ApplicationsCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
+              <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] text-[#100F09]">Applications</span>
+            </div>
+            <span className="text-[14px] text-[#8B8B8B]">Turnkey workflows</span>
+          </div>
+
+          <div className="divide-y divide-[#EAEAE5] flex flex-col">
+            {/* Answer */}
+            <div className="p-[16px] flex flex-col gap-[10px]">
+              <div className="flex items-start justify-between gap-[10px]">
+                <div className="flex flex-col gap-[2px]">
+                  <span className="font-bold text-[16px] text-[#0A0A0A]">Answer</span>
+                  <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                    Grounded answer synthesis with inline citations from live web
+                  </span>
+                </div>
+                <a
+                  href="https://docs.octen.ai/overview/pricing#answer-api"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-[12px] py-[6px] bg-[#100F09] active:bg-[#2A2A28] text-white text-[13px] font-medium rounded-full shrink-0 whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                >
+                  Get started
+                </a>
+              </div>
+              <div className="bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
+                <span className="font-medium text-[14px] text-[#0A0A0A]">Search fees + Model rates</span>
+              </div>
+              <div className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                Broad search queries &amp; token-based LLM generation
+              </div>
+            </div>
+
+            {/* Multimodal Chat */}
+            <div className="p-[16px] flex flex-col gap-[10px]">
+              <div className="flex items-start justify-between gap-[10px]">
+                <div className="flex flex-col gap-[2px]">
+                  <div className="flex items-center gap-[6px] flex-wrap">
+                    <span className="font-bold text-[16px] text-[#0A0A0A]">Multimodal Chat</span>
+                    <span className="h-[18px] px-[5px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] bg-[#E3FFE2] border border-[#6FD1A5] text-[#1B9C62]">
+                      Early Access
+                    </span>
+                  </div>
+                  <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                    Conversational visual search across images, diagrams, and live web
+                  </span>
+                </div>
+                <a
+                  href="https://docs.octen.ai/overview/pricing#multimodal-chat"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-[12px] py-[6px] bg-[#100F09] active:bg-[#2A2A28] text-white text-[13px] font-medium rounded-full shrink-0 whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                >
+                  Get started
+                </a>
+              </div>
+              <div className="bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
+                <span className="font-medium text-[14px] text-[#0A0A0A]">Search fees + Model rates</span>
+              </div>
+              <div className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                Multimodal search retrieval &amp; multimodal vision chat
+              </div>
+            </div>
+
+            {/* Deep Research */}
+            <div className="p-[16px] flex flex-col gap-[10px]">
+              <div className="flex items-start justify-between gap-[10px]">
+                <div className="flex flex-col gap-[2px]">
+                  <span className="font-bold text-[16px] text-[#0A0A0A]">Deep Research</span>
+                  <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                    Multi-step autonomous web exploration and comprehensive report generation
+                  </span>
+                </div>
+                <a
+                  href="https://docs.octen.ai/overview/pricing#deep-research"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-[12px] py-[6px] bg-[#100F09] active:bg-[#2A2A28] text-white text-[13px] font-medium rounded-full shrink-0 whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                >
+                  Get started
+                </a>
+              </div>
+              <div className="bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5] grid grid-cols-2 gap-[4px] text-[14px]">
+                <div>Lite: <strong className="text-[#0A0A0A]">$0.20</strong> <span className="text-[#8B8B8B]">/ task</span></div>
+                <div>Standard: <strong className="text-[#0A0A0A]">$1.00</strong> <span className="text-[#8B8B8B]">/ task</span></div>
+                <div>Pro: <strong className="text-[#0A0A0A]">$2.50</strong> <span className="text-[#8B8B8B]">/ task</span></div>
+                <div>Visual: <strong className="text-[#0A0A0A]">$3.00</strong> <span className="text-[#8B8B8B]">/ task</span></div>
+              </div>
+              <div className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                Autonomous multi-query planning, scraping, and synthesized reports
+              </div>
+            </div>
+
+            {/* Grounded Generation */}
+            <div className="p-[16px] flex flex-col gap-[10px]">
+              <div className="flex items-start justify-between gap-[10px]">
+                <div className="flex flex-col gap-[2px]">
+                  <div className="flex items-center gap-[6px] flex-wrap">
+                    <span className="font-bold text-[16px] text-[#0A0A0A]">Grounded Generation</span>
+                    <span className="h-[18px] px-[5px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] bg-[#E3FFE2] border border-[#6FD1A5] text-[#1B9C62]">
+                      Early Access
+                    </span>
+                  </div>
+                  <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                    Fact-checked image and video generation grounded in real-time search
+                  </span>
+                </div>
+                <a
+                  href="https://docs.octen.ai/overview/pricing#grounded-generation"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-[12px] py-[6px] bg-[#100F09] active:bg-[#2A2A28] text-white text-[13px] font-medium rounded-full shrink-0 whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                >
+                  Get started
+                </a>
+              </div>
+              <div className="flex items-center gap-[12px] text-[14px] flex-wrap bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
+                <div>Image: <strong className="text-[#0A0A0A]">$0.25</strong> <span className="text-[#8B8B8B]">/ output</span></div>
+                <div>Video: <strong className="text-[#0A0A0A]">$1.00</strong> <span className="text-[#8B8B8B]">/ output</span></div>
+              </div>
+              <div className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                Accurate visual synthesis grounded in factual web context
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ========================================================================= */}
+      {/* DESKTOP VIEW (hidden md:block): 4-column Unified Rate Matrix Table        */}
+      {/* ========================================================================= */}
+      <div ref={tableContainerRef} className="hidden md:block w-full bg-white rounded-[16px] sm:rounded-[20px] border border-[#E2E2DE] relative">
+        <table className="w-full text-left border-separate border-spacing-0">
           {/* Main Column Field Names Sticky Header */}
           <thead className="sticky top-[58px] z-30 bg-[#F8F8F5]">
-            <tr className="bg-[#F8F8F5] text-[#57575E] font-['DM_Sans',sans-serif] text-[12px] font-bold tracking-wider uppercase select-none">
+            <tr className="bg-[#F8F8F5] text-[#8B8B8B] font-['DM_Sans',sans-serif] text-[13px] font-bold tracking-wider uppercase select-none">
               <th
                 className={`sticky top-[58px] z-30 py-3.5 px-6 font-semibold bg-[#F8F8F5] border-b border-[#E2E2DE] transition-[border-radius] duration-150 ${
                   isHeaderSticky ? "rounded-tl-none" : "rounded-tl-[16px] sm:rounded-tl-[20px]"
@@ -643,13 +1136,10 @@ function PlanCTable() {
               >
                 Endpoint / Model
               </th>
-              <th className="sticky top-[58px] z-30 py-3.5 px-4 font-semibold bg-[#F8F8F5] border-b border-[#E2E2DE]">
-                Billing Metric
-              </th>
-              <th className="sticky top-[58px] z-30 py-3.5 px-4 font-semibold bg-[#F8F8F5] border-b border-[#E2E2DE]">
+              <th className="sticky top-[58px] z-30 py-3.5 px-6 font-semibold bg-[#F8F8F5] border-b border-[#E2E2DE]">
                 Unit Price (USD)
               </th>
-              <th className="sticky top-[58px] z-30 py-3.5 px-4 font-semibold bg-[#F8F8F5] border-b border-[#E2E2DE]">
+              <th className="sticky top-[58px] z-30 py-3.5 px-6 font-semibold bg-[#F8F8F5] border-b border-[#E2E2DE]">
                 Details &amp; Free Tier
               </th>
               <th
@@ -665,15 +1155,15 @@ function PlanCTable() {
 
             {/* === CATEGORY SECTION 1: SEARCH (Full-width Sticky Row) === */}
             <tr className="bg-[#F8F9FA] select-none">
-              <td colSpan={5} className="sticky top-[102px] z-20 py-2.5 px-6 bg-[#F8F9FA] border-b border-[#E2E2DE]">
+              <td colSpan={4} className="sticky top-[106px] z-20 py-3 px-6 bg-[#F8F9FA] border-b border-[#E2E2DE]">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
-                    <SearchCategoryIcon className="w-[15px] h-[15px] text-[#100F09]" />
-                    <span className="font-['DM_Sans',sans-serif] font-bold text-[14px] text-[#100F09] tracking-tight">
+                    <SearchCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
+                    <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] text-[#100F09] tracking-tight">
                       Search
                     </span>
                   </div>
-                  <span className="font-['DM_Sans',sans-serif] text-[12px] text-[#57575E] hidden sm:inline">
+                  <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#8B8B8B] hidden sm:inline">
                     Real-time retrieval from the live web
                   </span>
                 </div>
@@ -684,26 +1174,21 @@ function PlanCTable() {
               <tr className="hover:bg-[#F8F8F5] transition-colors group/row">
                 <td className="py-4 px-6">
                   <div className="flex flex-col gap-0.5">
-                    <span className="font-bold text-[15px] text-[#0A0A0A]">Web Search API</span>
-                    <span className="text-[12px] text-[#57575E]">Real-time LLM-ready web search with live crawling</span>
+                    <span className="font-bold text-[16px] text-[#0A0A0A]">Web Search API</span>
+                    <span className="text-[14px] text-[#8B8B8B]">Real-time LLM-ready web search with live crawling</span>
                   </div>
                 </td>
-                <td className="py-4 px-4 text-[#57575E] whitespace-nowrap">
-                  <span className="bg-[#F6F6F3] px-2 py-1 rounded text-[12px] border border-[#E7E7E3] font-['JetBrains_Mono',monospace]">
-                    1 call / request
-                  </span>
-                </td>
-                <td className="py-4 px-4">
+                <td className="py-4 px-6">
                   <div className="flex items-center gap-1.5 flex-nowrap whitespace-nowrap">
                     <span className="font-bold text-[16px] text-[#0A0A0A]">$1</span>
-                    <span className="text-[13px] text-[#9C9CA4] line-through">$5</span>
-                    <span className="text-[12px] text-[#57575E]">/ 1k calls</span>
+                    <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
+                    <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
                     <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-bold text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#70FE7E] text-[#100F09] border border-[#70FE7E]">
                       80% Off
                     </span>
                   </div>
                 </td>
-                <td className="py-4 px-4 text-[13px] text-[#57575E]">
+                <td className="py-4 px-6 text-[14px] text-[#8B8B8B]">
                   Full content: $0.5 / 1k results (<span className="text-[#039855] font-semibold">10 free / call</span>)
                 </td>
                 <td className="py-4 px-6 text-right">
@@ -711,7 +1196,7 @@ function PlanCTable() {
                     href="https://octen.ai/platform/web-search"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-3 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[12px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                    className="inline-flex items-center justify-center px-3.5 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[13px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
                   >
                     Get started
                   </a>
@@ -722,26 +1207,21 @@ function PlanCTable() {
               <tr className="hover:bg-[#F8F8F5] transition-colors group/row">
                 <td className="py-4 px-6">
                   <div className="flex flex-col gap-0.5">
-                    <span className="font-bold text-[15px] text-[#0A0A0A]">Broad Search API</span>
-                    <span className="text-[12px] text-[#57575E]">Multi-query intent planning and high-recall search</span>
+                    <span className="font-bold text-[16px] text-[#0A0A0A]">Broad Search API</span>
+                    <span className="text-[14px] text-[#8B8B8B]">Multi-query intent planning and high-recall search</span>
                   </div>
                 </td>
-                <td className="py-4 px-4 text-[#57575E] whitespace-nowrap">
-                  <span className="bg-[#F6F6F3] px-2 py-1 rounded text-[12px] border border-[#E7E7E3] font-['JetBrains_Mono',monospace]">
-                    1 call / sub-query
-                  </span>
-                </td>
-                <td className="py-4 px-4">
+                <td className="py-4 px-6">
                   <div className="flex items-center gap-1.5 flex-nowrap whitespace-nowrap">
                     <span className="font-bold text-[16px] text-[#0A0A0A]">$1</span>
-                    <span className="text-[13px] text-[#9C9CA4] line-through">$5</span>
-                    <span className="text-[12px] text-[#57575E]">/ 1k calls</span>
+                    <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
+                    <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
                     <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-bold text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#70FE7E] text-[#100F09] border border-[#70FE7E]">
                       80% Off
                     </span>
                   </div>
                 </td>
-                <td className="py-4 px-4 text-[13px] text-[#57575E]">
+                <td className="py-4 px-6 text-[14px] text-[#8B8B8B]">
                   Full content: $0.5 / 1k results (<span className="text-[#039855] font-semibold">10 free / call</span>)
                 </td>
                 <td className="py-4 px-6 text-right">
@@ -749,7 +1229,7 @@ function PlanCTable() {
                     href="https://octen.ai/platform/broad-search"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-3 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[12px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                    className="inline-flex items-center justify-center px-3.5 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[13px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
                   >
                     Get started
                   </a>
@@ -761,24 +1241,19 @@ function PlanCTable() {
                 <td className="py-4 px-6">
                   <div className="flex flex-col gap-0.5">
                     <div className="flex items-center gap-2">
-                      <span className="font-bold text-[15px] text-[#0A0A0A]">Image Search API</span>
+                      <span className="font-bold text-[16px] text-[#0A0A0A]">Image Search API</span>
                       <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#E3FFE2] border border-[#6FD1A5] text-[#1B9C62]">Early Access</span>
                     </div>
-                    <span className="text-[12px] text-[#57575E]">Structured image search with direct preview URLs</span>
+                    <span className="text-[14px] text-[#8B8B8B]">Structured image search with direct preview URLs</span>
                   </div>
                 </td>
-                <td className="py-4 px-4 text-[#57575E] whitespace-nowrap">
-                  <span className="bg-[#F6F6F3] px-2 py-1 rounded text-[12px] border border-[#E7E7E3] font-['JetBrains_Mono',monospace]">
-                    1 call / request
-                  </span>
-                </td>
-                <td className="py-4 px-4">
+                <td className="py-4 px-6">
                   <div className="flex items-center gap-1 flex-nowrap whitespace-nowrap">
                     <span className="font-bold text-[16px] text-[#0A0A0A]">$5</span>
-                    <span className="text-[12px] text-[#57575E]">/ 1k calls</span>
+                    <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
                   </div>
                 </td>
-                <td className="py-4 px-4 text-[13px] text-[#57575E]">
+                <td className="py-4 px-6 text-[14px] text-[#8B8B8B]">
                   Up to 10 image results included per query
                 </td>
                 <td className="py-4 px-6 text-right">
@@ -786,7 +1261,7 @@ function PlanCTable() {
                     href="https://octen.ai/platform/image-search"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-3 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[12px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                    className="inline-flex items-center justify-center px-3.5 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[13px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
                   >
                     Get started
                   </a>
@@ -798,24 +1273,19 @@ function PlanCTable() {
                 <td className="py-4 px-6">
                   <div className="flex flex-col gap-0.5">
                     <div className="flex items-center gap-2">
-                      <span className="font-bold text-[15px] text-[#0A0A0A]">Video Search API</span>
+                      <span className="font-bold text-[16px] text-[#0A0A0A]">Video Search API</span>
                       <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#E3FFE2] border border-[#6FD1A5] text-[#1B9C62]">Early Access</span>
                     </div>
-                    <span className="text-[12px] text-[#57575E]">Multi-platform video retrieval with timestamps</span>
+                    <span className="text-[14px] text-[#8B8B8B]">Multi-platform video retrieval with timestamps</span>
                   </div>
                 </td>
-                <td className="py-4 px-4 text-[#57575E] whitespace-nowrap">
-                  <span className="bg-[#F6F6F3] px-2 py-1 rounded text-[12px] border border-[#E7E7E3] font-['JetBrains_Mono',monospace]">
-                    1 call / request
-                  </span>
-                </td>
-                <td className="py-4 px-4">
+                <td className="py-4 px-6">
                   <div className="flex items-center gap-1 flex-nowrap whitespace-nowrap">
                     <span className="font-bold text-[16px] text-[#0A0A0A]">$5</span>
-                    <span className="text-[12px] text-[#57575E]">/ 1k calls</span>
+                    <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
                   </div>
                 </td>
-                <td className="py-4 px-4 text-[13px] text-[#57575E]">
+                <td className="py-4 px-6 text-[14px] text-[#8B8B8B]">
                   Up to 10 video results with metadata
                 </td>
                 <td className="py-4 px-6 text-right">
@@ -823,7 +1293,7 @@ function PlanCTable() {
                     href="https://octen.ai/platform/video-search"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-3 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[12px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                    className="inline-flex items-center justify-center px-3.5 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[13px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
                   >
                     Get started
                   </a>
@@ -832,15 +1302,15 @@ function PlanCTable() {
 
             {/* === CATEGORY SECTION 2: EXTRACT (Full-width Sticky Row) === */}
             <tr className="bg-[#F8F9FA] select-none">
-              <td colSpan={5} className="sticky top-[102px] z-20 py-2.5 px-6 bg-[#F8F9FA] border-y border-[#E2E2DE]">
+              <td colSpan={4} className="sticky top-[106px] z-20 py-3 px-6 bg-[#F8F9FA] border-y border-[#E2E2DE]">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
-                    <ExtractCategoryIcon className="w-[15px] h-[15px] text-[#100F09]" />
-                    <span className="font-['DM_Sans',sans-serif] font-bold text-[14px] text-[#100F09] tracking-tight">
+                    <ExtractCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
+                    <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] text-[#100F09] tracking-tight">
                       Extract
                     </span>
                   </div>
-                  <span className="font-['DM_Sans',sans-serif] text-[12px] text-[#57575E] hidden sm:inline">
+                  <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#8B8B8B] hidden sm:inline">
                     Clean structured content from any URL
                   </span>
                 </div>
@@ -851,30 +1321,25 @@ function PlanCTable() {
               <tr className="hover:bg-[#F8F8F5] transition-colors group/row">
                 <td className="py-4 px-6">
                   <div className="flex flex-col gap-0.5">
-                    <span className="font-bold text-[15px] text-[#0A0A0A]">Extract API</span>
-                    <span className="text-[12px] text-[#57575E]">LLM-ready Markdown &amp; structured content extraction</span>
+                    <span className="font-bold text-[16px] text-[#0A0A0A]">Extract API</span>
+                    <span className="text-[14px] text-[#8B8B8B]">LLM-ready Markdown &amp; structured content extraction</span>
                   </div>
                 </td>
-                <td className="py-4 px-4 text-[#57575E] whitespace-nowrap">
-                  <span className="bg-[#F6F6F3] px-2 py-1 rounded text-[12px] border border-[#E7E7E3] font-['JetBrains_Mono',monospace]">
-                    Per 1k URLs
-                  </span>
-                </td>
-                <td className="py-4 px-4">
+                <td className="py-4 px-6">
                   <div className="flex items-center gap-1 flex-nowrap whitespace-nowrap">
                     <span className="font-bold text-[16px] text-[#0A0A0A]">$1</span>
-                    <span className="text-[12px] text-[#57575E]">/ 1k URLs</span>
+                    <span className="text-[14px] text-[#8B8B8B]">/ 1k URLs</span>
                   </div>
                 </td>
-                <td className="py-4 px-4 text-[13px] text-[#57575E]">
-                  <span className="text-[#039855] font-semibold">Failed URLs are always free</span>
+                <td className="py-4 px-6 text-[14px] text-[#039855] font-semibold">
+                  Failed URLs are always free
                 </td>
                 <td className="py-4 px-6 text-right">
                   <a
                     href="https://octen.ai/platform/extract"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-3 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[12px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                    className="inline-flex items-center justify-center px-3.5 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[13px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
                   >
                     Get started
                   </a>
@@ -883,18 +1348,18 @@ function PlanCTable() {
 
             {/* === CATEGORY SECTION 3: EMBEDDING (Full-width Sticky Row) === */}
             <tr className="bg-[#F8F9FA] select-none">
-              <td colSpan={5} className="sticky top-[102px] z-20 py-2.5 px-6 bg-[#F8F9FA] border-y border-[#E2E2DE]">
+              <td colSpan={4} className="sticky top-[106px] z-20 py-3 px-6 bg-[#F8F9FA] border-y border-[#E2E2DE]">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
-                    <EmbeddingCategoryIcon className="w-[15px] h-[15px] text-[#100F09]" />
-                    <span className="font-['DM_Sans',sans-serif] font-bold text-[14px] text-[#100F09] tracking-tight">
+                    <EmbeddingCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
+                    <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] text-[#100F09] tracking-tight">
                       Embedding
                     </span>
                     <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#FEF3C7] border border-[#FDE68A] text-[#92400E]">
                       SOTA on RTEB
                     </span>
                   </div>
-                  <span className="font-['DM_Sans',sans-serif] text-[12px] text-[#57575E] hidden sm:inline">
+                  <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#8B8B8B] hidden sm:inline">
                     Turn text into vectors for semantic search, RAG, and recommendations
                   </span>
                 </div>
@@ -906,24 +1371,19 @@ function PlanCTable() {
                 <td className="py-4 px-6">
                   <div className="flex flex-col gap-0.5">
                     <div className="flex items-center gap-2">
-                      <span className="font-bold text-[15px] text-[#0A0A0A] font-['JetBrains_Mono',monospace]">octen-embedding-8b</span>
+                      <span className="font-bold text-[16px] text-[#0A0A0A] font-['JetBrains_Mono',monospace]">octen-embedding-8b</span>
                       <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#FFF7ED] border border-[#ffc29f] text-[#C2410C]">Best Accuracy</span>
                     </div>
-                    <span className="text-[12px] text-[#57575E]">SOTA embedding quality for enterprise search and complex RAG</span>
+                    <span className="text-[14px] text-[#8B8B8B]">SOTA embedding quality for enterprise search and complex RAG</span>
                   </div>
                 </td>
-                <td className="py-4 px-4 text-[#57575E] whitespace-nowrap">
-                  <span className="bg-[#F6F6F3] px-2 py-1 rounded text-[12px] border border-[#E7E7E3] font-['JetBrains_Mono',monospace]">
-                    Per 1M tokens
-                  </span>
-                </td>
-                <td className="py-4 px-4">
+                <td className="py-4 px-6">
                   <div className="flex items-center gap-1 flex-nowrap whitespace-nowrap">
                     <span className="font-bold text-[16px] text-[#0A0A0A]">$0.07</span>
-                    <span className="text-[12px] text-[#57575E]">/ 1M</span>
+                    <span className="text-[14px] text-[#8B8B8B]">/ 1M tokens</span>
                   </div>
                 </td>
-                <td className="py-4 px-4 text-[13px] text-[#57575E]">
+                <td className="py-4 px-6 text-[14px] text-[#8B8B8B]">
                   Up to 32k context length &amp; matryoshka dimensions
                 </td>
                 <td className="py-4 px-6 text-right">
@@ -931,7 +1391,7 @@ function PlanCTable() {
                     href="https://octen.ai/platform/embedding"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-3 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[12px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                    className="inline-flex items-center justify-center px-3.5 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[13px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
                   >
                     Get started
                   </a>
@@ -942,22 +1402,17 @@ function PlanCTable() {
               <tr className="hover:bg-[#F8F8F5] transition-colors group/row">
                 <td className="py-4 px-6">
                   <div className="flex flex-col gap-0.5">
-                    <span className="font-bold text-[15px] text-[#0A0A0A] font-['JetBrains_Mono',monospace]">octen-embedding-4b</span>
-                    <span className="text-[12px] text-[#57575E]">Optimal balance of accuracy and high throughput</span>
+                    <span className="font-bold text-[16px] text-[#0A0A0A] font-['JetBrains_Mono',monospace]">octen-embedding-4b</span>
+                    <span className="text-[14px] text-[#8B8B8B]">Optimal balance of accuracy and high throughput</span>
                   </div>
                 </td>
-                <td className="py-4 px-4 text-[#57575E] whitespace-nowrap">
-                  <span className="bg-[#F6F6F3] px-2 py-1 rounded text-[12px] border border-[#E7E7E3] font-['JetBrains_Mono',monospace]">
-                    Per 1M tokens
-                  </span>
-                </td>
-                <td className="py-4 px-4">
+                <td className="py-4 px-6">
                   <div className="flex items-center gap-1 flex-nowrap whitespace-nowrap">
                     <span className="font-bold text-[16px] text-[#0A0A0A]">$0.04</span>
-                    <span className="text-[12px] text-[#57575E]">/ 1M</span>
+                    <span className="text-[14px] text-[#8B8B8B]">/ 1M tokens</span>
                   </div>
                 </td>
-                <td className="py-4 px-4 text-[13px] text-[#57575E]">
+                <td className="py-4 px-6 text-[14px] text-[#8B8B8B]">
                   Balanced performance for production RAG pipelines
                 </td>
                 <td className="py-4 px-6 text-right">
@@ -965,7 +1420,7 @@ function PlanCTable() {
                     href="https://octen.ai/platform/embedding"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-3 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[12px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                    className="inline-flex items-center justify-center px-3.5 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[13px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
                   >
                     Get started
                   </a>
@@ -977,24 +1432,19 @@ function PlanCTable() {
                 <td className="py-4 px-6">
                   <div className="flex flex-col gap-0.5">
                     <div className="flex items-center gap-2">
-                      <span className="font-bold text-[15px] text-[#0A0A0A] font-['JetBrains_Mono',monospace]">octen-embedding-0.6b</span>
+                      <span className="font-bold text-[16px] text-[#0A0A0A] font-['JetBrains_Mono',monospace]">octen-embedding-0.6b</span>
                       <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#FAF5FF] border border-[#d9bafb] text-[#6B21A8]">Ultra Fast</span>
                     </div>
-                    <span className="text-[12px] text-[#57575E]">Ultra lightweight and cost-efficient for mass vectorization</span>
+                    <span className="text-[14px] text-[#8B8B8B]">Ultra lightweight and cost-efficient for mass vectorization</span>
                   </div>
                 </td>
-                <td className="py-4 px-4 text-[#57575E] whitespace-nowrap">
-                  <span className="bg-[#F6F6F3] px-2 py-1 rounded text-[12px] border border-[#E7E7E3] font-['JetBrains_Mono',monospace]">
-                    Per 1M tokens
-                  </span>
-                </td>
-                <td className="py-4 px-4">
+                <td className="py-4 px-6">
                   <div className="flex items-center gap-1 flex-nowrap whitespace-nowrap">
                     <span className="font-bold text-[16px] text-[#0A0A0A]">$0.01</span>
-                    <span className="text-[12px] text-[#57575E]">/ 1M</span>
+                    <span className="text-[14px] text-[#8B8B8B]">/ 1M tokens</span>
                   </div>
                 </td>
-                <td className="py-4 px-4 text-[13px] text-[#57575E]">
+                <td className="py-4 px-6 text-[14px] text-[#8B8B8B]">
                   Highest indexing speed and lowest unit cost
                 </td>
                 <td className="py-4 px-6 text-right">
@@ -1002,7 +1452,7 @@ function PlanCTable() {
                     href="https://octen.ai/platform/embedding"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-3 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[12px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                    className="inline-flex items-center justify-center px-3.5 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[13px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
                   >
                     Get started
                   </a>
@@ -1011,18 +1461,18 @@ function PlanCTable() {
 
             {/* === CATEGORY SECTION 4: VL EMBEDDING (Full-width Sticky Row) === */}
             <tr className="bg-[#F8F9FA] select-none">
-              <td colSpan={5} className="sticky top-[102px] z-20 py-2.5 px-6 bg-[#F8F9FA] border-y border-[#E2E2DE]">
+              <td colSpan={4} className="sticky top-[106px] z-20 py-3 px-6 bg-[#F8F9FA] border-y border-[#E2E2DE]">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
-                    <EmbeddingCategoryIcon className="w-[15px] h-[15px] text-[#100F09]" />
-                    <span className="font-['DM_Sans',sans-serif] font-bold text-[14px] text-[#100F09] tracking-tight">
+                    <EmbeddingCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
+                    <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] text-[#100F09] tracking-tight">
                       VL Embedding
                     </span>
                     <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#FEF3C7] border border-[#FDE68A] text-[#92400E]">
                       SOTA on MMEB-v2
                     </span>
                   </div>
-                  <span className="font-['DM_Sans',sans-serif] text-[12px] text-[#57575E] hidden sm:inline">
+                  <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#8B8B8B] hidden sm:inline">
                     Cross-modal vector space across text, images, videos, and visual documents
                   </span>
                 </div>
@@ -1033,22 +1483,17 @@ function PlanCTable() {
               <tr className="hover:bg-[#F8F8F5] transition-colors group/row">
                 <td className="py-4 px-6">
                   <div className="flex flex-col gap-0.5">
-                    <span className="font-bold text-[15px] text-[#0A0A0A] font-['JetBrains_Mono',monospace]">octen-vl-embedding</span>
-                    <span className="text-[12px] text-[#57575E]">Cross-modal vector space: images, screenshots, &amp; text in one index</span>
+                    <span className="font-bold text-[16px] text-[#0A0A0A] font-['JetBrains_Mono',monospace]">octen-vl-embedding</span>
+                    <span className="text-[14px] text-[#8B8B8B]">Cross-modal vector space: images, screenshots, &amp; text in one index</span>
                   </div>
                 </td>
-                <td className="py-4 px-4 text-[#57575E] whitespace-nowrap">
-                  <span className="bg-[#F6F6F3] px-2 py-1 rounded text-[12px] border border-[#E7E7E3] font-['JetBrains_Mono',monospace]">
-                    Per 1M tokens
-                  </span>
-                </td>
-                <td className="py-4 px-4">
-                  <div className="flex flex-col gap-0.5 text-[13px] whitespace-nowrap">
-                    <div>Text: <strong className="text-[#0A0A0A]">$0.05</strong> / 1M</div>
-                    <div>Media: <strong className="text-[#0A0A0A]">$0.12</strong> / 1M</div>
+                <td className="py-4 px-6">
+                  <div className="flex flex-col gap-0.5 text-[14px] whitespace-nowrap">
+                    <div>Text: <strong className="text-[#0A0A0A]">$0.05</strong> <span className="text-[#8B8B8B]">/ 1M tokens</span></div>
+                    <div>Media: <strong className="text-[#0A0A0A]">$0.12</strong> <span className="text-[#8B8B8B]">/ 1M tokens</span></div>
                   </div>
                 </td>
-                <td className="py-4 px-4 text-[13px] text-[#57575E]">
+                <td className="py-4 px-6 text-[14px] text-[#8B8B8B]">
                   Single cross-modal vector space for text + vision
                 </td>
                 <td className="py-4 px-6 text-right">
@@ -1056,7 +1501,7 @@ function PlanCTable() {
                     href="https://octen.ai/platform/embedding"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-3 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[12px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                    className="inline-flex items-center justify-center px-3.5 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[13px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
                   >
                     Get started
                   </a>
@@ -1067,22 +1512,17 @@ function PlanCTable() {
               <tr className="hover:bg-[#F8F8F5] transition-colors group/row">
                 <td className="py-4 px-6">
                   <div className="flex flex-col gap-0.5">
-                    <span className="font-bold text-[15px] text-[#0A0A0A] font-['JetBrains_Mono',monospace]">octen-vl-embedding-large</span>
-                    <span className="text-[12px] text-[#57575E]">Maximum precision multimodal visual embedding</span>
+                    <span className="font-bold text-[16px] text-[#0A0A0A] font-['JetBrains_Mono',monospace]">octen-vl-embedding-large</span>
+                    <span className="text-[14px] text-[#8B8B8B]">Maximum precision multimodal visual embedding</span>
                   </div>
                 </td>
-                <td className="py-4 px-4 text-[#57575E] whitespace-nowrap">
-                  <span className="bg-[#F6F6F3] px-2 py-1 rounded text-[12px] border border-[#E7E7E3] font-['JetBrains_Mono',monospace]">
-                    Per 1M tokens
-                  </span>
-                </td>
-                <td className="py-4 px-4">
-                  <div className="flex flex-col gap-0.5 text-[13px] whitespace-nowrap">
-                    <div>Text: <strong className="text-[#0A0A0A]">$0.10</strong> / 1M</div>
-                    <div>Media: <strong className="text-[#0A0A0A]">$0.25</strong> / 1M</div>
+                <td className="py-4 px-6">
+                  <div className="flex flex-col gap-0.5 text-[14px] whitespace-nowrap">
+                    <div>Text: <strong className="text-[#0A0A0A]">$0.10</strong> <span className="text-[#8B8B8B]">/ 1M tokens</span></div>
+                    <div>Media: <strong className="text-[#0A0A0A]">$0.25</strong> <span className="text-[#8B8B8B]">/ 1M tokens</span></div>
                   </div>
                 </td>
-                <td className="py-4 px-4 text-[13px] text-[#57575E]">
+                <td className="py-4 px-6 text-[14px] text-[#8B8B8B]">
                   Enhanced fine-grained document &amp; diagram indexing
                 </td>
                 <td className="py-4 px-6 text-right">
@@ -1090,7 +1530,7 @@ function PlanCTable() {
                     href="https://octen.ai/platform/embedding"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-3 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[12px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                    className="inline-flex items-center justify-center px-3.5 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[13px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
                   >
                     Get started
                   </a>
@@ -1099,15 +1539,15 @@ function PlanCTable() {
 
             {/* === CATEGORY SECTION 5: APPLICATIONS (Full-width Sticky Row) === */}
             <tr className="bg-[#F8F9FA] select-none">
-              <td colSpan={5} className="sticky top-[102px] z-20 py-2.5 px-6 bg-[#F8F9FA] border-y border-[#E2E2DE]">
+              <td colSpan={4} className="sticky top-[106px] z-20 py-3 px-6 bg-[#F8F9FA] border-y border-[#E2E2DE]">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
-                    <ApplicationsCategoryIcon className="w-[15px] h-[15px] text-[#100F09]" />
-                    <span className="font-['DM_Sans',sans-serif] font-bold text-[14px] text-[#100F09] tracking-tight">
+                    <ApplicationsCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
+                    <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] text-[#100F09] tracking-tight">
                       Applications
                     </span>
                   </div>
-                  <span className="font-['DM_Sans',sans-serif] text-[12px] text-[#57575E] hidden sm:inline">
+                  <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#8B8B8B] hidden sm:inline">
                     Complete turnkey workflows built on the APIs above
                   </span>
                 </div>
@@ -1118,21 +1558,16 @@ function PlanCTable() {
             <tr className="hover:bg-[#F8F8F5] transition-colors group/row">
               <td className="py-4 px-6">
                 <div className="flex flex-col gap-0.5">
-                  <span className="font-bold text-[15px] text-[#0A0A0A]">Answer</span>
-                  <span className="text-[12px] text-[#57575E]">Grounded answer synthesis with inline citations from live web</span>
+                  <span className="font-bold text-[16px] text-[#0A0A0A]">Answer</span>
+                  <span className="text-[14px] text-[#8B8B8B]">Grounded answer synthesis with inline citations from live web</span>
                 </div>
               </td>
-              <td className="py-4 px-4 text-[#57575E] whitespace-nowrap">
-                <span className="bg-[#F6F6F3] px-2 py-1 rounded text-[12px] border border-[#E7E7E3] font-['JetBrains_Mono',monospace]">
-                  Per composite call
-                </span>
-              </td>
-              <td className="py-4 px-4">
-                <div className="text-[13px] text-[#0A0A0A] font-medium whitespace-nowrap">
+              <td className="py-4 px-6">
+                <div className="text-[14px] text-[#0A0A0A] font-medium whitespace-nowrap">
                   Search fees + Model rates
                 </div>
               </td>
-              <td className="py-4 px-4 text-[13px] text-[#57575E]">
+              <td className="py-4 px-6 text-[14px] text-[#8B8B8B]">
                 Broad search queries &amp; token-based LLM generation
               </td>
               <td className="py-4 px-6 text-right">
@@ -1140,7 +1575,7 @@ function PlanCTable() {
                   href="https://docs.octen.ai/overview/pricing#answer-api"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-3 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[12px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                  className="inline-flex items-center justify-center px-3.5 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[13px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
                 >
                   Get started
                 </a>
@@ -1152,23 +1587,18 @@ function PlanCTable() {
               <td className="py-4 px-6">
                 <div className="flex flex-col gap-0.5">
                   <div className="flex items-center gap-2">
-                    <span className="font-bold text-[15px] text-[#0A0A0A]">Multimodal Chat</span>
+                    <span className="font-bold text-[16px] text-[#0A0A0A]">Multimodal Chat</span>
                     <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#E3FFE2] border border-[#6FD1A5] text-[#1B9C62]">Early Access</span>
                   </div>
-                  <span className="text-[12px] text-[#57575E]">Conversational visual search across images, diagrams, and live web</span>
+                  <span className="text-[14px] text-[#8B8B8B]">Conversational visual search across images, diagrams, and live web</span>
                 </div>
               </td>
-              <td className="py-4 px-4 text-[#57575E] whitespace-nowrap">
-                <span className="bg-[#F6F6F3] px-2 py-1 rounded text-[12px] border border-[#E7E7E3] font-['JetBrains_Mono',monospace]">
-                  Per composite call
-                </span>
-              </td>
-              <td className="py-4 px-4">
-                <div className="text-[13px] text-[#0A0A0A] font-medium whitespace-nowrap">
+              <td className="py-4 px-6">
+                <div className="text-[14px] text-[#0A0A0A] font-medium whitespace-nowrap">
                   Search fees + Model rates
                 </div>
               </td>
-              <td className="py-4 px-4 text-[13px] text-[#57575E]">
+              <td className="py-4 px-6 text-[14px] text-[#8B8B8B]">
                 Multimodal search retrieval &amp; multimodal vision chat
               </td>
               <td className="py-4 px-6 text-right">
@@ -1176,7 +1606,7 @@ function PlanCTable() {
                   href="https://docs.octen.ai/overview/pricing#multimodal-chat"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-3 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[12px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                  className="inline-flex items-center justify-center px-3.5 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[13px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
                 >
                   Get started
                 </a>
@@ -1187,24 +1617,19 @@ function PlanCTable() {
             <tr className="hover:bg-[#F8F8F5] transition-colors group/row">
                 <td className="py-4 px-6">
                   <div className="flex flex-col gap-0.5">
-                    <span className="font-bold text-[15px] text-[#0A0A0A]">Deep Research</span>
-                    <span className="text-[12px] text-[#57575E]">Multi-step autonomous web exploration and comprehensive report generation</span>
+                    <span className="font-bold text-[16px] text-[#0A0A0A]">Deep Research</span>
+                    <span className="text-[14px] text-[#8B8B8B]">Multi-step autonomous web exploration and comprehensive report generation</span>
                   </div>
                 </td>
-                <td className="py-4 px-4 text-[#57575E] whitespace-nowrap">
-                  <span className="bg-[#F6F6F3] px-2 py-1 rounded text-[12px] border border-[#E7E7E3] font-['JetBrains_Mono',monospace]">
-                    Per research task
-                  </span>
-                </td>
-                <td className="py-4 px-4">
-                  <div className="flex flex-col gap-0.5 text-[13px] whitespace-nowrap">
-                    <div>Lite: <strong className="text-[#0A0A0A]">$0.20</strong> / task</div>
-                    <div>Standard: <strong className="text-[#0A0A0A]">$1.00</strong> / task</div>
-                    <div>Pro: <strong className="text-[#0A0A0A]">$2.50</strong> / task</div>
-                    <div>Visual: <strong className="text-[#0A0A0A]">$3.00</strong> / task</div>
+                <td className="py-4 px-6">
+                  <div className="flex flex-col gap-0.5 text-[14px] whitespace-nowrap">
+                    <div>Lite: <strong className="text-[#0A0A0A]">$0.20</strong> <span className="text-[#8B8B8B]">/ task</span></div>
+                    <div>Standard: <strong className="text-[#0A0A0A]">$1.00</strong> <span className="text-[#8B8B8B]">/ task</span></div>
+                    <div>Pro: <strong className="text-[#0A0A0A]">$2.50</strong> <span className="text-[#8B8B8B]">/ task</span></div>
+                    <div>Visual: <strong className="text-[#0A0A0A]">$3.00</strong> <span className="text-[#8B8B8B]">/ task</span></div>
                   </div>
                 </td>
-                <td className="py-4 px-4 text-[13px] text-[#57575E]">
+                <td className="py-4 px-6 text-[14px] text-[#8B8B8B]">
                   Autonomous multi-query planning, scraping, and synthesized reports
                 </td>
                 <td className="py-4 px-6 text-right">
@@ -1212,36 +1637,31 @@ function PlanCTable() {
                     href="https://docs.octen.ai/overview/pricing#deep-research"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-3 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[12px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                    className="inline-flex items-center justify-center px-3.5 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[13px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
                   >
                     Get started
                   </a>
                 </td>
               </tr>
 
-              {/* Row 3: Grounded Generation */}
+              {/* Row 4: Grounded Generation */}
               <tr className="hover:bg-[#F8F8F5] transition-colors group/row">
                 <td className="py-4 px-6 rounded-bl-[16px] sm:rounded-bl-[20px]">
                   <div className="flex flex-col gap-0.5">
                     <div className="flex items-center gap-2">
-                      <span className="font-bold text-[15px] text-[#0A0A0A]">Grounded Generation</span>
+                      <span className="font-bold text-[16px] text-[#0A0A0A]">Grounded Generation</span>
                       <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#E3FFE2] border border-[#6FD1A5] text-[#1B9C62]">Early Access</span>
                     </div>
-                    <span className="text-[12px] text-[#57575E]">Fact-checked image and video generation grounded in real-time search context</span>
+                    <span className="text-[14px] text-[#8B8B8B]">Fact-checked image and video generation grounded in real-time search context</span>
                   </div>
                 </td>
-                <td className="py-4 px-4 text-[#57575E] whitespace-nowrap">
-                  <span className="bg-[#F6F6F3] px-2 py-1 rounded text-[12px] border border-[#E7E7E3] font-['JetBrains_Mono',monospace]">
-                    Per generated output
-                  </span>
-                </td>
-                <td className="py-4 px-4">
-                  <div className="flex flex-col gap-0.5 text-[13px] whitespace-nowrap">
-                    <div>Image: <strong className="text-[#0A0A0A]">$0.25</strong> / image</div>
-                    <div>Video: <strong className="text-[#0A0A0A]">$1.00</strong> / video</div>
+                <td className="py-4 px-6">
+                  <div className="flex flex-col gap-0.5 text-[14px] whitespace-nowrap">
+                    <div>Image: <strong className="text-[#0A0A0A]">$0.25</strong> <span className="text-[#8B8B8B]">/ output</span></div>
+                    <div>Video: <strong className="text-[#0A0A0A]">$1.00</strong> <span className="text-[#8B8B8B]">/ output</span></div>
                   </div>
                 </td>
-                <td className="py-4 px-4 text-[13px] text-[#57575E]">
+                <td className="py-4 px-6 text-[14px] text-[#8B8B8B]">
                   Accurate visual synthesis grounded in factual web context
                 </td>
                 <td className="py-4 px-6 text-right rounded-br-[16px] sm:rounded-br-[20px]">
@@ -1249,7 +1669,7 @@ function PlanCTable() {
                     href="https://docs.octen.ai/overview/pricing#grounded-generation"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-3 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[12px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
+                    className="inline-flex items-center justify-center px-3.5 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[13px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]"
                   >
                     Get started
                   </a>

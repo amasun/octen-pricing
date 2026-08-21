@@ -170,7 +170,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen bg-white text-[#100F09] overflow-x-hidden flex flex-col items-center">
+    <div className="w-full min-h-screen bg-white text-[#100F09] overflow-x-clip flex flex-col items-center">
       <OctenAiInfrastructurePricing />
     </div>
   );

@@ -43,7 +43,7 @@ html {
 
 html {
   height: auto;
-  overflow-x: hidden;
+  overflow-x: clip;
   overflow-y: auto;
   font-family: var(--font-sans);
 }
