@@ -146,7 +146,7 @@ function PlanCardItem({
             )}
           </div>
 
-          {/* Price Frequency (Clean items-baseline alignment matching Image 2) */}
+          {/* Price Frequency (Top-aligned $ sign with original / month baseline) */}
           <div className="flex flex-row items-baseline gap-[6px] min-h-[44px]">
             {price === "Custom" ? (
               <div className="flex items-center h-full">
@@ -155,7 +155,7 @@ function PlanCardItem({
             ) : (
               <div className="flex flex-row flex-wrap items-baseline gap-x-[6px] gap-y-0">
                 <div className="flex items-baseline">
-                  <span className="font-['DM_Mono',monospace] font-medium text-[20px] leading-[22px] text-[#100F09] pr-[2px]">$</span>
+                  <span className="font-['DM_Mono',monospace] font-medium text-[18px] sm:text-[20px] leading-none text-[#100F09] pr-[2px] select-none self-start pt-[6px] sm:pt-[4px]">$</span>
                   <span className="font-['DM_Sans',sans-serif] font-medium text-[32px] sm:text-[40px] leading-[44px] text-[#100F09]">{price}</span>
                 </div>
                 {originalPrice && (

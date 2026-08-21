@@ -44,6 +44,9 @@ pnpm build
    - **Plan A**：顶部吸顶分类 Tabs 栏 + 直排 Bento 平铺卡片布局。
    - **Model Tokens 统称拉齐 (Token Naming Unification)**：
      - 在 Plan A 与 Plan B 的 `MultimodalChatCard` 及 `AnswerCard` 中，将原 `Vision tokens` 统一调整为 `Model tokens`，下挂于 `Search calls + model tokens` 总览下，计费说明统一显示为 `Gateway rates`。
+   - **QPS Plan 卡片价格 $ 符号顶对齐与 / month 原始样式保留 (QPS Plan Price Alignment & Period Style)**：
+     - 在 QPS Plan 卡片价格展示区，通过 `self-start` 将 `$` 美元符号与大号价格数字的顶部精准对齐；
+     - 同时完全保留了大号数字的行高基准与 `/ month` 周期文案的原有字号、行高（`text-[14px] leading-[20px] text-[#57575E]`）及底部基线对齐位置，确保整体排版稳定不跳动。
    - **Plan C 矩阵表格双层表头背景色调换 (Plan C Dual-Header Color Swap)**：
      - **第一层表头（Main Sticky Column Header: Endpoint/Model, Unit Price, Details）**：背景色调整为 **纯白 `bg-white`**；
      - **第二层表头（Category Sticky Rows: Search, Extract, Embedding, Applications）**：背景色调整为 **原第一层的质感灰色 `bg-[#F8F8F5]`**；
