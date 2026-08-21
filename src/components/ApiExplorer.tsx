@@ -688,7 +688,7 @@ function PlanCTable() {
       <div className="block md:hidden w-full flex flex-col gap-[16px]">
         {/* Category 1: Search */}
         <div className="bg-white rounded-[16px] border border-[#E2E2DE] overflow-hidden shadow-xs">
-          <div className="bg-[#F8F9FA] px-[16px] py-[12px] border-b border-[#E2E2DE] flex items-center justify-between">
+          <div className="bg-[#F8F8F5] px-[16px] py-[12px] border-b border-[#E2E2DE] flex items-center justify-between">
             <div className="flex items-center gap-[8px]">
               <SearchCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
               <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] text-[#100F09]">Search</span>
@@ -831,7 +831,7 @@ function PlanCTable() {
 
         {/* Category 2: Extract */}
         <div className="bg-white rounded-[16px] border border-[#E2E2DE] overflow-hidden shadow-xs">
-          <div className="bg-[#F8F9FA] px-[16px] py-[12px] border-b border-[#E2E2DE] flex items-center justify-between">
+          <div className="bg-[#F8F8F5] px-[16px] py-[12px] border-b border-[#E2E2DE] flex items-center justify-between">
             <div className="flex items-center gap-[8px]">
               <ExtractCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
               <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] text-[#100F09]">Extract</span>
@@ -868,7 +868,7 @@ function PlanCTable() {
 
         {/* Category 3: Embedding */}
         <div className="bg-white rounded-[16px] border border-[#E2E2DE] overflow-hidden shadow-xs">
-          <div className="bg-[#F8F9FA] px-[16px] py-[12px] border-b border-[#E2E2DE] flex items-center justify-between">
+          <div className="bg-[#F8F8F5] px-[16px] py-[12px] border-b border-[#E2E2DE] flex items-center justify-between">
             <div className="flex items-center gap-[8px]">
               <EmbeddingCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
               <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] text-[#100F09]">Embedding</span>
@@ -974,7 +974,7 @@ function PlanCTable() {
 
         {/* Category 4: VL Embedding */}
         <div className="bg-white rounded-[16px] border border-[#E2E2DE] overflow-hidden shadow-xs">
-          <div className="bg-[#F8F9FA] px-[16px] py-[12px] border-b border-[#E2E2DE] flex items-center justify-between">
+          <div className="bg-[#F8F8F5] px-[16px] py-[12px] border-b border-[#E2E2DE] flex items-center justify-between">
             <div className="flex items-center gap-[8px]">
               <VlEmbeddingCategoryIcon className="w-[18px] h-[18px] text-[#100F09]" />
               <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] text-[#100F09]">VL Embedding</span>
@@ -1043,12 +1043,12 @@ function PlanCTable() {
 
         {/* Category 5: Applications */}
         <div className="bg-white rounded-[16px] border border-[#E2E2DE] overflow-hidden shadow-xs">
-          <div className="bg-[#F8F9FA] px-[16px] py-[12px] border-b border-[#E2E2DE] flex items-center justify-between gap-2">
+          <div className="bg-[#F8F8F5] px-[16px] py-[12px] border-b border-[#E2E2DE] flex items-center justify-between gap-2">
             <div className="flex items-center gap-[8px]">
               <ApplicationsCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
               <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] text-[#100F09]">Applications</span>
             </div>
-            <span className="inline-flex items-center px-[6px] py-[1px] rounded bg-white/90 text-[#100F09] font-medium border border-[#DCDCD6] text-[11px] font-['JetBrains_Mono',monospace]">
+            <span className="inline-flex items-center px-[6px] py-[1px] rounded bg-white/50 text-[#100F09] font-medium border border-[#DCDCD6] text-[11px] font-['JetBrains_Mono',monospace]">
               Search API + Model Gateway
             </span>
           </div>
@@ -1180,24 +1180,24 @@ function PlanCTable() {
       {/* ========================================================================= */}
       <div ref={tableContainerRef} className="hidden md:block w-full bg-white rounded-[16px] sm:rounded-[20px] border border-[#E2E2DE] relative">
         <table className="w-full text-left border-separate border-spacing-0">
-          {/* Main Column Field Names Sticky Header */}
-          <thead className="sticky top-[58px] z-30 bg-[#F8F8F5]">
-            <tr className="bg-[#F8F8F5] text-[#8B8B8B] font-['DM_Sans',sans-serif] text-[13px] font-bold tracking-wider uppercase select-none">
+          {/* Main Column Field Names Sticky Header - Layer 1 (White) */}
+          <thead className="sticky top-[58px] z-30 bg-white">
+            <tr className="bg-white text-[#8B8B8B] font-['DM_Sans',sans-serif] text-[13px] font-bold tracking-wider uppercase select-none">
               <th
-                className={`sticky top-[58px] z-30 py-3.5 px-6 font-semibold bg-[#F8F8F5] border-b border-[#E2E2DE] transition-[border-radius] duration-150 ${
+                className={`sticky top-[58px] z-30 py-3.5 px-6 font-semibold bg-white border-b border-[#E2E2DE] transition-[border-radius] duration-150 ${
                   isHeaderSticky ? "rounded-tl-none" : "rounded-tl-[16px] sm:rounded-tl-[20px]"
                 }`}
               >
                 Endpoint / Model
               </th>
-              <th className="sticky top-[58px] z-30 py-3.5 px-6 font-semibold bg-[#F8F8F5] border-b border-[#E2E2DE]">
+              <th className="sticky top-[58px] z-30 py-3.5 px-6 font-semibold bg-white border-b border-[#E2E2DE]">
                 Unit Price (USD)
               </th>
-              <th className="sticky top-[58px] z-30 py-3.5 px-6 font-semibold bg-[#F8F8F5] border-b border-[#E2E2DE]">
+              <th className="sticky top-[58px] z-30 py-3.5 px-6 font-semibold bg-white border-b border-[#E2E2DE]">
                 Details &amp; Free Tier
               </th>
               <th
-                className={`sticky top-[58px] z-30 py-3.5 px-6 font-semibold text-right bg-[#F8F8F5] border-b border-[#E2E2DE] transition-[border-radius] duration-150 ${
+                className={`sticky top-[58px] z-30 py-3.5 px-6 font-semibold text-right bg-white border-b border-[#E2E2DE] transition-[border-radius] duration-150 ${
                   isHeaderSticky ? "rounded-tr-none" : "rounded-tr-[16px] sm:rounded-tr-[20px]"
                 }`}
               >
@@ -1207,9 +1207,9 @@ function PlanCTable() {
           </thead>
           <tbody className="divide-y divide-[#EAEAE5] text-[#100F09] font-['DM_Sans',sans-serif] text-[14px]">
 
-            {/* === CATEGORY SECTION 1: SEARCH (Full-width Sticky Row) === */}
-            <tr className="bg-[#F8F9FA] select-none">
-              <td colSpan={4} className="sticky top-[106px] z-20 py-3 px-6 bg-[#F8F9FA] border-b border-[#E2E2DE]">
+            {/* === CATEGORY SECTION 1: SEARCH - Layer 2 (Gray #F8F8F5) === */}
+            <tr className="bg-[#F8F8F5] select-none">
+              <td colSpan={4} className="sticky top-[106px] z-20 py-3 px-6 bg-[#F8F8F5] border-b border-[#E2E2DE]">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
                     <SearchCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
@@ -1354,9 +1354,9 @@ function PlanCTable() {
                 </td>
               </tr>
 
-            {/* === CATEGORY SECTION 2: EXTRACT (Full-width Sticky Row) === */}
-            <tr className="bg-[#F8F9FA] select-none">
-              <td colSpan={4} className="sticky top-[106px] z-20 py-3 px-6 bg-[#F8F9FA] border-y border-[#E2E2DE]">
+            {/* === CATEGORY SECTION 2: EXTRACT - Layer 2 (Gray #F8F8F5) === */}
+            <tr className="bg-[#F8F8F5] select-none">
+              <td colSpan={4} className="sticky top-[106px] z-20 py-3 px-6 bg-[#F8F8F5] border-y border-[#E2E2DE]">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
                     <ExtractCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
@@ -1400,9 +1400,9 @@ function PlanCTable() {
                 </td>
               </tr>
 
-            {/* === CATEGORY SECTION 3: EMBEDDING (Full-width Sticky Row) === */}
-            <tr className="bg-[#F8F9FA] select-none">
-              <td colSpan={4} className="sticky top-[106px] z-20 py-3 px-6 bg-[#F8F9FA] border-y border-[#E2E2DE]">
+            {/* === CATEGORY SECTION 3: EMBEDDING - Layer 2 (Gray #F8F8F5) === */}
+            <tr className="bg-[#F8F8F5] select-none">
+              <td colSpan={4} className="sticky top-[106px] z-20 py-3 px-6 bg-[#F8F8F5] border-y border-[#E2E2DE]">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
                     <EmbeddingCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
@@ -1591,9 +1591,9 @@ function PlanCTable() {
                 </td>
               </tr>
 
-            {/* === CATEGORY SECTION 5: APPLICATIONS (Full-width Sticky Row) === */}
-            <tr className="bg-[#F8F9FA] select-none">
-              <td colSpan={4} className="sticky top-[106px] z-20 py-3 px-6 bg-[#F8F9FA] border-y border-[#E2E2DE]">
+            {/* === CATEGORY SECTION 4: APPLICATIONS - Layer 2 (Gray #F8F8F5) === */}
+            <tr className="bg-[#F8F8F5] select-none">
+              <td colSpan={4} className="sticky top-[106px] z-20 py-3 px-6 bg-[#F8F8F5] border-y border-[#E2E2DE]">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
                     <ApplicationsCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
@@ -1603,7 +1603,7 @@ function PlanCTable() {
                   </div>
                   <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#8B8B8B] hidden sm:inline-flex items-center gap-[4px]">
                     <span>Complete workflows built on the APIs above. Billed per outcome via</span>
-                    <span className="inline-flex items-center px-[6px] py-[1px] rounded bg-white/90 text-[#100F09] font-medium border border-[#DCDCD6] text-[12px] font-['JetBrains_Mono',monospace]">
+                    <span className="inline-flex items-center px-[6px] py-[1px] rounded bg-white/50 text-[#100F09] font-medium border border-[#DCDCD6] text-[12px] font-['JetBrains_Mono',monospace]">
                       Search API + Model Gateway
                     </span>
                     <span>.</span>

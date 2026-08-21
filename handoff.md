@@ -44,6 +44,10 @@ pnpm build
    - **Plan A**：顶部吸顶分类 Tabs 栏 + 直排 Bento 平铺卡片布局。
    - **Model Tokens 统称拉齐 (Token Naming Unification)**：
      - 在 Plan A 与 Plan B 的 `MultimodalChatCard` 及 `AnswerCard` 中，将原 `Vision tokens` 统一调整为 `Model tokens`，下挂于 `Search calls + model tokens` 总览下，计费说明统一显示为 `Gateway rates`。
+   - **Plan C 矩阵表格双层表头背景色调换 (Plan C Dual-Header Color Swap)**：
+     - **第一层表头（Main Sticky Column Header: Endpoint/Model, Unit Price, Details）**：背景色调整为 **纯白 `bg-white`**；
+     - **第二层表头（Category Sticky Rows: Search, Extract, Embedding, Applications）**：背景色调整为 **原第一层的质感灰色 `bg-[#F8F8F5]`**；
+     - 桌面端与移动端卡片分类顶栏同步采用该配色体系，层次分明，视觉主次更清晰。
    - **Plan A-C 移除 Model Gateway 卡片 Hover 状态样式变化 (Model Gateway No Hover Effects)**：
      - 在 Plan A、Plan B、Plan C 中，彻底移除了 `Model Gateway` 卡片容器本身的 `hover:shadow` 及 `hover:border` 等悬浮变化效果，保持卡片背景与边框在鼠标滑过时静止沉稳，仅保留内部可点击链接（View model rates / View rebate details）的文字交互反馈。
    - **Model Gateway 卡片内边距调整为 20px (Model Gateway Padding = 20px)**：
