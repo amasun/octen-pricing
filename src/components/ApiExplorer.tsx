@@ -1989,7 +1989,7 @@ export default function ApiExplorer() {
           {/* Section 1 Outer Shell: Search (Emerald Green -> Aqua Teal) */}
           <div
             id="search"
-            className="group/shell relative scroll-mt-[176px] rounded-[16px] border border-[#E2E2DE] hover:border-[#70FE7E]/70 bg-[#F4F4F4] overflow-hidden shadow-[0_2px_12px_rgba(0,0,0,0.02)] flex flex-col w-full transition-all duration-300"
+            className="group/shell relative scroll-mt-[176px] rounded-[16px] border border-[#E2E2DE] hover:border-[#1FBC2E]/70 bg-[#F4F4F4] overflow-hidden shadow-[0_2px_12px_rgba(0,0,0,0.02)] flex flex-col w-full transition-all duration-300"
           >
             {/* Top-to-Bottom Emerald to Teal Duotone Mesh Gradient */}
             <ShellHoverGlow variant="emerald" />
@@ -2002,7 +2002,7 @@ export default function ApiExplorer() {
                   Search
                 </span>
               </div>
-              <span className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] font-normal text-[#8B8B8B] hidden sm:block text-right">
+              <span className="font-['DM_Sans',sans-serif] text-[14px] leading-[21px] font-normal text-[#57575E] hidden sm:block text-right">
                 Real-time retrieval from the live web.
               </span>
             </div>
@@ -2030,7 +2030,7 @@ export default function ApiExplorer() {
                   Extract
                 </span>
               </div>
-              <span className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] font-normal text-[#8B8B8B] hidden sm:block text-right">
+              <span className="font-['DM_Sans',sans-serif] text-[14px] leading-[21px] font-normal text-[#57575E] hidden sm:block text-right">
                 Clean content from any URL.
               </span>
             </div>
@@ -2057,7 +2057,7 @@ export default function ApiExplorer() {
                   Embedding
                 </span>
               </div>
-              <span className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] font-normal text-[#8B8B8B] hidden sm:block text-right">
+              <span className="font-['DM_Sans',sans-serif] text-[14px] leading-[21px] font-normal text-[#57575E] hidden sm:block text-right">
                 Top-ranked embedding models for text and multimodal retrieval.
               </span>
             </div>
@@ -2085,7 +2085,7 @@ export default function ApiExplorer() {
                   Applications
                 </span>
               </div>
-              <span className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] font-normal text-[#8B8B8B] hidden sm:inline-flex items-center gap-[4px] text-right">
+              <span className="font-['DM_Sans',sans-serif] text-[14px] leading-[21px] font-normal text-[#57575E] hidden sm:inline-flex items-center gap-[4px] text-right">
                 <span>Complete workflows built on the APIs above. Billed per outcome via</span>
                 <span className="inline-flex items-center px-[6px] py-[1px] rounded bg-white/90 text-[#100F09] font-medium border border-[#DCDCD6] text-[12px] font-['JetBrains_Mono',monospace]">
                   Search API + Model Gateway

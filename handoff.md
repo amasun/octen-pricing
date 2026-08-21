@@ -44,6 +44,10 @@ pnpm build
    - **Plan A**：顶部吸顶分类 Tabs 栏 + 直排 Bento 平铺卡片布局。
    - **Model Tokens 统称拉齐 (Token Naming Unification)**：
      - 在 Plan A 与 Plan B 的 `MultimodalChatCard` 及 `AnswerCard` 中，将原 `Vision tokens` 统一调整为 `Model tokens`，下挂于 `Search calls + model tokens` 总览下，计费说明统一显示为 `Gateway rates`。
+   - **Plan B 4 大分类右侧辅助文字规范调整 (Plan B Category Subtitle Typography)**：
+     - 将 Plan B 中 4 大外壳分类（Search、Extract、Embedding、Applications）右侧的辅助说明文字字号设置为 **`14px`**（`text-[14px] leading-[21px]`），颜色设置为 **`rgb(87, 87, 94)`**（`#57575E`）。
+   - **Plan B Search 外壳大卡片 Hover Border 颜色调整 (Plan B Search Outer Shell Hover Border)**：
+     - 将 Plan B 中 Search 模块外壳大卡片的悬浮边框颜色从 `hover:border-[#70FE7E]/70` 调整为更深更沉稳的翡翠绿 **`hover:border-[#1FBC2E]/70`**。
    - **Plan A 与 Plan B 标题下方辅助说明样式与 Plan C 全量对齐 (Plan A & B Subtitle Helper Text Alignment with Plan C)**：
      - 将方案 A 和方案 B 中所有卡片（Web Search, Image/Video Search, Extract, Embedding, VL Embedding, Answer, Multimodal Chat, Deep Research, Grounded Gen）标题下方的辅助说明段落，以及 ModelGatewayBox、Plan A 吸顶栏描述、Plan B 外壳分类栏描述，统一调整为方案 C 标准规范（`12px` / `leading-[18px]` / `#8B8B8B`）。
    - **Applications 4 列卡片 Early Access 标签防折行自适应优化 (Applications 4-Col Early Access Single-Line Layout)**：
