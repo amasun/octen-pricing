@@ -425,16 +425,27 @@ function QpsPlanCard() {
       onMouseLeave={() => setIsHovered(false)}
       className="w-full md:flex-[1_0_0] md:min-w-px relative rounded-[24px] bg-white border border-[#E5E7EB] hover:border-[#D1D5DB] hover:-translate-y-[3px] hover:shadow-[0px_12px_28px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out block overflow-hidden cursor-pointer select-text no-underline text-inherit"
     >
-      <div className="flex flex-col items-center justify-center size-full p-[6px] relative z-10 select-text cursor-pointer">
+      <div className="flex flex-col items-center justify-center size-full p-[6px] pb-[24px] relative z-10 select-text">
         <QpsCardGraphic isHovered={isHovered} />
-        <div className="content-stretch flex flex-col gap-[6px] items-center pb-[16px] pt-[20px] relative shrink-0 text-center w-full select-text cursor-pointer">
-          <p className="font-['Fraunces',serif] font-bold text-[20px] sm:text-[22px] text-[#09090b] leading-[1.2] py-[2px] w-full text-center relative shrink-0 select-text cursor-pointer">
-            Subscribe to a <span className="font-bold select-text cursor-pointer">QPS Plan</span>
+        <div className="content-stretch flex flex-col gap-[6px] items-center pb-[14px] pt-[20px] relative shrink-0 text-center w-full select-text">
+          <p className="font-['Fraunces',serif] font-bold text-[20px] sm:text-[22px] text-[#09090b] leading-[1.2] py-[2px] w-full text-center relative shrink-0 select-text">
+            Subscribe to a <span className="font-bold select-text">QPS Plan</span>
           </p>
-          <p className="font-['DM_Sans',sans-serif] font-normal text-[#515151] relative shrink-0 text-[14px] whitespace-nowrap select-text cursor-pointer">
+          <p className="font-['DM_Sans',sans-serif] font-normal text-[#515151] relative shrink-0 text-[14px] whitespace-nowrap select-text">
             Reserves your max search QPS
           </p>
         </div>
+        <button
+          type="button"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            window.open("https://octen.ai/platform/billing", "_blank", "noopener,noreferrer");
+          }}
+          className="inline-flex items-center justify-center h-[36px] px-[20px] bg-[#100F09] hover:bg-[#2A2A28] active:scale-[0.97] text-white font-['DM_Sans',sans-serif] font-medium text-[14px] rounded-full transition-all duration-150 shadow-xs cursor-pointer relative z-20"
+        >
+          Get higher QPS
+        </button>
       </div>
     </a>
   );
@@ -450,16 +461,27 @@ function PayAsYouGoCard() {
       onMouseLeave={() => setIsHovered(false)}
       className="w-full md:flex-[1_0_0] md:min-w-px relative rounded-[24px] bg-white border border-[#E5E7EB] hover:border-[#D1D5DB] hover:-translate-y-[3px] hover:shadow-[0px_12px_28px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out block overflow-hidden cursor-pointer select-text no-underline text-inherit"
     >
-      <div className="flex flex-col items-center justify-center size-full p-[6px] relative z-10 select-text cursor-pointer">
+      <div className="flex flex-col items-center justify-center size-full p-[6px] pb-[24px] relative z-10 select-text">
         <PayAsYouGoGraphic isHovered={isHovered} />
-        <div className="content-stretch flex flex-col gap-[6px] items-center pb-[16px] pt-[20px] relative shrink-0 text-center w-full select-text cursor-pointer">
-          <p className="font-['Fraunces',serif] font-bold text-[20px] sm:text-[22px] text-[#09090b] leading-[1.2] py-[2px] w-full text-center relative shrink-0 select-text cursor-pointer">
+        <div className="content-stretch flex flex-col gap-[6px] items-center pb-[14px] pt-[20px] relative shrink-0 text-center w-full select-text">
+          <p className="font-['Fraunces',serif] font-bold text-[20px] sm:text-[22px] text-[#09090b] leading-[1.2] py-[2px] w-full text-center relative shrink-0 select-text">
             Pay as you go
           </p>
-          <p className="font-['DM_Sans',sans-serif] font-normal text-[#515151] relative shrink-0 text-[14px] whitespace-nowrap select-text cursor-pointer">
+          <p className="font-['DM_Sans',sans-serif] font-normal text-[#515151] relative shrink-0 text-[14px] whitespace-nowrap select-text">
             Covers actual API and token usage
           </p>
         </div>
+        <button
+          type="button"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            window.open("https://octen.ai/platform/api-keys", "_blank", "noopener,noreferrer");
+          }}
+          className="inline-flex items-center justify-center h-[36px] px-[20px] bg-[#100F09] hover:bg-[#2A2A28] active:scale-[0.97] text-white font-['DM_Sans',sans-serif] font-medium text-[14px] rounded-full transition-all duration-150 shadow-xs cursor-pointer relative z-20"
+        >
+          Get an API key
+        </button>
       </div>
     </a>
   );

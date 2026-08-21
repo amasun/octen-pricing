@@ -54,6 +54,24 @@ pnpm build
    - **QPS Plan 卡片价格 $ 符号顶对齐与 / month 原始样式保留 (QPS Plan Price Alignment & Period Style)**：
      - 在 QPS Plan 卡片价格展示区，通过 `self-start` 将 `$` 美元符号与大号价格数字的顶部精准对齐；
      - 同时完全保留了大号数字的行高基准与 `/ month` 周期文案的原有字号、行高（`text-[14px] leading-[20px] text-[#57575E]`）及底部基线对齐位置，确保整体排版稳定不跳动。
+   - **How Octen Works 卡片原生 HTML 锚点定位优化 (How Octen Works Native Anchor Fix)**：
+     - 将卡片主体改为原生 HTML `<a href="#pay-as-you-go">` 和 `<a href="#qps-plans">` 超链接标签，彻底摒弃 JS 滚动状态单次锁死的缺陷；
+     - 目标容器统一配置 `scroll-mt-[90px]`，配合全局 `scroll-behavior: smooth`，无论是首次点击还是反复多次点击，均能 100% 稳定平滑滚动定位到准确视图位置；
+     - 内置行动按钮采用标准 `<button type="button">` + `window.open` 隔离事件冒泡，互不干扰。
+   - **How Octen Works 卡片双重交互逻辑规范 (How Octen Works Dual Interaction Model)**：
+     - **按钮点击**（`Get an API key` / `Get higher QPS`）：携带 `e.stopPropagation()` 独立触发新标签页跳转（分别至 `/platform/api-keys` 和 `/platform/billing`）；
+     - **卡片其余区域点击**：触发平滑锚点滚动，左侧卡片滚至 `#pay-as-you-go`（API 计费区），右侧卡片滚至 `#qps-plans`（QPS 价格方案区）；
+     - 卡片整体保持手型指针 `cursor-pointer` 与悬浮微动浮起反馈，交互层次严密清晰。
+   - **How Octen Works 卡片行动按钮文案更新 (How Octen Works Action Button Label)**：
+     - 将 **Subscribe to a QPS Plan** 卡片底部的行动按钮文案由 `Get started` 更新为 **`Get higher QPS`**（跳转至 `https://octen.ai/platform/billing`）。
+   - **How Octen Works 卡片行动按钮跳转链接配置 (How Octen Works Action Button Links)**：
+     - **Get an API key**（Pay as you go 卡片）：跳转至 **`https://octen.ai/platform/api-keys`**；
+     - **Get started**（Subscribe to a QPS Plan 卡片）：跳转至 **`https://octen.ai/platform/billing`**；
+     - 均配置 `target="_blank"` 与 `rel="noopener noreferrer"`，保持用户体验流畅。
+   - **Plan C 矩阵表格顶部圆角白色背景溢出修复 (Plan C Table Corner Radius Overflow Fix)**：
+     - 移除了 `thead` 和 `tr` 上全局方角 `bg-white` 造成的溢出层；
+     - 将顶层左右两端 `th` 及底层两端 `td` 的圆角内径精准设为 `15px / 19px`（完美贴合外容器 `16px / 20px` 减去 1px 边框）；
+     - 移除动态圆角动画过渡造成的浏览器渲染延迟残影，确保在滚动置顶和回滚至初始位置时圆角始终贴合严密，绝无白底溢出。
    - **Plan C 矩阵表格双层表头背景色调换与全量统一 (Plan C Dual-Header Color Swap & Fix)**：
      - **第一层表头（Main Sticky Column Header: Endpoint/Model, Unit Price, Details）**：背景色统一为 **纯白 `bg-white`**；
      - **第二层表头（Category Sticky Rows: Search, Extract, Embedding, VL Embedding, Applications）**：背景色全部统一为 **原第一层的质感灰色 `bg-[#F8F8F5]`**，修复了遗留的 VL Embedding 分类行背景色差异。

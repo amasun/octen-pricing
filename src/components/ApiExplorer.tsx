@@ -1181,11 +1181,11 @@ function PlanCTable() {
       <div ref={tableContainerRef} className="hidden md:block w-full bg-white rounded-[16px] sm:rounded-[20px] border border-[#E2E2DE] relative">
         <table className="w-full text-left border-separate border-spacing-0">
           {/* Main Column Field Names Sticky Header - Layer 1 (White) */}
-          <thead className="sticky top-[58px] z-30 bg-white">
-            <tr className="bg-white text-[#8B8B8B] font-['DM_Sans',sans-serif] text-[13px] font-bold tracking-wider uppercase select-none">
+          <thead className="sticky top-[58px] z-30">
+            <tr className="text-[#8B8B8B] font-['DM_Sans',sans-serif] text-[13px] font-bold tracking-wider uppercase select-none">
               <th
-                className={`sticky top-[58px] z-30 py-3.5 px-6 font-semibold bg-white border-b border-[#E2E2DE] transition-[border-radius] duration-150 ${
-                  isHeaderSticky ? "rounded-tl-none" : "rounded-tl-[16px] sm:rounded-tl-[20px]"
+                className={`sticky top-[58px] z-30 py-3.5 px-6 font-semibold bg-white border-b border-[#E2E2DE] ${
+                  isHeaderSticky ? "rounded-tl-none" : "rounded-tl-[15px] sm:rounded-tl-[19px]"
                 }`}
               >
                 Endpoint / Model
@@ -1197,8 +1197,8 @@ function PlanCTable() {
                 Details &amp; Free Tier
               </th>
               <th
-                className={`sticky top-[58px] z-30 py-3.5 px-6 font-semibold text-right bg-white border-b border-[#E2E2DE] transition-[border-radius] duration-150 ${
-                  isHeaderSticky ? "rounded-tr-none" : "rounded-tr-[16px] sm:rounded-tr-[20px]"
+                className={`sticky top-[58px] z-30 py-3.5 px-6 font-semibold text-right bg-white border-b border-[#E2E2DE] ${
+                  isHeaderSticky ? "rounded-tr-none" : "rounded-tr-[15px] sm:rounded-tr-[19px]"
                 }`}
               >
                 <span className="sr-only">Action</span>
@@ -1704,7 +1704,7 @@ function PlanCTable() {
 
               {/* Row 4: Grounded Generation */}
               <tr className="hover:bg-[#F8F8F5] transition-colors group/row">
-                <td className="py-4 px-6 rounded-bl-[16px] sm:rounded-bl-[20px]">
+                <td className="py-4 px-6 rounded-bl-[15px] sm:rounded-bl-[19px]">
                   <div className="flex flex-col gap-0.5">
                     <div className="flex items-center gap-2">
                       <span className="font-bold text-[16px] text-[#0A0A0A]">Grounded Generation</span>
@@ -1722,7 +1722,7 @@ function PlanCTable() {
                 <td className="py-4 px-6 text-[14px] text-[#8B8B8B]">
                   Accurate visual synthesis grounded in factual web context
                 </td>
-                <td className="py-4 px-6 text-right rounded-br-[16px] sm:rounded-br-[20px]">
+                <td className="py-4 px-6 text-right rounded-br-[15px] sm:rounded-br-[19px]">
                   <a
                     href="https://docs.octen.ai/overview/pricing#grounded-generation"
                     target="_blank"
@@ -1816,7 +1816,7 @@ export default function ApiExplorer() {
   };
 
   return (
-    <div className="bg-white content-stretch flex flex-col items-center pb-0 pt-[20px] sm:pt-[40px] relative shrink-0 w-full max-w-[1312px] px-4 box-border" id="pay-as-you-go">
+    <div className="bg-white content-stretch flex flex-col items-center pb-0 pt-[20px] sm:pt-[40px] relative shrink-0 w-full max-w-[1312px] px-4 box-border scroll-mt-[90px]" id="pay-as-you-go">
 
       {/* Floating Layout Plan Switcher Widget on the Left Margin */}
       <div className="fixed left-3 sm:left-6 bottom-6 sm:bottom-auto sm:top-[200px] z-50 pointer-events-auto select-none">
