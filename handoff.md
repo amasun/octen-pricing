@@ -44,8 +44,8 @@ pnpm build
    - **Plan A**：顶部吸顶分类 Tabs 栏 + 直排 Bento 平铺卡片布局。
    - **Model Tokens 统称拉齐 (Token Naming Unification)**：
      - 在 Plan A 与 Plan B 的 `MultimodalChatCard` 及 `AnswerCard` 中，将原 `Vision tokens` 统一调整为 `Model tokens`，下挂于 `Search calls + model tokens` 总览下，计费说明统一显示为 `Gateway rates`。
-   - **Applications 计费标签背景样式对齐价格标签 (Applications Tag Style Alignment)**：
-     - 将方案 A（以及方案 B、C）中 `[Search API + Model Gateway]` 胶囊标签的样式全面对齐卡片中的价格标签规范：使用 **`bg-[#F6F6F3]`** 柔和米灰底色、**`border-[#E7E7E3]`** 细腻边框、**`rounded-[4px]`** 4px 圆角与 **`text-[#100F09]`**，整体风格与卡片内部的价格/费率标签保持高度一致。
+   - **Applications 计费标签样式对齐 (Applications Tag Style Alignment between Plan B & C)**：
+     - 将方案 C（桌面大表与移动端卡片）中的 `[Search API + Model Gateway]` 胶囊标签样式与方案 B 严格拉齐对齐：统一使用 **`bg-white/90`** 半透白卡片底色、**`border-[#DCDCD6]`** 清晰描边、**`rounded`** 圆角与 **`text-[#100F09]`**，在灰底分类栏（`#F8F9FA` / `#F4F4F4`）上呈现出统一、通透且具层次感的高质感胶囊外观。
    - **Plan C 标题下方辅助说明字号调优为 12px (Plan C Subtitle Helper Copy 12px Hierarchy)**：
      - 将方案 C（桌面大表与移动端卡片）中所有 14 个端点/模型主标题（16px 加粗）下方的单行功能辅助描述文本（如 `Real-time LLM-ready web search with live crawling`）独立设为 **`12px` (`text-[12px] leading-[18px]`)**，使标题与副标题层级区分更加鲜明紧凑；
      - 价格、单位后缀（`/ 1k calls`）、Free Tier 说明、分类右侧说明等其余所有辅助字段继续保持规范的 **`14px`**，不受任何影响。
