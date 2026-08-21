@@ -183,7 +183,7 @@ function WebSearchCard({ plan = "planA" }: { plan?: "planA" | "planB" }) {
           </div>
           <div className="flex items-center justify-between gap-[8px] text-[13px] sm:text-[14px] min-w-0">
             <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Full Content</span>
-            <span className="text-[#57575E] text-[11px] sm:text-[12px] bg-[#F6F6F3] px-[6px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$0.5 / 1k results (<span className="text-[#039855] font-medium">10 free / call</span>)</span>
+            <span className="text-[#57575E] text-[11px] sm:text-[12px] bg-[#F6F6F3] px-[6px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$0.5 / 1k results (<span className="text-[#039855] font-medium">10 free results / call</span>)</span>
           </div>
         </div>
       </div>
