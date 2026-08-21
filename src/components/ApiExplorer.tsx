@@ -363,16 +363,16 @@ function AnswerCard() {
       href="https://octen.ai/platform/answer"
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] rounded-[16px] p-[20px] sm:p-[24px] flex flex-col justify-between transition-all duration-200 box-border h-full cursor-pointer select-none text-left"
+      className="group relative bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] rounded-[16px] p-[18px] sm:p-[20px] flex flex-col justify-between transition-all duration-200 box-border h-full cursor-pointer select-none text-left"
     >
-      <div className="absolute top-[12px] right-[12px] w-[28px] h-[28px] rounded-full bg-[#100F09] flex items-center justify-center transition-all duration-200 shrink-0 opacity-0 group-hover:opacity-100 pointer-events-none z-10">
-        <svg className="w-[12px] h-[12px] text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+      <div className="absolute top-[12px] right-[12px] w-[26px] h-[26px] rounded-full bg-[#100F09] flex items-center justify-center transition-all duration-200 shrink-0 opacity-0 group-hover:opacity-100 pointer-events-none z-10">
+        <svg className="w-[11px] h-[11px] text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
           <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
         </svg>
       </div>
       <div>
-        <div className="flex items-center gap-[8px] flex-wrap mb-[8px] pr-[28px]">
-          <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] sm:text-[20px] text-[#0A0A0A] tracking-tight">Answer</span>
+        <div className="flex items-center gap-[6px] mb-[8px] pr-[24px]">
+          <span className="font-['DM_Sans',sans-serif] font-bold text-[17px] sm:text-[18px] text-[#0A0A0A] tracking-tight whitespace-nowrap">Answer</span>
         </div>
         <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] mb-[18px]">
           Grounded answers with citations, assembled from dozens of sub-queries.
@@ -403,17 +403,19 @@ function MultimodalChatCard() {
       href="https://octen.ai/platform/multimodal-chat"
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] rounded-[16px] p-[20px] sm:p-[24px] flex flex-col justify-between transition-all duration-200 box-border h-full cursor-pointer select-none text-left"
+      className="group relative bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] rounded-[16px] p-[18px] sm:p-[20px] flex flex-col justify-between transition-all duration-200 box-border h-full cursor-pointer select-none text-left"
     >
-      <div className="absolute top-[12px] right-[12px] w-[28px] h-[28px] rounded-full bg-[#100F09] flex items-center justify-center transition-all duration-200 shrink-0 opacity-0 group-hover:opacity-100 pointer-events-none z-10">
-        <svg className="w-[12px] h-[12px] text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+      <div className="absolute top-[12px] right-[12px] w-[26px] h-[26px] rounded-full bg-[#100F09] flex items-center justify-center transition-all duration-200 shrink-0 opacity-0 group-hover:opacity-100 pointer-events-none z-10">
+        <svg className="w-[11px] h-[11px] text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
           <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
         </svg>
       </div>
       <div>
-        <div className="flex items-center gap-[8px] flex-wrap mb-[8px] pr-[28px]">
-          <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] sm:text-[20px] text-[#0A0A0A] tracking-tight">Multimodal Chat</span>
-          <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#E3FFE2] border border-[#6FD1A5] text-[#1B9C62]">
+        <div className="flex items-center gap-[6px] mb-[8px] pr-[24px] flex-nowrap min-w-0">
+          <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] sm:text-[17px] xl:text-[18px] text-[#0A0A0A] tracking-tight whitespace-nowrap shrink-0">
+            Multimodal Chat
+          </span>
+          <span className="h-[19px] px-[5px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[10.5px] leading-none tracking-tight shrink-0 box-border bg-[#E3FFE2] border border-[#6FD1A5] text-[#1B9C62] whitespace-nowrap">
             Early Access
           </span>
         </div>
@@ -446,16 +448,16 @@ function DeepResearchCard() {
       href="https://octen.ai/platform/deep-research"
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] rounded-[16px] p-[20px] sm:p-[24px] flex flex-col justify-between transition-all duration-200 box-border h-full cursor-pointer select-none text-left"
+      className="group relative bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] rounded-[16px] p-[18px] sm:p-[20px] flex flex-col justify-between transition-all duration-200 box-border h-full cursor-pointer select-none text-left"
     >
-      <div className="absolute top-[12px] right-[12px] w-[28px] h-[28px] rounded-full bg-[#100F09] flex items-center justify-center transition-all duration-200 shrink-0 opacity-0 group-hover:opacity-100 pointer-events-none z-10">
-        <svg className="w-[12px] h-[12px] text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+      <div className="absolute top-[12px] right-[12px] w-[26px] h-[26px] rounded-full bg-[#100F09] flex items-center justify-center transition-all duration-200 shrink-0 opacity-0 group-hover:opacity-100 pointer-events-none z-10">
+        <svg className="w-[11px] h-[11px] text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
           <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
         </svg>
       </div>
       <div>
-        <div className="flex items-center gap-[8px] flex-wrap mb-[8px] pr-[28px]">
-          <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] sm:text-[20px] text-[#0A0A0A] tracking-tight">Deep Research</span>
+        <div className="flex items-center gap-[6px] mb-[8px] pr-[24px]">
+          <span className="font-['DM_Sans',sans-serif] font-bold text-[17px] sm:text-[18px] text-[#0A0A0A] tracking-tight whitespace-nowrap">Deep Research</span>
         </div>
         <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] mb-[18px]">
           Deep, source-backed research across thousands of web pages and documents.
@@ -495,17 +497,19 @@ function GroundedGenCard() {
       href="https://octen.ai/platform/grounded-generation"
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] rounded-[16px] p-[20px] sm:p-[24px] flex flex-col justify-between transition-all duration-200 box-border h-full cursor-pointer select-none text-left"
+      className="group relative bg-white border border-[#E7E7E3] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] rounded-[16px] p-[18px] sm:p-[20px] flex flex-col justify-between transition-all duration-200 box-border h-full cursor-pointer select-none text-left"
     >
-      <div className="absolute top-[12px] right-[12px] w-[28px] h-[28px] rounded-full bg-[#100F09] flex items-center justify-center transition-all duration-200 shrink-0 opacity-0 group-hover:opacity-100 pointer-events-none z-10">
-        <svg className="w-[12px] h-[12px] text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+      <div className="absolute top-[12px] right-[12px] w-[26px] h-[26px] rounded-full bg-[#100F09] flex items-center justify-center transition-all duration-200 shrink-0 opacity-0 group-hover:opacity-100 pointer-events-none z-10">
+        <svg className="w-[11px] h-[11px] text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
           <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
         </svg>
       </div>
       <div>
-        <div className="flex items-center gap-[8px] flex-wrap mb-[8px] pr-[28px]">
-          <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] sm:text-[20px] text-[#0A0A0A] tracking-tight">Grounded Gen</span>
-          <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#E3FFE2] border border-[#6FD1A5] text-[#1B9C62]">
+        <div className="flex items-center gap-[6px] mb-[8px] pr-[24px] flex-nowrap min-w-0">
+          <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] sm:text-[17px] xl:text-[18px] text-[#0A0A0A] tracking-tight whitespace-nowrap shrink-0">
+            Grounded Gen
+          </span>
+          <span className="h-[19px] px-[5px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[10.5px] leading-none tracking-tight shrink-0 box-border bg-[#E3FFE2] border border-[#6FD1A5] text-[#1B9C62] whitespace-nowrap">
             Early Access
           </span>
         </div>
