@@ -93,7 +93,7 @@ const NAV_ITEMS: Array<{
       <span>
         Complete workflows built on the APIs above. Billed per outcome via{" "}
         <span className="inline-flex items-center px-[6px] py-[1px] rounded bg-[#EFEFEA] text-[#100F09] font-medium border border-[#DCDCD6] text-[12px] font-['JetBrains_Mono',monospace] align-middle">
-          Search + LLMs
+          Search API + Model Gateway
         </span>
         .
       </span>
@@ -2039,7 +2039,7 @@ export default function ApiExplorer() {
               <span className="font-['DM_Sans',sans-serif] text-[14px] leading-[21px] font-normal text-[#100F09]/80 hidden sm:inline-flex items-center gap-[4px] text-right">
                 <span>Complete workflows built on the APIs above. Billed per outcome via</span>
                 <span className="inline-flex items-center px-[6px] py-[1px] rounded bg-white/90 text-[#100F09] font-medium border border-[#DCDCD6] text-[12px] font-['JetBrains_Mono',monospace]">
-                  Search + LLMs
+                  Search API + Model Gateway
                 </span>
                 <span>.</span>
               </span>

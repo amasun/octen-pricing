@@ -44,6 +44,8 @@ pnpm build
    - **Plan A**：顶部吸顶分类 Tabs 栏 + 直排 Bento 平铺卡片布局。
    - **Model Tokens 统称拉齐 (Token Naming Unification)**：
      - 在 Plan A 与 Plan B 的 `MultimodalChatCard` 及 `AnswerCard` 中，将原 `Vision tokens` 统一调整为 `Model tokens`，下挂于 `Search calls + model tokens` 总览下，计费说明统一显示为 `Gateway rates`。
+   - **Applications 分类标签更新 (Applications Billing Tag Refinement)**：
+     - 在方案 A 吸顶分类栏与方案 B 外壳头部中，将 Applications 的计费方式标签胶囊文案由 `[Search + LLMs]` 更新为更严谨精确的 **`[Search API + Model Gateway]`**。
    - **Plan C 辅助文字弱化调色 (#8B8B8B Helper Copy Refinement)**：
      - 将 Plan C 表格与移动端卡片中的全部次级辅助说明文字（包括端点业务描述、计费单位后缀 `/ 1k calls`、Details & Free Tier 特性描述、表头字段标签等）由原 `#57575E` 统一弱化调优为 **`#8B8B8B`**，提升主次信息层级对比度，整体视觉观感更轻盈通透。
    - **Plan C 表头置顶滚动修复 (Plan C Sticky Header Overflow Fix)**：
