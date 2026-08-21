@@ -44,6 +44,19 @@ pnpm build
    - **Plan A**：顶部吸顶分类 Tabs 栏 + 直排 Bento 平铺卡片布局。
    - **Model Tokens 统称拉齐 (Token Naming Unification)**：
      - 在 Plan A 与 Plan B 的 `MultimodalChatCard` 及 `AnswerCard` 中，将原 `Vision tokens` 统一调整为 `Model tokens`，下挂于 `Search calls + model tokens` 总览下，计费说明统一显示为 `Gateway rates`。
+   - **Plan A 与 Plan B 标题下方辅助说明样式与 Plan C 全量对齐 (Plan A & B Subtitle Helper Text Alignment with Plan C)**：
+     - 将方案 A 和方案 B 中所有卡片（Web Search, Image/Video Search, Extract, Embedding, VL Embedding, Answer, Multimodal Chat, Deep Research, Grounded Gen）标题下方的辅助说明段落，以及 ModelGatewayBox、Plan A 吸顶栏描述、Plan B 外壳分类栏描述，统一调整为方案 C 标准规范：
+       - **字号**：**`12px`**（`text-[12px]`）
+       - **行高**：**`18px`**（`leading-[18px]`）
+       - **文字颜色**：**`#8B8B8B`**（`text-[#8B8B8B]`）
+     - 全局三种方案（A / B / C）在标题层级与次级辅助文案的视觉对比度、信息密度与精致度上实现 100% 统一。
+   - **Plan C 搜索计费单行精简规范（方案 A · Option A Simplification）**：
+     - **Web Search API**：`$1 $5 / 1k calls [80% Off]` | `Full content: $0.5 / 1k results (10 free results / call)`
+     - **Broad Search API**：**`$1 $5 / 1k sub-queries [80% Off]`** | `Full content: $0.5 / 1k results (10 free results / sub-query)`
+     - **Image / Video Search API**：`$5 / 1k calls`
+     - 语法规范严谨（复数 `/ 1k sub-queries`，单数 `10 free results / sub-query`），单行视觉通透整洁，与其它端点保持完全一致的高端版面风格。
+   - **VL Embedding 专属多模态矢量图标替换 (VL Embedding Custom SVG Icon)**：
+     - 为 `VL Embedding` 独立接入专用多模态视觉网格与节点连接 SVG 图标（`VlEmbeddingCategoryIcon`），替换原先与通用 Embedding 混用的单一网络图标。
    - **Applications 计费标签样式对齐 (Applications Tag Style Alignment between Plan B & C)**：
      - 将方案 C（桌面大表与移动端卡片）中的 `[Search API + Model Gateway]` 胶囊标签样式与方案 B 严格拉齐对齐：统一使用 **`bg-white/90`** 半透白卡片底色、**`border-[#DCDCD6]`** 清晰描边、**`rounded`** 圆角与 **`text-[#100F09]`**，在灰底分类栏（`#F8F9FA` / `#F4F4F4`）上呈现出统一、通透且具层次感的高质感胶囊外观。
    - **Plan C 标题下方辅助说明字号调优为 12px (Plan C Subtitle Helper Copy 12px Hierarchy)**：

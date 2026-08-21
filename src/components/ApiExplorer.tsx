@@ -51,6 +51,45 @@ function EmbeddingCategoryIcon({ className = "w-[18px] h-[18px]" }: { className?
   );
 }
 
+// 3.5 VL Embedding (Multimodal cross-modal embedding from Figma)
+function VlEmbeddingCategoryIcon({ className = "w-[18px] h-[18px]" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M19.1337 2.33334C20.3712 2.33343 21.5584 2.82544 22.4335 3.70053C23.3084 4.57567 23.8007 5.76281 23.8007 7.00034V11.5843C23.0789 11.1758 22.2952 10.8648 21.4667 10.6683V7.00034C21.4667 6.38165 21.2214 5.7875 20.7841 5.34995C20.3465 4.91244 19.7524 4.66741 19.1337 4.66733H5.13367C4.51483 4.66733 3.92086 4.91236 3.48328 5.34995C3.04569 5.78753 2.80066 6.3815 2.80066 7.00034V15.8499L6.64246 12.0091L6.65808 11.9925C7.37446 11.3033 8.25705 10.8862 9.21667 10.8861C10.0565 10.8862 10.8379 11.2055 11.4999 11.7474L11.7762 11.9925L11.7919 12.0091L12.9432 13.1605C12.3966 13.7258 11.9228 14.3618 11.5389 15.055L10.1581 13.6742L10.0223 13.554C9.71137 13.2984 9.43433 13.2192 9.21667 13.2191C8.96797 13.2192 8.64215 13.3222 8.27625 13.6742L2.80066 19.1497V21.0003C2.80075 21.6191 3.04577 22.2132 3.48328 22.6507C3.92083 23.0881 4.51498 23.3333 5.13367 23.3333H11.3319C11.7559 24.199 12.3151 24.986 12.9823 25.6673H5.13367C3.89614 25.6673 2.709 25.1751 1.83386 24.3001C0.95877 23.425 0.466761 22.2379 0.466675 21.0003V7.00034C0.466675 5.76266 0.958693 4.5757 1.83386 3.70053C2.70903 2.82536 3.89599 2.33334 5.13367 2.33334H19.1337ZM15.6454 8.16733C16.2894 8.16753 16.8122 8.68929 16.8124 9.33334C16.8122 9.9774 16.2894 10.5001 15.6454 10.5003H15.6337C14.9894 10.5003 14.4669 9.97753 14.4667 9.33334C14.4669 8.68916 14.9894 8.16733 15.6337 8.16733H15.6454Z"
+        fill="currentColor"
+      />
+      <path
+        d="M25.4358 16.816L15.4037 22.7175"
+        stroke="currentColor"
+        strokeWidth="1.55702"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M25.4358 22.3064L15.6521 16.9001"
+        stroke="currentColor"
+        strokeWidth="1.55702"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M20.7136 25.1358L20.7136 13.7725"
+        stroke="currentColor"
+        strokeWidth="1.55702"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle cx="25.4363" cy="16.9001" r="1.55118" fill="currentColor" />
+      <circle cx="20.714" cy="13.7724" r="1.47792" fill="currentColor" />
+      <circle cx="20.7139" cy="25.1359" r="1.74918" fill="currentColor" />
+      <circle cx="26.3246" cy="22.7174" r="1.59337" transform="rotate(124.49 26.3246 22.7174)" fill="currentColor" />
+      <circle cx="14.8729" cy="23.0006" r="1.57125" transform="rotate(61.0709 14.8729 23.0006)" fill="currentColor" />
+      <circle cx="15.6521" cy="17.2514" r="1.55269" fill="currentColor" />
+    </svg>
+  );
+}
+
 // 4. Applications (Composite geometric workflow from Figma)
 function ApplicationsCategoryIcon({ className = "w-[18px] h-[18px]" }: { className?: string }) {
   return (
@@ -125,7 +164,7 @@ function WebSearchCard({ plan = "planA" }: { plan?: "planA" | "planB" }) {
             80% Off
           </span>
         </div>
-        <p className="font-['DM_Sans',sans-serif] text-[13px] sm:text-[14px] leading-[20px] sm:leading-[22px] text-[#57575E] mb-[18px] min-h-[40px]">
+        <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] mb-[18px] min-h-[36px]">
           LLM-native web search. Ranked results with relevant highlights, and optional full content.
         </p>
         <div className="flex items-baseline gap-[6px] sm:gap-[8px] mb-[18px] flex-wrap">
@@ -173,7 +212,7 @@ function ImageVideoSearchCard({ plan = "planA" }: { plan?: "planA" | "planB" }) 
             Early Access
           </span>
         </div>
-        <p className="font-['DM_Sans',sans-serif] text-[13px] sm:text-[14px] leading-[20px] sm:leading-[22px] text-[#57575E] mb-[18px] min-h-[40px]">
+        <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] mb-[18px] min-h-[36px]">
           Beyond text queries &mdash; images and videos retrieved from the live web.
         </p>
         <div className="flex items-baseline gap-[6px] sm:gap-[8px] mb-[18px] flex-wrap">
@@ -212,7 +251,7 @@ function ExtractCard() {
         <div className="flex items-center gap-[8px] flex-wrap mb-[6px] pr-[28px]">
           <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] sm:text-[20px] text-[#0A0A0A] tracking-tight">Extract</span>
         </div>
-        <p className="font-['DM_Sans',sans-serif] text-[13px] sm:text-[14px] leading-[20px] sm:leading-[22px] text-[#57575E] m-0 max-w-[620px]">
+        <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] m-0 max-w-[620px]">
           Turn any URL into clean markdown, with intent-focused highlights and page classification.
         </p>
       </div>
@@ -244,7 +283,7 @@ function EmbeddingCard() {
             SOTA on RTEB
           </span>
         </div>
-        <p className="font-['DM_Sans',sans-serif] text-[13px] sm:text-[14px] leading-[20px] sm:leading-[22px] text-[#57575E] mb-[18px]">
+        <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] mb-[18px]">
           Turn text into vectors for semantic search, RAG, and recommendations.
         </p>
         <div className="flex items-baseline gap-[4px] sm:gap-[6px] mb-[18px] flex-wrap">
@@ -296,7 +335,7 @@ function VlEmbeddingCard() {
             SOTA on MMEB-v2
           </span>
         </div>
-        <p className="font-['DM_Sans',sans-serif] text-[13px] sm:text-[14px] leading-[20px] sm:leading-[22px] text-[#57575E] mb-[18px]">
+        <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] mb-[18px]">
           One embedding space across text, images, videos, and visual documents.
         </p>
         <div className="flex items-baseline gap-[4px] sm:gap-[6px] mb-[18px] flex-wrap">
@@ -335,7 +374,7 @@ function AnswerCard() {
         <div className="flex items-center gap-[8px] flex-wrap mb-[8px] pr-[28px]">
           <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] sm:text-[20px] text-[#0A0A0A] tracking-tight">Answer</span>
         </div>
-        <p className="font-['DM_Sans',sans-serif] text-[13px] sm:text-[14px] leading-[20px] sm:leading-[22px] text-[#57575E] mb-[18px]">
+        <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] mb-[18px]">
           Grounded answers with citations, assembled from dozens of sub-queries.
         </p>
         <div className="mb-[18px]">
@@ -378,7 +417,7 @@ function MultimodalChatCard() {
             Early Access
           </span>
         </div>
-        <p className="font-['DM_Sans',sans-serif] text-[13px] sm:text-[14px] leading-[20px] sm:leading-[22px] text-[#57575E] mb-[18px]">
+        <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] mb-[18px]">
           Conversational visual search across images, diagrams, and live web.
         </p>
         <div className="mb-[18px]">
@@ -418,7 +457,7 @@ function DeepResearchCard() {
         <div className="flex items-center gap-[8px] flex-wrap mb-[8px] pr-[28px]">
           <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] sm:text-[20px] text-[#0A0A0A] tracking-tight">Deep Research</span>
         </div>
-        <p className="font-['DM_Sans',sans-serif] text-[13px] sm:text-[14px] leading-[20px] sm:leading-[22px] text-[#57575E] mb-[18px]">
+        <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] mb-[18px]">
           Deep, source-backed research across thousands of web pages and documents.
         </p>
         <div className="flex items-baseline gap-[4px] sm:gap-[6px] mb-[18px] flex-wrap">
@@ -470,7 +509,7 @@ function GroundedGenCard() {
             Early Access
           </span>
         </div>
-        <p className="font-['DM_Sans',sans-serif] text-[13px] sm:text-[14px] leading-[20px] sm:leading-[22px] text-[#57575E] mb-[18px]">
+        <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] mb-[18px]">
           Images and video generated from real-world references found by live web search.
         </p>
         <div className="flex items-baseline gap-[4px] sm:gap-[6px] mb-[18px] flex-wrap">
@@ -532,7 +571,7 @@ function ModelGatewayBox() {
         </div>
       </div>
 
-      <div className="font-['DM_Sans',sans-serif] text-[14px] leading-[22px] text-[#57575E] flex flex-col gap-[2px]">
+      <div className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] flex flex-col gap-[2px]">
         <p className="m-0">
           One API for top-tier LLM and multimodal models, with Octen Search built in &mdash; powering Answer, Deep Research, and Grounded Generation.
         </p>
@@ -674,7 +713,7 @@ function PlanCTable() {
                 <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
               </div>
               <div className="text-[14px] text-[#8B8B8B] leading-[20px]">
-                Full content: $0.5 / 1k results (<span className="text-[#039855] font-semibold">10 free / call</span>)
+                Full content: $0.5 / 1k results (<span className="text-[#039855] font-semibold">10 free results / call</span>)
               </div>
             </div>
 
@@ -704,10 +743,10 @@ function PlanCTable() {
               <div className="flex items-baseline gap-[6px] flex-wrap bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
                 <span className="font-bold text-[18px] text-[#0A0A0A]">$1</span>
                 <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
-                <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
+                <span className="text-[14px] text-[#8B8B8B]">/ 1k sub-queries</span>
               </div>
               <div className="text-[14px] text-[#8B8B8B] leading-[20px]">
-                Full content: $0.5 / 1k results (<span className="text-[#039855] font-semibold">10 free / call</span>)
+                Full content: $0.5 / 1k results (<span className="text-[#039855] font-semibold">10 free results / sub-query</span>)
               </div>
             </div>
 
@@ -924,7 +963,7 @@ function PlanCTable() {
         <div className="bg-white rounded-[16px] border border-[#E2E2DE] overflow-hidden shadow-xs">
           <div className="bg-[#F8F9FA] px-[16px] py-[12px] border-b border-[#E2E2DE] flex items-center justify-between">
             <div className="flex items-center gap-[8px]">
-              <EmbeddingCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
+              <VlEmbeddingCategoryIcon className="w-[18px] h-[18px] text-[#100F09]" />
               <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] text-[#100F09]">VL Embedding</span>
             </div>
             <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] bg-[#FEF3C7] border border-[#FDE68A] text-[#92400E]">
@@ -1191,7 +1230,7 @@ function PlanCTable() {
                   </div>
                 </td>
                 <td className="py-4 px-6 text-[14px] text-[#8B8B8B]">
-                  Full content: $0.5 / 1k results (<span className="text-[#039855] font-semibold">10 free / call</span>)
+                  Full content: $0.5 / 1k results (<span className="text-[#039855] font-semibold">10 free results / call</span>)
                 </td>
                 <td className="py-4 px-6 text-right">
                   <a
@@ -1217,14 +1256,14 @@ function PlanCTable() {
                   <div className="flex items-center gap-1.5 flex-nowrap whitespace-nowrap">
                     <span className="font-bold text-[16px] text-[#0A0A0A]">$1</span>
                     <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
-                    <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
+                    <span className="text-[14px] text-[#8B8B8B]">/ 1k sub-queries</span>
                     <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-bold text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#70FE7E] text-[#100F09] border border-[#70FE7E]">
                       80% Off
                     </span>
                   </div>
                 </td>
                 <td className="py-4 px-6 text-[14px] text-[#8B8B8B]">
-                  Full content: $0.5 / 1k results (<span className="text-[#039855] font-semibold">10 free / call</span>)
+                  Full content: $0.5 / 1k results (<span className="text-[#039855] font-semibold">10 free results / sub-query</span>)
                 </td>
                 <td className="py-4 px-6 text-right">
                   <a
@@ -1466,7 +1505,7 @@ function PlanCTable() {
               <td colSpan={4} className="sticky top-[106px] z-20 py-3 px-6 bg-[#F8F9FA] border-y border-[#E2E2DE]">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
-                    <EmbeddingCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
+                    <VlEmbeddingCategoryIcon className="w-[18px] h-[18px] text-[#100F09]" />
                     <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] text-[#100F09] tracking-tight">
                       VL Embedding
                     </span>
@@ -1898,7 +1937,7 @@ export default function ApiExplorer() {
                 })}
               </div>
 
-              <div className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[21px] text-[#57575E] hidden md:block">
+              <div className="font-['DM_Sans',sans-serif] font-normal text-[12px] leading-[18px] text-[#8B8B8B] hidden md:block">
                 {activeNavItem.subtitle}
               </div>
             </div>
@@ -1959,7 +1998,7 @@ export default function ApiExplorer() {
                   Search
                 </span>
               </div>
-              <span className="font-['DM_Sans',sans-serif] text-[14px] leading-[21px] font-normal text-[#100F09]/80 hidden sm:block text-right">
+              <span className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] font-normal text-[#8B8B8B] hidden sm:block text-right">
                 Real-time retrieval from the live web.
               </span>
             </div>
@@ -1987,7 +2026,7 @@ export default function ApiExplorer() {
                   Extract
                 </span>
               </div>
-              <span className="font-['DM_Sans',sans-serif] text-[14px] leading-[21px] font-normal text-[#100F09]/80 hidden sm:block text-right">
+              <span className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] font-normal text-[#8B8B8B] hidden sm:block text-right">
                 Clean content from any URL.
               </span>
             </div>
@@ -2014,7 +2053,7 @@ export default function ApiExplorer() {
                   Embedding
                 </span>
               </div>
-              <span className="font-['DM_Sans',sans-serif] text-[14px] leading-[21px] font-normal text-[#100F09]/80 hidden sm:block text-right">
+              <span className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] font-normal text-[#8B8B8B] hidden sm:block text-right">
                 Top-ranked embedding models for text and multimodal retrieval.
               </span>
             </div>
@@ -2042,7 +2081,7 @@ export default function ApiExplorer() {
                   Applications
                 </span>
               </div>
-              <span className="font-['DM_Sans',sans-serif] text-[14px] leading-[21px] font-normal text-[#100F09]/80 hidden sm:inline-flex items-center gap-[4px] text-right">
+              <span className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] font-normal text-[#8B8B8B] hidden sm:inline-flex items-center gap-[4px] text-right">
                 <span>Complete workflows built on the APIs above. Billed per outcome via</span>
                 <span className="inline-flex items-center px-[6px] py-[1px] rounded bg-white/90 text-[#100F09] font-medium border border-[#DCDCD6] text-[12px] font-['JetBrains_Mono',monospace]">
                   Search API + Model Gateway
