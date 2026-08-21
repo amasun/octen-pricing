@@ -44,6 +44,20 @@ pnpm build
    - **Plan A**：顶部吸顶分类 Tabs 栏 + 直排 Bento 平铺卡片布局。
    - **Model Tokens 统称拉齐 (Token Naming Unification)**：
      - 在 Plan A 与 Plan B 的 `MultimodalChatCard` 及 `AnswerCard` 中，将原 `Vision tokens` 统一调整为 `Model tokens`，下挂于 `Search calls + model tokens` 总览下，计费说明统一显示为 `Gateway rates`。
+   - **Plan B Applications 分类 Search API + Model Gateway 标签背景透明度调整 (Plan B Badge 0.5 Opacity)**：
+     - 将 Plan B 中 Applications 外壳标题右侧的 `Search API + Model Gateway` 标签背景色从 `bg-white/90` 调整为 **`bg-white/50`**（0.5 半透明磨砂质感），与外壳的弥散渐变背景更加融合自然。
+   - **Plan A / Plan B 卡片辅助文字改为自动高度并收紧下边距 (Card Subtitle Auto Height & Tight Spacing)**：
+     - 移除了 `WebSearchCard` 和 `ImageVideoSearchCard` 原先的 `min-h-[36px]` 固定最小高度，改为纯自然内容自适应高度；
+     - 将 Plan A / Plan B 所有卡片标题下方的辅助文案下边距从 `mb-[18px]` 精细优化为 **`mb-[14px]`**；
+     - 彻底消除了因字号减小后原最小高度造成的上下空旷大间距问题，价格区块与上方副标题视觉联系更紧凑、精致。
+   - **Hero 区域 Pad / 平板端严重错位与文字垂直折叠 Bug 修复 (Hero Section Pad / Tablet Responsive Fix)**：
+     - **Bug 根因分析**：
+       - `HeroSection` 外层容器此前存在硬编码类名 `sm:px-[320px]`，在 Pad / 平板（640px ~ 1024px，如 iPad 768px）宽度下，左右内边距合计占用了 `640px`，导致可用内容区仅剩 100px 左右；
+       - `HeroHeader` 标题区同时存在 `md:px-[156px]`（左右内边距 312px），导致可用排版宽度被完全挤压至负数/零，强制 `Plans and Pricing` 逐字折行为 6 行（`S \n an \n d \n Pr \n ici \n ng`）并纵向顶起覆盖了顶部导航栏。
+     - **修复方案**：
+       - 移除 `HeroSection` 的硬编码 `sm:px-[320px]`，替换为自适应响应式内边距 `px-4 sm:px-6 md:px-8`，设置合理的 `pt-[84px] pb-[44px]` 与 `min-h-[440px] sm:min-h-[480px]` 呼吸间距，彻底杜绝与吸顶 Navbar 碰撞；
+       - 移除 `HeroHeader` 的 `md:px-[156px]`，标题字号调整为阶梯式自适应 `text-[32px] sm:text-[44px] md:text-[56px] lg:text-[60px] leading-tight`，副标题最大宽度设为 `max-w-[720px]`；
+       - 优化 Navbar 内部链接间距在 `md`（平板）断点下的 `gap`（`gap-[20px] md:gap-[28px] lg:gap-[48px]`），确保 Pad 端全屏无任何重叠、无水平溢出、标题单行优美排版。
    - **Plan B 4 大分类右侧辅助文字规范调整 (Plan B Category Subtitle Typography)**：
      - 将 Plan B 中 4 大外壳分类（Search、Extract、Embedding、Applications）右侧的辅助说明文字字号设置为 **`14px`**（`text-[14px] leading-[21px]`），颜色设置为 **`rgb(87, 87, 94)`**（`#57575E`）。
    - **Plan B Search 外壳大卡片 Hover Border 颜色调整 (Plan B Search Outer Shell Hover Border)**：

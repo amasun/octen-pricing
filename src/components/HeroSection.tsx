@@ -7,16 +7,16 @@ import imgDither1 from "../../imports/64635f1bb002f492bde3cdcba5e5dadaf111f260.p
 
 function HeroHeader() {
   return (
-    <div className="content-stretch flex flex-col gap-[14px] sm:gap-[18px] items-center py-0 px-4 md:px-[156px] relative shrink-0 w-full max-w-[1000px]">
-      <h1 className="[word-break:break-word] bg-clip-text font-['Fraunces',serif] font-normal leading-none py-[6px] w-full text-center relative shrink-0 text-[32px] sm:text-[48px] md:text-[60px] text-[transparent]" style={{ fontVariationSettings: '"SOFT" 0, "WONK" 1', backgroundImage: "linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%), linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(136, 136, 136) 27.404%, rgb(0, 0, 0) 50.962%)" }}>
+    <div className="content-stretch flex flex-col gap-[14px] sm:gap-[18px] items-center py-0 px-4 relative shrink-0 w-full max-w-[900px]">
+      <h1 className="bg-clip-text font-['Fraunces',serif] font-normal leading-tight py-[6px] w-full text-center relative shrink-0 text-[32px] sm:text-[44px] md:text-[56px] lg:text-[60px] text-[transparent]" style={{ fontVariationSettings: '"SOFT" 0, "WONK" 1', backgroundImage: "linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%), linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(136, 136, 136) 27.404%, rgb(0, 0, 0) 50.962%)" }}>
         Plans and Pricing
       </h1>
       {/* Subtitle Group Frame 13350:3131 matching 1:1 Figma spec (gap-[10px]) */}
-      <div className="flex flex-col items-center gap-[10px] w-full">
-        <p className="font-['DM_Sans',sans-serif] font-normal text-[16px] sm:text-[18px] leading-[1.2] relative shrink-0 text-center text-white/90 whitespace-normal sm:whitespace-nowrap px-0 m-0">
+      <div className="flex flex-col items-center gap-[10px] w-full max-w-[720px]">
+        <p className="font-['DM_Sans',sans-serif] font-normal text-[15px] sm:text-[17px] md:text-[18px] leading-[1.3] relative shrink-0 text-center text-white/90 whitespace-normal px-2 m-0">
           Usage-based pricing for the search infrastructure behind your agents.
         </p>
-        <p className="font-['DM_Sans',sans-serif] font-normal text-[16px] leading-[1.2] text-white text-center m-0 select-text">
+        <p className="font-['DM_Sans',sans-serif] font-normal text-[15px] sm:text-[16px] leading-[1.3] text-white text-center m-0 select-text">
           Sign up and get <span className="font-bold text-[#70FE7E]">$5 in free balance</span>.
         </p>
       </div>
@@ -568,7 +568,7 @@ function HowOctenWorksSection() {
       </div>
 
       {/* Entry Cards Container (Pay as you go on LEFT, QPS Plan on RIGHT) */}
-      <div className="content-stretch flex flex-col md:flex-row gap-[10px] md:gap-[34px] items-center justify-center relative shrink-0 w-full md:w-[960px] max-w-full">
+      <div className="content-stretch flex flex-col md:flex-row gap-[10px] md:gap-[34px] items-center justify-center relative shrink-0 w-full max-w-[960px]">
         <PayAsYouGoCard />
         <PlusSeparator />
         <QpsPlanCard />
@@ -581,7 +581,7 @@ export default function HeroSection() {
   return (
     <>
       <div 
-        className="content-stretch flex flex-col items-center justify-center h-[460px] min-h-[460px] px-4 sm:px-[320px] relative w-full overflow-hidden isolate bg-[#080B12]"
+        className="content-stretch flex flex-col items-center justify-center min-h-[440px] sm:min-h-[480px] pt-[84px] pb-[44px] px-4 sm:px-6 md:px-8 relative w-full overflow-hidden isolate bg-[#080B12]"
         style={{
           background: "linear-gradient(180deg, rgba(17, 70, 43, 0.6) 0%, rgba(8, 11, 18, 0) 100%), #080B12"
         }}

@@ -164,7 +164,7 @@ function WebSearchCard({ plan = "planA" }: { plan?: "planA" | "planB" }) {
             80% Off
           </span>
         </div>
-        <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] mb-[18px] min-h-[36px]">
+        <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] mb-[14px]">
           LLM-native web search. Ranked results with relevant highlights, and optional full content.
         </p>
         <div className="flex items-baseline gap-[6px] sm:gap-[8px] mb-[18px] flex-wrap">
@@ -212,7 +212,7 @@ function ImageVideoSearchCard({ plan = "planA" }: { plan?: "planA" | "planB" }) 
             Early Access
           </span>
         </div>
-        <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] mb-[18px] min-h-[36px]">
+        <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] mb-[14px]">
           Beyond text queries &mdash; images and videos retrieved from the live web.
         </p>
         <div className="flex items-baseline gap-[6px] sm:gap-[8px] mb-[18px] flex-wrap">
@@ -283,7 +283,7 @@ function EmbeddingCard() {
             SOTA on RTEB
           </span>
         </div>
-        <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] mb-[18px]">
+        <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] mb-[14px]">
           Turn text into vectors for semantic search, RAG, and recommendations.
         </p>
         <div className="flex items-baseline gap-[4px] sm:gap-[6px] mb-[18px] flex-wrap">
@@ -335,7 +335,7 @@ function VlEmbeddingCard() {
             SOTA on MMEB-v2
           </span>
         </div>
-        <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] mb-[18px]">
+        <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] mb-[14px]">
           One embedding space across text, images, videos, and visual documents.
         </p>
         <div className="flex items-baseline gap-[4px] sm:gap-[6px] mb-[18px] flex-wrap">
@@ -374,7 +374,7 @@ function AnswerCard() {
         <div className="flex items-center gap-[6px] mb-[8px] pr-[24px]">
           <span className="font-['DM_Sans',sans-serif] font-bold text-[17px] sm:text-[18px] text-[#0A0A0A] tracking-tight whitespace-nowrap">Answer</span>
         </div>
-        <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] mb-[18px]">
+        <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] mb-[14px]">
           Grounded answers with citations, assembled from dozens of sub-queries.
         </p>
         <div className="mb-[18px]">
@@ -419,7 +419,7 @@ function MultimodalChatCard() {
             Early Access
           </span>
         </div>
-        <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] mb-[18px]">
+        <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] mb-[14px]">
           Conversational visual search across images, diagrams, and live web.
         </p>
         <div className="mb-[18px]">
@@ -459,7 +459,7 @@ function DeepResearchCard() {
         <div className="flex items-center gap-[6px] mb-[8px] pr-[24px]">
           <span className="font-['DM_Sans',sans-serif] font-bold text-[17px] sm:text-[18px] text-[#0A0A0A] tracking-tight whitespace-nowrap">Deep Research</span>
         </div>
-        <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] mb-[18px]">
+        <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] mb-[14px]">
           Deep, source-backed research across thousands of web pages and documents.
         </p>
         <div className="flex items-baseline gap-[4px] sm:gap-[6px] mb-[18px] flex-wrap">
@@ -513,7 +513,7 @@ function GroundedGenCard() {
             Early Access
           </span>
         </div>
-        <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] mb-[18px]">
+        <p className="font-['DM_Sans',sans-serif] text-[12px] leading-[18px] text-[#8B8B8B] mb-[14px]">
           Images and video generated from real-world references found by live web search.
         </p>
         <div className="flex items-baseline gap-[4px] sm:gap-[6px] mb-[18px] flex-wrap">
@@ -2087,7 +2087,7 @@ export default function ApiExplorer() {
               </div>
               <span className="font-['DM_Sans',sans-serif] text-[14px] leading-[21px] font-normal text-[#57575E] hidden sm:inline-flex items-center gap-[4px] text-right">
                 <span>Complete workflows built on the APIs above. Billed per outcome via</span>
-                <span className="inline-flex items-center px-[6px] py-[1px] rounded bg-white/90 text-[#100F09] font-medium border border-[#DCDCD6] text-[12px] font-['JetBrains_Mono',monospace]">
+                <span className="inline-flex items-center px-[6px] py-[1px] rounded bg-white/50 text-[#100F09] font-medium border border-[#DCDCD6] text-[12px] font-['JetBrains_Mono',monospace]">
                   Search API + Model Gateway
                 </span>
                 <span>.</span>

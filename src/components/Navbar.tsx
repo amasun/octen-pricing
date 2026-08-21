@@ -48,7 +48,7 @@ function Navigation({ isDarkTheme }: { isDarkTheme: boolean }) {
   return (
     <nav aria-label="Main" className="relative z-10 hidden md:flex w-full justify-center">
       <div>
-        <ul className="flex items-center gap-[40px] lg:gap-[56px] p-1">
+        <ul className="flex items-center gap-[20px] md:gap-[28px] lg:gap-[48px] xl:gap-[56px] p-1">
           <li>
             <a 
               href="#qps-plans"
