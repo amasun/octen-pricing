@@ -54,6 +54,9 @@ pnpm build
    - **QPS Plan 卡片价格 $ 符号顶对齐与 / month 原始样式保留 (QPS Plan Price Alignment & Period Style)**：
      - 在 QPS Plan 卡片价格展示区，通过 `self-start` 将 `$` 美元符号与大号价格数字的顶部精准对齐；
      - 同时完全保留了大号数字的行高基准与 `/ month` 周期文案的原有字号、行高（`text-[14px] leading-[20px] text-[#57575E]`）及底部基线对齐位置，确保整体排版稳定不跳动。
+   - **QPS Plan 卡片行动按钮文案统一为 `Get started` (QPS Plan Cards Button Label)**：
+     - 将 **Startup**、**Pro**、**Scale** 卡片底部的行动按钮文案由 `Subscribe` 统一修改为 **`Get started`**；
+     - 保持 **Free** 卡片的 `Start Free` 与 **Enterprise** 卡片的 `Contact Sales` 不变。
    - **How Octen Works 卡片原生 HTML 锚点定位优化 (How Octen Works Native Anchor Fix)**：
      - 将卡片主体改为原生 HTML `<a href="#pay-as-you-go">` 和 `<a href="#qps-plans">` 超链接标签，彻底摒弃 JS 滚动状态单次锁死的缺陷；
      - 目标容器统一配置 `scroll-mt-[90px]`，配合全局 `scroll-behavior: smooth`，无论是首次点击还是反复多次点击，均能 100% 稳定平滑滚动定位到准确视图位置；

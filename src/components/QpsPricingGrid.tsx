@@ -294,7 +294,7 @@ export default function QpsPricingGrid() {
         { text: "Guaranteed throughput and SLA", icon: "flash" },
         { text: "Standard email support", icon: "check" }
       ],
-      buttonText: "Subscribe"
+      buttonText: "Get started"
     },
     {
       title: "Pro",
@@ -306,7 +306,7 @@ export default function QpsPricingGrid() {
         { text: "Guaranteed throughput and SLA", icon: "flash" },
         { text: "Standard email support", icon: "check" }
       ],
-      buttonText: "Subscribe"
+      buttonText: "Get started"
     },
     {
       title: "Scale",
@@ -318,7 +318,7 @@ export default function QpsPricingGrid() {
         { text: "Guaranteed throughput and SLA", icon: "flash" },
         { text: "Standard email support", icon: "check" }
       ],
-      buttonText: "Subscribe"
+      buttonText: "Get started"
     },
     {
       title: "Enterprise",
