@@ -235,8 +235,8 @@ function EnterpriseCard({ plan }: { plan: { title: string; subtitle: string; pri
         </div>
       </div>
 
-      {/* Center: Features Grid (Column-first flow: 3 in Col 1, 2 in Col 2) */}
-      <ul className="relative z-10 grid grid-cols-1 sm:grid-flow-col sm:grid-rows-3 sm:grid-cols-2 gap-x-8 gap-y-3 list-none p-0 m-0 flex-1 max-w-[600px]">
+      {/* Center: Features Grid (Column-first flow: 2 in Col 1, 2 in Col 2) */}
+      <ul className="relative z-10 grid grid-cols-1 sm:grid-flow-col sm:grid-rows-2 sm:grid-cols-2 gap-x-8 gap-y-3 list-none p-0 m-0 flex-1 max-w-[600px]">
         {plan.features.map((feat, i) => (
           <li key={i} className="flex items-center gap-2.5 text-[14px] font-['DM_Sans',sans-serif] text-[#100F09]">
             <FeatureIcon type={feat.icon} color="#039855" />
@@ -328,9 +328,7 @@ export default function QpsPricingGrid() {
       features: [
         { text: <><strong className="font-bold">1M+ QPS</strong></>, icon: "branch" },
         { text: "Zero Data Retention (ZDR)", icon: "zdr" },
-        { text: "SOC 2 Type 2", icon: "contract" },
         { text: "Dedicated Slack channel support", icon: "slack" },
-        { text: "Guaranteed throughput and SLA", icon: "flash" },
         { text: "Volume discounts", icon: "chart" }
       ],
       buttonText: "Contact Sales",

@@ -1513,9 +1513,9 @@ function PlanCTable() {
                 </td>
               </tr>
 
-            {/* === CATEGORY SECTION 4: VL EMBEDDING (Full-width Sticky Row) === */}
-            <tr className="bg-[#F8F9FA] select-none">
-              <td colSpan={4} className="sticky top-[106px] z-20 py-3 px-6 bg-[#F8F9FA] border-y border-[#E2E2DE]">
+            {/* === CATEGORY SECTION 4: VL EMBEDDING - Layer 2 (Gray #F8F8F5) === */}
+            <tr className="bg-[#F8F8F5] select-none">
+              <td colSpan={4} className="sticky top-[106px] z-20 py-3 px-6 bg-[#F8F8F5] border-y border-[#E2E2DE]">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
                     <VlEmbeddingCategoryIcon className="w-[18px] h-[18px] text-[#100F09]" />
