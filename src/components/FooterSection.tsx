@@ -207,10 +207,11 @@ export default function FooterSection() {
             <div className="flex flex-col gap-[16px] items-start font-['DM_Sans',sans-serif]">
               <h3 className="text-[#71717a] text-[14px] uppercase tracking-wider font-normal">Developers</h3>
               <ul className="flex flex-col gap-[18px] text-[16px] text-white/80 font-normal">
-                <li><a href="https://status.octen.ai" target="_blank" rel="noopener noreferrer" className="inline-block hover:text-white transition-all duration-200 ease-out hover:translate-x-1">Status</a></li>
-                <li><a href="https://github.com/octen-ai" target="_blank" rel="noopener noreferrer" className="inline-block hover:text-white transition-all duration-200 ease-out hover:translate-x-1">GitHub</a></li>
                 <li><a href="https://platform.octen.ai" target="_blank" rel="noopener noreferrer" className="inline-block hover:text-white transition-all duration-200 ease-out hover:translate-x-1">API Platform</a></li>
                 <li><a href="https://docs.octen.ai" target="_blank" rel="noopener noreferrer" className="inline-block hover:text-white transition-all duration-200 ease-out hover:translate-x-1">Docs</a></li>
+                <li><a href="#pay-as-you-go" className="inline-block hover:text-white transition-all duration-200 ease-out hover:translate-x-1">Pricing</a></li>
+                <li><a href="https://status.octen.ai" target="_blank" rel="noopener noreferrer" className="inline-block hover:text-white transition-all duration-200 ease-out hover:translate-x-1">Status</a></li>
+                <li><a href="https://github.com/octen-ai" target="_blank" rel="noopener noreferrer" className="inline-block hover:text-white transition-all duration-200 ease-out hover:translate-x-1">GitHub</a></li>
               </ul>
             </div>
 

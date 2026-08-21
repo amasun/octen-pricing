@@ -71,7 +71,8 @@ function ContractIcon({ color = "#039855" }: { color?: string }) {
   );
 }
 
-function FeatureIcon({ type, color }: { type: "branch" | "check" | "flash" | "zdr" | "slack" | "chart" | "contract"; color?: string }) {
+function FeatureIcon({ type, color }: { type?: "branch" | "check" | "flash" | "zdr" | "slack" | "chart" | "contract" | "none"; color?: string }) {
+  if (!type || type === "none") return null;
   if (type === "branch") return <BranchIcon color={color} />;
   if (type === "flash") return <FlashIcon color={color} />;
   if (type === "zdr") return <ZdrIcon color={color} />;
@@ -83,7 +84,7 @@ function FeatureIcon({ type, color }: { type: "branch" | "check" | "flash" | "zd
 
 interface FeatureItem {
   text: React.ReactNode;
-  icon: "branch" | "check" | "flash" | "zdr" | "slack" | "chart" | "contract";
+  icon?: "branch" | "check" | "flash" | "zdr" | "slack" | "chart" | "contract" | "none";
 }
 
 function PlanCardItem({
@@ -175,9 +176,9 @@ function PlanCardItem({
           {/* List (116px height, 12px gap per Figma spec) */}
           <ul className="h-auto sm:h-[116px] flex flex-col gap-[12px] list-none p-0 m-0 w-full">
             {features.map((feat, i) => (
-              <li key={i} className="flex items-center gap-[4px] text-[14px] font-['DM_Sans',sans-serif] font-normal leading-[140%] text-[#100F09]">
+              <li key={i} className="flex items-start gap-[4px] text-[14px] font-['DM_Sans',sans-serif] font-normal leading-[140%] text-[#100F09]">
                 <FeatureIcon type={feat.icon} />
-                <span className="flex-1 ml-1">{feat.text}</span>
+                <span className={`flex-1 ${feat.icon && feat.icon !== "none" ? "ml-1" : ""}`}>{feat.text}</span>
               </li>
             ))}
           </ul>
@@ -276,7 +277,7 @@ export default function QpsPricingGrid() {
       price: "0",
       features: [
         { text: <>Up to <strong className="font-bold">20 QPS</strong> Limit</>, icon: "branch" },
-        { text: "Starts at 10 QPS. Auto-unlocks when adding credits", icon: "check" }
+        { text: "Starts at 10 QPS. Add credits to unlock Base (up to 20 QPS)", icon: "none" }
       ],
       buttonText: "Start Free"
     },
@@ -363,22 +364,22 @@ export default function QpsPricingGrid() {
           <EnterpriseCard plan={plans[4]} />
         </div>
 
-        {/* Row 3: Merged Single Information Card matching exact Figma spec */}
+        {/* Row 3: Merged Single Information Card matching exact updated copy */}
         <div className="w-full p-[20px] bg-[#F6F6F3] rounded-[16px] border border-[#E7E7E3] flex flex-col gap-[8px] font-['DM_Sans',sans-serif] box-border">
           {/* Top Row: Info Icon + Title */}
-          <div className="flex flex-row items-center gap-[4px] w-full">
+          <div className="flex flex-row items-center gap-[6px] w-full">
             <svg className="size-[16px] shrink-0" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M7.99995 10.6671V8.00039M7.99995 5.33372H8.00661M2.56661 5.74706C2.46931 5.30874 2.48425 4.85295 2.61005 4.42195C2.73585 3.99095 2.96844 3.59869 3.28626 3.28154C3.60407 2.96439 3.99682 2.73262 4.42808 2.60772C4.85935 2.48282 5.31517 2.46883 5.75328 2.56706C5.99442 2.18992 6.32661 1.87956 6.71925 1.66458C7.11188 1.4496 7.55231 1.33691 7.99995 1.33691C8.44758 1.33691 8.88801 1.4496 9.28064 1.66458C9.67328 1.87956 10.0055 2.18992 10.2466 2.56706C10.6854 2.46841 11.142 2.48233 11.5739 2.60753C12.0059 2.73274 12.3992 2.96515 12.7172 3.28316C13.0352 3.60117 13.2676 3.99444 13.3928 4.42639C13.518 4.85834 13.5319 5.31495 13.4333 5.75372C13.8104 5.99486 14.1208 6.32706 14.3358 6.71969C14.5507 7.11232 14.6634 7.55276 14.6634 8.00039C14.6634 8.44803 14.5507 8.88846 14.3358 9.28109C14.1208 9.67372 13.8104 10.0059 13.4333 10.2471C13.5315 10.6852 13.5175 11.141 13.3926 11.5723C13.2677 12.0035 13.0359 12.3963 12.7188 12.7141C12.4016 13.0319 12.0094 13.2645 11.5784 13.3903C11.1474 13.5161 10.6916 13.531 10.2533 13.4337C10.0125 13.8123 9.68 14.124 9.2867 14.3399C8.89339 14.5559 8.45196 14.6691 8.00328 14.6691C7.55459 14.6691 7.11316 14.5559 6.71986 14.3399C6.32656 14.124 5.9941 13.8123 5.75328 13.4337C5.31517 13.5319 4.85935 13.518 4.42808 13.3931C3.99682 13.2682 3.60407 13.0364 3.28626 12.7192C2.96844 12.4021 2.73585 12.0098 2.61005 11.5788C2.48425 11.1478 2.46931 10.692 2.56661 10.2537C2.18658 10.0132 1.87355 9.68051 1.65664 9.28653C1.43973 8.89256 1.32599 8.45013 1.32599 8.00039C1.32599 7.55065 1.43973 7.10822 1.65664 6.71425C1.87355 6.32028 2.18658 5.98756 2.56661 5.74706Z" stroke="#039855" strokeWidth="1.33333" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-            <div className="text-[14px] leading-[21px] font-semibold text-[#0A0A0A]">
-              All paid plans include <span className="font-normal text-[#57575E]">a dedicated priority queue for search, guaranteed throughput and SLA, and email support.</span>
+            <div className="text-[14px] leading-[21px] font-normal text-[#100F09]">
+              Applies to <strong className="font-semibold text-[#0A0A0A]">Broad Search</strong> and <strong className="font-semibold text-[#0A0A0A]">Web Search</strong>.
             </div>
           </div>
 
-          {/* Bottom Row (Frame 427319262 with 20px left padding) */}
-          <div className="pl-[20px] w-full">
+          {/* Bottom Row */}
+          <div className="pl-[22px] w-full">
             <p className="text-[14px] leading-[23px] text-[#57575E] m-0">
-              Extract, Embedding, Model Gateway, and Deep Research have their own rate limits, which a QPS Plan does not change — see{" "}
+              Extract, Embedding, Deep Research, and other APIs have their own rate limits, which a QPS Plan does not change &mdash; see{" "}
               <a href="https://docs.octen.ai/resources/rate-limits" target="_blank" rel="noopener noreferrer" className="text-[#039855] font-medium underline hover:text-[#027a44] transition-colors duration-150">
                 rate limits
               </a>
@@ -386,11 +387,6 @@ export default function QpsPricingGrid() {
             </p>
           </div>
         </div>
-
-        {/* Launch Pricing Disclaimer Note at bottom of QPS Plan section (reduced distance by half) */}
-        <p className="font-['DM_Sans',sans-serif] font-normal text-[13px] sm:text-[14px] text-[#57575E] text-center sm:text-right m-0 -mt-[8px] pt-0 w-full">
-          * Launch pricing &mdash; discounted rates, subject to change
-        </p>
 
       </div>
     </div>

@@ -39,6 +39,99 @@ pnpm build
    - Image & Video Search 卡片统一配置为绿底黑字/绿字高亮徽章（字间距 `tracking-tighter`）。
 3. **响应式与排版优化**：
    - 优化了卡片在窄屏/移动端下的文本自动折行与对齐规范。
+4. **Pay-As-You-Go 方案对比与三套架构 (Plan A vs Plan B vs Plan C)**：
+   - 页面左侧内容区外提供全英文、极简垂直列表悬浮对比控件（Layout: Plan A / Plan B / Plan C）。
+   - **Plan A**：顶部吸顶分类 Tabs 栏 + 直排 Bento 平铺卡片布局。
+   - **Web Search 卡片 `80% Off` 徽章置于标题行 (Web Search 80% Off Badge Alignment)**：
+     - 将 **`80% Off`** 绿色高亮折扣药丸从原先的价格行移动至顶部 **`Web Search` 主标题后方**；
+     - 与 `Multimodal Chat` 和 `Grounded Gen` 标题后的 `Early Access` 标签规范完全拉齐，同时使价格行（`$1 $5 / 1k calls`）纯粹聚焦于数值呈现与底对齐排版。
+   - **Web Search 卡片价格行严格底对齐对齐 (Web Search Price Row Baseline Alignment)**：
+     - 将 Web Search 价格容器的对齐方式从 `items-center` 修正为与全站其他卡片完全一致的 **`items-baseline`（基线底对齐）**；
+     - 确保主要价格 `$1`、原价划线 `$5` 以及单位 `/ 1k calls` 底部严格水平对齐，`80% Off` 折扣标签保持适中垂直居中（`self-center`），彻底消除小字悬浮居中带来的视觉错位。
+   - **Answer 与 Multimodal Chat 卡片底层费率明细拆解升级 (Answer & Multimodal Chat Specific Rate Breakdown)**：
+     - **去除重复语义与文字截断**：将原来卡片底部重复笼统的 `Broad Search + LLM` / `Multimodal Search + LLM` 重构为结构清晰的**底层单价计费拆解项**，彻底消除词汇冗余与 `Multimodal Ch...` 标题截断问题：
+       - **Answer 卡片底部**：
+         - `Broad Search` ➔ `$1 / 1k calls`
+         - `Model tokens` ➔ `Gateway rates`
+       - **Multimodal Chat 卡片底部**：
+         - `Visual Search` ➔ `$5 / 1k calls`
+         - `Vision tokens` ➔ `Gateway rates`
+     - 采用与全站完全一致的微圆角参数标签样式（`bg-[#F6F6F3] border-[#E7E7E3]`），使卡片在 4 列排版下极度清爽、信息量充足且排版规整。
+   - **Applications 大类综合计费说明与标签升级 (Applications Comprehensive Billing Subtitle & Tag Pill - Option A)**：
+     - 在 **Plan A 顶部吸顶 Tabs 辅助描述** 与 **Plan B Applications 外壳标题栏** 中全面更新文案为最优的 **方案 A**：
+       `Complete workflows built on the APIs above. Billed per outcome via [Search + LLMs].`
+     - 其中 `Search + LLMs` 采用精致的等宽字体内嵌微圆角标签药丸（Badge Pill）呈现，全句语法连贯自然、语义毫无冲突。
+   - **Plan A / Plan B 卡片 Hover 边框精细化解耦系统 (Plan A Unified vs. Plan B Contextual Borders)**：
+     - **Plan A（极简平铺 Bento）**：全部 9 张卡片保持 **100% 绝对统一的温润中灰 Hover 描边（`hover:border-[#B5B5B0]`）**，确保整页色调平衡和谐，毫无杂色突兀感；
+     - **Plan B（4 大流光外壳）**：卡片与外壳主题流光精准呼应，其中 **Search 分类卡片在 Plan B 中采用专属的 `color-mix(in oklab, #4CAF50 70%, transparent)`（`hover:border-[#4CAF50]/70`）**，与外壳翡翠光晕浑然一体；
+     - **右上角外链指示微圆钮（Hover-only & 12px 边距）**：全部卡片统一采用 `absolute top-[12px] right-[12px]`，保持与卡片右上角边框 **12px 绝对间距**，Hover 时丝滑淡入曜石黑圆底 + 白色小箭头 `↗`（`group-hover:opacity-100`）；
+   - **Model Gateway 模块静态化纯粹呈现 (Model Gateway Static Info Display)**：
+     - 彻底移除了 `Model Gateway` 横幅容器的 `hover:border-[#B5B5B0]` 动效，使其作为全静态的费率与 15% 返利信息公告栏纯粹展示，仅保留内部绿色超链接的 Hover 交互。
+   - **Plan A / B / C 4 大分类标题统一内嵌 Figma 原生业务图标 (Figma Node 13418:141867 Exact Vector Icons)**：
+     - 已精准对齐 Figma 原生 4 个分类图标源码（包含 100% 贴合官方的 `tabler:world-search` 地球经纬网 + 放大镜双 path 结构），并在 Plan A（置顶吸顶药丸 Tabs）、Plan B（各分类外壳标题栏）、Plan C（全景表格分类分割吸顶行）中全局统一呈现：
+       1. **Search (搜索)**：`SearchCategoryIcon`（Figma `tabler:world-search` 原生 28×28 地球经纬网 + 放大镜搜索矢量组合）；
+       2. **Extract (提取)**：`ExtractCategoryIcon`（Figma `tabler:grid-dots` 6 节点复合矩阵连线抽取矢量图标）；
+       3. **Embedding (向量化)**：`EmbeddingCategoryIcon`（Figma `embedding` 3 轴 6 晶体节点高维向量空间星群矢量图标）；
+       4. **Applications (应用智能体)**：`ApplicationsCategoryIcon`（Figma `application` 复合几何智能工作流矩阵：星芒、圆形、三角与圆角矩形）；
+   - **Plan B 4 大分类外壳容器静止与悬浮动态流光系统 (Plan B Uniform Gray Resting + Hover-Activated Duotone Mesh Gradients)**：
+     - **常态（Resting State）**：4 大分类外壳容器统一采用低调纯净的原生灰色背景（`bg-[#F4F4F4]`）与微投影（`shadow-[0_2px_12px_rgba(0,0,0,0.02)]`），整体界面视觉统一、收敛且毫无色块干扰；
+     - **悬浮（Hover State 无多余大投影）**：彻底移除了外层容器的重阴影扩散（`hover:shadow-[0_8px_30px_...]`），仅保留丝滑淡入的内部双色相流光（`ShellHoverGlow`）与彩色主题微边框，整体视觉极其清爽利落、纯净高端：
+       1. **Search 外壳**：`Emerald Neon ➔ Aqua Teal` 翡翠荧光绿 ➔ 春天薄荷水绿（`#70FE7E` ➔ `#2DD4BF`）；
+       2. **Extract 外壳**：`Electric Cyan ➔ Royal Indigo` 电光青蓝 ➔ 皇家靓蓝紫（`#38BDF8` ➔ `#818CF8`）；
+       3. **Embedding 外壳**：`Cosmic Purple ➔ Rose Magenta` 宇宙紫 ➔ 落日洋红玫瑰（`#C084FC` ➔ `#FB7185`）；
+       4. **Applications 外壳**：`Amber Gold ➔ Tangerine Coral` 耀金琥珀 ➔ 暖阳落日橙红（`#FBBF24` ➔ `#EA580C`）；
+   - **Plan C**：源数据 100% 对齐 `pricing.md` 的**全景统一大表格（Unified Rate Matrix Table）**：
+     - **Plan C 纯净无重复置顶表头体系 (Clean Non-repeating Sticky Table & Category Headers)**：
+       - **智能动态圆角吸顶机制 (Adaptive Smart Rounded Sticky Header)**：
+         - **未吸顶静止状态（At Rest）**：表头首行左右单元格呈现精致的 `rounded-tl-[16px] sm:rounded-tl-[20px]` 与 `rounded-tr-[16px] sm:rounded-tr-[20px]`，与表格外层容器圆角 100% 严密贴合呈现完整圆角形态；
+         - **吸顶置顶状态（Sticky Pinned）**：页面向下滚动、表头吸附于 `top-[58px]` 时，表头自动平滑过渡为平直直角贯通形态（`rounded-tl-none rounded-tr-none`），左右两侧无任何多余缺口，浑然一体；
+       - **主表头与分类子表头背景色层级区分 (Differentiated Background Colors)**：
+         - **主列标题吸顶行**（`thead th`）：采用浅色清爽灰底 `bg-[#F8F8F5]`，`z-30`，固定呈现 `Endpoint / Model` 等 5 列字段定义；
+         - **业务分类通栏行**（`Search`、`Extract`、`Embedding`、`VL Embedding`、`Applications`）：采用纯色实底 `bg-[#F8F9FA]`，`z-20`。该颜色由 `#edeff05e` 在白底（#FFFFFF）上严格按照 Alpha 合成公式精确折算（$237 \times 0.37 + 255 \times 0.63 = 248$），**白底下视觉呈现 100% 完全一致**，同时为 100% 不透明实底，彻底杜绝滚动吸顶时文字透出的问题；
+         - **数据行**：纯白底色 `bg-white` + 悬浮高亮 `hover:bg-[#F8F8F5]`；三层背景清晰区分，层次分明；
+       - **视觉效果**：
+         - 处于顶部时，清晰呈现 `主表头` ➔ `Search 行` ➔ `数据行`（**无任何重复**）；
+         - 随着向下滚动，`Search` 吸附在主表头下方，滚动到 `Extract` 时平滑自然顶替吸附，当前所属区域与列字段一目了然！
+       - **零阴影纯净风格**：去除所有阴影，以清晰的 `border-b border-[#E2E2DE]` 实现极致现代化设计；
+     - **全案标准化徽章规范（跨 Plan A / Plan B / Plan C 100% 统一对齐）**：
+       - **Applications 板块拆分为 4 个独立项目**：`Answer`、`Multimodal Chat`（带 `Early Access` 徽章）、`Deep Research`、`Grounded Generation`（带 `Early Access` 徽章），在 Plan A/B 卡片流（4列响应式网格）和 Plan C 大表格（4行明细）中均已统一对齐呈现；
+     - **全表格与卡片统一状态徽章盒模型 (Unified Badge Layout & Box Model)**：
+       - 所有状态徽章（`Early Access`、`80% Off`、`Best Accuracy`、`Ultra Fast`、`SOTA on RTEB`、`SOTA on MMEB-v2`、`15% Rebate Back`）的**整体高度统一为 `20px`**，水平内边距统一为 **`px-[6px]`**（6px），圆角统一为 `rounded`，行高统一为 `leading-none`，采用 `inline-flex items-center justify-center box-border`；
+       - 所有徽章文字统一为 `font-['JetBrains_Mono',monospace] text-[11px] tracking-tight shrink-0`；
+       - **各徽章精准配色体系**：
+         - `80% Off`：`bg-[#70FE7E] text-[#100F09] border border-[#70FE7E]`
+         - `Early Access`：`bg-[#E3FFE2] border border-[#6FD1A5] text-[#1B9C62]`
+         - `SOTA 评测徽章`（`SOTA on RTEB`、`SOTA on MMEB-v2`）：`bg-[#FEF3C7] border border-[#FDE68A] text-[#92400E]`
+         - `Best Accuracy`：`bg-[#FFF7ED] border border-[#ffc29f] text-[#C2410C]`
+         - `Ultra Fast`：`bg-[#FAF5FF] border border-[#d9bafb] text-[#6B21A8]`
+       - **VL Embedding 规则**：仅保留 `SOTA on MMEB-v2` 琥珀黄评测徽章，无 `Early Access` 标签；
+       - **Applications 规则**：仅 `Grounded Generation` 保留 `Early Access` 标签；
+       - **标题栏视觉净化**：全面移除了所有数量胶囊徽章（`4 APIs`、`2 APIs`、`1 API`、`3 Models`、`2 Models`、`3 Endpoints`），视觉更加呼吸与现代化；
+       - 调用量指标（`1 call / request`、`Per 1M tokens` 等）及模型名称（`octen-embedding-8b` 等）**100% 统一定义为 `JetBrains Mono` 等宽字体**；
+       - 所有服务标题（`Web Search API` 等）、表头、描述文本、定价与操作按钮**统一定义为 `DM Sans` 字体**；
+     - **表头优化**：去除了最右侧操作列的可见 `Action` 表头文字（保留列对齐与无障碍结构），使表头更加极简呼吸；
+     - 统一标准化表头：`Endpoint / Model`、`Category`、`Billing Metric`、`Unit Price (USD)`、`Details & Free Tier`；
+     - 严格横纵列对齐，分类行间隔（Search、Extract、Embedding、Applications、Model Gateway）；
+     - 集成折扣标签（`80% Off`）、免费额度高亮（`10 free results / call`）、状态标签（`Early Access`）与快速接入按钮。
+5. **最新文案与结构对齐（2026-08-21）**：
+   - **Full Content 免费额度规范统一为 `10 free / call` (Standardized to `10 free / call`)**：
+     - `Web Search API`：`Full content: $0.5 / 1k results (10 free / call)`（绿色高亮 `10 free / call`）；
+     - `Broad Search API`：`Full content: $0.5 / 1k results (10 free / call)`（绿色高亮 `10 free / call`）；
+     - `WebSearchCard (Plan A/B)`：`$0.5 / 1k results (10 free / call)`（绿色高亮 `10 free / call`）；
+     - 含义统一指代：每次检索调用返回的**前 10 条搜索结果全文免费（First 10 search results full content free / call）**；
+   - **Model Gateway 间距规范统一为 12px (Standardized 12px Top Spacing)**：
+     - 在 **Plan A**（平铺卡片）、**Plan B**（Figma 外壳）与 **Plan C**（统一大表格）三个方案中，`Model Gateway` 与上方卡片/表格的**垂直间距已统一且严格设置为 `12px`**；
+     - 文案规范："One API for top-tier LLM and multimodal models, with Octen Search built in — powering Answer, Deep Research, and Grounded Generation."
+     - 按钮文字统一：`View model rates` / `View rebate details`；
+     - 移除了卡片下方的 `* Launch pricing — discounted rates, subject to change` 免责声明。
+   - **QPS 说明框**：
+     - 移除了第一句泛化描述，直接阐明："Applies to **Broad Search** and **Web Search**." 并保留 rate limits 文档链接；
+     - 移除了 QPS 区块底部的 `* Launch pricing` 免责声明。
+   - **QPS Free 卡片**：
+     - 第二行文案更新为：`Starts at 10 QPS. Add credits to unlock Base (up to 20 QPS)`；
+     - 移除了第二行前面的对勾图标，左侧对齐。
+   - **Footer 导航栏**：
+     - 将 `Pricing` 移至 `DEVELOPERS` 栏目下，顺序排列为：`API Platform` / `Docs` / `Pricing` / `Status` / `GitHub`。
 
 ---
 
