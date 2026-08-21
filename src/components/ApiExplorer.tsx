@@ -537,11 +537,20 @@ function GroundedGenCard() {
   );
 }
 
-function ModelGatewayBox() {
+function ModelGatewayBox({ 
+  bgClass = "bg-[#F6F6F3]", 
+  borderClass = "border-[#E7E7E3]"
+}: { 
+  bgClass?: string; 
+  borderClass?: string;
+}) {
   return (
-    <div className="bg-[#F6F6F3] border border-[#E7E7E3] rounded-[16px] p-[20px] sm:p-[24px] flex flex-col gap-[14px] w-full box-border">
+    <div className={`${bgClass} border ${borderClass} rounded-[16px] p-[20px] flex flex-col gap-[14px] w-full box-border`}>
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-[12px] w-full">
-        <div className="flex items-center gap-[10px] flex-wrap">
+        <div className="flex items-center gap-[8px] flex-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[18px] h-[18px] shrink-0 text-[#100F09]">
+            <path d="M11 18H3V16H11V18ZM23 15H21V18H17V16H19V13H21V11H11V8H13V9H23V15ZM3 16H1V8H3V16ZM17 16H15V15H13V16H11V13H17V16ZM9 14H5V10H9V14ZM11 8H3V6H11V8Z" fill="currentColor"/>
+          </svg>
           <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] text-[#0A0A0A] tracking-tight">Model Gateway</span>
           <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center gap-[4px] font-['JetBrains_Mono',monospace] font-bold text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#70FE7E] text-[#100F09] border border-[#70FE7E]">
             <svg className="w-[12px] h-[12px] shrink-0 text-[#100F09]" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1989,7 +1998,7 @@ export default function ApiExplorer() {
           {/* Section 1 Outer Shell: Search (Emerald Green -> Aqua Teal) */}
           <div
             id="search"
-            className="group/shell relative scroll-mt-[176px] rounded-[16px] border border-[#E2E2DE] hover:border-[#1FBC2E]/70 bg-[#F4F4F4] overflow-hidden shadow-[0_2px_12px_rgba(0,0,0,0.02)] flex flex-col w-full transition-all duration-300"
+            className="group/shell relative scroll-mt-[176px] rounded-[16px] border border-[#E2E2DE] hover:border-[#1FBC2E]/70 bg-[#F4F4F4] overflow-hidden flex flex-col w-full transition-all duration-300"
           >
             {/* Top-to-Bottom Emerald to Teal Duotone Mesh Gradient */}
             <ShellHoverGlow variant="emerald" />
@@ -2017,7 +2026,7 @@ export default function ApiExplorer() {
           {/* Section 2 Outer Shell: Extract (Electric Cyan -> Royal Indigo) */}
           <div
             id="extract"
-            className="group/shell relative scroll-mt-[176px] rounded-[16px] border border-[#E2E2DE] hover:border-[#38BDF8]/70 bg-[#F4F4F4] overflow-hidden shadow-[0_2px_12px_rgba(0,0,0,0.02)] flex flex-col w-full transition-all duration-300"
+            className="group/shell relative scroll-mt-[176px] rounded-[16px] border border-[#E2E2DE] hover:border-[#38BDF8]/70 bg-[#F4F4F4] overflow-hidden flex flex-col w-full transition-all duration-300"
           >
             {/* Top-to-Bottom Cyan to Indigo Duotone Mesh Gradient */}
             <ShellHoverGlow variant="cyan" />
@@ -2044,7 +2053,7 @@ export default function ApiExplorer() {
           {/* Section 3 Outer Shell: Embedding (Cosmic Purple -> Rose Pink) */}
           <div
             id="embeddings"
-            className="group/shell relative scroll-mt-[176px] rounded-[16px] border border-[#E2E2DE] hover:border-[#C084FC]/70 bg-[#F4F4F4] overflow-hidden shadow-[0_2px_12px_rgba(0,0,0,0.02)] flex flex-col w-full transition-all duration-300"
+            className="group/shell relative scroll-mt-[176px] rounded-[16px] border border-[#E2E2DE] hover:border-[#C084FC]/70 bg-[#F4F4F4] overflow-hidden flex flex-col w-full transition-all duration-300"
           >
             {/* Top-to-Bottom Purple to Rose Duotone Mesh Gradient */}
             <ShellHoverGlow variant="purple" />
@@ -2072,7 +2081,7 @@ export default function ApiExplorer() {
           {/* Section 4 Outer Shell: Applications (Amber Gold -> Sunset Coral) */}
           <div
             id="applications"
-            className="group/shell relative scroll-mt-[176px] rounded-[16px] border border-[#E2E2DE] hover:border-[#F59E0B]/70 bg-[#F4F4F4] overflow-hidden shadow-[0_2px_12px_rgba(0,0,0,0.02)] flex flex-col w-full transition-all duration-300"
+            className="group/shell relative scroll-mt-[176px] rounded-[16px] border border-[#E2E2DE] hover:border-[#F59E0B]/70 bg-[#F4F4F4] overflow-hidden flex flex-col w-full transition-all duration-300"
           >
             {/* Top-to-Bottom Amber to Coral Duotone Mesh Gradient */}
             <ShellHoverGlow variant="amber" />
@@ -2094,17 +2103,16 @@ export default function ApiExplorer() {
               </span>
             </div>
 
-            {/* Embedded Cards Grid (8px padding & 12px gap per Figma spec) */}
-            <div className="relative z-10 px-[8px] pb-[8px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[12px] w-full box-border">
-              <AnswerCard />
-              <MultimodalChatCard />
-              <DeepResearchCard />
-              <GroundedGenCard />
+            {/* Embedded Cards & Model Gateway Container */}
+            <div className="relative z-10 px-[8px] pb-[8px] flex flex-col gap-[12px] w-full box-border">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[12px] w-full box-border">
+                <AnswerCard />
+                <MultimodalChatCard />
+                <DeepResearchCard />
+                <GroundedGenCard />
+              </div>
+              <ModelGatewayBox bgClass="bg-[#F4F4F4]" borderClass="border-[#E2E2DE]" />
             </div>
-          </div>
-
-          <div className="w-full -mt-[8px]">
-            <ModelGatewayBox />
           </div>
         </div>
       )}

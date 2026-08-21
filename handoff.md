@@ -44,6 +44,18 @@ pnpm build
    - **Plan A**：顶部吸顶分类 Tabs 栏 + 直排 Bento 平铺卡片布局。
    - **Model Tokens 统称拉齐 (Token Naming Unification)**：
      - 在 Plan A 与 Plan B 的 `MultimodalChatCard` 及 `AnswerCard` 中，将原 `Vision tokens` 统一调整为 `Model tokens`，下挂于 `Search calls + model tokens` 总览下，计费说明统一显示为 `Gateway rates`。
+   - **Plan A-C 移除 Model Gateway 卡片 Hover 状态样式变化 (Model Gateway No Hover Effects)**：
+     - 在 Plan A、Plan B、Plan C 中，彻底移除了 `Model Gateway` 卡片容器本身的 `hover:shadow` 及 `hover:border` 等悬浮变化效果，保持卡片背景与边框在鼠标滑过时静止沉稳，仅保留内部可点击链接（View model rates / View rebate details）的文字交互反馈。
+   - **Model Gateway 卡片内边距调整为 20px (Model Gateway Padding = 20px)**：
+     - 将 Model Gateway 卡片的内边距统一设为 **`p-[20px]`**，与子卡片内边距视觉比例更均衡统一。
+   - **Model Gateway 标题新增专有像素 SVG 图标 (Model Gateway Title Icon)**：
+     - 在 `Model Gateway` 标题前方添加了专属网关矩阵矢量图标（`18px` 黑色矢量路径），与各分类图标规范保持一致。
+   - **Plan B 4 大分类默认移除投影 & Model Gateway 背景设为外壳一致灰 (Plan B Shells Shadow Removal & #F4F4F4 Gray Box)**：
+     - 将 Plan B 中 4 大分类外壳（Search、Extract、Embedding、Applications）默认自带的 `shadow-[0_2px_12px_rgba(0,0,0,0.02)]` 统一移除，使外壳呈现更干净平整的现代高级质感；
+     - 将 Applications 外壳内部的 `Model Gateway` 模块背景色设为与 Applications 外壳**完全一致的默认背景灰 `#F4F4F4`**（`bg-[#F4F4F4]`，边框对齐 `border-[#E2E2DE]`），使其与外壳色调融为一体，同时与上方 4 张白色子卡片形成清晰自然的层次对比。
+   - **Plan B 将 Model Gateway 合并入 Applications 外壳大卡片 (Plan B Model Gateway In-Shell Merge)**：
+     - 将 Model Gateway 介绍与返利卡片移入 Plan B 的 `Applications` 外壳大卡片（Amber Gold -> Sunset Coral 渐变发光外壳）内部，位于 4 张应用卡片下方；
+     - 样式设为 `bg-white` 配合 `hover:border-[#F59E0B]/70`，与 Applications 外壳内其他白底子卡片保持一致的内边距与间隙（`8px` 内边距 + `12px` 间距），整体视觉更具层级与完整度。
    - **Model Gateway 说明卡片正文文字样式调整 (Model Gateway Box Typography)**：
      - 将 Model Gateway 介绍卡片中的正文段落（`One API for top-tier LLM and multimodal models, with Octen Search built in — ...`）字号统一调整为 **`14px`**（`text-[14px] leading-[21px]`），颜色调整为 **`#57575E`**（`rgb(87, 87, 94)`）。
    - **Plan B Applications 分类 Search API + Model Gateway 标签背景透明度调整 (Plan B Badge 0.5 Opacity)**：
