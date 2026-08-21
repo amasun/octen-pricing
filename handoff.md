@@ -44,8 +44,13 @@ pnpm build
    - **Plan A**：顶部吸顶分类 Tabs 栏 + 直排 Bento 平铺卡片布局。
    - **Model Tokens 统称拉齐 (Token Naming Unification)**：
      - 在 Plan A 与 Plan B 的 `MultimodalChatCard` 及 `AnswerCard` 中，将原 `Vision tokens` 统一调整为 `Model tokens`，下挂于 `Search calls + model tokens` 总览下，计费说明统一显示为 `Gateway rates`。
-   - **Applications 分类标签更新 (Applications Billing Tag Refinement)**：
-     - 在方案 A 吸顶分类栏与方案 B 外壳头部中，将 Applications 的计费方式标签胶囊文案由 `[Search + LLMs]` 更新为更严谨精确的 **`[Search API + Model Gateway]`**。
+   - **Applications 计费标签背景样式对齐价格标签 (Applications Tag Style Alignment)**：
+     - 将方案 A（以及方案 B、C）中 `[Search API + Model Gateway]` 胶囊标签的样式全面对齐卡片中的价格标签规范：使用 **`bg-[#F6F6F3]`** 柔和米灰底色、**`border-[#E7E7E3]`** 细腻边框、**`rounded-[4px]`** 4px 圆角与 **`text-[#100F09]`**，整体风格与卡片内部的价格/费率标签保持高度一致。
+   - **Plan C 标题下方辅助说明字号调优为 12px (Plan C Subtitle Helper Copy 12px Hierarchy)**：
+     - 将方案 C（桌面大表与移动端卡片）中所有 14 个端点/模型主标题（16px 加粗）下方的单行功能辅助描述文本（如 `Real-time LLM-ready web search with live crawling`）独立设为 **`12px` (`text-[12px] leading-[18px]`)**，使标题与副标题层级区分更加鲜明紧凑；
+     - 价格、单位后缀（`/ 1k calls`）、Free Tier 说明、分类右侧说明等其余所有辅助字段继续保持规范的 **`14px`**，不受任何影响。
+   - **Applications 分类标签全面同步 (Applications Billing Tag Refinement across Plan A, B, C)**：
+     - 在方案 A 吸顶分类栏、方案 B 外壳头部以及方案 C 表格与移动端卡片标题栏中，将 Applications 的计费方式标签胶囊文案全量统一为 **`[Search API + Model Gateway]`**（完整文案：`Complete workflows built on the APIs above. Billed per outcome via [Search API + Model Gateway].`）。
    - **Plan C 辅助文字弱化调色 (#8B8B8B Helper Copy Refinement)**：
      - 将 Plan C 表格与移动端卡片中的全部次级辅助说明文字（包括端点业务描述、计费单位后缀 `/ 1k calls`、Details & Free Tier 特性描述、表头字段标签等）由原 `#57575E` 统一弱化调优为 **`#8B8B8B`**，提升主次信息层级对比度，整体视觉观感更轻盈通透。
    - **Plan C 表头置顶滚动修复 (Plan C Sticky Header Overflow Fix)**：

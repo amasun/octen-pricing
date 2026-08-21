@@ -92,7 +92,7 @@ const NAV_ITEMS: Array<{
     subtitle: (
       <span>
         Complete workflows built on the APIs above. Billed per outcome via{" "}
-        <span className="inline-flex items-center px-[6px] py-[1px] rounded bg-[#EFEFEA] text-[#100F09] font-medium border border-[#DCDCD6] text-[12px] font-['JetBrains_Mono',monospace] align-middle">
+        <span className="inline-flex items-center px-[6px] py-[1.5px] rounded-[4px] bg-[#F6F6F3] text-[#100F09] font-medium border border-[#E7E7E3] text-[12px] font-['JetBrains_Mono',monospace] align-middle">
           Search API + Model Gateway
         </span>
         .
@@ -655,7 +655,7 @@ function PlanCTable() {
                       80% Off
                     </span>
                   </div>
-                  <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                  <span className="text-[12px] text-[#8B8B8B] leading-[18px]">
                     Real-time LLM-ready web search with live crawling
                   </span>
                 </div>
@@ -688,7 +688,7 @@ function PlanCTable() {
                       80% Off
                     </span>
                   </div>
-                  <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                  <span className="text-[12px] text-[#8B8B8B] leading-[18px]">
                     Multi-query intent planning and high-recall search
                   </span>
                 </div>
@@ -721,7 +721,7 @@ function PlanCTable() {
                       Early Access
                     </span>
                   </div>
-                  <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                  <span className="text-[12px] text-[#8B8B8B] leading-[18px]">
                     Structured image search with direct preview URLs
                   </span>
                 </div>
@@ -753,7 +753,7 @@ function PlanCTable() {
                       Early Access
                     </span>
                   </div>
-                  <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                  <span className="text-[12px] text-[#8B8B8B] leading-[18px]">
                     Multi-platform video retrieval with timestamps
                   </span>
                 </div>
@@ -791,7 +791,7 @@ function PlanCTable() {
             <div className="flex items-start justify-between gap-[10px]">
               <div className="flex flex-col gap-[2px]">
                 <span className="font-bold text-[16px] text-[#0A0A0A]">Extract API</span>
-                <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                <span className="text-[12px] text-[#8B8B8B] leading-[18px]">
                   LLM-ready Markdown &amp; structured content extraction
                 </span>
               </div>
@@ -837,7 +837,7 @@ function PlanCTable() {
                       Best Accuracy
                     </span>
                   </div>
-                  <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                  <span className="text-[12px] text-[#8B8B8B] leading-[18px]">
                     SOTA embedding quality for enterprise search and complex RAG
                   </span>
                 </div>
@@ -864,7 +864,7 @@ function PlanCTable() {
               <div className="flex items-start justify-between gap-[10px]">
                 <div className="flex flex-col gap-[2px]">
                   <span className="font-bold text-[16px] text-[#0A0A0A] font-['JetBrains_Mono',monospace]">octen-embedding-4b</span>
-                  <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                  <span className="text-[12px] text-[#8B8B8B] leading-[18px]">
                     Optimal balance of accuracy and high throughput
                   </span>
                 </div>
@@ -896,7 +896,7 @@ function PlanCTable() {
                       Ultra Fast
                     </span>
                   </div>
-                  <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                  <span className="text-[12px] text-[#8B8B8B] leading-[18px]">
                     Ultra lightweight and cost-efficient for mass vectorization
                   </span>
                 </div>
@@ -938,7 +938,7 @@ function PlanCTable() {
               <div className="flex items-start justify-between gap-[10px]">
                 <div className="flex flex-col gap-[2px]">
                   <span className="font-bold text-[16px] text-[#0A0A0A] font-['JetBrains_Mono',monospace]">octen-vl-embedding</span>
-                  <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                  <span className="text-[12px] text-[#8B8B8B] leading-[18px]">
                     Cross-modal vector space: images, screenshots, &amp; text
                   </span>
                 </div>
@@ -965,7 +965,7 @@ function PlanCTable() {
               <div className="flex items-start justify-between gap-[10px]">
                 <div className="flex flex-col gap-[2px]">
                   <span className="font-bold text-[16px] text-[#0A0A0A] font-['JetBrains_Mono',monospace]">octen-vl-embedding-large</span>
-                  <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                  <span className="text-[12px] text-[#8B8B8B] leading-[18px]">
                     Maximum precision multimodal visual embedding
                   </span>
                 </div>
@@ -991,12 +991,14 @@ function PlanCTable() {
 
         {/* Category 5: Applications */}
         <div className="bg-white rounded-[16px] border border-[#E2E2DE] overflow-hidden shadow-xs">
-          <div className="bg-[#F8F9FA] px-[16px] py-[12px] border-b border-[#E2E2DE] flex items-center justify-between">
+          <div className="bg-[#F8F9FA] px-[16px] py-[12px] border-b border-[#E2E2DE] flex items-center justify-between gap-2">
             <div className="flex items-center gap-[8px]">
               <ApplicationsCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
               <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] text-[#100F09]">Applications</span>
             </div>
-            <span className="text-[14px] text-[#8B8B8B]">Turnkey workflows</span>
+            <span className="inline-flex items-center px-[6px] py-[1.5px] rounded-[4px] bg-[#F6F6F3] text-[#100F09] font-medium border border-[#E7E7E3] text-[11px] font-['JetBrains_Mono',monospace]">
+              Search API + Model Gateway
+            </span>
           </div>
 
           <div className="divide-y divide-[#EAEAE5] flex flex-col">
@@ -1005,7 +1007,7 @@ function PlanCTable() {
               <div className="flex items-start justify-between gap-[10px]">
                 <div className="flex flex-col gap-[2px]">
                   <span className="font-bold text-[16px] text-[#0A0A0A]">Answer</span>
-                  <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                  <span className="text-[12px] text-[#8B8B8B] leading-[18px]">
                     Grounded answer synthesis with inline citations from live web
                   </span>
                 </div>
@@ -1036,7 +1038,7 @@ function PlanCTable() {
                       Early Access
                     </span>
                   </div>
-                  <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                  <span className="text-[12px] text-[#8B8B8B] leading-[18px]">
                     Conversational visual search across images, diagrams, and live web
                   </span>
                 </div>
@@ -1062,7 +1064,7 @@ function PlanCTable() {
               <div className="flex items-start justify-between gap-[10px]">
                 <div className="flex flex-col gap-[2px]">
                   <span className="font-bold text-[16px] text-[#0A0A0A]">Deep Research</span>
-                  <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                  <span className="text-[12px] text-[#8B8B8B] leading-[18px]">
                     Multi-step autonomous web exploration and comprehensive report generation
                   </span>
                 </div>
@@ -1096,7 +1098,7 @@ function PlanCTable() {
                       Early Access
                     </span>
                   </div>
-                  <span className="text-[14px] text-[#8B8B8B] leading-[20px]">
+                  <span className="text-[12px] text-[#8B8B8B] leading-[18px]">
                     Fact-checked image and video generation grounded in real-time search
                   </span>
                 </div>
@@ -1175,7 +1177,7 @@ function PlanCTable() {
                 <td className="py-4 px-6">
                   <div className="flex flex-col gap-0.5">
                     <span className="font-bold text-[16px] text-[#0A0A0A]">Web Search API</span>
-                    <span className="text-[14px] text-[#8B8B8B]">Real-time LLM-ready web search with live crawling</span>
+                    <span className="text-[12px] text-[#8B8B8B] leading-[18px]">Real-time LLM-ready web search with live crawling</span>
                   </div>
                 </td>
                 <td className="py-4 px-6">
@@ -1208,7 +1210,7 @@ function PlanCTable() {
                 <td className="py-4 px-6">
                   <div className="flex flex-col gap-0.5">
                     <span className="font-bold text-[16px] text-[#0A0A0A]">Broad Search API</span>
-                    <span className="text-[14px] text-[#8B8B8B]">Multi-query intent planning and high-recall search</span>
+                    <span className="text-[12px] text-[#8B8B8B] leading-[18px]">Multi-query intent planning and high-recall search</span>
                   </div>
                 </td>
                 <td className="py-4 px-6">
@@ -1244,7 +1246,7 @@ function PlanCTable() {
                       <span className="font-bold text-[16px] text-[#0A0A0A]">Image Search API</span>
                       <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#E3FFE2] border border-[#6FD1A5] text-[#1B9C62]">Early Access</span>
                     </div>
-                    <span className="text-[14px] text-[#8B8B8B]">Structured image search with direct preview URLs</span>
+                    <span className="text-[12px] text-[#8B8B8B] leading-[18px]">Structured image search with direct preview URLs</span>
                   </div>
                 </td>
                 <td className="py-4 px-6">
@@ -1276,7 +1278,7 @@ function PlanCTable() {
                       <span className="font-bold text-[16px] text-[#0A0A0A]">Video Search API</span>
                       <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#E3FFE2] border border-[#6FD1A5] text-[#1B9C62]">Early Access</span>
                     </div>
-                    <span className="text-[14px] text-[#8B8B8B]">Multi-platform video retrieval with timestamps</span>
+                    <span className="text-[12px] text-[#8B8B8B] leading-[18px]">Multi-platform video retrieval with timestamps</span>
                   </div>
                 </td>
                 <td className="py-4 px-6">
@@ -1322,7 +1324,7 @@ function PlanCTable() {
                 <td className="py-4 px-6">
                   <div className="flex flex-col gap-0.5">
                     <span className="font-bold text-[16px] text-[#0A0A0A]">Extract API</span>
-                    <span className="text-[14px] text-[#8B8B8B]">LLM-ready Markdown &amp; structured content extraction</span>
+                    <span className="text-[12px] text-[#8B8B8B] leading-[18px]">LLM-ready Markdown &amp; structured content extraction</span>
                   </div>
                 </td>
                 <td className="py-4 px-6">
@@ -1374,7 +1376,7 @@ function PlanCTable() {
                       <span className="font-bold text-[16px] text-[#0A0A0A] font-['JetBrains_Mono',monospace]">octen-embedding-8b</span>
                       <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#FFF7ED] border border-[#ffc29f] text-[#C2410C]">Best Accuracy</span>
                     </div>
-                    <span className="text-[14px] text-[#8B8B8B]">SOTA embedding quality for enterprise search and complex RAG</span>
+                    <span className="text-[12px] text-[#8B8B8B] leading-[18px]">SOTA embedding quality for enterprise search and complex RAG</span>
                   </div>
                 </td>
                 <td className="py-4 px-6">
@@ -1403,7 +1405,7 @@ function PlanCTable() {
                 <td className="py-4 px-6">
                   <div className="flex flex-col gap-0.5">
                     <span className="font-bold text-[16px] text-[#0A0A0A] font-['JetBrains_Mono',monospace]">octen-embedding-4b</span>
-                    <span className="text-[14px] text-[#8B8B8B]">Optimal balance of accuracy and high throughput</span>
+                    <span className="text-[12px] text-[#8B8B8B] leading-[18px]">Optimal balance of accuracy and high throughput</span>
                   </div>
                 </td>
                 <td className="py-4 px-6">
@@ -1435,7 +1437,7 @@ function PlanCTable() {
                       <span className="font-bold text-[16px] text-[#0A0A0A] font-['JetBrains_Mono',monospace]">octen-embedding-0.6b</span>
                       <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#FAF5FF] border border-[#d9bafb] text-[#6B21A8]">Ultra Fast</span>
                     </div>
-                    <span className="text-[14px] text-[#8B8B8B]">Ultra lightweight and cost-efficient for mass vectorization</span>
+                    <span className="text-[12px] text-[#8B8B8B] leading-[18px]">Ultra lightweight and cost-efficient for mass vectorization</span>
                   </div>
                 </td>
                 <td className="py-4 px-6">
@@ -1484,7 +1486,7 @@ function PlanCTable() {
                 <td className="py-4 px-6">
                   <div className="flex flex-col gap-0.5">
                     <span className="font-bold text-[16px] text-[#0A0A0A] font-['JetBrains_Mono',monospace]">octen-vl-embedding</span>
-                    <span className="text-[14px] text-[#8B8B8B]">Cross-modal vector space: images, screenshots, &amp; text in one index</span>
+                    <span className="text-[12px] text-[#8B8B8B] leading-[18px]">Cross-modal vector space: images, screenshots, &amp; text in one index</span>
                   </div>
                 </td>
                 <td className="py-4 px-6">
@@ -1513,7 +1515,7 @@ function PlanCTable() {
                 <td className="py-4 px-6">
                   <div className="flex flex-col gap-0.5">
                     <span className="font-bold text-[16px] text-[#0A0A0A] font-['JetBrains_Mono',monospace]">octen-vl-embedding-large</span>
-                    <span className="text-[14px] text-[#8B8B8B]">Maximum precision multimodal visual embedding</span>
+                    <span className="text-[12px] text-[#8B8B8B] leading-[18px]">Maximum precision multimodal visual embedding</span>
                   </div>
                 </td>
                 <td className="py-4 px-6">
@@ -1547,8 +1549,12 @@ function PlanCTable() {
                       Applications
                     </span>
                   </div>
-                  <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#8B8B8B] hidden sm:inline">
-                    Complete turnkey workflows built on the APIs above
+                  <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#8B8B8B] hidden sm:inline-flex items-center gap-[4px]">
+                    <span>Complete workflows built on the APIs above. Billed per outcome via</span>
+                    <span className="inline-flex items-center px-[6px] py-[1.5px] rounded-[4px] bg-[#F6F6F3] text-[#100F09] font-medium border border-[#E7E7E3] text-[12px] font-['JetBrains_Mono',monospace]">
+                      Search API + Model Gateway
+                    </span>
+                    <span>.</span>
                   </span>
                 </div>
               </td>
@@ -1559,7 +1565,7 @@ function PlanCTable() {
               <td className="py-4 px-6">
                 <div className="flex flex-col gap-0.5">
                   <span className="font-bold text-[16px] text-[#0A0A0A]">Answer</span>
-                  <span className="text-[14px] text-[#8B8B8B]">Grounded answer synthesis with inline citations from live web</span>
+                  <span className="text-[12px] text-[#8B8B8B] leading-[18px]">Grounded answer synthesis with inline citations from live web</span>
                 </div>
               </td>
               <td className="py-4 px-6">
@@ -1590,7 +1596,7 @@ function PlanCTable() {
                     <span className="font-bold text-[16px] text-[#0A0A0A]">Multimodal Chat</span>
                     <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#E3FFE2] border border-[#6FD1A5] text-[#1B9C62]">Early Access</span>
                   </div>
-                  <span className="text-[14px] text-[#8B8B8B]">Conversational visual search across images, diagrams, and live web</span>
+                  <span className="text-[12px] text-[#8B8B8B] leading-[18px]">Conversational visual search across images, diagrams, and live web</span>
                 </div>
               </td>
               <td className="py-4 px-6">
@@ -1618,7 +1624,7 @@ function PlanCTable() {
                 <td className="py-4 px-6">
                   <div className="flex flex-col gap-0.5">
                     <span className="font-bold text-[16px] text-[#0A0A0A]">Deep Research</span>
-                    <span className="text-[14px] text-[#8B8B8B]">Multi-step autonomous web exploration and comprehensive report generation</span>
+                    <span className="text-[12px] text-[#8B8B8B] leading-[18px]">Multi-step autonomous web exploration and comprehensive report generation</span>
                   </div>
                 </td>
                 <td className="py-4 px-6">
@@ -1652,7 +1658,7 @@ function PlanCTable() {
                       <span className="font-bold text-[16px] text-[#0A0A0A]">Grounded Generation</span>
                       <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-medium text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#E3FFE2] border border-[#6FD1A5] text-[#1B9C62]">Early Access</span>
                     </div>
-                    <span className="text-[14px] text-[#8B8B8B]">Fact-checked image and video generation grounded in real-time search context</span>
+                    <span className="text-[12px] text-[#8B8B8B] leading-[18px]">Fact-checked image and video generation grounded in real-time search context</span>
                   </div>
                 </td>
                 <td className="py-4 px-6">
@@ -2038,7 +2044,7 @@ export default function ApiExplorer() {
               </div>
               <span className="font-['DM_Sans',sans-serif] text-[14px] leading-[21px] font-normal text-[#100F09]/80 hidden sm:inline-flex items-center gap-[4px] text-right">
                 <span>Complete workflows built on the APIs above. Billed per outcome via</span>
-                <span className="inline-flex items-center px-[6px] py-[1px] rounded bg-white/90 text-[#100F09] font-medium border border-[#DCDCD6] text-[12px] font-['JetBrains_Mono',monospace]">
+                <span className="inline-flex items-center px-[6px] py-[1.5px] rounded-[4px] bg-white/90 text-[#100F09] font-medium border border-[#E7E7E3] text-[12px] font-['JetBrains_Mono',monospace]">
                   Search API + Model Gateway
                 </span>
                 <span>.</span>
