@@ -50,15 +50,15 @@ function HeroHeader() {
 function OctenCenterHub({ isHovered = false }: { isHovered?: boolean }) {
   return (
     <div className={`-translate-x-1/2 -translate-y-1/2 absolute left-1/2 top-1/2 size-[60px] z-20 pointer-events-none flex items-center justify-center transition-transform duration-500 ease-out ${isHovered ? "scale-[1.06]" : "scale-100"}`}>
-      {/* Ambient soft outer neon halo behind the hub - compact tight radius */}
+      {/* Ambient soft outer neon halo behind the hub - reduced opacity by 50% */}
       <div 
-        className={`absolute -inset-1.5 rounded-full bg-[#70FE7E]/50 blur-[10px] pointer-events-none transition-opacity duration-500 ease-out ${isHovered ? "opacity-100" : "opacity-0"}`} 
+        className={`absolute -inset-1.5 rounded-full bg-[#70FE7E]/25 blur-[10px] pointer-events-none transition-opacity duration-500 ease-out ${isHovered ? "opacity-100" : "opacity-0"}`} 
       />
 
       {/* Solid Center Hub Box */}
       <div className={`size-[60px] rounded-[14px] bg-black flex items-center justify-center relative overflow-hidden transition-all duration-500 ease-out ${
         isHovered 
-          ? "shadow-[0px_0px_18px_0px_rgba(112,254,126,0.5)]" 
+          ? "shadow-[0px_0px_18px_0px_rgba(112,254,126,0.25)]" 
           : "shadow-none"
       }`}>
         <svg className="w-[32px] h-[26px]" fill="none" viewBox="0 0 32 26">
