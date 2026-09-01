@@ -29,12 +29,14 @@
 - **金额与文案对齐**
   - 重新梳理并校准了 Unit Price 与 Pricing Details 中的各计费项排版，确保金额、单位与折后价严格横向对齐，信息层级更清晰易读。
 
-### 3. Enterprise 企业方案条款与排版更新
-- **条款与特性重构**
-  - 全面更新了 Enterprise 定制方案的权益特性（涵盖企业级吞吐 SLA、自定义数据源接入、专有通道、专属 Slack 频道支持及定制商业合同等）；
-  - 采用清晰的 3×2 纵向优先栅格排版，自适应各尺寸屏幕展示。
-- **行动按钮边缘对齐**
-  - Enterprise 卡片底部的 `Contact Sales` 按钮右侧边缘与上方各列卡片的 `Get started` 行动按钮外侧实现了严格的像素级右对齐。
+### 3. Enterprise 独立旗舰区域与 3×2 Bento 卡片重构
+- **独立专属 Section**
+  - 将 Enterprise Custom 由原先附属于 QPS Plan 下方的横条卡片重构升级为完全独立的专属旗舰模块（`#enterprise-plan`），拥有独立的标题区与架构定位；
+- **六大指标独立卡片化（3×2 Bento Grid）**
+  - 将企业级权益拆解为 6 张独立的科技感功能卡片（包含 Higher Throughput SLA、Custom Data Sources Integration、Dedicated & Isolated Pipelines、Dedicated Slack & 24/7 Support、Custom Contract & Invoicing、Volume Tier Discounts）；
+  - 每张卡片配备专属图标容器、等宽状态标签（如 `99.99% UPTIME`、`ZERO CONTENTION` 等）、标题与详细技术说明，支持悬浮微光流转动效；
+- **底部通栏专属 CTA Banner**
+  - 新增独立通栏咨询卡片，配置皇冠金微光标识、引导文案与一键直连商务咨询通道（`Contact Sales` + `support@octen.ai`）。
 
 
 ---

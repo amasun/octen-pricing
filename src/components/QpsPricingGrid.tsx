@@ -225,62 +225,6 @@ function PlanCardItem({
   );
 }
 
-function EnterpriseCard({ plan }: { plan: { title: string; subtitle: string; price: string; period?: string; features: FeatureItem[]; buttonText: string; buttonHref?: string; } }) {
-  return (
-    <div id="enterprise-plan" className="w-full relative rounded-[16px] overflow-hidden bg-white border border-[#D1D1D1] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-200 box-border p-6 sm:p-8 sm:pr-6 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 isolate scroll-mt-[100px]">
-      {/* Ambient Glow Layer: Original Figma spec for PC desktop (md:), bottom edge alignment for mobile */}
-      <div className="absolute left-1/2 -translate-x-1/2 md:translate-x-0 bottom-0 md:bottom-auto md:left-[-150px] md:top-[185.73px] w-full md:w-[918.47px] h-[60px] md:h-[78.27px] pointer-events-none z-0 opacity-60 overflow-visible">
-        {/* Vector 10: #70FE7E glow */}
-        <div className="absolute w-[80%] md:w-[738.01px] h-[50px] md:h-[68.27px] left-[10%] md:left-[84.54px] bottom-[-20px] md:bottom-[19px] bg-[#70FE7E] blur-[45px] md:blur-[50px] pointer-events-none rounded-full" />
-        {/* Vector 11: #DDFE70 glow */}
-        <div className="absolute w-[80%] md:w-[738.01px] h-[50px] md:h-[68.27px] right-[10%] md:right-auto md:left-[164.71px] bottom-[-20px] md:bottom-[29px] bg-[#DDFE70] blur-[45px] md:blur-[50px] pointer-events-none rounded-full md:-scale-x-100" />
-      </div>
-
-      {/* Left: Crown Icon + Title & Custom Price (Custom left-aligned with Enterprise text) */}
-      <div className="relative z-10 flex items-start justify-center sm:justify-start gap-2 shrink-0 min-w-[200px]">
-        <svg className="size-[22px] shrink-0 mt-[1px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M17.42 3C17.7725 3.00011 18.1188 3.09341 18.4236 3.27042C18.7285 3.44744 18.9811 3.70189 19.156 4.008L22.49 9.84C22.7076 10.2209 22.7939 10.6627 22.7358 11.0974C22.6776 11.5322 22.4781 11.9358 22.168 12.246L12.885 21.529C12.7689 21.6451 12.6311 21.7372 12.4794 21.8001C12.3278 21.8629 12.1652 21.8952 12.001 21.8952C11.8368 21.8952 11.6743 21.8629 11.5226 21.8001C11.3709 21.7372 11.2331 21.6451 11.117 21.529L1.834 12.246C1.52392 11.9358 1.32443 11.5322 1.26624 11.0974C1.20806 10.6627 1.29441 10.2209 1.512 9.84L4.845 4.007C5.0199 3.70123 5.27246 3.44707 5.57712 3.27024C5.88174 3.09341 6.22774 3.00019 6.58 3H17.42ZM16.707 9.293C16.5195 9.10553 16.2652 9.00021 16 9.00021C15.7348 9.00021 15.4805 9.10553 15.293 9.293L12 12.586L8.706 9.293C8.61476 9.19749 8.50441 9.12131 8.38241 9.0689C8.2604 9.01649 8.12918 8.9889 7.9964 8.98775C7.86362 8.9866 7.73195 9.0119 7.60905 9.06218C7.48615 9.11246 7.3745 9.18671 7.28061 9.28061C7.18671 9.3745 7.11246 9.48615 7.06218 9.60905C7.0119 9.73194 6.9866 9.86362 6.98775 9.9964C6.98891 10.1292 7.01649 10.2604 7.0689 10.3824C7.12131 10.5044 7.19749 10.6148 7.293 10.707L11.116 14.53C11.2321 14.6461 11.3699 14.7382 11.5216 14.8011C11.6733 14.8639 11.8358 14.8962 12 14.8962C12.1642 14.8962 12.3268 14.8639 12.4784 14.8011C12.6301 14.7382 12.7679 14.6461 12.884 14.53L16.707 10.707C16.8945 10.5195 16.9998 10.2652 16.9998 10C16.9998 9.73484 16.8945 9.48053 16.707 9.293Z" fill="url(#paint0_linear_enterprise_gold)"/>
-          <defs>
-            <linearGradient id="paint0_linear_enterprise_gold" x1="21.8665" y1="3.6622" x2="7.15156" y2="21.2212" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#FFE7B1"/>
-              <stop offset="0.641295" stopColor="#C6A55A"/>
-              <stop offset="1" stopColor="#BB9A4C"/>
-            </linearGradient>
-          </defs>
-        </svg>
-        <div className="flex flex-col gap-1.5 text-center sm:text-left">
-          <h3 className="font-['Fraunces',serif] font-semibold text-[24px] leading-none text-[#100F09]">
-            {plan.title}
-          </h3>
-          <div className="flex items-baseline justify-center sm:justify-start gap-2 pt-0.5">
-            <span className="font-['DM_Sans',sans-serif] font-bold text-[32px] leading-none text-[#100F09]">Custom</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Center: Features Grid (Column-first flow: 3 in Col 1, 3 in Col 2) */}
-      <ul className="relative z-10 grid grid-cols-1 sm:grid-flow-col sm:grid-rows-3 sm:grid-cols-2 gap-x-8 gap-y-3 list-none p-0 m-0 flex-1 max-w-[620px]">
-        {plan.features.map((feat, i) => (
-          <li key={i} className="flex items-center gap-2.5 text-[14px] font-['DM_Sans',sans-serif] text-[#100F09]">
-            <FeatureIcon type={feat.icon} color="#039855" />
-            <span>{feat.text}</span>
-          </li>
-        ))}
-      </ul>
-
-      {/* Right: Contact Sales CTA */}
-      <div className="relative z-10 shrink-0 w-full md:w-auto">
-        <a
-          href={plan.buttonHref || "mailto:support@octen.ai?subject=Octen%20Enterprise%20QPS%20Plan%20Inquiry"}
-          className="w-full md:w-auto min-w-[180px] h-[44px] px-6 rounded-full bg-[#100F09] text-white font-['DM_Sans',sans-serif] font-semibold text-[16px] flex items-center justify-center btn-dark-hover hover:shadow-[0_4px_16px_rgba(0,0,0,0.12)] active:scale-[0.97] transition-all duration-200 ease-out select-none focus-visible:ring-2 focus-visible:ring-[#039855] focus-visible:outline-none box-border"
-        >
-          {plan.buttonText}
-        </a>
-      </div>
-    </div>
-  );
-}
-
 export default function QpsPricingGrid() {
   const plans: Array<{
     title: string;
@@ -346,27 +290,11 @@ export default function QpsPricingGrid() {
         { text: "Standard email support", icon: "check" }
       ],
       buttonText: "Get started"
-    },
-    {
-      title: "Enterprise",
-      subtitle: "Custom scale & enterprise SLA",
-      price: "Custom",
-      period: "Tailored Plan",
-      features: [
-        { text: <><strong className="font-bold">1M+ QPS</strong></>, icon: "branch" },
-        { text: "Custom data", icon: "data" },
-        { text: "Zero Data Retention (ZDR)", icon: "zdr" },
-        { text: "Custom SLA", icon: "flash" },
-        { text: "Dedicated Slack channel support", icon: "slack" },
-        { text: "Volume discounts", icon: "chart" }
-      ],
-      buttonText: "Contact Sales",
-      buttonHref: "mailto:support@octen.ai?subject=Octen%20Enterprise%20QPS%20Plan%20Inquiry"
     }
   ];
 
   return (
-    <div className="content-stretch flex flex-col items-center gap-[24px] sm:gap-[36px] pb-[60px] sm:pb-[100px] mt-[60px] sm:mt-[120px] pt-0 relative shrink-0 w-full max-w-[1312px] px-4 box-border scroll-mt-[90px]" id="qps-plans">
+    <div className="content-stretch flex flex-col items-center gap-[24px] sm:gap-[36px] pb-[40px] sm:pb-[60px] mt-[60px] sm:mt-[120px] pt-0 relative shrink-0 w-full max-w-[1312px] px-4 box-border scroll-mt-[90px]" id="qps-plans">
       {/* Title Header */}
       <div className="text-center flex flex-col items-center gap-2 sm:gap-3 shrink-0 px-4">
         <h2 className="font-['Fraunces',serif] font-bold text-[28px] sm:text-[44px] leading-[1.15] sm:leading-[48px] text-[#09090b]">
@@ -377,21 +305,16 @@ export default function QpsPricingGrid() {
         </p>
       </div>
 
-      {/* Unified Parent Container for Row 1, Row 2, and Row 3 with gap=16 */}
+      {/* Unified Parent Container with gap=16 */}
       <div className="flex flex-col gap-[16px] w-full">
         {/* Row 1: First 4 merged cards (Free, Builder, Pro, Scale) in a 4-column grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[12px] xl:gap-[16px] w-full pt-0 sm:pt-[28px] items-end">
-          {plans.slice(0, 4).map((p, idx) => (
+          {plans.map((p, idx) => (
             <PlanCardItem key={idx} {...p} cardWidthClass="w-full" />
           ))}
         </div>
 
-        {/* Row 2: 5th Enterprise Custom Card occupying its own row */}
-        <div className="w-full">
-          <EnterpriseCard plan={plans[4]} />
-        </div>
-
-        {/* Row 3: Merged Single Information Card matching exact updated copy */}
+        {/* Row 2: Merged Single Information Card matching exact updated copy */}
         <div className="w-full p-[20px] bg-[#F6F6F3] rounded-[16px] border border-[#E7E7E3] flex flex-col gap-[8px] font-['DM_Sans',sans-serif] box-border">
           {/* Top Row: Info Icon + Title */}
           <div className="flex flex-row items-center gap-[6px] w-full">

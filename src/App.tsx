@@ -102,6 +102,43 @@ export default function App() {
         }
       );
 
+      // Enterprise section entrance: y:30, start:'top 85%', duration:0.8, ease:'power2.out'
+      gsap.fromTo(
+        '#enterprise-plan > div:first-child',
+        { opacity: 0, y: 30 },
+        {
+          scrollTrigger: {
+            trigger: '#enterprise-plan',
+            start: 'top 85%',
+            once: true,
+          },
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: 'power2.out',
+          clearProps: 'transform,opacity',
+        }
+      );
+
+      // Enterprise Bento cards stagger: y:40, start:'top 80%', duration:0.8, stagger:0.08, ease:'power2.out'
+      gsap.fromTo(
+        '#enterprise-plan .grid > div',
+        { opacity: 0, y: 40 },
+        {
+          scrollTrigger: {
+            trigger: '#enterprise-plan .grid',
+            start: 'top 80%',
+            once: true,
+          },
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.08,
+          ease: 'power2.out',
+          clearProps: 'transform,opacity',
+        }
+      );
+
       // FAQ section entrance: y:30, start:'top 85%', duration:0.8, ease:'power2.out'
       gsap.fromTo(
         '#faq-section',

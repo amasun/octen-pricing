@@ -28,7 +28,8 @@ pnpm build
 - `src/components/Navbar.tsx` - 导航栏及移动端响应式菜单
 - `src/components/HeroSection.tsx` - 头部 Hero 区块与 3 张入口卡片
 - `src/components/ApiExplorer.tsx` - API 定价卡片（含 Plan A / B / C 及双击唤出控制）
-- `src/components/QpsPricingGrid.tsx` - QPS 阶梯定价表及计算逻辑
+- `src/components/QpsPricingGrid.tsx` - QPS 阶梯定价表（4 档自主订阅阶梯与速率限制卡片）
+- `src/components/EnterpriseSection.tsx` - 独立企业定制旗舰模块（6 大指标 3×2 Bento Grid 卡片与底部 CTA Banner）
 - `src/components/FaqSection.tsx` - 常见问题手风琴组件
 - `pricing-review-checklist.md` - 定价方案评审与对齐清单
 
@@ -46,16 +47,11 @@ pnpm build
    - **Plan A**：顶部吸顶分类 Tabs 栏 + 直排 Bento 平铺卡片布局。
    - **Model Tokens 统称拉齐 (Token Naming Unification)**：
      - 在 Plan A 与 Plan B 的 `MultimodalChatCard` 及 `AnswerCard` 中，将原 `Vision tokens` 统一调整为 `Model tokens`，下挂于 `Search calls + model tokens` 总览下，计费说明统一显示为 `Gateway rates`。
-   - **Enterprise Custom 卡片特性条目扩充为 6 条（3×2 栅格排列）**：
-     - Enterprise 卡片中间特性条目扩展为 6 项：
-       1. `1M+ QPS`（分支架构图标 `BranchIcon`）
-       2. `Custom data`（数据库立体圆柱图标 `DataIcon`）
-       3. `Zero Data Retention (ZDR)`（斜杠护盾/不留存眼睛图标 `ZdrIcon`）
-       4. `Custom SLA`（闪电护盾 SLA 保障图标 `FlashIcon`）
-       5. `Dedicated Slack channel support`（Slack 专属渠道图标 `SlackIcon`）
-       6. `Volume discounts`（折扣图表图标 `ChartIcon`）
-     - 排版采用 `3 行 × 2 列`（`sm:grid-rows-3 sm:grid-cols-2 sm:grid-flow-col`）纵向优先栅格布局；
-     - **容器右内边距**：设置右侧 padding 为 24px（`sm:pr-6`）。
+   - **Enterprise 独立旗舰区域与 3×2 Bento Grid 卡片重构**：
+     - 将 Enterprise 从 QPS Plan 的从属横条拆分为完全独立的专属 Section（`#enterprise-plan`）；
+     - 将企业级指标独立拆分为 6 张专属 Bento 功能卡片（Higher Throughput SLA, Custom Data Sources Integration, Dedicated & Isolated Pipelines, Dedicated Slack & 24/7 Support, Custom Contract & Invoicing, Volume Tier Discounts）；
+     - 每张卡片包含专属图标容器、状态标签（如 `99.99% UPTIME`）、标题与详细技术说明；
+     - 底部配置独立通栏咨询横幅（含皇冠金高光与 `Contact Sales` 行动按钮）。
    - **QPS Plan 卡片价格 $ 符号顶对齐与 / month 原始样式保留**：
      - 在 QPS Plan 卡片价格展示区，通过 `self-start` 将 `$` 美元符号与大号价格数字的顶部精准对齐；
      - 完全保留大号数字的行高基准与 `/ month` 周期文案的原有字号、行高（`text-[14px] leading-[20px] text-[#57575E]`）及底部基线对齐位置。

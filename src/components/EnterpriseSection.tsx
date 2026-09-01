@@ -1,0 +1,190 @@
+import React from "react";
+import svgPaths from "./svgPaths";
+
+function FlashIcon() {
+  return (
+    <svg className="size-[22px]" fill="none" viewBox="0 0 20 20">
+      <path d="M9.4823 2.85915C9.77332 2.75026 10.0913 2.73607 10.3909 2.81859L10.5177 2.85915L15.68 4.795C15.9417 4.89315 16.1702 5.06367 16.3387 5.28667C16.5073 5.50968 16.609 5.776 16.632 6.0546L16.6372 6.17628V10.1313C16.6372 11.3263 16.3145 12.4992 15.7033 13.526C15.092 14.5529 14.2149 15.3957 13.1645 15.9654L12.9683 16.0679L10.4948 17.3047C10.3586 17.3727 10.2099 17.4118 10.0579 17.4197C9.90585 17.4276 9.75384 17.404 9.61135 17.3504L9.50516 17.3047L7.03169 16.0679C5.96282 15.5335 5.05806 14.7203 4.41295 13.7144C3.76783 12.7084 3.40629 11.5469 3.36648 10.3526L3.36279 10.1313V6.17628C3.3628 5.89687 3.44216 5.62322 3.59165 5.38717C3.74114 5.15112 3.95461 4.96238 4.20719 4.84294L4.32003 4.795L9.4823 2.85915ZM10 4.24043L4.83773 6.17628V10.1313C4.83775 11.0568 5.08659 11.9653 5.5582 12.7617C6.02981 13.5581 6.70685 14.213 7.51842 14.6579L7.69173 14.7486L10 15.9027L12.3083 14.7486C13.1362 14.3347 13.8377 13.7058 14.3392 12.9277C14.8406 12.1496 15.1236 11.251 15.1586 10.326L15.1623 10.1313V6.17628L10 4.24043ZM9.36799 7.25224C9.46472 7.09073 9.61957 6.97233 9.80079 6.92131C9.982 6.87028 10.1759 6.89049 10.3427 6.9778C10.5095 7.06512 10.6366 7.21291 10.6979 7.3909C10.7592 7.5689 10.7502 7.76361 10.6726 7.93514L10.632 8.0111L9.82817 9.35329H11.4617C12.0118 9.35329 12.3621 9.92261 12.1401 10.4057L12.1003 10.4809L10.6327 12.9278C10.5369 13.091 10.3819 13.2112 10.1998 13.2633C10.0178 13.3154 9.82275 13.2955 9.655 13.2077C9.48724 13.12 9.35966 12.9711 9.29869 12.7918C9.23771 12.6126 9.248 12.4168 9.32743 12.2449L9.36799 12.1689L10.1718 10.8275H8.53834C8.41377 10.8275 8.29118 10.7963 8.18181 10.7367C8.07243 10.677 7.97975 10.5909 7.91225 10.4862C7.84475 10.3815 7.80458 10.2616 7.79543 10.1374C7.78628 10.0131 7.80844 9.88858 7.85987 9.77512L7.89969 9.69916L9.36799 7.25224Z" fill="#039855" />
+    </svg>
+  );
+}
+
+function DataIcon() {
+  return (
+    <svg className="size-[22px]" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9.99973 3.22754C11.5547 3.22754 12.994 3.43624 14.07 3.79492C14.6041 3.97295 15.0905 4.20202 15.4587 4.49219C15.8184 4.7757 16.1706 5.20661 16.1706 5.78418V14.2158C16.1705 14.7757 15.8362 15.2031 15.4782 15.4912C15.1132 15.785 14.6246 16.0202 14.07 16.2051C12.956 16.5764 11.4921 16.7725 9.99973 16.7725C8.50756 16.7724 7.04433 16.5763 5.93039 16.2051C5.37584 16.0202 4.88723 15.785 4.52219 15.4912C4.16414 15.2031 3.82989 14.7758 3.8298 14.2158V5.78418C3.82984 5.20647 4.18198 4.77569 4.54172 4.49219C4.90993 4.20201 5.39629 3.97296 5.93039 3.79492C7.00635 3.43632 8.44504 3.22756 9.99973 3.22754ZM14.6706 11.7559C14.482 11.8412 14.2808 11.919 14.07 11.9893C12.956 12.3606 11.4921 12.5566 9.99973 12.5566C8.50753 12.5566 7.04434 12.3605 5.93039 11.9893C5.71957 11.919 5.5184 11.8411 5.3298 11.7559V14.1855C5.34141 14.2053 5.37493 14.2517 5.46262 14.3223C5.63722 14.4628 5.94307 14.6273 6.405 14.7812C7.32384 15.0875 8.61735 15.2724 9.99973 15.2725C11.3824 15.2725 12.6765 15.0876 13.5954 14.7812C14.0573 14.6273 14.3632 14.4628 14.5378 14.3223C14.6267 14.2507 14.6595 14.2038 14.6706 14.1846V11.7559ZM14.6706 7.53906C14.4804 7.62502 14.2791 7.70374 14.07 7.77344C12.994 8.13212 11.5547 8.34082 9.99973 8.34082C8.44501 8.3408 7.00636 8.13206 5.93039 7.77344C5.72128 7.70374 5.52005 7.62501 5.3298 7.53906V9.9707C5.34176 9.99083 5.3756 10.0374 5.46262 10.1074C5.63725 10.2479 5.94321 10.4125 6.405 10.5664C7.32382 10.8726 8.61746 11.0566 9.99973 11.0566C11.3823 11.0566 12.6765 10.8727 13.5954 10.5664C14.0574 10.4124 14.3632 10.2479 14.5378 10.1074C14.6272 10.0354 14.6597 9.98793 14.6706 9.96875V7.53906ZM9.99973 4.72754C8.56158 4.72756 7.29059 4.92268 6.405 5.21777C5.95853 5.3666 5.65082 5.52786 5.47043 5.66992C5.40731 5.71967 5.37105 5.7585 5.35031 5.78418C5.37103 5.80986 5.40721 5.84862 5.47043 5.89844C5.65081 6.04051 5.95846 6.20174 6.405 6.35059C7.29059 6.64569 8.56155 6.8408 9.99973 6.84082C11.4382 6.84082 12.7098 6.64578 13.5954 6.35059C14.0422 6.20167 14.3497 6.04056 14.53 5.89844C14.5926 5.8491 14.6273 5.80985 14.6482 5.78418C14.6273 5.75851 14.5925 5.71919 14.53 5.66992C14.3496 5.52781 14.0421 5.36667 13.5954 5.21777C12.7098 4.92259 11.4382 4.72754 9.99973 4.72754Z" fill="#039855"/>
+    </svg>
+  );
+}
+
+function BranchIcon() {
+  return (
+    <svg className="size-[22px]" fill="none" viewBox="0 0 20 20">
+      <path clipRule="evenodd" fillRule="evenodd" d={svgPaths.p2ba1d80} fill="#039855" />
+    </svg>
+  );
+}
+
+function SlackIcon() {
+  return (
+    <svg className="size-[22px]" fill="none" viewBox="0 0 20 20">
+      <path d="M6.44755 11.6321C6.44635 11.9703 6.31142 12.2943 6.07222 12.5333C5.83302 12.7724 5.50896 12.9072 5.17077 12.9082C4.83235 12.9073 4.50803 12.7726 4.26867 12.5333C4.02931 12.2941 3.89437 11.9698 3.89334 11.6314C3.89334 10.9285 4.46779 10.354 5.17077 10.354H6.44755V11.6321ZM7.09145 11.6321C7.09145 10.9291 7.66591 10.3546 8.36888 10.3546C9.07185 10.3546 9.64566 10.9291 9.64566 11.6321V14.8302C9.6448 15.1686 9.51003 15.4929 9.27079 15.7323C9.03155 15.9716 8.7073 16.1066 8.36888 16.1076C8.03035 16.1068 7.70593 15.9719 7.46655 15.7325C7.22717 15.4931 7.09231 15.1687 7.09145 14.8302V11.6321ZM8.36888 6.44772C8.03046 6.44686 7.70614 6.31209 7.46678 6.07285C7.22742 5.83362 7.09248 5.50936 7.09145 5.17094C7.09145 4.46797 7.66591 3.89417 8.36888 3.89417C9.07185 3.89417 9.64566 4.46797 9.64566 5.17094V6.44837L8.36888 6.44772ZM8.36888 7.09163C9.07185 7.09163 9.64566 7.66543 9.64566 8.3684C9.6448 8.70682 9.51003 9.03115 9.27079 9.27051C9.03155 9.50987 8.7073 9.6448 8.36888 9.64583H5.17077C4.83224 9.64497 4.50782 9.51011 4.26844 9.27074C4.02906 9.03136 3.8942 8.70694 3.89334 8.3684C3.89334 7.66543 4.46779 7.09163 5.17077 7.09163H8.36888ZM13.5526 8.3684C13.5526 7.66543 14.127 7.09163 14.83 7.09163C15.533 7.09163 16.1074 7.66543 16.1074 8.3684C16.1066 8.70694 15.9717 9.03136 15.7323 9.27074C15.493 9.51011 15.1685 9.64497 14.83 9.64583H13.5526V8.3684ZM12.9093 8.3684C12.9085 8.70694 12.7736 9.03136 12.5342 9.27074C12.2949 9.51011 11.9704 9.64497 11.6319 9.64583C11.2934 9.64497 10.9689 9.51011 10.7296 9.27074C10.4902 9.03136 10.3553 8.70694 10.3545 8.3684V5.17094C10.3545 4.46797 10.9289 3.89417 11.6319 3.89417C12.3349 3.89417 12.9093 4.46797 12.9093 5.17094V8.3684ZM11.6319 13.5528C12.3349 13.5528 12.9093 14.1272 12.9093 14.8302C12.9085 15.1687 12.7736 15.4931 12.5342 15.7325C12.2949 15.9719 11.9704 16.1068 11.6319 16.1076C11.2934 16.1068 10.9689 15.9719 10.7296 15.7325C10.4902 15.4931 10.3553 15.1687 10.3545 14.8302V13.5528H11.6319ZM11.6319 12.9089C11.2935 12.908 10.9692 12.7732 10.7298 12.534C10.4904 12.2947 10.3555 11.9705 10.3545 11.6321C10.3545 10.9291 10.9289 10.3546 11.6319 10.3546H14.83C15.533 10.3546 16.1074 10.9291 16.1074 11.6321C16.1064 11.9705 15.9715 12.2947 15.7321 12.534C15.4928 12.7732 15.1684 12.908 14.83 12.9089H11.6319Z" fill="#039855" />
+    </svg>
+  );
+}
+
+function ContractIcon() {
+  return (
+    <svg className="size-[22px]" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 16.3325C13.4974 16.3325 16.3325 13.4974 16.3325 10C16.3325 6.50265 13.4974 3.66748 10 3.66748C6.50265 3.66748 3.66748 6.50265 3.66748 10C3.66748 13.4974 6.50265 16.3325 10 16.3325Z" stroke="#039855" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M7.18555 10L9.29639 12.1109L12.347 8.59521" stroke="#039855" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  );
+}
+
+function ChartIcon() {
+  return (
+    <svg className="size-[22px]" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8.63715 3.06392C9.01725 2.73995 9.50034 2.56201 9.99977 2.56201C10.4992 2.56201 10.9823 2.73995 11.3624 3.06392L12.3063 3.86847C12.4186 3.96424 12.5583 4.02208 12.7054 4.03372L13.9413 4.13175C14.4391 4.17145 14.9065 4.38723 15.2597 4.74037C15.6128 5.09351 15.8286 5.56091 15.8683 6.05875L15.9663 7.29534C15.9781 7.44223 16.036 7.58165 16.1316 7.69376L16.9361 8.63766C17.2601 9.01776 17.438 9.50085 17.438 10.0003C17.438 10.4997 17.2601 10.9828 16.9361 11.3629L16.1316 12.3068C16.036 12.4189 15.9781 12.5583 15.9663 12.7052L15.8683 13.9411C15.8286 14.4389 15.6128 14.9064 15.2597 15.2595C14.9065 15.6126 14.4391 15.8284 13.9413 15.8681L12.7047 15.9661C12.5577 15.9781 12.4183 16.0362 12.3063 16.1321L11.3624 16.9359C10.9823 17.2599 10.4992 17.4379 9.99977 17.4379C9.50034 17.4379 9.01725 17.2599 8.63715 16.9359L7.69325 16.1321C7.58114 16.0365 7.44172 15.9786 7.29483 15.9668L6.05894 15.8681C5.5611 15.8284 5.0937 15.6126 4.74056 15.2595C4.38742 14.9064 4.17164 14.4389 4.13194 13.9411L4.03391 12.7052C4.02207 12.558 3.96398 12.4183 3.86796 12.3061L3.06411 11.3622C2.74033 10.9822 2.5625 10.4992 2.5625 9.99993C2.5625 9.50066 2.74033 9.01771 3.06411 8.63766L3.86796 7.69376C3.96373 7.58146 4.02157 7.44177 4.03321 7.29464L4.13194 6.05875C4.1718 5.56104 4.38765 5.0938 4.74077 4.7408C5.0939 4.3878 5.56122 4.17213 6.05894 4.13245L7.29483 4.03442C7.44196 4.02278 7.58165 3.96494 7.69395 3.86917L8.63715 3.06392ZM10.4542 4.12965C10.3275 4.02172 10.1665 3.96245 10.0001 3.96245C9.8337 3.96245 9.67271 4.02172 9.54603 4.12965L8.60214 4.9349C8.26543 5.22144 7.84691 5.39443 7.40616 5.42925L6.17028 5.52799C6.00441 5.54127 5.84869 5.61318 5.73103 5.73084C5.61337 5.8485 5.54146 6.00422 5.52818 6.17009L5.42944 7.40667C5.39428 7.84726 5.22104 8.26552 4.93439 8.60195L4.12914 9.54584C4.02121 9.67252 3.96194 9.83351 3.96194 9.99993C3.96194 10.1664 4.02121 10.3273 4.12914 10.454L4.93439 11.3979C5.22104 11.7343 5.39428 12.1526 5.42944 12.5932L5.52748 13.8298C5.54078 13.9958 5.61279 14.1516 5.7306 14.2692C5.8484 14.3869 6.00428 14.4588 6.17028 14.4719L7.40616 14.5706C7.84699 14.6056 8.26552 14.7789 8.60214 15.0657L9.54603 15.8709C9.67271 15.9788 9.8337 16.0381 10.0001 16.0381C10.1665 16.0381 10.3275 15.9788 10.4542 15.8709L11.3981 15.0657C11.7345 14.779 12.1528 14.6058 12.5934 14.5706L13.8293 14.4726C13.9954 14.4594 14.1513 14.3875 14.2692 14.2697C14.387 14.1519 14.4589 13.9959 14.4721 13.8298L14.5701 12.5932C14.6051 12.1528 14.7788 11.7347 15.0659 11.3979L15.8704 10.454C15.9783 10.3273 16.0376 10.1664 16.0376 9.99993C16.0376 9.83351 15.9783 9.67252 15.8704 9.54584L15.0652 8.60195C14.7788 8.26543 14.6058 7.84717 14.5708 7.40667L14.4721 6.17009C14.4588 6.00411 14.3868 5.8483 14.2689 5.73063C14.1511 5.61295 13.9953 5.54111 13.8293 5.52799L12.5934 5.42995C12.1527 5.39459 11.7344 5.22111 11.3981 4.9342L10.4542 4.12965ZM11.9807 7.02925L12.9708 8.01936L8.01955 12.9713L7.02874 11.9805L11.9807 7.02925ZM8.76179 8.7623C8.6649 8.86261 8.549 8.94263 8.42085 8.99768C8.29271 9.05272 8.15489 9.0817 8.01542 9.08291C7.87596 9.08412 7.73765 9.05755 7.60857 9.00473C7.47949 8.95192 7.36222 8.87393 7.2636 8.77531C7.16498 8.6767 7.08699 8.55942 7.03418 8.43034C6.98137 8.30126 6.9548 8.16296 6.95601 8.02349C6.95722 7.88403 6.98619 7.74621 7.04124 7.61806C7.09629 7.48992 7.1763 7.37402 7.27662 7.27713C7.47472 7.08581 7.74003 6.97994 8.01542 6.98233C8.29082 6.98473 8.55425 7.09519 8.74899 7.28993C8.94373 7.48467 9.05419 7.7481 9.05659 8.02349C9.05898 8.29889 8.95311 8.5642 8.76179 8.7623ZM11.2378 12.7234C11.3346 12.8237 11.4505 12.9038 11.5787 12.9588C11.7068 13.0139 11.8447 13.0428 11.9841 13.044C12.1236 13.0453 12.2619 13.0187 12.391 12.9659C12.5201 12.9131 12.6373 12.8351 12.7359 12.7365C12.8346 12.6378 12.9125 12.5206 12.9654 12.3915C13.0182 12.2624 13.0447 12.1241 13.0435 11.9846C13.0423 11.8452 13.0133 11.7073 12.9583 11.5792C12.9033 11.4511 12.8232 11.3352 12.7229 11.2383C11.065 11.4516 10.9546 11.7128 10.9508 11.9863C10.9469 12.2598 11.0499 12.524 11.2378 12.7227" fill="#039855"/>
+    </svg>
+  );
+}
+
+interface EnterpriseFeature {
+  title: string;
+  badge: string;
+  description: string;
+  icon: React.ReactNode;
+}
+
+const enterpriseFeatures: EnterpriseFeature[] = [
+  {
+    title: "Higher Throughput SLA",
+    badge: "99.99% UPTIME",
+    description: "Guaranteed enterprise-grade throughput and uptime SLA with unthrottled dedicated concurrency pipelines for high-volume production.",
+    icon: <FlashIcon />
+  },
+  {
+    title: "Custom Data Sources Integration",
+    badge: "CUSTOM INGESTION",
+    description: "Seamlessly integrate proprietary enterprise data silos, private internal documents, and tailored continuous index synchronization.",
+    icon: <DataIcon />
+  },
+  {
+    title: "Dedicated & Isolated Pipelines",
+    badge: "ZERO CONTENTION",
+    description: "Physically isolated compute clusters and dedicated network routes to ensure consistent ultra-low latency and strict data governance.",
+    icon: <BranchIcon />
+  },
+  {
+    title: "Dedicated Slack & 24/7 Support",
+    badge: "WHITE-GLOVE",
+    description: "Direct shared Slack/Teams channel with core Octen engineers, dedicated solutions architects, and rapid round-the-clock emergency response.",
+    icon: <SlackIcon />
+  },
+  {
+    title: "Custom Contract & Invoicing",
+    badge: "ENTERPRISE TERMS",
+    description: "Tailored Master Services Agreements (MSA), flexible net-payment invoicing, security compliance reviews, and multi-organization cost allocation.",
+    icon: <ContractIcon />
+  },
+  {
+    title: "Volume Tier Discounts",
+    badge: "ECONOMIES OF SCALE",
+    description: "Substantial volume-based pricing discounts, predictable annual commitment packages, and custom token allocation models for large-scale operations.",
+    icon: <ChartIcon />
+  }
+];
+
+export default function EnterpriseSection() {
+  return (
+    <section 
+      id="enterprise-plan" 
+      className="content-stretch flex flex-col items-center gap-[32px] sm:gap-[48px] pb-[60px] sm:pb-[100px] mt-[40px] sm:mt-[80px] pt-0 relative shrink-0 w-full max-w-[1312px] px-4 box-border scroll-mt-[90px]"
+    >
+      {/* 1. Header Area */}
+      <div className="text-center flex flex-col items-center gap-3 sm:gap-4 shrink-0 px-4 max-w-[840px]">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#E8F8EE] border border-[#D0F2DF] text-[#039855] text-[13px] font-['DM_Sans',sans-serif] font-medium tracking-wide">
+          <span className="size-1.5 rounded-full bg-[#039855]" />
+          Enterprise Custom
+        </div>
+        <h2 className="font-['Fraunces',serif] font-bold text-[28px] sm:text-[44px] leading-[1.15] sm:leading-[48px] text-[#09090b]">
+          Tailored infrastructure for mission-critical scale
+        </h2>
+        <p className="font-['DM_Sans',sans-serif] font-normal text-[16px] leading-[24px] sm:leading-[26px] text-[#5d605b]">
+          Engineered for high-volume enterprise teams requiring guaranteed throughput SLAs, private data ingestion pipelines, isolated compute clusters, and white-glove technical support.
+        </p>
+      </div>
+
+      {/* 2. 3x2 Bento Grid of Feature Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full">
+        {enterpriseFeatures.map((item, idx) => (
+          <div 
+            key={idx}
+            className="group relative bg-white rounded-[20px] border border-[#E5E7EB] hover:border-[#B5B5B0] hover:shadow-[0_12px_32px_rgba(0,0,0,0.05)] p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 overflow-hidden box-border"
+          >
+            {/* Ambient hover light glow */}
+            <div className="absolute -top-10 -right-10 size-36 bg-[#70FE7E]/10 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+            <div className="flex flex-col relative z-10">
+              {/* Card Header: Icon + Badge */}
+              <div className="flex items-center justify-between w-full mb-5">
+                <div className="size-[42px] rounded-[10px] bg-[#F4FBF6] border border-[#D0F2DF] flex items-center justify-center text-[#039855] shrink-0 group-hover:scale-105 transition-transform duration-200">
+                  {item.icon}
+                </div>
+                <span className="px-2.5 py-1 rounded-[6px] bg-[#F4F4F5] text-[#52525B] text-[11px] font-['JetBrains_Mono',monospace] font-medium tracking-wider border border-[#E4E4E7]">
+                  {item.badge}
+                </span>
+              </div>
+
+              {/* Title */}
+              <h3 className="font-['Fraunces',serif] font-bold text-[20px] sm:text-[21px] leading-[1.3] text-[#100F09] mb-2.5">
+                {item.title}
+              </h3>
+
+              {/* Description */}
+              <p className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[22px] text-[#57575E]">
+                {item.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* 3. Bottom Full-Width CTA Banner */}
+      <div className="relative w-full rounded-[24px] bg-[#FAFAF8] border border-[#E7E7E3] hover:border-[#D1D5DB] p-6 sm:p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden isolate shadow-[0_4px_20px_rgba(0,0,0,0.02)] transition-colors duration-200">
+        {/* Background ambient radial highlights */}
+        <div className="absolute left-[-50px] top-[-50px] size-[280px] bg-[#70FE7E]/15 blur-[60px] pointer-events-none rounded-full" />
+        <div className="absolute right-[-50px] bottom-[-50px] size-[280px] bg-[#DDFE70]/15 blur-[60px] pointer-events-none rounded-full" />
+
+        {/* Left info */}
+        <div className="relative z-10 flex flex-col items-center md:items-start text-center md:text-left gap-2 max-w-[700px]">
+          <div className="flex items-center gap-2">
+            <svg className="size-[20px] text-[#C6A55A]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.42 3C17.7725 3.00011 18.1188 3.09341 18.4236 3.27042C18.7285 3.44744 18.9811 3.70189 19.156 4.008L22.49 9.84C22.7076 10.2209 22.7939 10.6627 22.7358 11.0974C22.6776 11.5322 22.4781 11.9358 22.168 12.246L12.885 21.529C12.7689 21.6451 12.6311 21.7372 12.4794 21.8001C12.3278 21.8629 12.1652 21.8952 12.001 21.8952C11.8368 21.8952 11.6743 21.8629 11.5226 21.8001C11.3709 21.7372 11.2331 21.6451 11.117 21.529L1.834 12.246C1.52392 11.9358 1.32443 11.5322 1.26624 11.0974C1.20806 10.6627 1.29441 10.2209 1.512 9.84L4.845 4.007C5.0199 3.70123 5.27246 3.44707 5.57712 3.27024C5.88174 3.09341 6.22774 3.00019 6.58 3H17.42ZM16.707 9.293C16.5195 9.10553 16.2652 9.00021 16 9.00021C15.7348 9.00021 15.4805 9.10553 15.293 9.293L12 12.586L8.706 9.293C8.61476 9.19749 8.50441 9.12131 8.38241 9.0689C8.2604 9.01649 8.12918 8.9889 7.9964 8.98775C7.86362 8.9866 7.73195 9.0119 7.60905 9.06218C7.48615 9.11246 7.3745 9.18671 7.28061 9.28061C7.18671 9.3745 7.11246 9.48615 7.06218 9.60905C7.0119 9.73194 6.9866 9.86362 6.98775 9.9964C6.98891 10.1292 7.01649 10.2604 7.0689 10.3824C7.12131 10.5044 7.19749 10.6148 7.293 10.707L11.116 14.53C11.2321 14.6461 11.3699 14.7382 11.5216 14.8011C11.6733 14.8639 11.8358 14.8962 12 14.8962C12.1642 14.8962 12.3268 14.8639 12.4784 14.8011C12.6301 14.7382 12.7679 14.6461 12.884 14.53L16.707 10.707C16.8945 10.5195 16.9998 10.2652 16.9998 10C16.9998 9.73484 16.8945 9.48053 16.707 9.293Z" fill="#C6A55A"/>
+            </svg>
+            <span className="font-['Fraunces',serif] font-bold text-[22px] sm:text-[26px] text-[#100F09] leading-tight">
+              Ready to design a custom enterprise deployment?
+            </span>
+          </div>
+          <p className="font-['DM_Sans',sans-serif] font-normal text-[15px] leading-[22px] text-[#57575E]">
+            Connect directly with our infrastructure architects to scope search throughput, custom SLAs, and enterprise procurement terms.
+          </p>
+        </div>
+
+        {/* Right action */}
+        <div className="relative z-10 flex flex-col items-center md:items-end gap-2 shrink-0 w-full md:w-auto">
+          <a
+            href="mailto:support@octen.ai?subject=Octen%20Enterprise%20QPS%20Plan%20Inquiry"
+            className="w-full md:w-auto min-w-[190px] h-[46px] px-8 rounded-full bg-[#100F09] text-white font-['DM_Sans',sans-serif] font-semibold text-[16px] flex items-center justify-center btn-dark-hover hover:shadow-[0_4px_20px_rgba(0,0,0,0.16)] active:scale-[0.98] transition-all duration-200 select-none box-border text-center"
+          >
+            Contact Sales
+          </a>
+          <span className="text-[13px] font-['JetBrains_Mono',monospace] text-[#71717A]">
+            support@octen.ai
+          </span>
+        </div>
+      </div>
+    </section>
+  );
+}
