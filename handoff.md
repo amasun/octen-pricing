@@ -50,7 +50,7 @@ pnpm build
        1. `Custom data`（专属数据定制）
        2. `1M+ QPS`（分支架构图标）
        3. `Zero Data Retention (ZDR)`（数据安全图标）
-       4. `Custom SLA`（SLA 服务保障）
+       4. `Custom SLA`（闪电护盾 SLA 保障图标 `FlashIcon`）
        5. `Dedicated Slack channel support`（Slack 专属渠道图标）
        6. `Volume discounts`（折扣图表图标）
      - 排版采用 `3 行 × 2 列`（`sm:grid-rows-3 sm:grid-cols-2 sm:grid-flow-col`）的纵向优先栅格布局，保持原业务与功能图标不变，左右列对称平衡；
