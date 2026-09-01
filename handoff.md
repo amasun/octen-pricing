@@ -90,7 +90,7 @@ pnpm build
        - 点击 **Subscribe to a QPS Plan** 卡片平滑滚动定位至 `#qps-plans`（QPS 阶梯方案总览区）；
        - 点击 **Enterprise Plan** 卡片精准平滑滚动定位至 `#enterprise-plan`（Enterprise Custom 卡片专属锚点）；
        - 卡片整体保持手型指针 `cursor-pointer`，移除整体 Y 轴位移跳动（无 `-translate-y`），完整保留平滑柔和的投影浮现与边框过渡反馈（`hover:shadow-[0px_12px_28px_rgba(0,0,0,0.08)]` 与 `hover:border-[#D1D5DB]`）；
-       - 卡片之间的 `+` 与 `/` 分隔符圆标外轮廓移除了投影（无 `shadow-2xs`），呈现扁平极简利落质感。
+       - 彻底移除了卡片之间的 `+` 与 `/` 符号，三张卡片间距统一调整为规整的 `16px`（`gap-[16px]`）。
 
 ---
 

@@ -623,30 +623,6 @@ function HeroLightGlow() {
   );
 }
 
-function PlusSeparator() {
-  return (
-    <div className="shrink-0 z-20 pointer-events-none flex items-center justify-center self-center h-[20px] md:h-[32px] w-full md:w-auto my-0.5 md:my-0">
-      <div className="size-[20px] rounded-full bg-[#F4F4F5] border border-[#E4E4E7] flex items-center justify-center text-[#71717A]">
-        <svg className="size-[10px]" viewBox="0 0 12 12" fill="none">
-          <path d="M6 1.5v9M1.5 6h9" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-        </svg>
-      </div>
-    </div>
-  );
-}
-
-function SlashSeparator() {
-  return (
-    <div className="shrink-0 z-20 pointer-events-none flex items-center justify-center self-center h-[20px] md:h-[32px] w-full md:w-auto my-0.5 md:my-0">
-      <div className="size-[20px] rounded-full bg-[#F4F4F5] border border-[#E4E4E7] flex items-center justify-center text-[#71717A]">
-        <svg className="size-[10px]" viewBox="0 0 12 12" fill="none">
-          <path d="M8.5 2L3.5 10" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-        </svg>
-      </div>
-    </div>
-  );
-}
-
 function HowOctenWorksSection() {
   return (
     <div className="bg-white content-stretch flex flex-col items-center pt-[60px] sm:pt-[84px] pb-[50px] sm:pb-[80px] px-4 sm:px-6 relative w-full isolate">
@@ -660,12 +636,10 @@ function HowOctenWorksSection() {
         </p>
       </div>
 
-      {/* Entry Cards Container (3 Cards on Desktop, 1 Column on Mobile) */}
-      <div className="content-stretch flex flex-col md:flex-row gap-[6px] sm:gap-[8px] md:gap-[10px] items-stretch justify-center relative shrink-0 w-full max-w-[1280px]">
+      {/* Entry Cards Container (3 Cards on Desktop, 1 Column on Mobile, 16px gap) */}
+      <div className="content-stretch flex flex-col md:flex-row gap-[16px] items-stretch justify-center relative shrink-0 w-full max-w-[1280px]">
         <PayAsYouGoCard />
-        <PlusSeparator />
         <QpsPlanCard />
-        <SlashSeparator />
         <PlaceholderCard />
       </div>
     </div>
