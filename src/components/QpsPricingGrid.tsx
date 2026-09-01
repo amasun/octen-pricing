@@ -73,7 +73,17 @@ function ContractIcon({ color = "#039855" }: { color?: string }) {
   );
 }
 
-function FeatureIcon({ type, color }: { type?: "branch" | "check" | "flash" | "zdr" | "slack" | "chart" | "contract" | "none"; color?: string }) {
+function DataIcon({ color = "#039855" }: { color?: string }) {
+  return (
+    <div className="size-[20px] shrink-0 flex items-center justify-center">
+      <svg className="size-[20px]" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.2465 13.9041V6.09592C16.2465 4.40311 13.3864 2.97266 10 2.97266C6.61361 2.97266 3.75348 4.40311 3.75348 6.09592V13.9041C3.75348 15.5969 6.61361 17.0273 10 17.0273C13.3864 17.0273 16.2465 15.5969 16.2465 13.9041ZM10 4.53429C12.882 4.53429 14.631 5.71098 14.6849 6.09124C14.631 6.48086 12.882 7.65755 10 7.65755C7.11801 7.65755 5.36899 6.48086 5.31511 6.10061C5.36899 5.71098 7.11801 4.53429 10 4.53429ZM5.31511 8.13151C6.46994 8.79286 8.15494 9.21918 10 9.21918C11.8451 9.21918 13.5301 8.79286 14.6849 8.13151V9.99532C14.631 10.3849 12.882 11.5616 10 11.5616C7.11801 11.5616 5.36899 10.3849 5.31511 10V8.13151ZM5.31511 13.9041V12.0356C6.46994 12.6969 8.15494 13.1233 10 13.1233C11.8451 13.1233 13.5301 12.6969 14.6849 12.0356V13.8994C14.631 14.289 12.882 15.4657 10 15.4657C7.11801 15.4657 5.36899 14.289 5.31511 13.9041Z" fill={color || "#039855"}/>
+      </svg>
+    </div>
+  );
+}
+
+function FeatureIcon({ type, color }: { type?: "branch" | "check" | "flash" | "zdr" | "slack" | "chart" | "contract" | "data" | "none"; color?: string }) {
   if (!type || type === "none") return null;
   if (type === "branch") return <BranchIcon color={color} />;
   if (type === "flash") return <FlashIcon color={color} />;
@@ -81,12 +91,13 @@ function FeatureIcon({ type, color }: { type?: "branch" | "check" | "flash" | "z
   if (type === "slack") return <SlackIcon color={color} />;
   if (type === "chart") return <ChartIcon color={color} />;
   if (type === "contract") return <ContractIcon color={color} />;
+  if (type === "data") return <DataIcon color={color} />;
   return <CheckIcon stroke={color || "#100F09"} />;
 }
 
 interface FeatureItem {
   text: React.ReactNode;
-  icon?: "branch" | "check" | "flash" | "zdr" | "slack" | "chart" | "contract" | "none";
+  icon?: "branch" | "check" | "flash" | "zdr" | "slack" | "chart" | "contract" | "data" | "none";
 }
 
 function PlanCardItem({
@@ -329,7 +340,7 @@ export default function QpsPricingGrid() {
       period: "Tailored Plan",
       features: [
         { text: <><strong className="font-bold">1M+ QPS</strong></>, icon: "branch" },
-        { text: "Custom data", icon: "check" },
+        { text: "Custom data", icon: "data" },
         { text: "Zero Data Retention (ZDR)", icon: "zdr" },
         { text: "Custom SLA", icon: "flash" },
         { text: "Dedicated Slack channel support", icon: "slack" },
