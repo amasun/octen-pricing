@@ -63,9 +63,12 @@ pnpm build
      - 保持 **Free** 卡片的 `Start Free` 与 **Enterprise** 卡片的 `Contact Sales` 不变。
    - **Hero 顶部文案精简 (Hero Subtitle Cleanup)**：
      - 移除了主标题下方的冗余文案 Usage-based pricing for the search infrastructure behind your agents.，使首屏聚焦于核心权益提示（Sign up and get  in free balance.）及行动按键；
-   - **Enterprise Plan 专属视觉意象确立为【专线通道拓扑与隔离网关】(Dedicated Line & Private Hub)**：
-     - 移除了临时的 4 意象对比实验室，将 Card 3（Enterprise Plan）顶部的黑色图形区正式确立为 **Option 4（专线通道拓扑与隔离网关）**；
-     - **视觉细节**：以双轨发光光纤管道连接企业私网与私有云，中心配置带高安全数字保险锁的金库网关 Hub 与双向流光粒子，底部标注 ENTERPRISE LAYER 呼吸微光标签，直观彰显 Enterprise 的 Dedicated Slack 专属即时渠道、Custom Data 私有专线与安全隔离价值。
+   - **Enterprise Plan（第3张卡片）视觉图形对齐 Figma 规范与全量动态细节 (Enterprise Card Figma 13519:907 Alignment & Full Dynamic Details)**：
+     - **左侧数据端 (Custom Data)**：高质感立体圆柱数据库图标盒子，外层配置 3 层阶梯错落、持续向外放大并渐隐消失的**涟漪光环波纹 (Ripple Waves)**；
+     - **左侧连接层 (Data Ingestion)**：由 16 组多尺度（2px–4px）、随机 Y 轴抖动及错峰时序的**不规则数据粒子流 (Irregular Random Particles Stream)**，源源不断自左向右注入中心 Octen 引擎；
+     - **中心核心 (Octen Engine Hub)**：黑色圆角高斯发光 Hub，内置经典霓虹绿 Octen 芯片 Logo，带呼吸微光光晕 (Breathing Aura Pulse)；
+     - **右侧连接层 (Dual Channels)**：上下双条高导光纤通道，**严格呈现相反方向的运动动画**——上方通道自左向右（Octen ➔ Dedicated Support），下方通道自右向左（Dedicated Support ➔ Octen），生动展现全双工私有即时互通；
+     - **右侧支持端 (Dedicated Support)**：Fluent 人物即时聊天图标盒子，同样配置 3 层向外放大渐隐的**涟漪光环波纹 (Ripple Waves)**。
    - **How Octen Works 扩展为 3 张卡片布局与去按钮化极简交互 (How Octen Works 3 Cards & No-Button Minimalist)**：
      - 容器宽度扩展为最大 `max-w-[1280px]`（与下方 1312px 页面容器精准对齐）；
      - 布局由 2 张卡片平滑扩展为 3 张卡片：
