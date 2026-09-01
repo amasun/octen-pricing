@@ -264,27 +264,26 @@ body, #root, #root > div, [data-name="Octen AI | Infrastructure Pricing"] {
   animation: shadowRippleWave 4.2s linear 2.8s infinite;
 }
 
+/* Data Ingestion Particle Stream - Pure Linear Straight Line Motion */
 @keyframes dotStreamIn {
   0% {
-    transform: translateX(0px) translateY(0px) scale(0.6);
+    transform: translateX(0px);
     opacity: 0;
   }
-  12% {
-    opacity: 0.95;
-    transform: translateX(12px) translateY(calc(var(--jitter-y, 0px) * 0.2)) scale(1);
+  10% {
+    opacity: 1;
   }
-  80% {
-    opacity: 0.95;
-    transform: translateX(calc(var(--stream-x, 85.5px) * 0.82)) translateY(calc(var(--jitter-y, 0px) * 0.9)) scale(0.9);
+  90% {
+    opacity: 1;
   }
   100% {
-    transform: translateX(var(--stream-x, 85.5px)) translateY(var(--jitter-y, 0px)) scale(0.4);
+    transform: translateX(var(--stream-x, 88px));
     opacity: 0;
   }
 }
 
 .animate-dot-stream {
-  animation: dotStreamIn var(--stream-dur, 1.8s) cubic-bezier(0.25, 0.1, 0.25, 1) var(--stream-delay, 0s) infinite;
+  animation: dotStreamIn var(--stream-dur, 2.0s) linear var(--stream-delay, 0s) infinite;
 }
 
 @keyframes laserFlowRight {

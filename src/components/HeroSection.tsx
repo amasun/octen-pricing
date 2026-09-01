@@ -348,22 +348,41 @@ function PayAsYouGoCard() {
 }
 
 const STREAM_PARTICLES = [
-  { id: 1, y: -13, size: 3, dur: "1.6s", delay: "0.0s", opacity: 0.95 },
-  { id: 2, y: -7, size: 2.5, dur: "2.1s", delay: "0.35s", opacity: 0.85 },
-  { id: 3, y: 0, size: 3.5, dur: "1.5s", delay: "0.75s", opacity: 1 },
-  { id: 4, y: 7, size: 2, dur: "2.3s", delay: "1.15s", opacity: 0.75 },
-  { id: 5, y: 13, size: 3, dur: "1.8s", delay: "0.2s", opacity: 0.9 },
-  { id: 6, y: -10, size: 4, dur: "1.6s", delay: "1.45s", opacity: 1 },
-  { id: 7, y: -3, size: 2, dur: "2.0s", delay: "0.6s", opacity: 0.8 },
-  { id: 8, y: 4, size: 3, dur: "1.9s", delay: "0.95s", opacity: 0.95 },
-  { id: 9, y: 10, size: 2.5, dur: "1.7s", delay: "1.65s", opacity: 0.85 },
-  { id: 10, y: -15, size: 2, dur: "2.4s", delay: "0.25s", opacity: 0.7 },
-  { id: 11, y: -6, size: 3.5, dur: "1.55s", delay: "1.25s", opacity: 0.95 },
-  { id: 12, y: 1, size: 2.5, dur: "2.2s", delay: "1.85s", opacity: 0.85 },
-  { id: 13, y: 8, size: 4, dur: "1.45s", delay: "0.5s", opacity: 1 },
-  { id: 14, y: 14, size: 2, dur: "2.0s", delay: "1.05s", opacity: 0.75 },
-  { id: 15, y: -4, size: 3, dur: "1.8s", delay: "2.05s", opacity: 0.9 },
-  { id: 16, y: 5, size: 2.5, dur: "1.7s", delay: "0.85s", opacity: 0.85 },
+  // Line 1 (y = 12.2px)
+  { id: 1, lineY: 12.2, size: 3, dur: "1.8s", delay: "0.0s", opacity: 0.95 },
+  { id: 2, lineY: 12.2, size: 2.5, dur: "1.8s", delay: "0.5s", opacity: 0.9 },
+  { id: 3, lineY: 12.2, size: 3.5, dur: "1.8s", delay: "1.0s", opacity: 1 },
+  { id: 4, lineY: 12.2, size: 2.5, dur: "1.8s", delay: "1.45s", opacity: 0.85 },
+  { id: 5, lineY: 12.2, size: 3, dur: "1.8s", delay: "1.9s", opacity: 0.95 },
+  { id: 6, lineY: 12.2, size: 2, dur: "1.8s", delay: "2.35s", opacity: 0.8 },
+  { id: 7, lineY: 12.2, size: 3, dur: "1.8s", delay: "2.8s", opacity: 1 },
+
+  // Line 2 (y = 17.2px)
+  { id: 8, lineY: 17.2, size: 2.5, dur: "1.8s", delay: "0.2s", opacity: 0.9 },
+  { id: 9, lineY: 17.2, size: 3.5, dur: "1.8s", delay: "0.7s", opacity: 1 },
+  { id: 10, lineY: 17.2, size: 2, dur: "1.8s", delay: "1.15s", opacity: 0.8 },
+  { id: 11, lineY: 17.2, size: 3, dur: "1.8s", delay: "1.6s", opacity: 0.95 },
+  { id: 12, lineY: 17.2, size: 2.5, dur: "1.8s", delay: "2.1s", opacity: 0.9 },
+  { id: 13, lineY: 17.2, size: 3.5, dur: "1.8s", delay: "2.55s", opacity: 1 },
+  { id: 14, lineY: 17.2, size: 2, dur: "1.8s", delay: "3.0s", opacity: 0.85 },
+
+  // Line 3 (y = 22.25px)
+  { id: 15, lineY: 22.25, size: 3, dur: "1.8s", delay: "0.1s", opacity: 0.95 },
+  { id: 16, lineY: 22.25, size: 2.5, dur: "1.8s", delay: "0.6s", opacity: 0.85 },
+  { id: 17, lineY: 22.25, size: 3.5, dur: "1.8s", delay: "1.05s", opacity: 1 },
+  { id: 18, lineY: 22.25, size: 2, dur: "1.8s", delay: "1.5s", opacity: 0.8 },
+  { id: 19, lineY: 22.25, size: 3, dur: "1.8s", delay: "1.95s", opacity: 0.95 },
+  { id: 20, lineY: 22.25, size: 2.5, dur: "1.8s", delay: "2.4s", opacity: 0.9 },
+  { id: 21, lineY: 22.25, size: 3.5, dur: "1.8s", delay: "2.9s", opacity: 1 },
+
+  // Line 4 (y = 27.6px)
+  { id: 22, lineY: 27.6, size: 2.5, dur: "1.8s", delay: "0.35s", opacity: 0.9 },
+  { id: 23, lineY: 27.6, size: 3, dur: "1.8s", delay: "0.85s", opacity: 1 },
+  { id: 24, lineY: 27.6, size: 2, dur: "1.8s", delay: "1.3s", opacity: 0.8 },
+  { id: 25, lineY: 27.6, size: 3.5, dur: "1.8s", delay: "1.75s", opacity: 1 },
+  { id: 26, lineY: 27.6, size: 2.5, dur: "1.8s", delay: "2.25s", opacity: 0.85 },
+  { id: 27, lineY: 27.6, size: 3, dur: "1.8s", delay: "2.7s", opacity: 0.95 },
+  { id: 28, lineY: 27.6, size: 2, dur: "1.8s", delay: "3.2s", opacity: 0.8 },
 ];
 
 function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) {
@@ -417,19 +436,18 @@ function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) 
           <line x1="0" y1="27.6" x2="88" y2="27.6" stroke="#163826" strokeWidth="1.2" strokeDasharray="3 3" />
         </svg>
 
-        {/* Streaming random glowing data dots */}
+        {/* Streaming constant-speed linear data dots distributed on 4 lines */}
         {STREAM_PARTICLES.map((dot) => (
           <div
             key={dot.id}
-            className="absolute rounded-full bg-[#70FE7E] shadow-[0_0_8px_#70FE7E] animate-dot-stream"
+            className="absolute rounded-full bg-[#70FE7E] shadow-[0_0_6px_#70FE7E] animate-dot-stream"
             style={{
               width: `${dot.size}px`,
               height: `${dot.size}px`,
               left: "0px",
-              top: `calc(50% + ${dot.y}px)`,
+              top: `${dot.lineY - dot.size / 2}px`,
               // @ts-expect-error Custom CSS properties
               "--stream-x": "88px",
-              "--jitter-y": `${dot.y * 0.3}px`,
               "--stream-dur": dot.dur,
               "--stream-delay": dot.delay,
               opacity: dot.opacity,
