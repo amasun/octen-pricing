@@ -59,7 +59,7 @@ pnpm build
      - 在 QPS Plan 卡片价格展示区，通过 `self-start` 将 `$` 美元符号与大号价格数字的顶部精准对齐；
      - 完全保留大号数字的行高基准与 `/ month` 周期文案的原有字号、行高（`text-[14px] leading-[20px] text-[#57575E]`）及底部基线对齐位置。
    - **QPS Plan 卡片行动按钮文案统一为 `Get started`**：
-     - 将 **Startup**、**Pro**、**Scale** 卡片底部的行动按钮文案由 `Subscribe` 统一修改为 **`Get started`**；
+     - 将 **Builder**（原 Startup）、**Pro**、**Scale** 卡片底部的行动按钮文案由 `Subscribe` 统一修改为 **`Get started`**；
      - 保持 **Free** 卡片的 `Start Free` 与 **Enterprise** 卡片的 `Contact Sales` 不变。
    - **Hero 顶部文案精简**：
      - 移除了主标题下方的冗余文案 Usage-based pricing for the search infrastructure behind your agents.；
