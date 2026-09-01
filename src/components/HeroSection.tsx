@@ -581,7 +581,7 @@ function HowOctenWorksSection() {
       </div>
 
       {/* Entry Cards Container (3 Cards on Desktop, 1 Column on Mobile) */}
-      <div className="content-stretch flex flex-col md:flex-row gap-[10px] md:gap-[14px] lg:gap-[16px] items-stretch justify-center relative shrink-0 w-full max-w-[1280px]">
+      <div className="content-stretch flex flex-col md:flex-row gap-[6px] sm:gap-[8px] md:gap-[10px] items-stretch justify-center relative shrink-0 w-full max-w-[1280px]">
         <PayAsYouGoCard />
         <PlusSeparator />
         <QpsPlanCard />
