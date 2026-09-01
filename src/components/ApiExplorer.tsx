@@ -90,6 +90,27 @@ function VlEmbeddingCategoryIcon({ className = "w-[18px] h-[18px]" }: { classNam
   );
 }
 
+// Token Type Icons for VL Embedding (Text & Visual)
+function TextTokenIcon({ className = "w-[11px] h-[11px] inline-block shrink-0" }: { className?: string }) {
+  return (
+    <svg className={className} width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1.83325 3.20834V1.83334H9.16659V3.20834" stroke="currentColor" strokeWidth="0.916667" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M4.125 9.16666H6.875" stroke="currentColor" strokeWidth="0.916667" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M5.5 1.83334V9.16668" stroke="currentColor" strokeWidth="0.916667" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  );
+}
+
+function VisualTokenIcon({ className = "w-[11px] h-[11px] inline-block shrink-0" }: { className?: string }) {
+  return (
+    <svg className={className} width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8.70833 1.375H2.29167C1.78541 1.375 1.375 1.78541 1.375 2.29167V8.70833C1.375 9.21459 1.78541 9.625 2.29167 9.625H8.70833C9.21459 9.625 9.625 9.21459 9.625 8.70833V2.29167C9.625 1.78541 9.21459 1.375 8.70833 1.375Z" stroke="currentColor" strokeWidth="0.916667" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M4.12492 5.04165C4.63118 5.04165 5.04159 4.63124 5.04159 4.12498C5.04159 3.61872 4.63118 3.20831 4.12492 3.20831C3.61866 3.20831 3.20825 3.61872 3.20825 4.12498C3.20825 4.63124 3.61866 5.04165 4.12492 5.04165Z" stroke="currentColor" strokeWidth="0.916667" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M9.625 6.875L8.21058 5.46059C8.03868 5.28874 7.80557 5.1922 7.5625 5.1922C7.31943 5.1922 7.08632 5.28874 6.91442 5.46059L2.75 9.625" stroke="currentColor" strokeWidth="0.916667" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  );
+}
+
 // 4. Applications (Composite geometric workflow from Figma)
 function ApplicationsCategoryIcon({ className = "w-[18px] h-[18px]" }: { className?: string }) {
   return (
@@ -344,14 +365,22 @@ function VlEmbeddingCard() {
             <span className="font-semibold text-[#0A0A0A] truncate min-w-0 font-['JetBrains_Mono',monospace]">vl-embedding</span>
             <div className="flex items-center gap-1.5 whitespace-nowrap shrink-0">
               <span className="text-[#57575E] text-[11px] sm:text-[12px] bg-[#F6F6F3] px-[6px] py-[2px] rounded-[4px] border border-[#E7E7E3] font-['JetBrains_Mono',monospace] tabular-nums">$0.05 / $0.12</span>
-              <span className="text-[#8B8B8B] text-[11px] sm:text-[12px]">(text / visual)</span>
+              <span className="inline-flex items-center gap-1 text-[#7C7C79]">
+                (<TextTokenIcon className="w-[11px] h-[11px]" />
+                <span className="text-[10px] text-[#9C9CA4]">/</span>
+                <VisualTokenIcon className="w-[11px] h-[11px]" />)
+              </span>
             </div>
           </div>
           <div className="flex items-center justify-between gap-[8px] text-[13px] sm:text-[14px] min-w-0">
             <span className="font-semibold text-[#0A0A0A] truncate min-w-0 font-['JetBrains_Mono',monospace]">vl-embedding-large</span>
             <div className="flex items-center gap-1.5 whitespace-nowrap shrink-0">
               <span className="text-[#57575E] text-[11px] sm:text-[12px] bg-[#F6F6F3] px-[6px] py-[2px] rounded-[4px] border border-[#E7E7E3] font-['JetBrains_Mono',monospace] tabular-nums">$0.10 / $0.25</span>
-              <span className="text-[#8B8B8B] text-[11px] sm:text-[12px]">(text / visual)</span>
+              <span className="inline-flex items-center gap-1 text-[#7C7C79]">
+                (<TextTokenIcon className="w-[11px] h-[11px]" />
+                <span className="text-[10px] text-[#9C9CA4]">/</span>
+                <VisualTokenIcon className="w-[11px] h-[11px]" />)
+              </span>
             </div>
           </div>
         </div>
@@ -958,27 +987,39 @@ function PlanCTable() {
                 <div className="flex items-baseline gap-1.5">
                   <span className="font-['JetBrains_Mono',monospace] font-bold text-[16px] text-[#0A0A0A] tabular-nums">$0.05 – $0.10</span>
                   <span className="text-[14px] text-[#8B8B8B]">/ 1M tokens</span>
-                  <span className="text-[14px] text-[#8B8B8B]">(text)</span>
+                  <span className="inline-flex items-center gap-1 text-[14px] text-[#8B8B8B]">
+                    (<TextTokenIcon className="w-[11px] h-[11px] text-[#7C7C79]" /> text)
+                  </span>
                 </div>
                 <div className="flex items-baseline gap-1.5">
                   <span className="font-['JetBrains_Mono',monospace] font-bold text-[16px] text-[#0A0A0A] tabular-nums">$0.12 – $0.25</span>
                   <span className="text-[14px] text-[#8B8B8B]">/ 1M tokens</span>
-                  <span className="text-[14px] text-[#8B8B8B]">(visual)</span>
+                  <span className="inline-flex items-center gap-1 text-[14px] text-[#8B8B8B]">
+                    (<VisualTokenIcon className="w-[11px] h-[11px] text-[#7C7C79]" /> visual)
+                  </span>
                 </div>
               </div>
               <div className="bg-[#F8F8F5] p-[12px] rounded-[10px] border border-[#EAEAE5] flex flex-col gap-[8px] text-[13px]">
                 <div className="flex items-baseline justify-between w-full">
                   <span className="font-['JetBrains_Mono',monospace] text-[#57575E]">vl-embedding</span>
-                  <div className="flex items-baseline gap-1.5 whitespace-nowrap">
+                  <div className="flex items-center gap-1.5 whitespace-nowrap">
                     <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums">$0.05 / $0.12</span>
-                    <span className="text-[#8B8B8B] text-[12px]">(text / visual)</span>
+                    <span className="inline-flex items-center gap-1 text-[#7C7C79]">
+                      (<TextTokenIcon className="w-[11px] h-[11px]" />
+                      <span className="text-[10px] text-[#9C9CA4]">/</span>
+                      <VisualTokenIcon className="w-[11px] h-[11px]" />)
+                    </span>
                   </div>
                 </div>
                 <div className="flex items-baseline justify-between w-full">
                   <span className="font-['JetBrains_Mono',monospace] text-[#57575E]">vl-embedding-large</span>
-                  <div className="flex items-baseline gap-1.5 whitespace-nowrap">
+                  <div className="flex items-center gap-1.5 whitespace-nowrap">
                     <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums">$0.10 / $0.25</span>
-                    <span className="text-[#8B8B8B] text-[12px]">(text / visual)</span>
+                    <span className="inline-flex items-center gap-1 text-[#7C7C79]">
+                      (<TextTokenIcon className="w-[11px] h-[11px]" />
+                      <span className="text-[10px] text-[#9C9CA4]">/</span>
+                      <VisualTokenIcon className="w-[11px] h-[11px]" />)
+                    </span>
                   </div>
                 </div>
               </div>
@@ -1393,12 +1434,16 @@ function PlanCTable() {
                   <div className="flex items-baseline gap-1.5 flex-nowrap whitespace-nowrap">
                     <span className="font-['JetBrains_Mono',monospace] font-bold text-[16px] text-[#0A0A0A] tabular-nums">$0.05 – $0.10</span>
                     <span className="text-[#8B8B8B]">/ 1M tokens</span>
-                    <span className="text-[#8B8B8B] text-[13px]">(text)</span>
+                    <span className="inline-flex items-center gap-1 text-[#8B8B8B]">
+                      (<TextTokenIcon className="w-[11px] h-[11px] text-[#7C7C79]" /> text)
+                    </span>
                   </div>
                   <div className="flex items-baseline gap-1.5 flex-nowrap whitespace-nowrap">
                     <span className="font-['JetBrains_Mono',monospace] font-bold text-[16px] text-[#0A0A0A] tabular-nums">$0.12 – $0.25</span>
                     <span className="text-[#8B8B8B]">/ 1M tokens</span>
-                    <span className="text-[#8B8B8B] text-[13px]">(visual)</span>
+                    <span className="inline-flex items-center gap-1 text-[#8B8B8B]">
+                      (<VisualTokenIcon className="w-[11px] h-[11px] text-[#7C7C79]" /> visual)
+                    </span>
                   </div>
                 </div>
               </td>
@@ -1406,16 +1451,24 @@ function PlanCTable() {
                 <div className="w-full max-w-[340px] flex flex-col gap-1.5 text-[13px] sm:text-[14px]">
                   <div className="flex items-baseline justify-between w-full">
                     <span className="font-['JetBrains_Mono',monospace] text-[#57575E] whitespace-nowrap">vl-embedding</span>
-                    <div className="flex items-baseline gap-1.5 whitespace-nowrap">
+                    <div className="flex items-center gap-1.5 whitespace-nowrap">
                       <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums">$0.05 / $0.12</span>
-                      <span className="text-[#8B8B8B] text-[12px]">(text / visual)</span>
+                      <span className="inline-flex items-center gap-1 text-[#7C7C79]">
+                        (<TextTokenIcon className="w-[11px] h-[11px]" />
+                        <span className="text-[10px] text-[#9C9CA4]">/</span>
+                        <VisualTokenIcon className="w-[11px] h-[11px]" />)
+                      </span>
                     </div>
                   </div>
                   <div className="flex items-baseline justify-between w-full">
                     <span className="font-['JetBrains_Mono',monospace] text-[#57575E] whitespace-nowrap">vl-embedding-large</span>
-                    <div className="flex items-baseline gap-1.5 whitespace-nowrap">
+                    <div className="flex items-center gap-1.5 whitespace-nowrap">
                       <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums">$0.10 / $0.25</span>
-                      <span className="text-[#8B8B8B] text-[12px]">(text / visual)</span>
+                      <span className="inline-flex items-center gap-1 text-[#7C7C79]">
+                        (<TextTokenIcon className="w-[11px] h-[11px]" />
+                        <span className="text-[10px] text-[#9C9CA4]">/</span>
+                        <VisualTokenIcon className="w-[11px] h-[11px]" />)
+                      </span>
                     </div>
                   </div>
                 </div>
