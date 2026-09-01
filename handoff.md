@@ -49,13 +49,13 @@ pnpm build
      - Enterprise 卡片中间特性条目扩展为 6 项：
         1. `1M+ QPS`（分支架构图标）
         2. `Custom data`（专属数据定制）
-        3. `Zero Data Retention (ZDR)`（数据安全图标）
+        3. `Zero Data Retention (ZDR)`（斜杠护盾/不留存眼睛图标 `ZdrIcon`）
         4. `Custom SLA`（闪电护盾 SLA 保障图标 `FlashIcon`）
         5. `Dedicated Slack channel support`（Slack 专属渠道图标）
         6. `Volume discounts`（折扣图表图标）
      - 排版采用 `3 行 × 2 列`（`sm:grid-rows-3 sm:grid-cols-2 sm:grid-flow-col`）的纵向优先栅格布局，保持原业务与功能图标不变，左右列对称平衡；
      - **容器右内边距**：设置右侧 padding 为 24px（`sm:pr-6`），使右侧 Contact Sales 按钮与卡片右边缘间距更加紧凑协调。
-   - **QPS Plan 卡片价格 $ 符号顶对齐与 / month 原始样式保留 (QPS Plan Price Alignment & Period Style)**：
+    - **QPS Plan 卡片价格 $ 符号顶对齐与 / month 原始样式保留 (QPS Plan Price Alignment & Period Style)**：
      - 在 QPS Plan 卡片价格展示区，通过 `self-start` 将 `$` 美元符号与大号价格数字的顶部精准对齐；
      - 同时完全保留了大号数字的行高基准与 `/ month` 周期文案的原有字号、行高（`text-[14px] leading-[20px] text-[#57575E]`）及底部基线对齐位置，确保整体排版稳定不跳动。
     - **QPS Plan 卡片行动按钮文案统一为 **`Get started`** (QPS Plan Cards Button Label)**：
