@@ -467,7 +467,7 @@ function PayAsYouGoCard() {
 
 function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) {
   return (
-    <div className="w-full h-[140px] sm:h-[150px] bg-[#000000] rounded-[16px] overflow-hidden relative flex items-center justify-center isolate">
+    <div className="h-[180px] relative rounded-[16px] shrink-0 w-full overflow-hidden bg-black border border-[#2a2a2a] flex items-center justify-center isolate">
       {/* Background radial glow */}
       <div 
         className={`absolute inset-0 transition-opacity duration-500 pointer-events-none ${isHovered ? "opacity-90" : "opacity-50"}`}
