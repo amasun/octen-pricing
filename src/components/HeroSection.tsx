@@ -521,7 +521,7 @@ function PlaceholderCard() {
         <PlaceholderCardGraphic isHovered={isHovered} />
         <div className="content-stretch flex flex-col gap-[6px] items-center pt-[20px] relative shrink-0 text-center w-full select-text">
           <p className="font-['Fraunces',serif] font-bold text-[20px] sm:text-[22px] text-[#09090b] leading-[1.2] py-[2px] w-full text-center relative shrink-0 select-text">
-            Enterprise
+            Enterprise Plan
           </p>
           <p className="font-['DM_Sans',sans-serif] font-normal text-[#515151] relative shrink-0 text-[14px] whitespace-nowrap select-text">
             Adds custom data and dedicated support
