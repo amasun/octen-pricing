@@ -326,8 +326,8 @@ export default function QpsPricingGrid() {
       price: "Custom",
       period: "Tailored Plan",
       features: [
-        { text: "Custom data", icon: "check" },
         { text: <><strong className="font-bold">1M+ QPS</strong></>, icon: "branch" },
+        { text: "Custom data", icon: "check" },
         { text: "Zero Data Retention (ZDR)", icon: "zdr" },
         { text: "Custom SLA", icon: "flash" },
         { text: "Dedicated Slack channel support", icon: "slack" },
