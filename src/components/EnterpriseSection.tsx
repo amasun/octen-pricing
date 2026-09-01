@@ -103,17 +103,10 @@ export default function EnterpriseSection() {
       className="content-stretch flex flex-col items-center gap-[32px] sm:gap-[48px] pb-[60px] sm:pb-[100px] mt-[40px] sm:mt-[80px] pt-0 relative shrink-0 w-full max-w-[1312px] px-4 box-border scroll-mt-[90px]"
     >
       {/* 1. Header Area */}
-      <div className="text-center flex flex-col items-center gap-3 sm:gap-4 shrink-0 px-4 max-w-[840px]">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#E8F8EE] border border-[#D0F2DF] text-[#039855] text-[13px] font-['DM_Sans',sans-serif] font-medium tracking-wide">
-          <span className="size-1.5 rounded-full bg-[#039855]" />
-          Enterprise Custom
-        </div>
+      <div className="text-center flex flex-col items-center shrink-0 px-4">
         <h2 className="font-['Fraunces',serif] font-bold text-[28px] sm:text-[44px] leading-[1.15] sm:leading-[48px] text-[#09090b]">
-          Tailored infrastructure for mission-critical scale
+          Enterprise Custom
         </h2>
-        <p className="font-['DM_Sans',sans-serif] font-normal text-[16px] leading-[24px] sm:leading-[26px] text-[#5d605b]">
-          Engineered for high-volume enterprise teams requiring guaranteed throughput SLAs, private data ingestion pipelines, isolated compute clusters, and white-glove technical support.
-        </p>
       </div>
 
       {/* 2. 3x2 Bento Grid of Feature Cards */}
