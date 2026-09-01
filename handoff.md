@@ -5,6 +5,7 @@
 - **技术栈**: React 19 + Vite 8 + TypeScript 5.7 + Tailwind CSS v4 + GSAP + Lenis
 - **远程仓库**: `https://github.com/amasun/octen-pricing.git`
 - **主分支**: `master`
+- **Figma 设计稿源文件**: `https://www.figma.com/design/jnIlRSuXffn5g2OxnsqYIE/Octen_%E6%B1%87%E6%80%BB?node-id=13350-2947&t=zHKsLMgbWwv2HovN-4`
 
 ---
 

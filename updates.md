@@ -1,5 +1,7 @@
 # Octen Pricing 页面更新与优化记录
 
+- **Figma 设计稿源文件**：`https://www.figma.com/design/jnIlRSuXffn5g2OxnsqYIE/Octen_%E6%B1%87%E6%80%BB?node-id=13350-2947&t=zHKsLMgbWwv2HovN-4`
+
 本文档总结了本阶段定价页面的核心功能迭代、视觉优化与交互升级，并汇总了后续待调整的线上事项。
 
 ---
