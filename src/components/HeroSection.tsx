@@ -555,6 +555,18 @@ function HeroLightGlow() {
   );
 }
 
+function PlusSeparator() {
+  return (
+    <div className="shrink-0 z-20 pointer-events-none flex items-center justify-center self-center h-[20px] md:h-[32px] w-full md:w-auto my-0.5 md:my-0">
+      <div className="size-[20px] rounded-full bg-[#F4F4F5] border border-[#E4E4E7] flex items-center justify-center text-[#71717A] shadow-2xs">
+        <svg className="size-[10px]" viewBox="0 0 12 12" fill="none">
+          <path d="M6 1.5v9M1.5 6h9" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+        </svg>
+      </div>
+    </div>
+  );
+}
+
 function HowOctenWorksSection() {
   return (
     <div className="bg-white content-stretch flex flex-col items-center pt-[60px] sm:pt-[84px] pb-[50px] sm:pb-[80px] px-4 sm:px-6 relative w-full isolate">
@@ -569,9 +581,11 @@ function HowOctenWorksSection() {
       </div>
 
       {/* Entry Cards Container (3 Cards on Desktop, 1 Column on Mobile) */}
-      <div className="content-stretch flex flex-col md:flex-row gap-4 sm:gap-5 md:gap-6 items-stretch justify-center relative shrink-0 w-full max-w-[1280px]">
+      <div className="content-stretch flex flex-col md:flex-row gap-[10px] md:gap-[14px] lg:gap-[16px] items-stretch justify-center relative shrink-0 w-full max-w-[1280px]">
         <PayAsYouGoCard />
+        <PlusSeparator />
         <QpsPlanCard />
+        <PlusSeparator />
         <PlaceholderCard />
       </div>
     </div>
