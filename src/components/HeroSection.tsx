@@ -462,41 +462,98 @@ function PayAsYouGoCard() {
   );
 }
 
-function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) {
+export function EnterpriseGraphicOptionA({ isHovered = false }: { isHovered?: boolean }) {
   return (
     <div className="h-[180px] relative rounded-[16px] shrink-0 w-full overflow-hidden bg-black border border-[#2a2a2a] flex items-center justify-center isolate">
       {/* Background radial glow */}
       <div 
         className={`absolute inset-0 transition-opacity duration-500 pointer-events-none ${isHovered ? "opacity-90" : "opacity-50"}`}
         style={{
-          background: "radial-gradient(circle at 50% 50%, rgba(112, 254, 126, 0.15) 0%, rgba(0, 0, 0, 0) 70%)"
+          background: "radial-gradient(circle at 50% 50%, rgba(112, 254, 126, 0.18) 0%, rgba(3, 152, 85, 0.05) 50%, rgba(0, 0, 0, 0) 75%)"
         }}
       />
-
-      {/* Cyber Grid pattern */}
+      {/* Cyber Grid */}
       <div 
         className="absolute inset-0 opacity-20 pointer-events-none"
         style={{
-          backgroundImage: "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
-          backgroundSize: "20px 20px"
+          backgroundImage: "linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)",
+          backgroundSize: "16px 16px"
         }}
       />
 
-      {/* Center Dynamic Placeholder Hologram Icon */}
-      <div className="relative z-10 flex flex-col items-center justify-center gap-2">
-        <div className={`size-[54px] rounded-[16px] bg-[#101318] border border-[#2D3748] flex items-center justify-center shadow-[0_0_24px_rgba(112,254,126,0.18)] transition-all duration-300 ${isHovered ? "scale-105 border-[#70FE7E]/50 shadow-[0_0_32px_rgba(112,254,126,0.35)]" : ""}`}>
-          <svg className="size-[26px] text-[#70FE7E]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </div>
-        <div className="flex items-center gap-1.5">
-          <span className="inline-block size-[6px] rounded-full bg-[#70FE7E] animate-pulse" />
-          <span className="font-['JetBrains_Mono',monospace] text-[11px] text-[#70FE7E] font-medium tracking-wide">
-            ENTERPRISE LAYER
-          </span>
-        </div>
+      <svg className="w-full h-full max-h-[160px] pointer-events-none relative z-10" viewBox="0 0 320 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="cubeGlowA" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+          <linearGradient id="cubeGradTop" x1="160" y1="20" x2="160" y2="70" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#1E3A2B" />
+            <stop offset="1" stopColor="#0B1A12" />
+          </linearGradient>
+        </defs>
+
+        {/* Isometric Base Grid Platform */}
+        <path d="M160 142L70 95L160 48L250 95L160 142Z" stroke="#2D4A3E" strokeWidth="1" strokeDasharray="3 3" opacity="0.4"/>
+        <path d="M160 152L50 95L160 38L270 95L160 152Z" stroke="#1B3328" strokeWidth="1" opacity="0.3"/>
+
+        {/* Connecting Data Bus Lines */}
+        <path d="M50 95L110 63M270 95L210 63M160 152L160 120" stroke="#039855" strokeWidth="1.2" strokeDasharray="4 4" className={isHovered ? "svg-flow-right" : ""}/>
+
+        {/* Floating Peripheral Database Nodes */}
+        <g transform="translate(60, 80)">
+          <path d="M0 0L24 -12L48 0L24 12Z" fill="#101B14" stroke="#70FE7E" strokeWidth="1" opacity="0.8"/>
+          <path d="M0 0V8L24 20V12Z" fill="#08100C" stroke="#70FE7E" strokeWidth="1" opacity="0.8"/>
+          <path d="M48 0V8L24 20V12Z" fill="#0D1711" stroke="#70FE7E" strokeWidth="1" opacity="0.8"/>
+          <circle cx="24" cy="0" r="3" fill="#70FE7E" filter="url(#cubeGlowA)" />
+        </g>
+        <g transform="translate(212, 80)">
+          <path d="M0 0L24 -12L48 0L24 12Z" fill="#101B14" stroke="#70FE7E" strokeWidth="1" opacity="0.8"/>
+          <path d="M0 0V8L24 20V12Z" fill="#08100C" stroke="#70FE7E" strokeWidth="1" opacity="0.8"/>
+          <path d="M48 0V8L24 20V12Z" fill="#0D1711" stroke="#70FE7E" strokeWidth="1" opacity="0.8"/>
+          <circle cx="24" cy="0" r="3" fill="#70FE7E" filter="url(#cubeGlowA)" />
+        </g>
+
+        {/* Main Central Layered Server Cube */}
+        {/* Bottom Layer 1 */}
+        <path d="M160 90L115 67V77L160 100L205 77V67L160 90Z" fill="#09150F" stroke="#2D4A3E" strokeWidth="1"/>
+        <path d="M115 67L160 44L205 67L160 90L115 67Z" fill="#12241A" stroke="#3E6B56" strokeWidth="1"/>
+        <circle cx="130" cy="74" r="1.5" fill="#70FE7E"/>
+        <circle cx="138" cy="78" r="1.5" fill="#70FE7E"/>
+        <circle cx="146" cy="82" r="1.5" fill="#70FE7E"/>
+
+        {/* Middle Layer 2 */}
+        <g transform="translate(0, -16)">
+          <path d="M160 90L115 67V77L160 100L205 77V67L160 90Z" fill="#0D1F16" stroke="#039855" strokeWidth="1"/>
+          <path d="M115 67L160 44L205 67L160 90L115 67Z" fill="#173123" stroke="#529977" strokeWidth="1"/>
+          <circle cx="130" cy="74" r="1.5" fill="#70FE7E"/>
+          <circle cx="138" cy="78" r="1.5" fill="#70FE7E"/>
+          <circle cx="146" cy="82" r="1.5" fill="#70FE7E"/>
+        </g>
+
+        {/* Top Master Cluster Layer 3 */}
+        <g transform="translate(0, -32)" filter="url(#cubeGlowA)">
+          <path d="M160 90L115 67V77L160 100L205 77V67L160 90Z" fill="#132D20" stroke="#70FE7E" strokeWidth="1.2"/>
+          <path d="M115 67L160 44L205 67L160 90L115 67Z" fill="url(#cubeGradTop)" stroke="#70FE7E" strokeWidth="1.2"/>
+          
+          {/* Top Center Core Hologram */}
+          <path d="M160 52L145 60L160 68L175 60L160 52Z" fill="#70FE7E" fillOpacity="0.25" stroke="#70FE7E" strokeWidth="1"/>
+          <circle cx="160" cy="60" r="4" fill="#70FE7E"/>
+        </g>
+
+        {/* Floating Custom Data Particle Streams */}
+        <path d="M160 12V24" stroke="#70FE7E" strokeWidth="2" strokeLinecap="round" strokeDasharray="3 3"/>
+      </svg>
+
+      {/* Bottom Tag */}
+      <div className="absolute bottom-2.5 z-20 flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-black/70 border border-[#2D3748] backdrop-blur-xs">
+        <span className="size-[5px] rounded-full bg-[#70FE7E] animate-pulse" />
+        <span className="font-['JetBrains_Mono',monospace] text-[10px] text-[#70FE7E] font-medium tracking-wider uppercase">
+          Option A • Dedicated Cluster
+        </span>
       </div>
 
       <div className="absolute inset-0 pointer-events-none rounded-[16px] z-20 shadow-[inset_-30px_0px_30px_0px_#000000,inset_20px_0px_30px_0px_#000000]" />
@@ -504,7 +561,250 @@ function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) 
   );
 }
 
-function PlaceholderCard() {
+export function EnterpriseGraphicOptionB({ isHovered = false }: { isHovered?: boolean }) {
+  return (
+    <div className="h-[180px] relative rounded-[16px] shrink-0 w-full overflow-hidden bg-black border border-[#2a2a2a] flex items-center justify-center isolate">
+      {/* Background radial glow */}
+      <div 
+        className={`absolute inset-0 transition-opacity duration-500 pointer-events-none ${isHovered ? "opacity-90" : "opacity-50"}`}
+        style={{
+          background: "radial-gradient(circle at 50% 50%, rgba(112, 254, 126, 0.2) 0%, rgba(3, 152, 85, 0.08) 50%, rgba(0, 0, 0, 0) 75%)"
+        }}
+      />
+      {/* Cyber Grid */}
+      <div 
+        className="absolute inset-0 opacity-20 pointer-events-none"
+        style={{
+          backgroundImage: "linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)",
+          backgroundSize: "16px 16px"
+        }}
+      />
+
+      <svg className="w-full h-full max-h-[160px] pointer-events-none relative z-10" viewBox="0 0 320 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="shieldGlowB" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+          <linearGradient id="shieldGrad" x1="160" y1="35" x2="160" y2="125" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#1C382A" />
+            <stop offset="0.5" stopColor="#0B1A12" />
+            <stop offset="1" stopColor="#040906" />
+          </linearGradient>
+        </defs>
+
+        {/* Outer Orbital Concurrency Rings (1M+ QPS Matrix) */}
+        <ellipse cx="160" cy="80" rx="110" ry="42" stroke="#2D4A3E" strokeWidth="1" strokeDasharray="4 6" opacity="0.6" />
+        <ellipse cx="160" cy="80" rx="85" ry="32" stroke="#039855" strokeWidth="1.2" strokeDasharray="8 8" opacity="0.8" />
+        <ellipse cx="160" cy="80" rx="60" ry="22" stroke="#70FE7E" strokeWidth="1" strokeDasharray="3 3" opacity="0.7" />
+
+        {/* Orbiting Satellite Data Nodes */}
+        <g filter="url(#shieldGlowB)">
+          <circle cx="68" cy="70" r="3.5" fill="#70FE7E" />
+          <circle cx="252" cy="90" r="3.5" fill="#70FE7E" />
+          <circle cx="218" cy="62" r="2.5" fill="#9CFFA6" />
+          <circle cx="102" cy="98" r="2.5" fill="#9CFFA6" />
+        </g>
+
+        {/* Central Faceted Hologram SLA Shield */}
+        <g filter="url(#shieldGlowB)">
+          {/* Shield Outer Border */}
+          <path d="M160 38L190 52V82C190 102 178 118 160 124C142 118 130 102 130 82V52L160 38Z" fill="url(#shieldGrad)" stroke="#70FE7E" strokeWidth="1.5" />
+          {/* Shield Inner Facet */}
+          <path d="M160 44L184 55V80C184 97 174 111 160 116C146 111 136 97 136 80V55L160 44Z" stroke="#039855" strokeWidth="1" opacity="0.6"/>
+          
+          {/* Central Lightning SLA Core */}
+          <path d="M162 55L150 78H161L158 103L172 76H160L164 55H162Z" fill="#70FE7E" />
+        </g>
+
+        {/* Security / Retention Sparkles */}
+        <path d="M125 45L127 50L132 52L127 54L125 59L123 54L118 52L123 50L125 45Z" fill="#70FE7E" opacity="0.7"/>
+        <path d="M195 105L196.5 108.5L200 110L196.5 111.5L195 115L193.5 111.5L190 110L193.5 108.5L195 105Z" fill="#70FE7E" opacity="0.7"/>
+      </svg>
+
+      {/* Bottom Tag */}
+      <div className="absolute bottom-2.5 z-20 flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-black/70 border border-[#2D3748] backdrop-blur-xs">
+        <span className="size-[5px] rounded-full bg-[#70FE7E] animate-pulse" />
+        <span className="font-['JetBrains_Mono',monospace] text-[10px] text-[#70FE7E] font-medium tracking-wider uppercase">
+          Option B • SLA Shield & Concurrency
+        </span>
+      </div>
+
+      <div className="absolute inset-0 pointer-events-none rounded-[16px] z-20 shadow-[inset_-30px_0px_30px_0px_#000000,inset_20px_0px_30px_0px_#000000]" />
+    </div>
+  );
+}
+
+export function EnterpriseGraphicOptionC({ isHovered = false }: { isHovered?: boolean }) {
+  return (
+    <div className="h-[180px] relative rounded-[16px] shrink-0 w-full overflow-hidden bg-black border border-[#2a2a2a] flex items-center justify-center isolate">
+      {/* Background radial glow */}
+      <div 
+        className={`absolute inset-0 transition-opacity duration-500 pointer-events-none ${isHovered ? "opacity-90" : "opacity-50"}`}
+        style={{
+          background: "radial-gradient(circle at 50% 50%, rgba(221, 254, 112, 0.18) 0%, rgba(198, 165, 90, 0.08) 50%, rgba(0, 0, 0, 0) 75%)"
+        }}
+      />
+      {/* Cyber Grid */}
+      <div 
+        className="absolute inset-0 opacity-20 pointer-events-none"
+        style={{
+          backgroundImage: "linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)",
+          backgroundSize: "16px 16px"
+        }}
+      />
+
+      <svg className="w-full h-full max-h-[160px] pointer-events-none relative z-10" viewBox="0 0 320 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="prismGlowC" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+          <linearGradient id="goldCrownGrad" x1="160" y1="40" x2="160" y2="120" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#FFE7B1" />
+            <stop offset="0.6" stopColor="#C6A55A" />
+            <stop offset="1" stopColor="#70FE7E" />
+          </linearGradient>
+        </defs>
+
+        {/* Radiating Light Beams */}
+        <line x1="160" y1="20" x2="160" y2="140" stroke="#C6A55A" strokeWidth="1" strokeDasharray="3 3" opacity="0.3" />
+        <line x1="60" y1="80" x2="260" y2="80" stroke="#C6A55A" strokeWidth="1" strokeDasharray="3 3" opacity="0.3" />
+        <line x1="90" y1="40" x2="230" y2="120" stroke="#70FE7E" strokeWidth="1" strokeDasharray="4 4" opacity="0.35" />
+        <line x1="90" y1="120" x2="230" y2="40" stroke="#70FE7E" strokeWidth="1" strokeDasharray="4 4" opacity="0.35" />
+
+        {/* 4 Peripheral Diamond Satellites */}
+        <g transform="translate(85, 75)" filter="url(#prismGlowC)">
+          <path d="M0 -5L5 0L0 5L-5 0Z" fill="#FFE7B1" />
+        </g>
+        <g transform="translate(235, 75)" filter="url(#prismGlowC)">
+          <path d="M0 -5L5 0L0 5L-5 0Z" fill="#FFE7B1" />
+        </g>
+        <g transform="translate(160, 25)" filter="url(#prismGlowC)">
+          <path d="M0 -5L5 0L0 5L-5 0Z" fill="#70FE7E" />
+        </g>
+        <g transform="translate(160, 135)" filter="url(#prismGlowC)">
+          <path d="M0 -5L5 0L0 5L-5 0Z" fill="#70FE7E" />
+        </g>
+
+        {/* Center Faceted Prism Crown Core */}
+        <g filter="url(#prismGlowC)">
+          {/* Top Diamond Facets */}
+          <path d="M140 60L160 42L180 60L160 70L140 60Z" fill="#FFE7B1" fillOpacity="0.4" stroke="#FFE7B1" strokeWidth="1.2"/>
+          <path d="M125 72L140 60L160 70L145 84L125 72Z" fill="#C6A55A" fillOpacity="0.3" stroke="#C6A55A" strokeWidth="1.2"/>
+          <path d="M195 72L180 60L160 70L175 84L195 72Z" fill="#C6A55A" fillOpacity="0.3" stroke="#C6A55A" strokeWidth="1.2"/>
+          
+          {/* Lower Crown Pavilion V-Shape */}
+          <path d="M125 72L145 84L160 118L125 72Z" fill="#0B1A12" stroke="#70FE7E" strokeWidth="1.2"/>
+          <path d="M195 72L175 84L160 118L195 72Z" fill="#0B1A12" stroke="#70FE7E" strokeWidth="1.2"/>
+          <path d="M145 84L160 70L175 84L160 118L145 84Z" fill="url(#goldCrownGrad)" fillOpacity="0.6" stroke="#FFE7B1" strokeWidth="1.2"/>
+
+          {/* Central Crown Jewel Spark */}
+          <circle cx="160" cy="80" r="3" fill="#FFFFFF" />
+        </g>
+      </svg>
+
+      {/* Bottom Tag */}
+      <div className="absolute bottom-2.5 z-20 flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-black/70 border border-[#2D3748] backdrop-blur-xs">
+        <span className="size-[5px] rounded-full bg-[#FFE7B1] animate-pulse" />
+        <span className="font-['JetBrains_Mono',monospace] text-[10px] text-[#FFE7B1] font-medium tracking-wider uppercase">
+          Option C • Prism Crown Core
+        </span>
+      </div>
+
+      <div className="absolute inset-0 pointer-events-none rounded-[16px] z-20 shadow-[inset_-30px_0px_30px_0px_#000000,inset_20px_0px_30px_0px_#000000]" />
+    </div>
+  );
+}
+
+export function EnterpriseGraphicOptionD({ isHovered = false }: { isHovered?: boolean }) {
+  return (
+    <div className="h-[180px] relative rounded-[16px] shrink-0 w-full overflow-hidden bg-black border border-[#2a2a2a] flex items-center justify-center isolate">
+      {/* Background radial glow */}
+      <div 
+        className={`absolute inset-0 transition-opacity duration-500 pointer-events-none ${isHovered ? "opacity-90" : "opacity-50"}`}
+        style={{
+          background: "radial-gradient(circle at 50% 50%, rgba(112, 254, 126, 0.18) 0%, rgba(0, 163, 255, 0.08) 50%, rgba(0, 0, 0, 0) 75%)"
+        }}
+      />
+      {/* Cyber Grid */}
+      <div 
+        className="absolute inset-0 opacity-20 pointer-events-none"
+        style={{
+          backgroundImage: "linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)",
+          backgroundSize: "16px 16px"
+        }}
+      />
+
+      <svg className="w-full h-full max-h-[160px] pointer-events-none relative z-10" viewBox="0 0 320 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="pipeGlowD" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+
+        {/* Dual Dedicated Optical Fiber Pipelines */}
+        {/* Pipeline 1: Top Direct Channel (Slack & VIP Support) */}
+        <path d="M40 50H120C135 50 145 65 160 65C175 65 185 50 200 50H280" stroke="#1E3A2B" strokeWidth="6" strokeLinecap="round"/>
+        <path d="M40 50H120C135 50 145 65 160 65C175 65 185 50 200 50H280" stroke="#039855" strokeWidth="2" strokeDasharray="6 6" className={isHovered ? "svg-flow-right" : ""}/>
+        
+        {/* Pipeline 2: Bottom Dedicated High-Throughput Pipe (1M+ QPS & Custom Data) */}
+        <path d="M40 110H120C135 110 145 95 160 95C175 95 185 110 200 110H280" stroke="#1E3A2B" strokeWidth="6" strokeLinecap="round"/>
+        <path d="M40 110H120C135 110 145 95 160 95C175 95 185 110 200 110H280" stroke="#70FE7E" strokeWidth="2" strokeDasharray="8 4" className={isHovered ? "svg-flow-left" : ""}/>
+
+        {/* Left Endpoint: Enterprise Private Network */}
+        <g transform="translate(30, 40)">
+          <rect width="20" height="20" rx="6" fill="#0C1B13" stroke="#70FE7E" strokeWidth="1.2" />
+          <path d="M5 10H15M10 5V15" stroke="#70FE7E" strokeWidth="1.2"/>
+        </g>
+        <g transform="translate(30, 100)">
+          <rect width="20" height="20" rx="6" fill="#0C1B13" stroke="#039855" strokeWidth="1.2" />
+          <circle cx="10" cy="10" r="4" fill="#039855"/>
+        </g>
+
+        {/* Right Endpoint: Private Cloud & Slack Channel */}
+        <g transform="translate(270, 40)">
+          <rect width="20" height="20" rx="6" fill="#0C1B13" stroke="#70FE7E" strokeWidth="1.2" />
+          <circle cx="10" cy="10" r="4" fill="#70FE7E"/>
+        </g>
+        <g transform="translate(270, 100)">
+          <rect width="20" height="20" rx="6" fill="#0C1B13" stroke="#039855" strokeWidth="1.2" />
+          <path d="M6 10H14M10 6V14" stroke="#039855" strokeWidth="1.2"/>
+        </g>
+
+        {/* Central Isolated Gateway Hub */}
+        <g transform="translate(136, 56)" filter="url(#pipeGlowD)">
+          <rect width="48" height="48" rx="12" fill="#0A160F" stroke="#70FE7E" strokeWidth="1.5"/>
+          {/* Inner Vault / Lock Core */}
+          <rect x="10" y="10" width="28" height="28" rx="8" fill="#132B1E" stroke="#529977" strokeWidth="1"/>
+          <path d="M20 22V19C20 16.7909 21.7909 15 24 15C26.2091 15 28 16.7909 28 19V22M18 22H30V32H18V22Z" stroke="#70FE7E" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+        </g>
+      </svg>
+
+      {/* Bottom Tag */}
+      <div className="absolute bottom-2.5 z-20 flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-black/70 border border-[#2D3748] backdrop-blur-xs">
+        <span className="size-[5px] rounded-full bg-[#70FE7E] animate-pulse" />
+        <span className="font-['JetBrains_Mono',monospace] text-[10px] text-[#70FE7E] font-medium tracking-wider uppercase">
+          Option D • Dedicated Line & Private Hub
+        </span>
+      </div>
+
+      <div className="absolute inset-0 pointer-events-none rounded-[16px] z-20 shadow-[inset_-30px_0px_30px_0px_#000000,inset_20px_0px_30px_0px_#000000]" />
+    </div>
+  );
+}
+
+function PlaceholderCard({ activeOption = "A" }: { activeOption?: "A" | "B" | "C" | "D" }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -515,7 +815,10 @@ function PlaceholderCard() {
       className="w-full md:flex-[1_0_0] md:min-w-px relative rounded-[24px] bg-white border border-[#E5E7EB] hover:border-[#D1D5DB] hover:-translate-y-[3px] hover:shadow-[0px_12px_28px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out block overflow-hidden cursor-pointer select-text no-underline text-inherit"
     >
       <div className="flex flex-col items-center justify-center size-full p-[6px] pb-[24px] relative z-10 select-text">
-        <PlaceholderCardGraphic isHovered={isHovered} />
+        {activeOption === "A" && <EnterpriseGraphicOptionA isHovered={isHovered} />}
+        {activeOption === "B" && <EnterpriseGraphicOptionB isHovered={isHovered} />}
+        {activeOption === "C" && <EnterpriseGraphicOptionC isHovered={isHovered} />}
+        {activeOption === "D" && <EnterpriseGraphicOptionD isHovered={isHovered} />}
         <div className="content-stretch flex flex-col gap-[6px] items-center pt-[20px] relative shrink-0 text-center w-full select-text">
           <p className="font-['Fraunces',serif] font-bold text-[20px] sm:text-[22px] text-[#09090b] leading-[1.2] py-[2px] w-full text-center relative shrink-0 select-text">
             Enterprise Plan
@@ -577,6 +880,45 @@ function SlashSeparator() {
 }
 
 function HowOctenWorksSection() {
+  const [activeEnterpriseOption, setActiveEnterpriseOption] = useState<"A" | "B" | "C" | "D">("A");
+
+  const conceptList: Array<{
+    id: "A" | "B" | "C" | "D";
+    title: string;
+    subtitle: string;
+    desc: string;
+    component: React.ComponentType<{ isHovered?: boolean }>;
+  }> = [
+    {
+      id: "A",
+      title: "Option A: 专属立体集群与数据底座",
+      subtitle: "Dedicated Cluster & Data Cube",
+      desc: "3D等轴测服务器魔方，强调独立专属集群池与 Custom Data 私有定制底座",
+      component: EnterpriseGraphicOptionA
+    },
+    {
+      id: "B",
+      title: "Option B: 全息安全护盾与并发算力环",
+      subtitle: "SLA Shield & Concurrency Matrix",
+      desc: "多重算力环绕的科技护盾与闪电核心，强调 Custom SLA 稳定性保障与 1M+ QPS",
+      component: EnterpriseGraphicOptionB
+    },
+    {
+      id: "C",
+      title: "Option C: 黑金科技水晶与皇冠核心",
+      subtitle: "Prism Crystal & Crown Core",
+      desc: "黑金切面水晶核心向外散射定制激光束，与下方 Enterprise 皇冠徽标形成视觉闭环",
+      component: EnterpriseGraphicOptionC
+    },
+    {
+      id: "D",
+      title: "Option D: 专线通道拓扑与隔离网关",
+      subtitle: "Dedicated Line & Private Hub",
+      desc: "双轨发光光纤直连企业私网与云端，直观呈现 Dedicated Slack 渠道与私有专线",
+      component: EnterpriseGraphicOptionD
+    }
+  ];
+
   return (
     <div className="bg-white content-stretch flex flex-col items-center pt-[60px] sm:pt-[84px] pb-[50px] sm:pb-[80px] px-4 sm:px-6 relative w-full isolate">
       {/* Title & Subtitle per user screenshot */}
@@ -589,21 +931,92 @@ function HowOctenWorksSection() {
         </p>
       </div>
 
-      {/* Entry Cards Container (Pay as you go + [QPS Plan / Enterprise Plan Group]) */}
-      <div className="content-stretch flex flex-col md:flex-row gap-3 sm:gap-4 md:gap-6 lg:gap-7 items-stretch justify-center relative shrink-0 w-full max-w-[1280px]">
-        {/* Layer 1: Pay As You Go */}
-        <div className="w-full md:flex-[1_0_0] md:min-w-px flex items-stretch">
-          <PayAsYouGoCard />
+      {/* Entry Cards Container (3 Cards on Desktop, 1 Column on Mobile) */}
+      <div className="content-stretch flex flex-col md:flex-row gap-[6px] sm:gap-[8px] md:gap-[10px] items-stretch justify-center relative shrink-0 w-full max-w-[1280px]">
+        <PayAsYouGoCard />
+        <PlusSeparator />
+        <QpsPlanCard />
+        <SlashSeparator />
+        <PlaceholderCard activeOption={activeEnterpriseOption} />
+      </div>
+
+      {/* Enterprise Visual Metaphor Concepts Showcase Section */}
+      <div className="w-full max-w-[1280px] mt-[48px] pt-[36px] border-t border-[#EAEAE6] flex flex-col items-center gap-6">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between w-full gap-2">
+          <div>
+            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-[#ECFDF3] border border-[#ABEFC6] text-[#027A48] text-[12px] font-medium font-['JetBrains_Mono',monospace] mb-2">
+              <span className="size-1.5 rounded-full bg-[#12B76A] animate-ping" />
+              ENTERPRISE VISUAL METAPHOR LAB
+            </div>
+            <h3 className="font-['Fraunces',serif] font-bold text-[22px] sm:text-[26px] text-[#09090b] m-0">
+              Enterprise Plan 4 种视觉意象并排对比
+            </h3>
+            <p className="font-['DM_Sans',sans-serif] text-[14px] text-[#71717A] mt-1 m-0">
+              点击下方任意卡片，可即时将对应意象应用至上方第 3 张「Enterprise Plan」卡片实时查看效果
+            </p>
+          </div>
+          <div className="text-right text-[13px] font-['JetBrains_Mono',monospace] text-[#52525B] shrink-0">
+            当前应用: <strong className="text-[#039855] font-bold">Option {activeEnterpriseOption}</strong>
+          </div>
         </div>
 
-        {/* [+] Major Layer Connector */}
-        <PlusSeparator />
+        {/* 4 Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
+          {conceptList.map((item) => {
+            const isSelected = activeEnterpriseOption === item.id;
+            const Comp = item.component;
+            return (
+              <div
+                key={item.id}
+                onClick={() => setActiveEnterpriseOption(item.id)}
+                className={`group cursor-pointer rounded-[20px] p-3.5 bg-[#FAF9F5] border transition-all duration-200 flex flex-col justify-between gap-3 ${
+                  isSelected
+                    ? "border-[#039855] bg-[#F0FDF4] shadow-[0_4px_20px_rgba(3,152,85,0.12)] ring-2 ring-[#039855]"
+                    : "border-[#E4E4DF] hover:border-[#A1A1AA] hover:bg-white hover:shadow-md"
+                }`}
+              >
+                <div className="w-full flex flex-col gap-3">
+                  <div className="w-full relative overflow-hidden rounded-[14px] pointer-events-none">
+                    <Comp isHovered={isSelected} />
+                  </div>
+                  
+                  <div className="flex flex-col gap-1">
+                    <div className="flex items-center justify-between">
+                      <span className="font-['Fraunces',serif] font-bold text-[16px] text-[#09090B]">
+                        {item.title}
+                      </span>
+                    </div>
+                    <span className="font-['JetBrains_Mono',monospace] text-[11px] text-[#71717A]">
+                      {item.subtitle}
+                    </span>
+                    <p className="font-['DM_Sans',sans-serif] text-[13px] text-[#52525B] leading-[18px] mt-1 m-0">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
 
-        {/* Layer 2: Paired Throughput Options Group (QPS Plan / Enterprise Plan) */}
-        <div className="w-full md:flex-[2_0_0] md:min-w-px flex flex-col md:flex-row gap-[4px] sm:gap-[6px] md:gap-[8px] items-stretch">
-          <QpsPlanCard />
-          <SlashSeparator />
-          <PlaceholderCard />
+                <button
+                  type="button"
+                  className={`w-full py-2 px-3 rounded-[10px] text-[13px] font-['DM_Sans',sans-serif] font-medium transition-all duration-150 flex items-center justify-center gap-1.5 ${
+                    isSelected
+                      ? "bg-[#039855] text-white shadow-xs"
+                      : "bg-white border border-[#D4D4D8] text-[#18181B] group-hover:bg-[#18181B] group-hover:text-white group-hover:border-[#18181B]"
+                  }`}
+                >
+                  {isSelected ? (
+                    <>
+                      <svg className="size-4" viewBox="0 0 20 20" fill="currentColor">
+                        <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+                      </svg>
+                      已应用至上方
+                    </>
+                  ) : (
+                    "点击应用此意象"
+                  )}
+                </button>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
