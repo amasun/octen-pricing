@@ -626,14 +626,11 @@ function HeroLightGlow() {
 function HowOctenWorksSection() {
   return (
     <div className="bg-white content-stretch flex flex-col items-center pt-[60px] sm:pt-[84px] pb-[50px] sm:pb-[80px] px-4 sm:px-6 relative w-full isolate">
-      {/* Title & Subtitle per user screenshot */}
-      <div className="text-center flex flex-col items-center gap-2 sm:gap-3 shrink-0 px-4 mb-[36px] sm:mb-[48px]">
+      {/* Title per user requirement */}
+      <div className="text-center flex flex-col items-center shrink-0 px-4 mb-[36px] sm:mb-[48px]">
         <h2 className="font-['Fraunces',serif] font-bold text-[32px] sm:text-[52px] leading-[1.1] text-[#09090b]">
           How Octen works
         </h2>
-        <p className="font-['DM_Sans',sans-serif] font-normal text-[14px] sm:text-[16px] leading-[24px] text-[#5d605b] text-center max-w-[800px]">
-          Octen has two layers &mdash; pay-as-you-go API credits, and a QPS Plan that reserves search throughput. Every account starts on the free QPS Plan.
-        </p>
       </div>
 
       {/* Entry Cards Container (3 Cards on Desktop, 1 Column on Mobile, 16px gap) */}
