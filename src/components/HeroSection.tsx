@@ -459,51 +459,45 @@ function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) 
       {/* 2. CENTER OCTEN HUB: Figma node 13519:937 (left: calc(50%-0.5px), top: 59px, size: 60px) */}
       <OctenCenterHub />
 
-      {/* CENTER-TO-RIGHT DUAL OPPOSITE CHANNELS (Width 85px from calc(50%+30px) to calc(50%+118px) / right: 76.6px) */}
-      <div className="absolute left-[calc(50%+30px)] right-[76.6px] sm:right-auto top-[71px] sm:w-[88px] h-[40px] pointer-events-none z-10 flex items-center justify-center overflow-hidden">
-        <svg className="w-full h-full" viewBox="0 0 88 40" fill="none">
-          <defs>
-            <filter id="laserBeamGlow" x="-30%" y="-30%" width="160%" height="160%">
-              <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
-              <feMerge>
-                <feMergeNode in="blur" />
-                <feMergeNode in="SourceGraphic" />
-              </feMerge>
-            </filter>
+      {/* CENTER-TO-RIGHT DUAL OPPOSITE CHANNELS (Figma Vector 12, 14, 15: top: 86.76px & 96.76px, width: 85-88px) */}
+      <div className="absolute left-[calc(50%+30px)] right-[76.6px] sm:right-auto top-0 bottom-0 sm:w-[88px] pointer-events-none z-10">
+        {/* Top Track: Vector 12 Base Track + Vector 14 Moving Gradient Light Beam (Left to Right / Octen -> Message) */}
+        <div className="absolute left-0 right-0 sm:w-[88px] top-[86.76px] h-[2px] overflow-hidden">
+          {/* Figma Vector 12 Base Track (#70FE7E opacity 0.2) */}
+          <div className="absolute inset-0 bg-[#70FE7E] opacity-20 h-[2px]" />
+          {/* Figma Vector 14 Moving Gradient Light Beam (34px wide, #43984B 0% -> #70FE7E 100%) */}
+          <div 
+            className="absolute top-0 left-0 w-[34px] h-[2px] rounded-full animate-laser-beam-right shadow-[0_0_8px_#70FE7E]"
+            style={{
+              background: "linear-gradient(90deg, rgba(67, 152, 75, 0) 0%, #70FE7E 100%)"
+            }}
+          />
+          <div 
+            className="absolute top-0 left-0 w-[34px] h-[2px] rounded-full animate-laser-beam-right-delayed shadow-[0_0_8px_#70FE7E]"
+            style={{
+              background: "linear-gradient(90deg, rgba(67, 152, 75, 0) 0%, #70FE7E 100%)"
+            }}
+          />
+        </div>
 
-            {/* Figma Vector 14 Gradient: Transparent Green -> Bright Emerald Green (Octen to Message) */}
-            <linearGradient id="topLaserGrad" x1="0" y1="0" x2="35" y2="0" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#43984B" stopOpacity="0" />
-              <stop offset="100%" stopColor="#70FE7E" stopOpacity="1" />
-            </linearGradient>
-
-            {/* Figma Vector 15 Gradient: Bright Emerald Green -> Transparent Green (Message to Octen) */}
-            <linearGradient id="bottomLaserGrad" x1="0" y1="0" x2="35" y2="0" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#70FE7E" stopOpacity="1" />
-              <stop offset="100%" stopColor="#43984B" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-
-          {/* Base Guide Tracks matching Figma Vector 12 (#70FE7E opacity 0.2) */}
-          <line x1="0" y1="15.76" x2="88" y2="15.76" stroke="#70FE7E" strokeWidth="2" opacity="0.2" />
-          <line x1="0" y1="25.76" x2="88" y2="25.76" stroke="#70FE7E" strokeWidth="2" opacity="0.2" />
-
-          {/* Top Moving Gradient Beams (Octen -> Message, Left to Right) */}
-          <g className="animate-laser-beam-right">
-            <line x1="0" y1="15.76" x2="35" y2="15.76" stroke="url(#topLaserGrad)" strokeWidth="2.5" strokeLinecap="round" filter="url(#laserBeamGlow)" />
-          </g>
-          <g className="animate-laser-beam-right-delayed">
-            <line x1="0" y1="15.76" x2="35" y2="15.76" stroke="url(#topLaserGrad)" strokeWidth="2.5" strokeLinecap="round" filter="url(#laserBeamGlow)" />
-          </g>
-
-          {/* Bottom Moving Gradient Beams (Message -> Octen, Right to Left) */}
-          <g className="animate-laser-beam-left">
-            <line x1="0" y1="25.76" x2="35" y2="25.76" stroke="url(#bottomLaserGrad)" strokeWidth="2.5" strokeLinecap="round" filter="url(#laserBeamGlow)" />
-          </g>
-          <g className="animate-laser-beam-left-delayed">
-            <line x1="0" y1="25.76" x2="35" y2="25.76" stroke="url(#bottomLaserGrad)" strokeWidth="2.5" strokeLinecap="round" filter="url(#laserBeamGlow)" />
-          </g>
-        </svg>
+        {/* Bottom Track: Vector 12 Base Track + Vector 15 Moving Gradient Light Beam (Right to Left / Message -> Octen) */}
+        <div className="absolute left-0 right-0 sm:w-[88px] top-[96.76px] h-[2px] overflow-hidden">
+          {/* Figma Vector 12 Base Track (#70FE7E opacity 0.2) */}
+          <div className="absolute inset-0 bg-[#70FE7E] opacity-20 h-[2px]" />
+          {/* Figma Vector 15 Moving Gradient Light Beam (34px wide, #70FE7E 0% -> #43984B 100%) */}
+          <div 
+            className="absolute top-0 left-0 w-[34px] h-[2px] rounded-full animate-laser-beam-left shadow-[0_0_8px_#70FE7E]"
+            style={{
+              background: "linear-gradient(90deg, #70FE7E 0%, rgba(67, 152, 75, 0) 100%)"
+            }}
+          />
+          <div 
+            className="absolute top-0 left-0 w-[34px] h-[2px] rounded-full animate-laser-beam-left-delayed shadow-[0_0_8px_#70FE7E]"
+            style={{
+              background: "linear-gradient(90deg, #70FE7E 0%, rgba(67, 152, 75, 0) 100%)"
+            }}
+          />
+        </div>
       </div>
 
       {/* 3. RIGHT MESSAGE BOX: Figma node 13519:1231 (left: 312.42px / right: 36.58px / calc(50%+118px), top: 71px, size: 40px) */}
