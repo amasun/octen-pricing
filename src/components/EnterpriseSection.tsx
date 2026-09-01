@@ -100,13 +100,21 @@ export default function EnterpriseSection() {
   return (
     <section 
       id="enterprise-plan" 
-      className="content-stretch flex flex-col items-center gap-[32px] sm:gap-[48px] pb-[60px] sm:pb-[100px] mt-[40px] sm:mt-[80px] pt-0 relative shrink-0 w-full max-w-[1312px] px-4 box-border scroll-mt-[90px]"
+      className="content-stretch flex flex-col items-center gap-[32px] sm:gap-[44px] pb-[60px] sm:pb-[100px] mt-[40px] sm:mt-[80px] pt-0 relative shrink-0 w-full max-w-[1312px] px-4 box-border scroll-mt-[90px]"
     >
-      {/* 1. Header Area */}
-      <div className="text-center flex flex-col items-center shrink-0 px-4">
+      {/* 1. Header Area with Title & Contact Sales Button */}
+      <div className="text-center flex flex-col items-center gap-4 sm:gap-5 shrink-0 px-4">
         <h2 className="font-['Fraunces',serif] font-bold text-[28px] sm:text-[44px] leading-[1.15] sm:leading-[48px] text-[#09090b]">
           Enterprise Custom
         </h2>
+        <div className="flex items-center justify-center">
+          <a
+            href="mailto:support@octen.ai?subject=Octen%20Enterprise%20QPS%20Plan%20Inquiry"
+            className="w-auto min-w-[180px] h-[44px] px-8 rounded-full bg-[#100F09] text-white font-['DM_Sans',sans-serif] font-semibold text-[16px] flex items-center justify-center btn-dark-hover hover:shadow-[0_4px_20px_rgba(0,0,0,0.16)] active:scale-[0.98] transition-all duration-200 select-none box-border text-center"
+          >
+            Contact Sales
+          </a>
+        </div>
       </div>
 
       {/* 2. 3x2 Bento Grid of Feature Cards */}
@@ -142,41 +150,6 @@ export default function EnterpriseSection() {
             </div>
           </div>
         ))}
-      </div>
-
-      {/* 3. Bottom Full-Width CTA Banner */}
-      <div className="relative w-full rounded-[24px] bg-[#FAFAF8] border border-[#E7E7E3] hover:border-[#D1D5DB] p-6 sm:p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden isolate shadow-[0_4px_20px_rgba(0,0,0,0.02)] transition-colors duration-200">
-        {/* Background ambient radial highlights */}
-        <div className="absolute left-[-50px] top-[-50px] size-[280px] bg-[#70FE7E]/15 blur-[60px] pointer-events-none rounded-full" />
-        <div className="absolute right-[-50px] bottom-[-50px] size-[280px] bg-[#DDFE70]/15 blur-[60px] pointer-events-none rounded-full" />
-
-        {/* Left info */}
-        <div className="relative z-10 flex flex-col items-center md:items-start text-center md:text-left gap-2 max-w-[700px]">
-          <div className="flex items-center gap-2">
-            <svg className="size-[20px] text-[#C6A55A]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17.42 3C17.7725 3.00011 18.1188 3.09341 18.4236 3.27042C18.7285 3.44744 18.9811 3.70189 19.156 4.008L22.49 9.84C22.7076 10.2209 22.7939 10.6627 22.7358 11.0974C22.6776 11.5322 22.4781 11.9358 22.168 12.246L12.885 21.529C12.7689 21.6451 12.6311 21.7372 12.4794 21.8001C12.3278 21.8629 12.1652 21.8952 12.001 21.8952C11.8368 21.8952 11.6743 21.8629 11.5226 21.8001C11.3709 21.7372 11.2331 21.6451 11.117 21.529L1.834 12.246C1.52392 11.9358 1.32443 11.5322 1.26624 11.0974C1.20806 10.6627 1.29441 10.2209 1.512 9.84L4.845 4.007C5.0199 3.70123 5.27246 3.44707 5.57712 3.27024C5.88174 3.09341 6.22774 3.00019 6.58 3H17.42ZM16.707 9.293C16.5195 9.10553 16.2652 9.00021 16 9.00021C15.7348 9.00021 15.4805 9.10553 15.293 9.293L12 12.586L8.706 9.293C8.61476 9.19749 8.50441 9.12131 8.38241 9.0689C8.2604 9.01649 8.12918 8.9889 7.9964 8.98775C7.86362 8.9866 7.73195 9.0119 7.60905 9.06218C7.48615 9.11246 7.3745 9.18671 7.28061 9.28061C7.18671 9.3745 7.11246 9.48615 7.06218 9.60905C7.0119 9.73194 6.9866 9.86362 6.98775 9.9964C6.98891 10.1292 7.01649 10.2604 7.0689 10.3824C7.12131 10.5044 7.19749 10.6148 7.293 10.707L11.116 14.53C11.2321 14.6461 11.3699 14.7382 11.5216 14.8011C11.6733 14.8639 11.8358 14.8962 12 14.8962C12.1642 14.8962 12.3268 14.8639 12.4784 14.8011C12.6301 14.7382 12.7679 14.6461 12.884 14.53L16.707 10.707C16.8945 10.5195 16.9998 10.2652 16.9998 10C16.9998 9.73484 16.8945 9.48053 16.707 9.293Z" fill="#C6A55A"/>
-            </svg>
-            <span className="font-['Fraunces',serif] font-bold text-[22px] sm:text-[26px] text-[#100F09] leading-tight">
-              Ready to design a custom enterprise deployment?
-            </span>
-          </div>
-          <p className="font-['DM_Sans',sans-serif] font-normal text-[15px] leading-[22px] text-[#57575E]">
-            Connect directly with our infrastructure architects to scope search throughput, custom SLAs, and enterprise procurement terms.
-          </p>
-        </div>
-
-        {/* Right action */}
-        <div className="relative z-10 flex flex-col items-center md:items-end gap-2 shrink-0 w-full md:w-auto">
-          <a
-            href="mailto:support@octen.ai?subject=Octen%20Enterprise%20QPS%20Plan%20Inquiry"
-            className="w-full md:w-auto min-w-[190px] h-[46px] px-8 rounded-full bg-[#100F09] text-white font-['DM_Sans',sans-serif] font-semibold text-[16px] flex items-center justify-center btn-dark-hover hover:shadow-[0_4px_20px_rgba(0,0,0,0.16)] active:scale-[0.98] transition-all duration-200 select-none box-border text-center"
-          >
-            Contact Sales
-          </a>
-          <span className="text-[13px] font-['JetBrains_Mono',monospace] text-[#71717A]">
-            support@octen.ai
-          </span>
-        </div>
       </div>
     </section>
   );
