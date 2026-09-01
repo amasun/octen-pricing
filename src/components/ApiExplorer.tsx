@@ -1610,7 +1610,22 @@ function PlanCTable() {
 export default function ApiExplorer() {
   const [layoutPlan, setLayoutPlan] = useState<"planA" | "planB" | "planC">("planC");
   const [isWidgetCollapsed, setIsWidgetCollapsed] = useState(false);
+  const [showPlanSwitcher, setShowPlanSwitcher] = useState(false);
   const [activeCategory, setActiveCategory] = useState("search");
+
+  // Double click on blank / empty areas toggles the Plan A/B/C switcher panel
+  useEffect(() => {
+    const handleDblClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (target && target.closest("button, a, input, textarea, select, code, pre, [data-interactive]")) {
+        return;
+      }
+      setShowPlanSwitcher((prev) => !prev);
+    };
+
+    window.addEventListener("dblclick", handleDblClick);
+    return () => window.removeEventListener("dblclick", handleDblClick);
+  }, []);
 
   useEffect(() => {
     if (layoutPlan !== "planA") return;
@@ -1670,94 +1685,105 @@ export default function ApiExplorer() {
   return (
     <div className="bg-white content-stretch flex flex-col items-center pb-0 pt-[20px] sm:pt-[40px] relative shrink-0 w-full max-w-[1312px] px-4 box-border scroll-mt-[90px]" id="pay-as-you-go">
 
-      {/* Floating Layout Plan Switcher Widget on the Left Margin */}
-      <div className="fixed left-3 sm:left-6 bottom-6 sm:bottom-auto sm:top-[200px] z-50 pointer-events-auto select-none">
-        {isWidgetCollapsed ? (
-          <button
-            onClick={() => setIsWidgetCollapsed(false)}
-            className="flex items-center gap-2 bg-[#100F09] hover:bg-[#201F1B] text-white px-3 py-2 rounded-full shadow-[0_8px_24px_rgba(0,0,0,0.35)] border border-[#2A2A28] cursor-pointer transition-all duration-200 hover:scale-105"
-            title="Expand variant switcher"
-          >
-            <span className="size-2 rounded-full bg-[#70FE7E] animate-pulse" />
-            <span className="font-['DM_Sans',sans-serif] font-bold text-[12px] text-white">
-              {layoutPlan === "planA" ? "Plan A" : layoutPlan === "planB" ? "Plan B" : "Plan C"}
-            </span>
-            <svg className="size-3 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        ) : (
-          <div className="bg-[#100F09]/95 backdrop-blur-md border border-[#2A2A28] rounded-[16px] p-[12px] shadow-[0_12px_36px_rgba(0,0,0,0.4)] flex flex-col gap-[8px] w-[140px] sm:w-[155px] transition-all duration-200">
-            {/* Header with Title and Collapse Button */}
-            <div className="flex items-center justify-between pb-1.5 border-b border-white/10">
-              <div className="flex items-center gap-[6px]">
-                <span className="size-2 rounded-full bg-[#70FE7E] animate-pulse" />
-                <span className="font-['DM_Sans',sans-serif] font-bold text-[12px] text-white tracking-tight">
-                  Layout
-                </span>
+      {/* Floating Layout Plan Switcher Widget on the Left Margin (Hidden by default, double-click empty area to show/hide) */}
+      {showPlanSwitcher && (
+        <div className="fixed left-3 sm:left-6 bottom-6 sm:bottom-auto sm:top-[200px] z-50 pointer-events-auto select-none animate-in fade-in duration-200">
+          {isWidgetCollapsed ? (
+            <button
+              onClick={() => setIsWidgetCollapsed(false)}
+              className="flex items-center gap-2 bg-[#100F09] hover:bg-[#201F1B] text-white px-3 py-2 rounded-full shadow-[0_8px_24px_rgba(0,0,0,0.35)] border border-[#2A2A28] cursor-pointer transition-all duration-200 hover:scale-105"
+              title="Expand variant switcher"
+            >
+              <span className="size-2 rounded-full bg-[#70FE7E] animate-pulse" />
+              <span className="font-['DM_Sans',sans-serif] font-bold text-[12px] text-white">
+                {layoutPlan === "planA" ? "Plan A" : layoutPlan === "planB" ? "Plan B" : "Plan C"}
+              </span>
+              <svg className="size-3 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          ) : (
+            <div className="bg-[#100F09]/95 backdrop-blur-md border border-[#2A2A28] rounded-[16px] p-[12px] shadow-[0_12px_36px_rgba(0,0,0,0.4)] flex flex-col gap-[8px] w-[140px] sm:w-[155px] transition-all duration-200">
+              {/* Header with Title and Close Buttons */}
+              <div className="flex items-center justify-between pb-1.5 border-b border-white/10">
+                <div className="flex items-center gap-[6px]">
+                  <span className="size-2 rounded-full bg-[#70FE7E] animate-pulse" />
+                  <span className="font-['DM_Sans',sans-serif] font-bold text-[12px] text-white tracking-tight">
+                    Layout
+                  </span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <button
+                    onClick={() => setIsWidgetCollapsed(true)}
+                    className="text-white/40 hover:text-white text-[12px] px-1 rounded transition-colors cursor-pointer leading-none"
+                    title="Collapse"
+                  >
+                    −
+                  </button>
+                  <button
+                    onClick={() => setShowPlanSwitcher(false)}
+                    className="text-white/40 hover:text-white text-[11px] p-0.5 rounded transition-colors cursor-pointer leading-none"
+                    title="Close (Double click blank area to reopen)"
+                  >
+                    ✕
+                  </button>
+                </div>
               </div>
-              <button
-                onClick={() => setIsWidgetCollapsed(true)}
-                className="text-white/40 hover:text-white text-[11px] p-0.5 rounded transition-colors cursor-pointer"
-                title="Collapse"
-              >
-                ✕
-              </button>
+
+              {/* Vertical List of Plans */}
+              <div className="flex flex-col gap-[6px]">
+                <button
+                  onClick={() => setLayoutPlan("planA")}
+                  className={`w-full py-[8px] px-[12px] rounded-[10px] font-['DM_Sans',sans-serif] text-[13px] font-medium transition-all duration-200 cursor-pointer flex items-center justify-between ${
+                    layoutPlan === "planA"
+                      ? "bg-[#70FE7E] text-[#100F09] font-bold shadow-xs scale-[1.02]"
+                      : "bg-[#1D1D1B] text-white/80 hover:text-white hover:bg-[#282825]"
+                  }`}
+                >
+                  <span>Plan A</span>
+                  {layoutPlan === "planA" && (
+                    <svg className="size-3.5 shrink-0 text-[#100F09]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  )}
+                </button>
+
+                <button
+                  onClick={() => setLayoutPlan("planB")}
+                  className={`w-full py-[8px] px-[12px] rounded-[10px] font-['DM_Sans',sans-serif] text-[13px] font-medium transition-all duration-200 cursor-pointer flex items-center justify-between ${
+                    layoutPlan === "planB"
+                      ? "bg-[#70FE7E] text-[#100F09] font-bold shadow-xs scale-[1.02]"
+                      : "bg-[#1D1D1B] text-white/80 hover:text-white hover:bg-[#282825]"
+                  }`}
+                >
+                  <span>Plan B</span>
+                  {layoutPlan === "planB" && (
+                    <svg className="size-3.5 shrink-0 text-[#100F09]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  )}
+                </button>
+
+                <button
+                  onClick={() => setLayoutPlan("planC")}
+                  className={`w-full py-[8px] px-[12px] rounded-[10px] font-['DM_Sans',sans-serif] text-[13px] font-medium transition-all duration-200 cursor-pointer flex items-center justify-between ${
+                    layoutPlan === "planC"
+                      ? "bg-[#70FE7E] text-[#100F09] font-bold shadow-xs scale-[1.02]"
+                      : "bg-[#1D1D1B] text-white/80 hover:text-white hover:bg-[#282825]"
+                  }`}
+                >
+                  <span>Plan C</span>
+                  {layoutPlan === "planC" && (
+                    <svg className="size-3.5 shrink-0 text-[#100F09]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  )}
+                </button>
+              </div>
             </div>
-
-            {/* Vertical List of Plans */}
-            <div className="flex flex-col gap-[6px]">
-              <button
-                onClick={() => setLayoutPlan("planA")}
-                className={`w-full py-[8px] px-[12px] rounded-[10px] font-['DM_Sans',sans-serif] text-[13px] font-medium transition-all duration-200 cursor-pointer flex items-center justify-between ${
-                  layoutPlan === "planA"
-                    ? "bg-[#70FE7E] text-[#100F09] font-bold shadow-xs scale-[1.02]"
-                    : "bg-[#1D1D1B] text-white/80 hover:text-white hover:bg-[#282825]"
-                }`}
-              >
-                <span>Plan A</span>
-                {layoutPlan === "planA" && (
-                  <svg className="size-3.5 shrink-0 text-[#100F09]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                )}
-              </button>
-
-              <button
-                onClick={() => setLayoutPlan("planB")}
-                className={`w-full py-[8px] px-[12px] rounded-[10px] font-['DM_Sans',sans-serif] text-[13px] font-medium transition-all duration-200 cursor-pointer flex items-center justify-between ${
-                  layoutPlan === "planB"
-                    ? "bg-[#70FE7E] text-[#100F09] font-bold shadow-xs scale-[1.02]"
-                    : "bg-[#1D1D1B] text-white/80 hover:text-white hover:bg-[#282825]"
-                }`}
-              >
-                <span>Plan B</span>
-                {layoutPlan === "planB" && (
-                  <svg className="size-3.5 shrink-0 text-[#100F09]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                )}
-              </button>
-
-              <button
-                onClick={() => setLayoutPlan("planC")}
-                className={`w-full py-[8px] px-[12px] rounded-[10px] font-['DM_Sans',sans-serif] text-[13px] font-medium transition-all duration-200 cursor-pointer flex items-center justify-between ${
-                  layoutPlan === "planC"
-                    ? "bg-[#70FE7E] text-[#100F09] font-bold shadow-xs scale-[1.02]"
-                    : "bg-[#1D1D1B] text-white/80 hover:text-white hover:bg-[#282825]"
-                }`}
-              >
-                <span>Plan C</span>
-                {layoutPlan === "planC" && (
-                  <svg className="size-3.5 shrink-0 text-[#100F09]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                )}
-              </button>
-            </div>
-          </div>
-        )}
-      </div>
+          )}
+        </div>
+      )}
 
       {/* Section Header Title & Subtitle */}
       <div className="text-center flex flex-col items-center gap-2 sm:gap-3 shrink-0 px-4 mb-[24px] sm:mb-[32px]">
