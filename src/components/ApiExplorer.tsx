@@ -724,9 +724,9 @@ function PlanCTable() {
                   <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
                 </div>
                 <div className="flex items-center gap-1 text-[12px] text-[#57575E]">
-                  <span className="text-[#8B8B8B]">Full content:</span>
                   <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09]">$0.5</span>
                   <span className="text-[#8B8B8B]">/ 1k results</span>
+                  <span className="text-[#8B8B8B]">(full content)</span>
                 </div>
               </div>
               <div className="text-[13px] text-[#039855] font-medium leading-[20px]">
@@ -764,9 +764,9 @@ function PlanCTable() {
                   <span className="text-[14px] text-[#8B8B8B]">/ 1k sub-queries</span>
                 </div>
                 <div className="flex items-center gap-1 text-[12px] text-[#57575E]">
-                  <span className="text-[#8B8B8B]">Full content:</span>
                   <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09]">$0.5</span>
                   <span className="text-[#8B8B8B]">/ 1k results</span>
+                  <span className="text-[#8B8B8B]">(full content)</span>
                 </div>
               </div>
               <div className="text-[13px] text-[#039855] font-medium leading-[20px]">
@@ -1187,9 +1187,9 @@ function PlanCTable() {
                     <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-bold text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#70FE7E] text-[#100F09] border border-[#70FE7E]">80% Off</span>
                   </div>
                   <div className="flex items-center gap-1 text-[13px] text-[#57575E]">
-                    <span className="text-[#8B8B8B]">Full content:</span>
                     <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09]">$0.5</span>
                     <span className="text-[#8B8B8B]">/ 1k results</span>
+                    <span className="text-[#8B8B8B] text-[12px]">(full content)</span>
                   </div>
                 </div>
               </td>
@@ -1220,9 +1220,9 @@ function PlanCTable() {
                     <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-bold text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#70FE7E] text-[#100F09] border border-[#70FE7E]">80% Off</span>
                   </div>
                   <div className="flex items-center gap-1 text-[13px] text-[#57575E]">
-                    <span className="text-[#8B8B8B]">Full content:</span>
                     <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09]">$0.5</span>
                     <span className="text-[#8B8B8B]">/ 1k results</span>
+                    <span className="text-[#8B8B8B] text-[12px]">(full content)</span>
                   </div>
                 </div>
               </td>
