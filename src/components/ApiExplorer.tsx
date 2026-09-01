@@ -168,8 +168,8 @@ function WebSearchCard({ plan = "planA" }: { plan?: "planA" | "planB" }) {
           LLM-native search with ranked results, highlights, and optional full content.
         </p>
         <div className="flex items-baseline gap-[6px] sm:gap-[8px] mb-[18px] flex-wrap">
-          <span className="font-['DM_Sans',sans-serif] font-medium text-[30px] sm:text-[34px] leading-none text-[#0A0A0A] tracking-tight">$1</span>
-          <span className="font-['DM_Sans',sans-serif] font-normal text-[15px] sm:text-[16px] leading-none text-[#9C9CA4] line-through">$5</span>
+          <span className="font-['JetBrains_Mono',monospace] font-medium text-[30px] sm:text-[34px] leading-none text-[#0A0A0A] tracking-tight">$1</span>
+          <span className="font-['JetBrains_Mono',monospace] font-normal text-[15px] sm:text-[16px] leading-none text-[#9C9CA4] line-through">$5</span>
           <span className="font-['DM_Sans',sans-serif] text-[13px] sm:text-[14px] text-[#57575E]">/ 1k calls</span>
         </div>
         <div className="border-t border-[#E7E7E3] pt-[14px] flex flex-col gap-[6px]">
@@ -216,7 +216,7 @@ function ImageVideoSearchCard({ plan = "planA" }: { plan?: "planA" | "planB" }) 
           Open-web image search by text or reference image, and video retrieval across the web.
         </p>
         <div className="flex items-baseline gap-[6px] sm:gap-[8px] mb-[18px] flex-wrap">
-          <span className="font-['DM_Sans',sans-serif] font-medium text-[30px] sm:text-[34px] leading-none text-[#0A0A0A] tracking-tight">$5</span>
+          <span className="font-['JetBrains_Mono',monospace] font-medium text-[30px] sm:text-[34px] leading-none text-[#0A0A0A] tracking-tight">$5</span>
           <span className="font-['DM_Sans',sans-serif] text-[13px] sm:text-[14px] text-[#57575E]">/ 1k calls</span>
         </div>
         <div className="border-t border-[#E7E7E3] pt-[14px] flex flex-col gap-[6px]">
@@ -259,7 +259,7 @@ function ExtractCard() {
         </span>
       </div>
       <div className="flex items-baseline gap-[6px] shrink-0">
-        <span className="font-['DM_Sans',sans-serif] font-medium text-[30px] sm:text-[34px] leading-none text-[#0A0A0A] tracking-tight">$1</span>
+        <span className="font-['JetBrains_Mono',monospace] font-medium text-[30px] sm:text-[34px] leading-none text-[#0A0A0A] tracking-tight">$1</span>
         <span className="font-['DM_Sans',sans-serif] text-[13px] sm:text-[14px] text-[#57575E]">/ 1k URLs</span>
       </div>
     </a>
@@ -290,21 +290,21 @@ function EmbeddingCard() {
           Text embeddings for retrieval, similarity, and ranking.
         </p>
         <div className="flex items-baseline gap-[4px] sm:gap-[6px] mb-[18px] flex-wrap">
-          <span className="font-['DM_Sans',sans-serif] font-medium text-[20px] sm:text-[22px] leading-none text-[#0A0A0A] tracking-tight">$0.01 &ndash; $0.07</span>
+          <span className="font-['JetBrains_Mono',monospace] font-medium text-[20px] sm:text-[22px] leading-none text-[#0A0A0A] tracking-tight">$0.01 &ndash; $0.07</span>
           <span className="font-['DM_Sans',sans-serif] text-[12px] sm:text-[13px] text-[#57575E]">/ 1M tokens</span>
         </div>
         <div className="border-t border-[#E7E7E3] pt-[14px] flex flex-col gap-[6px]">
           <div className="flex items-center justify-between gap-[8px] text-[13px] sm:text-[14px] min-w-0">
             <span className="font-semibold text-[#0A0A0A] truncate min-w-0 font-['JetBrains_Mono',monospace]">embedding-8b</span>
-            <span className="text-[#57575E] text-[11px] sm:text-[12px] bg-[#F6F6F3] px-[6px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$0.07 / 1M</span>
+            <span className="text-[#57575E] text-[11px] sm:text-[12px] bg-[#F6F6F3] px-[6px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] tabular-nums">$0.07 / 1M</span>
           </div>
           <div className="flex items-center justify-between gap-[8px] text-[13px] sm:text-[14px] min-w-0">
             <span className="font-semibold text-[#0A0A0A] truncate min-w-0 font-['JetBrains_Mono',monospace]">embedding-4b</span>
-            <span className="text-[#57575E] text-[11px] sm:text-[12px] bg-[#F6F6F3] px-[6px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$0.04 / 1M</span>
+            <span className="text-[#57575E] text-[11px] sm:text-[12px] bg-[#F6F6F3] px-[6px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] tabular-nums">$0.04 / 1M</span>
           </div>
           <div className="flex items-center justify-between gap-[8px] text-[13px] sm:text-[14px] min-w-0">
             <span className="font-semibold text-[#0A0A0A] truncate min-w-0 font-['JetBrains_Mono',monospace]">embedding-0.6b</span>
-            <span className="text-[#57575E] text-[11px] sm:text-[12px] bg-[#F6F6F3] px-[6px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$0.01 / 1M</span>
+            <span className="text-[#57575E] text-[11px] sm:text-[12px] bg-[#F6F6F3] px-[6px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] tabular-nums">$0.01 / 1M</span>
           </div>
         </div>
       </div>
@@ -336,17 +336,17 @@ function VlEmbeddingCard() {
           One vector space across text, images, video, and documents.
         </p>
         <div className="flex items-baseline gap-[4px] sm:gap-[6px] mb-[18px] flex-wrap">
-          <span className="font-['DM_Sans',sans-serif] font-medium text-[20px] sm:text-[22px] leading-none text-[#0A0A0A] tracking-tight">$0.05 &ndash; $0.25</span>
+          <span className="font-['JetBrains_Mono',monospace] font-medium text-[20px] sm:text-[22px] leading-none text-[#0A0A0A] tracking-tight">$0.05 &ndash; $0.25</span>
           <span className="font-['DM_Sans',sans-serif] text-[12px] sm:text-[13px] text-[#57575E]">/ 1M tokens</span>
         </div>
         <div className="border-t border-[#E7E7E3] pt-[14px] flex flex-col gap-[6px]">
           <div className="flex items-center justify-between gap-[8px] text-[13px] sm:text-[14px] min-w-0">
             <span className="font-semibold text-[#0A0A0A] truncate min-w-0 font-['JetBrains_Mono',monospace]">vl-embedding</span>
-            <span className="text-[#57575E] text-[11px] sm:text-[12px] bg-[#F6F6F3] px-[6px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$0.05 / $0.12</span>
+            <span className="text-[#57575E] text-[11px] sm:text-[12px] bg-[#F6F6F3] px-[6px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] tabular-nums">$0.05 / $0.12</span>
           </div>
           <div className="flex items-center justify-between gap-[8px] text-[13px] sm:text-[14px] min-w-0">
             <span className="font-semibold text-[#0A0A0A] truncate min-w-0 font-['JetBrains_Mono',monospace]">vl-embedding-large</span>
-            <span className="text-[#57575E] text-[11px] sm:text-[12px] bg-[#F6F6F3] px-[6px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$0.10 / $0.25</span>
+            <span className="text-[#57575E] text-[11px] sm:text-[12px] bg-[#F6F6F3] px-[6px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] tabular-nums">$0.10 / $0.25</span>
           </div>
         </div>
       </div>
@@ -460,7 +460,7 @@ function DeepResearchCard() {
           Source-backed research across thousands of pages and documents.
         </p>
         <div className="flex items-baseline gap-[4px] sm:gap-[6px] mb-[18px] flex-wrap">
-          <span className="font-['DM_Sans',sans-serif] font-medium text-[20px] sm:text-[22px] leading-none text-[#0A0A0A] tracking-tight">
+          <span className="font-['JetBrains_Mono',monospace] font-medium text-[20px] sm:text-[22px] leading-none text-[#0A0A0A] tracking-tight">
             $0.20 &ndash; $3.00
           </span>
           <span className="font-['DM_Sans',sans-serif] text-[12px] sm:text-[13px] text-[#57575E]">/ request</span>
@@ -514,7 +514,7 @@ function GroundedGenCard() {
           Images and videos grounded in real-world references from live search.
         </p>
         <div className="flex items-baseline gap-[4px] sm:gap-[6px] mb-[18px] flex-wrap">
-          <span className="font-['DM_Sans',sans-serif] font-medium text-[20px] sm:text-[22px] leading-none text-[#0A0A0A] tracking-tight">
+          <span className="font-['JetBrains_Mono',monospace] font-medium text-[20px] sm:text-[22px] leading-none text-[#0A0A0A] tracking-tight">
             $0.25 &ndash; $1.00
           </span>
           <span className="font-['DM_Sans',sans-serif] text-[12px] sm:text-[13px] text-[#57575E]">/ output</span>
@@ -719,8 +719,8 @@ function PlanCTable() {
               </div>
               <div className="flex flex-col gap-1 bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
                 <div className="flex items-baseline gap-[6px] flex-wrap">
-                  <span className="font-bold text-[18px] text-[#0A0A0A]">$1</span>
-                  <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
+                  <span className="font-['JetBrains_Mono',monospace] font-bold text-[18px] text-[#0A0A0A]">$1</span>
+                  <span className="font-['JetBrains_Mono',monospace] text-[14px] text-[#9C9CA4] line-through">$5</span>
                   <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
                 </div>
                 <div className="flex items-center gap-1.5 text-[14px]">
@@ -759,8 +759,8 @@ function PlanCTable() {
               </div>
               <div className="flex flex-col gap-1 bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
                 <div className="flex items-baseline gap-[6px] flex-wrap">
-                  <span className="font-bold text-[18px] text-[#0A0A0A]">$1</span>
-                  <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
+                  <span className="font-['JetBrains_Mono',monospace] font-bold text-[18px] text-[#0A0A0A]">$1</span>
+                  <span className="font-['JetBrains_Mono',monospace] text-[14px] text-[#9C9CA4] line-through">$5</span>
                   <span className="text-[14px] text-[#8B8B8B]">/ 1k sub-queries</span>
                 </div>
                 <div className="flex items-center gap-1.5 text-[14px]">
@@ -798,7 +798,7 @@ function PlanCTable() {
                 </a>
               </div>
               <div className="flex items-baseline gap-[6px] bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
-                <span className="font-bold text-[18px] text-[#0A0A0A]">$5</span>
+                <span className="font-['JetBrains_Mono',monospace] font-bold text-[18px] text-[#0A0A0A]">$5</span>
                 <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
               </div>
             </div>
@@ -827,7 +827,7 @@ function PlanCTable() {
                 </a>
               </div>
               <div className="flex items-baseline gap-[6px] bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
-                <span className="font-bold text-[18px] text-[#0A0A0A]">$5</span>
+                <span className="font-['JetBrains_Mono',monospace] font-bold text-[18px] text-[#0A0A0A]">$5</span>
                 <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
               </div>
             </div>
@@ -862,7 +862,7 @@ function PlanCTable() {
               </a>
             </div>
             <div className="flex items-baseline gap-[6px] bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
-              <span className="font-bold text-[18px] text-[#0A0A0A]">$1</span>
+              <span className="font-['JetBrains_Mono',monospace] font-bold text-[18px] text-[#0A0A0A]">$1</span>
               <span className="text-[14px] text-[#8B8B8B]">/ 1k URLs</span>
             </div>
             <div className="text-[13px] text-[#039855] font-medium leading-[20px]">
@@ -906,7 +906,7 @@ function PlanCTable() {
                 </a>
               </div>
               <div className="flex items-baseline gap-[6px] bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
-                <span className="font-bold text-[18px] text-[#0A0A0A]">$0.01 – $0.07</span>
+                <span className="font-['JetBrains_Mono',monospace] font-bold text-[18px] text-[#0A0A0A]">$0.01 – $0.07</span>
                 <span className="text-[14px] text-[#8B8B8B]">/ 1M tokens</span>
               </div>
               <div className="bg-[#F8F8F5] p-[12px] rounded-[10px] border border-[#EAEAE5] flex flex-col gap-[8px] text-[13px]">
@@ -950,12 +950,12 @@ function PlanCTable() {
               </div>
               <div className="flex flex-col gap-1 bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5] text-[14px]">
                 <div className="flex items-baseline gap-1.5">
-                  <span className="font-bold text-[16px] text-[#0A0A0A] tabular-nums">$0.05 – $0.10</span>
+                  <span className="font-['JetBrains_Mono',monospace] font-bold text-[16px] text-[#0A0A0A] tabular-nums">$0.05 – $0.10</span>
                   <span className="text-[14px] text-[#8B8B8B]">/ 1M tokens</span>
                   <span className="text-[14px] text-[#8B8B8B]">(text)</span>
                 </div>
                 <div className="flex items-baseline gap-1.5">
-                  <span className="font-bold text-[16px] text-[#0A0A0A] tabular-nums">$0.12 – $0.25</span>
+                  <span className="font-['JetBrains_Mono',monospace] font-bold text-[16px] text-[#0A0A0A] tabular-nums">$0.12 – $0.25</span>
                   <span className="text-[14px] text-[#8B8B8B]">/ 1M tokens</span>
                   <span className="text-[14px] text-[#8B8B8B]">(visual)</span>
                 </div>
@@ -1060,7 +1060,7 @@ function PlanCTable() {
                 </a>
               </div>
               <div className="flex items-baseline gap-[6px] bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
-                <span className="font-bold text-[18px] text-[#0A0A0A]">$0.20 – $3.00</span>
+                <span className="font-['JetBrains_Mono',monospace] font-bold text-[18px] text-[#0A0A0A]">$0.20 – $3.00</span>
                 <span className="text-[14px] text-[#8B8B8B]">/ request</span>
               </div>
               <div className="bg-[#F8F8F5] p-[12px] rounded-[10px] border border-[#EAEAE5] flex flex-col gap-[8px] text-[13px]">
@@ -1107,7 +1107,7 @@ function PlanCTable() {
                 </a>
               </div>
               <div className="flex items-baseline gap-[6px] bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
-                <span className="font-bold text-[18px] text-[#0A0A0A]">$0.25 – $1.00</span>
+                <span className="font-['JetBrains_Mono',monospace] font-bold text-[18px] text-[#0A0A0A]">$0.25 – $1.00</span>
                 <span className="text-[14px] text-[#8B8B8B]">/ output</span>
               </div>
               <div className="bg-[#F8F8F5] p-[12px] rounded-[10px] border border-[#EAEAE5] flex flex-col gap-[8px] text-[13px]">
@@ -1181,8 +1181,8 @@ function PlanCTable() {
               <td className="py-4 px-6">
                 <div className="flex flex-col gap-1">
                   <div className="flex items-center gap-1.5 flex-nowrap whitespace-nowrap">
-                    <span className="font-bold text-[16px] text-[#0A0A0A]">$1</span>
-                    <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
+                    <span className="font-['JetBrains_Mono',monospace] font-bold text-[16px] text-[#0A0A0A]">$1</span>
+                    <span className="font-['JetBrains_Mono',monospace] text-[14px] text-[#9C9CA4] line-through">$5</span>
                     <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
                     <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-bold text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#70FE7E] text-[#100F09] border border-[#70FE7E]">80% Off</span>
                   </div>
@@ -1214,8 +1214,8 @@ function PlanCTable() {
               <td className="py-4 px-6">
                 <div className="flex flex-col gap-1">
                   <div className="flex items-center gap-1.5 flex-nowrap whitespace-nowrap">
-                    <span className="font-bold text-[16px] text-[#0A0A0A]">$1</span>
-                    <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
+                    <span className="font-['JetBrains_Mono',monospace] font-bold text-[16px] text-[#0A0A0A]">$1</span>
+                    <span className="font-['JetBrains_Mono',monospace] text-[14px] text-[#9C9CA4] line-through">$5</span>
                     <span className="text-[14px] text-[#8B8B8B]">/ 1k sub-queries</span>
                     <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-bold text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#70FE7E] text-[#100F09] border border-[#70FE7E]">80% Off</span>
                   </div>
@@ -1249,7 +1249,7 @@ function PlanCTable() {
               </td>
               <td className="py-4 px-6">
                 <div className="flex items-center gap-1 flex-nowrap whitespace-nowrap">
-                  <span className="font-bold text-[16px] text-[#0A0A0A]">$5</span>
+                  <span className="font-['JetBrains_Mono',monospace] font-bold text-[16px] text-[#0A0A0A]">$5</span>
                   <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
                 </div>
               </td>
@@ -1272,7 +1272,7 @@ function PlanCTable() {
               </td>
               <td className="py-4 px-6">
                 <div className="flex items-center gap-1 flex-nowrap whitespace-nowrap">
-                  <span className="font-bold text-[16px] text-[#0A0A0A]">$5</span>
+                  <span className="font-['JetBrains_Mono',monospace] font-bold text-[16px] text-[#0A0A0A]">$5</span>
                   <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
                 </div>
               </td>
@@ -1305,7 +1305,7 @@ function PlanCTable() {
               </td>
               <td className="py-4 px-6">
                 <div className="flex items-center gap-1 flex-nowrap whitespace-nowrap">
-                  <span className="font-bold text-[16px] text-[#0A0A0A]">$1</span>
+                  <span className="font-['JetBrains_Mono',monospace] font-bold text-[16px] text-[#0A0A0A]">$1</span>
                   <span className="text-[14px] text-[#8B8B8B]">/ 1k URLs</span>
                 </div>
               </td>
@@ -1343,7 +1343,7 @@ function PlanCTable() {
               </td>
               <td className="py-4 px-6">
                 <div className="flex items-center gap-1 flex-nowrap whitespace-nowrap">
-                  <span className="font-bold text-[16px] text-[#0A0A0A]">$0.01 – $0.07</span>
+                  <span className="font-['JetBrains_Mono',monospace] font-bold text-[16px] text-[#0A0A0A]">$0.01 – $0.07</span>
                   <span className="text-[14px] text-[#8B8B8B]">/ 1M tokens</span>
                 </div>
               </td>
@@ -1382,12 +1382,12 @@ function PlanCTable() {
               <td className="py-4 px-6">
                 <div className="flex flex-col gap-1 text-[14px]">
                   <div className="flex items-baseline gap-1.5 flex-nowrap whitespace-nowrap">
-                    <span className="font-bold text-[16px] text-[#0A0A0A] tabular-nums">$0.05 – $0.10</span>
+                    <span className="font-['JetBrains_Mono',monospace] font-bold text-[16px] text-[#0A0A0A] tabular-nums">$0.05 – $0.10</span>
                     <span className="text-[#8B8B8B]">/ 1M tokens</span>
                     <span className="text-[#8B8B8B] text-[13px]">(text)</span>
                   </div>
                   <div className="flex items-baseline gap-1.5 flex-nowrap whitespace-nowrap">
-                    <span className="font-bold text-[16px] text-[#0A0A0A] tabular-nums">$0.12 – $0.25</span>
+                    <span className="font-['JetBrains_Mono',monospace] font-bold text-[16px] text-[#0A0A0A] tabular-nums">$0.12 – $0.25</span>
                     <span className="text-[#8B8B8B]">/ 1M tokens</span>
                     <span className="text-[#8B8B8B] text-[13px]">(visual)</span>
                   </div>
@@ -1472,7 +1472,7 @@ function PlanCTable() {
               </td>
               <td className="py-4 px-6">
                 <div className="flex items-center gap-1 flex-nowrap whitespace-nowrap">
-                  <span className="font-bold text-[16px] text-[#0A0A0A]">$0.20 – $3.00</span>
+                  <span className="font-['JetBrains_Mono',monospace] font-bold text-[16px] text-[#0A0A0A]">$0.20 – $3.00</span>
                   <span className="text-[14px] text-[#8B8B8B]">/ request</span>
                 </div>
               </td>
@@ -1514,7 +1514,7 @@ function PlanCTable() {
               </td>
               <td className="py-4 px-6">
                 <div className="flex items-center gap-1 flex-nowrap whitespace-nowrap">
-                  <span className="font-bold text-[16px] text-[#0A0A0A]">$0.25 – $1.00</span>
+                  <span className="font-['JetBrains_Mono',monospace] font-bold text-[16px] text-[#0A0A0A]">$0.25 – $1.00</span>
                   <span className="text-[14px] text-[#8B8B8B]">/ output</span>
                 </div>
               </td>
