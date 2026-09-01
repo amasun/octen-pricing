@@ -47,18 +47,24 @@ function HeroHeader() {
   );
 }
 
+function OctenCenterHub() {
+  return (
+    <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 top-1/2 overflow-clip rounded-[14px] shadow-[0px_0px_40px_0px_rgba(112,254,126,0.61)] size-[60px] bg-black flex items-center justify-center z-20 pointer-events-none">
+      <svg className="w-[32px] h-[26px]" fill="none" viewBox="0 0 32 26">
+        <path d={svgPaths.p78eff80} fill="#70FE7E" />
+      </svg>
+      <div className="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_4px_0px_rgba(155,231,181,0.25),inset_0px_-3px_8px_0px_#70fe7e]" />
+    </div>
+  );
+}
+
 function QpsCardGraphic({ isHovered = false }: { isHovered?: boolean }) {
   return (
-    <div className="h-[180px] relative rounded-[16px] shrink-0 w-full overflow-hidden bg-black border border-[#2a2a2a]">
+    <div className="h-[180px] relative rounded-[16px] shrink-0 w-full overflow-hidden bg-black border border-[#2a2a2a] flex items-center justify-center">
       <div className="absolute inset-0 size-full pointer-events-none opacity-85">
         <CurvedLightTrailsCanvas isAnimating={isHovered} fallbackSrc={imgShader2} />
       </div>
-      <div className="-translate-x-1/2 absolute left-1/2 overflow-clip rounded-[14px] shadow-[0px_0px_40px_0px_rgba(112,254,126,0.61)] size-[60px] top-[59px] bg-black flex items-center justify-center z-10">
-        <svg className="size-[32px]" fill="none" viewBox="0 0 32 26">
-          <path d={svgPaths.p78eff80} fill="#70FE7E" />
-        </svg>
-        <div className="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_4px_0px_rgba(155,231,181,0.25),inset_0px_-3px_8px_0px_#70fe7e]" />
-      </div>
+      <OctenCenterHub />
       <div className="absolute inset-0 pointer-events-none rounded-[16px] z-20 shadow-[inset_-30px_0px_30px_0px_#000000,inset_20px_0px_30px_0px_#000000]" />
     </div>
   );
@@ -66,9 +72,8 @@ function QpsCardGraphic({ isHovered = false }: { isHovered?: boolean }) {
 
 function PayAsYouGoGraphic({ isHovered = false }: { isHovered?: boolean }) {
   return (
-    <div className="h-[180px] relative rounded-[16px] shrink-0 w-full bg-black border border-[#2a2a2a] flex items-center justify-center" style={{overflow: 'clip'}}>
+    <div className="h-[180px] relative rounded-[16px] shrink-0 w-full bg-black border border-[#2a2a2a] flex items-center justify-center overflow-hidden">
       <svg className="w-full h-auto max-h-[140px] pointer-events-none" overflow="visible" width="451" height="140" viewBox="0 0 451 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-        {/* Base Static Circuit Paths */}
         {/* Base Static Circuit Paths */}
         <path d="M-2.67245 17.9568H122.631 C138.667 17.9568, 138.667 51.736, 154.702 51.736H220.307" stroke="#38564F"/>
         <path d="M437.542 17.9568H327.575 C311.539 17.9568, 311.539 51.736, 295.504 51.736H229.899" stroke="#38564F"/>
@@ -103,7 +108,7 @@ function PayAsYouGoGraphic({ isHovered = false }: { isHovered?: boolean }) {
         <path d="M13.2791 121.669H122.631 C138.667 121.669, 138.667 87.8903, 154.702 87.8903H220.307" stroke="#039855" strokeWidth="3.0" strokeLinecap="round" strokeDasharray="0.1 71.9" strokeDashoffset="48" className={isHovered ? "svg-flow-left" : ""} opacity="0.45" />
         <path d="M452.291 121.669H327.575 C311.539 121.669, 311.539 87.8903, 295.504 87.8903H229.899" stroke="#38C172" strokeWidth="3.0" strokeLinecap="round" strokeDasharray="0.1 71.9" strokeDashoffset="18" className={isHovered ? "svg-flow-right" : ""} opacity="0.55" />
 
-        {/* Layer 2: Neon Mint — group-level filter (1 filter pass instead of 6) */}
+        {/* Layer 2: Neon Mint — group-level filter */}
         <g filter="url(#dotGlow)">
           <path d="M-2.67245 17.9568H122.631 C138.667 17.9568, 138.667 51.736, 154.702 51.736H220.307" stroke="#70FE7E" strokeWidth="3.0" strokeLinecap="round" strokeDasharray="0.1 143.9" strokeDashoffset="60" className={isHovered ? "svg-flow-left" : ""} opacity={isHovered ? "1.0" : "0.8"} />
           <path d="M437.542 17.9568H327.575 C311.539 17.9568, 311.539 51.736, 295.504 51.736H229.899" stroke="#70FE7E" strokeWidth="3.0" strokeLinecap="round" strokeDasharray="0.1 143.9" strokeDashoffset="108" className={isHovered ? "svg-flow-right" : ""} opacity={isHovered ? "1.0" : "0.85"} />
@@ -113,7 +118,7 @@ function PayAsYouGoGraphic({ isHovered = false }: { isHovered?: boolean }) {
           <path d="M452.291 121.669H327.575 C311.539 121.669, 311.539 87.8903, 295.504 87.8903H229.899" stroke="#70FE7E" strokeWidth="3.0" strokeLinecap="round" strokeDasharray="0.1 143.9" strokeDashoffset="48" className={isHovered ? "svg-flow-right" : ""} opacity={isHovered ? "1.0" : "0.85"} />
         </g>
 
-        {/* Layer 3: Bright Neon — group-level filter (1 filter pass instead of 6) */}
+        {/* Layer 3: Bright Neon — group-level filter */}
         <g filter="url(#dotGlowBright)">
           <path d="M-2.67245 17.9568H122.631 C138.667 17.9568, 138.667 51.736, 154.702 51.736H220.307" stroke="#9CFFA6" strokeWidth="3.0" strokeLinecap="round" strokeDasharray="0.1 143.9" strokeDashoffset="120" className={isHovered ? "svg-flow-left" : ""} opacity={isHovered ? "1.0" : "0.9"} />
           <path d="M437.542 17.9568H327.575 C311.539 17.9568, 311.539 51.736, 295.504 51.736H229.899" stroke="#9CFFA6" strokeWidth="3.0" strokeLinecap="round" strokeDasharray="0.1 143.9" strokeDashoffset="14" className={isHovered ? "svg-flow-right" : ""} opacity="0.95" />
@@ -152,12 +157,6 @@ function PayAsYouGoGraphic({ isHovered = false }: { isHovered?: boolean }) {
             <circle cx="374.226" cy="126.687" r="1.13208" transform="rotate(124.49 374.226 126.687)" fill="white"/>
             <circle cx="366.09" cy="126.888" r="1.11637" transform="rotate(61.0709 366.09 126.888)" fill="white"/>
             <circle cx="366.643" cy="122.409" r="1.10318" fill="white"/>
-          </g>
-        </g>
-        <g filter="url(#filter6_dii_13075_473)">
-          <path d="M195.5 54C195.5 46.268 201.768 40 209.5 40H241.5C249.232 40 255.5 46.268 255.5 54V86C255.5 93.732 249.232 100 241.5 100H209.5C201.768 100 195.5 93.732 195.5 86V54Z" fill="black"/>
-          <g clipPath="url(#clip1_13075_473)">
-            <path d="M240.338 74.4915C240.954 74.4916 241.454 75.0064 241.454 75.6409V77.4836C241.454 78.1181 240.954 78.633 240.338 78.6331H238.883C238.586 78.6331 238.303 78.7547 238.094 78.97L237.762 79.3127C237.554 79.5295 237.436 79.8208 237.436 80.1252V81.6252C237.436 82.2597 236.936 82.7746 236.321 82.7747H234.533C233.917 82.7745 233.419 82.2596 233.419 81.6252V79.7825C233.419 79.1481 233.918 78.6332 234.533 78.6331H236.321C236.618 78.633 236.9 78.5121 237.109 78.2971C237.318 78.0803 237.436 77.7881 237.436 77.4836V75.6409C237.436 75.0065 237.935 74.4916 238.55 74.4915H240.338ZM212.553 74.4895C213.169 74.4897 213.667 75.0047 213.668 75.6389V77.3958H213.671C213.671 77.7003 213.789 77.9924 213.998 78.2092C214.259 78.4801 214.615 78.6311 214.986 78.6311H216.49C217.105 78.6311 217.605 79.147 217.605 79.7815V81.6243C217.605 82.2586 217.105 82.7737 216.49 82.7737H214.703C214.087 82.7737 213.588 82.2586 213.587 81.6243V80.0725C213.587 79.69 213.44 79.3249 213.177 79.054C212.916 78.7832 212.561 78.6312 212.19 78.6311H210.767C210.152 78.6311 209.652 78.1162 209.652 77.4817V75.6389C209.652 75.0045 210.152 74.4911 210.767 74.4895H212.553ZM223.099 78.6321C223.715 78.6321 224.214 79.1467 224.214 79.7815V81.6223C224.214 82.2571 223.715 82.7717 223.099 82.7717H221.313C220.697 82.7717 220.198 82.2571 220.198 81.6223V79.7815C220.198 79.1467 220.697 78.6321 221.313 78.6321H223.099ZM229.71 78.6321C230.325 78.6323 230.824 79.1468 230.824 79.7815V81.6223C230.824 82.257 230.325 82.7715 229.71 82.7717H227.923C227.308 82.7717 226.808 82.2571 226.808 81.6223V79.7815C226.808 79.1467 227.308 78.6321 227.923 78.6321H229.71ZM230.848 57.2239C231.464 57.2239 231.963 57.739 231.963 58.3733V59.8225C231.963 60.1715 232.098 60.5067 232.336 60.7522L232.504 60.926C232.743 61.1715 233.068 61.3098 233.405 61.3098H234.767C235.382 61.31 235.881 61.8251 235.881 62.4592V73.7805L235.885 73.7834C235.885 74.4179 235.385 74.9328 234.77 74.9329H218.803C218.188 74.9328 217.688 74.4179 217.688 73.7834V72.2053C217.688 71.8992 217.571 71.6071 217.362 71.3918L217.358 71.387C217.064 71.0841 216.665 70.9144 216.251 70.9143H214.902C214.287 70.9143 213.787 70.3992 213.787 69.7649V58.3733C213.787 57.739 214.287 57.2239 214.902 57.2239H230.848ZM218.833 61.2766C218.217 61.2767 217.717 61.7917 217.717 62.426V69.4006C217.717 69.8294 217.882 70.2394 218.175 70.5422C218.386 70.7575 218.669 70.8792 218.964 70.8792H230.837C231.453 70.8791 231.953 70.3641 231.953 69.7297V62.5901C231.953 62.2412 231.818 61.9068 231.58 61.6614H231.582C231.342 61.4159 231.016 61.2766 230.679 61.2766H218.833ZM222.561 64.303C223.177 64.303 223.676 64.8176 223.676 65.4524V67.0627C223.676 67.6974 223.177 68.2122 222.561 68.2122H221C220.384 68.2122 219.885 67.6974 219.884 67.0627V65.4524C219.884 64.8176 220.384 64.303 221 64.303H222.561ZM228.6 64.303C229.216 64.3031 229.714 64.8177 229.714 65.4524V67.0627C229.714 67.6973 229.216 68.212 228.6 68.2122H227.038C226.422 68.212 225.924 67.6973 225.923 67.0627V65.4524C225.923 64.8177 226.422 64.3032 227.038 64.303H228.6Z" fill="#70FE7E"/>
           </g>
         </g>
         {/* Node 5: Plugin icon — right middle */}
@@ -206,118 +205,6 @@ function PayAsYouGoGraphic({ isHovered = false }: { isHovered?: boolean }) {
           <circle cx="1.57545" cy="1.57545" r="1.57545" transform="matrix(-1 0 0 1 256.79 86.0603)" fill="#ABFF8F"/>
         </g>
         <defs>
-          <filter id="filter0_d_13075_473" x="123.351" y="65.8131" width="11.6286" height="11.6286" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-            <feOffset/>
-            <feGaussianBlur stdDeviation="2"/>
-            <feComposite in2="hardAlpha" operator="out"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0.439216 0 0 0 0 0.996078 0 0 0 0 0.494118 0 0 0 1 0"/>
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_13075_473"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_13075_473" result="shape"/>
-          </filter>
-          <filter id="filter1_d_13075_473" x="306.054" y="98.9656" width="11.6286" height="11.6286" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-            <feOffset/>
-            <feGaussianBlur stdDeviation="2"/>
-            <feComposite in2="hardAlpha" operator="out"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0.439216 0 0 0 0 0.996078 0 0 0 0 0.494118 0 0 0 1 0"/>
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_13075_473"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_13075_473" result="shape"/>
-          </filter>
-          <filter id="filter2_d_13075_473" x="329.156" y="64.6719" width="11.6286" height="11.6286" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-            <feOffset/>
-            <feGaussianBlur stdDeviation="2"/>
-            <feComposite in2="hardAlpha" operator="out"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0.439216 0 0 0 0 0.996078 0 0 0 0 0.494118 0 0 0 1 0"/>
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_13075_473"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_13075_473" result="shape"/>
-          </filter>
-          <filter id="filter3_d_13075_473" x="305.086" y="32.0054" width="11.6286" height="11.6286" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-            <feOffset/>
-            <feGaussianBlur stdDeviation="2"/>
-            <feComposite in2="hardAlpha" operator="out"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0.439216 0 0 0 0 0.996078 0 0 0 0 0.494118 0 0 0 1 0"/>
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_13075_473"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_13075_473" result="shape"/>
-          </filter>
-          <filter id="filter4_d_13075_473" x="139.044" y="85.7172" width="11.6286" height="11.6286" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-            <feOffset/>
-            <feGaussianBlur stdDeviation="2"/>
-            <feComposite in2="hardAlpha" operator="out"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0.439216 0 0 0 0 0.996078 0 0 0 0 0.494118 0 0 0 1 0"/>
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_13075_473"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_13075_473" result="shape"/>
-          </filter>
-          <filter id="filter5_d_13075_473" x="130.301" y="20.8367" width="11.6286" height="11.6286" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-            <feOffset/>
-            <feGaussianBlur stdDeviation="2"/>
-            <feComposite in2="hardAlpha" operator="out"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0.439216 0 0 0 0 0.996078 0 0 0 0 0.494118 0 0 0 1 0"/>
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_13075_473"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_13075_473" result="shape"/>
-          </filter>
-          <filter id="filter6_dii_13075_473" x="155.5" y="0" width="140" height="140" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-            <feOffset/>
-            <feGaussianBlur stdDeviation="20"/>
-            <feComposite in2="hardAlpha" operator="out"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0.439216 0 0 0 0 0.996078 0 0 0 0 0.494118 0 0 0 0.61 0"/>
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_13075_473"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_13075_473" result="shape"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-            <feOffset dy="-3"/>
-            <feGaussianBlur stdDeviation="4"/>
-            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0.439216 0 0 0 0 0.996078 0 0 0 0 0.494118 0 0 0 1 0"/>
-            <feBlend mode="normal" in2="shape" result="effect2_innerShadow_13075_473"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-            <feOffset/>
-            <feGaussianBlur stdDeviation="2"/>
-            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0.609437 0 0 0 0 0.905449 0 0 0 0 0.708107 0 0 0 0.25 0"/>
-            <feBlend mode="normal" in2="effect2_innerShadow_13075_473" result="effect3_innerShadow_13075_473"/>
-          </filter>
-          <filter id="filter7_f_13075_473" x="157.363" y="48.2153" width="41.8454" height="6.72687" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-            <feGaussianBlur stdDeviation="0.5" result="effect1_foregroundBlur_13075_473"/>
-          </filter>
-          <filter id="filter8_f_13075_473" x="251.851" y="48.2153" width="41.8454" height="6.72687" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-            <feGaussianBlur stdDeviation="0.5" result="effect1_foregroundBlur_13075_473"/>
-          </filter>
-          <filter id="filter9_f_13075_473" x="157.363" y="68.2153" width="41.8454" height="6.72687" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-            <feGaussianBlur stdDeviation="0.5" result="effect1_foregroundBlur_13075_473"/>
-          </filter>
-          <filter id="filter10_f_13075_473" x="251.851" y="67.2153" width="41.8454" height="6.72687" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-            <feGaussianBlur stdDeviation="0.5" result="effect1_foregroundBlur_13075_473"/>
-          </filter>
-          <filter id="filter11_f_13075_473" x="157.363" y="84.2153" width="41.8454" height="6.72687" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-            <feGaussianBlur stdDeviation="0.5" result="effect1_foregroundBlur_13075_473"/>
-          </filter>
-          <filter id="filter12_f_13075_473" x="251.851" y="84.2153" width="41.8454" height="6.72687" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-            <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-            <feGaussianBlur stdDeviation="0.5" result="effect1_foregroundBlur_13075_473"/>
-          </filter>
           <radialGradient id="paint0_radial_13075_473" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(96.9623 120.499) rotate(90) scale(17.4126)">
             <stop stopColor="#3FAC46"/>
             <stop offset="1" stopColor="#19461C"/>
@@ -393,11 +280,9 @@ function PayAsYouGoGraphic({ isHovered = false }: { isHovered?: boolean }) {
           <clipPath id="clip0_13075_473">
             <rect width="12.2917" height="12.2917" fill="white" transform="translate(364.048 118.019)"/>
           </clipPath>
-          <clipPath id="clip1_13075_473">
-            <rect width="31.9384" height="31.9384" fill="white" transform="translate(209.531 54.0308)"/>
-          </clipPath>
         </defs>
       </svg>
+      <OctenCenterHub />
       <div className="absolute inset-0 pointer-events-none rounded-[16px] z-20 shadow-[inset_-30px_0px_30px_0px_#000000,inset_20px_0px_30px_0px_#000000]" />
     </div>
   );
@@ -500,67 +385,17 @@ function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) 
         }}
       />
 
-      {/* SVG Canvas for Background Grid Tracks, Lines, and Animated Beams */}
-      <svg className="w-full h-full max-h-[180px] pointer-events-none absolute inset-0 z-10" viewBox="0 0 320 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <filter id="neonBeamGlow" x="-30%" y="-30%" width="160%" height="160%">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur" />
-            <feMerge>
-              <feMergeNode in="blur" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-        </defs>
-
-        {/* Left Side: 4 Horizontal Ghost Dashed Data Tracks (from Data Box to Octen Engine) */}
-        <path d="M72 66H132" stroke="#163826" strokeWidth="1.2" strokeDasharray="3 3" />
-        <path d="M72 74H132" stroke="#163826" strokeWidth="1.2" strokeDasharray="3 3" />
-        <path d="M72 82H132" stroke="#163826" strokeWidth="1.2" strokeDasharray="3 3" />
-        <path d="M72 90H132" stroke="#163826" strokeWidth="1.2" strokeDasharray="3 3" />
-
-        {/* Right Side: Dual High-Speed Pipelines Moving in OPPOSITE Directions */}
-        {/* Top Channel: Flows LEFT-TO-RIGHT (Octen -> Dedicated Support) */}
-        <path d="M188 72H246" stroke="#142B1F" strokeWidth="2.5" strokeLinecap="round" />
-        <path d="M188 72H246" stroke="#70FE7E" strokeWidth="2" strokeLinecap="round" className="animate-dual-flow-right" filter="url(#neonBeamGlow)" />
-
-        {/* Bottom Channel: Flows RIGHT-TO-LEFT (Dedicated Support -> Octen) */}
-        <path d="M188 84H246" stroke="#142B1F" strokeWidth="2.5" strokeLinecap="round" />
-        <path d="M188 84H246" stroke="#70FE7E" strokeWidth="2" strokeLinecap="round" className="animate-dual-flow-left" filter="url(#neonBeamGlow)" />
-      </svg>
-
-      {/* Dynamic Data Particles Ingestion Stream (Streaming continuously from Left Data Box into Center Octen Hub) */}
-      <div className="absolute left-[72px] top-[78px] w-[60px] h-[36px] -translate-y-1/2 pointer-events-none z-15 overflow-visible">
-        {STREAM_PARTICLES.map((dot) => (
-          <div
-            key={dot.id}
-            className="absolute rounded-full bg-[#70FE7E] shadow-[0_0_8px_#70FE7E] animate-dot-stream"
-            style={{
-              width: `${dot.size}px`,
-              height: `${dot.size}px`,
-              left: "0px",
-              top: `calc(50% + ${dot.y}px)`,
-              // @ts-expect-error Custom CSS properties
-              "--stream-x": "60px",
-              "--jitter-y": `${dot.y * 0.4}px`,
-              "--stream-dur": dot.dur,
-              "--stream-delay": dot.delay,
-              opacity: dot.opacity,
-            }}
-          />
-        ))}
-      </div>
-
-      {/* 1. LEFT BOX: Custom Data / Database Box with Expanding Ripple Wave Halo */}
-      <div className="absolute left-[54px] top-[78px] -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center">
+      {/* 1. LEFT DATA BOX: Symmetrical at left-[calc(50%-108px)] */}
+      <div className="absolute left-[calc(50%-108px)] top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center">
         {/* Continuous Expanding Ripple Rings */}
-        <div className="absolute size-[40px] rounded-[10px] border border-[#70FE7E] pointer-events-none animate-ripple-1" />
-        <div className="absolute size-[40px] rounded-[10px] border border-[#70FE7E] pointer-events-none animate-ripple-2" />
-        <div className="absolute size-[40px] rounded-[10px] border border-[#70FE7E] pointer-events-none animate-ripple-3" />
+        <div className="absolute size-[42px] rounded-[10px] border border-[#70FE7E] pointer-events-none animate-ripple-1" />
+        <div className="absolute size-[42px] rounded-[10px] border border-[#70FE7E] pointer-events-none animate-ripple-2" />
+        <div className="absolute size-[42px] rounded-[10px] border border-[#70FE7E] pointer-events-none animate-ripple-3" />
 
         {/* Inner Solid Box */}
-        <div className="size-[40px] rounded-[10px] bg-[#141212] border-2 border-[rgba(112,254,126,0.55)] flex items-center justify-center relative z-10 shadow-[0px_0px_0px_6px_rgba(112,254,126,0.18)]">
+        <div className="size-[42px] rounded-[10px] bg-[#141212] border-2 border-[rgba(112,254,126,0.55)] flex items-center justify-center relative z-10 shadow-[0px_0px_0px_6px_rgba(112,254,126,0.18)]">
           {/* Silver Database Cylinder Icon */}
-          <svg className="size-[20px]" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className="size-[22px]" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M10 2.5C6.13 2.5 3 3.62 3 5V15C3 16.38 6.13 17.5 10 17.5C13.87 17.5 17 16.38 17 15V5C17 3.62 13.87 2.5 10 2.5ZM15.5 5C15.5 5.55 13.04 6.5 10 6.5C6.96 6.5 4.5 5.55 4.5 5C4.5 4.45 6.96 3.5 10 3.5C13.04 3.5 15.5 4.45 15.5 5ZM4.5 7.82C5.66 8.52 7.64 9 10 9C12.36 9 14.34 8.52 15.5 7.82V9.5C15.5 10.05 13.04 11 10 11C6.96 11 4.5 10.05 4.5 9.5V7.82ZM4.5 12.32C5.66 13.02 7.64 13.5 10 13.5C12.36 13.5 14.34 13.02 15.5 12.32V14.5C15.5 15.05 13.04 16 10 16C6.96 16 4.5 15.05 4.5 14.5V12.32Z" fill="url(#dbSilverGrad)"/>
             <defs>
               <linearGradient id="dbSilverGrad" x1="10" y1="2.5" x2="10" y2="17.5" gradientUnits="userSpaceOnUse">
@@ -573,30 +408,74 @@ function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) 
         </div>
       </div>
 
-      {/* 2. CENTER BOX: Octen Engine Core Hub with Glowing Emerald Aura */}
-      <div className="absolute left-1/2 top-[78px] -translate-x-1/2 -translate-y-1/2 z-20">
-        <div className="size-[58px] sm:size-[60px] rounded-[14px] bg-black border border-[#2A3F33] flex items-center justify-center relative overflow-hidden animate-octen-hub">
-          {/* Inner Corner Accent Highlights */}
-          <div className="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_4px_0px_rgba(155,231,181,0.25),inset_0px_-3px_8px_0px_#70fe7e]" />
-          
-          {/* Octen Chip Logo Mark in Neon Emerald Green */}
-          <svg className="size-[32px] relative z-10" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M30.3644 21.5498C30.9655 21.5498 31.4532 22.0523 31.4533 22.6719V24.4717C31.4533 25.0914 30.9656 25.5947 30.3644 25.5947H28.9435C28.6536 25.5947 28.3769 25.7127 28.173 25.9229L27.8488 26.2578C27.645 26.4695 27.5296 26.7545 27.5295 27.0518V28.5176C27.5294 29.1372 27.0417 29.6396 26.4406 29.6396H24.6945C24.0936 29.6394 23.6058 29.1371 23.6057 28.5176V26.7178C23.6057 26.0982 24.0936 25.5949 24.6945 25.5947H26.4406C26.7305 25.5947 27.0072 25.4767 27.2111 25.2666C27.415 25.0548 27.5295 24.7691 27.5295 24.4717V22.6719C27.5296 22.0524 28.0175 21.55 28.6183 21.5498H30.3644ZM3.22675 21.5479C3.82786 21.5479 4.31659 22.0512 4.31659 22.6709V24.3867H4.31952C4.31958 24.684 4.43403 24.969 4.63788 25.1807C4.89307 25.4453 5.24034 25.5927 5.60272 25.5928H7.07245C7.67355 25.5928 8.16129 26.0961 8.16132 26.7158V28.5156C8.16132 29.1353 7.67357 29.6387 7.07245 29.6387H5.32635C4.72532 29.6386 4.23749 29.1353 4.23749 28.5156V27.001C4.23749 26.6273 4.09386 26.2706 3.8371 26.0059C3.58187 25.7412 3.23467 25.5928 2.87225 25.5928H1.4826C0.881569 25.5927 0.393802 25.0903 0.393738 24.4707V22.6709C0.393738 22.0512 0.881529 21.5495 1.4826 21.5479H3.22675ZM13.5275 25.5938C14.1289 25.5938 14.6163 26.0959 14.6164 26.7158V28.5146C14.6163 29.1346 14.1289 29.6367 13.5275 29.6367H11.7834C11.182 29.6367 10.6946 29.1346 10.6945 28.5146V26.7158C10.6946 26.0959 11.182 25.5938 11.7834 25.5938H13.5275ZM19.9836 25.5938C20.5848 25.5938 21.0723 26.096 21.0724 26.7158V28.5146C21.0724 29.1345 20.5849 29.6366 19.9836 29.6367H18.2394C17.6381 29.6367 17.1497 29.1346 17.1496 28.5146V26.7158C17.1497 26.0959 17.6381 25.5938 18.2394 25.5938H19.9836ZM21.0959 4.68457C21.697 4.68457 22.1848 5.1879 22.1848 5.80762V7.22266C22.1848 7.56365 22.3164 7.89107 22.549 8.13086L22.7131 8.30078C22.9457 8.54057 23.2637 8.67578 23.593 8.67578H24.923C25.5242 8.67578 26.0119 9.17912 26.0119 9.79883V20.8555L26.0148 20.8584C26.0147 21.478 25.527 21.9805 24.926 21.9805H9.33221C8.73116 21.9805 8.24344 21.478 8.24335 20.8584V19.3164C8.24327 19.0176 8.12784 18.7326 7.92401 18.5225L7.9201 18.5176C7.35757 18.2217 7.24285 18.0557 6.83807 18.0557H5.52167C4.92055 18.0557 4.43182 17.5523 4.43182 16.9326V5.80762C4.43182 5.1879 4.92055 4.68457 5.52167 4.68457H21.0959ZM9.36053 8.64258C8.75944 8.64259 8.27169 9.14593 8.27167 9.76662V16.5781C8.27174 16.9969 8.43205 17.3966 8.71893 17.6924C8.92423 17.9025 9.20016 18.0214 9.48846 18.0215H21.0851C21.6863 18.0215 22.174 17.5182 22.174 16.8984V9.92578C22.1739 9.58504 22.0431 9.25825 21.8107 9.01855H21.8117C21.5776 8.77877 21.2601 8.64258 20.9308 8.64258H9.36053ZM13.0021 11.5986C13.6034 11.5986 14.0908 12.1009 14.091 12.7207V14.2939C14.0909 14.9139 13.6035 15.416 13.0021 15.416H11.4767C10.8754 15.416 10.388 14.9139 10.3879 14.2939V12.7207C10.3881 12.1009 10.8755 11.5986 11.2012 11.5986H13.0021ZM18.8996 11.5986C19.5009 11.5986 19.9883 12.1009 19.9885 12.7207V14.2939C19.9884 14.9139 19.5009 15.416 18.8996 15.416H17.3742C16.773 15.4158 16.2854 14.9138 16.2853 14.2939V12.7207C16.2856 12.101 16.7731 11.5988 17.3742 11.5986H18.8996Z" fill="#70FE7E"/>
-          </svg>
-        </div>
+      {/* LEFT-TO-CENTER INGESTION STREAM (Width 57px from calc(50%-87px) to calc(50%-30px)) */}
+      <div className="absolute left-[calc(50%-87px)] top-1/2 -translate-y-1/2 w-[57px] h-[36px] pointer-events-none z-10">
+        {/* Background 4 dashed tracks */}
+        <svg className="w-full h-full" viewBox="0 0 57 36" fill="none">
+          <line x1="0" y1="6" x2="57" y2="6" stroke="#163826" strokeWidth="1.2" strokeDasharray="3 3" />
+          <line x1="0" y1="14" x2="57" y2="14" stroke="#163826" strokeWidth="1.2" strokeDasharray="3 3" />
+          <line x1="0" y1="22" x2="57" y2="22" stroke="#163826" strokeWidth="1.2" strokeDasharray="3 3" />
+          <line x1="0" y1="30" x2="57" y2="30" stroke="#163826" strokeWidth="1.2" strokeDasharray="3 3" />
+        </svg>
+
+        {/* Streaming random glowing data dots */}
+        {STREAM_PARTICLES.map((dot) => (
+          <div
+            key={dot.id}
+            className="absolute rounded-full bg-[#70FE7E] shadow-[0_0_8px_#70FE7E] animate-dot-stream"
+            style={{
+              width: `${dot.size}px`,
+              height: `${dot.size}px`,
+              left: "0px",
+              top: `calc(50% + ${dot.y}px)`,
+              // @ts-expect-error Custom CSS properties
+              "--stream-x": "57px",
+              "--jitter-y": `${dot.y * 0.3}px`,
+              "--stream-dur": dot.dur,
+              "--stream-delay": dot.delay,
+              opacity: dot.opacity,
+            }}
+          />
+        ))}
       </div>
 
-      {/* 3. RIGHT BOX: Dedicated Support / Fluent Person Chat Box with Expanding Ripple Wave Halo */}
-      <div className="absolute left-[266px] top-[78px] -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center">
+      {/* 2. CENTER OCTEN HUB: 100% Identical in size (60px), shape, glow, and icon across all 3 cards */}
+      <OctenCenterHub />
+
+      {/* CENTER-TO-RIGHT DUAL OPPOSITE CHANNELS (Width 57px from calc(50%+30px) to calc(50%+87px)) */}
+      <div className="absolute left-[calc(50%+30px)] top-1/2 -translate-y-1/2 w-[57px] h-[36px] pointer-events-none z-10 flex items-center justify-center">
+        <svg className="w-full h-full" viewBox="0 0 57 36" fill="none">
+          <defs>
+            <filter id="laserBeamGlow" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+
+          {/* Top Line (y = 12px): Octen -> Message (Left to Right) */}
+          <line x1="0" y1="12" x2="57" y2="12" stroke="#142B1F" strokeWidth="2.5" strokeLinecap="round" />
+          <line x1="0" y1="12" x2="57" y2="12" stroke="#70FE7E" strokeWidth="2" strokeLinecap="round" className="animate-laser-flow-right" filter="url(#laserBeamGlow)" />
+
+          {/* Bottom Line (y = 24px): Message -> Octen (Right to Left) */}
+          <line x1="0" y1="24" x2="57" y2="24" stroke="#142B1F" strokeWidth="2.5" strokeLinecap="round" />
+          <line x1="0" y1="24" x2="57" y2="24" stroke="#70FE7E" strokeWidth="2" strokeLinecap="round" className="animate-laser-flow-left" filter="url(#laserBeamGlow)" />
+        </svg>
+      </div>
+
+      {/* 3. RIGHT MESSAGE BOX: Symmetrical at left-[calc(50%+108px)] */}
+      <div className="absolute left-[calc(50%+108px)] top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center">
         {/* Continuous Expanding Ripple Rings */}
-        <div className="absolute size-[40px] rounded-[10px] border border-[#70FE7E] pointer-events-none animate-ripple-1" />
-        <div className="absolute size-[40px] rounded-[10px] border border-[#70FE7E] pointer-events-none animate-ripple-2" />
-        <div className="absolute size-[40px] rounded-[10px] border border-[#70FE7E] pointer-events-none animate-ripple-3" />
+        <div className="absolute size-[42px] rounded-[10px] border border-[#70FE7E] pointer-events-none animate-ripple-1" />
+        <div className="absolute size-[42px] rounded-[10px] border border-[#70FE7E] pointer-events-none animate-ripple-2" />
+        <div className="absolute size-[42px] rounded-[10px] border border-[#70FE7E] pointer-events-none animate-ripple-3" />
 
         {/* Inner Solid Box */}
-        <div className="size-[40px] rounded-[10px] bg-[#141212] border-2 border-[rgba(112,254,126,0.55)] flex items-center justify-center relative z-10 shadow-[0px_0px_0px_6px_rgba(112,254,126,0.18)]">
+        <div className="size-[42px] rounded-[10px] bg-[#141212] border-2 border-[rgba(112,254,126,0.55)] flex items-center justify-center relative z-10 shadow-[0px_0px_0px_6px_rgba(112,254,126,0.18)]">
           {/* Person Chat Icon */}
-          <svg className="size-[20px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className="size-[22px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 2C9.79086 2 8 3.79086 8 6C8 8.20914 9.79086 10 12 10C14.2091 10 16 8.20914 16 6C16 3.79086 14.2091 2 12 2Z" fill="url(#userGradSilver)"/>
             <path d="M4 17C4 14.3478 7.58172 13 12 13C12.7554 13 13.4865 13.0422 14.1755 13.1238C13.4357 14.0759 13 15.2536 13 16.5333C13 17.0396 13.072 17.5284 13.2064 17.9892C11.5369 18.5292 9.06648 19 6 19C4.89543 19 4 18.1046 4 17Z" fill="url(#userGradSilver)"/>
             <path d="M18 13.5C15.5147 13.5 13.5 15.5147 13.5 18C13.5 18.8475 13.7347 19.6406 14.1417 20.3167L13.5414 22.3853C13.4287 22.7735 13.7844 23.1248 14.1718 23.0075L16.2081 22.3908C16.7644 22.4616 17.3304 22.5 18 22.5C20.4853 22.5 22.5 20.4853 22.5 18C22.5 15.5147 20.4853 13.5 18 13.5ZM16.5 16.5H19.5C19.7761 16.5 20 16.7239 20 17C20 17.2761 19.7761 17.5 19.5 17.5H16.5C16.2239 17.5 16 17.2761 16 17C16 16.7239 16.2239 16.5 16.5 16.5ZM19.5 19.5H16.5C16.2239 19.5 16 19.2761 16 19C16 18.7239 16.2239 18.5 16.5 18.5H19.5C19.7761 18.5 20 18.7239 20 19C20 19.2761 19.7761 19.5 19.5 19.5Z" fill="url(#userGradSilver)"/>
@@ -609,14 +488,6 @@ function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) 
             </defs>
           </svg>
         </div>
-      </div>
-
-      {/* Bottom Tag */}
-      <div className="absolute bottom-2.5 z-25 flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-black/75 border border-[#2D3748] backdrop-blur-xs">
-        <span className="size-[5px] rounded-full bg-[#70FE7E] animate-pulse" />
-        <span className="font-['JetBrains_Mono',monospace] text-[10px] text-[#70FE7E] font-medium tracking-wider uppercase">
-          ENTERPRISE LAYER
-        </span>
       </div>
 
       <div className="absolute inset-0 pointer-events-none rounded-[16px] z-20 shadow-[inset_-30px_0px_30px_0px_#000000,inset_20px_0px_30px_0px_#000000]" />

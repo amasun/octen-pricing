@@ -266,14 +266,14 @@ body, #root, #root > div, [data-name="Octen AI | Infrastructure Pricing"] {
   }
   12% {
     opacity: 0.95;
-    transform: translateX(12px) translateY(calc(var(--jitter-y, 0px) * 0.2)) scale(1);
+    transform: translateX(10px) translateY(calc(var(--jitter-y, 0px) * 0.2)) scale(1);
   }
   80% {
     opacity: 0.95;
-    transform: translateX(calc(var(--stream-x, 85px) * 0.82)) translateY(calc(var(--jitter-y, 0px) * 0.9)) scale(0.9);
+    transform: translateX(calc(var(--stream-x, 57px) * 0.82)) translateY(calc(var(--jitter-y, 0px) * 0.9)) scale(0.9);
   }
   100% {
-    transform: translateX(var(--stream-x, 85px)) translateY(var(--jitter-y, 0px)) scale(0.4);
+    transform: translateX(var(--stream-x, 57px)) translateY(var(--jitter-y, 0px)) scale(0.4);
     opacity: 0;
   }
 }
@@ -282,40 +282,40 @@ body, #root, #root > div, [data-name="Octen AI | Infrastructure Pricing"] {
   animation: dotStreamIn var(--stream-dur, 1.8s) cubic-bezier(0.25, 0.1, 0.25, 1) var(--stream-delay, 0s) infinite;
 }
 
-@keyframes dualLineRight {
+@keyframes laserFlowRight {
   0% {
-    stroke-dashoffset: 70;
+    stroke-dashoffset: 75;
   }
   100% {
-    stroke-dashoffset: -70;
+    stroke-dashoffset: -75;
   }
 }
 
-@keyframes dualLineLeft {
+@keyframes laserFlowLeft {
   0% {
-    stroke-dashoffset: -70;
+    stroke-dashoffset: -75;
   }
   100% {
-    stroke-dashoffset: 70;
+    stroke-dashoffset: 75;
   }
 }
 
-.animate-dual-flow-right {
-  stroke-dasharray: 18 36;
-  animation: dualLineRight 1.5s linear infinite;
+.animate-laser-flow-right {
+  stroke-dasharray: 22 55;
+  animation: laserFlowRight 1.5s linear infinite;
 }
 
-.animate-dual-flow-left {
-  stroke-dasharray: 18 36;
-  animation: dualLineLeft 1.5s linear infinite;
+.animate-laser-flow-left {
+  stroke-dasharray: 22 55;
+  animation: laserFlowLeft 1.5s linear infinite;
 }
 
 @keyframes octenHubPulse {
   0%, 100% {
-    box-shadow: 0px 0px 32px 0px rgba(112, 254, 126, 0.55), inset 0px 0px 6px 0px rgba(155, 231, 181, 0.35), inset 0px -3px 8px 0px #70fe7e;
+    box-shadow: 0px 0px 40px 0px rgba(112, 254, 126, 0.61), inset 0px 0px 4px 0px rgba(155, 231, 181, 0.25), inset 0px -3px 8px 0px #70fe7e;
   }
   50% {
-    box-shadow: 0px 0px 48px 0px rgba(112, 254, 126, 0.85), inset 0px 0px 8px 0px rgba(155, 231, 181, 0.5), inset 0px -3px 10px 0px #70fe7e;
+    box-shadow: 0px 0px 52px 0px rgba(112, 254, 126, 0.85), inset 0px 0px 6px 0px rgba(155, 231, 181, 0.4), inset 0px -3px 10px 0px #70fe7e;
   }
 }
 
