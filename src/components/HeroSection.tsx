@@ -512,7 +512,7 @@ function PlaceholderCard() {
 
   return (
     <a 
-      href="#qps-plans"
+      href="#enterprise-plan"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className="w-full md:flex-[1_0_0] md:min-w-px relative rounded-[24px] bg-white border border-[#E5E7EB] hover:border-[#D1D5DB] hover:-translate-y-[3px] hover:shadow-[0px_12px_28px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out block overflow-hidden cursor-pointer select-text no-underline text-inherit"
