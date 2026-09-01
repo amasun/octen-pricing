@@ -295,7 +295,7 @@ export default function QpsPricingGrid() {
       buttonText: "Start Free"
     },
     {
-      title: "Startup",
+      title: "Builder",
       subtitle: "Early Production",
       price: "2,099",
       originalPrice: "$2,999",
@@ -365,7 +365,7 @@ export default function QpsPricingGrid() {
 
       {/* Unified Parent Container for Row 1, Row 2, and Row 3 with gap=16 */}
       <div className="flex flex-col gap-[16px] w-full">
-        {/* Row 1: First 4 merged cards (Free, Startup, Pro, Scale) in a 4-column grid */}
+        {/* Row 1: First 4 merged cards (Free, Builder, Pro, Scale) in a 4-column grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[12px] xl:gap-[16px] w-full pt-0 sm:pt-[28px] items-end">
           {plans.slice(0, 4).map((p, idx) => (
             <PlanCardItem key={idx} {...p} cardWidthClass="w-full" />

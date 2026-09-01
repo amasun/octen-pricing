@@ -39,7 +39,7 @@ Our pricing combines a **monthly QPS Plan subscription** with **pay-as-you-go AP
 
 | Plan    | QPS Limit | Monthly Price                    | Best For                              |
 | ------- | --------- | -------------------------------- | ------------------------------------- |
-| Startup | Up to 50  | <s>\$2,999</s> \$2,099 (30% off) | Early-stage teams going to production |
+| Builder | Up to 50  | <s>\$2,999</s> \$2,099 (30% off) | Early-stage teams going to production |
 | Pro     | Up to 200 | \$13,999                         | Growing production workloads          |
 | Scale   | Up to 500 | \$33,999                         | High-volume production at scale       |
 
