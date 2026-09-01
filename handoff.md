@@ -68,7 +68,7 @@ pnpm build
        2. **Card 2**：`Subscribe to a QPS Plan`（Reserves your max search QPS）
        3. **Card 3**：`Enterprise`（Adds custom data and dedicated support）
       - **移除中间加号与紧凑间隙优化 (No Plus & Tighter Gap)**：移除了卡片之间的 `+` 加号连接符，卡片间隙收窄为优雅紧凑的 `gap-4 sm:gap-5 md:gap-6`，桌面端 3 卡并排等宽对称，视觉比例更加紧凑协调；
-      - **去按钮化极简设计 (No Button Minimalist Design)**：移除了三张卡片底部的独立按钮，卡片整体作为纯粹统一的导航容器；
+      - **去按钮化极简设计与内边距规范 (No Button & pb-24px)**：移除了三张卡片底部的独立按钮，卡片底部 padding 统一设定为 **`pb-[24px]`**（`p-[6px] pb-[24px]`），卡片整体作为纯粹统一的导航容器；
      - **原生 HTML 锚点定位与交互 (Native Anchor Navigation)**：
        - 点击 **Pay as you go** 卡片直接平滑滚动定位至 `#pay-as-you-go`（API 计费区）；
        - 点击 **Subscribe to a QPS Plan** 及 **Enterprise** 卡片平滑滚动定位至 `#qps-plans`（QPS 价格方案区）；
