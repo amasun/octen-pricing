@@ -385,37 +385,36 @@ function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) 
         }}
       />
 
-      {/* 1. LEFT DATA BOX: Symmetrical at left-[calc(50%-108px)] */}
-      <div className="absolute left-[calc(50%-108px)] top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center">
-        {/* Continuous Expanding Shadow Ripples (Pure soft luminous shadow aura, no stroke/border) */}
-        <div className="absolute size-[42px] rounded-[10px] pointer-events-none animate-shadow-ripple-1" />
-        <div className="absolute size-[42px] rounded-[10px] pointer-events-none animate-shadow-ripple-2" />
-        <div className="absolute size-[42px] rounded-[10px] pointer-events-none animate-shadow-ripple-3" />
+      {/* 1. LEFT DATA BOX: Figma node 13519:1229 (left: 36.58px / calc(50%-138px-20px), top: 71px, size: 40px) */}
+      <div className="absolute left-[36.58px] sm:left-[calc(50%-158px)] top-[71px] z-20 flex items-center justify-center size-[40px]">
+        {/* Continuous Expanding Shadow Ripples (Pure soft luminous shadow aura, expanding from 8px Figma shadow) */}
+        <div className="absolute size-[40px] rounded-[8px] pointer-events-none animate-shadow-ripple-1" />
+        <div className="absolute size-[40px] rounded-[8px] pointer-events-none animate-shadow-ripple-2" />
+        <div className="absolute size-[40px] rounded-[8px] pointer-events-none animate-shadow-ripple-3" />
 
         {/* Inner Solid Box */}
-        <div className="size-[42px] rounded-[10px] bg-[#141212] border-2 border-[rgba(112,254,126,0.55)] flex items-center justify-center relative z-10 shadow-[0px_0px_0px_6px_rgba(112,254,126,0.18)]">
-          {/* Silver Database Cylinder Icon */}
-          <svg className="size-[22px]" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10 2.5C6.13 2.5 3 3.62 3 5V15C3 16.38 6.13 17.5 10 17.5C13.87 17.5 17 16.38 17 15V5C17 3.62 13.87 2.5 10 2.5ZM15.5 5C15.5 5.55 13.04 6.5 10 6.5C6.96 6.5 4.5 5.55 4.5 5C4.5 4.45 6.96 3.5 10 3.5C13.04 3.5 15.5 4.45 15.5 5ZM4.5 7.82C5.66 8.52 7.64 9 10 9C12.36 9 14.34 8.52 15.5 7.82V9.5C15.5 10.05 13.04 11 10 11C6.96 11 4.5 10.05 4.5 9.5V7.82ZM4.5 12.32C5.66 13.02 7.64 13.5 10 13.5C12.36 13.5 14.34 13.02 15.5 12.32V14.5C15.5 15.05 13.04 16 10 16C6.96 16 4.5 15.05 4.5 14.5V12.32Z" fill="url(#dbSilverGrad)"/>
+        <div className="size-[40px] rounded-[8px] bg-[#141212] border-2 border-[rgba(112,254,126,0.5)] flex flex-col items-center justify-center relative z-10 shadow-[0px_0px_0px_8px_rgba(112,254,126,0.2)]">
+          {/* Exact Figma Data Cylinder Icon */}
+          <svg className="size-[24px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.7464 19.4399C21.7464 21.2597 17.3209 22.7348 11.8617 22.7348C6.4024 22.7348 1.97691 21.2587 1.97691 19.4399V14.8481C2.64311 15.282 3.42902 15.6261 4.24644 15.8979C6.28663 16.578 8.97833 16.9663 11.8617 16.9663C14.745 16.9663 17.4368 16.578 19.4759 15.8979C20.2943 15.6261 21.0803 15.282 21.7464 14.8481V19.4399ZM21.7464 11.6948C21.7457 13.5143 17.3204 14.9887 11.8617 14.9887C6.40286 14.9887 1.97766 13.5143 1.97691 11.6948V7.43893C2.64313 7.87287 3.42998 8.21692 4.24644 8.48776C6.28663 9.16881 8.97833 9.55514 11.8617 9.55514C14.745 9.55513 17.4368 9.16879 19.4759 8.48874C20.2943 8.21593 21.0803 7.87284 21.7464 7.43796V11.6948ZM11.8617 0.988738C15.9556 0.988756 19.4685 1.81838 20.9691 3.00046C21.4692 3.3948 21.7464 3.82806 21.7464 4.28268C21.7464 6.10243 17.3209 7.57856 11.8617 7.57858C6.4024 7.57858 1.97691 6.10244 1.97691 4.28268V4.27975C1.98209 2.46105 6.40551 0.988738 11.8617 0.988738Z" fill="url(#figmaDataGrad)"/>
             <defs>
-              <linearGradient id="dbSilverGrad" x1="10" y1="2.5" x2="10" y2="17.5" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#FFFFFF" />
-                <stop offset="0.6" stopColor="#E2E8F0" />
-                <stop offset="1" stopColor="#94A3B8" />
+              <linearGradient id="figmaDataGrad" x1="11.8617" y1="0.988738" x2="11.8617" y2="22.7348" gradientUnits="userSpaceOnUse">
+                <stop stopColor="white"/>
+                <stop offset="1" stopColor="white" stopOpacity="0.65"/>
               </linearGradient>
             </defs>
           </svg>
         </div>
       </div>
 
-      {/* LEFT-TO-CENTER INGESTION STREAM (Width 57px from calc(50%-87px) to calc(50%-30px)) */}
-      <div className="absolute left-[calc(50%-87px)] top-1/2 -translate-y-1/2 w-[57px] h-[36px] pointer-events-none z-10">
-        {/* Background 4 dashed tracks */}
-        <svg className="w-full h-full" viewBox="0 0 57 36" fill="none">
-          <line x1="0" y1="6" x2="57" y2="6" stroke="#163826" strokeWidth="1.2" strokeDasharray="3 3" />
-          <line x1="0" y1="14" x2="57" y2="14" stroke="#163826" strokeWidth="1.2" strokeDasharray="3 3" />
-          <line x1="0" y1="22" x2="57" y2="22" stroke="#163826" strokeWidth="1.2" strokeDasharray="3 3" />
-          <line x1="0" y1="30" x2="57" y2="30" stroke="#163826" strokeWidth="1.2" strokeDasharray="3 3" />
+      {/* LEFT-TO-CENTER INGESTION STREAM (Width 85.5px from left: 79.05px / calc(50%-118px) to calc(50%-30px)) */}
+      <div className="absolute left-[76.6px] sm:left-[calc(50%-118px)] top-[71px] w-[88px] h-[40px] pointer-events-none z-10">
+        {/* Background 4 dashed tracks matching Figma top: 83.2px, 88.2px, 93.25px, 98.6px */}
+        <svg className="w-full h-full" viewBox="0 0 88 40" fill="none">
+          <line x1="0" y1="12.2" x2="88" y2="12.2" stroke="#163826" strokeWidth="1.2" strokeDasharray="3 3" />
+          <line x1="0" y1="17.2" x2="88" y2="17.2" stroke="#163826" strokeWidth="1.2" strokeDasharray="3 3" />
+          <line x1="0" y1="22.25" x2="88" y2="22.25" stroke="#163826" strokeWidth="1.2" strokeDasharray="3 3" />
+          <line x1="0" y1="27.6" x2="88" y2="27.6" stroke="#163826" strokeWidth="1.2" strokeDasharray="3 3" />
         </svg>
 
         {/* Streaming random glowing data dots */}
@@ -429,7 +428,7 @@ function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) 
               left: "0px",
               top: `calc(50% + ${dot.y}px)`,
               // @ts-expect-error Custom CSS properties
-              "--stream-x": "57px",
+              "--stream-x": "88px",
               "--jitter-y": `${dot.y * 0.3}px`,
               "--stream-dur": dot.dur,
               "--stream-delay": dot.delay,
@@ -439,12 +438,12 @@ function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) 
         ))}
       </div>
 
-      {/* 2. CENTER OCTEN HUB: 100% Identical in size (60px), shape, glow, and icon across all 3 cards */}
+      {/* 2. CENTER OCTEN HUB: Figma node 13519:937 (left: calc(50%-0.5px), top: 59px, size: 60px) */}
       <OctenCenterHub />
 
-      {/* CENTER-TO-RIGHT DUAL OPPOSITE CHANNELS (Width 57px from calc(50%+30px) to calc(50%+87px)) */}
-      <div className="absolute left-[calc(50%+30px)] top-1/2 -translate-y-1/2 w-[57px] h-[36px] pointer-events-none z-10 flex items-center justify-center">
-        <svg className="w-full h-full" viewBox="0 0 57 36" fill="none">
+      {/* CENTER-TO-RIGHT DUAL OPPOSITE CHANNELS (Width 85px from calc(50%+30px) to calc(50%+118px) / right: 76.6px) */}
+      <div className="absolute left-[calc(50%+30px)] right-[76.6px] sm:right-auto top-[71px] sm:w-[88px] h-[40px] pointer-events-none z-10 flex items-center justify-center">
+        <svg className="w-full h-full" viewBox="0 0 88 40" fill="none">
           <defs>
             <filter id="laserBeamGlow" x="-30%" y="-30%" width="160%" height="160%">
               <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur" />
@@ -455,35 +454,32 @@ function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) 
             </filter>
           </defs>
 
-          {/* Top Line (y = 12px): Octen -> Message (Left to Right) */}
-          <line x1="0" y1="12" x2="57" y2="12" stroke="#142B1F" strokeWidth="2.5" strokeLinecap="round" />
-          <line x1="0" y1="12" x2="57" y2="12" stroke="#70FE7E" strokeWidth="2" strokeLinecap="round" className="animate-laser-flow-right" filter="url(#laserBeamGlow)" />
+          {/* Top Line (Figma top: 86.76px -> Y = 15.76px): Octen -> Message (Left to Right) */}
+          <line x1="0" y1="15.76" x2="88" y2="15.76" stroke="#142B1F" strokeWidth="2.5" strokeLinecap="round" />
+          <line x1="0" y1="15.76" x2="88" y2="15.76" stroke="#70FE7E" strokeWidth="2" strokeLinecap="round" className="animate-laser-flow-right" filter="url(#laserBeamGlow)" />
 
-          {/* Bottom Line (y = 24px): Message -> Octen (Right to Left) */}
-          <line x1="0" y1="24" x2="57" y2="24" stroke="#142B1F" strokeWidth="2.5" strokeLinecap="round" />
-          <line x1="0" y1="24" x2="57" y2="24" stroke="#70FE7E" strokeWidth="2" strokeLinecap="round" className="animate-laser-flow-left" filter="url(#laserBeamGlow)" />
+          {/* Bottom Line (Figma top: 96.76px -> Y = 25.76px): Message -> Octen (Right to Left) */}
+          <line x1="0" y1="25.76" x2="88" y2="25.76" stroke="#142B1F" strokeWidth="2.5" strokeLinecap="round" />
+          <line x1="0" y1="25.76" x2="88" y2="25.76" stroke="#70FE7E" strokeWidth="2" strokeLinecap="round" className="animate-laser-flow-left" filter="url(#laserBeamGlow)" />
         </svg>
       </div>
 
-      {/* 3. RIGHT MESSAGE BOX: Symmetrical at left-[calc(50%+108px)] */}
-      <div className="absolute left-[calc(50%+108px)] top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center">
-        {/* Continuous Expanding Shadow Ripples (Pure soft luminous shadow aura, no stroke/border) */}
-        <div className="absolute size-[42px] rounded-[10px] pointer-events-none animate-shadow-ripple-1" />
-        <div className="absolute size-[42px] rounded-[10px] pointer-events-none animate-shadow-ripple-2" />
-        <div className="absolute size-[42px] rounded-[10px] pointer-events-none animate-shadow-ripple-3" />
+      {/* 3. RIGHT MESSAGE BOX: Figma node 13519:1231 (left: 312.42px / right: 36.58px / calc(50%+118px), top: 71px, size: 40px) */}
+      <div className="absolute right-[36.58px] sm:right-auto sm:left-[calc(50%+118px)] top-[71px] z-20 flex items-center justify-center size-[40px]">
+        {/* Continuous Expanding Shadow Ripples (Pure soft luminous shadow aura, expanding from 8px Figma shadow) */}
+        <div className="absolute size-[40px] rounded-[8px] pointer-events-none animate-shadow-ripple-1" />
+        <div className="absolute size-[40px] rounded-[8px] pointer-events-none animate-shadow-ripple-2" />
+        <div className="absolute size-[40px] rounded-[8px] pointer-events-none animate-shadow-ripple-3" />
 
         {/* Inner Solid Box */}
-        <div className="size-[42px] rounded-[10px] bg-[#141212] border-2 border-[rgba(112,254,126,0.55)] flex items-center justify-center relative z-10 shadow-[0px_0px_0px_6px_rgba(112,254,126,0.18)]">
-          {/* Person Chat Icon */}
-          <svg className="size-[22px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C9.79086 2 8 3.79086 8 6C8 8.20914 9.79086 10 12 10C14.2091 10 16 8.20914 16 6C16 3.79086 14.2091 2 12 2Z" fill="url(#userGradSilver)"/>
-            <path d="M4 17C4 14.3478 7.58172 13 12 13C12.7554 13 13.4865 13.0422 14.1755 13.1238C13.4357 14.0759 13 15.2536 13 16.5333C13 17.0396 13.072 17.5284 13.2064 17.9892C11.5369 18.5292 9.06648 19 6 19C4.89543 19 4 18.1046 4 17Z" fill="url(#userGradSilver)"/>
-            <path d="M18 13.5C15.5147 13.5 13.5 15.5147 13.5 18C13.5 18.8475 13.7347 19.6406 14.1417 20.3167L13.5414 22.3853C13.4287 22.7735 13.7844 23.1248 14.1718 23.0075L16.2081 22.3908C16.7644 22.4616 17.3304 22.5 18 22.5C20.4853 22.5 22.5 20.4853 22.5 18C22.5 15.5147 20.4853 13.5 18 13.5ZM16.5 16.5H19.5C19.7761 16.5 20 16.7239 20 17C20 17.2761 19.7761 17.5 19.5 17.5H16.5C16.2239 17.5 16 17.2761 16 17C16 16.7239 16.2239 16.5 16.5 16.5ZM19.5 19.5H16.5C16.2239 19.5 16 19.2761 16 19C16 18.7239 16.2239 18.5 16.5 18.5H19.5C19.7761 18.5 20 18.7239 20 19C20 19.2761 19.7761 19.5 19.5 19.5Z" fill="url(#userGradSilver)"/>
+        <div className="size-[40px] rounded-[8px] bg-[#141212] border-2 border-[rgba(112,254,126,0.5)] flex flex-col items-center justify-center relative z-10 shadow-[0px_0px_0px_8px_rgba(112,254,126,0.2)]">
+          {/* Exact Figma Fluent Person Chat Icon */}
+          <svg className="size-[24px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.497 16.9978C9.497 15.7078 9.872 14.5078 10.519 13.4968H4.75C4.15326 13.4968 3.58097 13.7338 3.15901 14.1558C2.73705 14.5777 2.5 15.15 2.5 15.7468V16.6668C2.5 17.2388 2.678 17.7968 3.01 18.2628C4.413 20.2308 6.627 21.2968 9.59 21.4728L10.112 19.7598C9.70666 18.8954 9.49668 17.9524 9.497 16.9978ZM10.498 1.49877C11.8243 1.49877 13.0964 2.02566 14.0342 2.96353C14.9721 3.9014 15.499 5.17343 15.499 6.49977C15.499 7.82612 14.9721 9.09815 14.0342 10.036C13.0964 10.9739 11.8243 11.5008 10.498 11.5008C9.17165 11.5008 7.89963 10.9739 6.96176 10.036C6.02389 9.09815 5.497 7.82612 5.497 6.49977C5.497 5.17343 6.02389 3.9014 6.96176 2.96353C7.89963 2.02566 9.17165 1.49877 10.498 1.49877ZM21.5 16.9978C21.5006 17.9555 21.2511 18.8968 20.7762 19.7286C20.3012 20.5603 19.6173 21.2535 18.7922 21.7398C17.967 22.226 17.0292 22.4883 16.0715 22.5008C15.1139 22.5132 14.1695 22.2754 13.332 21.8108L11.145 22.4758C11.0583 22.5022 10.966 22.5045 10.8781 22.4826C10.7902 22.4606 10.7098 22.4151 10.6457 22.351C10.5817 22.2869 10.5362 22.2066 10.5142 22.1187C10.4922 22.0307 10.4946 21.9385 10.521 21.8518L11.187 19.6648C10.7802 18.9304 10.5468 18.1126 10.5049 17.274C10.4629 16.4355 10.6134 15.5985 10.9449 14.8272C11.2764 14.0558 11.7801 13.3706 12.4173 12.8239C13.0545 12.2773 13.8084 11.8837 14.6212 11.6735C15.434 11.4632 16.2842 11.4417 17.1066 11.6108C17.929 11.7798 18.7017 12.1349 19.3657 12.6487C20.0297 13.1625 20.5672 13.8215 20.9372 14.5752C21.3071 15.3289 21.4996 16.1572 21.5 16.9968M13.999 15.4968C13.8664 15.4968 13.7392 15.5495 13.6454 15.6432C13.5517 15.737 13.499 15.8642 13.499 15.9968C13.499 16.1294 13.5517 16.2566 13.6454 16.3503C13.7392 16.4441 13.8664 16.4968 13.999 16.4968H17.999C18.1316 16.4968 18.2588 16.4441 18.3526 16.3503C18.4463 16.2566 18.499 16.1294 18.499 15.9968C18.499 15.8642 18.4463 15.737 18.3526 15.6432C18.2588 15.5495 18.1316 15.4968 17.999 15.4968H13.999ZM13.499 17.9968C13.499 18.1294 13.5517 18.2566 13.6454 18.3503C13.7392 18.4441 13.8664 18.4968 13.999 18.4968H15.999C16.1316 18.4968 16.2588 18.4441 16.3526 18.3503C16.4463 18.2566 16.499 18.1294 16.499 17.9968C16.499 17.8642 16.4463 17.737 16.3526 17.6432C16.2588 17.5495 16.1316 17.4968 15.999 17.4968H13.999C13.8664 17.4968 13.7392 17.5495 13.6454 17.6432C13.5517 17.737 13.499 17.8642 13.499 17.9968Z" fill="url(#figmaPersonGrad)"/>
             <defs>
-              <linearGradient id="userGradSilver" x1="12" y1="2" x2="12" y2="23" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#FFFFFF"/>
-                <stop offset="0.6" stopColor="#E2E8F0"/>
-                <stop offset="1" stopColor="#94A3B8"/>
+              <linearGradient id="figmaPersonGrad" x1="12" y1="1.49877" x2="12" y2="22.5012" gradientUnits="userSpaceOnUse">
+                <stop stopColor="white"/>
+                <stop offset="1" stopColor="white" stopOpacity="0.65"/>
               </linearGradient>
             </defs>
           </svg>

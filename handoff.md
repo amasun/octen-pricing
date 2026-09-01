@@ -65,12 +65,14 @@ pnpm build
      - 移除了主标题下方的冗余文案 Usage-based pricing for the search infrastructure behind your agents.；
    - **三张入口卡片统一 Octen Hub 规范与 Card 3 动态细节 (3 Cards Unified Hub & Card 3 Motion)**：
      - **全卡片统一 Octen Engine Hub**：三张卡片全面统一采用共享的 `<OctenCenterHub />` 组件，尺寸严格统一为 `size-[60px]`（`rounded-[14px]`），内置高质感 Octen 芯片矢量路径（`#70FE7E`，32x26px），搭配外层翡翠霓虹高光光晕（`shadow-[0px_0px_40px_rgba(112,254,126,0.61)]`）及内阴影细节；
-     - **左右绝对对称平衡**：左侧 Data 盒子定位在 `calc(50% - 108px)`，右侧 Message 盒子定位在 `calc(50% + 108px)`，左右连接通道跨度严格相等（均为 `57px`），整体完美居中；
-     - **左侧数据端 (Custom Data)**：高质感立体圆柱数据库图标盒子，外层配置 3 层阶梯错落、持续向外放大并渐隐消失的**涟漪光环波纹 (Ripple Waves `animate-ripple-1/2/3`)**；
-     - **左侧连接层 (Data Ingestion)**：4 组轻量虚线轨道 + 16 组多尺度（2px–4px）、随机 Y 轴抖动及错峰时序的**不规则数据粒子流 (Irregular Random Particles Stream `animate-dot-stream`)**，源源不断自左向右注入中心 Octen 引擎；
-     - **右侧连接层 (Dual High-Speed Laser Flows)**：上下双条高导光纤激光线条，**严格呈现相反方向的运动动画**——上方通道自左向右（Octen ➔ Dedicated Support，`animate-laser-flow-right`），下方通道自右向左（Dedicated Support ➔ Octen，`animate-laser-flow-left`），生动展现全双工私有即时互通；
-     - **右侧支持端 (Dedicated Support)**：Fluent 人物即时聊天图标盒子，同样配置 3 层向外放大渐隐的**涟漪光环波纹 (Ripple Waves)**；
-     - **去除底部冗余文字**：彻底移除了底部的 `ENTERPRISE LAYER` 标签，视觉画面更纯粹利落；
+     - **严格像素级对齐 Figma (node 13519:907)**：
+       - **左侧 Data 盒子**：`left: 36.58px`（`top: 71px`，`size: 40px`，`rounded-[8px]`，`border-2 border-[rgba(112,254,126,0.5)]`，`shadow-[0px_0px_0px_8px_rgba(112,254,126,0.2)]`），内嵌 Figma 官方 24x24 渐变圆柱 Data 图标；
+       - **右侧 Message 盒子**：`left: 312.42px / right: 36.58px`（`top: 71px`，`size: 40px`，`rounded-[8px]`，`border-2 border-[rgba(112,254,126,0.5)]`，`shadow-[0px_0px_0px_8px_rgba(112,254,126,0.2)]`），内嵌 Figma 官方 24x24 渐变 Fluent Person Chat 图标；
+       - **中心 Octen Hub**：`left: calc(50% - 0.5px)`（`top: 59px`，`size: 60px`）；
+     - **两端纯投影扩散涟漪波纹 (Pure Shadow Expanding Ripples `animate-shadow-ripple-1/2/3`)**：彻底移除空心描边，由 8px 基础翡翠绿投影错峰向外放大渐隐（`box-shadow 0 0 0 8px -> 18px`，`scale 1 -> 2.15`，`opacity 0.9 -> 0`）；
+     - **左侧连接层 (Data Ingestion)**：85.5px 跨度，4 条虚线轨道（Y=83.2px, 88.2px, 93.25px, 98.6px）+ 16 组多尺度不规则随机粒子流（`animate-dot-stream`）持续注入中心；
+     - **右侧连接层 (Dual Laser Flows)**：85px 跨度，上下双条高导激光线（Y=86.76px, 96.76px），严格呈相反方向流动（上方 Octen ➔ Message，下方 Message ➔ Octen）；
+     - **去除底部冗余文字**：彻底移除底部 `ENTERPRISE LAYER` 标签，视觉画面更纯粹利落；
    - **How Octen Works 3 张卡片布局与去按钮化极简交互**：
      - 容器宽度扩展为最大 `max-w-[1280px]`；
      - 布局由 2 张卡片平滑扩展为 3 张卡片：
