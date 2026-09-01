@@ -448,10 +448,10 @@ function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) 
 
       {/* 1. LEFT DATA BOX: Figma node 13519:1229 (left: 36.58px / calc(50%-138px-20px), top: 71px, size: 40px) */}
       <div className="absolute left-[36.58px] sm:left-[calc(50%-158px)] top-[71px] z-20 flex items-center justify-center size-[40px]">
-        {/* Continuous Expanding Shadow Ripples (Pure soft luminous shadow aura, expanding from 8px Figma shadow) */}
-        <div className="absolute size-[40px] rounded-[8px] pointer-events-none animate-shadow-ripple-1" />
-        <div className="absolute size-[40px] rounded-[8px] pointer-events-none animate-shadow-ripple-2" />
-        <div className="absolute size-[40px] rounded-[8px] pointer-events-none animate-shadow-ripple-3" />
+        {/* Continuous Expanding Shadow Ripples (Only active on hover) */}
+        <div className={`absolute size-[40px] rounded-[8px] pointer-events-none transition-opacity duration-300 ${isHovered ? "animate-shadow-ripple-1 opacity-100" : "opacity-0"}`} />
+        <div className={`absolute size-[40px] rounded-[8px] pointer-events-none transition-opacity duration-300 ${isHovered ? "animate-shadow-ripple-2 opacity-100" : "opacity-0"}`} />
+        <div className={`absolute size-[40px] rounded-[8px] pointer-events-none transition-opacity duration-300 ${isHovered ? "animate-shadow-ripple-3 opacity-100" : "opacity-0"}`} />
 
         {/* Inner Solid Box (No static shadow - shadow is 100% dynamic from ripples) */}
         <div className="size-[40px] rounded-[8px] bg-[#141212] border-2 border-[rgba(112,254,126,0.5)] flex flex-col items-center justify-center relative z-10">
@@ -478,7 +478,7 @@ function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) 
           <line x1="0" y1="27.6" x2="88" y2="27.6" stroke="#163826" strokeWidth="1.2" strokeDasharray="3 3" />
         </svg>
 
-        {/* Streaming constant-speed linear data dots distributed on 4 lines */}
+        {/* Streaming constant-speed linear data dots distributed on 4 lines (Animated on hover) */}
         {STREAM_PARTICLES.map((dot) => (
           <div
             key={dot.id}
@@ -493,6 +493,7 @@ function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) 
               "--stream-dur": dot.dur,
               "--stream-delay": dot.delay,
               opacity: dot.opacity,
+              animationPlayState: isHovered ? "running" : "paused",
             }}
           />
         ))}
@@ -511,13 +512,15 @@ function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) 
           <div 
             className="absolute top-0 left-0 w-[34px] h-[2px] rounded-full animate-laser-beam-right shadow-[0_0_8px_#70FE7E]"
             style={{
-              background: "linear-gradient(90deg, rgba(67, 152, 75, 0) 0%, #70FE7E 100%)"
+              background: "linear-gradient(90deg, rgba(67, 152, 75, 0) 0%, #70FE7E 100%)",
+              animationPlayState: isHovered ? "running" : "paused",
             }}
           />
           <div 
             className="absolute top-0 left-0 w-[34px] h-[2px] rounded-full animate-laser-beam-right-delayed shadow-[0_0_8px_#70FE7E]"
             style={{
-              background: "linear-gradient(90deg, rgba(67, 152, 75, 0) 0%, #70FE7E 100%)"
+              background: "linear-gradient(90deg, rgba(67, 152, 75, 0) 0%, #70FE7E 100%)",
+              animationPlayState: isHovered ? "running" : "paused",
             }}
           />
         </div>
@@ -530,13 +533,15 @@ function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) 
           <div 
             className="absolute top-0 left-0 w-[34px] h-[2px] rounded-full animate-laser-beam-left shadow-[0_0_8px_#70FE7E]"
             style={{
-              background: "linear-gradient(90deg, #70FE7E 0%, rgba(67, 152, 75, 0) 100%)"
+              background: "linear-gradient(90deg, #70FE7E 0%, rgba(67, 152, 75, 0) 100%)",
+              animationPlayState: isHovered ? "running" : "paused",
             }}
           />
           <div 
             className="absolute top-0 left-0 w-[34px] h-[2px] rounded-full animate-laser-beam-left-delayed shadow-[0_0_8px_#70FE7E]"
             style={{
-              background: "linear-gradient(90deg, #70FE7E 0%, rgba(67, 152, 75, 0) 100%)"
+              background: "linear-gradient(90deg, #70FE7E 0%, rgba(67, 152, 75, 0) 100%)",
+              animationPlayState: isHovered ? "running" : "paused",
             }}
           />
         </div>
@@ -544,10 +549,10 @@ function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) 
 
       {/* 3. RIGHT MESSAGE BOX: Figma node 13519:1231 (left: 312.42px / right: 36.58px / calc(50%+118px), top: 71px, size: 40px) */}
       <div className="absolute right-[36.58px] sm:right-auto sm:left-[calc(50%+118px)] top-[71px] z-20 flex items-center justify-center size-[40px]">
-        {/* Continuous Expanding Shadow Ripples (Pure soft luminous shadow aura, expanding from 8px Figma shadow) */}
-        <div className="absolute size-[40px] rounded-[8px] pointer-events-none animate-shadow-ripple-1" />
-        <div className="absolute size-[40px] rounded-[8px] pointer-events-none animate-shadow-ripple-2" />
-        <div className="absolute size-[40px] rounded-[8px] pointer-events-none animate-shadow-ripple-3" />
+        {/* Continuous Expanding Shadow Ripples (Only active on hover) */}
+        <div className={`absolute size-[40px] rounded-[8px] pointer-events-none transition-opacity duration-300 ${isHovered ? "animate-shadow-ripple-1 opacity-100" : "opacity-0"}`} />
+        <div className={`absolute size-[40px] rounded-[8px] pointer-events-none transition-opacity duration-300 ${isHovered ? "animate-shadow-ripple-2 opacity-100" : "opacity-0"}`} />
+        <div className={`absolute size-[40px] rounded-[8px] pointer-events-none transition-opacity duration-300 ${isHovered ? "animate-shadow-ripple-3 opacity-100" : "opacity-0"}`} />
 
         {/* Inner Solid Box (No static shadow - shadow is 100% dynamic from ripples) */}
         <div className="size-[40px] rounded-[8px] bg-[#141212] border-2 border-[rgba(112,254,126,0.5)] flex flex-col items-center justify-center relative z-10">
