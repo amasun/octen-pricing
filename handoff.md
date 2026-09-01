@@ -66,7 +66,7 @@ pnpm build
       - 布局由 2 张卡片平滑扩展为 3 张卡片：
         1. **Card 1**：`Pay as you go`（API 密钥与按量扣费）
         2. **Card 2**：`Subscribe to a QPS Plan`（QPS 吞吐预留）
-        3. **Card 3**：`Custom Solutions`（占位卡片：企业定制模型/SLA/专属通道，预留未来能力拓展）
+        3. **Card 3**：`Enterprise`（Adds custom data and dedicated support，支持 Contact sales 邮件/销售咨询）
       - 卡片间采用通用自适应居中加号连接符（`PlusSeparator`），桌面端保持 1:1:1 等宽对称排布，移动端自适应垂直单列。
    - **How Octen Works 卡片原生 HTML 锚点定位优化 (How Octen Works Native Anchor Fix)**：
      - 将卡片主体改为原生 HTML `<a href="#pay-as-you-go">` 和 `<a href="#qps-plans">` 超链接标签，彻底摒弃 JS 滚动状态单次锁死的缺陷；
