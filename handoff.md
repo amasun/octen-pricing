@@ -61,6 +61,13 @@ pnpm build
    - **QPS Plan 卡片行动按钮文案统一为 `Get started` (QPS Plan Cards Button Label)**：
      - 将 **Startup**、**Pro**、**Scale** 卡片底部的行动按钮文案由 `Subscribe` 统一修改为 **`Get started`**；
      - 保持 **Free** 卡片的 `Start Free` 与 **Enterprise** 卡片的 `Contact Sales` 不变。
+    - **How Octen Works 扩展为 3 张卡片布局 (How Octen Works 3 Cards Layout & Placeholder)**：
+      - 容器宽度扩展为最大 `max-w-[1280px]`（与下方 1312px 页面容器精准对齐）；
+      - 布局由 2 张卡片平滑扩展为 3 张卡片：
+        1. **Card 1**：`Pay as you go`（API 密钥与按量扣费）
+        2. **Card 2**：`Subscribe to a QPS Plan`（QPS 吞吐预留）
+        3. **Card 3**：`Custom Solutions`（占位卡片：企业定制模型/SLA/专属通道，预留未来能力拓展）
+      - 卡片间采用通用自适应居中加号连接符（`PlusSeparator`），桌面端保持 1:1:1 等宽对称排布，移动端自适应垂直单列。
    - **How Octen Works 卡片原生 HTML 锚点定位优化 (How Octen Works Native Anchor Fix)**：
      - 将卡片主体改为原生 HTML `<a href="#pay-as-you-go">` 和 `<a href="#qps-plans">` 超链接标签，彻底摒弃 JS 滚动状态单次锁死的缺陷；
      - 目标容器统一配置 `scroll-mt-[90px]`，配合全局 `scroll-behavior: smooth`，无论是首次点击还是反复多次点击，均能 100% 稳定平滑滚动定位到准确视图位置；
