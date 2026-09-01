@@ -348,41 +348,41 @@ function PayAsYouGoCard() {
 }
 
 const STREAM_PARTICLES = [
-  // Line 1 (y = 12.2px)
-  { id: 1, lineY: 12.2, size: 3, dur: "1.8s", delay: "0.0s", opacity: 0.95 },
-  { id: 2, lineY: 12.2, size: 2.5, dur: "1.8s", delay: "0.5s", opacity: 0.9 },
-  { id: 3, lineY: 12.2, size: 3.5, dur: "1.8s", delay: "1.0s", opacity: 1 },
-  { id: 4, lineY: 12.2, size: 2.5, dur: "1.8s", delay: "1.45s", opacity: 0.85 },
-  { id: 5, lineY: 12.2, size: 3, dur: "1.8s", delay: "1.9s", opacity: 0.95 },
-  { id: 6, lineY: 12.2, size: 2, dur: "1.8s", delay: "2.35s", opacity: 0.8 },
-  { id: 7, lineY: 12.2, size: 3, dur: "1.8s", delay: "2.8s", opacity: 1 },
+  // Line 1 (y = 12.2px) - Pre-populated across the track
+  { id: 1, lineY: 12.2, size: 3, dur: "1.8s", delay: "-0.0s", opacity: 0.95 },
+  { id: 2, lineY: 12.2, size: 2.5, dur: "1.8s", delay: "-0.26s", opacity: 0.9 },
+  { id: 3, lineY: 12.2, size: 3.5, dur: "1.8s", delay: "-0.52s", opacity: 1 },
+  { id: 4, lineY: 12.2, size: 2.5, dur: "1.8s", delay: "-0.78s", opacity: 0.85 },
+  { id: 5, lineY: 12.2, size: 3, dur: "1.8s", delay: "-1.04s", opacity: 0.95 },
+  { id: 6, lineY: 12.2, size: 2, dur: "1.8s", delay: "-1.30s", opacity: 0.8 },
+  { id: 7, lineY: 12.2, size: 3, dur: "1.8s", delay: "-1.56s", opacity: 1 },
 
-  // Line 2 (y = 17.2px)
-  { id: 8, lineY: 17.2, size: 2.5, dur: "1.8s", delay: "0.2s", opacity: 0.9 },
-  { id: 9, lineY: 17.2, size: 3.5, dur: "1.8s", delay: "0.7s", opacity: 1 },
-  { id: 10, lineY: 17.2, size: 2, dur: "1.8s", delay: "1.15s", opacity: 0.8 },
-  { id: 11, lineY: 17.2, size: 3, dur: "1.8s", delay: "1.6s", opacity: 0.95 },
-  { id: 12, lineY: 17.2, size: 2.5, dur: "1.8s", delay: "2.1s", opacity: 0.9 },
-  { id: 13, lineY: 17.2, size: 3.5, dur: "1.8s", delay: "2.55s", opacity: 1 },
-  { id: 14, lineY: 17.2, size: 2, dur: "1.8s", delay: "3.0s", opacity: 0.85 },
+  // Line 2 (y = 17.2px) - Pre-populated across the track
+  { id: 8, lineY: 17.2, size: 2.5, dur: "1.8s", delay: "-0.13s", opacity: 0.9 },
+  { id: 9, lineY: 17.2, size: 3.5, dur: "1.8s", delay: "-0.39s", opacity: 1 },
+  { id: 10, lineY: 17.2, size: 2, dur: "1.8s", delay: "-0.65s", opacity: 0.8 },
+  { id: 11, lineY: 17.2, size: 3, dur: "1.8s", delay: "-0.91s", opacity: 0.95 },
+  { id: 12, lineY: 17.2, size: 2.5, dur: "1.8s", delay: "-1.17s", opacity: 0.9 },
+  { id: 13, lineY: 17.2, size: 3.5, dur: "1.8s", delay: "-1.43s", opacity: 1 },
+  { id: 14, lineY: 17.2, size: 2, dur: "1.8s", delay: "-1.69s", opacity: 0.85 },
 
-  // Line 3 (y = 22.25px)
-  { id: 15, lineY: 22.25, size: 3, dur: "1.8s", delay: "0.1s", opacity: 0.95 },
-  { id: 16, lineY: 22.25, size: 2.5, dur: "1.8s", delay: "0.6s", opacity: 0.85 },
-  { id: 17, lineY: 22.25, size: 3.5, dur: "1.8s", delay: "1.05s", opacity: 1 },
-  { id: 18, lineY: 22.25, size: 2, dur: "1.8s", delay: "1.5s", opacity: 0.8 },
-  { id: 19, lineY: 22.25, size: 3, dur: "1.8s", delay: "1.95s", opacity: 0.95 },
-  { id: 20, lineY: 22.25, size: 2.5, dur: "1.8s", delay: "2.4s", opacity: 0.9 },
-  { id: 21, lineY: 22.25, size: 3.5, dur: "1.8s", delay: "2.9s", opacity: 1 },
+  // Line 3 (y = 22.25px) - Pre-populated across the track
+  { id: 15, lineY: 22.25, size: 3, dur: "1.8s", delay: "-0.07s", opacity: 0.95 },
+  { id: 16, lineY: 22.25, size: 2.5, dur: "1.8s", delay: "-0.33s", opacity: 0.85 },
+  { id: 17, lineY: 22.25, size: 3.5, dur: "1.8s", delay: "-0.59s", opacity: 1 },
+  { id: 18, lineY: 22.25, size: 2, dur: "1.8s", delay: "-0.85s", opacity: 0.8 },
+  { id: 19, lineY: 22.25, size: 3, dur: "1.8s", delay: "-1.11s", opacity: 0.95 },
+  { id: 20, lineY: 22.25, size: 2.5, dur: "1.8s", delay: "-1.37s", opacity: 0.9 },
+  { id: 21, lineY: 22.25, size: 3.5, dur: "1.8s", delay: "-1.63s", opacity: 1 },
 
-  // Line 4 (y = 27.6px)
-  { id: 22, lineY: 27.6, size: 2.5, dur: "1.8s", delay: "0.35s", opacity: 0.9 },
-  { id: 23, lineY: 27.6, size: 3, dur: "1.8s", delay: "0.85s", opacity: 1 },
-  { id: 24, lineY: 27.6, size: 2, dur: "1.8s", delay: "1.3s", opacity: 0.8 },
-  { id: 25, lineY: 27.6, size: 3.5, dur: "1.8s", delay: "1.75s", opacity: 1 },
-  { id: 26, lineY: 27.6, size: 2.5, dur: "1.8s", delay: "2.25s", opacity: 0.85 },
-  { id: 27, lineY: 27.6, size: 3, dur: "1.8s", delay: "2.7s", opacity: 0.95 },
-  { id: 28, lineY: 27.6, size: 2, dur: "1.8s", delay: "3.2s", opacity: 0.8 },
+  // Line 4 (y = 27.6px) - Pre-populated across the track
+  { id: 22, lineY: 27.6, size: 2.5, dur: "1.8s", delay: "-0.20s", opacity: 0.9 },
+  { id: 23, lineY: 27.6, size: 3, dur: "1.8s", delay: "-0.46s", opacity: 1 },
+  { id: 24, lineY: 27.6, size: 2, dur: "1.8s", delay: "-0.72s", opacity: 0.8 },
+  { id: 25, lineY: 27.6, size: 3.5, dur: "1.8s", delay: "-0.98s", opacity: 1 },
+  { id: 26, lineY: 27.6, size: 2.5, dur: "1.8s", delay: "-1.24s", opacity: 0.85 },
+  { id: 27, lineY: 27.6, size: 3, dur: "1.8s", delay: "-1.50s", opacity: 0.95 },
+  { id: 28, lineY: 27.6, size: 2, dur: "1.8s", delay: "-1.76s", opacity: 0.8 },
 ];
 
 function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) {

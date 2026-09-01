@@ -257,11 +257,11 @@ body, #root, #root > div, [data-name="Octen AI | Infrastructure Pricing"] {
 }
 
 .animate-shadow-ripple-2 {
-  animation: shadowRippleWave 4.2s linear 1.4s infinite;
+  animation: shadowRippleWave 4.2s linear -1.4s infinite;
 }
 
 .animate-shadow-ripple-3 {
-  animation: shadowRippleWave 4.2s linear 2.8s infinite;
+  animation: shadowRippleWave 4.2s linear -2.8s infinite;
 }
 
 /* Data Ingestion Particle Stream - Pure Linear Straight Line Motion */
@@ -283,13 +283,13 @@ body, #root, #root > div, [data-name="Octen AI | Infrastructure Pricing"] {
 }
 
 .animate-dot-stream {
-  animation: dotStreamIn var(--stream-dur, 2.0s) linear var(--stream-delay, 0s) infinite;
+  animation: dotStreamIn var(--stream-dur, 1.8s) linear var(--stream-delay, 0s) infinite;
 }
 
 /* Center-to-Right Dual Opposite Laser Gradient Beams */
 @keyframes laserBeamRight {
   0% {
-    transform: translateX(-36px);
+    transform: translateX(-34px);
     opacity: 0;
   }
   15% {
@@ -316,7 +316,7 @@ body, #root, #root > div, [data-name="Octen AI | Infrastructure Pricing"] {
     opacity: 1;
   }
   100% {
-    transform: translateX(-36px);
+    transform: translateX(-34px);
     opacity: 0;
   }
 }
@@ -326,7 +326,7 @@ body, #root, #root > div, [data-name="Octen AI | Infrastructure Pricing"] {
 }
 
 .animate-laser-beam-right-delayed {
-  animation: laserBeamRight 1.8s linear 0.9s infinite;
+  animation: laserBeamRight 1.8s linear -0.9s infinite;
 }
 
 .animate-laser-beam-left {
@@ -334,7 +334,7 @@ body, #root, #root > div, [data-name="Octen AI | Infrastructure Pricing"] {
 }
 
 .animate-laser-beam-left-delayed {
-  animation: laserBeamLeft 1.8s linear 0.9s infinite;
+  animation: laserBeamLeft 1.8s linear -0.9s infinite;
 }
 
 @keyframes octenHubPulse {
