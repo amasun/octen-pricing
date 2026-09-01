@@ -49,11 +49,17 @@ function HeroHeader() {
 
 function OctenCenterHub() {
   return (
-    <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 top-1/2 overflow-clip rounded-[14px] shadow-[0px_0px_40px_0px_rgba(112,254,126,0.61)] size-[60px] bg-black flex items-center justify-center z-20 pointer-events-none">
-      <svg className="w-[32px] h-[26px]" fill="none" viewBox="0 0 32 26">
-        <path d={svgPaths.p78eff80} fill="#70FE7E" />
-      </svg>
-      <div className="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_4px_0px_rgba(155,231,181,0.25),inset_0px_-3px_8px_0px_#70fe7e]" />
+    <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 top-1/2 size-[60px] z-20 pointer-events-none flex items-center justify-center">
+      {/* Ambient soft outer neon halo behind the hub */}
+      <div className="absolute -inset-4 rounded-full bg-[#70FE7E]/30 blur-[20px] pointer-events-none" />
+
+      {/* Solid Center Hub Box */}
+      <div className="size-[60px] rounded-[14px] bg-black shadow-[0px_0px_40px_0px_rgba(112,254,126,0.61)] flex items-center justify-center relative overflow-hidden">
+        <svg className="w-[32px] h-[26px]" fill="none" viewBox="0 0 32 26">
+          <path d={svgPaths.p78eff80} fill="#70FE7E" />
+        </svg>
+        <div className="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_4px_0px_rgba(155,231,181,0.25),inset_0px_-3px_8px_0px_#70fe7e]" />
+      </div>
     </div>
   );
 }
