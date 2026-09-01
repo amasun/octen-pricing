@@ -342,11 +342,17 @@ function VlEmbeddingCard() {
         <div className="border-t border-[#E7E7E3] pt-[14px] flex flex-col gap-[6px]">
           <div className="flex items-center justify-between gap-[8px] text-[13px] sm:text-[14px] min-w-0">
             <span className="font-semibold text-[#0A0A0A] truncate min-w-0 font-['JetBrains_Mono',monospace]">vl-embedding</span>
-            <span className="text-[#57575E] text-[11px] sm:text-[12px] bg-[#F6F6F3] px-[6px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] tabular-nums">$0.05 / $0.12</span>
+            <div className="flex items-center gap-1.5 whitespace-nowrap shrink-0">
+              <span className="text-[#57575E] text-[11px] sm:text-[12px] bg-[#F6F6F3] px-[6px] py-[2px] rounded-[4px] border border-[#E7E7E3] font-['JetBrains_Mono',monospace] tabular-nums">$0.05 / $0.12</span>
+              <span className="text-[#8B8B8B] text-[11px] sm:text-[12px]">(text / visual)</span>
+            </div>
           </div>
           <div className="flex items-center justify-between gap-[8px] text-[13px] sm:text-[14px] min-w-0">
             <span className="font-semibold text-[#0A0A0A] truncate min-w-0 font-['JetBrains_Mono',monospace]">vl-embedding-large</span>
-            <span className="text-[#57575E] text-[11px] sm:text-[12px] bg-[#F6F6F3] px-[6px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap font-['JetBrains_Mono',monospace] tabular-nums">$0.10 / $0.25</span>
+            <div className="flex items-center gap-1.5 whitespace-nowrap shrink-0">
+              <span className="text-[#57575E] text-[11px] sm:text-[12px] bg-[#F6F6F3] px-[6px] py-[2px] rounded-[4px] border border-[#E7E7E3] font-['JetBrains_Mono',monospace] tabular-nums">$0.10 / $0.25</span>
+              <span className="text-[#8B8B8B] text-[11px] sm:text-[12px]">(text / visual)</span>
+            </div>
           </div>
         </div>
       </div>
@@ -963,14 +969,17 @@ function PlanCTable() {
               <div className="bg-[#F8F8F5] p-[12px] rounded-[10px] border border-[#EAEAE5] flex flex-col gap-[8px] text-[13px]">
                 <div className="flex items-baseline justify-between w-full">
                   <span className="font-['JetBrains_Mono',monospace] text-[#57575E]">vl-embedding</span>
-                  <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums">$0.05 / $0.12</span>
+                  <div className="flex items-baseline gap-1.5 whitespace-nowrap">
+                    <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums">$0.05 / $0.12</span>
+                    <span className="text-[#8B8B8B] text-[12px]">(text / visual)</span>
+                  </div>
                 </div>
                 <div className="flex items-baseline justify-between w-full">
                   <span className="font-['JetBrains_Mono',monospace] text-[#57575E]">vl-embedding-large</span>
-                  <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums">$0.10 / $0.25</span>
-                </div>
-                <div className="flex justify-end w-full">
-                  <span className="text-[11px] text-[#9C9CA4] font-['DM_Sans',sans-serif] text-right">text / visual</span>
+                  <div className="flex items-baseline gap-1.5 whitespace-nowrap">
+                    <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums">$0.10 / $0.25</span>
+                    <span className="text-[#8B8B8B] text-[12px]">(text / visual)</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1394,17 +1403,20 @@ function PlanCTable() {
                 </div>
               </td>
               <td className="py-4 px-6">
-                <div className="w-full max-w-[290px] flex flex-col gap-1.5 text-[13px] sm:text-[14px]">
+                <div className="w-full max-w-[340px] flex flex-col gap-1.5 text-[13px] sm:text-[14px]">
                   <div className="flex items-baseline justify-between w-full">
                     <span className="font-['JetBrains_Mono',monospace] text-[#57575E] whitespace-nowrap">vl-embedding</span>
-                    <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums whitespace-nowrap">$0.05 / $0.12</span>
+                    <div className="flex items-baseline gap-1.5 whitespace-nowrap">
+                      <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums">$0.05 / $0.12</span>
+                      <span className="text-[#8B8B8B] text-[12px]">(text / visual)</span>
+                    </div>
                   </div>
                   <div className="flex items-baseline justify-between w-full">
                     <span className="font-['JetBrains_Mono',monospace] text-[#57575E] whitespace-nowrap">vl-embedding-large</span>
-                    <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums whitespace-nowrap">$0.10 / $0.25</span>
-                  </div>
-                  <div className="flex justify-end w-full">
-                    <span className="text-[11px] text-[#9C9CA4] font-['DM_Sans',sans-serif] text-right whitespace-nowrap">text / visual</span>
+                    <div className="flex items-baseline gap-1.5 whitespace-nowrap">
+                      <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums">$0.10 / $0.25</span>
+                      <span className="text-[#8B8B8B] text-[12px]">(text / visual)</span>
+                    </div>
                   </div>
                 </div>
               </td>
