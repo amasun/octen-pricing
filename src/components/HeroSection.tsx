@@ -532,21 +532,6 @@ function PlaceholderCard() {
   );
 }
 
-function PlusSeparator() {
-  return (
-    <div className="shrink-0 z-20 pointer-events-none flex items-center justify-center self-center h-[28px] md:h-[38px] w-full md:w-auto my-1 md:my-0">
-      {/* Center Plus Icon Button */}
-      <div className="size-[22px] pointer-events-auto relative z-10">
-        <div className="bg-black rounded-full size-[22px] border border-black flex items-center justify-center shadow-xs">
-          <svg className="size-[12px]" viewBox="0 0 12 12" fill="none">
-            <path d="M6 1.5v9M1.5 6h9" stroke="#70FE7E" strokeWidth="1.6" strokeLinecap="round" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function HeroLightGlow() {
   return (
     <div 
@@ -584,11 +569,9 @@ function HowOctenWorksSection() {
       </div>
 
       {/* Entry Cards Container (3 Cards on Desktop, 1 Column on Mobile) */}
-      <div className="content-stretch flex flex-col md:flex-row gap-[12px] md:gap-[16px] lg:gap-[20px] items-stretch justify-center relative shrink-0 w-full max-w-[1280px]">
+      <div className="content-stretch flex flex-col md:flex-row gap-4 sm:gap-5 md:gap-6 items-stretch justify-center relative shrink-0 w-full max-w-[1280px]">
         <PayAsYouGoCard />
-        <PlusSeparator />
         <QpsPlanCard />
-        <PlusSeparator />
         <PlaceholderCard />
       </div>
     </div>
