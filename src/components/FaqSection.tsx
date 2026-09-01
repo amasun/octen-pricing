@@ -7,11 +7,11 @@ export default function FaqSection() {
   const faqData = [
     {
       q: "How is Octen billing calculated?",
-      a: "Octen combines real-time Pay-As-You-Go API credit deductions with monthly QPS subscription plans for guaranteed search throughput and priority SLAs."
+      a: "Octen combines real-time pay-as-you-go API credits with an optional monthly QPS Plan. Usage is deducted from your balance as you call the APIs. The QPS Plan reserves search throughput — it does not include usage credits, and every account starts on the free tier."
     },
     {
       q: "Is the $5 free balance automatic?",
-      a: "Yes, new developer accounts automatically receive $5 in free balance upon registration—no credit card or manual claim required to start testing API requests."
+      a: "Yes, new developer accounts automatically receive $5 in free balance upon registration — no credit card or manual claim required to start testing API requests."
     },
     {
       q: "How do Prompt Cache discounts work for Model Gateway?",
@@ -19,11 +19,11 @@ export default function FaqSection() {
     },
     {
       q: "Can I upgrade or scale my QPS plan at any time?",
-      a: "Yes! You can instantly upgrade from Base to Startup, Pro, or Scale via the Platform Billing dashboard. Pro-rated adjustments take effect immediately on your QPS quota."
+      a: "Yes. Upgrades take effect immediately with prorated billing. Downgrades take effect at the start of your next billing cycle."
     },
     {
-      q: "What are the key benefits of the Enterprise plan?",
-      a: "The Enterprise plan provides custom throughput scaling (500+ QPS), Zero Data Retention (ZDR) for data privacy, dedicated Slack channel support, and custom SLAs with an assigned account manager."
+      q: "What happens when I run out of credits?",
+      a: "API requests return a 403 error until you top up. The minimum top-up is $5. Your QPS Plan is not affected."
     },
     {
       q: "What payment methods are supported?",
