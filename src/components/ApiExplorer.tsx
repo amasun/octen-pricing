@@ -717,19 +717,20 @@ function PlanCTable() {
                   Get started
                 </a>
               </div>
-              <div className="flex items-baseline gap-[6px] flex-wrap bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
-                <span className="font-bold text-[18px] text-[#0A0A0A]">$1</span>
-                <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
-                <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
+              <div className="flex flex-col gap-1 bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
+                <div className="flex items-baseline gap-[6px] flex-wrap">
+                  <span className="font-bold text-[18px] text-[#0A0A0A]">$1</span>
+                  <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
+                  <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
+                </div>
+                <div className="flex items-center gap-1 text-[12px] text-[#57575E]">
+                  <span className="text-[#8B8B8B]">Full content:</span>
+                  <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09]">$0.5</span>
+                  <span className="text-[#8B8B8B]">/ 1k results</span>
+                </div>
               </div>
-              <div className="bg-[#F8F8F5] p-[12px] rounded-[10px] border border-[#EAEAE5] flex flex-col gap-[6px] text-[13px]">
-                <div className="flex items-baseline justify-between w-full">
-                  <span className="font-['JetBrains_Mono',monospace] text-[#57575E]">Full content</span>
-                  <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums">$0.5 / 1k results</span>
-                </div>
-                <div className="text-[12px] text-[#039855] font-medium">
-                  10 full-content results free per call
-                </div>
+              <div className="text-[13px] text-[#039855] font-medium leading-[20px]">
+                10 full-content results free per call
               </div>
             </div>
 
@@ -756,19 +757,20 @@ function PlanCTable() {
                   Get started
                 </a>
               </div>
-              <div className="flex items-baseline gap-[6px] flex-wrap bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
-                <span className="font-bold text-[18px] text-[#0A0A0A]">$1</span>
-                <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
-                <span className="text-[14px] text-[#8B8B8B]">/ 1k sub-queries</span>
+              <div className="flex flex-col gap-1 bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
+                <div className="flex items-baseline gap-[6px] flex-wrap">
+                  <span className="font-bold text-[18px] text-[#0A0A0A]">$1</span>
+                  <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
+                  <span className="text-[14px] text-[#8B8B8B]">/ 1k sub-queries</span>
+                </div>
+                <div className="flex items-center gap-1 text-[12px] text-[#57575E]">
+                  <span className="text-[#8B8B8B]">Full content:</span>
+                  <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09]">$0.5</span>
+                  <span className="text-[#8B8B8B]">/ 1k results</span>
+                </div>
               </div>
-              <div className="bg-[#F8F8F5] p-[12px] rounded-[10px] border border-[#EAEAE5] flex flex-col gap-[6px] text-[13px]">
-                <div className="flex items-baseline justify-between w-full">
-                  <span className="font-['JetBrains_Mono',monospace] text-[#57575E]">Full content</span>
-                  <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums">$0.5 / 1k results</span>
-                </div>
-                <div className="text-[12px] text-[#039855] font-medium">
-                  10 full-content results free per sub-query
-                </div>
+              <div className="text-[13px] text-[#039855] font-medium leading-[20px]">
+                10 full-content results free per sub-query
               </div>
             </div>
 
@@ -1177,22 +1179,23 @@ function PlanCTable() {
                 </div>
               </td>
               <td className="py-4 px-6">
-                <div className="flex items-center gap-1.5 flex-nowrap whitespace-nowrap">
-                  <span className="font-bold text-[16px] text-[#0A0A0A]">$1</span>
-                  <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
-                  <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
-                  <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-bold text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#70FE7E] text-[#100F09] border border-[#70FE7E]">80% Off</span>
+                <div className="flex flex-col gap-1">
+                  <div className="flex items-center gap-1.5 flex-nowrap whitespace-nowrap">
+                    <span className="font-bold text-[16px] text-[#0A0A0A]">$1</span>
+                    <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
+                    <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
+                    <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-bold text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#70FE7E] text-[#100F09] border border-[#70FE7E]">80% Off</span>
+                  </div>
+                  <div className="flex items-center gap-1 text-[13px] text-[#57575E]">
+                    <span className="text-[#8B8B8B]">Full content:</span>
+                    <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09]">$0.5</span>
+                    <span className="text-[#8B8B8B]">/ 1k results</span>
+                  </div>
                 </div>
               </td>
               <td className="py-4 px-6">
-                <div className="w-full max-w-[280px] flex flex-col gap-1 text-[13px] sm:text-[14px]">
-                  <div className="flex items-baseline justify-between w-full">
-                    <span className="font-['JetBrains_Mono',monospace] text-[#57575E] whitespace-nowrap">Full content</span>
-                    <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums whitespace-nowrap">$0.5 / 1k results</span>
-                  </div>
-                  <div className="text-[12px] text-[#039855] font-medium leading-[16px]">
-                    10 full-content results free per call
-                  </div>
+                <div className="text-[14px] text-[#039855] font-medium leading-[20px]">
+                  10 full-content results free per call
                 </div>
               </td>
               <td className="py-4 px-6 text-right">
@@ -1209,22 +1212,23 @@ function PlanCTable() {
                 </div>
               </td>
               <td className="py-4 px-6">
-                <div className="flex items-center gap-1.5 flex-nowrap whitespace-nowrap">
-                  <span className="font-bold text-[16px] text-[#0A0A0A]">$1</span>
-                  <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
-                  <span className="text-[14px] text-[#8B8B8B]">/ 1k sub-queries</span>
-                  <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-bold text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#70FE7E] text-[#100F09] border border-[#70FE7E]">80% Off</span>
+                <div className="flex flex-col gap-1">
+                  <div className="flex items-center gap-1.5 flex-nowrap whitespace-nowrap">
+                    <span className="font-bold text-[16px] text-[#0A0A0A]">$1</span>
+                    <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
+                    <span className="text-[14px] text-[#8B8B8B]">/ 1k sub-queries</span>
+                    <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-bold text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#70FE7E] text-[#100F09] border border-[#70FE7E]">80% Off</span>
+                  </div>
+                  <div className="flex items-center gap-1 text-[13px] text-[#57575E]">
+                    <span className="text-[#8B8B8B]">Full content:</span>
+                    <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09]">$0.5</span>
+                    <span className="text-[#8B8B8B]">/ 1k results</span>
+                  </div>
                 </div>
               </td>
               <td className="py-4 px-6">
-                <div className="w-full max-w-[280px] flex flex-col gap-1 text-[13px] sm:text-[14px]">
-                  <div className="flex items-baseline justify-between w-full">
-                    <span className="font-['JetBrains_Mono',monospace] text-[#57575E] whitespace-nowrap">Full content</span>
-                    <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums whitespace-nowrap">$0.5 / 1k results</span>
-                  </div>
-                  <div className="text-[12px] text-[#039855] font-medium leading-[16px]">
-                    10 full-content results free per sub-query
-                  </div>
+                <div className="text-[14px] text-[#039855] font-medium leading-[20px]">
+                  10 full-content results free per sub-query
                 </div>
               </td>
               <td className="py-4 px-6 text-right">
