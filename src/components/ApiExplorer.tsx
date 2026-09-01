@@ -467,20 +467,20 @@ function DeepResearchCard() {
         </div>
         <div className="border-t border-[#E7E7E3] pt-[14px] flex flex-col gap-[6px]">
           <div className="flex items-center justify-between gap-[8px] text-[13px] sm:text-[14px] min-w-0">
-            <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Lite</span>
-            <span className="text-[#57575E] text-[11px] sm:text-[12px] bg-[#F6F6F3] px-[6px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$0.20 / request</span>
+            <span className="font-['JetBrains_Mono',monospace] text-[#57575E] truncate min-w-0">Lite</span>
+            <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] text-[12px] sm:text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap tabular-nums">$0.20</span>
           </div>
           <div className="flex items-center justify-between gap-[8px] text-[13px] sm:text-[14px] min-w-0">
-            <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Standard</span>
-            <span className="text-[#57575E] text-[11px] sm:text-[12px] bg-[#F6F6F3] px-[6px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$1.00 / request</span>
+            <span className="font-['JetBrains_Mono',monospace] text-[#57575E] truncate min-w-0">Standard</span>
+            <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] text-[12px] sm:text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap tabular-nums">$1.00</span>
           </div>
           <div className="flex items-center justify-between gap-[8px] text-[13px] sm:text-[14px] min-w-0">
-            <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Pro</span>
-            <span className="text-[#57575E] text-[11px] sm:text-[12px] bg-[#F6F6F3] px-[6px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$2.50 / request</span>
+            <span className="font-['JetBrains_Mono',monospace] text-[#57575E] truncate min-w-0">Pro</span>
+            <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] text-[12px] sm:text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap tabular-nums">$2.50</span>
           </div>
           <div className="flex items-center justify-between gap-[8px] text-[13px] sm:text-[14px] min-w-0">
-            <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Pro-visual</span>
-            <span className="text-[#57575E] text-[11px] sm:text-[12px] bg-[#F6F6F3] px-[6px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$3.00 / request</span>
+            <span className="font-['JetBrains_Mono',monospace] text-[#57575E] truncate min-w-0">Pro-visual</span>
+            <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] text-[12px] sm:text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap tabular-nums">$3.00</span>
           </div>
         </div>
       </div>
@@ -521,12 +521,12 @@ function GroundedGenCard() {
         </div>
         <div className="border-t border-[#E7E7E3] pt-[14px] flex flex-col gap-[6px]">
           <div className="flex items-center justify-between gap-[8px] text-[13px] sm:text-[14px] min-w-0">
-            <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Image</span>
-            <span className="text-[#57575E] text-[11px] sm:text-[12px] bg-[#F6F6F3] px-[6px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$0.25 / output</span>
+            <span className="font-['JetBrains_Mono',monospace] text-[#57575E] truncate min-w-0">Image</span>
+            <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] text-[12px] sm:text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap tabular-nums">$0.25</span>
           </div>
           <div className="flex items-center justify-between gap-[8px] text-[13px] sm:text-[14px] min-w-0">
-            <span className="font-semibold text-[#0A0A0A] truncate min-w-0">Video</span>
-            <span className="text-[#57575E] text-[11px] sm:text-[12px] bg-[#F6F6F3] px-[6px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap">$1.00 / output</span>
+            <span className="font-['JetBrains_Mono',monospace] text-[#57575E] truncate min-w-0">Video</span>
+            <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] text-[12px] sm:text-[13px] bg-[#F6F6F3] px-[8px] py-[2px] rounded-[4px] border border-[#E7E7E3] shrink-0 whitespace-nowrap tabular-nums">$1.00</span>
           </div>
         </div>
       </div>
@@ -717,13 +717,20 @@ function PlanCTable() {
                   Get started
                 </a>
               </div>
-              <div className="flex items-baseline gap-[6px] flex-wrap bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
-                <span className="font-bold text-[18px] text-[#0A0A0A]">$1</span>
-                <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
-                <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
+              <div className="flex flex-col gap-1 bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
+                <div className="flex items-baseline gap-[6px] flex-wrap">
+                  <span className="font-bold text-[18px] text-[#0A0A0A]">$1</span>
+                  <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
+                  <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
+                </div>
+                <div className="flex items-center gap-1 text-[12px] text-[#57575E]">
+                  <span className="text-[#8B8B8B]">Full content:</span>
+                  <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09]">$0.5</span>
+                  <span className="text-[#8B8B8B]">/ 1k results</span>
+                </div>
               </div>
-              <div className="text-[14px] text-[#8B8B8B] leading-[20px]">
-                Full content: $0.5 / 1k results (<span className="text-[#039855] font-semibold">10 full-content results free per call</span>)
+              <div className="text-[13px] text-[#039855] font-medium leading-[20px]">
+                10 full-content results free per call
               </div>
             </div>
 
@@ -750,13 +757,20 @@ function PlanCTable() {
                   Get started
                 </a>
               </div>
-              <div className="flex items-baseline gap-[6px] flex-wrap bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
-                <span className="font-bold text-[18px] text-[#0A0A0A]">$1</span>
-                <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
-                <span className="text-[14px] text-[#8B8B8B]">/ 1k sub-queries</span>
+              <div className="flex flex-col gap-1 bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
+                <div className="flex items-baseline gap-[6px] flex-wrap">
+                  <span className="font-bold text-[18px] text-[#0A0A0A]">$1</span>
+                  <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
+                  <span className="text-[14px] text-[#8B8B8B]">/ 1k sub-queries</span>
+                </div>
+                <div className="flex items-center gap-1 text-[12px] text-[#57575E]">
+                  <span className="text-[#8B8B8B]">Full content:</span>
+                  <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09]">$0.5</span>
+                  <span className="text-[#8B8B8B]">/ 1k results</span>
+                </div>
               </div>
-              <div className="text-[14px] text-[#8B8B8B] leading-[20px]">
-                Full content: $0.5 / 1k results (<span className="text-[#039855] font-semibold">10 full-content results free per sub-query</span>)
+              <div className="text-[13px] text-[#039855] font-medium leading-[20px]">
+                10 full-content results free per sub-query
               </div>
             </div>
 
@@ -851,7 +865,7 @@ function PlanCTable() {
               <span className="font-bold text-[18px] text-[#0A0A0A]">$1</span>
               <span className="text-[14px] text-[#8B8B8B]">/ 1k URLs</span>
             </div>
-            <div className="text-[14px] text-[#039855] font-semibold leading-[20px]">
+            <div className="text-[13px] text-[#039855] font-medium leading-[20px]">
               Failed URLs are always free
             </div>
           </div>
@@ -895,10 +909,19 @@ function PlanCTable() {
                 <span className="font-bold text-[18px] text-[#0A0A0A]">$0.01 – $0.07</span>
                 <span className="text-[14px] text-[#8B8B8B]">/ 1M tokens</span>
               </div>
-              <div className="bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5] flex flex-col gap-[4px] text-[13px] font-['JetBrains_Mono',monospace]">
-                <div className="flex justify-between"><span>octen-embedding-0.6b</span><strong className="text-[#0A0A0A]">$0.01</strong></div>
-                <div className="flex justify-between"><span>octen-embedding-4b</span><strong className="text-[#0A0A0A]">$0.04</strong></div>
-                <div className="flex justify-between"><span>octen-embedding-8b</span><strong className="text-[#0A0A0A]">$0.07</strong></div>
+              <div className="bg-[#F8F8F5] p-[12px] rounded-[10px] border border-[#EAEAE5] flex flex-col gap-[8px] text-[13px]">
+                <div className="flex items-baseline justify-between w-full">
+                  <span className="font-['JetBrains_Mono',monospace] text-[#57575E]">octen-embedding-0.6b</span>
+                  <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums">$0.01</span>
+                </div>
+                <div className="flex items-baseline justify-between w-full">
+                  <span className="font-['JetBrains_Mono',monospace] text-[#57575E]">octen-embedding-4b</span>
+                  <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums">$0.04</span>
+                </div>
+                <div className="flex items-baseline justify-between w-full">
+                  <span className="font-['JetBrains_Mono',monospace] text-[#57575E]">octen-embedding-8b</span>
+                  <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums">$0.07</span>
+                </div>
               </div>
             </div>
 
@@ -925,14 +948,30 @@ function PlanCTable() {
                   Get started
                 </a>
               </div>
-              <div className="flex items-center gap-[12px] text-[14px] flex-wrap bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
-                <div>Text: <strong className="text-[#0A0A0A]">$0.05 – $0.10</strong> <span className="text-[#8B8B8B]">/ 1M</span></div>
-                <div>Visual: <strong className="text-[#0A0A0A]">$0.12 – $0.25</strong> <span className="text-[#8B8B8B]">/ 1M</span></div>
+              <div className="flex flex-col gap-1 bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5] text-[14px]">
+                <div className="flex items-baseline gap-1.5">
+                  <span className="text-[#8B8B8B] min-w-[44px]">Text:</span>
+                  <span className="font-bold text-[#0A0A0A] tabular-nums">$0.05 – $0.10</span>
+                  <span className="text-[#8B8B8B] text-[13px]">/ 1M tokens</span>
+                </div>
+                <div className="flex items-baseline gap-1.5">
+                  <span className="text-[#8B8B8B] min-w-[44px]">Visual:</span>
+                  <span className="font-bold text-[#0A0A0A] tabular-nums">$0.12 – $0.25</span>
+                  <span className="text-[#8B8B8B] text-[13px]">/ 1M tokens</span>
+                </div>
               </div>
-              <div className="bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5] flex flex-col gap-[4px] text-[13px] font-['JetBrains_Mono',monospace]">
-                <div className="flex justify-between"><span>octen-vl-embedding</span><strong className="text-[#0A0A0A]">$0.05 / $0.12</strong></div>
-                <div className="flex justify-between"><span>octen-vl-embedding-large</span><strong className="text-[#0A0A0A]">$0.10 / $0.25</strong></div>
-                <div className="text-[11px] text-[#9C9CA4] text-right font-sans">text / visual</div>
+              <div className="bg-[#F8F8F5] p-[12px] rounded-[10px] border border-[#EAEAE5] flex flex-col gap-[8px] text-[13px]">
+                <div className="flex items-baseline justify-between w-full">
+                  <span className="font-['JetBrains_Mono',monospace] text-[#57575E]">octen-vl-embedding</span>
+                  <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums">$0.05 / $0.12</span>
+                </div>
+                <div className="flex items-baseline justify-between w-full">
+                  <span className="font-['JetBrains_Mono',monospace] text-[#57575E]">octen-vl-embedding-large</span>
+                  <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums">$0.10 / $0.25</span>
+                </div>
+                <div className="flex justify-end w-full">
+                  <span className="text-[11px] text-[#9C9CA4] font-['DM_Sans',sans-serif] text-right">text / visual</span>
+                </div>
               </div>
             </div>
           </div>
@@ -1020,11 +1059,27 @@ function PlanCTable() {
                   Get started
                 </a>
               </div>
-              <div className="bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5] grid grid-cols-2 gap-[4px] text-[14px]">
-                <div>Lite: <strong className="text-[#0A0A0A]">$0.20</strong> <span className="text-[#8B8B8B]">/ request</span></div>
-                <div>Standard: <strong className="text-[#0A0A0A]">$1.00</strong> <span className="text-[#8B8B8B]">/ request</span></div>
-                <div>Pro: <strong className="text-[#0A0A0A]">$2.50</strong> <span className="text-[#8B8B8B]">/ request</span></div>
-                <div>Visual: <strong className="text-[#0A0A0A]">$3.00</strong> <span className="text-[#8B8B8B]">/ request</span></div>
+              <div className="flex items-baseline gap-[6px] bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
+                <span className="font-bold text-[18px] text-[#0A0A0A]">$0.20 – $3.00</span>
+                <span className="text-[14px] text-[#8B8B8B]">/ request</span>
+              </div>
+              <div className="bg-[#F8F8F5] p-[12px] rounded-[10px] border border-[#EAEAE5] flex flex-col gap-[8px] text-[13px]">
+                <div className="flex items-baseline justify-between w-full">
+                  <span className="font-['JetBrains_Mono',monospace] text-[#57575E]">Lite</span>
+                  <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums">$0.20</span>
+                </div>
+                <div className="flex items-baseline justify-between w-full">
+                  <span className="font-['JetBrains_Mono',monospace] text-[#57575E]">Standard</span>
+                  <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums">$1.00</span>
+                </div>
+                <div className="flex items-baseline justify-between w-full">
+                  <span className="font-['JetBrains_Mono',monospace] text-[#57575E]">Pro</span>
+                  <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums">$2.50</span>
+                </div>
+                <div className="flex items-baseline justify-between w-full">
+                  <span className="font-['JetBrains_Mono',monospace] text-[#57575E]">Pro-visual</span>
+                  <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums">$3.00</span>
+                </div>
               </div>
             </div>
 
@@ -1051,9 +1106,19 @@ function PlanCTable() {
                   Get started
                 </a>
               </div>
-              <div className="flex items-center gap-[12px] text-[14px] flex-wrap bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
-                <div>Image: <strong className="text-[#0A0A0A]">$0.25</strong> <span className="text-[#8B8B8B]">/ output</span></div>
-                <div>Video: <strong className="text-[#0A0A0A]">$1.00</strong> <span className="text-[#8B8B8B]">/ output</span></div>
+              <div className="flex items-baseline gap-[6px] bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5]">
+                <span className="font-bold text-[18px] text-[#0A0A0A]">$0.25 – $1.00</span>
+                <span className="text-[14px] text-[#8B8B8B]">/ output</span>
+              </div>
+              <div className="bg-[#F8F8F5] p-[12px] rounded-[10px] border border-[#EAEAE5] flex flex-col gap-[8px] text-[13px]">
+                <div className="flex items-baseline justify-between w-full">
+                  <span className="font-['JetBrains_Mono',monospace] text-[#57575E]">Image</span>
+                  <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums">$0.25</span>
+                </div>
+                <div className="flex items-baseline justify-between w-full">
+                  <span className="font-['JetBrains_Mono',monospace] text-[#57575E]">Video</span>
+                  <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums">$1.00</span>
+                </div>
               </div>
             </div>
           </div>
@@ -1071,25 +1136,28 @@ function PlanCTable() {
                 className={`sticky top-[58px] z-30 py-3.5 px-6 font-semibold bg-white border-b border-[#E2E2DE] ${
                   isHeaderSticky ? "rounded-tl-none" : "rounded-tl-[15px] sm:rounded-tl-[19px]"
                 }`}
+                style={{ width: "28%" }}
               >
                 Endpoint
               </th>
-              <th className="sticky top-[58px] z-30 py-3.5 px-6 font-semibold bg-white border-b border-[#E2E2DE]">
+              <th className="sticky top-[58px] z-30 py-3.5 px-6 font-semibold bg-white border-b border-[#E2E2DE]" style={{ width: "28%" }}>
                 Unit price (USD)
               </th>
-              <th className="sticky top-[58px] z-30 py-3.5 px-6 font-semibold bg-white border-b border-[#E2E2DE]">
+              <th className="sticky top-[58px] z-30 py-3.5 px-6 font-semibold bg-white border-b border-[#E2E2DE]" style={{ width: "32%" }}>
                 PRICING DETAILS
               </th>
               <th
                 className={`sticky top-[58px] z-30 py-3.5 px-6 font-semibold text-right bg-white border-b border-[#E2E2DE] ${
                   isHeaderSticky ? "rounded-tr-none" : "rounded-tr-[15px] sm:rounded-tr-[19px]"
                 }`}
+                style={{ width: "12%" }}
               >
                 <span className="sr-only">Action</span>
               </th>
             </tr>
           </thead>
           <tbody className="divide-y divide-[#EAEAE5] text-[#100F09] font-['DM_Sans',sans-serif] text-[14px]">
+            {/* --- Category: Search --- */}
             <tr className="bg-[#F8F8F5] select-none">
               <td colSpan={4} className="sticky top-[106px] z-20 py-3 px-6 bg-[#F8F8F5] border-b border-[#E2E2DE]">
                 <div className="flex items-center justify-between">
@@ -1101,6 +1169,8 @@ function PlanCTable() {
                 </div>
               </td>
             </tr>
+
+            {/* Web Search API */}
             <tr className="hover:bg-[#F8F8F5] transition-colors group/row">
               <td className="py-4 px-6">
                 <div className="flex flex-col gap-0.5">
@@ -1109,20 +1179,31 @@ function PlanCTable() {
                 </div>
               </td>
               <td className="py-4 px-6">
-                <div className="flex items-center gap-1.5 flex-nowrap whitespace-nowrap">
-                  <span className="font-bold text-[16px] text-[#0A0A0A]">$1</span>
-                  <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
-                  <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
-                  <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-bold text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#70FE7E] text-[#100F09] border border-[#70FE7E]">80% Off</span>
+                <div className="flex flex-col gap-1">
+                  <div className="flex items-center gap-1.5 flex-nowrap whitespace-nowrap">
+                    <span className="font-bold text-[16px] text-[#0A0A0A]">$1</span>
+                    <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
+                    <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
+                    <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-bold text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#70FE7E] text-[#100F09] border border-[#70FE7E]">80% Off</span>
+                  </div>
+                  <div className="flex items-center gap-1 text-[13px] text-[#57575E]">
+                    <span className="text-[#8B8B8B]">Full content:</span>
+                    <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09]">$0.5</span>
+                    <span className="text-[#8B8B8B]">/ 1k results</span>
+                  </div>
                 </div>
               </td>
-              <td className="py-4 px-6 text-[14px] text-[#8B8B8B]">
-                Full content: $0.5 / 1k results (<span className="text-[#039855] font-semibold">10 full-content results free per call</span>)
+              <td className="py-4 px-6">
+                <div className="text-[14px] text-[#039855] font-medium leading-[20px]">
+                  10 full-content results free per call
+                </div>
               </td>
               <td className="py-4 px-6 text-right">
                 <a href="https://octen.ai/platform/web-search" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-3.5 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[13px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]">Get started</a>
               </td>
             </tr>
+
+            {/* Broad Search API */}
             <tr className="hover:bg-[#F8F8F5] transition-colors group/row">
               <td className="py-4 px-6">
                 <div className="flex flex-col gap-0.5">
@@ -1131,20 +1212,31 @@ function PlanCTable() {
                 </div>
               </td>
               <td className="py-4 px-6">
-                <div className="flex items-center gap-1.5 flex-nowrap whitespace-nowrap">
-                  <span className="font-bold text-[16px] text-[#0A0A0A]">$1</span>
-                  <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
-                  <span className="text-[14px] text-[#8B8B8B]">/ 1k sub-queries</span>
-                  <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-bold text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#70FE7E] text-[#100F09] border border-[#70FE7E]">80% Off</span>
+                <div className="flex flex-col gap-1">
+                  <div className="flex items-center gap-1.5 flex-nowrap whitespace-nowrap">
+                    <span className="font-bold text-[16px] text-[#0A0A0A]">$1</span>
+                    <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
+                    <span className="text-[14px] text-[#8B8B8B]">/ 1k sub-queries</span>
+                    <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-bold text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#70FE7E] text-[#100F09] border border-[#70FE7E]">80% Off</span>
+                  </div>
+                  <div className="flex items-center gap-1 text-[13px] text-[#57575E]">
+                    <span className="text-[#8B8B8B]">Full content:</span>
+                    <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09]">$0.5</span>
+                    <span className="text-[#8B8B8B]">/ 1k results</span>
+                  </div>
                 </div>
               </td>
-              <td className="py-4 px-6 text-[14px] text-[#8B8B8B]">
-                Full content: $0.5 / 1k results (<span className="text-[#039855] font-semibold">10 full-content results free per sub-query</span>)
+              <td className="py-4 px-6">
+                <div className="text-[14px] text-[#039855] font-medium leading-[20px]">
+                  10 full-content results free per sub-query
+                </div>
               </td>
               <td className="py-4 px-6 text-right">
                 <a href="https://octen.ai/platform/broad-search" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-3.5 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[13px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]">Get started</a>
               </td>
             </tr>
+
+            {/* Image Search API */}
             <tr className="hover:bg-[#F8F8F5] transition-colors group/row">
               <td className="py-4 px-6">
                 <div className="flex flex-col gap-0.5">
@@ -1161,11 +1253,13 @@ function PlanCTable() {
                   <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
                 </div>
               </td>
-              <td className="py-4 px-6 text-[14px] text-[#8B8B8B]">-</td>
+              <td className="py-4 px-6 text-[14px] text-[#9C9CA4]">—</td>
               <td className="py-4 px-6 text-right">
                 <a href="https://octen.ai/platform/image-search" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-3.5 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[13px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]">Get started</a>
               </td>
             </tr>
+
+            {/* Video Search API */}
             <tr className="hover:bg-[#F8F8F5] transition-colors group/row">
               <td className="py-4 px-6">
                 <div className="flex flex-col gap-0.5">
@@ -1182,11 +1276,13 @@ function PlanCTable() {
                   <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
                 </div>
               </td>
-              <td className="py-4 px-6 text-[14px] text-[#8B8B8B]">-</td>
+              <td className="py-4 px-6 text-[14px] text-[#9C9CA4]">—</td>
               <td className="py-4 px-6 text-right">
                 <a href="https://octen.ai/platform/video-search" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-3.5 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[13px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]">Get started</a>
               </td>
             </tr>
+
+            {/* --- Category: Extract --- */}
             <tr className="bg-[#F8F8F5] select-none">
               <td colSpan={4} className="sticky top-[106px] z-20 py-3 px-6 bg-[#F8F8F5] border-y border-[#E2E2DE]">
                 <div className="flex items-center justify-between">
@@ -1198,6 +1294,8 @@ function PlanCTable() {
                 </div>
               </td>
             </tr>
+
+            {/* Extract API */}
             <tr className="hover:bg-[#F8F8F5] transition-colors group/row">
               <td className="py-4 px-6">
                 <div className="flex flex-col gap-0.5">
@@ -1211,11 +1309,15 @@ function PlanCTable() {
                   <span className="text-[14px] text-[#8B8B8B]">/ 1k URLs</span>
                 </div>
               </td>
-              <td className="py-4 px-6 text-[14px] text-[#039855] font-semibold">Failed URLs are always free</td>
+              <td className="py-4 px-6">
+                <div className="text-[14px] text-[#039855] font-medium leading-[20px]">Failed URLs are always free</div>
+              </td>
               <td className="py-4 px-6 text-right">
                 <a href="https://octen.ai/platform/extract" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-3.5 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[13px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]">Get started</a>
               </td>
             </tr>
+
+            {/* --- Category: Embedding --- */}
             <tr className="bg-[#F8F8F5] select-none">
               <td colSpan={4} className="sticky top-[106px] z-20 py-3 px-6 bg-[#F8F8F5] border-y border-[#E2E2DE]">
                 <div className="flex items-center justify-between">
@@ -1227,6 +1329,8 @@ function PlanCTable() {
                 </div>
               </td>
             </tr>
+
+            {/* Embedding API */}
             <tr className="hover:bg-[#F8F8F5] transition-colors group/row">
               <td className="py-4 px-6">
                 <div className="flex flex-col gap-0.5">
@@ -1244,16 +1348,27 @@ function PlanCTable() {
                 </div>
               </td>
               <td className="py-4 px-6">
-                <div className="grid grid-cols-[auto_auto] justify-start items-baseline gap-x-6 gap-y-1">
-                  <div className="contents"><span className="text-[14px] text-[#0A0A0A] whitespace-nowrap font-['JetBrains_Mono',monospace]">octen-embedding-0.6b</span><span className="font-['JetBrains_Mono',monospace] text-[14px] text-[#0A0A0A] tabular-nums whitespace-nowrap">$0.01</span></div>
-                  <div className="contents"><span className="text-[14px] text-[#0A0A0A] whitespace-nowrap font-['JetBrains_Mono',monospace]">octen-embedding-4b</span><span className="font-['JetBrains_Mono',monospace] text-[14px] text-[#0A0A0A] tabular-nums whitespace-nowrap">$0.04</span></div>
-                  <div className="contents"><span className="text-[14px] text-[#0A0A0A] whitespace-nowrap font-['JetBrains_Mono',monospace]">octen-embedding-8b</span><span className="font-['JetBrains_Mono',monospace] text-[14px] text-[#0A0A0A] tabular-nums whitespace-nowrap">$0.07</span></div>
+                <div className="w-full max-w-[280px] flex flex-col gap-1.5 text-[13px] sm:text-[14px]">
+                  <div className="flex items-baseline justify-between w-full">
+                    <span className="font-['JetBrains_Mono',monospace] text-[#57575E] whitespace-nowrap">octen-embedding-0.6b</span>
+                    <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums whitespace-nowrap">$0.01</span>
+                  </div>
+                  <div className="flex items-baseline justify-between w-full">
+                    <span className="font-['JetBrains_Mono',monospace] text-[#57575E] whitespace-nowrap">octen-embedding-4b</span>
+                    <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums whitespace-nowrap">$0.04</span>
+                  </div>
+                  <div className="flex items-baseline justify-between w-full">
+                    <span className="font-['JetBrains_Mono',monospace] text-[#57575E] whitespace-nowrap">octen-embedding-8b</span>
+                    <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums whitespace-nowrap">$0.07</span>
+                  </div>
                 </div>
               </td>
               <td className="py-4 px-6 text-right">
                 <a href="https://octen.ai/platform/embedding" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-3.5 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[13px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]">Get started</a>
               </td>
             </tr>
+
+            {/* VL Embedding API */}
             <tr className="hover:bg-[#F8F8F5] transition-colors group/row">
               <td className="py-4 px-6">
                 <div className="flex flex-col gap-0.5">
@@ -1265,22 +1380,40 @@ function PlanCTable() {
                 </div>
               </td>
               <td className="py-4 px-6">
-                <div className="grid grid-cols-[auto_auto_1fr] items-baseline gap-x-2 gap-y-0.5 text-[14px]">
-                  <span className="text-[#57575E]">Text</span><span className="font-semibold text-[#0A0A0A] tabular-nums whitespace-nowrap">$0.05 – $0.10</span><span className="text-[#57575E] whitespace-nowrap">/ 1M tokens</span>
-                  <span className="text-[#57575E]">Visual</span><span className="font-semibold text-[#0A0A0A] tabular-nums whitespace-nowrap">$0.12 – $0.25</span><span className="text-[#57575E] whitespace-nowrap">/ 1M tokens</span>
+                <div className="flex flex-col gap-1 text-[14px]">
+                  <div className="flex items-baseline gap-1.5 flex-nowrap whitespace-nowrap">
+                    <span className="text-[#8B8B8B] min-w-[44px]">Text:</span>
+                    <span className="font-bold text-[16px] text-[#0A0A0A] tabular-nums">$0.05 – $0.10</span>
+                    <span className="text-[#8B8B8B]">/ 1M tokens</span>
+                  </div>
+                  <div className="flex items-baseline gap-1.5 flex-nowrap whitespace-nowrap">
+                    <span className="text-[#8B8B8B] min-w-[44px]">Visual:</span>
+                    <span className="font-bold text-[16px] text-[#0A0A0A] tabular-nums">$0.12 – $0.25</span>
+                    <span className="text-[#8B8B8B]">/ 1M tokens</span>
+                  </div>
                 </div>
               </td>
               <td className="py-4 px-6">
-                <div className="grid grid-cols-[auto_auto] justify-start items-baseline gap-x-6 gap-y-1">
-                  <div className="contents"><span className="text-[14px] text-[#0A0A0A] whitespace-nowrap font-['JetBrains_Mono',monospace]">octen-vl-embedding</span><span className="font-['JetBrains_Mono',monospace] text-[14px] text-[#0A0A0A] tabular-nums whitespace-nowrap">$0.05 / $0.12</span></div>
-                  <div className="contents"><span className="text-[14px] text-[#0A0A0A] whitespace-nowrap font-['JetBrains_Mono',monospace]">octen-vl-embedding-large</span><span className="font-['JetBrains_Mono',monospace] text-[14px] text-[#0A0A0A] tabular-nums whitespace-nowrap">$0.10 / $0.25</span></div>
-                  <span aria-hidden="true"></span><span className="text-[12px] text-[#9C9CA4] text-right whitespace-nowrap">text / visual</span>
+                <div className="w-full max-w-[280px] flex flex-col gap-1.5 text-[13px] sm:text-[14px]">
+                  <div className="flex items-baseline justify-between w-full">
+                    <span className="font-['JetBrains_Mono',monospace] text-[#57575E] whitespace-nowrap">octen-vl-embedding</span>
+                    <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums whitespace-nowrap">$0.05 / $0.12</span>
+                  </div>
+                  <div className="flex items-baseline justify-between w-full">
+                    <span className="font-['JetBrains_Mono',monospace] text-[#57575E] whitespace-nowrap">octen-vl-embedding-large</span>
+                    <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums whitespace-nowrap">$0.10 / $0.25</span>
+                  </div>
+                  <div className="flex justify-end w-full">
+                    <span className="text-[11px] text-[#9C9CA4] font-['DM_Sans',sans-serif] text-right whitespace-nowrap">text / visual</span>
+                  </div>
                 </div>
               </td>
               <td className="py-4 px-6 text-right">
                 <a href="https://octen.ai/platform/embedding" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-3.5 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[13px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]">Get started</a>
               </td>
             </tr>
+
+            {/* --- Category: Application --- */}
             <tr className="bg-[#F8F8F5] select-none">
               <td colSpan={4} className="sticky top-[106px] z-20 py-3 px-6 bg-[#F8F8F5] border-y border-[#E2E2DE]">
                 <div className="flex items-center justify-between">
@@ -1295,6 +1428,8 @@ function PlanCTable() {
                 </div>
               </td>
             </tr>
+
+            {/* Answer */}
             <tr className="hover:bg-[#F8F8F5] transition-colors group/row">
               <td className="py-4 px-6">
                 <div className="flex flex-col gap-0.5">
@@ -1303,11 +1438,13 @@ function PlanCTable() {
                 </div>
               </td>
               <td className="py-4 px-6"><div className="text-[14px] text-[#0A0A0A] font-medium whitespace-nowrap">Search fees + Model rates</div></td>
-              <td className="py-4 px-6 text-[14px] text-[#8B8B8B]">-</td>
+              <td className="py-4 px-6 text-[14px] text-[#9C9CA4]">—</td>
               <td className="py-4 px-6 text-right">
                 <a href="https://octen.ai/platform/answer" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-3.5 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[13px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]">Get started</a>
               </td>
             </tr>
+
+            {/* Multimodal Chat */}
             <tr className="hover:bg-[#F8F8F5] transition-colors group/row">
               <td className="py-4 px-6">
                 <div className="flex flex-col gap-0.5">
@@ -1319,11 +1456,13 @@ function PlanCTable() {
                 </div>
               </td>
               <td className="py-4 px-6"><div className="text-[14px] text-[#0A0A0A] font-medium whitespace-nowrap">Search fees + Model rates</div></td>
-              <td className="py-4 px-6 text-[14px] text-[#8B8B8B]">-</td>
+              <td className="py-4 px-6 text-[14px] text-[#9C9CA4]">—</td>
               <td className="py-4 px-6 text-right">
                 <a href="https://octen.ai/platform/multimodal-chat" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-3.5 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[13px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]">Get started</a>
               </td>
             </tr>
+
+            {/* Deep Research */}
             <tr className="hover:bg-[#F8F8F5] transition-colors group/row">
               <td className="py-4 px-6">
                 <div className="flex flex-col gap-0.5">
@@ -1331,19 +1470,38 @@ function PlanCTable() {
                   <span className="text-[12px] text-[#8B8B8B] leading-[18px]">Source-backed research across thousands of pages and documents</span>
                 </div>
               </td>
-              <td className="py-4 px-6"><div className="flex items-center gap-1 flex-nowrap whitespace-nowrap"><span className="font-bold text-[16px] text-[#0A0A0A]">$0.20 – $3.00</span><span className="text-[14px] text-[#8B8B8B]">/ request</span></div></td>
               <td className="py-4 px-6">
-                <div className="grid grid-cols-[auto_auto] justify-start items-baseline gap-x-6 gap-y-1">
-                  <div className="contents"><span className="text-[14px] text-[#0A0A0A] whitespace-nowrap min-w-[70px]">Lite</span><span className="font-['JetBrains_Mono',monospace] text-[14px] text-[#0A0A0A] tabular-nums whitespace-nowrap">$0.20</span></div>
-                  <div className="contents"><span className="text-[14px] text-[#0A0A0A] whitespace-nowrap min-w-[70px]">Standard</span><span className="font-['JetBrains_Mono',monospace] text-[14px] text-[#0A0A0A] tabular-nums whitespace-nowrap">$1.00</span></div>
-                  <div className="contents"><span className="text-[14px] text-[#0A0A0A] whitespace-nowrap min-w-[70px]">Pro</span><span className="font-['JetBrains_Mono',monospace] text-[14px] text-[#0A0A0A] tabular-nums whitespace-nowrap">$2.50</span></div>
-                  <div className="contents"><span className="text-[14px] text-[#0A0A0A] whitespace-nowrap min-w-[70px]">Pro-visual</span><span className="font-['JetBrains_Mono',monospace] text-[14px] text-[#0A0A0A] tabular-nums whitespace-nowrap">$3.00</span></div>
+                <div className="flex items-center gap-1 flex-nowrap whitespace-nowrap">
+                  <span className="font-bold text-[16px] text-[#0A0A0A]">$0.20 – $3.00</span>
+                  <span className="text-[14px] text-[#8B8B8B]">/ request</span>
+                </div>
+              </td>
+              <td className="py-4 px-6">
+                <div className="w-full max-w-[280px] flex flex-col gap-1.5 text-[13px] sm:text-[14px]">
+                  <div className="flex items-baseline justify-between w-full">
+                    <span className="font-['JetBrains_Mono',monospace] text-[#57575E] whitespace-nowrap">Lite</span>
+                    <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums whitespace-nowrap">$0.20</span>
+                  </div>
+                  <div className="flex items-baseline justify-between w-full">
+                    <span className="font-['JetBrains_Mono',monospace] text-[#57575E] whitespace-nowrap">Standard</span>
+                    <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums whitespace-nowrap">$1.00</span>
+                  </div>
+                  <div className="flex items-baseline justify-between w-full">
+                    <span className="font-['JetBrains_Mono',monospace] text-[#57575E] whitespace-nowrap">Pro</span>
+                    <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums whitespace-nowrap">$2.50</span>
+                  </div>
+                  <div className="flex items-baseline justify-between w-full">
+                    <span className="font-['JetBrains_Mono',monospace] text-[#57575E] whitespace-nowrap">Pro-visual</span>
+                    <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums whitespace-nowrap">$3.00</span>
+                  </div>
                 </div>
               </td>
               <td className="py-4 px-6 text-right">
                 <a href="https://octen.ai/platform/deep-research" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-3.5 py-1.5 bg-[#100F09] hover:bg-[#2A2A28] active:scale-95 text-white text-[13px] font-medium rounded-full transition-all whitespace-nowrap shadow-xs font-['DM_Sans',sans-serif]">Get started</a>
               </td>
             </tr>
+
+            {/* Grounded Generation */}
             <tr className="hover:bg-[#F8F8F5] transition-colors group/row">
               <td className="py-4 px-6 rounded-bl-[15px] sm:rounded-bl-[19px]">
                 <div className="flex flex-col gap-0.5">
@@ -1354,11 +1512,22 @@ function PlanCTable() {
                   <span className="text-[12px] text-[#8B8B8B] leading-[18px]">Images and videos grounded in real-world references from live search</span>
                 </div>
               </td>
-              <td className="py-4 px-6"><div className="flex items-center gap-1 flex-nowrap whitespace-nowrap"><span className="font-bold text-[16px] text-[#0A0A0A]">$0.25 – $1.00</span><span className="text-[14px] text-[#8B8B8B]">/ output</span></div></td>
               <td className="py-4 px-6">
-                <div className="grid grid-cols-[auto_auto] justify-start items-baseline gap-x-6 gap-y-1">
-                  <div className="contents"><span className="text-[14px] text-[#0A0A0A] whitespace-nowrap min-w-[70px]">Image</span><span className="font-['JetBrains_Mono',monospace] text-[14px] text-[#0A0A0A] tabular-nums whitespace-nowrap">$0.25</span></div>
-                  <div className="contents"><span className="text-[14px] text-[#0A0A0A] whitespace-nowrap min-w-[70px]">Video</span><span className="font-['JetBrains_Mono',monospace] text-[14px] text-[#0A0A0A] tabular-nums whitespace-nowrap">$1.00</span></div>
+                <div className="flex items-center gap-1 flex-nowrap whitespace-nowrap">
+                  <span className="font-bold text-[16px] text-[#0A0A0A]">$0.25 – $1.00</span>
+                  <span className="text-[14px] text-[#8B8B8B]">/ output</span>
+                </div>
+              </td>
+              <td className="py-4 px-6">
+                <div className="w-full max-w-[280px] flex flex-col gap-1.5 text-[13px] sm:text-[14px]">
+                  <div className="flex items-baseline justify-between w-full">
+                    <span className="font-['JetBrains_Mono',monospace] text-[#57575E] whitespace-nowrap">Image</span>
+                    <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums whitespace-nowrap">$0.25</span>
+                  </div>
+                  <div className="flex items-baseline justify-between w-full">
+                    <span className="font-['JetBrains_Mono',monospace] text-[#57575E] whitespace-nowrap">Video</span>
+                    <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums whitespace-nowrap">$1.00</span>
+                  </div>
                 </div>
               </td>
               <td className="py-4 px-6 text-right rounded-br-[15px] sm:rounded-br-[19px]">

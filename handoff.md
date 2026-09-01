@@ -197,6 +197,15 @@ pnpm build
        - 说明文案 2：`Get 15% of your Model Gateway spend back, credited automatically to your balance each month across all models.`
      - **FAQ 问答内容更新**：
        - 对齐官方 6 个核心问答（计费模式、5美元赠金、Model Gateway Prompt Cache 优惠、QPS 升级/降级、403 欠费处理与最低充值 $5、支持的支付方式）。
+   - **PRICING DETAILS 列格式统一与两端对齐 (Pricing Details Column Normalization & Space-Between Alignment)**：
+     - **两端对齐 (Space-Between Alignment)**：多规格/多模型行（Embedding、VL Embedding、Deep Research、Grounded Generation）统一采用 `w-full max-w-[280px]` 容器及 `justify-between` 两端对齐，左侧名称左对齐，右侧金额右对齐。
+     - **字体与颜色标准化**：
+       - 名称标签：统一采用等宽字体 `font-['JetBrains_Mono',monospace]` 与二级暗色 `text-[#57575E]`；
+       - 金额数值：统一采用等宽数字 `font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums`；
+       - 免费额度/特权（Search & Extract）：统一采用 `text-[#039855] font-medium`；
+       - 附加说明（`text / visual`）：统一为 `text-[11px] text-[#9C9CA4]` 右对齐；
+       - 无详情占位符：统一使用标准破折号 `—`（`text-[#9C9CA4]`）。
+     - **单元格与移动端卡片完全拉齐**：移动端自适应卡片与桌面端表格均遵循同一设计系统规范。
 
 ---
 
