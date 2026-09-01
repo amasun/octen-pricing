@@ -65,7 +65,7 @@ pnpm build
      - 移除了主标题下方的冗余文案 Usage-based pricing for the search infrastructure behind your agents.；
    - **三张入口卡片统一 Octen Hub 规范与 Card 3 动态细节 (3 Cards Unified Hub & Card 3 Motion)**：
      - **全卡片统一 Octen Engine Hub**：三张卡片全面统一采用共享的 `<OctenCenterHub />` 组件，尺寸严格统一为 `size-[60px]`（`rounded-[14px]`），内置高质感 Octen 芯片矢量路径（`#70FE7E`, 32x26px）；
-     - **全卡片统一背景中心聚光灯与 20px 网格纹理 (Unified Spotlight & 20px Grid)**：以卡片 3 为视觉基准，三张卡片黑色视口区域均统一垫入中心绿色径向光斑（`radial-gradient(circle at 50% 50%, rgba(112, 254, 126, 0.22) 0%, rgba(3, 152, 85, 0.08) 45%, transparent 75%)`）以及 **20px 大小、1px 描边、0.1 色彩通透度的精致暗色科技网格纹理**（`linear-gradient to right/bottom, rgba(255,255,255,0.1) 1px, transparent 1px`，`backgroundSize: 20px 20px`）；
+     - **全卡片统一背景中心聚光灯与 20px 网格纹理 (Unified Spotlight & 20px Grid)**：以卡片 3 为视觉基准，三张卡片黑色视口区域均统一垫入中心绿色径向光斑（`radial-gradient(circle at 50% 50%, rgba(112, 254, 126, 0.22) 0%, rgba(3, 152, 85, 0.08) 45%, transparent 75%)`）以及 **20px 大小、1px 描边、0.07 色彩通透度的精致暗色科技网格纹理**（`linear-gradient to right/bottom, rgba(255,255,255,0.07) 1px, transparent 1px`，`backgroundSize: 20px 20px`）；
      - **中心 Logo 光晕按需激活机制**：默认常态下光晕完全隐藏（`opacity: 0` / `shadow-none`）；当卡片被 Hover 悬浮时，中心 Logo 平滑放大至 `1.06x`，并渐显淡雅精致的翡翠绿高光微晕（`bg-[#70FE7E]/25 blur-[10px]` + `shadow-[0px_0px_18px_rgba(112,254,126,0.25)]`）；
      - **严格像素级对齐 Figma (node 13519:907)**：
        - **左侧 Data 盒子**：`left: 36.58px`（`top: 71px`，`size: 40px`，`rounded-[8px]`，`border-2 border-[rgba(112,254,126,0.5)]`），内嵌 Figma 官方 24x24 渐变圆柱 Data 图标；
