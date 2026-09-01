@@ -48,7 +48,7 @@ pnpm build
    - **Enterprise Custom 卡片特性条目扩充为 6 条（3×2 栅格排列） (Enterprise Features 6 Items 3x2 Grid)**：
      - Enterprise 卡片中间特性条目扩展为 6 项：
         1. `1M+ QPS`（分支架构图标）
-        2. `Custom data`（专属数据定制）
+        2. `Custom data`（数据库立体圆柱图标 `DataIcon`）
         3. `Zero Data Retention (ZDR)`（斜杠护盾/不留存眼睛图标 `ZdrIcon`）
         4. `Custom SLA`（闪电护盾 SLA 保障图标 `FlashIcon`）
         5. `Dedicated Slack channel support`（Slack 专属渠道图标）
