@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 
 // --- 4 Major Category Icons from Figma Node 13418:141867 ---
 // 1. Search (tabler:world-search)
-function SearchCategoryIcon({ className = "w-[18px] h-[18px]" }: { className?: string }) {
+function SearchCategoryIcon({ className = "w-[20px] h-[20px]" }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -24,7 +24,7 @@ function SearchCategoryIcon({ className = "w-[18px] h-[18px]" }: { className?: s
 }
 
 // 2. Extract (tabler:grid-dots network extraction)
-function ExtractCategoryIcon({ className = "w-[18px] h-[18px]" }: { className?: string }) {
+function ExtractCategoryIcon({ className = "w-[20px] h-[20px]" }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 28 28" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
       <path d="M13.9996 19.484C14.7114 19.484 15.3949 19.767 15.898 20.2701C16.4006 20.7731 16.6841 21.4554 16.6842 22.1666C16.6841 22.8781 16.4009 23.561 15.898 24.0641C15.3949 24.5672 14.7114 24.8502 13.9996 24.8502C13.288 24.8501 12.6052 24.5671 12.1021 24.0641C11.9021 23.864 11.7384 23.6347 11.6119 23.3873H8.22031C8.09382 23.6346 7.93011 23.864 7.73008 24.0641C7.22706 24.5669 6.54503 24.8501 5.83359 24.8502C5.12195 24.8501 4.43923 24.5671 3.93613 24.0641C3.43307 23.561 3.1501 22.8782 3.15 22.1666C3.15012 21.4552 3.43329 20.7731 3.93613 20.2701C4.43924 19.767 5.12191 19.484 5.83359 19.484C6.54519 19.4841 7.22703 19.7671 7.73008 20.2701C8.0447 20.5848 8.27293 20.9693 8.4 21.3873H11.4322C11.5593 20.9693 11.7878 20.5847 12.1021 20.2701C12.6052 19.7671 13.288 19.4841 13.9996 19.484ZM22.1666 11.316C22.8781 11.3161 23.561 11.5992 24.0641 12.1021C24.5671 12.6052 24.8501 13.288 24.8502 13.9996C24.8502 14.7114 24.5672 15.3949 24.0641 15.898C23.8375 16.1246 23.5724 16.3026 23.2867 16.4342V19.732C23.5727 19.8636 23.8373 20.0433 24.0641 20.2701C24.5668 20.7731 24.8501 21.4552 24.8502 22.1666C24.8501 22.8782 24.5671 23.561 24.0641 24.0641C23.561 24.5671 22.8782 24.8501 22.1666 24.8502C21.4552 24.8501 20.7731 24.5668 20.2701 24.0641C19.7671 23.561 19.4841 22.8782 19.484 22.1666C19.4841 21.455 19.7671 20.7732 20.2701 20.2701C20.5592 19.9811 20.9079 19.7672 21.2867 19.6354V16.5318C20.9081 16.4 20.559 16.1867 20.2701 15.898C19.767 15.3949 19.484 14.7114 19.484 13.9996C19.4841 13.288 19.7671 12.6052 20.2701 12.1021C20.7731 11.5995 21.4553 11.3161 22.1666 11.316ZM5.83359 11.316C6.54493 11.3161 7.22708 11.5994 7.73008 12.1021C8.23314 12.6052 8.51611 13.288 8.51621 13.9996C8.51621 14.7114 8.23323 15.3949 7.73008 15.898C7.22709 16.4007 6.54488 16.6841 5.83359 16.6842C5.1221 16.6841 4.4392 16.4009 3.93613 15.898C3.43298 15.3949 3.15 14.7114 3.15 13.9996C3.1501 13.288 3.43307 12.6052 3.93613 12.1021C4.43921 11.5992 5.12206 11.3161 5.83359 11.316ZM13.9996 3.15C14.7114 3.15 15.3949 3.43298 15.898 3.93613C16.4009 4.4392 16.6841 5.1221 16.6842 5.83359C16.6841 6.54488 16.4007 7.22709 15.898 7.73008C15.6395 7.98867 15.3326 8.18812 14.9996 8.32187V11.5104C15.3327 11.6441 15.6394 11.8435 15.898 12.1021C16.401 12.6052 16.6841 13.288 16.6842 13.9996C16.6842 14.7114 16.4012 15.3949 15.898 15.898C15.3949 16.4012 14.7114 16.6842 13.9996 16.6842C13.288 16.6841 12.6052 16.401 12.1021 15.898C11.599 15.3949 11.316 14.7114 11.316 13.9996C11.3161 13.288 11.5991 12.6052 12.1021 12.1021C12.3606 11.8437 12.6668 11.6441 12.9996 11.5104V8.3209C12.667 8.18715 12.3605 7.98841 12.1021 7.73008C11.8136 7.44139 11.6003 7.09273 11.4684 6.71445H8.36387C8.23201 7.09274 8.0188 7.44135 7.73008 7.73008C7.22703 8.23312 6.54519 8.51609 5.83359 8.51621C5.1219 8.51616 4.43924 8.23319 3.93613 7.73008C3.43323 7.22705 3.15012 6.54508 3.15 5.83359C3.15005 5.1219 3.43302 4.43924 3.93613 3.93613C4.43924 3.43302 5.1219 3.15005 5.83359 3.15C6.54508 3.15012 7.22705 3.43323 7.73008 3.93613C7.95713 4.16319 8.13655 4.42809 8.26816 4.71445H11.565C11.6966 4.42823 11.8753 4.16308 12.1021 3.93613C12.6052 3.43307 13.288 3.1501 13.9996 3.15ZM22.1666 3.15C22.8782 3.1501 23.561 3.43307 24.0641 3.93613C24.5671 4.43923 24.8501 5.12195 24.8502 5.83359C24.8501 6.54503 24.5669 7.22706 24.0641 7.73008C23.561 8.23314 22.8782 8.51611 22.1666 8.51621C21.4551 8.51609 20.7732 8.23306 20.2701 7.73008C19.7671 7.22703 19.4841 6.54519 19.484 5.83359C19.484 5.12191 19.767 4.43924 20.2701 3.93613C20.7731 3.43329 21.4552 3.15012 22.1666 3.15Z" />
@@ -33,7 +33,7 @@ function ExtractCategoryIcon({ className = "w-[18px] h-[18px]" }: { className?: 
 }
 
 // 3. Embedding (Dimensional 6-node constellation from Figma)
-function EmbeddingCategoryIcon({ className = "w-[18px] h-[18px]" }: { className?: string }) {
+function EmbeddingCategoryIcon({ className = "w-[20px] h-[20px]" }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g transform="translate(4.4, 3.1)">
@@ -52,7 +52,7 @@ function EmbeddingCategoryIcon({ className = "w-[18px] h-[18px]" }: { className?
 }
 
 // 3.5 VL Embedding (Multimodal cross-modal embedding from Figma)
-function VlEmbeddingCategoryIcon({ className = "w-[18px] h-[18px]" }: { className?: string }) {
+function VlEmbeddingCategoryIcon({ className = "w-[20px] h-[20px]" }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -112,7 +112,7 @@ function VisualTokenIcon({ className = "w-[11px] h-[11px] inline-block shrink-0"
 }
 
 // 4. Applications (Composite geometric workflow from Figma)
-function ApplicationsCategoryIcon({ className = "w-[18px] h-[18px]" }: { className?: string }) {
+function ApplicationsCategoryIcon({ className = "w-[20px] h-[20px]" }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 28 28" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
       <g transform="translate(2.5, 2.3)">
@@ -722,7 +722,7 @@ function PlanCTable() {
         <div className="bg-white rounded-[16px] border border-[#E2E2DE] overflow-hidden shadow-xs">
           <div className="bg-[#F8F8F5] px-[16px] py-[12px] border-b border-[#E2E2DE] flex items-center justify-between">
             <div className="flex items-center gap-[8px]">
-              <SearchCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
+              <SearchCategoryIcon className="w-[20px] h-[20px] text-[#100F09]" />
               <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] text-[#100F09]">Search</span>
             </div>
             <span className="text-[14px] text-[#8B8B8B]">Real-time live web</span>
@@ -873,7 +873,7 @@ function PlanCTable() {
         <div className="bg-white rounded-[16px] border border-[#E2E2DE] overflow-hidden shadow-xs">
           <div className="bg-[#F8F8F5] px-[16px] py-[12px] border-b border-[#E2E2DE] flex items-center justify-between">
             <div className="flex items-center gap-[8px]">
-              <ExtractCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
+              <ExtractCategoryIcon className="w-[20px] h-[20px] text-[#100F09]" />
               <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] text-[#100F09]">Extract</span>
             </div>
             <span className="text-[14px] text-[#8B8B8B]">Clean structured URL content</span>
@@ -910,7 +910,7 @@ function PlanCTable() {
         <div className="bg-white rounded-[16px] border border-[#E2E2DE] overflow-hidden shadow-xs">
           <div className="bg-[#F8F8F5] px-[16px] py-[12px] border-b border-[#E2E2DE] flex items-center justify-between">
             <div className="flex items-center gap-[8px]">
-              <EmbeddingCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
+              <EmbeddingCategoryIcon className="w-[20px] h-[20px] text-[#100F09]" />
               <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] text-[#100F09]">Embedding</span>
             </div>
             <span className="text-[14px] text-[#8B8B8B]">Text &amp; multimodal</span>
@@ -1031,7 +1031,7 @@ function PlanCTable() {
         <div className="bg-white rounded-[16px] border border-[#E2E2DE] overflow-hidden shadow-xs">
           <div className="bg-[#F8F8F5] px-[16px] py-[12px] border-b border-[#E2E2DE] flex items-center justify-between gap-2">
             <div className="flex items-center gap-[8px]">
-              <ApplicationsCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
+              <ApplicationsCategoryIcon className="w-[20px] h-[20px] text-[#100F09]" />
               <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] text-[#100F09]">Application</span>
             </div>
             <span className="inline-flex items-center px-[6px] py-[1px] rounded bg-white/50 text-[#100F09] font-medium border border-[#DCDCD6] text-[11px] font-['JetBrains_Mono',monospace]">
@@ -1212,7 +1212,7 @@ function PlanCTable() {
               <td colSpan={4} className="sticky top-[106px] z-20 py-3 px-6 bg-[#F8F8F5] border-b border-[#E2E2DE]">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
-                    <SearchCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
+                    <SearchCategoryIcon className="w-[20px] h-[20px] text-[#100F09]" />
                     <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] text-[#100F09] tracking-tight">Search</span>
                   </div>
                   <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#8B8B8B] hidden sm:inline">Real-time retrieval from live web</span>
@@ -1337,7 +1337,7 @@ function PlanCTable() {
               <td colSpan={4} className="sticky top-[106px] z-20 py-3 px-6 bg-[#F8F8F5] border-y border-[#E2E2DE]">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
-                    <ExtractCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
+                    <ExtractCategoryIcon className="w-[20px] h-[20px] text-[#100F09]" />
                     <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] text-[#100F09] tracking-tight">Extract</span>
                   </div>
                   <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#8B8B8B] hidden sm:inline">Clean structured content from any URL</span>
@@ -1372,7 +1372,7 @@ function PlanCTable() {
               <td colSpan={4} className="sticky top-[106px] z-20 py-3 px-6 bg-[#F8F8F5] border-y border-[#E2E2DE]">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
-                    <EmbeddingCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
+                    <EmbeddingCategoryIcon className="w-[20px] h-[20px] text-[#100F09]" />
                     <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] text-[#100F09] tracking-tight">Embedding</span>
                   </div>
                   <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#8B8B8B] hidden sm:inline">Top-ranked embedding models for text and multimodal retrieval</span>
@@ -1483,7 +1483,7 @@ function PlanCTable() {
               <td colSpan={4} className="sticky top-[106px] z-20 py-3 px-6 bg-[#F8F8F5] border-y border-[#E2E2DE]">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
-                    <ApplicationsCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
+                    <ApplicationsCategoryIcon className="w-[20px] h-[20px] text-[#100F09]" />
                     <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] text-[#100F09] tracking-tight">Application</span>
                   </div>
                   <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#8B8B8B] hidden sm:inline-flex items-center gap-[4px]">
@@ -1858,7 +1858,7 @@ export default function ApiExplorer() {
             {/* Shell Header */}
             <div className="relative z-10 w-full px-[16px] py-[10px] flex items-center justify-between gap-4 select-none">
               <div className="flex items-center gap-[8px]">
-                <SearchCategoryIcon className="w-[18px] h-[18px] text-[#100F09]" />
+                <SearchCategoryIcon className="w-[20px] h-[20px] text-[#100F09]" />
                 <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[28px] tracking-[-0.5px] text-[#100F09]">
                   Search
                 </span>
@@ -1886,7 +1886,7 @@ export default function ApiExplorer() {
             {/* Shell Header */}
             <div className="relative z-10 w-full px-[16px] py-[10px] flex items-center justify-between gap-4 select-none">
               <div className="flex items-center gap-[8px]">
-                <ExtractCategoryIcon className="w-[18px] h-[18px] text-[#100F09]" />
+                <ExtractCategoryIcon className="w-[20px] h-[20px] text-[#100F09]" />
                 <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[28px] tracking-[-0.5px] text-[#100F09]">
                   Extract
                 </span>
@@ -1913,7 +1913,7 @@ export default function ApiExplorer() {
             {/* Shell Header */}
             <div className="relative z-10 w-full px-[16px] py-[10px] flex items-center justify-between gap-4 select-none">
               <div className="flex items-center gap-[8px]">
-                <EmbeddingCategoryIcon className="w-[18px] h-[18px] text-[#100F09]" />
+                <EmbeddingCategoryIcon className="w-[20px] h-[20px] text-[#100F09]" />
                 <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[28px] tracking-[-0.5px] text-[#100F09]">
                   Embedding
                 </span>
@@ -1941,7 +1941,7 @@ export default function ApiExplorer() {
             {/* Shell Header */}
             <div className="relative z-10 w-full px-[16px] py-[10px] flex items-center justify-between gap-4 select-none">
               <div className="flex items-center gap-[8px]">
-                <ApplicationsCategoryIcon className="w-[18px] h-[18px] text-[#100F09]" />
+                <ApplicationsCategoryIcon className="w-[20px] h-[20px] text-[#100F09]" />
                 <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[28px] tracking-[-0.5px] text-[#100F09]">
                   Applications
                 </span>
