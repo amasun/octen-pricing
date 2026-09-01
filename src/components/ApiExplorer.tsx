@@ -723,7 +723,7 @@ function PlanCTable() {
           <div className="bg-[#F8F8F5] px-[16px] py-[12px] border-b border-[#E2E2DE] flex items-center justify-between">
             <div className="flex items-center gap-[8px]">
               <SearchCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
-              <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] text-[#100F09]">Search</span>
+              <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] text-[#100F09]">Search</span>
             </div>
             <span className="text-[14px] text-[#8B8B8B]">Real-time live web</span>
           </div>
@@ -874,7 +874,7 @@ function PlanCTable() {
           <div className="bg-[#F8F8F5] px-[16px] py-[12px] border-b border-[#E2E2DE] flex items-center justify-between">
             <div className="flex items-center gap-[8px]">
               <ExtractCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
-              <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] text-[#100F09]">Extract</span>
+              <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] text-[#100F09]">Extract</span>
             </div>
             <span className="text-[14px] text-[#8B8B8B]">Clean structured URL content</span>
           </div>
@@ -911,7 +911,7 @@ function PlanCTable() {
           <div className="bg-[#F8F8F5] px-[16px] py-[12px] border-b border-[#E2E2DE] flex items-center justify-between">
             <div className="flex items-center gap-[8px]">
               <EmbeddingCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
-              <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] text-[#100F09]">Embedding</span>
+              <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] text-[#100F09]">Embedding</span>
             </div>
             <span className="text-[14px] text-[#8B8B8B]">Text &amp; multimodal</span>
           </div>
@@ -1032,7 +1032,7 @@ function PlanCTable() {
           <div className="bg-[#F8F8F5] px-[16px] py-[12px] border-b border-[#E2E2DE] flex items-center justify-between gap-2">
             <div className="flex items-center gap-[8px]">
               <ApplicationsCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
-              <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] text-[#100F09]">Application</span>
+              <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] text-[#100F09]">Application</span>
             </div>
             <span className="inline-flex items-center px-[6px] py-[1px] rounded bg-white/50 text-[#100F09] font-medium border border-[#DCDCD6] text-[11px] font-['JetBrains_Mono',monospace]">
               Search API + Model Gateway
@@ -1213,7 +1213,7 @@ function PlanCTable() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
                     <SearchCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
-                    <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] text-[#100F09] tracking-tight">Search</span>
+                    <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] text-[#100F09] tracking-tight">Search</span>
                   </div>
                   <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#8B8B8B] hidden sm:inline">Real-time retrieval from live web</span>
                 </div>
@@ -1338,7 +1338,7 @@ function PlanCTable() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
                     <ExtractCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
-                    <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] text-[#100F09] tracking-tight">Extract</span>
+                    <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] text-[#100F09] tracking-tight">Extract</span>
                   </div>
                   <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#8B8B8B] hidden sm:inline">Clean structured content from any URL</span>
                 </div>
@@ -1373,7 +1373,7 @@ function PlanCTable() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
                     <EmbeddingCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
-                    <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] text-[#100F09] tracking-tight">Embedding</span>
+                    <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] text-[#100F09] tracking-tight">Embedding</span>
                   </div>
                   <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#8B8B8B] hidden sm:inline">Top-ranked embedding models for text and multimodal retrieval</span>
                 </div>
@@ -1484,7 +1484,7 @@ function PlanCTable() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2.5">
                     <ApplicationsCategoryIcon className="w-[16px] h-[16px] text-[#100F09]" />
-                    <span className="font-['DM_Sans',sans-serif] font-bold text-[16px] text-[#100F09] tracking-tight">Application</span>
+                    <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] text-[#100F09] tracking-tight">Application</span>
                   </div>
                   <span className="font-['DM_Sans',sans-serif] text-[14px] text-[#8B8B8B] hidden sm:inline-flex items-center gap-[4px]">
                     <span>Complete workflows built on the APIs above. Billed per outcome via</span>
@@ -1859,7 +1859,7 @@ export default function ApiExplorer() {
             <div className="relative z-10 w-full px-[16px] py-[10px] flex items-center justify-between gap-4 select-none">
               <div className="flex items-center gap-[8px]">
                 <SearchCategoryIcon className="w-[18px] h-[18px] text-[#100F09]" />
-                <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] leading-[30px] tracking-[-0.5px] text-[#100F09]">
+                <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[28px] tracking-[-0.5px] text-[#100F09]">
                   Search
                 </span>
               </div>
@@ -1887,7 +1887,7 @@ export default function ApiExplorer() {
             <div className="relative z-10 w-full px-[16px] py-[10px] flex items-center justify-between gap-4 select-none">
               <div className="flex items-center gap-[8px]">
                 <ExtractCategoryIcon className="w-[18px] h-[18px] text-[#100F09]" />
-                <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] leading-[30px] tracking-[-0.5px] text-[#100F09]">
+                <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[28px] tracking-[-0.5px] text-[#100F09]">
                   Extract
                 </span>
               </div>
@@ -1914,7 +1914,7 @@ export default function ApiExplorer() {
             <div className="relative z-10 w-full px-[16px] py-[10px] flex items-center justify-between gap-4 select-none">
               <div className="flex items-center gap-[8px]">
                 <EmbeddingCategoryIcon className="w-[18px] h-[18px] text-[#100F09]" />
-                <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] leading-[30px] tracking-[-0.5px] text-[#100F09]">
+                <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[28px] tracking-[-0.5px] text-[#100F09]">
                   Embedding
                 </span>
               </div>
@@ -1942,7 +1942,7 @@ export default function ApiExplorer() {
             <div className="relative z-10 w-full px-[16px] py-[10px] flex items-center justify-between gap-4 select-none">
               <div className="flex items-center gap-[8px]">
                 <ApplicationsCategoryIcon className="w-[18px] h-[18px] text-[#100F09]" />
-                <span className="font-['DM_Sans',sans-serif] font-bold text-[20px] leading-[30px] tracking-[-0.5px] text-[#100F09]">
+                <span className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[28px] tracking-[-0.5px] text-[#100F09]">
                   Applications
                 </span>
               </div>
