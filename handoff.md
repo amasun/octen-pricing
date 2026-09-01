@@ -199,13 +199,21 @@ pnpm build
        - 对齐官方 6 个核心问答（计费模式、5美元赠金、Model Gateway Prompt Cache 优惠、QPS 升级/降级、403 欠费处理与最低充值 $5、支持的支付方式）。
    - **PRICING DETAILS 列格式统一与两端对齐 (Pricing Details Column Normalization & Space-Between Alignment)**：
      - **两端对齐 (Space-Between Alignment)**：多规格/多模型行（Embedding、VL Embedding、Deep Research、Grounded Generation）统一采用 `w-full max-w-[280px]` 容器及 `justify-between` 两端对齐，左侧名称左对齐，右侧金额右对齐。
-     - **字体与颜色标准化**：
-       - 名称标签：统一采用等宽字体 `font-['JetBrains_Mono',monospace]` 与二级暗色 `text-[#57575E]`；
-       - 金额数值：统一采用等宽数字 `font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums`；
-       - 免费额度/特权（Search & Extract）：统一采用 `text-[#039855] font-medium`；
-       - 附加说明（`text / visual`）：统一为 `text-[11px] text-[#9C9CA4]` 右对齐；
-       - 无详情占位符：统一使用标准破折号 `—`（`text-[#9C9CA4]`）。
-     - **单元格与移动端卡片完全拉齐**：移动端自适应卡片与桌面端表格均遵循同一设计系统规范。
+      - **字体与颜色标准化**：
+        - 名称标签：统一采用等宽字体 `font-['JetBrains_Mono',monospace]` 与二级暗色 `text-[#57575E]`；
+        - 金额数值：统一采用等宽数字 `font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums`；
+        - 免费额度/特权（Search & Extract）：统一采用 `text-[#039855] font-medium`；
+        - 附加说明（`text / visual`）：统一为 `text-[11px] text-[#9C9CA4]` 右对齐；
+        - 无详情占位符：统一使用标准破折号 `—`（`text-[#9C9CA4]`）。
+      - **单元格与移动端卡片完全拉齐**：移动端自适应卡片与桌面端表格均遵循同一设计系统规范。
+    - **价格与费率字体全量统一为 JetBrains Mono (Price Typography Standardized to JetBrains Mono)**：
+      - **全平台数字等宽对齐**：所有价格数字（包括 Bento 卡片主价格与划线原价、桌面 Matrix 表格所有单价、移动端自适应分类卡片价格、Full content 附加费率、Text/Visual 多模态向量费率）全量统一使用等宽字体 **`font-['JetBrains_Mono',monospace]`**（在静态 HTML 表格中对齐 `var(--mono)`）。
+      - **字号与层级规则**：
+        - 桌面端主价格：`16px` 加粗（`font-['JetBrains_Mono',monospace] font-bold text-[16px] text-[#0A0A0A]`）
+        - 划线原价：`14px` 划线（`font-['JetBrains_Mono',monospace] text-[14px] text-[#9C9CA4] line-through`）
+        - 计费单位（`/ 1k calls`, `/ 1M tokens` 等）：`14px`（`text-[14px] text-[#8B8B8B]`）
+        - 次级规格价格（Full content, Text, Visual）：`16px` 加粗 + `14px` 单位 + `14px` 标签（如 `$0.5 / 1k results (full content)`）
+      - **模型名称精简**：移除 `octen-` 前缀（`embedding-0.6b/4b/8b`, `vl-embedding/vl-embedding-large`），排版更紧凑利落。
 
 ---
 
