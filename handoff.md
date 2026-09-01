@@ -45,13 +45,15 @@ pnpm build
    - **Plan A**：顶部吸顶分类 Tabs 栏 + 直排 Bento 平铺卡片布局。
    - **Model Tokens 统称拉齐 (Token Naming Unification)**：
      - 在 Plan A 与 Plan B 的 `MultimodalChatCard` 及 `AnswerCard` 中，将原 `Vision tokens` 统一调整为 `Model tokens`，下挂于 `Search calls + model tokens` 总览下，计费说明统一显示为 `Gateway rates`。
-   - **Enterprise Custom 卡片精简为 4 条特性（2×2 栅格排列） (Enterprise Features 4 Items 2x2 Grid)**：
-     - 精简 Enterprise 卡片中间的特性条目为指定的 4 项：
-       1. `1M+ QPS`（分支架构图标）
-       2. `Zero Data Retention (ZDR)`（数据安全图标）
-       3. `Dedicated Slack channel support`（Slack 专属渠道图标）
-       4. `Volume discounts`（折扣图表图标）
-     - 排版采用 `2 行 × 2 列`（`sm:grid-rows-2 sm:grid-cols-2`）的纵向优先栅格布局，与提供的设计参考图 100% 对齐。
+   - **Enterprise Custom 卡片特性条目扩充为 6 条（3×2 栅格排列） (Enterprise Features 6 Items 3x2 Grid)**：
+     - Enterprise 卡片中间特性条目扩展为 6 项：
+       1. `Custom data`（专属数据定制）
+       2. `1M+ QPS`（分支架构图标）
+       3. `Zero Data Retention (ZDR)`（数据安全图标）
+       4. `Custom SLA`（SLA 服务保障）
+       5. `Dedicated Slack channel support`（Slack 专属渠道图标）
+       6. `Volume discounts`（折扣图表图标）
+     - 排版采用 `3 行 × 2 列`（`sm:grid-rows-3 sm:grid-cols-2 sm:grid-flow-col`）的纵向优先栅格布局，保持原业务与功能图标不变，左右列对称平衡。
    - **QPS Plan 卡片价格 $ 符号顶对齐与 / month 原始样式保留 (QPS Plan Price Alignment & Period Style)**：
      - 在 QPS Plan 卡片价格展示区，通过 `self-start` 将 `$` 美元符号与大号价格数字的顶部精准对齐；
      - 同时完全保留了大号数字的行高基准与 `/ month` 周期文案的原有字号、行高（`text-[14px] leading-[20px] text-[#57575E]`）及底部基线对齐位置，确保整体排版稳定不跳动。
