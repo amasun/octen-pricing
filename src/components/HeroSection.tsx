@@ -387,10 +387,10 @@ function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) 
 
       {/* 1. LEFT DATA BOX: Symmetrical at left-[calc(50%-108px)] */}
       <div className="absolute left-[calc(50%-108px)] top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center">
-        {/* Continuous Expanding Ripple Rings */}
-        <div className="absolute size-[42px] rounded-[10px] border border-[#70FE7E] pointer-events-none animate-ripple-1" />
-        <div className="absolute size-[42px] rounded-[10px] border border-[#70FE7E] pointer-events-none animate-ripple-2" />
-        <div className="absolute size-[42px] rounded-[10px] border border-[#70FE7E] pointer-events-none animate-ripple-3" />
+        {/* Continuous Expanding Shadow Ripples (Pure soft luminous shadow aura, no stroke/border) */}
+        <div className="absolute size-[42px] rounded-[10px] pointer-events-none animate-shadow-ripple-1" />
+        <div className="absolute size-[42px] rounded-[10px] pointer-events-none animate-shadow-ripple-2" />
+        <div className="absolute size-[42px] rounded-[10px] pointer-events-none animate-shadow-ripple-3" />
 
         {/* Inner Solid Box */}
         <div className="size-[42px] rounded-[10px] bg-[#141212] border-2 border-[rgba(112,254,126,0.55)] flex items-center justify-center relative z-10 shadow-[0px_0px_0px_6px_rgba(112,254,126,0.18)]">
@@ -467,10 +467,10 @@ function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) 
 
       {/* 3. RIGHT MESSAGE BOX: Symmetrical at left-[calc(50%+108px)] */}
       <div className="absolute left-[calc(50%+108px)] top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center">
-        {/* Continuous Expanding Ripple Rings */}
-        <div className="absolute size-[42px] rounded-[10px] border border-[#70FE7E] pointer-events-none animate-ripple-1" />
-        <div className="absolute size-[42px] rounded-[10px] border border-[#70FE7E] pointer-events-none animate-ripple-2" />
-        <div className="absolute size-[42px] rounded-[10px] border border-[#70FE7E] pointer-events-none animate-ripple-3" />
+        {/* Continuous Expanding Shadow Ripples (Pure soft luminous shadow aura, no stroke/border) */}
+        <div className="absolute size-[42px] rounded-[10px] pointer-events-none animate-shadow-ripple-1" />
+        <div className="absolute size-[42px] rounded-[10px] pointer-events-none animate-shadow-ripple-2" />
+        <div className="absolute size-[42px] rounded-[10px] pointer-events-none animate-shadow-ripple-3" />
 
         {/* Inner Solid Box */}
         <div className="size-[42px] rounded-[10px] bg-[#141212] border-2 border-[rgba(112,254,126,0.55)] flex items-center justify-center relative z-10 shadow-[0px_0px_0px_6px_rgba(112,254,126,0.18)]">
