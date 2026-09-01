@@ -61,6 +61,9 @@ pnpm build
    - **QPS Plan 卡片行动按钮文案统一为 `Get started`**：
      - 将 **Builder**（原 Startup）、**Pro**、**Scale** 卡片底部的行动按钮文案由 `Subscribe` 统一修改为 **`Get started`**；
      - 保持 **Free** 卡片的 `Start Free` 与 **Enterprise** 卡片的 `Contact Sales` 不变。
+   - **Free 卡片副文案左对齐与色彩降重**：
+     - 将 Free 卡片中 `Starts at 10 QPS. Add credits to unlock Base (up to 20 QPS)` 通过 20px 占位结构与首行 `Up to 20 QPS Limit` 文本严格像素级左对齐；
+     - 文字色彩由深黑调整为淡雅次要色 `#57575E`。
    - **Hero 顶部文案精简**：
      - 移除了主标题下方的冗余文案 Usage-based pricing for the search infrastructure behind your agents.；
    - **三张入口卡片统一 Octen Hub 规范与 Card 3 动态细节 (3 Cards Unified Hub & Card 3 Motion)**：
