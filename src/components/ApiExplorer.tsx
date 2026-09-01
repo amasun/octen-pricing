@@ -950,14 +950,14 @@ function PlanCTable() {
               </div>
               <div className="flex flex-col gap-1 bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5] text-[14px]">
                 <div className="flex items-baseline gap-1.5">
-                  <span className="text-[#8B8B8B] min-w-[44px]">Text:</span>
                   <span className="font-bold text-[#0A0A0A] tabular-nums">$0.05 – $0.10</span>
                   <span className="text-[#8B8B8B] text-[13px]">/ 1M tokens</span>
+                  <span className="text-[#8B8B8B] text-[12px]">(text)</span>
                 </div>
                 <div className="flex items-baseline gap-1.5">
-                  <span className="text-[#8B8B8B] min-w-[44px]">Visual:</span>
                   <span className="font-bold text-[#0A0A0A] tabular-nums">$0.12 – $0.25</span>
                   <span className="text-[#8B8B8B] text-[13px]">/ 1M tokens</span>
+                  <span className="text-[#8B8B8B] text-[12px]">(visual)</span>
                 </div>
               </div>
               <div className="bg-[#F8F8F5] p-[12px] rounded-[10px] border border-[#EAEAE5] flex flex-col gap-[8px] text-[13px]">
@@ -1382,14 +1382,14 @@ function PlanCTable() {
               <td className="py-4 px-6">
                 <div className="flex flex-col gap-1 text-[14px]">
                   <div className="flex items-baseline gap-1.5 flex-nowrap whitespace-nowrap">
-                    <span className="text-[#8B8B8B] min-w-[44px]">Text:</span>
                     <span className="font-bold text-[16px] text-[#0A0A0A] tabular-nums">$0.05 – $0.10</span>
                     <span className="text-[#8B8B8B]">/ 1M tokens</span>
+                    <span className="text-[#8B8B8B] text-[13px]">(text)</span>
                   </div>
                   <div className="flex items-baseline gap-1.5 flex-nowrap whitespace-nowrap">
-                    <span className="text-[#8B8B8B] min-w-[44px]">Visual:</span>
                     <span className="font-bold text-[16px] text-[#0A0A0A] tabular-nums">$0.12 – $0.25</span>
                     <span className="text-[#8B8B8B]">/ 1M tokens</span>
+                    <span className="text-[#8B8B8B] text-[13px]">(visual)</span>
                   </div>
                 </div>
               </td>
