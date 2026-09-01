@@ -519,7 +519,7 @@ function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) 
         <div className="flex items-center gap-1.5">
           <span className="inline-block size-[6px] rounded-full bg-[#70FE7E] animate-pulse" />
           <span className="font-['JetBrains_Mono',monospace] text-[11px] text-[#70FE7E] font-medium tracking-wide">
-            LAYER 03 &bull; PLACEHOLDER
+            ENTERPRISE LAYER
           </span>
         </div>
       </div>
@@ -542,10 +542,10 @@ function PlaceholderCard() {
         <PlaceholderCardGraphic isHovered={isHovered} />
         <div className="content-stretch flex flex-col gap-[6px] items-center pb-[14px] pt-[20px] relative shrink-0 text-center w-full select-text">
           <p className="font-['Fraunces',serif] font-bold text-[20px] sm:text-[22px] text-[#09090b] leading-[1.2] py-[2px] w-full text-center relative shrink-0 select-text">
-            Custom Solutions
+            Enterprise
           </p>
           <p className="font-['DM_Sans',sans-serif] font-normal text-[#515151] relative shrink-0 text-[14px] whitespace-nowrap select-text">
-            Enterprise throughput &amp; dedicated SLA
+            Adds custom data and dedicated support
           </p>
         </div>
         <button
@@ -557,7 +557,7 @@ function PlaceholderCard() {
           }}
           className="inline-flex items-center justify-center h-[36px] px-[20px] bg-[#100F09] hover:bg-[#2A2A28] active:scale-[0.97] text-white font-['DM_Sans',sans-serif] font-medium text-[14px] rounded-full transition-all duration-150 shadow-xs cursor-pointer relative z-20"
         >
-          Contact Sales
+          Contact sales
         </button>
       </div>
     </div>
