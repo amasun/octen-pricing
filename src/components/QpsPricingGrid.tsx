@@ -98,6 +98,7 @@ function FeatureIcon({ type, color }: { type?: "branch" | "check" | "flash" | "z
 interface FeatureItem {
   text: React.ReactNode;
   icon?: "branch" | "check" | "flash" | "zdr" | "slack" | "chart" | "contract" | "data" | "none";
+  textColor?: string;
 }
 
 function PlanCardItem({
@@ -189,9 +190,18 @@ function PlanCardItem({
           {/* List (116px height, 12px gap per Figma spec) */}
           <ul className="h-auto sm:h-[116px] flex flex-col gap-[12px] list-none p-0 m-0 w-full">
             {features.map((feat, i) => (
-              <li key={i} className="flex items-start gap-[4px] text-[14px] font-['DM_Sans',sans-serif] font-normal leading-[140%] text-[#100F09]">
-                <FeatureIcon type={feat.icon} />
-                <span className={`flex-1 ${feat.icon && feat.icon !== "none" ? "ml-1" : ""}`}>{feat.text}</span>
+              <li 
+                key={i} 
+                className={`flex items-start gap-[4px] text-[14px] font-['DM_Sans',sans-serif] font-normal leading-[140%] ${
+                  feat.textColor || "text-[#100F09]"
+                }`}
+              >
+                {feat.icon === "none" ? (
+                  <div className="size-[20px] shrink-0" aria-hidden="true" />
+                ) : (
+                  <FeatureIcon type={feat.icon} />
+                )}
+                <span className="flex-1 ml-1">{feat.text}</span>
               </li>
             ))}
           </ul>
@@ -290,7 +300,11 @@ export default function QpsPricingGrid() {
       price: "0",
       features: [
         { text: <>Up to <strong className="font-bold">20 QPS</strong> Limit</>, icon: "branch" },
-        { text: "Starts at 10 QPS. Add credits to unlock Base (up to 20 QPS)", icon: "none" }
+        { 
+          text: "Starts at 10 QPS. Add credits to unlock Base (up to 20 QPS)", 
+          icon: "none",
+          textColor: "text-[#57575E]"
+        }
       ],
       buttonText: "Start Free"
     },
