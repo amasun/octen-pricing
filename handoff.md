@@ -67,7 +67,7 @@ pnpm build
        1. **Card 1**：`Pay as you go`（Covers actual API and token usage）
        2. **Card 2**：`Subscribe to a QPS Plan`（Reserves your max search QPS）
        3. **Card 3**：`Enterprise`（Adds custom data and dedicated support）
-      - **移除中间加号与紧凑间隙优化 (No Plus & Tighter Gap)**：移除了卡片之间的 `+` 加号连接符，卡片间隙收窄为优雅紧凑的 `gap-4 sm:gap-5 md:gap-6`，桌面端 3 卡并排等宽对称，视觉比例更加紧凑协调；
+      - **弱化浅灰微型加号连接符 (Subtle Muted Gray Plus Separator)**：卡片之间使用轻量化的浅灰微型圆角徽章与弱化灰色 `+` 符号（`bg-[#F4F4F5] border-[#E4E4E7] text-[#71717A]`），彻底替代了原先浓重的黑底荧光绿加号，并在紧凑间距（`gap-[10px] md:gap-[14px] lg:gap-[16px]`）下保持自然呼吸感；
       - **去按钮化极简设计与内边距规范 (No Button & pb-24px)**：移除了三张卡片底部的独立按钮，卡片底部 padding 统一设定为 **`pb-[24px]`**（`p-[6px] pb-[24px]`），卡片整体作为纯粹统一的导航容器；
       - **黑色视觉区域尺寸与边框全量统一 (Unified Graphic Box Dimensions)**：将 Enterprise 卡片顶部的黑色图形容器尺寸由原 `h-[140px]/[150px]` 统一规范为 **`h-[180px]`**，并补齐 **`border border-[#2a2a2a]`** 与 `shrink-0`，确保 3 张卡片的黑色视觉区长宽、圆角与边框 100% 像素级一致；
      - **原生 HTML 锚点定位与交互 (Native Anchor Navigation)**：
