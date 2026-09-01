@@ -69,7 +69,7 @@ pnpm build
        1. **Card 1**：`Pay as you go`（Covers actual API and token usage）
        2. **Card 2**：`Subscribe to a QPS Plan`（Reserves your max search QPS）
        3. **Card 3**：Enterprise Plan（Adds custom data and dedicated support）
-      - **弱化浅灰微型加号连接符与紧密间隙 (Subtle Muted Gray Plus & Tighter Gap)**：卡片之间使用轻量化的浅灰微型圆角徽章与弱化灰色 `+` 符号（`bg-[#F4F4F5] border-[#E4E4E7] text-[#71717A]`），彻底替代了原先浓重的黑底荧光绿加号，并将加号与卡片两侧间隙收窄为精致紧凑的 `gap-[6px] sm:gap-[8px] md:gap-[10px]`（桌面端仅 8-10px 左右间距），视觉比例更加紧凑连贯；
+      - **弱化浅灰【+】与【or】逻辑连接符 (Subtle Muted [+] and [or] Separators)**：卡片之间使用轻量化的浅灰微型圆角徽章与弱化灰色 `+` 符号（`bg-[#F4F4F5] border-[#E4E4E7] text-[#71717A]`），彻底替代了原先浓重的黑底荧光绿加号，并将加号与卡片两侧间隙收窄为精致紧凑的 `gap-[6px] sm:gap-[8px] md:gap-[10px]`（桌面端仅 8-10px 左右间距），视觉比例更加紧凑连贯；
       - **黑色视觉区域尺寸与边框全量统一 (Unified Graphic Box Dimensions)**：将 Enterprise 卡片顶部的黑色图形容器尺寸由原 `h-[140px]/[150px]` 统一规范为 **`h-[180px]`**，并补齐 **`border border-[#2a2a2a]`** 与 `shrink-0`，确保 3 张卡片的黑色视觉区长宽、圆角与边框 100% 像素级一致；
       - **原生 HTML 锚点定位与精准跳转 (Native Anchor Navigation)**：
         - 点击 **Pay as you go** 卡片直接平滑滚动定位至 `#pay-as-you-go`（API 计费区）；
