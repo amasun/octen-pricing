@@ -80,11 +80,11 @@ function QpsCardGraphic({ isHovered = false }: { isHovered?: boolean }) {
           background: "radial-gradient(circle at 50% 50%, rgba(112, 254, 126, 0.22) 0%, rgba(3, 152, 85, 0.08) 45%, rgba(0, 0, 0, 0) 75%)"
         }}
       />
-      {/* 20px Subtle Grid Texture (1px stroke) */}
+      {/* 20px Subtle Grid Texture (1px stroke, 0.1 opacity) */}
       <div 
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: "linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px)",
+          backgroundImage: "linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px)",
           backgroundSize: "20px 20px"
         }}
       />
@@ -107,11 +107,11 @@ function PayAsYouGoGraphic({ isHovered = false }: { isHovered?: boolean }) {
           background: "radial-gradient(circle at 50% 50%, rgba(112, 254, 126, 0.22) 0%, rgba(3, 152, 85, 0.08) 45%, rgba(0, 0, 0, 0) 75%)"
         }}
       />
-      {/* 20px Subtle Grid Texture (1px stroke) */}
+      {/* 20px Subtle Grid Texture (1px stroke, 0.1 opacity) */}
       <div 
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: "linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px)",
+          backgroundImage: "linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px)",
           backgroundSize: "20px 20px"
         }}
       />
@@ -437,11 +437,11 @@ function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) 
           background: "radial-gradient(circle at 50% 50%, rgba(112, 254, 126, 0.22) 0%, rgba(3, 152, 85, 0.08) 45%, rgba(0, 0, 0, 0) 75%)"
         }}
       />
-      {/* 20px Subtle Grid Texture (1px stroke) */}
+      {/* 20px Subtle Grid Texture (1px stroke, 0.1 opacity) */}
       <div 
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: "linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px)",
+          backgroundImage: "linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px)",
           backgroundSize: "20px 20px"
         }}
       />
