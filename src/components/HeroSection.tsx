@@ -11,12 +11,9 @@ function HeroHeader() {
       <h1 className="bg-clip-text font-['Fraunces',serif] font-normal leading-tight py-[6px] w-full text-center relative shrink-0 text-[32px] sm:text-[44px] md:text-[56px] lg:text-[60px] text-[transparent]" style={{ fontVariationSettings: '"SOFT" 0, "WONK" 1', backgroundImage: "linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%), linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(136, 136, 136) 27.404%, rgb(0, 0, 0) 50.962%)" }}>
         Plans and Pricing
       </h1>
-      {/* Subtitle Group Frame 13350:3131 matching 1:1 Figma spec (gap-[10px]) */}
+      {/* Subtitle Group */}
       <div className="flex flex-col items-center gap-[10px] w-full max-w-[720px]">
-        <p className="font-['DM_Sans',sans-serif] font-normal text-[15px] sm:text-[17px] md:text-[18px] leading-[1.3] relative shrink-0 text-center text-white/90 whitespace-normal px-2 m-0">
-          Usage-based pricing for the search infrastructure behind your agents.
-        </p>
-        <p className="font-['DM_Sans',sans-serif] font-normal text-[15px] sm:text-[16px] leading-[1.3] text-white text-center m-0 select-text">
+        <p className="font-['DM_Sans',sans-serif] font-normal text-[15px] sm:text-[17px] md:text-[18px] leading-[1.3] text-white text-center m-0 select-text">
           Sign up and get <span className="font-bold text-[#70FE7E]">$5 in free balance</span>.
         </p>
       </div>
