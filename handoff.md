@@ -63,12 +63,9 @@ pnpm build
      - 保持 **Free** 卡片的 `Start Free` 与 **Enterprise** 卡片的 `Contact Sales` 不变。
    - **Hero 顶部文案精简 (Hero Subtitle Cleanup)**：
      - 移除了主标题下方的冗余文案 Usage-based pricing for the search infrastructure behind your agents.，使首屏聚焦于核心权益提示（Sign up and get  in free balance.）及行动按键；
-   - **Enterprise Plan 4 种专属设计意象实现与并排实验场 (Enterprise Plan 4 Visual Metaphors Lab)**：
-     - **Option A（专属立体集群与数据底座 Dedicated Cluster & Data Cube）**：3D 等轴测服务器魔方，强调独立专属集群池与 Custom Data 私有定制底座；
-     - **Option B（全息安全护盾与并发算力环 SLA Shield & Concurrency Matrix）**：多重算力环绕的科技护盾与闪电核心，强调 Custom SLA 稳定性保障、零数据留存与 1M+ QPS；
-     - **Option C（黑金科技水晶与皇冠核心 Prism Crystal & Crown Core）**：黑金切面水晶核心向外散射定制激光束，与下方 Enterprise 皇冠徽标形成视觉闭环；
-     - **Option D（专线通道拓扑与隔离网关 Dedicated Line & Private Hub）**：双轨发光光纤直连企业私网与云端，直观呈现 Dedicated Slack 渠道与私有专线；
-     - **交互对比实验室**：在 How Octen Works 卡片下方以独立并排栅格（4 列并排）展示所有 4 种意象，支持点击任意卡片即时应用至上方第 3 张卡片实时联动预览。
+   - **Enterprise Plan 专属视觉意象确立为【专线通道拓扑与隔离网关】(Dedicated Line & Private Hub)**：
+     - 移除了临时的 4 意象对比实验室，将 Card 3（Enterprise Plan）顶部的黑色图形区正式确立为 **Option 4（专线通道拓扑与隔离网关）**；
+     - **视觉细节**：以双轨发光光纤管道连接企业私网与私有云，中心配置带高安全数字保险锁的金库网关 Hub 与双向流光粒子，底部标注 ENTERPRISE LAYER 呼吸微光标签，直观彰显 Enterprise 的 Dedicated Slack 专属即时渠道、Custom Data 私有专线与安全隔离价值。
    - **How Octen Works 扩展为 3 张卡片布局与去按钮化极简交互 (How Octen Works 3 Cards & No-Button Minimalist)**：
      - 容器宽度扩展为最大 `max-w-[1280px]`（与下方 1312px 页面容器精准对齐）；
      - 布局由 2 张卡片平滑扩展为 3 张卡片：
