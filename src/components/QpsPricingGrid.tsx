@@ -303,7 +303,7 @@ export default function QpsPricingGrid() {
         { 
           text: "Starts at 10 QPS. Add credits to unlock Base (up to 20 QPS)", 
           icon: "none",
-          textColor: "text-[#57575E]"
+          textColor: "text-[rgb(139,139,139)]"
         }
       ],
       buttonText: "Start Free"
