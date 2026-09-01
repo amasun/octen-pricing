@@ -589,13 +589,22 @@ function HowOctenWorksSection() {
         </p>
       </div>
 
-      {/* Entry Cards Container (3 Cards on Desktop, 1 Column on Mobile) */}
-      <div className="content-stretch flex flex-col md:flex-row gap-[6px] sm:gap-[8px] md:gap-[10px] items-stretch justify-center relative shrink-0 w-full max-w-[1280px]">
-        <PayAsYouGoCard />
+      {/* Entry Cards Container (Pay as you go + [QPS Plan / Enterprise Plan Group]) */}
+      <div className="content-stretch flex flex-col md:flex-row gap-3 sm:gap-4 md:gap-6 lg:gap-7 items-stretch justify-center relative shrink-0 w-full max-w-[1280px]">
+        {/* Layer 1: Pay As You Go */}
+        <div className="w-full md:flex-[1_0_0] md:min-w-px flex items-stretch">
+          <PayAsYouGoCard />
+        </div>
+
+        {/* [+] Major Layer Connector */}
         <PlusSeparator />
-        <QpsPlanCard />
-        <SlashSeparator />
-        <PlaceholderCard />
+
+        {/* Layer 2: Paired Throughput Options Group (QPS Plan / Enterprise Plan) */}
+        <div className="w-full md:flex-[2_0_0] md:min-w-px flex flex-col md:flex-row gap-[4px] sm:gap-[6px] md:gap-[8px] items-stretch">
+          <QpsPlanCard />
+          <SlashSeparator />
+          <PlaceholderCard />
+        </div>
       </div>
     </div>
   );
