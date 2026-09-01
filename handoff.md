@@ -71,9 +71,9 @@ pnpm build
        - **左侧 Data 盒子**：`left: 36.58px`（`top: 71px`，`size: 40px`，`rounded-[8px]`，`border-2 border-[rgba(112,254,126,0.5)]`），内嵌 Figma 官方 24x24 渐变圆柱 Data 图标；
        - **右侧 Message 盒子**：`left: 312.42px / right: 36.58px`（`top: 71px`，`size: 40px`，`rounded-[8px]`，`border-2 border-[rgba(112,254,126,0.5)]`），内嵌 Figma 官方 24x24 渐变 Fluent Person Chat 图标；
        - **中心 Octen Hub**：`left: calc(50% - 0.5px)`（`top: 59px`，`size: 60px`）；
-     - **两端纯投影扩散涟漪波纹 (Pure Shadow Expanding Ripples `animate-shadow-ripple-1/2/3`)**：无描边、中心无空洞，从实体外沿直接匀速（`linear`）向外荡漾扩散（`0px -> 22px spread`，`4px -> 36px blur`），透明度曲线严格遵循 `0 ➔ 0.2 ➔ 0.2 ➔ 0`；
-     - **左侧连接层 (Data Ingestion)**：85.5px 跨度，4 条虚线轨道（Y=12.2px, 17.2px, 22.25px, 27.6px）+ 28 组负延迟预填充粒子流，恒速直线密布注入中心；
-     - **右侧连接层 (Dual Laser Flows)**：上下双条高导激光线（Y=86.76px, 96.76px），精准还原 Figma Vector 14/15 渐变光线并呈相反方向高速流动（上方 Octen ➔ Message，下方 Message ➔ Octen）；
+     - **卡片 3 默认静止 · 悬浮激活动态机制 (Hover-Triggered Motion)**：
+       - **默认常态（Default State）**：28 颗粒子与左右反向激光线呈静态点位定格在轨道上（`animationPlayState: 'paused'`），两端盒子涟漪隐形（`opacity: 0`），画面宛如高精密电子架构蓝图；
+       - **悬浮动态（Hover State）**：鼠标 Hover 移入时，左右扩散涟漪淡入荡漾（`opacity: 1`），28 颗粒子瞬时匀速注入中心，右侧双线激光瞬时反向穿梭（`animationPlayState: 'running'`），中心 Logo 光晕同步升起放大；
      - **去除底部冗余文字**：彻底移除底部 `ENTERPRISE LAYER` 标签，视觉画面更纯粹利落；
    - **How Octen Works 3 张卡片布局与去按钮化极简交互**：
      - 容器宽度扩展为最大 `max-w-[1280px]`；
