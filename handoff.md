@@ -141,7 +141,7 @@ pnpm build
        2. 移除 Plan C 桌面表格容器上的 `overflow-x-auto`，表格使用 100% 宽度自适应排版；
        3. 将 5 个分类行（Search、Extract、Embedding 等）的吸顶偏移量精准设定为 **`top-[106px]`**（顶部 58px Navbar + 48px 表头 thead），滚动时紧贴在 4 列主表头正下方平滑吸顶推进。
    - **Plan C 表格字号层级规范化 (Plan C 16px / 14px Typography System)**：
-     - **主要标题与价格 (16px / `text-[16px]`)**：分类主标题（Search, Extract 等）、端点/模型名称（Web Search API, octen-embedding-8b 等）以及主要单价数字统一定为 16px 加粗，视觉识别更清晰利落；
+     - **主要标题与价格 (16px / `text-[16px]`)**：分类主标题（Search, Extract 等）、端点/模型名称（Web Search API, embedding-8b 等）以及主要单价数字统一定为 16px 加粗，视觉识别更清晰利落；
      - **辅助说明与费率详情 (14px / `text-[14px]`)**：业务描述文本、计费单位后缀（`/ 1k calls`, `/ 1M tokens`）、Details & Free Tier 特性描述统一调整为 14px（从原 12px/13px 提升），大幅增强移动端与桌面端的通读性与高级感；
      - **状态徽章 (11px / `text-[11px]`)**：保留 Mono 紧凑微标规范（`80% Off`, `Early Access`, `Best Accuracy` 等）。
    - **Plan C 去除冗余 Billing Metric 列与移动端精简 (Plan C Rate Matrix Column Refinement)**：
