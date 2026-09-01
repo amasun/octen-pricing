@@ -52,46 +52,32 @@ function ChartIcon() {
 
 interface EnterpriseFeature {
   title: string;
-  badge: string;
-  description: string;
   icon: React.ReactNode;
 }
 
 const enterpriseFeatures: EnterpriseFeature[] = [
   {
-    title: "Higher Throughput SLA",
-    badge: "99.99% UPTIME",
-    description: "Guaranteed enterprise-grade throughput and uptime SLA with unthrottled dedicated concurrency pipelines for high-volume production.",
+    title: "Higher throughput SLA",
     icon: <FlashIcon />
   },
   {
-    title: "Custom Data Sources Integration",
-    badge: "CUSTOM INGESTION",
-    description: "Seamlessly integrate proprietary enterprise data silos, private internal documents, and tailored continuous index synchronization.",
+    title: "Custom data sources integration",
     icon: <DataIcon />
   },
   {
-    title: "Dedicated & Isolated Pipelines",
-    badge: "ZERO CONTENTION",
-    description: "Physically isolated compute clusters and dedicated network routes to ensure consistent ultra-low latency and strict data governance.",
+    title: "Dedicated and isolated pipelines",
     icon: <BranchIcon />
   },
   {
-    title: "Dedicated Slack & 24/7 Support",
-    badge: "WHITE-GLOVE",
-    description: "Direct shared Slack/Teams channel with core Octen engineers, dedicated solutions architects, and rapid round-the-clock emergency response.",
+    title: "Dedicated Slack & 24/7 support",
     icon: <SlackIcon />
   },
   {
-    title: "Custom Contract & Invoicing",
-    badge: "ENTERPRISE TERMS",
-    description: "Tailored Master Services Agreements (MSA), flexible net-payment invoicing, security compliance reviews, and multi-organization cost allocation.",
+    title: "Custom contract and billing",
     icon: <ContractIcon />
   },
   {
-    title: "Volume Tier Discounts",
-    badge: "ECONOMIES OF SCALE",
-    description: "Substantial volume-based pricing discounts, predictable annual commitment packages, and custom token allocation models for large-scale operations.",
+    title: "Volume discounts",
     icon: <ChartIcon />
   }
 ];
@@ -100,7 +86,7 @@ export default function EnterpriseSection() {
   return (
     <section 
       id="enterprise-plan" 
-      className="content-stretch flex flex-col items-center gap-[32px] sm:gap-[44px] pb-[60px] sm:pb-[100px] mt-[40px] sm:mt-[80px] pt-0 relative shrink-0 w-full max-w-[1312px] px-4 box-border scroll-mt-[90px]"
+      className="content-stretch flex flex-col items-center gap-[28px] sm:gap-[36px] pb-[60px] sm:pb-[100px] mt-[40px] sm:mt-[80px] pt-0 relative shrink-0 w-full max-w-[1312px] px-4 box-border scroll-mt-[90px]"
     >
       {/* 1. Header Area with Title & Contact Sales Button */}
       <div className="text-center flex flex-col items-center gap-4 sm:gap-5 shrink-0 px-4">
@@ -117,36 +103,23 @@ export default function EnterpriseSection() {
         </div>
       </div>
 
-      {/* 2. 3x2 Bento Grid of Feature Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full">
+      {/* 2. 3x2 Grid of Feature Cards (Logo + Title only) */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4.5 w-full">
         {enterpriseFeatures.map((item, idx) => (
           <div 
             key={idx}
-            className="group relative bg-white rounded-[20px] border border-[#E5E7EB] hover:border-[#B5B5B0] hover:shadow-[0_12px_32px_rgba(0,0,0,0.05)] p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 overflow-hidden box-border"
+            className="group relative bg-white rounded-[16px] border border-[#E5E7EB] hover:border-[#B5B5B0] hover:shadow-[0_8px_24px_rgba(0,0,0,0.04)] p-5 sm:p-6 flex flex-col justify-center transition-all duration-200 overflow-hidden box-border min-h-[110px] sm:min-h-[120px]"
           >
             {/* Ambient hover light glow */}
-            <div className="absolute -top-10 -right-10 size-36 bg-[#70FE7E]/10 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            <div className="absolute -top-8 -right-8 size-28 bg-[#70FE7E]/10 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
-            <div className="flex flex-col relative z-10">
-              {/* Card Header: Icon + Badge */}
-              <div className="flex items-center justify-between w-full mb-5">
-                <div className="size-[42px] rounded-[10px] bg-[#F4FBF6] border border-[#D0F2DF] flex items-center justify-center text-[#039855] shrink-0 group-hover:scale-105 transition-transform duration-200">
-                  {item.icon}
-                </div>
-                <span className="px-2.5 py-1 rounded-[6px] bg-[#F4F4F5] text-[#52525B] text-[11px] font-['JetBrains_Mono',monospace] font-medium tracking-wider border border-[#E4E4E7]">
-                  {item.badge}
-                </span>
+            <div className="flex flex-col items-start gap-3.5 relative z-10">
+              <div className="size-[40px] rounded-[10px] bg-[#F4FBF6] border border-[#D0F2DF] flex items-center justify-center text-[#039855] shrink-0 group-hover:scale-105 transition-transform duration-200">
+                {item.icon}
               </div>
-
-              {/* Title */}
-              <h3 className="font-['Fraunces',serif] font-bold text-[20px] sm:text-[21px] leading-[1.3] text-[#100F09] mb-2.5">
+              <h3 className="font-['Fraunces',serif] font-bold text-[18px] sm:text-[20px] leading-[1.25] text-[#100F09]">
                 {item.title}
               </h3>
-
-              {/* Description */}
-              <p className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[22px] text-[#57575E]">
-                {item.description}
-              </p>
             </div>
           </div>
         ))}
