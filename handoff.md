@@ -47,41 +47,32 @@ pnpm build
      - 在 Plan A 与 Plan B 的 `MultimodalChatCard` 及 `AnswerCard` 中，将原 `Vision tokens` 统一调整为 `Model tokens`，下挂于 `Search calls + model tokens` 总览下，计费说明统一显示为 `Gateway rates`。
    - **Enterprise Custom 卡片特性条目扩充为 6 条（3×2 栅格排列） (Enterprise Features 6 Items 3x2 Grid)**：
      - Enterprise 卡片中间特性条目扩展为 6 项：
-        1. `1M+ QPS`（分支架构图标）
-        2. `Custom data`（数据库立体圆柱图标 `DataIcon`）
-        3. `Zero Data Retention (ZDR)`（斜杠护盾/不留存眼睛图标 `ZdrIcon`）
-        4. `Custom SLA`（闪电护盾 SLA 保障图标 `FlashIcon`）
-        5. `Dedicated Slack channel support`（Slack 专属渠道图标）
-        6. `Volume discounts`（折扣图表图标）
+       1. `1M+ QPS`（分支架构图标 `BranchIcon`）
+       2. `Custom data`（数据库立体圆柱图标 `DataIcon`）
+       3. `Zero Data Retention (ZDR)`（斜杠护盾/不留存眼睛图标 `ZdrIcon`）
+       4. `Custom SLA`（闪电护盾 SLA 保障图标 `FlashIcon`）
+       5. `Dedicated Slack channel support`（Slack 专属渠道图标 `SlackIcon`）
+       6. `Volume discounts`（折扣图表图标 `ChartIcon`）
      - 排版采用 `3 行 × 2 列`（`sm:grid-rows-3 sm:grid-cols-2 sm:grid-flow-col`）的纵向优先栅格布局，保持原业务与功能图标不变，左右列对称平衡；
      - **容器右内边距**：设置右侧 padding 为 24px（`sm:pr-6`），使右侧 Contact Sales 按钮与卡片右边缘间距更加紧凑协调。
-    - **QPS Plan 卡片价格 $ 符号顶对齐与 / month 原始样式保留 (QPS Plan Price Alignment & Period Style)**：
+   - **QPS Plan 卡片价格 $ 符号顶对齐与 / month 原始样式保留 (QPS Plan Price Alignment & Period Style)**：
      - 在 QPS Plan 卡片价格展示区，通过 `self-start` 将 `$` 美元符号与大号价格数字的顶部精准对齐；
      - 同时完全保留了大号数字的行高基准与 `/ month` 周期文案的原有字号、行高（`text-[14px] leading-[20px] text-[#57575E]`）及底部基线对齐位置，确保整体排版稳定不跳动。
-    - **QPS Plan 卡片行动按钮文案统一为 **`Get started`** (QPS Plan Cards Button Label)**：
-      - 将 **Startup**、**Pro**、**Scale** 卡片底部的行动按钮文案由 `Subscribe` 统一修改为 **`Get started`**；
-      - 保持 **Free** 卡片的 `Start Free` 与 **Enterprise** 卡片的 `Contact Sales` 不变。
-    - **How Octen Works 扩展为 3 张卡片布局 (How Octen Works 3 Cards Layout & Placeholder)**：
-      - 容器宽度扩展为最大 `max-w-[1280px]`（与下方 1312px 页面容器精准对齐）；
-      - 布局由 2 张卡片平滑扩展为 3 张卡片：
-        1. **Card 1**：`Pay as you go`（API 密钥与按量扣费）
-        2. **Card 2**：`Subscribe to a QPS Plan`（QPS 吞吐预留）
-        3. **Card 3**：`Enterprise`（Adds custom data and dedicated support，支持 Contact sales 邮件/销售咨询）
-      - 卡片间采用通用自适应居中加号连接符（`PlusSeparator`），桌面端保持 1:1:1 等宽对称排布，移动端自适应垂直单列。
-   - **How Octen Works 卡片原生 HTML 锚点定位优化 (How Octen Works Native Anchor Fix)**：
-     - 将卡片主体改为原生 HTML `<a href="#pay-as-you-go">` 和 `<a href="#qps-plans">` 超链接标签，彻底摒弃 JS 滚动状态单次锁死的缺陷；
-     - 目标容器统一配置 `scroll-mt-[90px]`，配合全局 `scroll-behavior: smooth`，无论是首次点击还是反复多次点击，均能 100% 稳定平滑滚动定位到准确视图位置；
-     - 内置行动按钮采用标准 `<button type="button">` + `window.open` 隔离事件冒泡，互不干扰。
-   - **How Octen Works 卡片双重交互逻辑规范 (How Octen Works Dual Interaction Model)**：
-     - **按钮点击**（`Get an API key` / `Get higher QPS`）：携带 `e.stopPropagation()` 独立触发新标签页跳转（分别至 `/platform/api-keys` 和 `/platform/billing`）；
-     - **卡片其余区域点击**：触发平滑锚点滚动，左侧卡片滚至 `#pay-as-you-go`（API 计费区），右侧卡片滚至 `#qps-plans`（QPS 价格方案区）；
-     - 卡片整体保持手型指针 `cursor-pointer` 与悬浮微动浮起反馈，交互层次严密清晰。
-   - **How Octen Works 卡片行动按钮文案更新 (How Octen Works Action Button Label)**：
-     - 将 **Subscribe to a QPS Plan** 卡片底部的行动按钮文案由 `Get started` 更新为 **`Get higher QPS`**（跳转至 `https://octen.ai/platform/billing`）。
-   - **How Octen Works 卡片行动按钮跳转链接配置 (How Octen Works Action Button Links)**：
-     - **Get an API key**（Pay as you go 卡片）：跳转至 **`https://octen.ai/platform/api-keys`**；
-     - **Get started**（Subscribe to a QPS Plan 卡片）：跳转至 **`https://octen.ai/platform/billing`**；
-     - 均配置 `target="_blank"` 与 `rel="noopener noreferrer"`，保持用户体验流畅。
+   - **QPS Plan 卡片行动按钮文案统一为 `Get started` (QPS Plan Cards Button Label)**：
+     - 将 **Startup**、**Pro**、**Scale** 卡片底部的行动按钮文案由 `Subscribe` 统一修改为 **`Get started`**；
+     - 保持 **Free** 卡片的 `Start Free` 与 **Enterprise** 卡片的 `Contact Sales` 不变。
+   - **How Octen Works 扩展为 3 张卡片布局与去按钮化极简交互 (How Octen Works 3 Cards & No-Button Minimalist)**：
+     - 容器宽度扩展为最大 `max-w-[1280px]`（与下方 1312px 页面容器精准对齐）；
+     - 布局由 2 张卡片平滑扩展为 3 张卡片：
+       1. **Card 1**：`Pay as you go`（Covers actual API and token usage）
+       2. **Card 2**：`Subscribe to a QPS Plan`（Reserves your max search QPS）
+       3. **Card 3**：`Enterprise`（Adds custom data and dedicated support）
+     - 卡片间采用通用自适应居中加号连接符（`PlusSeparator`），桌面端保持 1:1:1 等宽对称排布，移动端自适应垂直单列；
+     - **去按钮化极简设计 (No Button Minimalist Design)**：移除了三张卡片底部的独立按钮，卡片整体作为纯粹统一的导航容器；
+     - **原生 HTML 锚点定位与交互 (Native Anchor Navigation)**：
+       - 点击 **Pay as you go** 卡片直接平滑滚动定位至 `#pay-as-you-go`（API 计费区）；
+       - 点击 **Subscribe to a QPS Plan** 及 **Enterprise** 卡片平滑滚动定位至 `#qps-plans`（QPS 价格方案区）；
+       - 卡片整体保持手型指针 `cursor-pointer` 与悬浮微动浮起反馈，交互层次轻快通透。
    - **Plan C 矩阵表格顶部圆角白色背景溢出修复 (Plan C Table Corner Radius Overflow Fix)**：
      - 移除了 `thead` 和 `tr` 上全局方角 `bg-white` 造成的溢出层；
      - 将顶层左右两端 `th` 及底层两端 `td` 的圆角内径精准设为 `15px / 19px`（完美贴合外容器 `16px / 20px` 减去 1px 边框）；
