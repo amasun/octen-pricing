@@ -204,7 +204,7 @@ function PlanCardItem({
 
 function EnterpriseCard({ plan }: { plan: { title: string; subtitle: string; price: string; period?: string; features: FeatureItem[]; buttonText: string; buttonHref?: string; } }) {
   return (
-    <div className="w-full relative rounded-[16px] overflow-hidden bg-white border border-[#D1D1D1] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-200 box-border p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 isolate">
+    <div className="w-full relative rounded-[16px] overflow-hidden bg-white border border-[#D1D1D1] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-200 box-border p-6 sm:p-8 sm:pr-6 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 isolate">
       {/* Ambient Glow Layer: Original Figma spec for PC desktop (md:), bottom edge alignment for mobile */}
       <div className="absolute left-1/2 -translate-x-1/2 md:translate-x-0 bottom-0 md:bottom-auto md:left-[-150px] md:top-[185.73px] w-full md:w-[918.47px] h-[60px] md:h-[78.27px] pointer-events-none z-0 opacity-60 overflow-visible">
         {/* Vector 10: #70FE7E glow */}
