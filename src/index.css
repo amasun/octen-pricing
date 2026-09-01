@@ -286,32 +286,55 @@ body, #root, #root > div, [data-name="Octen AI | Infrastructure Pricing"] {
   animation: dotStreamIn var(--stream-dur, 2.0s) linear var(--stream-delay, 0s) infinite;
 }
 
-@keyframes laserFlowRight {
+/* Center-to-Right Dual Opposite Laser Gradient Beams */
+@keyframes laserBeamRight {
   0% {
-    stroke-dashoffset: 75;
+    transform: translateX(-36px);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
   }
   100% {
-    stroke-dashoffset: -75;
+    transform: translateX(88px);
+    opacity: 0;
   }
 }
 
-@keyframes laserFlowLeft {
+@keyframes laserBeamLeft {
   0% {
-    stroke-dashoffset: -75;
+    transform: translateX(88px);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
   }
   100% {
-    stroke-dashoffset: 75;
+    transform: translateX(-36px);
+    opacity: 0;
   }
 }
 
-.animate-laser-flow-right {
-  stroke-dasharray: 22 55;
-  animation: laserFlowRight 1.5s linear infinite;
+.animate-laser-beam-right {
+  animation: laserBeamRight 1.8s linear infinite;
 }
 
-.animate-laser-flow-left {
-  stroke-dasharray: 22 55;
-  animation: laserFlowLeft 1.5s linear infinite;
+.animate-laser-beam-right-delayed {
+  animation: laserBeamRight 1.8s linear 0.9s infinite;
+}
+
+.animate-laser-beam-left {
+  animation: laserBeamLeft 1.8s linear infinite;
+}
+
+.animate-laser-beam-left-delayed {
+  animation: laserBeamLeft 1.8s linear 0.9s infinite;
 }
 
 @keyframes octenHubPulse {

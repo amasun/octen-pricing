@@ -460,25 +460,49 @@ function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) 
       <OctenCenterHub />
 
       {/* CENTER-TO-RIGHT DUAL OPPOSITE CHANNELS (Width 85px from calc(50%+30px) to calc(50%+118px) / right: 76.6px) */}
-      <div className="absolute left-[calc(50%+30px)] right-[76.6px] sm:right-auto top-[71px] sm:w-[88px] h-[40px] pointer-events-none z-10 flex items-center justify-center">
+      <div className="absolute left-[calc(50%+30px)] right-[76.6px] sm:right-auto top-[71px] sm:w-[88px] h-[40px] pointer-events-none z-10 flex items-center justify-center overflow-hidden">
         <svg className="w-full h-full" viewBox="0 0 88 40" fill="none">
           <defs>
             <filter id="laserBeamGlow" x="-30%" y="-30%" width="160%" height="160%">
-              <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur" />
+              <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
               <feMerge>
                 <feMergeNode in="blur" />
                 <feMergeNode in="SourceGraphic" />
               </feMerge>
             </filter>
+
+            {/* Figma Vector 14 Gradient: Transparent Green -> Bright Emerald Green (Octen to Message) */}
+            <linearGradient id="topLaserGrad" x1="0" y1="0" x2="35" y2="0" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="#43984B" stopOpacity="0" />
+              <stop offset="100%" stopColor="#70FE7E" stopOpacity="1" />
+            </linearGradient>
+
+            {/* Figma Vector 15 Gradient: Bright Emerald Green -> Transparent Green (Message to Octen) */}
+            <linearGradient id="bottomLaserGrad" x1="0" y1="0" x2="35" y2="0" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="#70FE7E" stopOpacity="1" />
+              <stop offset="100%" stopColor="#43984B" stopOpacity="0" />
+            </linearGradient>
           </defs>
 
-          {/* Top Line (Figma top: 86.76px -> Y = 15.76px): Octen -> Message (Left to Right) */}
-          <line x1="0" y1="15.76" x2="88" y2="15.76" stroke="#142B1F" strokeWidth="2.5" strokeLinecap="round" />
-          <line x1="0" y1="15.76" x2="88" y2="15.76" stroke="#70FE7E" strokeWidth="2" strokeLinecap="round" className="animate-laser-flow-right" filter="url(#laserBeamGlow)" />
+          {/* Base Guide Tracks matching Figma Vector 12 (#70FE7E opacity 0.2) */}
+          <line x1="0" y1="15.76" x2="88" y2="15.76" stroke="#70FE7E" strokeWidth="2" opacity="0.2" />
+          <line x1="0" y1="25.76" x2="88" y2="25.76" stroke="#70FE7E" strokeWidth="2" opacity="0.2" />
 
-          {/* Bottom Line (Figma top: 96.76px -> Y = 25.76px): Message -> Octen (Right to Left) */}
-          <line x1="0" y1="25.76" x2="88" y2="25.76" stroke="#142B1F" strokeWidth="2.5" strokeLinecap="round" />
-          <line x1="0" y1="25.76" x2="88" y2="25.76" stroke="#70FE7E" strokeWidth="2" strokeLinecap="round" className="animate-laser-flow-left" filter="url(#laserBeamGlow)" />
+          {/* Top Moving Gradient Beams (Octen -> Message, Left to Right) */}
+          <g className="animate-laser-beam-right">
+            <line x1="0" y1="15.76" x2="35" y2="15.76" stroke="url(#topLaserGrad)" strokeWidth="2.5" strokeLinecap="round" filter="url(#laserBeamGlow)" />
+          </g>
+          <g className="animate-laser-beam-right-delayed">
+            <line x1="0" y1="15.76" x2="35" y2="15.76" stroke="url(#topLaserGrad)" strokeWidth="2.5" strokeLinecap="round" filter="url(#laserBeamGlow)" />
+          </g>
+
+          {/* Bottom Moving Gradient Beams (Message -> Octen, Right to Left) */}
+          <g className="animate-laser-beam-left">
+            <line x1="0" y1="25.76" x2="35" y2="25.76" stroke="url(#bottomLaserGrad)" strokeWidth="2.5" strokeLinecap="round" filter="url(#laserBeamGlow)" />
+          </g>
+          <g className="animate-laser-beam-left-delayed">
+            <line x1="0" y1="25.76" x2="35" y2="25.76" stroke="url(#bottomLaserGrad)" strokeWidth="2.5" strokeLinecap="round" filter="url(#laserBeamGlow)" />
+          </g>
         </svg>
       </div>
 
