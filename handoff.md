@@ -61,6 +61,8 @@ pnpm build
    - **QPS Plan 卡片行动按钮文案统一为 `Get started` (QPS Plan Cards Button Label)**：
      - 将 **Startup**、**Pro**、**Scale** 卡片底部的行动按钮文案由 `Subscribe` 统一修改为 **`Get started`**；
      - 保持 **Free** 卡片的 `Start Free` 与 **Enterprise** 卡片的 `Contact Sales` 不变。
+   - **Hero 顶部文案精简 (Hero Subtitle Cleanup)**：
+     - 移除了主标题下方的冗余文案 Usage-based pricing for the search infrastructure behind your agents.，使首屏聚焦于核心权益提示（Sign up and get  in free balance.）及行动按键；
    - **How Octen Works 扩展为 3 张卡片布局与去按钮化极简交互 (How Octen Works 3 Cards & No-Button Minimalist)**：
      - 容器宽度扩展为最大 `max-w-[1280px]`（与下方 1312px 页面容器精准对齐）；
      - 布局由 2 张卡片平滑扩展为 3 张卡片：
