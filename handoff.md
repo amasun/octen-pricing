@@ -203,7 +203,7 @@ pnpm build
         - 名称标签：统一采用等宽字体 `font-['JetBrains_Mono',monospace]` 与二级暗色 `text-[#57575E]`；
         - 金额数值：统一采用等宽数字 `font-['JetBrains_Mono',monospace] font-medium text-[#100F09] tabular-nums`；
         - 免费额度/特权（Search & Extract）：统一采用 `text-[#039855] font-medium`；
-        - 附加说明（`text / visual` 图标化）：统一采用专用 11×11px 矢量图标替代文字，内联标注在每行金额后方 `(<TextTokenIcon /> / <VisualTokenIcon />)`，兼具极简与直观性；
+        - 附加说明（`text / visual` 图标化与外挂排版）：统一采用专用 11×11px 矢量图标替代文字，内联标注在每行金额后方 `(<TextTokenIcon /> / <VisualTokenIcon />)`；通过绝对外挂排版（`absolute left-full ml-1.5`）确保图标不挤占金额位置，使 `$0.05 / $0.12` 与上方所有模型金额（`$0.01`、`$0.04`、`$0.07` 等）保持绝对右对齐；
         - 无详情占位符：统一使用标准破折号 `—`（`text-[#9C9CA4]`）。
       - **单元格与移动端卡片完全拉齐**：移动端自适应卡片与桌面端表格均遵循同一设计系统规范。
     - **价格与费率字体全量统一为 JetBrains Mono (Price Typography Standardized to JetBrains Mono)**：
