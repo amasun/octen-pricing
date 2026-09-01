@@ -462,14 +462,33 @@ function PayAsYouGoCard() {
   );
 }
 
+const STREAM_PARTICLES = [
+  { id: 1, y: -13, size: 3, dur: "1.6s", delay: "0.0s", opacity: 0.95 },
+  { id: 2, y: -7, size: 2.5, dur: "2.1s", delay: "0.35s", opacity: 0.85 },
+  { id: 3, y: 0, size: 3.5, dur: "1.5s", delay: "0.75s", opacity: 1 },
+  { id: 4, y: 7, size: 2, dur: "2.3s", delay: "1.15s", opacity: 0.75 },
+  { id: 5, y: 13, size: 3, dur: "1.8s", delay: "0.2s", opacity: 0.9 },
+  { id: 6, y: -10, size: 4, dur: "1.6s", delay: "1.45s", opacity: 1 },
+  { id: 7, y: -3, size: 2, dur: "2.0s", delay: "0.6s", opacity: 0.8 },
+  { id: 8, y: 4, size: 3, dur: "1.9s", delay: "0.95s", opacity: 0.95 },
+  { id: 9, y: 10, size: 2.5, dur: "1.7s", delay: "1.65s", opacity: 0.85 },
+  { id: 10, y: -15, size: 2, dur: "2.4s", delay: "0.25s", opacity: 0.7 },
+  { id: 11, y: -6, size: 3.5, dur: "1.55s", delay: "1.25s", opacity: 0.95 },
+  { id: 12, y: 1, size: 2.5, dur: "2.2s", delay: "1.85s", opacity: 0.85 },
+  { id: 13, y: 8, size: 4, dur: "1.45s", delay: "0.5s", opacity: 1 },
+  { id: 14, y: 14, size: 2, dur: "2.0s", delay: "1.05s", opacity: 0.75 },
+  { id: 15, y: -4, size: 3, dur: "1.8s", delay: "2.05s", opacity: 0.9 },
+  { id: 16, y: 5, size: 2.5, dur: "1.7s", delay: "0.85s", opacity: 0.85 },
+];
+
 function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) {
   return (
-    <div className="h-[180px] relative rounded-[16px] shrink-0 w-full overflow-hidden bg-black border border-[#2a2a2a] flex items-center justify-center isolate">
+    <div className="h-[180px] relative rounded-[16px] shrink-0 w-full overflow-hidden bg-black border border-[#2a2a2a] flex items-center justify-center isolate select-none">
       {/* Background radial glow */}
       <div 
-        className={`absolute inset-0 transition-opacity duration-500 pointer-events-none ${isHovered ? "opacity-90" : "opacity-50"}`}
+        className={`absolute inset-0 transition-opacity duration-500 pointer-events-none ${isHovered ? "opacity-95" : "opacity-60"}`}
         style={{
-          background: "radial-gradient(circle at 50% 50%, rgba(112, 254, 126, 0.18) 0%, rgba(0, 163, 255, 0.08) 50%, rgba(0, 0, 0, 0) 75%)"
+          background: "radial-gradient(circle at 50% 50%, rgba(112, 254, 126, 0.22) 0%, rgba(3, 152, 85, 0.08) 45%, rgba(0, 0, 0, 0) 75%)"
         }}
       />
       {/* Cyber Grid */}
@@ -481,10 +500,11 @@ function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) 
         }}
       />
 
-      <svg className="w-full h-full max-h-[160px] pointer-events-none relative z-10" viewBox="0 0 320 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* SVG Canvas for Background Grid Tracks, Lines, and Animated Beams */}
+      <svg className="w-full h-full max-h-[180px] pointer-events-none absolute inset-0 z-10" viewBox="0 0 320 160" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <filter id="pipeGlowD" x="-30%" y="-30%" width="160%" height="160%">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="blur" />
+          <filter id="neonBeamGlow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur" />
             <feMerge>
               <feMergeNode in="blur" />
               <feMergeNode in="SourceGraphic" />
@@ -492,46 +512,107 @@ function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) 
           </filter>
         </defs>
 
-        {/* Dual Dedicated Optical Fiber Pipelines */}
-        {/* Pipeline 1: Top Direct Channel (Slack & VIP Support) */}
-        <path d="M40 50H120C135 50 145 65 160 65C175 65 185 50 200 50H280" stroke="#1E3A2B" strokeWidth="6" strokeLinecap="round"/>
-        <path d="M40 50H120C135 50 145 65 160 65C175 65 185 50 200 50H280" stroke="#039855" strokeWidth="2" strokeDasharray="6 6" className={isHovered ? "svg-flow-right" : ""}/>
-        
-        {/* Pipeline 2: Bottom Dedicated High-Throughput Pipe (1M+ QPS & Custom Data) */}
-        <path d="M40 110H120C135 110 145 95 160 95C175 95 185 110 200 110H280" stroke="#1E3A2B" strokeWidth="6" strokeLinecap="round"/>
-        <path d="M40 110H120C135 110 145 95 160 95C175 95 185 110 200 110H280" stroke="#70FE7E" strokeWidth="2" strokeDasharray="8 4" className={isHovered ? "svg-flow-left" : ""}/>
+        {/* Left Side: 4 Horizontal Ghost Dashed Data Tracks (from Data Box to Octen Engine) */}
+        <path d="M72 66H132" stroke="#163826" strokeWidth="1.2" strokeDasharray="3 3" />
+        <path d="M72 74H132" stroke="#163826" strokeWidth="1.2" strokeDasharray="3 3" />
+        <path d="M72 82H132" stroke="#163826" strokeWidth="1.2" strokeDasharray="3 3" />
+        <path d="M72 90H132" stroke="#163826" strokeWidth="1.2" strokeDasharray="3 3" />
 
-        {/* Left Endpoint: Enterprise Private Network */}
-        <g transform="translate(30, 40)">
-          <rect width="20" height="20" rx="6" fill="#0C1B13" stroke="#70FE7E" strokeWidth="1.2" />
-          <path d="M5 10H15M10 5V15" stroke="#70FE7E" strokeWidth="1.2"/>
-        </g>
-        <g transform="translate(30, 100)">
-          <rect width="20" height="20" rx="6" fill="#0C1B13" stroke="#039855" strokeWidth="1.2" />
-          <circle cx="10" cy="10" r="4" fill="#039855"/>
-        </g>
+        {/* Right Side: Dual High-Speed Pipelines Moving in OPPOSITE Directions */}
+        {/* Top Channel: Flows LEFT-TO-RIGHT (Octen -> Dedicated Support) */}
+        <path d="M188 72H246" stroke="#142B1F" strokeWidth="2.5" strokeLinecap="round" />
+        <path d="M188 72H246" stroke="#70FE7E" strokeWidth="2" strokeLinecap="round" className="animate-dual-flow-right" filter="url(#neonBeamGlow)" />
 
-        {/* Right Endpoint: Private Cloud & Slack Channel */}
-        <g transform="translate(270, 40)">
-          <rect width="20" height="20" rx="6" fill="#0C1B13" stroke="#70FE7E" strokeWidth="1.2" />
-          <circle cx="10" cy="10" r="4" fill="#70FE7E"/>
-        </g>
-        <g transform="translate(270, 100)">
-          <rect width="20" height="20" rx="6" fill="#0C1B13" stroke="#039855" strokeWidth="1.2" />
-          <path d="M6 10H14M10 6V14" stroke="#039855" strokeWidth="1.2"/>
-        </g>
-
-        {/* Central Isolated Gateway Hub */}
-        <g transform="translate(136, 56)" filter="url(#pipeGlowD)">
-          <rect width="48" height="48" rx="12" fill="#0A160F" stroke="#70FE7E" strokeWidth="1.5"/>
-          {/* Inner Vault / Lock Core */}
-          <rect x="10" y="10" width="28" height="28" rx="8" fill="#132B1E" stroke="#529977" strokeWidth="1"/>
-          <path d="M20 22V19C20 16.7909 21.7909 15 24 15C26.2091 15 28 16.7909 28 19V22M18 22H30V32H18V22Z" stroke="#70FE7E" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
-        </g>
+        {/* Bottom Channel: Flows RIGHT-TO-LEFT (Dedicated Support -> Octen) */}
+        <path d="M188 84H246" stroke="#142B1F" strokeWidth="2.5" strokeLinecap="round" />
+        <path d="M188 84H246" stroke="#70FE7E" strokeWidth="2" strokeLinecap="round" className="animate-dual-flow-left" filter="url(#neonBeamGlow)" />
       </svg>
 
+      {/* Dynamic Data Particles Ingestion Stream (Streaming continuously from Left Data Box into Center Octen Hub) */}
+      <div className="absolute left-[72px] top-[78px] w-[60px] h-[36px] -translate-y-1/2 pointer-events-none z-15 overflow-visible">
+        {STREAM_PARTICLES.map((dot) => (
+          <div
+            key={dot.id}
+            className="absolute rounded-full bg-[#70FE7E] shadow-[0_0_8px_#70FE7E] animate-dot-stream"
+            style={{
+              width: `${dot.size}px`,
+              height: `${dot.size}px`,
+              left: "0px",
+              top: `calc(50% + ${dot.y}px)`,
+              // @ts-expect-error Custom CSS properties
+              "--stream-x": "60px",
+              "--jitter-y": `${dot.y * 0.4}px`,
+              "--stream-dur": dot.dur,
+              "--stream-delay": dot.delay,
+              opacity: dot.opacity,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* 1. LEFT BOX: Custom Data / Database Box with Expanding Ripple Wave Halo */}
+      <div className="absolute left-[54px] top-[78px] -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center">
+        {/* Continuous Expanding Ripple Rings */}
+        <div className="absolute size-[40px] rounded-[10px] border border-[#70FE7E] pointer-events-none animate-ripple-1" />
+        <div className="absolute size-[40px] rounded-[10px] border border-[#70FE7E] pointer-events-none animate-ripple-2" />
+        <div className="absolute size-[40px] rounded-[10px] border border-[#70FE7E] pointer-events-none animate-ripple-3" />
+
+        {/* Inner Solid Box */}
+        <div className="size-[40px] rounded-[10px] bg-[#141212] border-2 border-[rgba(112,254,126,0.55)] flex items-center justify-center relative z-10 shadow-[0px_0px_0px_6px_rgba(112,254,126,0.18)]">
+          {/* Silver Database Cylinder Icon */}
+          <svg className="size-[20px]" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 2.5C6.13 2.5 3 3.62 3 5V15C3 16.38 6.13 17.5 10 17.5C13.87 17.5 17 16.38 17 15V5C17 3.62 13.87 2.5 10 2.5ZM15.5 5C15.5 5.55 13.04 6.5 10 6.5C6.96 6.5 4.5 5.55 4.5 5C4.5 4.45 6.96 3.5 10 3.5C13.04 3.5 15.5 4.45 15.5 5ZM4.5 7.82C5.66 8.52 7.64 9 10 9C12.36 9 14.34 8.52 15.5 7.82V9.5C15.5 10.05 13.04 11 10 11C6.96 11 4.5 10.05 4.5 9.5V7.82ZM4.5 12.32C5.66 13.02 7.64 13.5 10 13.5C12.36 13.5 14.34 13.02 15.5 12.32V14.5C15.5 15.05 13.04 16 10 16C6.96 16 4.5 15.05 4.5 14.5V12.32Z" fill="url(#dbSilverGrad)"/>
+            <defs>
+              <linearGradient id="dbSilverGrad" x1="10" y1="2.5" x2="10" y2="17.5" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#FFFFFF" />
+                <stop offset="0.6" stopColor="#E2E8F0" />
+                <stop offset="1" stopColor="#94A3B8" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+
+      {/* 2. CENTER BOX: Octen Engine Core Hub with Glowing Emerald Aura */}
+      <div className="absolute left-1/2 top-[78px] -translate-x-1/2 -translate-y-1/2 z-20">
+        <div className="size-[58px] sm:size-[60px] rounded-[14px] bg-black border border-[#2A3F33] flex items-center justify-center relative overflow-hidden animate-octen-hub">
+          {/* Inner Corner Accent Highlights */}
+          <div className="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_0px_4px_0px_rgba(155,231,181,0.25),inset_0px_-3px_8px_0px_#70fe7e]" />
+          
+          {/* Octen Chip Logo Mark in Neon Emerald Green */}
+          <svg className="size-[32px] relative z-10" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30.3644 21.5498C30.9655 21.5498 31.4532 22.0523 31.4533 22.6719V24.4717C31.4533 25.0914 30.9656 25.5947 30.3644 25.5947H28.9435C28.6536 25.5947 28.3769 25.7127 28.173 25.9229L27.8488 26.2578C27.645 26.4695 27.5296 26.7545 27.5295 27.0518V28.5176C27.5294 29.1372 27.0417 29.6396 26.4406 29.6396H24.6945C24.0936 29.6394 23.6058 29.1371 23.6057 28.5176V26.7178C23.6057 26.0982 24.0936 25.5949 24.6945 25.5947H26.4406C26.7305 25.5947 27.0072 25.4767 27.2111 25.2666C27.415 25.0548 27.5295 24.7691 27.5295 24.4717V22.6719C27.5296 22.0524 28.0175 21.55 28.6183 21.5498H30.3644ZM3.22675 21.5479C3.82786 21.5479 4.31659 22.0512 4.31659 22.6709V24.3867H4.31952C4.31958 24.684 4.43403 24.969 4.63788 25.1807C4.89307 25.4453 5.24034 25.5927 5.60272 25.5928H7.07245C7.67355 25.5928 8.16129 26.0961 8.16132 26.7158V28.5156C8.16132 29.1353 7.67357 29.6387 7.07245 29.6387H5.32635C4.72532 29.6386 4.23749 29.1353 4.23749 28.5156V27.001C4.23749 26.6273 4.09386 26.2706 3.8371 26.0059C3.58187 25.7412 3.23467 25.5928 2.87225 25.5928H1.4826C0.881569 25.5927 0.393802 25.0903 0.393738 24.4707V22.6709C0.393738 22.0512 0.881529 21.5495 1.4826 21.5479H3.22675ZM13.5275 25.5938C14.1289 25.5938 14.6163 26.0959 14.6164 26.7158V28.5146C14.6163 29.1346 14.1289 29.6367 13.5275 29.6367H11.7834C11.182 29.6367 10.6946 29.1346 10.6945 28.5146V26.7158C10.6946 26.0959 11.182 25.5938 11.7834 25.5938H13.5275ZM19.9836 25.5938C20.5848 25.5938 21.0723 26.096 21.0724 26.7158V28.5146C21.0724 29.1345 20.5849 29.6366 19.9836 29.6367H18.2394C17.6381 29.6367 17.1497 29.1346 17.1496 28.5146V26.7158C17.1497 26.0959 17.6381 25.5938 18.2394 25.5938H19.9836ZM21.0959 4.68457C21.697 4.68457 22.1848 5.1879 22.1848 5.80762V7.22266C22.1848 7.56365 22.3164 7.89107 22.549 8.13086L22.7131 8.30078C22.9457 8.54057 23.2637 8.67578 23.593 8.67578H24.923C25.5242 8.67578 26.0119 9.17912 26.0119 9.79883V20.8555L26.0148 20.8584C26.0147 21.478 25.527 21.9805 24.926 21.9805H9.33221C8.73116 21.9805 8.24344 21.478 8.24335 20.8584V19.3164C8.24327 19.0176 8.12784 18.7326 7.92401 18.5225L7.9201 18.5176C7.35757 18.2217 7.24285 18.0557 6.83807 18.0557H5.52167C4.92055 18.0557 4.43182 17.5523 4.43182 16.9326V5.80762C4.43182 5.1879 4.92055 4.68457 5.52167 4.68457H21.0959ZM9.36053 8.64258C8.75944 8.64259 8.27169 9.14593 8.27167 9.76662V16.5781C8.27174 16.9969 8.43205 17.3966 8.71893 17.6924C8.92423 17.9025 9.20016 18.0214 9.48846 18.0215H21.0851C21.6863 18.0215 22.174 17.5182 22.174 16.8984V9.92578C22.1739 9.58504 22.0431 9.25825 21.8107 9.01855H21.8117C21.5776 8.77877 21.2601 8.64258 20.9308 8.64258H9.36053ZM13.0021 11.5986C13.6034 11.5986 14.0908 12.1009 14.091 12.7207V14.2939C14.0909 14.9139 13.6035 15.416 13.0021 15.416H11.4767C10.8754 15.416 10.388 14.9139 10.3879 14.2939V12.7207C10.3881 12.1009 10.8755 11.5986 11.2012 11.5986H13.0021ZM18.8996 11.5986C19.5009 11.5986 19.9883 12.1009 19.9885 12.7207V14.2939C19.9884 14.9139 19.5009 15.416 18.8996 15.416H17.3742C16.773 15.4158 16.2854 14.9138 16.2853 14.2939V12.7207C16.2856 12.101 16.7731 11.5988 17.3742 11.5986H18.8996Z" fill="#70FE7E"/>
+          </svg>
+        </div>
+      </div>
+
+      {/* 3. RIGHT BOX: Dedicated Support / Fluent Person Chat Box with Expanding Ripple Wave Halo */}
+      <div className="absolute left-[266px] top-[78px] -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center">
+        {/* Continuous Expanding Ripple Rings */}
+        <div className="absolute size-[40px] rounded-[10px] border border-[#70FE7E] pointer-events-none animate-ripple-1" />
+        <div className="absolute size-[40px] rounded-[10px] border border-[#70FE7E] pointer-events-none animate-ripple-2" />
+        <div className="absolute size-[40px] rounded-[10px] border border-[#70FE7E] pointer-events-none animate-ripple-3" />
+
+        {/* Inner Solid Box */}
+        <div className="size-[40px] rounded-[10px] bg-[#141212] border-2 border-[rgba(112,254,126,0.55)] flex items-center justify-center relative z-10 shadow-[0px_0px_0px_6px_rgba(112,254,126,0.18)]">
+          {/* Person Chat Icon */}
+          <svg className="size-[20px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C9.79086 2 8 3.79086 8 6C8 8.20914 9.79086 10 12 10C14.2091 10 16 8.20914 16 6C16 3.79086 14.2091 2 12 2Z" fill="url(#userGradSilver)"/>
+            <path d="M4 17C4 14.3478 7.58172 13 12 13C12.7554 13 13.4865 13.0422 14.1755 13.1238C13.4357 14.0759 13 15.2536 13 16.5333C13 17.0396 13.072 17.5284 13.2064 17.9892C11.5369 18.5292 9.06648 19 6 19C4.89543 19 4 18.1046 4 17Z" fill="url(#userGradSilver)"/>
+            <path d="M18 13.5C15.5147 13.5 13.5 15.5147 13.5 18C13.5 18.8475 13.7347 19.6406 14.1417 20.3167L13.5414 22.3853C13.4287 22.7735 13.7844 23.1248 14.1718 23.0075L16.2081 22.3908C16.7644 22.4616 17.3304 22.5 18 22.5C20.4853 22.5 22.5 20.4853 22.5 18C22.5 15.5147 20.4853 13.5 18 13.5ZM16.5 16.5H19.5C19.7761 16.5 20 16.7239 20 17C20 17.2761 19.7761 17.5 19.5 17.5H16.5C16.2239 17.5 16 17.2761 16 17C16 16.7239 16.2239 16.5 16.5 16.5ZM19.5 19.5H16.5C16.2239 19.5 16 19.2761 16 19C16 18.7239 16.2239 18.5 16.5 18.5H19.5C19.7761 18.5 20 18.7239 20 19C20 19.2761 19.7761 19.5 19.5 19.5Z" fill="url(#userGradSilver)"/>
+            <defs>
+              <linearGradient id="userGradSilver" x1="12" y1="2" x2="12" y2="23" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#FFFFFF"/>
+                <stop offset="0.6" stopColor="#E2E8F0"/>
+                <stop offset="1" stopColor="#94A3B8"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+
       {/* Bottom Tag */}
-      <div className="absolute bottom-2.5 z-20 flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-black/70 border border-[#2D3748] backdrop-blur-xs">
+      <div className="absolute bottom-2.5 z-25 flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-black/75 border border-[#2D3748] backdrop-blur-xs">
         <span className="size-[5px] rounded-full bg-[#70FE7E] animate-pulse" />
         <span className="font-['JetBrains_Mono',monospace] text-[10px] text-[#70FE7E] font-medium tracking-wider uppercase">
           ENTERPRISE LAYER
