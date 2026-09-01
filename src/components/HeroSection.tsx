@@ -487,64 +487,90 @@ function PayAsYouGoCard() {
   );
 }
 
+function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) {
+  return (
+    <div className="w-full h-[140px] sm:h-[150px] bg-[#000000] rounded-[16px] overflow-hidden relative flex items-center justify-center isolate">
+      {/* Background radial glow */}
+      <div 
+        className={`absolute inset-0 transition-opacity duration-500 pointer-events-none ${isHovered ? "opacity-90" : "opacity-50"}`}
+        style={{
+          background: "radial-gradient(circle at 50% 50%, rgba(112, 254, 126, 0.15) 0%, rgba(0, 0, 0, 0) 70%)"
+        }}
+      />
+
+      {/* Cyber Grid pattern */}
+      <div 
+        className="absolute inset-0 opacity-20 pointer-events-none"
+        style={{
+          backgroundImage: "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
+          backgroundSize: "20px 20px"
+        }}
+      />
+
+      {/* Center Dynamic Placeholder Hologram Icon */}
+      <div className="relative z-10 flex flex-col items-center justify-center gap-2">
+        <div className={`size-[54px] rounded-[16px] bg-[#101318] border border-[#2D3748] flex items-center justify-center shadow-[0_0_24px_rgba(112,254,126,0.18)] transition-all duration-300 ${isHovered ? "scale-105 border-[#70FE7E]/50 shadow-[0_0_32px_rgba(112,254,126,0.35)]" : ""}`}>
+          <svg className="size-[26px] text-[#70FE7E]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </div>
+        <div className="flex items-center gap-1.5">
+          <span className="inline-block size-[6px] rounded-full bg-[#70FE7E] animate-pulse" />
+          <span className="font-['JetBrains_Mono',monospace] text-[11px] text-[#70FE7E] font-medium tracking-wide">
+            LAYER 03 &bull; PLACEHOLDER
+          </span>
+        </div>
+      </div>
+
+      <div className="absolute inset-0 pointer-events-none rounded-[16px] z-20 shadow-[inset_-30px_0px_30px_0px_#000000,inset_20px_0px_30px_0px_#000000]" />
+    </div>
+  );
+}
+
+function PlaceholderCard() {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div 
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="w-full md:flex-[1_0_0] md:min-w-px relative rounded-[24px] bg-white border border-[#E5E7EB] hover:border-[#D1D5DB] hover:-translate-y-[3px] hover:shadow-[0px_12px_28px_rgba(0,0,0,0.08)] transition-all duration-300 ease-out block overflow-hidden cursor-pointer select-text no-underline text-inherit"
+    >
+      <div className="flex flex-col items-center justify-center size-full p-[6px] pb-[24px] relative z-10 select-text">
+        <PlaceholderCardGraphic isHovered={isHovered} />
+        <div className="content-stretch flex flex-col gap-[6px] items-center pb-[14px] pt-[20px] relative shrink-0 text-center w-full select-text">
+          <p className="font-['Fraunces',serif] font-bold text-[20px] sm:text-[22px] text-[#09090b] leading-[1.2] py-[2px] w-full text-center relative shrink-0 select-text">
+            Custom Solutions
+          </p>
+          <p className="font-['DM_Sans',sans-serif] font-normal text-[#515151] relative shrink-0 text-[14px] whitespace-nowrap select-text">
+            Enterprise throughput &amp; dedicated SLA
+          </p>
+        </div>
+        <button
+          type="button"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            window.open("mailto:support@octen.ai?subject=Octen%20Enterprise%20Inquiry", "_blank", "noopener,noreferrer");
+          }}
+          className="inline-flex items-center justify-center h-[36px] px-[20px] bg-[#100F09] hover:bg-[#2A2A28] active:scale-[0.97] text-white font-['DM_Sans',sans-serif] font-medium text-[14px] rounded-full transition-all duration-150 shadow-xs cursor-pointer relative z-20"
+        >
+          Contact Sales
+        </button>
+      </div>
+    </div>
+  );
+}
+
 function PlusSeparator() {
   return (
-    <div className="relative md:absolute md:-translate-x-1/2 md:-translate-y-1/2 md:left-1/2 md:top-1/2 mx-auto shrink-0 z-20 pointer-events-none flex items-center justify-center h-[28px] md:h-[38px] w-full md:w-[38px] md:size-[38px] my-1 md:my-0">
-      {/* Desktop Vertical connecting line per Figma spec */}
-      <svg 
-        className="absolute hidden md:block pointer-events-none z-0 overflow-visible" 
-        style={{
-          width: "1px",
-          height: "259.21px",
-          left: "18.75px",
-          top: "-110.54px",
-          opacity: 0.6
-        }}
-        viewBox="0 0 1 260" 
-        fill="none"
-      >
-        <defs>
-          <linearGradient id="vector1_line_gradient" x1="0" y1="0" x2="0" y2="259.21" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#000000" stopOpacity="0"/>
-            <stop offset="0.3" stopColor="#000000" stopOpacity="0.5"/>
-            <stop offset="0.5" stopColor="#000000" stopOpacity="0.9"/>
-            <stop offset="0.7" stopColor="#000000" stopOpacity="0.5"/>
-            <stop offset="1" stopColor="#000000" stopOpacity="0"/>
-          </linearGradient>
-        </defs>
-        <line x1="0.5" y1="0" x2="0.5" y2="259.21" stroke="url(#vector1_line_gradient)" strokeWidth="1" />
-      </svg>
-
-      {/* Mobile Horizontal connecting line passing through plus icon */}
-      <svg 
-        className="absolute block md:hidden pointer-events-none z-0 overflow-visible" 
-        style={{
-          width: "240px",
-          height: "1px",
-          left: "50%",
-          top: "50%",
-          transform: "translate(-50%, -50%)",
-          opacity: 0.6
-        }}
-        viewBox="0 0 240 1" 
-        fill="none"
-      >
-        <defs>
-          <linearGradient id="vector1_line_gradient_mobile_h" x1="0" y1="0" x2="240" y2="0" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#000000" stopOpacity="0"/>
-            <stop offset="0.2" stopColor="#000000" stopOpacity="0.5"/>
-            <stop offset="0.5" stopColor="#000000" stopOpacity="0.9"/>
-            <stop offset="0.8" stopColor="#000000" stopOpacity="0.5"/>
-            <stop offset="1" stopColor="#000000" stopOpacity="0"/>
-          </linearGradient>
-        </defs>
-        <line x1="0" y1="0.5" x2="240" y2="0.5" stroke="url(#vector1_line_gradient_mobile_h)" strokeWidth="1" />
-      </svg>
-
+    <div className="shrink-0 z-20 pointer-events-none flex items-center justify-center self-center h-[28px] md:h-[38px] w-full md:w-auto my-1 md:my-0">
       {/* Center Plus Icon Button */}
-      <div className="size-[20px] pointer-events-auto relative z-10">
-        <div className="bg-black rounded-full size-[20px] border border-black flex items-center justify-center shadow-sm">
-          <svg className="size-[11px]" viewBox="0 0 12 12" fill="none">
+      <div className="size-[22px] pointer-events-auto relative z-10">
+        <div className="bg-black rounded-full size-[22px] border border-black flex items-center justify-center shadow-xs">
+          <svg className="size-[12px]" viewBox="0 0 12 12" fill="none">
             <path d="M6 1.5v9M1.5 6h9" stroke="#70FE7E" strokeWidth="1.6" strokeLinecap="round" />
           </svg>
         </div>
@@ -589,11 +615,13 @@ function HowOctenWorksSection() {
         </p>
       </div>
 
-      {/* Entry Cards Container (Pay as you go on LEFT, QPS Plan on RIGHT) */}
-      <div className="content-stretch flex flex-col md:flex-row gap-[10px] md:gap-[34px] items-center justify-center relative shrink-0 w-full max-w-[960px]">
+      {/* Entry Cards Container (3 Cards on Desktop, 1 Column on Mobile) */}
+      <div className="content-stretch flex flex-col md:flex-row gap-[12px] md:gap-[16px] lg:gap-[20px] items-stretch justify-center relative shrink-0 w-full max-w-[1280px]">
         <PayAsYouGoCard />
         <PlusSeparator />
         <QpsPlanCard />
+        <PlusSeparator />
+        <PlaceholderCard />
       </div>
     </div>
   );
