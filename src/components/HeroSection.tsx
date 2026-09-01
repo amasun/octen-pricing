@@ -72,7 +72,7 @@ function OctenCenterHub({ isHovered = false }: { isHovered?: boolean }) {
 
 function QpsCardGraphic({ isHovered = false }: { isHovered?: boolean }) {
   return (
-    <div className="h-[180px] relative rounded-[16px] shrink-0 w-full overflow-hidden bg-black border border-[#2a2a2a] flex items-center justify-center">
+    <div className="h-[180px] relative rounded-[16px] shrink-0 w-full overflow-hidden bg-black border border-[#2a2a2a] flex items-center justify-center isolate select-none">
       <div className="absolute inset-0 size-full pointer-events-none opacity-85">
         <CurvedLightTrailsCanvas isAnimating={isHovered} fallbackSrc={imgShader2} />
       </div>
@@ -84,7 +84,7 @@ function QpsCardGraphic({ isHovered = false }: { isHovered?: boolean }) {
 
 function PayAsYouGoGraphic({ isHovered = false }: { isHovered?: boolean }) {
   return (
-    <div className="h-[180px] relative rounded-[16px] shrink-0 w-full bg-black border border-[#2a2a2a] flex items-center justify-center overflow-hidden">
+    <div className="h-[180px] relative rounded-[16px] shrink-0 w-full overflow-hidden bg-black border border-[#2a2a2a] flex items-center justify-center isolate select-none">
       <svg className="w-full h-auto max-h-[140px] pointer-events-none" overflow="visible" width="451" height="140" viewBox="0 0 451 140" fill="none" xmlns="http://www.w3.org/2000/svg">
         {/* Base Static Circuit Paths */}
         <path d="M-2.67245 17.9568H122.631 C138.667 17.9568, 138.667 51.736, 154.702 51.736H220.307" stroke="#38564F"/>
