@@ -723,10 +723,10 @@ function PlanCTable() {
                   <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
                   <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
                 </div>
-                <div className="flex items-center gap-1 text-[12px] text-[#57575E]">
-                  <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09]">$0.5</span>
-                  <span className="text-[#8B8B8B]">/ 1k results</span>
-                  <span className="text-[#8B8B8B]">(full content)</span>
+                <div className="flex items-center gap-1.5 text-[14px]">
+                  <span className="font-['JetBrains_Mono',monospace] font-bold text-[16px] text-[#0A0A0A] tabular-nums">$0.5</span>
+                  <span className="text-[14px] text-[#8B8B8B]">/ 1k results</span>
+                  <span className="text-[14px] text-[#8B8B8B]">(full content)</span>
                 </div>
               </div>
               <div className="text-[13px] text-[#039855] font-medium leading-[20px]">
@@ -763,10 +763,10 @@ function PlanCTable() {
                   <span className="text-[14px] text-[#9C9CA4] line-through">$5</span>
                   <span className="text-[14px] text-[#8B8B8B]">/ 1k sub-queries</span>
                 </div>
-                <div className="flex items-center gap-1 text-[12px] text-[#57575E]">
-                  <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09]">$0.5</span>
-                  <span className="text-[#8B8B8B]">/ 1k results</span>
-                  <span className="text-[#8B8B8B]">(full content)</span>
+                <div className="flex items-center gap-1.5 text-[14px]">
+                  <span className="font-['JetBrains_Mono',monospace] font-bold text-[16px] text-[#0A0A0A] tabular-nums">$0.5</span>
+                  <span className="text-[14px] text-[#8B8B8B]">/ 1k results</span>
+                  <span className="text-[14px] text-[#8B8B8B]">(full content)</span>
                 </div>
               </div>
               <div className="text-[13px] text-[#039855] font-medium leading-[20px]">
@@ -950,14 +950,14 @@ function PlanCTable() {
               </div>
               <div className="flex flex-col gap-1 bg-[#F8F8F5] p-[10px] rounded-[10px] border border-[#EAEAE5] text-[14px]">
                 <div className="flex items-baseline gap-1.5">
-                  <span className="font-bold text-[#0A0A0A] tabular-nums">$0.05 – $0.10</span>
-                  <span className="text-[#8B8B8B] text-[13px]">/ 1M tokens</span>
-                  <span className="text-[#8B8B8B] text-[12px]">(text)</span>
+                  <span className="font-bold text-[16px] text-[#0A0A0A] tabular-nums">$0.05 – $0.10</span>
+                  <span className="text-[14px] text-[#8B8B8B]">/ 1M tokens</span>
+                  <span className="text-[14px] text-[#8B8B8B]">(text)</span>
                 </div>
                 <div className="flex items-baseline gap-1.5">
-                  <span className="font-bold text-[#0A0A0A] tabular-nums">$0.12 – $0.25</span>
-                  <span className="text-[#8B8B8B] text-[13px]">/ 1M tokens</span>
-                  <span className="text-[#8B8B8B] text-[12px]">(visual)</span>
+                  <span className="font-bold text-[16px] text-[#0A0A0A] tabular-nums">$0.12 – $0.25</span>
+                  <span className="text-[14px] text-[#8B8B8B]">/ 1M tokens</span>
+                  <span className="text-[14px] text-[#8B8B8B]">(visual)</span>
                 </div>
               </div>
               <div className="bg-[#F8F8F5] p-[12px] rounded-[10px] border border-[#EAEAE5] flex flex-col gap-[8px] text-[13px]">
@@ -1186,10 +1186,10 @@ function PlanCTable() {
                     <span className="text-[14px] text-[#8B8B8B]">/ 1k calls</span>
                     <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-bold text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#70FE7E] text-[#100F09] border border-[#70FE7E]">80% Off</span>
                   </div>
-                  <div className="flex items-center gap-1 text-[13px] text-[#57575E]">
-                    <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09]">$0.5</span>
-                    <span className="text-[#8B8B8B]">/ 1k results</span>
-                    <span className="text-[#8B8B8B] text-[12px]">(full content)</span>
+                  <div className="flex items-center gap-1.5 text-[14px]">
+                    <span className="font-['JetBrains_Mono',monospace] font-bold text-[16px] text-[#0A0A0A] tabular-nums">$0.5</span>
+                    <span className="text-[14px] text-[#8B8B8B]">/ 1k results</span>
+                    <span className="text-[14px] text-[#8B8B8B]">(full content)</span>
                   </div>
                 </div>
               </td>
@@ -1219,10 +1219,10 @@ function PlanCTable() {
                     <span className="text-[14px] text-[#8B8B8B]">/ 1k sub-queries</span>
                     <span className="h-[20px] px-[6px] rounded inline-flex items-center justify-center font-['JetBrains_Mono',monospace] font-bold text-[11px] leading-none tracking-tight shrink-0 box-border bg-[#70FE7E] text-[#100F09] border border-[#70FE7E]">80% Off</span>
                   </div>
-                  <div className="flex items-center gap-1 text-[13px] text-[#57575E]">
-                    <span className="font-['JetBrains_Mono',monospace] font-medium text-[#100F09]">$0.5</span>
-                    <span className="text-[#8B8B8B]">/ 1k results</span>
-                    <span className="text-[#8B8B8B] text-[12px]">(full content)</span>
+                  <div className="flex items-center gap-1.5 text-[14px]">
+                    <span className="font-['JetBrains_Mono',monospace] font-bold text-[16px] text-[#0A0A0A] tabular-nums">$0.5</span>
+                    <span className="text-[14px] text-[#8B8B8B]">/ 1k results</span>
+                    <span className="text-[14px] text-[#8B8B8B]">(full content)</span>
                   </div>
                 </div>
               </td>
