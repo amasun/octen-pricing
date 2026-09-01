@@ -47,14 +47,20 @@ function HeroHeader() {
   );
 }
 
-function OctenCenterHub() {
+function OctenCenterHub({ isHovered = false }: { isHovered?: boolean }) {
   return (
-    <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 top-1/2 size-[60px] z-20 pointer-events-none flex items-center justify-center">
-      {/* Ambient soft outer neon halo behind the hub */}
-      <div className="absolute -inset-4 rounded-full bg-[#70FE7E]/30 blur-[20px] pointer-events-none" />
+    <div className={`-translate-x-1/2 -translate-y-1/2 absolute left-1/2 top-1/2 size-[60px] z-20 pointer-events-none flex items-center justify-center transition-transform duration-500 ease-out ${isHovered ? "scale-[1.08]" : "scale-100"}`}>
+      {/* Ambient soft outer neon halo behind the hub - only appears on hover */}
+      <div 
+        className={`absolute -inset-4 rounded-full bg-[#70FE7E]/35 blur-[22px] pointer-events-none transition-opacity duration-500 ease-out ${isHovered ? "opacity-100" : "opacity-0"}`} 
+      />
 
       {/* Solid Center Hub Box */}
-      <div className="size-[60px] rounded-[14px] bg-black shadow-[0px_0px_40px_0px_rgba(112,254,126,0.61)] flex items-center justify-center relative overflow-hidden">
+      <div className={`size-[60px] rounded-[14px] bg-black flex items-center justify-center relative overflow-hidden transition-all duration-500 ease-out ${
+        isHovered 
+          ? "shadow-[0px_0px_40px_0px_rgba(112,254,126,0.65)]" 
+          : "shadow-none"
+      }`}>
         <svg className="w-[32px] h-[26px]" fill="none" viewBox="0 0 32 26">
           <path d={svgPaths.p78eff80} fill="#70FE7E" />
         </svg>
@@ -70,7 +76,7 @@ function QpsCardGraphic({ isHovered = false }: { isHovered?: boolean }) {
       <div className="absolute inset-0 size-full pointer-events-none opacity-85">
         <CurvedLightTrailsCanvas isAnimating={isHovered} fallbackSrc={imgShader2} />
       </div>
-      <OctenCenterHub />
+      <OctenCenterHub isHovered={isHovered} />
       <div className="absolute inset-0 pointer-events-none rounded-[16px] z-20 shadow-[inset_-30px_0px_30px_0px_#000000,inset_20px_0px_30px_0px_#000000]" />
     </div>
   );
@@ -288,7 +294,7 @@ function PayAsYouGoGraphic({ isHovered = false }: { isHovered?: boolean }) {
           </clipPath>
         </defs>
       </svg>
-      <OctenCenterHub />
+      <OctenCenterHub isHovered={isHovered} />
       <div className="absolute inset-0 pointer-events-none rounded-[16px] z-20 shadow-[inset_-30px_0px_30px_0px_#000000,inset_20px_0px_30px_0px_#000000]" />
     </div>
   );
@@ -463,7 +469,7 @@ function PlaceholderCardGraphic({ isHovered = false }: { isHovered?: boolean }) 
       </div>
 
       {/* 2. CENTER OCTEN HUB: Figma node 13519:937 (left: calc(50%-0.5px), top: 59px, size: 60px) */}
-      <OctenCenterHub />
+      <OctenCenterHub isHovered={isHovered} />
 
       {/* CENTER-TO-RIGHT DUAL OPPOSITE CHANNELS (Figma Vector 12, 14, 15: top: 86.76px & 96.76px, width: 85-88px) */}
       <div className="absolute left-[calc(50%+30px)] right-[76.6px] sm:right-auto top-0 bottom-0 sm:w-[88px] pointer-events-none z-10">
