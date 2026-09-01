@@ -80,17 +80,18 @@ function QpsCardGraphic({ isHovered = false }: { isHovered?: boolean }) {
           background: "radial-gradient(circle at 50% 50%, rgba(112, 254, 126, 0.22) 0%, rgba(3, 152, 85, 0.08) 45%, rgba(0, 0, 0, 0) 75%)"
         }}
       />
-      {/* 20px Subtle Grid Texture (1px stroke, 0.1 opacity) */}
+      {/* Curved Light Trails Shader / Fallback (Screen blend mode ensures zero dark occlusions) */}
+      <div className="absolute inset-0 size-full pointer-events-none opacity-85 z-10" style={{ mixBlendMode: "screen" }}>
+        <CurvedLightTrailsCanvas isAnimating={isHovered} fallbackSrc={imgShader2} />
+      </div>
+      {/* 20px Subtle Grid Texture (1px stroke, 0.1 opacity) placed on top of shader */}
       <div 
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 pointer-events-none z-10"
         style={{
           backgroundImage: "linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px)",
           backgroundSize: "20px 20px"
         }}
       />
-      <div className="absolute inset-0 size-full pointer-events-none opacity-85 z-10">
-        <CurvedLightTrailsCanvas isAnimating={isHovered} fallbackSrc={imgShader2} />
-      </div>
       <OctenCenterHub isHovered={isHovered} />
       <div className="absolute inset-0 pointer-events-none rounded-[16px] z-20 shadow-[inset_-30px_0px_30px_0px_#000000,inset_20px_0px_30px_0px_#000000]" />
     </div>
