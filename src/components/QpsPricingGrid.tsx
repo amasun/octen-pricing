@@ -329,7 +329,7 @@ export default function QpsPricingGrid() {
         { text: "Custom data", icon: "check" },
         { text: <><strong className="font-bold">1M+ QPS</strong></>, icon: "branch" },
         { text: "Zero Data Retention (ZDR)", icon: "zdr" },
-        { text: "Custom SLA", icon: "check" },
+        { text: "Custom SLA", icon: "flash" },
         { text: "Dedicated Slack channel support", icon: "slack" },
         { text: "Volume discounts", icon: "chart" }
       ],
