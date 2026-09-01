@@ -232,7 +232,7 @@ body, #root, #root > div, [data-name="Octen AI | Infrastructure Pricing"] {
   animation: metallicWipe 0.55s cubic-bezier(0.4, 0, 0.2, 1) 1 forwards !important;
 }
 
-/* Enterprise Plan Card 3 Dynamic Animations - Pure Shadow Linear Expanding Ripples (0 -> 0.5 -> 0.3 -> 0) */
+/* Enterprise Plan Card 3 Dynamic Animations - Pure Shadow Linear Expanding Ripples (0 -> 0.3 -> 0.3 -> 0) */
 @keyframes shadowRippleWave {
   0% {
     box-shadow: 0 0 0 0px rgba(112, 254, 126, 0.85), 0 0 4px 0px rgba(112, 254, 126, 0.6);
@@ -240,7 +240,7 @@ body, #root, #root > div, [data-name="Octen AI | Infrastructure Pricing"] {
   }
   20% {
     box-shadow: 0 0 0 10px rgba(112, 254, 126, 0.85), 0 0 18px 4px rgba(112, 254, 126, 0.6);
-    opacity: 0.5;
+    opacity: 0.3;
   }
   60% {
     box-shadow: 0 0 0 30px rgba(112, 254, 126, 0.85), 0 0 45px 12px rgba(112, 254, 126, 0.6);
