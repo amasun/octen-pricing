@@ -214,8 +214,9 @@ pnpm build
         - 计费单位（`/ 1k calls`, `/ 1M tokens` 等）：`14px`（`text-[14px] text-[#8B8B8B]`）
         - 次级规格价格（Full content, Text, Visual）：`16px` 加粗 + `14px` 单位 + `14px` 标签（如 `$0.5 / 1k results (full content)`）
       - **模型名称精简**：移除 `octen-` 前缀（`embedding-0.6b/4b/8b`, `vl-embedding/vl-embedding-large`），排版更紧凑利落。
-    - **四大分类标题字号规范为 18px (Category Header Typography Standardized to 18px)**：
-      - **分类层级鲜明**：`Search`、`Extract`、`Embedding`、`Application` 四大分类在 Plan C 桌面端 Sticky 分类行、移动端自适应卡片顶栏以及 Plan B 外壳头部的标题字号全量统一为 **`18px`**（`font-['DM_Sans',sans-serif] font-bold text-[18px] text-[#100F09]`），与下方的端点名称（16px）和次级辅助说明（12px/14px）形成严谨的三级视觉阶梯。
+    - **四大分类标题字号规范为 18px 与分类图标规范为 20×20 (Category Header Typography & Icon 20×20)**：
+      - **分类层级鲜明**：`Search`、`Extract`、`Embedding`、`Application` 四大分类在 Plan C 桌面端 Sticky 分类行、移动端自适应卡片顶栏以及 Plan B 外壳头部的标题字号全量统一为 **`18px`**（`font-['DM_Sans',sans-serif] font-bold text-[18px] text-[#100F09]`），与下方的端点名称（16px）和次级辅助说明（12px/14px）形成严谨的三级视觉阶梯；
+      - **分类矢量图标尺寸**：四大分类标题左侧的前缀 SVG 图标（`SearchCategoryIcon`、`ExtractCategoryIcon`、`EmbeddingCategoryIcon`、`ApplicationsCategoryIcon`）全量统一为 **`20×20px`**（`w-[20px] h-[20px]`），保持各视口与形态下的饱满度和高辨识度。
 
 ---
 
