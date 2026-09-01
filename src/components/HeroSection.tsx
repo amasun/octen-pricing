@@ -564,11 +564,13 @@ function PlusSeparator() {
   );
 }
 
-function OrSeparator() {
+function SlashSeparator() {
   return (
     <div className="shrink-0 z-20 pointer-events-none flex items-center justify-center self-center h-[20px] md:h-[32px] w-full md:w-auto my-0.5 md:my-0">
-      <div className="h-[20px] px-[7px] rounded-full bg-[#F4F4F5] border border-[#E4E4E7] flex items-center justify-center text-[#71717A] text-[11px] font-['JetBrains_Mono',monospace] font-medium leading-none tracking-tight shadow-2xs select-none">
-        or
+      <div className="size-[20px] rounded-full bg-[#F4F4F5] border border-[#E4E4E7] flex items-center justify-center text-[#71717A] shadow-2xs">
+        <svg className="size-[10px]" viewBox="0 0 12 12" fill="none">
+          <path d="M8.5 2L3.5 10" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+        </svg>
       </div>
     </div>
   );
@@ -592,7 +594,7 @@ function HowOctenWorksSection() {
         <PayAsYouGoCard />
         <PlusSeparator />
         <QpsPlanCard />
-        <OrSeparator />
+        <SlashSeparator />
         <PlaceholderCard />
       </div>
     </div>
