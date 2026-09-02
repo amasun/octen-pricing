@@ -151,11 +151,11 @@ export default function EnterpriseSection() {
         {enterpriseFeatures.map((item, idx) => (
           <div 
             key={idx}
-            className="group relative bg-white rounded-[22px] border border-[#E5E7EB] hover:border-[#D1D5DB] hover:shadow-[0_14px_36px_rgba(0,0,0,0.06)] transition-all duration-300 p-3.5 sm:p-4 flex flex-col gap-4 overflow-hidden box-border"
+            className="group relative bg-white rounded-[16px] border border-[rgba(26,26,25,0.12)] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-200 p-3.5 sm:p-4 flex flex-col gap-4 overflow-hidden box-border"
           >
             {/* Top Stage: Viewport with Grid Texture & Centered 3D Glass Emblem */}
             <div 
-              className="w-full h-[140px] sm:h-[155px] rounded-[16px] bg-[#FDFDFD] border border-[#EFEFEF] relative overflow-hidden flex items-center justify-center select-none"
+              className="w-full h-[140px] sm:h-[155px] rounded-[12px] bg-[#FDFDFD] border border-[rgba(26,26,25,0.08)] relative overflow-hidden flex items-center justify-center select-none"
               style={{
                 backgroundImage: `
                   linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
@@ -167,11 +167,11 @@ export default function EnterpriseSection() {
             >
               {/* Soft Radial Ambient Glow */}
               <div 
-                className={`absolute size-28 rounded-full ${item.glowColor} blur-[30px] opacity-75 group-hover:opacity-100 group-hover:scale-125 transition-all duration-300 pointer-events-none`} 
+                className={`absolute size-28 rounded-full ${item.glowColor} blur-[30px] opacity-75 group-hover:opacity-100 group-hover:scale-125 transition-all duration-200 pointer-events-none`} 
               />
 
               {/* Centered Glassmorphic Emblem Container */}
-              <div className="relative z-10 size-[58px] sm:size-[64px] rounded-[18px] bg-white/90 backdrop-blur-md border border-white shadow-[0_8px_24px_rgba(0,0,0,0.07)] flex items-center justify-center text-[#039855] group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300 ease-out">
+              <div className="relative z-10 size-[58px] sm:size-[64px] rounded-[16px] bg-white/90 backdrop-blur-md border border-white shadow-[0_8px_24px_rgba(0,0,0,0.07)] flex items-center justify-center text-[#039855] group-hover:scale-105 group-hover:-translate-y-0.5 transition-all duration-200 ease-out">
                 {item.icon}
               </div>
             </div>
