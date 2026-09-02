@@ -101,7 +101,7 @@ export default function EnterpriseSection() {
   return (
     <section 
       id="enterprise-plan" 
-      className="content-stretch flex flex-col items-center gap-[32px] sm:gap-[40px] pb-[60px] sm:pb-[100px] mt-[40px] sm:mt-[80px] pt-0 relative shrink-0 w-full max-w-[1312px] px-4 box-border scroll-mt-[90px]"
+      className="content-stretch flex flex-col items-center gap-[32px] sm:gap-[40px] pb-[80px] sm:pb-[120px] mt-[40px] sm:mt-[80px] pt-0 relative shrink-0 w-full max-w-[1312px] px-4 box-border scroll-mt-[90px]"
     >
       {/* 1. Header Area with Title, Subtitle & Contact Sales Button */}
       <div className="text-center flex flex-col items-center gap-2 sm:gap-3 shrink-0 px-4">
