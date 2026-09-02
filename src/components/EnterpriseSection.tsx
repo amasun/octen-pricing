@@ -66,6 +66,48 @@ function DiamondBadgeIcon() {
   );
 }
 
+function FigmaCardHoverGlow({ idPrefix = "card_glow" }: { idPrefix?: string }) {
+  return (
+    <div 
+      className="absolute top-[-27px] left-0 w-full h-[79px] pointer-events-none select-none z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 overflow-visible"
+    >
+      <div className="absolute inset-[-126.58%_-42.06%_-113%_0]">
+        <svg 
+          preserveAspectRatio="none" 
+          overflow="visible" 
+          className="block size-full" 
+          viewBox="0 0 571.064 268.266" 
+          fill="none" 
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g opacity="0.4">
+            <g filter={`url(#filter_glow_${idPrefix})`}>
+              <path 
+                d="M332.016 159.176C376.524 181.719 398.931 156.358 471.064 147.2V100H110.091C126.564 113.385 165.158 142.269 187.749 150.722C215.989 161.29 287.508 136.633 332.016 159.176Z" 
+                fill="#FEF970"
+              />
+            </g>
+          </g>
+          <defs>
+            <filter 
+              id={`filter_glow_${idPrefix}`} 
+              x="10.0907" 
+              y="0" 
+              width="560.974" 
+              height="268.266" 
+              filterUnits="userSpaceOnUse" 
+              colorInterpolationFilters="sRGB"
+            >
+              <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+              <feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur"/>
+            </filter>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  );
+}
 
 interface EnterpriseFeature {
   title: React.ReactNode;
@@ -157,6 +199,9 @@ export default function EnterpriseSection() {
                   background: "linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.65) 40%, rgba(255, 255, 255, 0.08) 100%)"
                 }}
               />
+
+              {/* Exact Figma Hover Gradient Background (Node 13547:181778 #FEF970 glow) */}
+              <FigmaCardHoverGlow idPrefix={`card_glow_${idx}`} />
 
               {/* Top: Feature Icon (40px) with Instant Dynamic Sheen Flow */}
               <div className="size-[40px] relative shrink-0 z-10 flex items-center justify-start">
