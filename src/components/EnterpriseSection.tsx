@@ -66,6 +66,48 @@ function DiamondBadgeIcon() {
   );
 }
 
+function FigmaCardTopGlow({ idPrefix = "card_glow" }: { idPrefix?: string }) {
+  return (
+    <div className="absolute top-[-44px] left-[4px] w-[401px] h-[73px] flex items-center justify-center pointer-events-none select-none z-0">
+      <div className="-scale-y-100 rotate-180 flex-none">
+        <div className="h-[73px] relative w-[401px]">
+          <div className="absolute inset-[-145.21%_-24.87%_-135.98%_-24.8%]">
+            <svg 
+              preserveAspectRatio="none" 
+              overflow="visible" 
+              className="block size-full" 
+              viewBox="0 0 600.188 278.266" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g opacity="0.4">
+                <g filter={`url(#filter0_f_${idPrefix})`}>
+                  <path d="M239.049 119.09C194.541 96.5472 172.133 121.908 100 131.067V178.266H460.974C444.501 164.881 405.907 135.998 383.315 127.544C355.076 116.977 283.556 141.634 239.049 119.09Z" fill="#70FE7E"/>
+                </g>
+                <g filter={`url(#filter1_f_${idPrefix})`}>
+                  <path d="M361.139 109.09C405.647 86.5472 428.054 111.908 500.188 121.067V168.266H139.214C155.687 154.881 194.281 125.998 216.873 117.544C245.112 106.977 316.631 131.634 361.139 109.09Z" fill="#DDFE70"/>
+                </g>
+              </g>
+              <defs>
+                <filter id={`filter0_f_${idPrefix}`} x="0" y="10" width="560.974" height="268.266" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                  <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                  <feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur"/>
+                </filter>
+                <filter id={`filter1_f_${idPrefix}`} x="39.2141" y="-4.76837e-07" width="560.974" height="268.266" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                  <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                  <feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur"/>
+                </filter>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 interface EnterpriseFeature {
   title: React.ReactNode;
   description: string;
@@ -134,7 +176,7 @@ export default function EnterpriseSection() {
         {enterpriseFeatures.map((item, idx) => {
           const isHighlighted = idx < 2;
 
-          // 前两张旗舰卡片：Figma #D1D1D1 边框 + 顶部柔和黄绿环境渐变 + Hover 旋转流光边框 (Shine Border)
+          // 前两张旗舰卡片：Figma #D1D1D1 边框 + 顶部精准 Figma 矢量氛围渐变 + Hover 旋转流光边框 (Shine Border)
           if (isHighlighted) {
             return (
               <div
@@ -166,15 +208,8 @@ export default function EnterpriseSection() {
 
                 {/* Inner Card Content Container */}
                 <div className="relative z-10 w-full h-full rounded-[14.5px] p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 min-h-[190px] sm:min-h-[200px] box-border bg-white overflow-hidden">
-                  {/* Top-Edge Ambient Gradient (Figma 13542:181484: Soft Yellow-Lime on left to Soft Mint-Green on right) */}
-                  <div 
-                    className="absolute top-0 left-0 right-0 h-[85px] pointer-events-none rounded-t-[14.5px] overflow-hidden"
-                    style={{
-                      background: "linear-gradient(90deg, rgba(248, 254, 225, 0.9) 0%, rgba(235, 253, 236, 0.65) 50%, rgba(220, 252, 231, 0.9) 100%)",
-                      maskImage: "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)",
-                      WebkitMaskImage: "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)"
-                    }}
-                  />
+                  {/* Exact Figma Background Gradient Layer (node 13542:181545) */}
+                  <FigmaCardTopGlow idPrefix={`card_glow_${idx}`} />
 
                   {/* Top: Feature Icon (Unified to 40px) */}
                   <div className="size-[40px] flex items-center justify-start text-[#100F09] shrink-0 relative z-10">
