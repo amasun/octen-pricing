@@ -246,24 +246,28 @@ export default function EnterpriseSection() {
                         values="48; 3" 
                         dur="2.4s" 
                         repeatCount="indefinite" 
+                        begin={`-${(idx * 0.4).toFixed(2)}s`}
                       />
                       <animate 
                         attributeName="y1" 
                         values="-38; 27" 
                         dur="2.4s" 
                         repeatCount="indefinite" 
+                        begin={`-${(idx * 0.4).toFixed(2)}s`}
                       />
                       <animate 
                         attributeName="x2" 
                         values="18; -27" 
                         dur="2.4s" 
                         repeatCount="indefinite" 
+                        begin={`-${(idx * 0.4).toFixed(2)}s`}
                       />
                       <animate 
                         attributeName="y2" 
                         values="-8; 57" 
                         dur="2.4s" 
                         repeatCount="indefinite" 
+                        begin={`-${(idx * 0.4).toFixed(2)}s`}
                       />
                     </linearGradient>
                   </defs>
