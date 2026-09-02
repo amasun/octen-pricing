@@ -69,7 +69,7 @@ function DiamondBadgeIcon() {
 function FigmaCardTopGlow({ idPrefix = "card_glow" }: { idPrefix?: string }) {
   return (
     <div 
-      className="absolute top-[calc(50%-79px/2-86px)] left-[calc(50%-402px/2-70px)] w-[402px] h-[79px] pointer-events-none select-none z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      className="absolute top-[calc(50%-79px/2-86px)] left-[calc(50%-402px/2-120px)] w-[402px] h-[79px] pointer-events-none select-none z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
       style={{
         transform: "matrix(-1, 0, 0, 1, 0, 0)"
       }}
