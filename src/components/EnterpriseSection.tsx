@@ -91,22 +91,12 @@ interface EnterpriseFeature {
 
 const enterpriseFeatures: EnterpriseFeature[] = [
   {
-    title: (
-      <span className="inline-flex items-center">
-        <span><strong className="font-bold">1M+</strong> QPS</span>
-        <DiamondBadgeIcon />
-      </span>
-    ),
+    title: <><strong className="font-bold">1M+</strong> QPS</>,
     description: "Unthrottled high-concurrency search throughput for mission-critical scale.",
     icon: <QpsIcon />
   },
   {
-    title: (
-      <span className="inline-flex items-center">
-        <span>Custom data</span>
-        <DiamondBadgeIcon />
-      </span>
-    ),
+    title: "Custom data",
     description: "Seamlessly index and query proprietary private enterprise data sources.",
     icon: <DataIcon />
   },
@@ -168,10 +158,11 @@ export default function EnterpriseSection() {
               {item.icon}
             </div>
 
-            {/* Bottom: Title (18px) + Description (14px) */}
+            {/* Bottom: Title (18px) with Diamond Badge + Description (14px) */}
             <div className="flex flex-col gap-2">
               <h3 className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[24px] text-[#100F09] flex items-center">
-                {item.title}
+                <span>{item.title}</span>
+                <DiamondBadgeIcon />
               </h3>
 
               {/* Description (Standard 14px DM Sans body typography) */}
