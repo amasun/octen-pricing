@@ -139,11 +139,11 @@ export default function EnterpriseSection() {
               key={idx}
               className="group relative rounded-[16px] p-[1.5px] overflow-hidden transition-all duration-300 hover:shadow-[0_12px_36px_rgba(0,0,0,0.06)]"
             >
-              {/* Default Border Base Layer (Visible when not hovered) */}
+              {/* Default Border Base Layer (Visible when not hovered - Figma #D1D1D1) */}
               <div 
                 className={`absolute inset-0 rounded-[16px] transition-opacity duration-300 pointer-events-none ${
                   isHighlighted 
-                    ? "border-2 border-[#E7D6A8] group-hover:opacity-0" 
+                    ? "border border-[#D1D1D1] group-hover:opacity-0" 
                     : "border border-[rgba(26,26,25,0.12)] group-hover:opacity-0"
                 }`} 
               />
@@ -173,16 +173,17 @@ export default function EnterpriseSection() {
               </div>
 
               {/* Inner Card Content Container */}
-              <div 
-                className={`relative z-10 w-full h-full rounded-[14.5px] p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 min-h-[190px] sm:min-h-[200px] box-border transition-colors duration-200 ${
-                  isHighlighted 
-                    ? "bg-gradient-to-b from-[#FFFDF8] to-white" 
-                    : "bg-white"
-                }`}
-              >
-                {/* Soft Radial Ambient Glow for Flagship Cards (idx < 2) */}
+              <div className="relative z-10 w-full h-full rounded-[14.5px] p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 min-h-[190px] sm:min-h-[200px] box-border bg-white overflow-hidden">
+                {/* Top-Edge Ambient Gradient (Figma 13542:181484: Soft Yellow-Lime on left to Soft Mint-Green on right) */}
                 {isHighlighted && (
-                  <div className="absolute -top-8 -right-8 size-32 bg-[#FFE7B1]/35 blur-2xl rounded-full pointer-events-none group-hover:scale-125 transition-transform duration-300" />
+                  <div 
+                    className="absolute top-0 left-0 right-0 h-[85px] pointer-events-none rounded-t-[14.5px] overflow-hidden"
+                    style={{
+                      background: "linear-gradient(90deg, rgba(248, 254, 225, 0.9) 0%, rgba(235, 253, 236, 0.65) 50%, rgba(220, 252, 231, 0.9) 100%)",
+                      maskImage: "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)",
+                      WebkitMaskImage: "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)"
+                    }}
+                  />
                 )}
 
                 {/* Top: Feature Icon (Unified to 40px) */}
