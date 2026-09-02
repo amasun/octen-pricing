@@ -200,6 +200,7 @@ export default function EnterpriseSection() {
           return (
             <div
               key={idx}
+              id={`enterprise_feature_card_${idx}`}
               className="group relative bg-white rounded-[16px] border border-[rgba(26,26,25,0.12)] hover:border-[#e0d6ba] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 overflow-hidden box-border min-h-[190px] sm:min-h-[200px]"
             >
               {/* Micro-Rectangle Dot Matrix Pattern (3x3px square dots, 10px pitch, opacity 10%) */}
@@ -246,28 +247,36 @@ export default function EnterpriseSection() {
                         values="48; 3" 
                         dur="2.4s" 
                         repeatCount="indefinite" 
-                        begin={`-${(idx * 0.4).toFixed(2)}s`}
+                        begin={`enterprise_feature_card_${idx}.mouseenter; 0s`}
+                        end={`enterprise_feature_card_${idx}.mouseleave`}
+                        restart="always"
                       />
                       <animate 
                         attributeName="y1" 
                         values="-38; 27" 
                         dur="2.4s" 
                         repeatCount="indefinite" 
-                        begin={`-${(idx * 0.4).toFixed(2)}s`}
+                        begin={`enterprise_feature_card_${idx}.mouseenter; 0s`}
+                        end={`enterprise_feature_card_${idx}.mouseleave`}
+                        restart="always"
                       />
                       <animate 
                         attributeName="x2" 
                         values="18; -27" 
                         dur="2.4s" 
                         repeatCount="indefinite" 
-                        begin={`-${(idx * 0.4).toFixed(2)}s`}
+                        begin={`enterprise_feature_card_${idx}.mouseenter; 0s`}
+                        end={`enterprise_feature_card_${idx}.mouseleave`}
+                        restart="always"
                       />
                       <animate 
                         attributeName="y2" 
                         values="-8; 57" 
                         dur="2.4s" 
                         repeatCount="indefinite" 
-                        begin={`-${(idx * 0.4).toFixed(2)}s`}
+                        begin={`enterprise_feature_card_${idx}.mouseenter; 0s`}
+                        end={`enterprise_feature_card_${idx}.mouseleave`}
+                        restart="always"
                       />
                     </linearGradient>
                   </defs>
