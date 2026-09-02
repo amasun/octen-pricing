@@ -156,29 +156,29 @@ export default function EnterpriseSection() {
                 }}
               />
 
-              {/* Top: Feature Icon (40px) with Pure Single-Direction Dynamic Sheen Flow */}
+              {/* Top: Feature Icon (40px) with Instant Dynamic Sheen Flow */}
               <div className="size-[40px] relative shrink-0 z-10 flex items-center justify-start">
                 <svg className="absolute w-0 h-0 pointer-events-none" aria-hidden="true" focusable="false">
                   <defs>
                     <linearGradient 
                       id={`single_flow_grad_${idx}`} 
-                      x1="45" 
-                      y1="-35" 
-                      x2="15" 
-                      y2="-5" 
+                      x1="28" 
+                      y1="-18" 
+                      x2="-2" 
+                      y2="12" 
                       gradientUnits="userSpaceOnUse"
                     >
                       <stop offset="0%" stopColor="#1A1812" />
-                      <stop offset="30%" stopColor="#8A7649" />
-                      <stop offset="47%" stopColor="#FFF2CC" />
+                      <stop offset="25%" stopColor="#8A7649" />
+                      <stop offset="46%" stopColor="#FFF2CC" />
                       <stop offset="50%" stopColor="#FFFFFF" />
-                      <stop offset="53%" stopColor="#FFF2CC" />
-                      <stop offset="70%" stopColor="#8A7649" />
+                      <stop offset="54%" stopColor="#FFF2CC" />
+                      <stop offset="75%" stopColor="#8A7649" />
                       <stop offset="100%" stopColor="#1A1812" />
                       <animate 
                         attributeName="x1" 
-                        values="48; 3" 
-                        dur="2.4s" 
+                        values="30; -10" 
+                        dur="1.4s" 
                         repeatCount="indefinite" 
                         begin={`enterprise_feature_card_${idx}.mouseenter; 0s`}
                         end={`enterprise_feature_card_${idx}.mouseleave`}
@@ -186,8 +186,8 @@ export default function EnterpriseSection() {
                       />
                       <animate 
                         attributeName="y1" 
-                        values="-38; 27" 
-                        dur="2.4s" 
+                        values="-20; 36" 
+                        dur="1.4s" 
                         repeatCount="indefinite" 
                         begin={`enterprise_feature_card_${idx}.mouseenter; 0s`}
                         end={`enterprise_feature_card_${idx}.mouseleave`}
@@ -195,8 +195,8 @@ export default function EnterpriseSection() {
                       />
                       <animate 
                         attributeName="x2" 
-                        values="18; -27" 
-                        dur="2.4s" 
+                        values="0; -40" 
+                        dur="1.4s" 
                         repeatCount="indefinite" 
                         begin={`enterprise_feature_card_${idx}.mouseenter; 0s`}
                         end={`enterprise_feature_card_${idx}.mouseleave`}
@@ -204,8 +204,8 @@ export default function EnterpriseSection() {
                       />
                       <animate 
                         attributeName="y2" 
-                        values="-8; 57" 
-                        dur="2.4s" 
+                        values="10; 66" 
+                        dur="1.4s" 
                         repeatCount="indefinite" 
                         begin={`enterprise_feature_card_${idx}.mouseenter; 0s`}
                         end={`enterprise_feature_card_${idx}.mouseleave`}
@@ -216,12 +216,12 @@ export default function EnterpriseSection() {
                 </svg>
 
                 {/* 1. Default State: Dark Solid Neutral Icon */}
-                <div className="absolute inset-0 flex items-center justify-start text-[#100F09] opacity-100 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none">
+                <div className="absolute inset-0 flex items-center justify-start text-[#100F09] opacity-100 group-hover:opacity-0 transition-opacity duration-150 pointer-events-none">
                   {item.icon("#100F09")}
                 </div>
 
                 {/* 2. Hover State: Pure Single-Direction Flowing Sheen Icon */}
-                <div className="absolute inset-0 flex items-center justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                <div className="absolute inset-0 flex items-center justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-150 pointer-events-none">
                   {item.icon(`url(#single_flow_grad_${idx})`)}
                 </div>
               </div>
