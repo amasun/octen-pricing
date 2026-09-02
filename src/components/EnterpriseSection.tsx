@@ -129,53 +129,44 @@ export default function EnterpriseSection() {
         </div>
       </div>
 
-      {/* 2. 3x2 Grid of Feature Cards with Multi-color Flowing Shine Border on Hover */}
+      {/* 2. 3x2 Grid of Feature Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 w-full">
         {enterpriseFeatures.map((item, idx) => {
           const isHighlighted = idx < 2;
 
-          return (
-            <div
-              key={idx}
-              className="group relative rounded-[16px] p-[1.5px] overflow-hidden transition-all duration-300 hover:shadow-[0_12px_36px_rgba(0,0,0,0.06)]"
-            >
-              {/* Default Border Base Layer (Visible when not hovered - Figma #D1D1D1) */}
-              <div 
-                className={`absolute inset-0 rounded-[16px] transition-opacity duration-300 pointer-events-none ${
-                  isHighlighted 
-                    ? "border border-[#D1D1D1] group-hover:opacity-0" 
-                    : "border border-[rgba(26,26,25,0.12)] group-hover:opacity-0"
-                }`} 
-              />
+          // 前两张旗舰卡片：Figma #D1D1D1 边框 + 顶部柔和黄绿环境渐变 + Hover 旋转流光边框 (Shine Border)
+          if (isHighlighted) {
+            return (
+              <div
+                key={idx}
+                className="group relative rounded-[16px] p-[1.5px] overflow-hidden transition-all duration-300 hover:shadow-[0_12px_36px_rgba(0,0,0,0.06)]"
+              >
+                {/* Default Border Base Layer (Visible when not hovered - Figma #D1D1D1) */}
+                <div className="absolute inset-0 rounded-[16px] border border-[#D1D1D1] group-hover:opacity-0 transition-opacity duration-300 pointer-events-none" />
 
-              {/* Shine Border Rotating Conic Gradient Layer (Reveals on Hover) */}
-              <div className="absolute -inset-[150%] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center justify-center">
-                <div 
-                  className="w-[300%] h-[300%] animate-[spin_4s_linear_infinite]"
-                  style={{
-                    background: isHighlighted
-                      ? "conic-gradient(from 0deg, transparent 0%, #FFD700 15%, #FFEAA7 30%, #C6A55A 45%, #A3E635 60%, #00E599 75%, #059669 88%, transparent 100%)"
-                      : "conic-gradient(from 0deg, transparent 0%, #FACC15 15%, #EAB308 30%, #A3E635 48%, #00E599 68%, #10B981 85%, transparent 100%)"
-                  }}
-                />
-              </div>
+                {/* Shine Border Rotating Conic Gradient Layer (Reveals on Hover) */}
+                <div className="absolute -inset-[150%] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center justify-center">
+                  <div 
+                    className="w-[300%] h-[300%] animate-[spin_4s_linear_infinite]"
+                    style={{
+                      background: "conic-gradient(from 0deg, transparent 0%, #FFD700 15%, #FFEAA7 30%, #C6A55A 45%, #A3E635 60%, #00E599 75%, #059669 88%, transparent 100%)"
+                    }}
+                  />
+                </div>
 
-              {/* Shine Border Soft Ambient Outer Glow (Luminous edge glow in yellow-green) */}
-              <div className="absolute -inset-[150%] opacity-0 group-hover:opacity-45 blur-[8px] transition-opacity duration-300 pointer-events-none flex items-center justify-center">
-                <div 
-                  className="w-[300%] h-[300%] animate-[spin_4s_linear_infinite]"
-                  style={{
-                    background: isHighlighted
-                      ? "conic-gradient(from 0deg, transparent 0%, #FFD700 15%, #FFEAA7 30%, #C6A55A 45%, #A3E635 60%, #00E599 75%, #059669 88%, transparent 100%)"
-                      : "conic-gradient(from 0deg, transparent 0%, #FACC15 15%, #EAB308 30%, #A3E635 48%, #00E599 68%, #10B981 85%, transparent 100%)"
-                  }}
-                />
-              </div>
+                {/* Shine Border Soft Ambient Outer Glow (Luminous edge glow in yellow-green) */}
+                <div className="absolute -inset-[150%] opacity-0 group-hover:opacity-45 blur-[8px] transition-opacity duration-300 pointer-events-none flex items-center justify-center">
+                  <div 
+                    className="w-[300%] h-[300%] animate-[spin_4s_linear_infinite]"
+                    style={{
+                      background: "conic-gradient(from 0deg, transparent 0%, #FFD700 15%, #FFEAA7 30%, #C6A55A 45%, #A3E635 60%, #00E599 75%, #059669 88%, transparent 100%)"
+                    }}
+                  />
+                </div>
 
-              {/* Inner Card Content Container */}
-              <div className="relative z-10 w-full h-full rounded-[14.5px] p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 min-h-[190px] sm:min-h-[200px] box-border bg-white overflow-hidden">
-                {/* Top-Edge Ambient Gradient (Figma 13542:181484: Soft Yellow-Lime on left to Soft Mint-Green on right) */}
-                {isHighlighted && (
+                {/* Inner Card Content Container */}
+                <div className="relative z-10 w-full h-full rounded-[14.5px] p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 min-h-[190px] sm:min-h-[200px] box-border bg-white overflow-hidden">
+                  {/* Top-Edge Ambient Gradient (Figma 13542:181484: Soft Yellow-Lime on left to Soft Mint-Green on right) */}
                   <div 
                     className="absolute top-0 left-0 right-0 h-[85px] pointer-events-none rounded-t-[14.5px] overflow-hidden"
                     style={{
@@ -184,24 +175,49 @@ export default function EnterpriseSection() {
                       WebkitMaskImage: "linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)"
                     }}
                   />
-                )}
 
-                {/* Top: Feature Icon (Unified to 40px) */}
-                <div className="size-[40px] flex items-center justify-start text-[#100F09] shrink-0 relative z-10">
-                  {item.icon("#100F09")}
+                  {/* Top: Feature Icon (Unified to 40px) */}
+                  <div className="size-[40px] flex items-center justify-start text-[#100F09] shrink-0 relative z-10">
+                    {item.icon("#100F09")}
+                  </div>
+
+                  {/* Bottom: Title (18px) with Diamond Badge + Description (14px) */}
+                  <div className="flex flex-col gap-2 relative z-10">
+                    <h3 className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[24px] text-[#100F09] flex items-center">
+                      <span>{item.title}</span>
+                      <DiamondBadgeIcon />
+                    </h3>
+
+                    <p className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[20px] sm:leading-[22px] text-[#57575E]">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
+              </div>
+            );
+          }
 
-                {/* Bottom: Title (18px) with Diamond Badge + Description (14px) */}
-                <div className="flex flex-col gap-2 relative z-10">
-                  <h3 className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[24px] text-[#100F09] flex items-center">
-                    <span>{item.title}</span>
-                    <DiamondBadgeIcon />
-                  </h3>
+          // 其他卡片（Cards 3 ~ 6）：遵循 QPS Plan 统一规则 (border-[rgba(26,26,25,0.12)] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)])
+          return (
+            <div 
+              key={idx}
+              className="group relative bg-white rounded-[16px] border border-[rgba(26,26,25,0.12)] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-200 p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 overflow-hidden box-border min-h-[190px] sm:min-h-[200px]"
+            >
+              {/* Top: Feature Icon (Unified to 40px) */}
+              <div className="size-[40px] flex items-center justify-start text-[#100F09] shrink-0">
+                {item.icon("#100F09")}
+              </div>
 
-                  <p className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[20px] sm:leading-[22px] text-[#57575E]">
-                    {item.description}
-                  </p>
-                </div>
+              {/* Bottom: Title (18px) with Diamond Badge + Description (14px) */}
+              <div className="flex flex-col gap-2">
+                <h3 className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[24px] text-[#100F09] flex items-center">
+                  <span>{item.title}</span>
+                  <DiamondBadgeIcon />
+                </h3>
+
+                <p className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[20px] sm:leading-[22px] text-[#57575E]">
+                  {item.description}
+                </p>
               </div>
             </div>
           );
