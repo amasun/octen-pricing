@@ -208,11 +208,11 @@ export default function EnterpriseSection() {
 
                 {/* Inner Card Content Container */}
                 <div className="relative z-10 w-full h-full rounded-[14.5px] p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 min-h-[190px] sm:min-h-[200px] box-border bg-white overflow-hidden">
-                  {/* Dot Matrix Pattern (Matching default cards) */}
+                  {/* Dot Matrix Pattern (Matching default cards - alpha 0.2) */}
                   <div 
-                    className="absolute inset-0 pointer-events-none opacity-50 select-none"
+                    className="absolute inset-0 pointer-events-none select-none"
                     style={{
-                      backgroundImage: "radial-gradient(rgba(0, 0, 0, 0.14) 1.2px, transparent 1.2px)",
+                      backgroundImage: "radial-gradient(rgba(0, 0, 0, 0.2) 1.2px, transparent 1.2px)",
                       backgroundSize: "12px 12px"
                     }}
                   />
@@ -255,11 +255,11 @@ export default function EnterpriseSection() {
               key={idx}
               className="group relative bg-white rounded-[16px] border border-[rgba(0,0,0,0.12)] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-200 p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 overflow-hidden box-border min-h-[190px] sm:min-h-[200px]"
             >
-              {/* Dot Matrix Pattern (Figma 13542:181617: delicate low-opacity dot texture) */}
+              {/* Dot Matrix Pattern (Figma 13542:181617: dot texture with alpha 0.2) */}
               <div 
-                className="absolute inset-0 pointer-events-none opacity-50 select-none"
+                className="absolute inset-0 pointer-events-none select-none"
                 style={{
-                  backgroundImage: "radial-gradient(rgba(0, 0, 0, 0.14) 1.2px, transparent 1.2px)",
+                  backgroundImage: "radial-gradient(rgba(0, 0, 0, 0.2) 1.2px, transparent 1.2px)",
                   backgroundSize: "12px 12px"
                 }}
               />
