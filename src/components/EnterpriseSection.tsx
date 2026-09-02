@@ -69,7 +69,7 @@ function DiamondBadgeIcon() {
 function FigmaCardHoverGlow({ idPrefix = "card_glow" }: { idPrefix?: string }) {
   return (
     <div 
-      className="absolute top-[-100px] left-[-260px] w-[402px] h-[79px] pointer-events-none select-none z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 overflow-visible"
+      className="absolute top-[-45px] left-[-140px] w-[402px] h-[79px] pointer-events-none select-none z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 overflow-visible"
     >
       <div className="absolute inset-[-126.58%_-42.06%_-113%_0]">
         <svg 
@@ -80,7 +80,7 @@ function FigmaCardHoverGlow({ idPrefix = "card_glow" }: { idPrefix?: string }) {
           fill="none" 
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g opacity="0.4">
+          <g opacity="0.65">
             <g filter={`url(#filter_glow_${idPrefix})`}>
               <path 
                 d="M332.016 159.176C376.524 181.719 398.931 156.358 471.064 147.2V100H110.091C126.564 113.385 165.158 142.269 187.749 150.722C215.989 161.29 287.508 136.633 332.016 159.176Z" 
