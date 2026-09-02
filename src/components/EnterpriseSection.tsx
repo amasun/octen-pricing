@@ -208,12 +208,12 @@ export default function EnterpriseSection() {
 
                 {/* Inner Card Content Container */}
                 <div className="relative z-10 w-full h-full rounded-[14.5px] p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 min-h-[190px] sm:min-h-[200px] box-border bg-white overflow-hidden">
-                  {/* Micro-Rectangle Dot Matrix Pattern (Matching default cards - 2x2px square dots, color #E2E2E2, opacity 50%) */}
+                  {/* Micro-Rectangle Dot Matrix Pattern (Matching default cards - 3x3px square dots with enhanced contrast) */}
                   <div 
                     className="absolute inset-0 pointer-events-none select-none"
                     style={{
-                      backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'12\' height=\'12\' viewBox=\'0 0 12 12\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'2\' height=\'2\' fill=\'%23E2E2E2\' fill-opacity=\'0.5\'/%3E%3C/svg%3E")',
-                      backgroundSize: "12px 12px"
+                      backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'14\' height=\'14\' viewBox=\'0 0 14 14\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'3\' height=\'3\' fill=\'%23A8A8A8\' fill-opacity=\'0.75\'/%3E%3C/svg%3E")',
+                      backgroundSize: "14px 14px"
                     }}
                   />
 
@@ -221,7 +221,7 @@ export default function EnterpriseSection() {
                   <div 
                     className="absolute inset-0 pointer-events-none select-none"
                     style={{
-                      background: "linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.75) 45%, rgba(255, 255, 255, 0.18) 100%)"
+                      background: "linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.65) 40%, rgba(255, 255, 255, 0.08) 100%)"
                     }}
                   />
 
@@ -255,12 +255,12 @@ export default function EnterpriseSection() {
               key={idx}
               className="group relative bg-white rounded-[16px] border border-[rgba(0,0,0,0.12)] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-200 p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 overflow-hidden box-border min-h-[190px] sm:min-h-[200px]"
             >
-              {/* Micro-Rectangle Dot Matrix Pattern (Figma 13542:181617: 2x2px square dots, color #E2E2E2, opacity 50%) */}
+              {/* Micro-Rectangle Dot Matrix Pattern (Figma 13542:181617: 3x3px square dots with enhanced contrast) */}
               <div 
                 className="absolute inset-0 pointer-events-none select-none"
                 style={{
-                  backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'12\' height=\'12\' viewBox=\'0 0 12 12\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'2\' height=\'2\' fill=\'%23E2E2E2\' fill-opacity=\'0.5\'/%3E%3C/svg%3E")',
-                  backgroundSize: "12px 12px"
+                  backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'14\' height=\'14\' viewBox=\'0 0 14 14\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'3\' height=\'3\' fill=\'%23A8A8A8\' fill-opacity=\'0.75\'/%3E%3C/svg%3E")',
+                  backgroundSize: "14px 14px"
                 }}
               />
 
