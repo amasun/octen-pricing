@@ -201,32 +201,24 @@ export default function EnterpriseSection() {
               {/* Exact Figma Background Gradient Layer (Fades in on Hover) */}
               <FigmaCardTopGlow idPrefix={`card_glow_${idx}`} />
 
-              {/* Top: Feature Icon (40px) with Hover Sheen Gradient Transition */}
+              {/* Top: Feature Icon (40px) with High-Visibility Dynamic Sheen Flow */}
               <div className="size-[40px] relative shrink-0 z-10 flex items-center justify-start">
-                <svg className="absolute w-0 h-0 pointer-events-none" aria-hidden="true" focusable="false">
-                  <defs>
-                    <linearGradient id={`hover_feature_grad_${idx}`} x1="180%" y1="-80%" x2="80%" y2="20%">
-                      <stop offset="0%" stopColor="#13120C" />
-                      <stop offset="25%" stopColor="#8A7649" />
-                      <stop offset="50%" stopColor="#CAC397" />
-                      <stop offset="75%" stopColor="#8A7649" />
-                      <stop offset="100%" stopColor="#13120C" />
-                      <animate attributeName="x1" values="200%; -100%" dur="2.8s" repeatCount="indefinite" />
-                      <animate attributeName="y1" values="-100%; 200%" dur="2.8s" repeatCount="indefinite" />
-                      <animate attributeName="x2" values="100%; -200%" dur="2.8s" repeatCount="indefinite" />
-                      <animate attributeName="y2" values="0%; 300%" dur="2.8s" repeatCount="indefinite" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-
-                {/* Default State Icon */}
+                {/* 1. Default State: Dark Solid Neutral Icon */}
                 <div className="absolute inset-0 flex items-center justify-start text-[#100F09] opacity-100 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none">
                   {item.icon("#100F09")}
                 </div>
 
-                {/* Hover State Icon with Sheen Gradient (linear-gradient(215.51deg, #13120C 2.04%, #8A7649 48.97%, #CAC397 93.31%)) */}
+                {/* 2. Hover State: Rich Gold Base + Sweeping Luminous Sheen Beam */}
                 <div className="absolute inset-0 flex items-center justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  {item.icon(`url(#hover_feature_grad_${idx})`)}
+                  {/* Base Gold Tone (#8A7649) */}
+                  <div className="absolute inset-0 flex items-center justify-start">
+                    {item.icon("#8A7649")}
+                  </div>
+
+                  {/* Dynamic Flowing High-Gloss Beam (#FFF8D6) sweeping continuously */}
+                  <div className="absolute inset-0 flex items-center justify-start sheen-mask-layer">
+                    {item.icon("#FFF8D6")}
+                  </div>
                 </div>
               </div>
 

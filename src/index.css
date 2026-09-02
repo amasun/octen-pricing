@@ -350,4 +350,27 @@ body, #root, #root > div, [data-name="Octen AI | Infrastructure Pricing"] {
   animation: octenHubPulse 3s ease-in-out infinite;
 }
 
+/* Feature Icon Dynamic Sheen Flow */
+@keyframes sheenSweep {
+  0% {
+    -webkit-mask-position: 140% 140%;
+    mask-position: 140% 140%;
+  }
+  100% {
+    -webkit-mask-position: -40% -40%;
+    mask-position: -40% -40%;
+  }
+}
+
+.sheen-mask-layer {
+  -webkit-mask-image: linear-gradient(215.51deg, transparent 0%, transparent 28%, black 46%, black 54%, transparent 72%, transparent 100%);
+  mask-image: linear-gradient(215.51deg, transparent 0%, transparent 28%, black 46%, black 54%, transparent 72%, transparent 100%);
+  -webkit-mask-size: 260% 260%;
+  mask-size: 260% 260%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  animation: sheenSweep 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+
 
