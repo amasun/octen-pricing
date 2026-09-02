@@ -3,25 +3,8 @@ import svgPaths from "./svgPaths";
 
 function QpsIcon({ color = "#100F09" }: { color?: string }) {
   return (
-    <svg className="size-[40px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      {/* Upper sparkle */}
-      <rect x="2" y="5" width="2" height="2" fill={color} />
-      <rect x="4" y="3" width="2" height="2" fill={color} />
-      <rect x="4" y="5" width="2" height="2" fill={color} />
-      <rect x="4" y="7" width="2" height="2" fill={color} />
-      <rect x="6" y="5" width="2" height="2" fill={color} />
-
-      {/* Lower sparkle */}
-      <rect x="2" y="15" width="2" height="2" fill={color} />
-      <rect x="4" y="13" width="2" height="2" fill={color} />
-      <rect x="4" y="15" width="2" height="2" fill={color} />
-      <rect x="4" y="17" width="2" height="2" fill={color} />
-      <rect x="6" y="15" width="2" height="2" fill={color} />
-
-      {/* Three horizontal bars */}
-      <rect x="10" y="4" width="12" height="2.5" rx="1.25" fill={color} />
-      <rect x="10" y="11" width="9" height="2.5" rx="1.25" fill={color} />
-      <rect x="10" y="17.5" width="7" height="2.5" rx="1.25" fill={color} />
+    <svg className="size-[40px]" fill="none" viewBox="0 0 20 20">
+      <path clipRule="evenodd" fillRule="evenodd" d={svgPaths.p2ba1d80} fill={color} />
     </svg>
   );
 }
