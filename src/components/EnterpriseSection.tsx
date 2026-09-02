@@ -69,7 +69,7 @@ function DiamondBadgeIcon() {
 function FigmaCardHoverGlow({ idPrefix = "card_glow" }: { idPrefix?: string }) {
   return (
     <div 
-      className="absolute top-[-45px] left-[-140px] w-[402px] h-[79px] pointer-events-none select-none z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 overflow-visible"
+      className="absolute top-[-45px] left-[-200px] w-[402px] h-[79px] pointer-events-none select-none z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 overflow-visible"
     >
       <div className="absolute inset-[-126.58%_-42.06%_-113%_0]">
         <svg 
