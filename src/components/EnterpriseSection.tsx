@@ -171,20 +171,20 @@ export default function EnterpriseSection() {
                   className="w-[300%] h-[300%] animate-[spin_4s_linear_infinite]"
                   style={{
                     background: isHighlighted
-                      ? "conic-gradient(from 0deg, transparent 0%, #FFAA40 15%, #FFE7B1 30%, #C6A55A 45%, #A855F7 60%, #00E599 75%, transparent 90%)"
-                      : "conic-gradient(from 0deg, transparent 0%, #FFAA40 18%, #EC4899 35%, #A855F7 55%, #3B82F6 75%, #00E599 90%, transparent 100%)"
+                      ? "conic-gradient(from 0deg, transparent 0%, #FFD700 15%, #FFEAA7 30%, #C6A55A 45%, #A3E635 60%, #00E599 75%, #059669 88%, transparent 100%)"
+                      : "conic-gradient(from 0deg, transparent 0%, #FACC15 15%, #EAB308 30%, #A3E635 48%, #00E599 68%, #10B981 85%, transparent 100%)"
                   }}
                 />
               </div>
 
-              {/* Shine Border Soft Ambient Outer Glow (Luminous edge glow matching screenshot) */}
+              {/* Shine Border Soft Ambient Outer Glow (Luminous edge glow in yellow-green) */}
               <div className="absolute -inset-[150%] opacity-0 group-hover:opacity-45 blur-[8px] transition-opacity duration-300 pointer-events-none flex items-center justify-center">
                 <div 
                   className="w-[300%] h-[300%] animate-[spin_4s_linear_infinite]"
                   style={{
                     background: isHighlighted
-                      ? "conic-gradient(from 0deg, transparent 0%, #FFAA40 15%, #FFE7B1 30%, #C6A55A 45%, #A855F7 60%, #00E599 75%, transparent 90%)"
-                      : "conic-gradient(from 0deg, transparent 0%, #FFAA40 18%, #EC4899 35%, #A855F7 55%, #3B82F6 75%, #00E599 90%, transparent 100%)"
+                      ? "conic-gradient(from 0deg, transparent 0%, #FFD700 15%, #FFEAA7 30%, #C6A55A 45%, #A3E635 60%, #00E599 75%, #059669 88%, transparent 100%)"
+                      : "conic-gradient(from 0deg, transparent 0%, #FACC15 15%, #EAB308 30%, #A3E635 48%, #00E599 68%, #10B981 85%, transparent 100%)"
                   }}
                 />
               </div>
