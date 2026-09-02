@@ -151,21 +151,11 @@ export default function EnterpriseSection() {
               </div>
             </div>
 
-            {/* Bottom Content Area: Title + Switch + Description */}
+            {/* Bottom Content Area: Title + Description */}
             <div className="px-1.5 pb-1 flex flex-col gap-1.5">
-              {/* Title Row with Switch */}
-              <div className="flex items-center justify-between gap-3 w-full">
-                <h3 className="font-['DM_Sans',sans-serif] font-bold text-[16.5px] sm:text-[17.5px] leading-[1.25] text-[#100F09]">
-                  {item.title}
-                </h3>
-                {/* Switch Toggle */}
-                <div 
-                  className="w-[38px] h-[22px] rounded-full bg-[#E5E7EB] group-hover:bg-[#100F09] p-[2px] transition-colors duration-200 flex items-center shrink-0 cursor-pointer"
-                  aria-hidden="true"
-                >
-                  <div className="size-[18px] rounded-full bg-white shadow-xs group-hover:translate-x-[16px] transition-transform duration-200 ease-out" />
-                </div>
-              </div>
+              <h3 className="font-['DM_Sans',sans-serif] font-bold text-[16.5px] sm:text-[17.5px] leading-[1.25] text-[#100F09]">
+                {item.title}
+              </h3>
 
               {/* Description */}
               <p className="font-['DM_Sans',sans-serif] font-normal text-[13.5px] sm:text-[14px] leading-[20px] sm:leading-[22px] text-[#6B7280]">
