@@ -222,24 +222,61 @@ export default function EnterpriseSection() {
               {/* Exact Figma Background Gradient Layer (Fades in on Hover) */}
               <FigmaCardTopGlow idPrefix={`card_glow_${idx}`} />
 
-              {/* Top: Feature Icon (40px) with High-Visibility Dynamic Sheen Flow */}
+              {/* Top: Feature Icon (40px) with Pure Single-Direction Dynamic Sheen Flow */}
               <div className="size-[40px] relative shrink-0 z-10 flex items-center justify-start">
+                <svg className="absolute w-0 h-0 pointer-events-none" aria-hidden="true" focusable="false">
+                  <defs>
+                    <linearGradient 
+                      id={`single_flow_grad_${idx}`} 
+                      x1="45" 
+                      y1="-35" 
+                      x2="15" 
+                      y2="-5" 
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0%" stopColor="#1A1812" />
+                      <stop offset="30%" stopColor="#8A7649" />
+                      <stop offset="47%" stopColor="#FFF2CC" />
+                      <stop offset="50%" stopColor="#FFFFFF" />
+                      <stop offset="53%" stopColor="#FFF2CC" />
+                      <stop offset="70%" stopColor="#8A7649" />
+                      <stop offset="100%" stopColor="#1A1812" />
+                      <animate 
+                        attributeName="x1" 
+                        values="48; 3" 
+                        dur="2.4s" 
+                        repeatCount="indefinite" 
+                      />
+                      <animate 
+                        attributeName="y1" 
+                        values="-38; 27" 
+                        dur="2.4s" 
+                        repeatCount="indefinite" 
+                      />
+                      <animate 
+                        attributeName="x2" 
+                        values="18; -27" 
+                        dur="2.4s" 
+                        repeatCount="indefinite" 
+                      />
+                      <animate 
+                        attributeName="y2" 
+                        values="-8; 57" 
+                        dur="2.4s" 
+                        repeatCount="indefinite" 
+                      />
+                    </linearGradient>
+                  </defs>
+                </svg>
+
                 {/* 1. Default State: Dark Solid Neutral Icon */}
                 <div className="absolute inset-0 flex items-center justify-start text-[#100F09] opacity-100 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none">
                   {item.icon("#100F09")}
                 </div>
 
-                {/* 2. Hover State: Rich Gold Base + Sweeping Luminous Sheen Beam */}
+                {/* 2. Hover State: Pure Single-Direction Flowing Sheen Icon */}
                 <div className="absolute inset-0 flex items-center justify-start opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  {/* Base Gold Tone (#8A7649) */}
-                  <div className="absolute inset-0 flex items-center justify-start">
-                    {item.icon("#8A7649")}
-                  </div>
-
-                  {/* Dynamic Flowing High-Gloss Beam (#FFF8D6) sweeping continuously */}
-                  <div className="absolute inset-0 flex items-center justify-start sheen-mask-layer">
-                    {item.icon("#FFF8D6")}
-                  </div>
+                  {item.icon(`url(#single_flow_grad_${idx})`)}
                 </div>
               </div>
 
