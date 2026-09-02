@@ -66,70 +66,6 @@ function DiamondBadgeIcon() {
   );
 }
 
-function FigmaCardTopGlow({ idPrefix = "card_glow" }: { idPrefix?: string }) {
-  return (
-    <div 
-      className="absolute top-[calc(50%-79px/2-86px)] left-[calc(50%-402px/2-120px)] w-[402px] h-[79px] pointer-events-none select-none z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-      style={{
-        transform: "matrix(-1, 0, 0, 1, 0, 0)"
-      }}
-    >
-      <div className="w-[414px] h-[157px] relative">
-        <svg 
-          width="414" 
-          height="157" 
-          viewBox="0 0 414 157" 
-          fill="none" 
-          xmlns="http://www.w3.org/2000/svg"
-          className="overflow-visible block"
-        >
-          <g opacity="0.4">
-            <g filter={`url(#filter0_f_${idPrefix})`}>
-              <path 
-                d="M164.862 47.1762C120.355 69.7194 97.9472 44.3584 25.8138 35.2001V-11.9998H386.787C370.314 1.38531 331.721 30.2689 309.129 38.7226C280.89 49.2898 209.37 24.633 164.862 47.1762Z" 
-                fill="#ADE988"
-              />
-            </g>
-            <g filter={`url(#filter1_f_${idPrefix})`}>
-              <path 
-                d="M5.64827 -12.9096C-38.8595 -35.4528 -61.2669 -10.0918 -133.4 -0.933498V46.2664H227.573C211.1 32.8813 172.506 3.99769 149.915 -4.45605C121.675 -15.0232 50.1561 9.63361 5.64827 -12.9096Z" 
-                fill="#DDFE70"
-              />
-            </g>
-          </g>
-          <defs>
-            <filter 
-              id={`filter0_f_${idPrefix}`} 
-              x="-74.1862" 
-              y="-112" 
-              width="560.974" 
-              height="268.267" 
-              filterUnits="userSpaceOnUse" 
-              colorInterpolationFilters="sRGB"
-            >
-              <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-              <feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur"/>
-            </filter>
-            <filter 
-              id={`filter1_f_${idPrefix}`} 
-              x="-233.4" 
-              y="-122" 
-              width="560.974" 
-              height="268.267" 
-              filterUnits="userSpaceOnUse" 
-              colorInterpolationFilters="sRGB"
-            >
-              <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-              <feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur"/>
-            </filter>
-          </defs>
-        </svg>
-      </div>
-    </div>
-  );
-}
 
 interface EnterpriseFeature {
   title: React.ReactNode;
@@ -219,9 +155,6 @@ export default function EnterpriseSection() {
                   background: "linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.65) 40%, rgba(255, 255, 255, 0.08) 100%)"
                 }}
               />
-
-              {/* Exact Figma Background Gradient Layer (Fades in on Hover) */}
-              <FigmaCardTopGlow idPrefix={`card_glow_${idx}`} />
 
               {/* Top: Feature Icon (40px) with Pure Single-Direction Dynamic Sheen Flow */}
               <div className="size-[40px] relative shrink-0 z-10 flex items-center justify-start">
