@@ -72,6 +72,12 @@ const enterpriseFeatures: EnterpriseFeature[] = [
     icon: <DataIcon />
   },
   {
+    title: "Zero Data Retention (ZDR)",
+    description: "Strict zero data logging and isolated physical pipelines for strict compliance.",
+    glowColor: "bg-[#10B981]/30",
+    icon: <ZdrIcon />
+  },
+  {
     title: "Guaranteed SLA",
     description: "99.99% enterprise uptime SLA with dedicated priority queue routing.",
     glowColor: "bg-[#70FE7E]/35",
@@ -82,12 +88,6 @@ const enterpriseFeatures: EnterpriseFeature[] = [
     description: "Direct shared Slack channel with core Octen engineers and 24/7 response.",
     glowColor: "bg-[#E01E5A]/25",
     icon: <SlackIcon />
-  },
-  {
-    title: "Zero Data Retention (ZDR)",
-    description: "Strict zero data logging and isolated physical pipelines for strict compliance.",
-    glowColor: "bg-[#10B981]/30",
-    icon: <ZdrIcon />
   },
   {
     title: "Volume discounts",
