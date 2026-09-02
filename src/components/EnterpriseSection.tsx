@@ -205,10 +205,16 @@ export default function EnterpriseSection() {
               <div className="size-[40px] relative shrink-0 z-10 flex items-center justify-start">
                 <svg className="absolute w-0 h-0 pointer-events-none" aria-hidden="true" focusable="false">
                   <defs>
-                    <linearGradient id={`hover_feature_grad_${idx}`} x1="85%" y1="10%" x2="15%" y2="90%">
-                      <stop offset="2.04%" stopColor="#13120C" />
-                      <stop offset="48.97%" stopColor="#8A7649" />
-                      <stop offset="93.31%" stopColor="#CAC397" />
+                    <linearGradient id={`hover_feature_grad_${idx}`} x1="180%" y1="-80%" x2="80%" y2="20%">
+                      <stop offset="0%" stopColor="#13120C" />
+                      <stop offset="25%" stopColor="#8A7649" />
+                      <stop offset="50%" stopColor="#CAC397" />
+                      <stop offset="75%" stopColor="#8A7649" />
+                      <stop offset="100%" stopColor="#13120C" />
+                      <animate attributeName="x1" values="200%; -100%" dur="2.8s" repeatCount="indefinite" />
+                      <animate attributeName="y1" values="-100%; 200%" dur="2.8s" repeatCount="indefinite" />
+                      <animate attributeName="x2" values="100%; -200%" dur="2.8s" repeatCount="indefinite" />
+                      <animate attributeName="y2" values="0%; 300%" dur="2.8s" repeatCount="indefinite" />
                     </linearGradient>
                   </defs>
                 </svg>
