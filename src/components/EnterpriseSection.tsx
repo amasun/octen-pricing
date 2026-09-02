@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import svgPaths from "./svgPaths";
 
 function QpsIcon({ color = "#100F09" }: { color?: string }) {
@@ -63,7 +63,7 @@ function SlackIcon({ color = "#100F09" }: { color?: string }) {
 function ChartIcon({ color = "#100F09" }: { color?: string }) {
   return (
     <svg className="size-[24px]" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M8.63715 3.06392C9.01725 2.73995 9.50034 2.56201 9.99977 2.56201C10.4992 2.56201 10.9823 2.73995 11.3624 3.06392L12.3063 3.86847C12.4186 3.96424 12.5583 4.02208 12.7054 4.03372L13.9413 4.13175C14.4391 4.17145 14.9065 4.38723 15.2597 4.74037C15.6128 5.09351 15.8286 5.56091 15.8683 6.05875L15.9663 7.29534C15.9781 7.44223 16.036 7.58165 16.1316 7.69376L16.9361 8.63766C17.2601 9.01776 17.438 9.50085 17.438 10.0003C17.438 10.4997 17.2601 10.9828 16.9361 11.3629L16.1316 12.3068C16.036 12.4189 15.9781 12.5583 15.9663 12.7052L15.8683 13.9411C15.8286 14.4389 15.6128 14.9064 15.2597 15.2595C14.9065 15.6126 14.4391 15.8284 13.9413 15.8681L12.7047 15.9661C12.5577 15.9781 12.4183 16.0362 12.3063 16.1321L11.3624 16.9359C10.9823 17.2599 10.4992 17.4379 9.99977 17.4379C9.50034 17.4379 9.01725 17.2599 8.63715 16.9359L7.69325 16.1321C7.58114 16.0365 7.44172 15.9786 7.29483 15.9668L6.05894 15.8681C5.5611 15.8284 5.0937 15.6126 4.74056 15.2595C4.38742 14.9064 4.17164 14.4389 4.13194 13.9411L4.03391 12.7052C4.02207 12.558 3.96398 12.4183 3.86796 12.3061L3.06411 11.3622C2.74033 10.9822 2.5625 10.4992 2.5625 9.99993C2.5625 9.50066 2.74033 9.01771 3.06411 8.63766L3.86796 7.69376C3.96373 7.58146 4.02157 7.44177 4.03321 7.29464L4.13194 6.05875C4.1718 5.56104 4.38765 5.0938 4.74077 4.7408C5.0939 4.3878 5.56122 4.17213 6.05894 4.13245L7.29483 4.03442C7.44196 4.02278 7.58165 3.96494 7.69395 3.86917L8.63715 3.06392ZM10.4542 4.12965C10.3275 4.02172 10.1665 3.96245 10.0001 3.96245C9.8337 3.96245 9.67271 4.02172 9.54603 4.12965L8.60214 4.9349C8.26543 5.22144 7.84691 5.39443 7.40616 5.42925L6.17028 5.52799C6.00441 5.54127 5.84869 5.61318 5.73103 5.73084C5.61337 5.8485 5.54146 6.00422 5.52818 6.17009L5.42944 7.40667C5.39428 7.84726 5.22104 8.26552 4.93439 8.60195L4.12914 9.54584C4.02121 9.67252 3.96194 9.83351 3.96194 9.99993C3.96194 10.1664 4.02121 10.3273 4.12914 10.454L4.93439 11.3979C5.22104 11.7343 5.39428 12.1526 5.42944 12.5932L5.52748 13.8298C5.54078 13.9958 5.61279 14.1516 5.7306 14.2692C5.8484 14.3869 6.00428 14.4588 6.17028 14.4719L7.40616 14.5706C7.84699 14.6056 8.26552 14.7789 8.60214 15.0657L9.54603 15.8709C9.67271 15.9788 9.8337 16.0381 10.0001 16.0381C10.1665 16.0381 10.3275 15.9788 10.4542 15.8709L11.3981 15.0657C11.7345 14.779 12.1528 14.6058 12.5934 14.5706L13.8293 14.4726C13.9954 14.4594 14.1513 14.3875 14.2692 14.2697C14.387 14.1519 14.4589 13.9959 14.4721 13.8298L14.5701 12.5932C14.6051 12.1528 14.7788 11.7347 15.0659 11.3979L15.8704 10.454C15.9783 10.3273 16.0376 10.1664 16.0376 9.99993C16.0376 9.83351 15.9783 9.67252 15.8704 9.54584L15.0652 8.60195C14.7788 8.26543 14.6058 7.84717 14.5708 7.40667L14.4721 6.17009C14.4588 6.00411 14.3868 5.8483 14.2689 5.73063C14.1511 5.61295 13.9953 5.54111 13.8293 5.52799L12.5934 5.42995C12.1527 5.39459 11.7344 5.22111 11.3981 4.9342L10.4542 4.12965ZM11.9807 7.02925L12.9708 8.01936L8.01955 12.9713L7.02874 11.9805L11.9807 7.02925ZM8.76179 8.7623C8.6649 8.86261 8.549 8.94263 8.42085 8.99768C8.29271 9.05272 8.15489 9.0817 8.01542 9.08291C7.87596 9.08412 7.73765 9.05755 7.60857 9.00473C7.47949 8.95192 7.36222 8.87393 7.2636 8.77531C7.16498 8.6767 7.08699 8.55942 7.03418 8.43034C6.98137 8.30126 6.9548 8.16296 6.95601 8.02349C6.95722 7.88403 6.98619 7.74621 7.04124 7.61806C7.09629 7.48992 7.1763 7.37402 7.27662 7.27713C7.47472 7.08581 7.74003 6.97994 8.01542 6.98233C8.29082 6.98473 8.55425 7.09519 8.74899 7.28993C8.94373 7.48467 9.05419 7.7481 9.05659 8.02349C9.05898 8.29889 8.95311 8.5642 8.76179 8.7623ZM11.2378 12.7234C11.3346 12.8237 11.4505 12.9038 11.5787 12.9588C11.7068 13.0139 11.8447 13.0428 11.9841 13.044C12.1236 13.0453 12.2619 13.0187 12.391 12.9659C12.5201 12.9131 12.6373 12.8351 12.7359 12.7365C12.8346 12.6378 12.9125 12.5206 12.9654 12.3915C13.0182 12.2624 13.0447 12.1241 13.0435 11.9846C13.0423 11.8452 13.0133 11.7073 12.9583 11.5792C12.9033 11.4511 12.8232 11.3352 12.7229 11.2383C11.065 11.4516 10.9546 11.7128 10.9508 11.9863C10.9469 12.2598 11.0499 12.524 11.2378 12.7227" fill={color}/>
+      <path d="M8.63715 3.06392C9.01725 2.73995 9.50034 2.56201 9.99977 2.56201C10.4992 2.56201 10.9823 2.73995 11.3624 3.06392L12.3063 3.86847C12.4186 3.96424 12.5583 4.02208 12.7054 4.03372L13.9413 4.13175C14.4391 4.17145 14.9065 4.38723 15.2597 4.74037C15.6128 5.09351 15.8286 5.56091 15.8683 6.05875L15.9663 7.29534C15.9781 7.44223 16.036 7.58165 16.1316 7.69376L16.9361 8.63766C17.2601 9.01776 17.438 9.50085 17.438 10.0003C17.438 10.4997 17.2601 10.9828 16.9361 11.3629L16.1316 12.3068C16.036 12.4189 15.9781 12.5583 15.9663 12.7052L15.8683 13.9411C15.8286 14.4389 15.6128 14.9064 15.2597 15.2595C14.9065 15.6126 14.4391 15.8284 13.9413 15.8681L12.7047 15.9661C12.5577 15.9781 12.4183 16.0362 12.3063 16.1321L11.3624 16.9359C10.9823 17.2599 10.4992 17.4379 9.99977 17.4379C9.50034 17.4379 9.01725 17.2599 8.63715 16.9359L7.69325 16.1321C7.58114 16.0365 7.44172 15.9786 7.29483 15.9668L6.05894 15.8681C5.5611 15.8284 5.0937 15.6126 4.74056 15.2595C4.38742 14.9064 4.17164 14.4389 4.13194 13.9411L4.03391 12.7052C4.02207 12.558 3.96398 12.4183 3.86796 12.3061L3.06411 11.3622C2.74033 10.9822 2.5625 10.4992 2.5625 9.99993C2.5625 9.50066 2.74033 9.01771 3.06411 8.63766L3.86796 7.69376C3.96373 7.58146 4.02157 7.44177 4.03321 7.29464L4.13194 6.05875C4.1718 5.56104 4.38765 5.0938 4.74077 4.7408C5.0939 4.3878 5.56122 4.17213 6.05894 4.13245L7.29483 4.03442C7.44196 4.02278 7.58165 3.96494 7.69395 3.86917L8.63715 3.06392ZM10.4542 4.12965C10.3275 4.02172 10.1665 3.96245 10.0001 3.96245C9.8337 3.96245 9.67271 4.02172 9.54603 4.12965L8.60214 4.9349C8.26543 5.22144 7.84691 5.39443 7.40616 5.42925L6.17028 5.52799C6.00441 5.54127 5.84869 5.61318 5.73103 5.73084C5.61337 5.8485 5.54146 6.00422 5.52818 6.17009L5.42944 7.40667C5.39428 7.84726 5.22104 8.26552 4.93439 8.60195L4.12914 9.54584C4.02121 9.67252 3.96194 9.83351 3.96194 9.99993C3.96194 10.1664 4.02121 10.3273 4.12914 10.454L4.93439 11.3979C5.22104 11.7343 5.39428 12.1526 5.42944 12.5932L5.52818 13.8298C5.54148 13.9958 5.61349 14.1516 5.7313 14.2692C5.8491 14.3869 6.00498 14.4588 6.17098 14.4719L7.40686 14.5706C7.84769 14.6056 8.26622 14.7789 8.60284 15.0657L9.54673 15.8709C9.67341 15.9788 9.8344 16.0381 10.0008 16.0381C10.1672 16.0381 10.3282 15.9788 10.4549 15.8709L11.3988 15.0657C11.7352 14.779 12.1535 14.6058 12.5941 14.5706L13.83 14.4726C13.9961 14.4594 14.152 14.3875 14.2699 14.2697C14.3877 14.1519 14.4596 13.9959 14.4728 13.8298L14.5708 12.5932C14.6058 12.1528 14.7795 11.7347 15.0666 11.3979L15.8711 10.454C15.979 10.3273 16.0383 10.1664 16.0383 9.99993C16.0383 9.83351 15.979 9.67252 15.8711 9.54584L15.0659 8.60195C14.7795 8.26543 14.6065 7.84717 14.5715 7.40667L14.4728 6.17009C14.4595 6.00411 14.3875 5.8483 14.2696 5.73063C14.1518 5.61295 13.996 5.54111 13.83 5.52799L12.5941 5.42995C12.1534 5.39459 11.7351 5.22111 11.3988 4.9342L10.4549 4.12965ZM11.9814 7.02925L12.9715 8.01936L8.02025 12.9713L7.02944 11.9805L11.9814 7.02925ZM8.76249 8.7623C8.6656 8.86261 8.5497 8.94263 8.42155 8.99768C8.29341 9.05272 8.15559 9.0817 8.01612 9.08291C7.87666 9.08412 7.73835 9.05755 7.60927 9.00473C7.48019 8.95192 7.36292 8.87393 7.2643 8.77531C7.16568 8.6767 7.08769 8.55942 7.03488 8.43034C6.98207 8.30126 6.9555 8.16296 6.95671 8.02349C6.95792 7.88403 6.98689 7.74621 7.04194 7.61806C7.09699 7.48992 7.177 7.37402 7.27732 7.27713C7.47542 7.08581 7.74073 6.97994 8.01612 6.98233C8.29152 6.98473 8.55495 7.09519 8.74969 7.28993C8.94443 7.48467 9.05489 7.7481 9.05729 8.02349C9.05968 8.29889 8.95381 8.5642 8.76249 8.7623ZM11.2385 12.7234C11.3353 12.8237 11.4512 12.9038 11.5794 12.9588C11.7075 13.0139 11.8454 13.0428 11.9848 13.044C12.1243 13.0453 12.2626 13.0187 12.3917 12.9659C12.5208 12.9131 12.638 12.8351 12.7366 12.7365C12.8353 12.6378 12.9132 12.5206 12.9661 12.3915C13.0189 12.2624 13.0454 12.1241 13.0442 11.9846C13.043 11.8452 13.014 11.7073 12.959 11.5792C12.904 11.4511 12.8239 11.3352 12.7236 11.2383C11.0657 11.4516 10.9553 11.7128 10.9515 11.9863C10.9476 12.2598 11.0506 12.524 11.2385 12.7227" fill={color}/>
     </svg>
   );
 }
@@ -86,8 +86,6 @@ function DiamondBadgeIcon() {
 interface EnterpriseFeature {
   title: React.ReactNode;
   description: string;
-  badge?: string;
-  badgeType?: "gold" | "green";
   icon: (color?: string) => React.ReactNode;
 }
 
@@ -95,15 +93,11 @@ const enterpriseFeatures: EnterpriseFeature[] = [
   {
     title: <><strong className="font-bold">1M+</strong> QPS</>,
     description: "Unthrottled high-concurrency search throughput for mission-critical scale.",
-    badge: "⚡ High Scale",
-    badgeType: "gold",
     icon: (color) => <QpsIcon color={color} />
   },
   {
     title: "Custom data",
     description: "Seamlessly index and query proprietary private enterprise data sources.",
-    badge: "🔒 Private Data",
-    badgeType: "green",
     icon: (color) => <DataIcon color={color} />
   },
   {
@@ -129,19 +123,10 @@ const enterpriseFeatures: EnterpriseFeature[] = [
 ];
 
 export default function EnterpriseSection() {
-  const [activeTab, setActiveTab] = useState<1 | 2 | 3 | 4>(1);
-
-  const tabs = [
-    { id: 1 as const, name: "方案 1: 深邃黑曜石反色", tag: "强视觉反差" },
-    { id: 2 as const, name: "方案 2: 金色流光光晕", tag: "柔和尊贵感" },
-    { id: 3 as const, name: "方案 3: 专属胶囊标签", tag: "信息层级强化" },
-    { id: 4 as const, name: "方案 4: 金色高光侧条", tag: "精致边缘标记" },
-  ];
-
   return (
     <section 
       id="enterprise-plan" 
-      className="content-stretch flex flex-col items-center gap-[28px] sm:gap-[36px] pb-[80px] sm:pb-[120px] mt-[40px] sm:mt-[80px] pt-0 relative shrink-0 w-full max-w-[1312px] px-4 box-border scroll-mt-[90px]"
+      className="content-stretch flex flex-col items-center gap-[32px] sm:gap-[40px] pb-[80px] sm:pb-[120px] mt-[40px] sm:mt-[80px] pt-0 relative shrink-0 w-full max-w-[1312px] px-4 box-border scroll-mt-[90px]"
     >
       {/* 1. Header Area with Title, Subtitle & Contact Sales Button */}
       <div className="text-center flex flex-col items-center gap-2 sm:gap-3 shrink-0 px-4">
@@ -161,75 +146,19 @@ export default function EnterpriseSection() {
         </div>
       </div>
 
-      {/* Interactive Tabs Switcher for Design Proposals */}
-      <div className="w-full flex flex-col items-center gap-2">
-        <div className="flex items-center gap-1.5 p-1.5 bg-[#F3F4F6] border border-[#E5E7EB] rounded-full max-w-full overflow-x-auto select-none shadow-inner">
-          {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`px-3.5 sm:px-4 py-1.5 rounded-full text-[13px] sm:text-[14px] font-['DM_Sans',sans-serif] font-medium transition-all duration-200 whitespace-nowrap cursor-pointer flex items-center gap-1.5 ${
-                activeTab === tab.id
-                  ? "bg-[#100F09] text-white shadow-[0_2px_8px_rgba(0,0,0,0.15)] scale-[1.02]"
-                  : "text-[#6B7280] hover:text-[#100F09] hover:bg-white/60"
-              }`}
-            >
-              <span>{tab.name}</span>
-            </button>
-          ))}
-        </div>
-        <p className="text-[12px] font-['DM_Sans',sans-serif] text-[#8C8C94]">
-          点击上方 Tab 即可实时预览 4 种不同维度的卡片强调方案
-        </p>
-      </div>
-
-      {/* 2. 3x2 Grid of Feature Cards */}
+      {/* 2. 3x2 Grid of Feature Cards (Selected Option 2: Luminous Ambient Glow & Golden Accent) */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 w-full">
         {enterpriseFeatures.map((item, idx) => {
           const isHighlighted = idx < 2;
 
-          // ----------------------------------------------------
-          // 方案 1: 深邃黑曜石反色 (Dark Obsidian Inversion)
-          // ----------------------------------------------------
-          if (activeTab === 1 && isHighlighted) {
-            return (
-              <div 
-                key={idx}
-                className="group relative bg-[#100F09] rounded-[16px] border border-[#272624] hover:border-[#C6A55A]/50 hover:shadow-[0_12px_32px_rgba(0,0,0,0.35)] transition-all duration-200 p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 overflow-hidden box-border min-h-[190px] sm:min-h-[200px]"
-              >
-                {/* Ambient glow in top-right */}
-                <div className="absolute -top-12 -right-12 size-36 bg-[#FFE7B1]/10 blur-2xl rounded-full pointer-events-none group-hover:scale-125 transition-transform duration-300" />
-
-                {/* Top: Feature Icon in Gold/White */}
-                <div className="size-[28px] flex items-center justify-start text-[#FFE7B1] shrink-0">
-                  {item.icon("#FFE7B1")}
-                </div>
-
-                {/* Bottom: Title (18px) + Description (14px) */}
-                <div className="flex flex-col gap-2 relative z-10">
-                  <h3 className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[24px] text-white flex items-center">
-                    <span>{item.title}</span>
-                    <DiamondBadgeIcon />
-                  </h3>
-
-                  <p className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[20px] sm:leading-[22px] text-[#A1A1AA]">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            );
-          }
-
-          // ----------------------------------------------------
-          // 方案 2: 金色流光光晕 (Luminous Ambient Glow)
-          // ----------------------------------------------------
-          if (activeTab === 2 && isHighlighted) {
+          // Flagship Cards: Golden Border + Radial Glow
+          if (isHighlighted) {
             return (
               <div 
                 key={idx}
                 className="group relative bg-gradient-to-b from-[#FFFDF8] to-white rounded-[16px] border-2 border-[#E7D6A8] hover:border-[#C6A55A] hover:shadow-[0_8px_28px_rgba(198,165,90,0.18)] shadow-[0_2px_12px_rgba(198,165,90,0.06)] transition-all duration-200 p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 overflow-hidden box-border min-h-[190px] sm:min-h-[200px]"
               >
-                {/* Soft Radial Ambient Glow */}
+                {/* Soft Radial Ambient Glow in top right */}
                 <div className="absolute -top-8 -right-8 size-32 bg-[#FFE7B1]/35 blur-2xl rounded-full pointer-events-none group-hover:scale-125 transition-transform duration-300" />
 
                 {/* Top: Feature Icon */}
@@ -237,7 +166,7 @@ export default function EnterpriseSection() {
                   {item.icon("#100F09")}
                 </div>
 
-                {/* Bottom: Title (18px) + Description (14px) */}
+                {/* Bottom: Title (18px) with Diamond Badge + Description (14px) */}
                 <div className="flex flex-col gap-2 relative z-10">
                   <h3 className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[24px] text-[#100F09] flex items-center">
                     <span>{item.title}</span>
@@ -252,83 +181,7 @@ export default function EnterpriseSection() {
             );
           }
 
-          // ----------------------------------------------------
-          // 方案 3: 专属胶囊标签 (Title Capsule Badge)
-          // ----------------------------------------------------
-          if (activeTab === 3 && isHighlighted) {
-            return (
-              <div 
-                key={idx}
-                className="group relative bg-white rounded-[16px] border border-[rgba(26,26,25,0.12)] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-200 p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 overflow-hidden box-border min-h-[190px] sm:min-h-[200px]"
-              >
-                {/* Top Row: Icon + Right Pill Badge */}
-                <div className="flex items-center justify-between w-full">
-                  <div className="size-[28px] flex items-center justify-start text-[#100F09] shrink-0">
-                    {item.icon("#100F09")}
-                  </div>
-                  {item.badge && (
-                    <span 
-                      className={`px-2.5 py-0.5 rounded-full text-[11px] font-['DM_Sans',sans-serif] font-semibold tracking-wider uppercase border ${
-                        item.badgeType === "gold"
-                          ? "bg-[#FFF8E6] text-[#97731E] border-[#F0DDB2]"
-                          : "bg-[#ECFDF5] text-[#047857] border-[#A7F3D0]"
-                      }`}
-                    >
-                      {item.badge}
-                    </span>
-                  )}
-                </div>
-
-                {/* Bottom: Title (18px) + Description (14px) */}
-                <div className="flex flex-col gap-2">
-                  <h3 className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[24px] text-[#100F09] flex items-center">
-                    <span>{item.title}</span>
-                    <DiamondBadgeIcon />
-                  </h3>
-
-                  <p className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[20px] sm:leading-[22px] text-[#57575E]">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            );
-          }
-
-          // ----------------------------------------------------
-          // 方案 4: 金色高光侧条 (Left Accent Bar)
-          // ----------------------------------------------------
-          if (activeTab === 4 && isHighlighted) {
-            return (
-              <div 
-                key={idx}
-                className="group relative bg-white rounded-[16px] border border-[rgba(26,26,25,0.12)] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-200 p-6 sm:p-7 pl-7 sm:pl-8 flex flex-col justify-between gap-6 sm:gap-8 overflow-hidden box-border min-h-[190px] sm:min-h-[200px]"
-              >
-                {/* Left Gold Accent Bar */}
-                <div className="absolute left-0 top-0 bottom-0 w-[5px] bg-gradient-to-b from-[#FFE7B1] via-[#C6A55A] to-[#BB9A4C] rounded-l-[16px]" />
-
-                {/* Top: Feature Icon */}
-                <div className="size-[28px] flex items-center justify-start text-[#100F09] shrink-0">
-                  {item.icon("#100F09")}
-                </div>
-
-                {/* Bottom: Title (18px) + Description (14px) */}
-                <div className="flex flex-col gap-2">
-                  <h3 className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[24px] text-[#100F09] flex items-center">
-                    <span>{item.title}</span>
-                    <DiamondBadgeIcon />
-                  </h3>
-
-                  <p className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[20px] sm:leading-[22px] text-[#57575E]">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            );
-          }
-
-          // ----------------------------------------------------
-          // 后 4 张卡片：统一的标准白底卡片
-          // ----------------------------------------------------
+          // Standard White Cards (Cards 3, 4, 5, 6)
           return (
             <div 
               key={idx}
@@ -339,7 +192,7 @@ export default function EnterpriseSection() {
                 {item.icon("#100F09")}
               </div>
 
-              {/* Bottom: Title (18px) + Description (14px) */}
+              {/* Bottom: Title (18px) with Diamond Badge + Description (14px) */}
               <div className="flex flex-col gap-2">
                 <h3 className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[24px] text-[#100F09] flex items-center">
                   <span>{item.title}</span>
