@@ -88,12 +88,15 @@ export default function EnterpriseSection() {
       id="enterprise-plan" 
       className="content-stretch flex flex-col items-center gap-[28px] sm:gap-[36px] pb-[60px] sm:pb-[100px] mt-[40px] sm:mt-[80px] pt-0 relative shrink-0 w-full max-w-[1312px] px-4 box-border scroll-mt-[90px]"
     >
-      {/* 1. Header Area with Title & Contact Sales Button */}
-      <div className="text-center flex flex-col items-center gap-4 sm:gap-5 shrink-0 px-4">
+      {/* 1. Header Area with Title, Subtitle & Contact Sales Button */}
+      <div className="text-center flex flex-col items-center gap-2 sm:gap-3 shrink-0 px-4">
         <h2 className="font-['Fraunces',serif] font-bold text-[28px] sm:text-[44px] leading-[1.15] sm:leading-[48px] text-[#09090b]">
           Enterprise
         </h2>
-        <div className="flex items-center justify-center">
+        <p className="font-['DM_Sans',sans-serif] font-normal text-[16px] leading-[22px] sm:leading-[26px] text-[#5d605b] max-w-[680px]">
+          Adds custom data and dedicated support
+        </p>
+        <div className="flex items-center justify-center pt-2 sm:pt-3">
           <a
             href="mailto:support@octen.ai?subject=Octen%20Enterprise%20QPS%20Plan%20Inquiry"
             className="w-auto min-w-[180px] h-[44px] px-8 rounded-full bg-[#100F09] text-white font-['DM_Sans',sans-serif] font-semibold text-[16px] flex items-center justify-center btn-dark-hover hover:shadow-[0_4px_20px_rgba(0,0,0,0.16)] active:scale-[0.98] transition-all duration-200 select-none box-border text-center"
