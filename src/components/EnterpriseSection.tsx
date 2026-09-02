@@ -68,10 +68,12 @@ function DiamondBadgeIcon() {
 
 function FigmaCardTopGlow({ idPrefix = "card_glow" }: { idPrefix?: string }) {
   return (
-    <div className="absolute top-[-44px] left-[4px] w-[401px] h-[73px] flex items-center justify-center pointer-events-none select-none z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-      <div className="-scale-y-100 rotate-180 flex-none">
-        <div className="h-[73px] relative w-[401px]">
-          <div className="absolute inset-[-145.21%_-24.87%_-135.98%_-24.8%]">
+    <div 
+      className="absolute top-[-27px] left-[calc(50%-201px-1.5px)] w-[402px] h-[79px] flex items-center justify-center pointer-events-none select-none z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+    >
+      <div className="-scale-x-100 flex-none">
+        <div className="h-[79px] relative w-[402px]">
+          <div className="absolute inset-[-126.58%_-24.64%_-125.65%_-24.66%]">
             <svg 
               preserveAspectRatio="none" 
               overflow="visible" 
@@ -82,7 +84,7 @@ function FigmaCardTopGlow({ idPrefix = "card_glow" }: { idPrefix?: string }) {
             >
               <g opacity="0.4">
                 <g filter={`url(#filter0_f_${idPrefix})`}>
-                  <path d="M239.049 119.09C194.541 96.5472 172.133 121.908 100 131.067V178.266H460.974C444.501 164.881 405.907 135.998 383.315 127.544C355.076 116.977 283.556 141.634 239.049 119.09Z" fill="#70FE7E"/>
+                  <path d="M239.049 119.09C194.541 96.5472 172.133 121.908 100 131.067V178.266H460.974C444.501 164.881 405.907 135.998 383.315 127.544C355.076 116.977 283.556 141.634 239.049 119.09Z" fill="#ADE988"/>
                 </g>
                 <g filter={`url(#filter1_f_${idPrefix})`}>
                   <path d="M361.139 109.09C405.647 86.5472 428.054 111.908 500.188 121.067V168.266H139.214C155.687 154.881 194.281 125.998 216.873 117.544C245.112 106.977 316.631 131.634 361.139 109.09Z" fill="#DDFE70"/>
