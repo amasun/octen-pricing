@@ -156,7 +156,7 @@ export default function EnterpriseSection() {
             return (
               <div 
                 key={idx}
-                className="group relative bg-gradient-to-b from-[#FFFDF8] to-white rounded-[16px] border-2 border-[#E7D6A8] hover:border-[#C6A55A] hover:shadow-[0_8px_28px_rgba(198,165,90,0.18)] shadow-[0_2px_12px_rgba(198,165,90,0.06)] transition-all duration-200 p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 overflow-hidden box-border min-h-[190px] sm:min-h-[200px]"
+                className="group relative bg-gradient-to-b from-[#FFFDF8] to-white rounded-[16px] border-2 border-[#E7D6A8] hover:border-[#C6A55A] hover:shadow-[0_8px_28px_rgba(198,165,90,0.18)] transition-all duration-200 p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 overflow-hidden box-border min-h-[190px] sm:min-h-[200px]"
               >
                 {/* Soft Radial Ambient Glow in top right */}
                 <div className="absolute -top-8 -right-8 size-32 bg-[#FFE7B1]/35 blur-2xl rounded-full pointer-events-none group-hover:scale-125 transition-transform duration-300" />
