@@ -104,32 +104,32 @@ interface EnterpriseFeature {
 const enterpriseFeatures: EnterpriseFeature[] = [
   {
     title: <><strong className="font-bold">1M+</strong> QPS</>,
-    description: "Unthrottled high-concurrency search throughput for mission-critical scale.",
+    description: "Dedicated high-concurrency capacity, scaled to your workload.",
     icon: (color) => <QpsIcon color={color} />
   },
   {
     title: "Custom data",
-    description: "Seamlessly index and query proprietary private enterprise data sources.",
+    description: "Index and query custom data sources alongside the live web.",
     icon: (color) => <DataIcon color={color} />
   },
   {
     title: "Zero Data Retention (ZDR)",
-    description: "Strict zero data logging and isolated physical pipelines for strict compliance.",
+    description: "Request data is never logged or retained.",
     icon: (color) => <ZdrIcon color={color} />
   },
   {
-    title: "Guaranteed SLA",
-    description: "99.99% enterprise uptime SLA with dedicated priority queue routing.",
+    title: "Custom SLA",
+    description: "Uptime and response targets tailored to your workload.",
     icon: (color) => <FlashIcon color={color} />
   },
   {
     title: "Dedicated Slack channel support",
-    description: "Direct shared Slack channel with core Octen engineers and 24/7 response.",
+    description: "Direct access to the Octen team through a dedicated Slack channel.",
     icon: (color) => <SlackIcon color={color} />
   },
   {
     title: "Volume discounts",
-    description: "Predictable tiered volume discounts and custom annual commitment models.",
+    description: "Lower rates at scale, with flexible commitment terms.",
     icon: (color) => <ChartIcon color={color} />
   }
 ];
@@ -146,14 +146,14 @@ export default function EnterpriseSection() {
           Enterprise
         </h2>
         <p className="font-['DM_Sans',sans-serif] font-normal text-[16px] leading-[22px] sm:leading-[26px] text-[#5d605b] max-w-[680px]">
-          Fully customizable infrastructure tailored to your exact scale
+          Custom data, dedicated capacity, and hands-on support for teams at scale.
         </p>
         <div className="flex items-center justify-center pt-2 sm:pt-3">
           <a
             href="mailto:support@octen.ai?subject=Octen%20Enterprise%20QPS%20Plan%20Inquiry"
             className="w-auto min-w-[180px] h-[44px] px-8 rounded-full bg-[#100F09] text-white font-['DM_Sans',sans-serif] font-semibold text-[16px] flex items-center justify-center btn-dark-hover hover:shadow-[0_4px_20px_rgba(0,0,0,0.16)] active:scale-[0.98] transition-all duration-200 select-none box-border text-center"
           >
-            Contact Sales
+            Contact sales
           </a>
         </div>
       </div>
