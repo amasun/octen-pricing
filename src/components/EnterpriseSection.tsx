@@ -238,12 +238,20 @@ export default function EnterpriseSection() {
               key={idx}
               className="group relative bg-white rounded-[16px] border border-[rgba(0,0,0,0.12)] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-200 p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 overflow-hidden box-border min-h-[190px] sm:min-h-[200px]"
             >
-              {/* Subtle Dot Matrix Pattern (Figma 13542:181617) */}
+              {/* Dot Matrix Pattern (Figma 13542:181617: denser 12px grid & crisp 1.5px dots) */}
               <div 
-                className="absolute inset-0 pointer-events-none opacity-40 select-none"
+                className="absolute inset-0 pointer-events-none select-none"
                 style={{
-                  backgroundImage: "radial-gradient(rgba(0, 0, 0, 0.12) 1.2px, transparent 1.2px)",
-                  backgroundSize: "16px 16px"
+                  backgroundImage: "radial-gradient(rgba(0, 0, 0, 0.18) 1.5px, transparent 1.5px)",
+                  backgroundSize: "12px 12px"
+                }}
+              />
+
+              {/* Horizontal White Gradient Overlay (Figma: -89.83deg linear-gradient from white to transparent) */}
+              <div 
+                className="absolute inset-0 pointer-events-none select-none"
+                style={{
+                  background: "linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.75) 45%, rgba(255, 255, 255, 0.18) 100%)"
                 }}
               />
 
