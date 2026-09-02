@@ -171,122 +171,75 @@ export default function EnterpriseSection() {
         </div>
       </div>
 
-      {/* 2. 3x2 Grid of Feature Cards */}
+      {/* 2. 3x2 Grid of Feature Cards (All cards use default dot-matrix style and reveal Top Glow + Shine Border on Hover) */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 w-full">
         {enterpriseFeatures.map((item, idx) => {
-          const isHighlighted = idx < 2;
-
-          // 前两张旗舰卡片：默认采用微点阵卡片样式，Hover 时激发顶部黄绿氛围光 (Figma 13542:181545) 与流光边框 (Shine Border)
-          if (isHighlighted) {
-            return (
-              <div
-                key={idx}
-                className="group relative rounded-[16px] p-[1.5px] overflow-hidden transition-all duration-300 hover:shadow-[0_12px_36px_rgba(0,0,0,0.06)]"
-              >
-                {/* Default Border Base Layer (Figma rgba(0,0,0,0.12), fades out on hover to reveal Shine Border) */}
-                <div className="absolute inset-0 rounded-[16px] border border-[rgba(0,0,0,0.12)] group-hover:opacity-0 transition-opacity duration-300 pointer-events-none" />
-
-                {/* Shine Border Rotating Conic Gradient Layer (Reveals on Hover - Figma #DDFE70 & #70FE7E) */}
-                <div className="absolute -inset-[150%] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center justify-center">
-                  <div 
-                    className="w-[300%] h-[300%] animate-[spin_4s_linear_infinite]"
-                    style={{
-                      background: "conic-gradient(from 0deg, transparent 0%, #DDFE70 20%, #B2FE70 38%, #70FE7E 60%, #00E599 80%, transparent 100%)"
-                    }}
-                  />
-                </div>
-
-                {/* Shine Border Soft Ambient Outer Glow (Luminous edge glow matching Figma #DDFE70 & #70FE7E) */}
-                <div className="absolute -inset-[150%] opacity-0 group-hover:opacity-45 blur-[8px] transition-opacity duration-300 pointer-events-none flex items-center justify-center">
-                  <div 
-                    className="w-[300%] h-[300%] animate-[spin_4s_linear_infinite]"
-                    style={{
-                      background: "conic-gradient(from 0deg, transparent 0%, #DDFE70 20%, #B2FE70 38%, #70FE7E 60%, #00E599 80%, transparent 100%)"
-                    }}
-                  />
-                </div>
-
-                {/* Inner Card Content Container */}
-                <div className="relative z-10 w-full h-full rounded-[14.5px] p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 min-h-[190px] sm:min-h-[200px] box-border bg-white overflow-hidden">
-                  {/* Micro-Rectangle Dot Matrix Pattern (Matching default cards - 3x3px square dots, 10px pitch, opacity 0.15) */}
-                  <div 
-                    className="absolute inset-0 pointer-events-none select-none"
-                    style={{
-                      backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'10\' height=\'10\' viewBox=\'0 0 10 10\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'3\' height=\'3\' fill=\'%23A8A8A8\' fill-opacity=\'0.15\'/%3E%3C/svg%3E")',
-                      backgroundSize: "10px 10px"
-                    }}
-                  />
-
-                  {/* Horizontal White Gradient Overlay (Matching default cards) */}
-                  <div 
-                    className="absolute inset-0 pointer-events-none select-none"
-                    style={{
-                      background: "linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.65) 40%, rgba(255, 255, 255, 0.08) 100%)"
-                    }}
-                  />
-
-                  {/* Exact Figma Background Gradient Layer (Fades in on Hover) */}
-                  <FigmaCardTopGlow idPrefix={`card_glow_${idx}`} />
-
-                  {/* Top: Feature Icon (Unified to 40px) */}
-                  <div className="size-[40px] flex items-center justify-start text-[#100F09] shrink-0 relative z-10">
-                    {item.icon("#100F09")}
-                  </div>
-
-                  {/* Bottom: Title (18px) with Diamond Badge + Description (14px) */}
-                  <div className="flex flex-col gap-2 relative z-10">
-                    <h3 className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[24px] text-[#100F09] flex items-center">
-                      <span>{item.title}</span>
-                      <DiamondBadgeIcon />
-                    </h3>
-
-                    <p className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[20px] sm:leading-[22px] text-[#57575E]">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            );
-          }
-
-          // 其他卡片（Cards 3 ~ 6）：根据 Figma 13542:181617 调整默认卡片样式（微点阵背景 + 边框 rgba(0,0,0,0.12)）
           return (
-            <div 
+            <div
               key={idx}
-              className="group relative bg-white rounded-[16px] border border-[rgba(0,0,0,0.12)] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-200 p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 overflow-hidden box-border min-h-[190px] sm:min-h-[200px]"
+              className="group relative rounded-[16px] p-[1.5px] overflow-hidden transition-all duration-300 hover:shadow-[0_12px_36px_rgba(0,0,0,0.06)]"
             >
-              {/* Micro-Rectangle Dot Matrix Pattern (Figma 13542:181617: 3x3px square dots, 10px pitch, opacity 0.15) */}
-              <div 
-                className="absolute inset-0 pointer-events-none select-none"
-                style={{
-                  backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'10\' height=\'10\' viewBox=\'0 0 10 10\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'3\' height=\'3\' fill=\'%23A8A8A8\' fill-opacity=\'0.15\'/%3E%3C/svg%3E")',
-                  backgroundSize: "10px 10px"
-                }}
-              />
+              {/* Default Border Base Layer (Figma rgba(0,0,0,0.12), fades out on hover to reveal Shine Border) */}
+              <div className="absolute inset-0 rounded-[16px] border border-[rgba(0,0,0,0.12)] group-hover:opacity-0 transition-opacity duration-300 pointer-events-none" />
 
-              {/* Horizontal White Gradient Overlay (Figma: -89.83deg linear-gradient from white to transparent) */}
-              <div 
-                className="absolute inset-0 pointer-events-none select-none"
-                style={{
-                  background: "linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.75) 45%, rgba(255, 255, 255, 0.18) 100%)"
-                }}
-              />
-
-              {/* Top: Feature Icon (Unified to 40px) */}
-              <div className="size-[40px] flex items-center justify-start text-[#100F09] shrink-0 relative z-10">
-                {item.icon("#100F09")}
+              {/* Shine Border Rotating Conic Gradient Layer (Reveals on Hover - Figma #DDFE70 & #70FE7E) */}
+              <div className="absolute -inset-[150%] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center justify-center">
+                <div 
+                  className="w-[300%] h-[300%] animate-[spin_4s_linear_infinite]"
+                  style={{
+                    background: "conic-gradient(from 0deg, transparent 0%, #DDFE70 20%, #B2FE70 38%, #70FE7E 60%, #00E599 80%, transparent 100%)"
+                  }}
+                />
               </div>
 
-              {/* Bottom: Title (18px) with Diamond Badge + Description (14px) */}
-              <div className="flex flex-col gap-2 relative z-10">
-                <h3 className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[24px] text-[#100F09] flex items-center">
-                  <span>{item.title}</span>
-                  <DiamondBadgeIcon />
-                </h3>
+              {/* Shine Border Soft Ambient Outer Glow (Luminous edge glow matching Figma #DDFE70 & #70FE7E) */}
+              <div className="absolute -inset-[150%] opacity-0 group-hover:opacity-45 blur-[8px] transition-opacity duration-300 pointer-events-none flex items-center justify-center">
+                <div 
+                  className="w-[300%] h-[300%] animate-[spin_4s_linear_infinite]"
+                  style={{
+                    background: "conic-gradient(from 0deg, transparent 0%, #DDFE70 20%, #B2FE70 38%, #70FE7E 60%, #00E599 80%, transparent 100%)"
+                  }}
+                />
+              </div>
 
-                <p className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[20px] sm:leading-[22px] text-[#57575E]">
-                  {item.description}
-                </p>
+              {/* Inner Card Content Container */}
+              <div className="relative z-10 w-full h-full rounded-[14.5px] p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 min-h-[190px] sm:min-h-[200px] box-border bg-white overflow-hidden">
+                {/* Micro-Rectangle Dot Matrix Pattern (3x3px square dots, 10px pitch, opacity 0.15) */}
+                <div 
+                  className="absolute inset-0 pointer-events-none select-none"
+                  style={{
+                    backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'10\' height=\'10\' viewBox=\'0 0 10 10\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'3\' height=\'3\' fill=\'%23A8A8A8\' fill-opacity=\'0.15\'/%3E%3C/svg%3E")',
+                    backgroundSize: "10px 10px"
+                  }}
+                />
+
+                {/* Horizontal White Gradient Overlay (Figma: -89.83deg linear-gradient from white to transparent) */}
+                <div 
+                  className="absolute inset-0 pointer-events-none select-none"
+                  style={{
+                    background: "linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.65) 40%, rgba(255, 255, 255, 0.08) 100%)"
+                  }}
+                />
+
+                {/* Exact Figma Background Gradient Layer (Fades in on Hover) */}
+                <FigmaCardTopGlow idPrefix={`card_glow_${idx}`} />
+
+                {/* Top: Feature Icon (Unified to 40px) */}
+                <div className="size-[40px] flex items-center justify-start text-[#100F09] shrink-0 relative z-10">
+                  {item.icon("#100F09")}
+                </div>
+
+                {/* Bottom: Title (18px) with Diamond Badge + Description (14px) */}
+                <div className="flex flex-col gap-2 relative z-10">
+                  <h3 className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[24px] text-[#100F09] flex items-center">
+                    <span>{item.title}</span>
+                    <DiamondBadgeIcon />
+                  </h3>
+
+                  <p className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[20px] sm:leading-[22px] text-[#57575E]">
+                    {item.description}
+                  </p>
+                </div>
               </div>
             </div>
           );
