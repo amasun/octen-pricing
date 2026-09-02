@@ -181,11 +181,11 @@ export default function EnterpriseSection() {
               key={idx}
               className="group relative bg-white rounded-[16px] border border-[rgba(26,26,25,0.12)] hover:border-[#e0d6ba] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 overflow-hidden box-border min-h-[190px] sm:min-h-[200px]"
             >
-              {/* Micro-Rectangle Dot Matrix Pattern (3x3px square dots, 10px pitch, opacity 0.15) */}
+              {/* Micro-Rectangle Dot Matrix Pattern (3x3px square dots, 10px pitch, opacity 20%) */}
               <div 
                 className="absolute inset-0 pointer-events-none select-none"
                 style={{
-                  backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'10\' height=\'10\' viewBox=\'0 0 10 10\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'3\' height=\'3\' fill=\'%23A8A8A8\' fill-opacity=\'0.15\'/%3E%3C/svg%3E")',
+                  backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'10\' height=\'10\' viewBox=\'0 0 10 10\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'3\' height=\'3\' fill=\'%23A8A8A8\' fill-opacity=\'0.2\'/%3E%3C/svg%3E")',
                   backgroundSize: "10px 10px"
                 }}
               />
