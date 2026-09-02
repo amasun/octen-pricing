@@ -68,7 +68,7 @@ function DiamondBadgeIcon() {
 
 function FigmaCardTopGlow({ idPrefix = "card_glow" }: { idPrefix?: string }) {
   return (
-    <div className="absolute top-[-44px] left-[4px] w-[401px] h-[73px] flex items-center justify-center pointer-events-none select-none z-0">
+    <div className="absolute top-[-44px] left-[4px] w-[401px] h-[73px] flex items-center justify-center pointer-events-none select-none z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
       <div className="-scale-y-100 rotate-180 flex-none">
         <div className="h-[73px] relative w-[401px]">
           <div className="absolute inset-[-145.21%_-24.87%_-135.98%_-24.8%]">
@@ -176,15 +176,15 @@ export default function EnterpriseSection() {
         {enterpriseFeatures.map((item, idx) => {
           const isHighlighted = idx < 2;
 
-          // 前两张旗舰卡片：Figma #D1D1D1 边框 + 顶部精准 Figma 矢量氛围渐变 + Hover 旋转流光边框 (Shine Border)
+          // 前两张旗舰卡片：默认采用微点阵卡片样式，Hover 时激发顶部黄绿氛围光 (Figma 13542:181545) 与流光边框 (Shine Border)
           if (isHighlighted) {
             return (
               <div
                 key={idx}
                 className="group relative rounded-[16px] p-[1.5px] overflow-hidden transition-all duration-300 hover:shadow-[0_12px_36px_rgba(0,0,0,0.06)]"
               >
-                {/* Default Border Base Layer (Visible when not hovered - Figma #D1D1D1) */}
-                <div className="absolute inset-0 rounded-[16px] border border-[#D1D1D1] group-hover:opacity-0 transition-opacity duration-300 pointer-events-none" />
+                {/* Default Border Base Layer (Figma rgba(0,0,0,0.12), fades out on hover to reveal Shine Border) */}
+                <div className="absolute inset-0 rounded-[16px] border border-[rgba(0,0,0,0.12)] group-hover:opacity-0 transition-opacity duration-300 pointer-events-none" />
 
                 {/* Shine Border Rotating Conic Gradient Layer (Reveals on Hover - Figma #DDFE70 & #70FE7E) */}
                 <div className="absolute -inset-[150%] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center justify-center">
@@ -208,7 +208,24 @@ export default function EnterpriseSection() {
 
                 {/* Inner Card Content Container */}
                 <div className="relative z-10 w-full h-full rounded-[14.5px] p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 min-h-[190px] sm:min-h-[200px] box-border bg-white overflow-hidden">
-                  {/* Exact Figma Background Gradient Layer (node 13542:181545) */}
+                  {/* Dot Matrix Pattern (Matching default cards) */}
+                  <div 
+                    className="absolute inset-0 pointer-events-none opacity-50 select-none"
+                    style={{
+                      backgroundImage: "radial-gradient(rgba(0, 0, 0, 0.14) 1.2px, transparent 1.2px)",
+                      backgroundSize: "12px 12px"
+                    }}
+                  />
+
+                  {/* Horizontal White Gradient Overlay (Matching default cards) */}
+                  <div 
+                    className="absolute inset-0 pointer-events-none select-none"
+                    style={{
+                      background: "linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.75) 45%, rgba(255, 255, 255, 0.18) 100%)"
+                    }}
+                  />
+
+                  {/* Exact Figma Background Gradient Layer (Fades in on Hover) */}
                   <FigmaCardTopGlow idPrefix={`card_glow_${idx}`} />
 
                   {/* Top: Feature Icon (Unified to 40px) */}
