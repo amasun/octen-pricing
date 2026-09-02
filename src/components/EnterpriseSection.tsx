@@ -137,19 +137,9 @@ export default function EnterpriseSection() {
             <div
               key={idx}
               id={`enterprise_feature_card_${idx}`}
-              className={`group relative rounded-[16px] transition-all duration-300 p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 overflow-hidden box-border min-h-[190px] sm:min-h-[200px] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] ${
-                idx < 2
-                  ? "border border-[#D6C69B]"
-                  : "bg-white border border-[rgba(26,26,25,0.12)] hover:border-[#D6C69B]"
-              }`}
-              style={
-                idx < 2
-                  ? {
-                      background:
-                        "linear-gradient(0deg, rgba(255, 249, 208, 0.2), rgba(255, 249, 208, 0.2)), linear-gradient(256.39deg, rgba(255, 255, 255, 0.18) 0.58%, #FFFFFF 98.23%), #FFF9D0"
-                    }
-                  : undefined
-              }
+              className={`group relative bg-white rounded-[16px] border ${
+                idx < 2 ? "border-[#D6C69B]" : "border-[rgba(26,26,25,0.12)] hover:border-[#D6C69B]"
+              } hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 overflow-hidden box-border min-h-[190px] sm:min-h-[200px]`}
             >
               {/* Micro-Rectangle Dot Matrix Pattern (3x3px square dots, 10px pitch, opacity 10%) */}
               <div 
