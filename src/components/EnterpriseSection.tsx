@@ -51,6 +51,21 @@ function ChartIcon() {
   );
 }
 
+function DiamondBadgeIcon() {
+  return (
+    <svg className="size-[20px] sm:size-[22px] shrink-0 inline-block ml-2 text-amber-500" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.1714 2C17.5239 2.00011 17.8702 2.09341 18.175 2.27042C18.4799 2.44744 18.7325 2.70189 18.9074 3.008L22.2414 8.84C22.459 9.2209 22.5453 9.6627 22.4872 10.0974C22.429 10.5322 22.2295 10.9358 21.9194 11.246L12.6364 20.529C12.5203 20.6451 12.3825 20.7372 12.2308 20.8001C12.0792 20.8629 11.9166 20.8952 11.7524 20.8952C11.5882 20.8952 11.4257 20.8629 11.274 20.8001C11.1223 20.7372 10.9845 20.6451 10.8684 20.529L1.58543 11.246C1.27535 10.9358 1.07587 10.5322 1.01768 10.0974C0.959495 9.6627 1.04584 9.2209 1.26343 8.84L4.59643 3.007C4.77133 2.70123 5.02389 2.44707 5.32855 2.27024C5.63317 2.09341 5.97917 2.00019 6.33143 2H17.1714ZM16.4584 8.293C16.2709 8.10553 16.0166 8.00021 15.7514 8.00021C15.4862 8.00021 15.2319 8.10553 15.0444 8.293L11.7514 11.586L8.45744 8.293C8.3662 8.19749 8.25585 8.12131 8.13384 8.0689C8.01183 8.01649 7.88061 7.9889 7.74783 7.98775C7.61505 7.9866 7.48338 8.0119 7.36048 8.06218C7.23758 8.11246 7.12594 8.18671 7.03204 8.28061C6.93814 8.3745 6.86389 8.48615 6.81361 8.60905C6.76333 8.73194 6.73803 8.86362 6.73918 8.9964C6.74035 9.1292 6.76792 9.2604 6.82033 9.3824C6.87275 9.5044 6.94893 9.6148 7.04444 9.707L10.8674 13.53C10.9835 13.6461 11.1213 13.7382 11.273 13.8011C11.4247 13.8639 11.5872 13.8962 11.7514 13.8962C11.9156 13.8962 12.0782 13.8639 12.2298 13.8011C12.3815 13.7382 12.5193 13.6461 12.6354 13.53L16.4584 9.707C16.6459 9.5195 16.7512 9.2652 16.7512 9C16.7512 8.73484 16.6459 8.48053 16.4584 8.293Z" fill="url(#paint0_linear_diamond_badge)"/>
+      <defs>
+        <linearGradient id="paint0_linear_diamond_badge" x1="21.6179" y1="2.6622" x2="6.90299" y2="20.2212" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#FFE7B1"/>
+          <stop offset="0.641295" stopColor="#C6A55A"/>
+          <stop offset="1" stopColor="#BB9A4C"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+}
+
 interface EnterpriseFeature {
   title: React.ReactNode;
   description: string;
@@ -60,13 +75,23 @@ interface EnterpriseFeature {
 
 const enterpriseFeatures: EnterpriseFeature[] = [
   {
-    title: <><strong className="font-bold">1M+</strong> QPS</>,
+    title: (
+      <span className="inline-flex items-center">
+        <span><strong className="font-bold">1M+</strong> QPS</span>
+        <DiamondBadgeIcon />
+      </span>
+    ),
     description: "Unthrottled high-concurrency search throughput for mission-critical scale.",
     glowColor: "bg-[#00E599]/30",
     icon: <BranchIcon />
   },
   {
-    title: "Custom data",
+    title: (
+      <span className="inline-flex items-center">
+        <span>Custom data</span>
+        <DiamondBadgeIcon />
+      </span>
+    ),
     description: "Seamlessly index and query proprietary private enterprise data sources.",
     glowColor: "bg-[#38BDF8]/30",
     icon: <DataIcon />
