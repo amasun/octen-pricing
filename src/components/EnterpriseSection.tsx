@@ -179,7 +179,7 @@ export default function EnterpriseSection() {
           return (
             <div
               key={idx}
-              className="group relative bg-white rounded-[16px] border border-[rgba(0,0,0,0.12)] hover:border-[#e0d6ba] hover:shadow-[0_12px_36px_rgba(0,0,0,0.06)] transition-all duration-300 p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 overflow-hidden box-border min-h-[190px] sm:min-h-[200px]"
+              className="group relative bg-white rounded-[16px] border border-[rgba(26,26,25,0.12)] hover:border-[#e0d6ba] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 overflow-hidden box-border min-h-[190px] sm:min-h-[200px]"
             >
               {/* Micro-Rectangle Dot Matrix Pattern (3x3px square dots, 10px pitch, opacity 0.15) */}
               <div 
