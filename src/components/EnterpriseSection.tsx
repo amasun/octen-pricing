@@ -1,27 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import svgPaths from "./svgPaths";
 
-function QpsIcon() {
+function QpsIcon({ color = "#100F09" }: { color?: string }) {
   return (
     <svg className="size-[26px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       {/* Upper sparkle */}
-      <rect x="2" y="5" width="2" height="2" fill="#100F09" />
-      <rect x="4" y="3" width="2" height="2" fill="#100F09" />
-      <rect x="4" y="5" width="2" height="2" fill="#100F09" />
-      <rect x="4" y="7" width="2" height="2" fill="#100F09" />
-      <rect x="6" y="5" width="2" height="2" fill="#100F09" />
+      <rect x="2" y="5" width="2" height="2" fill={color} />
+      <rect x="4" y="3" width="2" height="2" fill={color} />
+      <rect x="4" y="5" width="2" height="2" fill={color} />
+      <rect x="4" y="7" width="2" height="2" fill={color} />
+      <rect x="6" y="5" width="2" height="2" fill={color} />
 
       {/* Lower sparkle */}
-      <rect x="2" y="15" width="2" height="2" fill="#100F09" />
-      <rect x="4" y="13" width="2" height="2" fill="#100F09" />
-      <rect x="4" y="15" width="2" height="2" fill="#100F09" />
-      <rect x="4" y="17" width="2" height="2" fill="#100F09" />
-      <rect x="6" y="15" width="2" height="2" fill="#100F09" />
+      <rect x="2" y="15" width="2" height="2" fill={color} />
+      <rect x="4" y="13" width="2" height="2" fill={color} />
+      <rect x="4" y="15" width="2" height="2" fill={color} />
+      <rect x="4" y="17" width="2" height="2" fill={color} />
+      <rect x="6" y="15" width="2" height="2" fill={color} />
 
       {/* Three horizontal bars */}
-      <rect x="10" y="4" width="12" height="2.5" rx="1.25" fill="#100F09" />
-      <rect x="10" y="11" width="9" height="2.5" rx="1.25" fill="#100F09" />
-      <rect x="10" y="17.5" width="7" height="2.5" rx="1.25" fill="#100F09" />
+      <rect x="10" y="4" width="12" height="2.5" rx="1.25" fill={color} />
+      <rect x="10" y="11" width="9" height="2.5" rx="1.25" fill={color} />
+      <rect x="10" y="17.5" width="7" height="2.5" rx="1.25" fill={color} />
     </svg>
   );
 }
@@ -86,47 +86,62 @@ function DiamondBadgeIcon() {
 interface EnterpriseFeature {
   title: React.ReactNode;
   description: string;
-  icon: React.ReactNode;
+  badge?: string;
+  badgeType?: "gold" | "green";
+  icon: (color?: string) => React.ReactNode;
 }
 
 const enterpriseFeatures: EnterpriseFeature[] = [
   {
     title: <><strong className="font-bold">1M+</strong> QPS</>,
     description: "Unthrottled high-concurrency search throughput for mission-critical scale.",
-    icon: <QpsIcon />
+    badge: "⚡ High Scale",
+    badgeType: "gold",
+    icon: (color) => <QpsIcon color={color} />
   },
   {
     title: "Custom data",
     description: "Seamlessly index and query proprietary private enterprise data sources.",
-    icon: <DataIcon />
+    badge: "🔒 Private Data",
+    badgeType: "green",
+    icon: (color) => <DataIcon color={color} />
   },
   {
     title: "Zero Data Retention (ZDR)",
     description: "Strict zero data logging and isolated physical pipelines for strict compliance.",
-    icon: <ZdrIcon />
+    icon: (color) => <ZdrIcon color={color} />
   },
   {
     title: "Guaranteed SLA",
     description: "99.99% enterprise uptime SLA with dedicated priority queue routing.",
-    icon: <FlashIcon />
+    icon: (color) => <FlashIcon color={color} />
   },
   {
     title: "Dedicated Slack channel support",
     description: "Direct shared Slack channel with core Octen engineers and 24/7 response.",
-    icon: <SlackIcon />
+    icon: (color) => <SlackIcon color={color} />
   },
   {
     title: "Volume discounts",
     description: "Predictable tiered volume discounts and custom annual commitment models.",
-    icon: <ChartIcon />
+    icon: (color) => <ChartIcon color={color} />
   }
 ];
 
 export default function EnterpriseSection() {
+  const [activeTab, setActiveTab] = useState<1 | 2 | 3 | 4>(1);
+
+  const tabs = [
+    { id: 1 as const, name: "方案 1: 深邃黑曜石反色", tag: "强视觉反差" },
+    { id: 2 as const, name: "方案 2: 金色流光光晕", tag: "柔和尊贵感" },
+    { id: 3 as const, name: "方案 3: 专属胶囊标签", tag: "信息层级强化" },
+    { id: 4 as const, name: "方案 4: 金色高光侧条", tag: "精致边缘标记" },
+  ];
+
   return (
     <section 
       id="enterprise-plan" 
-      className="content-stretch flex flex-col items-center gap-[32px] sm:gap-[40px] pb-[80px] sm:pb-[120px] mt-[40px] sm:mt-[80px] pt-0 relative shrink-0 w-full max-w-[1312px] px-4 box-border scroll-mt-[90px]"
+      className="content-stretch flex flex-col items-center gap-[28px] sm:gap-[36px] pb-[80px] sm:pb-[120px] mt-[40px] sm:mt-[80px] pt-0 relative shrink-0 w-full max-w-[1312px] px-4 box-border scroll-mt-[90px]"
     >
       {/* 1. Header Area with Title, Subtitle & Contact Sales Button */}
       <div className="text-center flex flex-col items-center gap-2 sm:gap-3 shrink-0 px-4">
@@ -146,32 +161,198 @@ export default function EnterpriseSection() {
         </div>
       </div>
 
-      {/* 2. 3x2 Grid of Feature Cards (Matching the reference minimalist card anatomy) */}
+      {/* Interactive Tabs Switcher for Design Proposals */}
+      <div className="w-full flex flex-col items-center gap-2">
+        <div className="flex items-center gap-1.5 p-1.5 bg-[#F3F4F6] border border-[#E5E7EB] rounded-full max-w-full overflow-x-auto select-none shadow-inner">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`px-3.5 sm:px-4 py-1.5 rounded-full text-[13px] sm:text-[14px] font-['DM_Sans',sans-serif] font-medium transition-all duration-200 whitespace-nowrap cursor-pointer flex items-center gap-1.5 ${
+                activeTab === tab.id
+                  ? "bg-[#100F09] text-white shadow-[0_2px_8px_rgba(0,0,0,0.15)] scale-[1.02]"
+                  : "text-[#6B7280] hover:text-[#100F09] hover:bg-white/60"
+              }`}
+            >
+              <span>{tab.name}</span>
+            </button>
+          ))}
+        </div>
+        <p className="text-[12px] font-['DM_Sans',sans-serif] text-[#8C8C94]">
+          点击上方 Tab 即可实时预览 4 种不同维度的卡片强调方案
+        </p>
+      </div>
+
+      {/* 2. 3x2 Grid of Feature Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 w-full">
-        {enterpriseFeatures.map((item, idx) => (
-          <div 
-            key={idx}
-            className="group relative bg-white rounded-[16px] border border-[rgba(26,26,25,0.12)] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-200 p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 overflow-hidden box-border min-h-[190px] sm:min-h-[200px]"
-          >
-            {/* Top: Feature Icon */}
-            <div className="size-[28px] flex items-center justify-start text-[#100F09] shrink-0">
-              {item.icon}
-            </div>
+        {enterpriseFeatures.map((item, idx) => {
+          const isHighlighted = idx < 2;
 
-            {/* Bottom: Title (18px) with Diamond Badge + Description (14px) */}
-            <div className="flex flex-col gap-2">
-              <h3 className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[24px] text-[#100F09] flex items-center">
-                <span>{item.title}</span>
-                <DiamondBadgeIcon />
-              </h3>
+          // ----------------------------------------------------
+          // 方案 1: 深邃黑曜石反色 (Dark Obsidian Inversion)
+          // ----------------------------------------------------
+          if (activeTab === 1 && isHighlighted) {
+            return (
+              <div 
+                key={idx}
+                className="group relative bg-[#100F09] rounded-[16px] border border-[#272624] hover:border-[#C6A55A]/50 hover:shadow-[0_12px_32px_rgba(0,0,0,0.35)] transition-all duration-200 p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 overflow-hidden box-border min-h-[190px] sm:min-h-[200px]"
+              >
+                {/* Ambient glow in top-right */}
+                <div className="absolute -top-12 -right-12 size-36 bg-[#FFE7B1]/10 blur-2xl rounded-full pointer-events-none group-hover:scale-125 transition-transform duration-300" />
 
-              {/* Description (Standard 14px DM Sans body typography) */}
-              <p className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[20px] sm:leading-[22px] text-[#57575E]">
-                {item.description}
-              </p>
+                {/* Top: Feature Icon in Gold/White */}
+                <div className="size-[28px] flex items-center justify-start text-[#FFE7B1] shrink-0">
+                  {item.icon("#FFE7B1")}
+                </div>
+
+                {/* Bottom: Title (18px) + Description (14px) */}
+                <div className="flex flex-col gap-2 relative z-10">
+                  <h3 className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[24px] text-white flex items-center">
+                    <span>{item.title}</span>
+                    <DiamondBadgeIcon />
+                  </h3>
+
+                  <p className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[20px] sm:leading-[22px] text-[#A1A1AA]">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            );
+          }
+
+          // ----------------------------------------------------
+          // 方案 2: 金色流光光晕 (Luminous Ambient Glow)
+          // ----------------------------------------------------
+          if (activeTab === 2 && isHighlighted) {
+            return (
+              <div 
+                key={idx}
+                className="group relative bg-gradient-to-b from-[#FFFDF8] to-white rounded-[16px] border-2 border-[#E7D6A8] hover:border-[#C6A55A] hover:shadow-[0_8px_28px_rgba(198,165,90,0.18)] shadow-[0_2px_12px_rgba(198,165,90,0.06)] transition-all duration-200 p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 overflow-hidden box-border min-h-[190px] sm:min-h-[200px]"
+              >
+                {/* Soft Radial Ambient Glow */}
+                <div className="absolute -top-8 -right-8 size-32 bg-[#FFE7B1]/35 blur-2xl rounded-full pointer-events-none group-hover:scale-125 transition-transform duration-300" />
+
+                {/* Top: Feature Icon */}
+                <div className="size-[28px] flex items-center justify-start text-[#100F09] shrink-0">
+                  {item.icon("#100F09")}
+                </div>
+
+                {/* Bottom: Title (18px) + Description (14px) */}
+                <div className="flex flex-col gap-2 relative z-10">
+                  <h3 className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[24px] text-[#100F09] flex items-center">
+                    <span>{item.title}</span>
+                    <DiamondBadgeIcon />
+                  </h3>
+
+                  <p className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[20px] sm:leading-[22px] text-[#57575E]">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            );
+          }
+
+          // ----------------------------------------------------
+          // 方案 3: 专属胶囊标签 (Title Capsule Badge)
+          // ----------------------------------------------------
+          if (activeTab === 3 && isHighlighted) {
+            return (
+              <div 
+                key={idx}
+                className="group relative bg-white rounded-[16px] border border-[rgba(26,26,25,0.12)] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-200 p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 overflow-hidden box-border min-h-[190px] sm:min-h-[200px]"
+              >
+                {/* Top Row: Icon + Right Pill Badge */}
+                <div className="flex items-center justify-between w-full">
+                  <div className="size-[28px] flex items-center justify-start text-[#100F09] shrink-0">
+                    {item.icon("#100F09")}
+                  </div>
+                  {item.badge && (
+                    <span 
+                      className={`px-2.5 py-0.5 rounded-full text-[11px] font-['DM_Sans',sans-serif] font-semibold tracking-wider uppercase border ${
+                        item.badgeType === "gold"
+                          ? "bg-[#FFF8E6] text-[#97731E] border-[#F0DDB2]"
+                          : "bg-[#ECFDF5] text-[#047857] border-[#A7F3D0]"
+                      }`}
+                    >
+                      {item.badge}
+                    </span>
+                  )}
+                </div>
+
+                {/* Bottom: Title (18px) + Description (14px) */}
+                <div className="flex flex-col gap-2">
+                  <h3 className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[24px] text-[#100F09] flex items-center">
+                    <span>{item.title}</span>
+                    <DiamondBadgeIcon />
+                  </h3>
+
+                  <p className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[20px] sm:leading-[22px] text-[#57575E]">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            );
+          }
+
+          // ----------------------------------------------------
+          // 方案 4: 金色高光侧条 (Left Accent Bar)
+          // ----------------------------------------------------
+          if (activeTab === 4 && isHighlighted) {
+            return (
+              <div 
+                key={idx}
+                className="group relative bg-white rounded-[16px] border border-[rgba(26,26,25,0.12)] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-200 p-6 sm:p-7 pl-7 sm:pl-8 flex flex-col justify-between gap-6 sm:gap-8 overflow-hidden box-border min-h-[190px] sm:min-h-[200px]"
+              >
+                {/* Left Gold Accent Bar */}
+                <div className="absolute left-0 top-0 bottom-0 w-[5px] bg-gradient-to-b from-[#FFE7B1] via-[#C6A55A] to-[#BB9A4C] rounded-l-[16px]" />
+
+                {/* Top: Feature Icon */}
+                <div className="size-[28px] flex items-center justify-start text-[#100F09] shrink-0">
+                  {item.icon("#100F09")}
+                </div>
+
+                {/* Bottom: Title (18px) + Description (14px) */}
+                <div className="flex flex-col gap-2">
+                  <h3 className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[24px] text-[#100F09] flex items-center">
+                    <span>{item.title}</span>
+                    <DiamondBadgeIcon />
+                  </h3>
+
+                  <p className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[20px] sm:leading-[22px] text-[#57575E]">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            );
+          }
+
+          // ----------------------------------------------------
+          // 后 4 张卡片：统一的标准白底卡片
+          // ----------------------------------------------------
+          return (
+            <div 
+              key={idx}
+              className="group relative bg-white rounded-[16px] border border-[rgba(26,26,25,0.12)] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-200 p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 overflow-hidden box-border min-h-[190px] sm:min-h-[200px]"
+            >
+              {/* Top: Feature Icon */}
+              <div className="size-[28px] flex items-center justify-start text-[#100F09] shrink-0">
+                {item.icon("#100F09")}
+              </div>
+
+              {/* Bottom: Title (18px) + Description (14px) */}
+              <div className="flex flex-col gap-2">
+                <h3 className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[24px] text-[#100F09] flex items-center">
+                  <span>{item.title}</span>
+                  <DiamondBadgeIcon />
+                </h3>
+
+                <p className="font-['DM_Sans',sans-serif] font-normal text-[14px] leading-[20px] sm:leading-[22px] text-[#57575E]">
+                  {item.description}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
