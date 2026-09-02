@@ -230,7 +230,7 @@ export default function EnterpriseSection() {
 
               {/* Bottom: Title (18px) with Diamond Badge + Description (14px) */}
               <div className="flex flex-col gap-2 relative z-10">
-                <h3 className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[24px] text-[#100F09] flex items-center">
+                <h3 className={`font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[24px] ${idx < 2 ? "text-[#967541]" : "text-[#100F09]"} flex items-center`}>
                   <span>{item.title}</span>
                   <DiamondBadgeIcon />
                 </h3>
