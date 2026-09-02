@@ -186,22 +186,22 @@ export default function EnterpriseSection() {
                 {/* Default Border Base Layer (Visible when not hovered - Figma #D1D1D1) */}
                 <div className="absolute inset-0 rounded-[16px] border border-[#D1D1D1] group-hover:opacity-0 transition-opacity duration-300 pointer-events-none" />
 
-                {/* Shine Border Rotating Conic Gradient Layer (Reveals on Hover) */}
+                {/* Shine Border Rotating Conic Gradient Layer (Reveals on Hover - Figma #DDFE70 & #70FE7E) */}
                 <div className="absolute -inset-[150%] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center justify-center">
                   <div 
                     className="w-[300%] h-[300%] animate-[spin_4s_linear_infinite]"
                     style={{
-                      background: "conic-gradient(from 0deg, transparent 0%, #FFD700 15%, #FFEAA7 30%, #C6A55A 45%, #A3E635 60%, #00E599 75%, #059669 88%, transparent 100%)"
+                      background: "conic-gradient(from 0deg, transparent 0%, #DDFE70 20%, #B2FE70 38%, #70FE7E 60%, #00E599 80%, transparent 100%)"
                     }}
                   />
                 </div>
 
-                {/* Shine Border Soft Ambient Outer Glow (Luminous edge glow in yellow-green) */}
+                {/* Shine Border Soft Ambient Outer Glow (Luminous edge glow matching Figma #DDFE70 & #70FE7E) */}
                 <div className="absolute -inset-[150%] opacity-0 group-hover:opacity-45 blur-[8px] transition-opacity duration-300 pointer-events-none flex items-center justify-center">
                   <div 
                     className="w-[300%] h-[300%] animate-[spin_4s_linear_infinite]"
                     style={{
-                      background: "conic-gradient(from 0deg, transparent 0%, #FFD700 15%, #FFEAA7 30%, #C6A55A 45%, #A3E635 60%, #00E599 75%, #059669 88%, transparent 100%)"
+                      background: "conic-gradient(from 0deg, transparent 0%, #DDFE70 20%, #B2FE70 38%, #70FE7E 60%, #00E599 80%, transparent 100%)"
                     }}
                   />
                 </div>
