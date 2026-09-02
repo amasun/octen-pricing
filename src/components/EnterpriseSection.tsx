@@ -167,7 +167,7 @@ export default function EnterpriseSection() {
               id={`enterprise_feature_card_${idx}`}
               className={`group relative bg-white rounded-[16px] border ${
                 idx < 2 ? "border-[#D6C69B]" : "border-[rgba(26,26,25,0.12)] hover:border-[#D6C69B]"
-              } hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 p-5 sm:p-6 flex flex-col justify-between gap-4 sm:gap-5 overflow-hidden box-border min-h-[148px] sm:min-h-[156px]`}
+              } hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300 p-5 sm:p-6 flex flex-col justify-start gap-3.5 sm:gap-4 overflow-hidden box-border min-h-[148px] sm:min-h-[156px]`}
             >
               {/* Micro-Rectangle Dot Matrix Pattern (3x3px square dots, 10px pitch, opacity 10%) */}
               <div 
