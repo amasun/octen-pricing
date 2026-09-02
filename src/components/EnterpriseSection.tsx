@@ -45,32 +45,46 @@ function ZdrIcon() {
 
 interface EnterpriseFeature {
   title: React.ReactNode;
+  description: string;
+  glowColor: string;
   icon: React.ReactNode;
 }
 
 const enterpriseFeatures: EnterpriseFeature[] = [
   {
     title: <><strong className="font-bold">1M+</strong> QPS</>,
+    description: "Unthrottled high-concurrency search throughput for mission-critical scale.",
+    glowColor: "bg-[#00E599]/30",
     icon: <BranchIcon />
   },
   {
     title: "Guaranteed SLA",
+    description: "99.99% enterprise uptime SLA with dedicated priority queue routing.",
+    glowColor: "bg-[#70FE7E]/35",
     icon: <FlashIcon />
   },
   {
     title: "Custom data",
+    description: "Seamlessly index and query proprietary private enterprise data sources.",
+    glowColor: "bg-[#38BDF8]/30",
     icon: <DataIcon />
   },
   {
     title: "Dedicated Slack channel support",
+    description: "Direct shared Slack channel with core Octen engineers and 24/7 response.",
+    glowColor: "bg-[#E01E5A]/25",
     icon: <SlackIcon />
   },
   {
     title: "Zero Data Retention (ZDR)",
+    description: "Strict zero data logging and isolated physical pipelines for strict compliance.",
+    glowColor: "bg-[#10B981]/30",
     icon: <ZdrIcon />
   },
   {
     title: "Volume discounts",
+    description: "Predictable tiered volume discounts and custom annual commitment models.",
+    glowColor: "bg-[#F59E0B]/30",
     icon: <ChartIcon />
   }
 ];
@@ -79,7 +93,7 @@ export default function EnterpriseSection() {
   return (
     <section 
       id="enterprise-plan" 
-      className="content-stretch flex flex-col items-center gap-[28px] sm:gap-[36px] pb-[60px] sm:pb-[100px] mt-[40px] sm:mt-[80px] pt-0 relative shrink-0 w-full max-w-[1312px] px-4 box-border scroll-mt-[90px]"
+      className="content-stretch flex flex-col items-center gap-[32px] sm:gap-[40px] pb-[60px] sm:pb-[100px] mt-[40px] sm:mt-[80px] pt-0 relative shrink-0 w-full max-w-[1312px] px-4 box-border scroll-mt-[90px]"
     >
       {/* 1. Header Area with Title, Subtitle & Contact Sales Button */}
       <div className="text-center flex flex-col items-center gap-2 sm:gap-3 shrink-0 px-4">
@@ -99,23 +113,56 @@ export default function EnterpriseSection() {
         </div>
       </div>
 
-      {/* 2. 3x2 Grid of Feature Cards (Logo + Title only matching exact reference copy) */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4.5 w-full">
+      {/* 2. 3x2 Grid of Feature Cards (Matching the reference UI card anatomy) */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 w-full">
         {enterpriseFeatures.map((item, idx) => (
           <div 
             key={idx}
-            className="group relative bg-white rounded-[16px] border border-[#E5E7EB] hover:border-[#B5B5B0] hover:shadow-[0_8px_24px_rgba(0,0,0,0.04)] p-5 sm:p-6 flex flex-col justify-center transition-all duration-200 overflow-hidden box-border min-h-[110px] sm:min-h-[120px]"
+            className="group relative bg-white rounded-[22px] border border-[#E5E7EB] hover:border-[#D1D5DB] hover:shadow-[0_14px_36px_rgba(0,0,0,0.06)] transition-all duration-300 p-3.5 sm:p-4 flex flex-col gap-4 overflow-hidden box-border"
           >
-            {/* Ambient hover light glow */}
-            <div className="absolute -top-8 -right-8 size-28 bg-[#70FE7E]/10 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            {/* Top Stage: Viewport with Grid Texture & Centered 3D Glass Emblem */}
+            <div 
+              className="w-full h-[140px] sm:h-[155px] rounded-[16px] bg-[#FDFDFD] border border-[#EFEFEF] relative overflow-hidden flex items-center justify-center select-none"
+              style={{
+                backgroundImage: `
+                  linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+                  linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px)
+                `,
+                backgroundSize: '16px 16px',
+                backgroundPosition: 'center center'
+              }}
+            >
+              {/* Soft Radial Ambient Glow */}
+              <div 
+                className={`absolute size-28 rounded-full ${item.glowColor} blur-[30px] opacity-75 group-hover:opacity-100 group-hover:scale-125 transition-all duration-300 pointer-events-none`} 
+              />
 
-            <div className="flex flex-col items-start gap-3.5 relative z-10">
-              <div className="size-[40px] rounded-[10px] bg-[#F4FBF6] border border-[#D0F2DF] flex items-center justify-center text-[#039855] shrink-0 group-hover:scale-105 transition-transform duration-200">
+              {/* Centered Glassmorphic Emblem Container */}
+              <div className="relative z-10 size-[58px] sm:size-[64px] rounded-[18px] bg-white/90 backdrop-blur-md border border-white shadow-[0_8px_24px_rgba(0,0,0,0.07)] flex items-center justify-center text-[#039855] group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-300 ease-out">
                 {item.icon}
               </div>
-              <h3 className="font-['DM_Sans',sans-serif] font-semibold text-[17px] sm:text-[18px] leading-[1.3] text-[#100F09]">
-                {item.title}
-              </h3>
+            </div>
+
+            {/* Bottom Content Area: Title + Switch + Description */}
+            <div className="px-1.5 pb-1 flex flex-col gap-1.5">
+              {/* Title Row with Switch */}
+              <div className="flex items-center justify-between gap-3 w-full">
+                <h3 className="font-['DM_Sans',sans-serif] font-bold text-[16.5px] sm:text-[17.5px] leading-[1.25] text-[#100F09]">
+                  {item.title}
+                </h3>
+                {/* Switch Toggle */}
+                <div 
+                  className="w-[38px] h-[22px] rounded-full bg-[#E5E7EB] group-hover:bg-[#100F09] p-[2px] transition-colors duration-200 flex items-center shrink-0 cursor-pointer"
+                  aria-hidden="true"
+                >
+                  <div className="size-[18px] rounded-full bg-white shadow-xs group-hover:translate-x-[16px] transition-transform duration-200 ease-out" />
+                </div>
+              </div>
+
+              {/* Description */}
+              <p className="font-['DM_Sans',sans-serif] font-normal text-[13.5px] sm:text-[14px] leading-[20px] sm:leading-[22px] text-[#6B7280]">
+                {item.description}
+              </p>
             </div>
           </div>
         ))}
