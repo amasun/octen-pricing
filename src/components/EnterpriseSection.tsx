@@ -69,42 +69,63 @@ function DiamondBadgeIcon() {
 function FigmaCardTopGlow({ idPrefix = "card_glow" }: { idPrefix?: string }) {
   return (
     <div 
-      className="absolute top-[-47px] left-[calc(50%-201px-1.5px)] w-[402px] h-[79px] flex items-center justify-center pointer-events-none select-none z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      className="absolute top-[calc(50%-79px/2-86px)] left-[calc(50%-402px/2-70px)] w-[402px] h-[79px] pointer-events-none select-none z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      style={{
+        transform: "matrix(-1, 0, 0, 1, 0, 0)"
+      }}
     >
-      <div className="-scale-x-100 flex-none">
-        <div className="h-[79px] relative w-[402px]">
-          <div className="absolute inset-[-126.58%_-24.64%_-125.65%_-24.66%]">
-            <svg 
-              preserveAspectRatio="none" 
-              overflow="visible" 
-              className="block size-full" 
-              viewBox="0 0 600.188 278.266" 
-              fill="none" 
-              xmlns="http://www.w3.org/2000/svg"
+      <div className="w-[414px] h-[157px] relative">
+        <svg 
+          width="414" 
+          height="157" 
+          viewBox="0 0 414 157" 
+          fill="none" 
+          xmlns="http://www.w3.org/2000/svg"
+          className="overflow-visible block"
+        >
+          <g opacity="0.4">
+            <g filter={`url(#filter0_f_${idPrefix})`}>
+              <path 
+                d="M164.862 47.1762C120.355 69.7194 97.9472 44.3584 25.8138 35.2001V-11.9998H386.787C370.314 1.38531 331.721 30.2689 309.129 38.7226C280.89 49.2898 209.37 24.633 164.862 47.1762Z" 
+                fill="#ADE988"
+              />
+            </g>
+            <g filter={`url(#filter1_f_${idPrefix})`}>
+              <path 
+                d="M5.64827 -12.9096C-38.8595 -35.4528 -61.2669 -10.0918 -133.4 -0.933498V46.2664H227.573C211.1 32.8813 172.506 3.99769 149.915 -4.45605C121.675 -15.0232 50.1561 9.63361 5.64827 -12.9096Z" 
+                fill="#DDFE70"
+              />
+            </g>
+          </g>
+          <defs>
+            <filter 
+              id={`filter0_f_${idPrefix}`} 
+              x="-74.1862" 
+              y="-112" 
+              width="560.974" 
+              height="268.267" 
+              filterUnits="userSpaceOnUse" 
+              colorInterpolationFilters="sRGB"
             >
-              <g opacity="0.4">
-                <g filter={`url(#filter0_f_${idPrefix})`}>
-                  <path d="M239.049 119.09C194.541 96.5472 172.133 121.908 100 131.067V178.266H460.974C444.501 164.881 405.907 135.998 383.315 127.544C355.076 116.977 283.556 141.634 239.049 119.09Z" fill="#ADE988"/>
-                </g>
-                <g filter={`url(#filter1_f_${idPrefix})`}>
-                  <path d="M361.139 109.09C405.647 86.5472 428.054 111.908 500.188 121.067V168.266H139.214C155.687 154.881 194.281 125.998 216.873 117.544C245.112 106.977 316.631 131.634 361.139 109.09Z" fill="#DDFE70"/>
-                </g>
-              </g>
-              <defs>
-                <filter id={`filter0_f_${idPrefix}`} x="0" y="10" width="560.974" height="268.266" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                  <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                  <feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur"/>
-                </filter>
-                <filter id={`filter1_f_${idPrefix}`} x="39.2141" y="-4.76837e-07" width="560.974" height="268.266" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                  <feFlood floodOpacity="0" result="BackgroundImageFix"/>
-                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                  <feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur"/>
-                </filter>
-              </defs>
-            </svg>
-          </div>
-        </div>
+              <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+              <feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur"/>
+            </filter>
+            <filter 
+              id={`filter1_f_${idPrefix}`} 
+              x="-233.4" 
+              y="-122" 
+              width="560.974" 
+              height="268.267" 
+              filterUnits="userSpaceOnUse" 
+              colorInterpolationFilters="sRGB"
+            >
+              <feFlood floodOpacity="0" result="BackgroundImageFix"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+              <feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur"/>
+            </filter>
+          </defs>
+        </svg>
       </div>
     </div>
   );
