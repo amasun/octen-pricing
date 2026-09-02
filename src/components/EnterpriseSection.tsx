@@ -84,7 +84,7 @@ function FigmaCardHoverGlow({ idPrefix = "card_glow" }: { idPrefix?: string }) {
             <g filter={`url(#filter_glow_${idPrefix})`}>
               <path 
                 d="M332.016 159.176C376.524 181.719 398.931 156.358 471.064 147.2V100H110.091C126.564 113.385 165.158 142.269 187.749 150.722C215.989 161.29 287.508 136.633 332.016 159.176Z" 
-                fill="#FEF970"
+                fill="#FFE4AB"
               />
             </g>
           </g>
