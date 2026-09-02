@@ -66,16 +66,16 @@ const enterpriseFeatures: EnterpriseFeature[] = [
     icon: <BranchIcon />
   },
   {
-    title: "Guaranteed SLA",
-    description: "99.99% enterprise uptime SLA with dedicated priority queue routing.",
-    glowColor: "bg-[#70FE7E]/35",
-    icon: <FlashIcon />
-  },
-  {
     title: "Custom data",
     description: "Seamlessly index and query proprietary private enterprise data sources.",
     glowColor: "bg-[#38BDF8]/30",
     icon: <DataIcon />
+  },
+  {
+    title: "Guaranteed SLA",
+    description: "99.99% enterprise uptime SLA with dedicated priority queue routing.",
+    glowColor: "bg-[#70FE7E]/35",
+    icon: <FlashIcon />
   },
   {
     title: "Dedicated Slack channel support",
