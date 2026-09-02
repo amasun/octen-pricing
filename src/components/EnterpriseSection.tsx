@@ -232,19 +232,28 @@ export default function EnterpriseSection() {
             );
           }
 
-          // 其他卡片（Cards 3 ~ 6）：遵循 QPS Plan 统一规则 (border-[rgba(26,26,25,0.12)] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)])
+          // 其他卡片（Cards 3 ~ 6）：根据 Figma 13542:181617 调整默认卡片样式（微点阵背景 + 边框 rgba(0,0,0,0.12)）
           return (
             <div 
               key={idx}
-              className="group relative bg-white rounded-[16px] border border-[rgba(26,26,25,0.12)] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-200 p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 overflow-hidden box-border min-h-[190px] sm:min-h-[200px]"
+              className="group relative bg-white rounded-[16px] border border-[rgba(0,0,0,0.12)] hover:border-[#B5B5B0] hover:shadow-[0_4px_20px_rgba(0,0,0,0.04)] transition-all duration-200 p-6 sm:p-7 flex flex-col justify-between gap-6 sm:gap-8 overflow-hidden box-border min-h-[190px] sm:min-h-[200px]"
             >
+              {/* Subtle Dot Matrix Pattern (Figma 13542:181617) */}
+              <div 
+                className="absolute inset-0 pointer-events-none opacity-40 select-none"
+                style={{
+                  backgroundImage: "radial-gradient(rgba(0, 0, 0, 0.12) 1.2px, transparent 1.2px)",
+                  backgroundSize: "16px 16px"
+                }}
+              />
+
               {/* Top: Feature Icon (Unified to 40px) */}
-              <div className="size-[40px] flex items-center justify-start text-[#100F09] shrink-0">
+              <div className="size-[40px] flex items-center justify-start text-[#100F09] shrink-0 relative z-10">
                 {item.icon("#100F09")}
               </div>
 
               {/* Bottom: Title (18px) with Diamond Badge + Description (14px) */}
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 relative z-10">
                 <h3 className="font-['DM_Sans',sans-serif] font-bold text-[18px] leading-[24px] text-[#100F09] flex items-center">
                   <span>{item.title}</span>
                   <DiamondBadgeIcon />
