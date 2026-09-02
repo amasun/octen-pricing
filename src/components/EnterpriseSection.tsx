@@ -94,7 +94,7 @@ export default function EnterpriseSection() {
           Enterprise
         </h2>
         <p className="font-['DM_Sans',sans-serif] font-normal text-[16px] leading-[22px] sm:leading-[26px] text-[#5d605b] max-w-[680px]">
-          Adds custom data and dedicated support
+          Fully customizable infrastructure tailored to your exact scale
         </p>
         <div className="flex items-center justify-center pt-2 sm:pt-3">
           <a
