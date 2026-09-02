@@ -91,7 +91,7 @@ export default function EnterpriseSection() {
       {/* 1. Header Area with Title & Contact Sales Button */}
       <div className="text-center flex flex-col items-center gap-4 sm:gap-5 shrink-0 px-4">
         <h2 className="font-['Fraunces',serif] font-bold text-[28px] sm:text-[44px] leading-[1.15] sm:leading-[48px] text-[#09090b]">
-          Enterprise Custom QPS Plan
+          Enterprise
         </h2>
         <div className="flex items-center justify-center">
           <a
