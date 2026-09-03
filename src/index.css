@@ -398,6 +398,46 @@ body, #root, #root > div, [data-name="Octen AI | Infrastructure Pricing"] {
   animation: sheenSweep 2.4s linear infinite;
 }
 
+/* Custom CSS Property for Conic Gradient Border Rotation (referenced from Octen oauth allow btn) */
+@property --allow-border-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
 
+@keyframes allow-border-rotate {
+  to {
+    --allow-border-angle: 360deg;
+  }
+}
 
+.enterprise-contact-btn {
+  box-sizing: border-box;
+  border: 1.2px solid transparent;
+  border-radius: 9999px;
+  background:
+    linear-gradient(#100F09, #100F09) padding-box,
+    conic-gradient(from var(--allow-border-angle), #498e69 0deg, #d0ffda 120deg, #f4c45f 220deg, #ef4b35 300deg, #498e69 360deg) border-box;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  animation: allow-border-rotate 7s linear infinite;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
 
+.enterprise-contact-btn:hover {
+  background:
+    linear-gradient(#1a1a1a, #1a1a1a) padding-box,
+    conic-gradient(from var(--allow-border-angle), #498e69 0deg, #d0ffda 120deg, #f4c45f 220deg, #ef4b35 300deg, #498e69 360deg) border-box;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.enterprise-contact-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enterprise-contact-btn {
+    animation: none;
+  }
+}

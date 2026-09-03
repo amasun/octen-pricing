@@ -151,7 +151,7 @@ export default function EnterpriseSection() {
         <div className="flex items-center justify-center pt-2 sm:pt-3">
           <a
             href="mailto:support@octen.ai?subject=Octen%20Enterprise%20QPS%20Plan%20Inquiry"
-            className="w-auto min-w-[180px] h-[44px] px-8 rounded-full bg-[#100F09] text-white font-['DM_Sans',sans-serif] font-semibold text-[16px] flex items-center justify-center btn-dark-hover hover:shadow-[0_4px_20px_rgba(0,0,0,0.16)] active:scale-[0.98] transition-all duration-200 select-none box-border text-center"
+            className="enterprise-contact-btn w-auto min-w-[180px] h-[44px] px-8 text-white font-['DM_Sans',sans-serif] font-semibold text-[16px] flex items-center justify-center select-none box-border text-center no-underline cursor-pointer"
           >
             Contact sales
           </a>
